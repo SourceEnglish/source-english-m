@@ -2,12 +2,14 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Image } from 'expo-image';
 
 import ImageViewer from '@/components/ImageViewer';
+import LanguageSelector from '@/components/LanguageSelector';
 
 const PlaceholderImage = require('@/assets/images/background-image.png');
 
 export default function Index() {
   return (
     <View style={styles.container}>
+      <LanguageSelector />
       <View style={styles.imageContainer}>
         <ImageViewer imgSource={PlaceholderImage} />
       </View>
