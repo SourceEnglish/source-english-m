@@ -1,0 +1,8 @@
+{
+  "home": {
+    "title": "Home",
+    "welcome": "Welcome",
+    "subtitle": "Example i18n App",
+    "description": "This is an example React Native application demonstrating internationalization."
+  }
+}
