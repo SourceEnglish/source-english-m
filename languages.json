@@ -1,0 +1,252 @@
+[
+  {
+    "label": "English",
+    "native": "English",
+    "value": "en-US"
+  },
+  {
+    "label": "Mandarin Chinese",
+    "native": "中文",
+    "value": "zh"
+  },
+  {
+    "label": "Hindi",
+    "native": "हिन्दी",
+    "value": "hi"
+  },
+  {
+    "label": "Spanish",
+    "native": "Español",
+    "value": "es-MX"
+  },
+  {
+    "label": "French",
+    "native": "Français",
+    "value": "fr"
+  },
+  {
+    "label": "Standard Arabic",
+    "native": "العربية",
+    "value": "ar"
+  },
+  {
+    "label": "Bengali",
+    "native": "বাংলা",
+    "value": "bn"
+  },
+  {
+    "label": "Russian",
+    "native": "Русский",
+    "value": "ru"
+  },
+  {
+    "label": "Portuguese",
+    "native": "Português",
+    "value": "pt"
+  },
+  {
+    "label": "Indonesian",
+    "native": "Bahasa Indonesia",
+    "value": "id"
+  },
+  {
+    "label": "Urdu",
+    "native": "اردو",
+    "value": "ur"
+  },
+  {
+    "label": "German",
+    "native": "Deutsch",
+    "value": "de"
+  },
+  {
+    "label": "Japanese",
+    "native": "日本語",
+    "value": "ja"
+  },
+  {
+    "label": "Swahili",
+    "native": "Kiswahili",
+    "value": "sw"
+  },
+  {
+    "label": "Marathi",
+    "native": "मराठी",
+    "value": "mr"
+  },
+  {
+    "label": "Telugu",
+    "native": "తెలుగు",
+    "value": "te"
+  },
+  {
+    "label": "Turkish",
+    "native": "Türkçe",
+    "value": "tr"
+  },
+  {
+    "label": "Tamil",
+    "native": "தமிழ்",
+    "value": "ta"
+  },
+  {
+    "label": "Vietlabelse",
+    "native": "Tiếng Việt",
+    "value": "vi"
+  },
+  {
+    "label": "Korean",
+    "native": "한국어",
+    "value": "ko"
+  },
+  {
+    "label": "Italian",
+    "native": "Italiano",
+    "value": "it"
+  },
+  {
+    "label": "Thai",
+    "native": "ไทย",
+    "value": "th"
+  },
+  {
+    "label": "Gujarati",
+    "native": "ગુજરાતી",
+    "value": "gu"
+  },
+  {
+    "label": "Kannada",
+    "native": "ಕನ್ನಡ",
+    "value": "kn"
+  },
+  {
+    "label": "Persian",
+    "native": "فارسی",
+    "value": "fa"
+  },
+  {
+    "label": "Polish",
+    "native": "Polski",
+    "value": "pl"
+  },
+  {
+    "label": "Ukrainian",
+    "native": "Українська",
+    "value": "uk"
+  },
+  {
+    "label": "Malayalam",
+    "native": "മലയാളം",
+    "value": "ml"
+  },
+  {
+    "label": "Odia",
+    "native": "ଓଡ଼ିଆ",
+    "value": "or"
+  },
+  {
+    "label": "Punjabi",
+    "native": "ਪੰਜਾਬੀ",
+    "value": "pa"
+  },
+  {
+    "label": "Romanian",
+    "native": "Română",
+    "value": "ro"
+  },
+  {
+    "label": "Dutch",
+    "native": "Nederlands",
+    "value": "nl"
+  },
+  {
+    "label": "Greek",
+    "native": "Ελληνικά",
+    "value": "el"
+  },
+  {
+    "label": "Czech",
+    "native": "Čeština",
+    "value": "cs"
+  },
+  {
+    "label": "Hungarian",
+    "native": "Magyar",
+    "value": "hu"
+  },
+  {
+    "label": "Swedish",
+    "native": "Svenska",
+    "value": "sv"
+  },
+  {
+    "label": "Finnish",
+    "native": "Suomi",
+    "value": "fi"
+  },
+  {
+    "label": "Norwegian",
+    "native": "Norsk",
+    "value": "no"
+  },
+  {
+    "label": "Danish",
+    "native": "Dansk",
+    "value": "da"
+  },
+  {
+    "label": "Bulgarian",
+    "native": "Български",
+    "value": "bg"
+  },
+  {
+    "label": "Slovak",
+    "native": "Slovenčina",
+    "value": "sk"
+  },
+  {
+    "label": "Croatian",
+    "native": "Hrvatski",
+    "value": "hr"
+  },
+  {
+    "label": "Serbian",
+    "native": "Српски",
+    "value": "sr"
+  },
+  {
+    "label": "Lithuanian",
+    "native": "Lietuvių",
+    "value": "lt"
+  },
+  {
+    "label": "Latvian",
+    "native": "Latviešu",
+    "value": "lv"
+  },
+  {
+    "label": "Estonian",
+    "native": "Eesti",
+    "value": "et"
+  },
+  {
+    "label": "Slovenian",
+    "native": "Slovenščina",
+    "value": "sl"
+  },
+  {
+    "label": "Icelandic",
+    "native": "Íslenska",
+    "value": "is"
+  },
+  {
+    "label": "Maltese",
+    "native": "Malti",
+    "value": "mt"
+  },
+  {
+    "label": "Luxembourgish",
+    "native": "Lëtzebuergesch",
+    "value": "lb"
+  }
+]

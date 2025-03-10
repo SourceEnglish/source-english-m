@@ -23,6 +23,8 @@ export default function RootLayout() {
         if (savedLanguage) {
           setLocale(savedLanguage);
           await i18n.changeLanguage(savedLanguage);
+        } else {
+          await changeLanguage(locale);
         }
       } catch (error) {
         console.error('Failed to load language', error);
