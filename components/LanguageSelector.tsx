@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Platform, Text } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import languages from '@/languages.json';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Localization from 'expo-localization';
 import i18n from 'i18next';
+import { useSpeech } from '@/contexts/SpeechContext'; // Import SpeechContext
 
 interface LanguageSelectorProps {
-  // changeLanguage: (lng: string) => void;
+  initialLanguage?: string;
+  onLanguageChange?: (language: string) => void;
 }
 
 const LanguageSelector: React.FC<LanguageSelectorProps> = ({}) => {
+  const { requestedLanguage, setRequestedLanguage } = useSpeech(); // Get requestedLanguage from SpeechContext
   let [locale, setLocale] = useState(Localization.getLocales()[0].languageTag);
 
   useEffect(() => {
@@ -55,28 +58,6 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({}) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState<string | null>(null);
   const [items, setItems] = useState(languages);
-
-  // useEffect(() => {
-  //   const fetchLanguage = async () => {
-  //     let language;
-  //     if (Platform.OS === 'web') {
-  //       language = localStorage.getItem('language');
-  //     } else {
-  //       language = await AsyncStorage.getItem('language');
-  //     }
-  //     if (language) {
-  //       setValue(language);
-  //       changeLanguage(language);
-  //     } else {
-  //       let defaultValue = Localization.getLocales()[0].languageTag;
-  //       if (defaultValue) {
-  //         setValue(defaultValue);
-  //       }
-  //     }
-  //   };
-
-  //   fetchLanguage();
-  // }, [changeLanguage]);
 
   return (
     <>
