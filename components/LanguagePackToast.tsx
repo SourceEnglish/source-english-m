@@ -35,17 +35,32 @@ function selectLanguageRedirect(): string {
 }
 
 export default function LanguagePackToast() {
-  const { speakText, readAloudMode, setReadAloudMode, requestedLanguage } =
-    useSpeech();
+  const {
+    speakText,
+    readAloudMode,
+    setReadAloudMode,
+    requestedLanguage,
+    setVoiceIndex,
+  } = useSpeech();
   const [visible, setVisible] = useState(false);
 
   return (
     <>
       <Button
         onPress={async () => {
+          if (readAloudMode) {
+            setReadAloudMode(false);
+            return;
+          }
           setReadAloudMode(true);
           const voices = await Speech.getAvailableVoicesAsync();
           let hasEnglishUS = false;
+          console.log(voices);
+          let voiceIndex = undefined;
+          voiceIndex = voices.findIndex((voice) =>
+            voice.identifier.includes('Google US English')
+          );
+          setVoiceIndex(voiceIndex);
           voices.forEach((voice) => {
             if (voice.language === 'en-US') {
               hasEnglishUS = true;
@@ -55,7 +70,7 @@ export default function LanguagePackToast() {
             setVisible(true);
           }
         }}
-        style={{ backgroundColor: 'black' }}
+        style={{ backgroundColor: readAloudMode ? 'purple' : 'black' }}
       >
         Set Read Aloud
       </Button>
