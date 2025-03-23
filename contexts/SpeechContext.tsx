@@ -4,11 +4,14 @@ import * as Speech from 'expo-speech';
 // Define the context type
 interface SpeechContextType {
   readAloudMode: boolean;
+  voiceIndex: number | undefined;
+  setVoiceIndex: (index: number | undefined) => void;
+
   setReadAloudMode: (mode: boolean) => void;
   setRequestedLanguage: (language: string) => void;
   requestedLanguage: string | null;
 
-  speakText: (text: string) => void;
+  speakText: (text: string, language?: string, voiceIndex?: number) => void;
 }
 
 // Create the SpeechContext with a default value
@@ -21,13 +24,21 @@ interface SpeechProviderProps {
 
 // Provider Component
 export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
+  const [voiceIndex, setVoiceIndex] = React.useState<number | undefined>(
+    undefined
+  );
   const [readAloudMode, setReadAloudMode] = React.useState(false);
   const [requestedLanguage, setRequestedLanguage] = React.useState<
     string | null
   >('en-US');
   const speakText = (text: string, language: string = 'en-US') => {
     if (text) {
-      Speech.speak(text, { language: 'es-MX' });
+      console.log(voiceIndex);
+      Speech.speak(text, {
+        language: language,
+        _voiceIndex: voiceIndex,
+        rate: 0.9,
+      });
     }
   };
 
@@ -39,6 +50,8 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
         setRequestedLanguage,
         readAloudMode,
         setReadAloudMode,
+        voiceIndex,
+        setVoiceIndex,
       }}
     >
       {children}
