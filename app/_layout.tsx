@@ -1,7 +1,7 @@
 import { Stack } from 'expo-router';
 import React, { useState, useEffect } from 'react';
 import { Text, Platform } from 'react-native';
-import { I18nextProvider } from 'react-i18next';
+import { I18nextProvider, useTranslation } from 'react-i18next';
 import * as Localization from 'expo-localization';
 import i18n from '@/i18n';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -11,6 +11,7 @@ import { Provider } from 'react-native-paper';
 import LanguagePackToast from '@/components/LanguagePackToast';
 
 export default function RootLayout() {
+  const { t } = useTranslation();
   let [locale, setLocale] = useState(Localization.getLocales()[0].languageTag);
 
   return (
@@ -20,7 +21,10 @@ export default function RootLayout() {
           <Provider>
             <LanguagePackToast />
             <Stack>
-              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+              <Text>{t('home.welcome')}</Text>
+              <Text>{t('home.description')}</Text>
+              {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
+              <Stack.Screen name="index" options={{ headerTitle: 'Home' }} />
               <Stack.Screen name="+not-found" />
             </Stack>
           </Provider>
