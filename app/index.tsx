@@ -5,7 +5,6 @@ import { View, StyleSheet, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { t } from 'i18next';
 import PageLink from '@/components/PageLink';
-import LanguagePackToast from '@/components/LanguagePackToast';
 import { useSpeech } from '@/contexts/SpeechContext';
 
 export default function Index() {
@@ -17,7 +16,6 @@ export default function Index() {
 
   return (
     <View style={[styles.thread, { gap: 10 }]}>
-      <LanguagePackToast></LanguagePackToast>
       <LanguageSelector></LanguageSelector>
 
       <PageLink
