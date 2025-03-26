@@ -1,5 +1,6 @@
 import React, { createContext, useContext, ReactNode } from 'react';
 import * as Speech from 'expo-speech';
+import i18n from '@/i18n';
 
 // Define the context type
 interface SpeechContextType {
@@ -8,10 +9,15 @@ interface SpeechContextType {
   setVoiceIndex: (index: number | undefined) => void;
 
   setReadAloudMode: (mode: boolean) => void;
-  setRequestedLanguage: (language: string) => void;
-  requestedLanguage: string | null;
+  // setRequestedLanguage: (language: string) => void;
+  // requestedLanguage: string | null;
 
-  speakText: (text: string, language?: string, voiceIndex?: number) => void;
+  //
+  speakText: (
+    text: string,
+    useNativeLanguage?: boolean,
+    voiceIndex?: number
+  ) => void;
 }
 
 // Create the SpeechContext with a default value
@@ -28,26 +34,28 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
     undefined
   );
   const [readAloudMode, setReadAloudMode] = React.useState(false);
-  const [requestedLanguage, setRequestedLanguage] = React.useState<
-    string | null
-  >('en-US');
-  const speakText = (text: string, language: string = 'en-US') => {
+  // const [requestedLanguage, setRequestedLanguage] =
+  //   React.useState<string>('en-US');
+  const speakText = (text: string, useNativeLanguage?: boolean) => {
     if (text) {
-      console.log(voiceIndex);
       Speech.speak(text, {
-        language: language,
-        _voiceIndex: voiceIndex,
+        language: useNativeLanguage ? i18n.language : 'en-US',
+        _voiceIndex: useNativeLanguage ? undefined : voiceIndex,
         rate: 0.9,
       });
     }
+    console.log(useNativeLanguage);
+    console.log(voiceIndex);
+    console.log('The chosen language is');
+    console.log(i18n.language);
   };
 
   return (
     <SpeechContext.Provider
       value={{
         speakText,
-        requestedLanguage,
-        setRequestedLanguage,
+        // requestedLanguage,
+        // setRequestedLanguage,
         readAloudMode,
         setReadAloudMode,
         voiceIndex,
