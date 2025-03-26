@@ -6,7 +6,7 @@ import * as Localization from 'expo-localization';
 import i18n from '@/i18n';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LanguageSelector from '@/components/LanguageSelector';
-import { SpeechProvider } from '@/contexts/SpeechContext';
+import { SpeechProvider, useSpeech } from '@/contexts/SpeechContext';
 
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import LanguagePackToast from '@/components/LanguagePackToast';
@@ -19,7 +19,6 @@ import { useColorScheme } from 'react-native';
 export default function RootLayout() {
   const { t } = useTranslation();
   const colorScheme = useColorScheme();
-  let [locale, setLocale] = useState(Localization.getLocales()[0].languageTag);
 
   return (
     <>
@@ -27,9 +26,8 @@ export default function RootLayout() {
         <SpeechProvider>
           <ThemeProvider>
             {/* <LanguagePackToast /> */}
+
             <Stack>
-              <Text>{t('home.welcome')}</Text>
-              <Text>{t('home.description')}</Text>
               {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
               <Stack.Screen name="index" options={{ headerTitle: 'Home' }} />
               <Stack.Screen name="+not-found" />

@@ -13,7 +13,7 @@ interface LanguageSelectorProps {
 }
 
 const LanguageSelector: React.FC<LanguageSelectorProps> = ({}) => {
-  const { setVoiceIndex } = useSpeech(); // Get requestedLanguage from SpeechContext
+  const { setVoiceIndex, setRequestedLanguage } = useSpeech(); // Get requestedLanguage from SpeechContext
   let [locale, setLocale] = useState(Localization.getLocales()[0].languageTag);
 
   useEffect(() => {
@@ -30,6 +30,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({}) => {
           setLocale(savedLanguage);
           setValue(savedLanguage); // Set the current value in the language selector
           await i18n.changeLanguage(savedLanguage);
+          setRequestedLanguage(savedLanguage);
         } else {
           await changeLanguage(locale);
         }
@@ -52,8 +53,10 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({}) => {
         await AsyncStorage.setItem('language', lng);
         console.log('set language to' + locale);
       }
+      setRequestedLanguage(lng);
     } catch (error) {
       console.error('Failed to change language', error);
+      // Set the requested language in the SpeechContext
     }
   };
 

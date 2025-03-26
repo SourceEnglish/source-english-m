@@ -1,4 +1,4 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, ReactNode, useEffect } from 'react';
 import * as Speech from 'expo-speech';
 import i18n from '@/i18n';
 
@@ -7,10 +7,9 @@ interface SpeechContextType {
   readAloudMode: boolean;
   voiceIndex: number | undefined;
   setVoiceIndex: (index: number | undefined) => void;
-
   setReadAloudMode: (mode: boolean) => void;
-  // setRequestedLanguage: (language: string) => void;
-  // requestedLanguage: string | null;
+  setRequestedLanguage: (language: string) => void;
+  requestedLanguage: string | null;
 
   //
   speakText: (
@@ -34,8 +33,9 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
     undefined
   );
   const [readAloudMode, setReadAloudMode] = React.useState(false);
-  // const [requestedLanguage, setRequestedLanguage] =
-  //   React.useState<string>('en-US');
+  const [requestedLanguage, setRequestedLanguage] =
+    React.useState<string>('en-US');
+  const [_, setLanguageChanged] = React.useState(false);
   const speakText = (text: string, useNativeLanguage?: boolean) => {
     if (text) {
       Speech.speak(text, {
@@ -50,12 +50,20 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
     console.log(i18n.language);
   };
 
+  useEffect(() => {
+    // Logic to reload or update the component when requestedLanguage changes
+    console.log(`Language changed to: ${requestedLanguage}`);
+    console.log('SpeechProvider component reloaded');
+    setLanguageChanged((prev) => !prev); // Trigger re-render
+    // Add any additional logic if needed
+  }, [requestedLanguage]);
+
   return (
     <SpeechContext.Provider
       value={{
         speakText,
-        // requestedLanguage,
-        // setRequestedLanguage,
+        requestedLanguage,
+        setRequestedLanguage,
         readAloudMode,
         setReadAloudMode,
         voiceIndex,

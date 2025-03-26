@@ -1,12 +1,20 @@
+import React, { useEffect, useState } from 'react';
 import LanguageSelector from '@/components/LanguageSelector';
-import { Link, RelativePathString } from 'expo-router';
+import { Link } from 'expo-router';
 import { View, StyleSheet, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { t } from 'i18next';
 import PageLink from '@/components/PageLink';
 import LanguagePackToast from '@/components/LanguagePackToast';
+import { useSpeech } from '@/contexts/SpeechContext';
 
 export default function Index() {
+  const { requestedLanguage } = useSpeech();
+
+  useEffect(() => {
+    // Handle language change logic here if needed
+  }, [requestedLanguage]);
+
   return (
     <View style={[styles.thread, { gap: 10 }]}>
       <LanguagePackToast></LanguagePackToast>
@@ -34,10 +42,10 @@ export default function Index() {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   thread: {
     padding: 10,
-
     marginLeft: 10,
     marginRight: 10,
   },
@@ -47,7 +55,6 @@ const styles = StyleSheet.create({
     color: 'black',
     backgroundColor: 'gray',
   },
-
   link: {
     backgroundColor: 'white',
     display: 'flex',
