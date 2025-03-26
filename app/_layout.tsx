@@ -25,15 +25,13 @@ export default function RootLayout() {
       <I18nextProvider i18n={i18n}>
         <SpeechProvider>
           <ThemeProvider>
-            {/* <LanguagePackToast /> */}
-
+            <LanguagePackToast />
             <Stack>
               {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
               <Stack.Screen
                 name="index"
                 options={{
                   headerTitle: 'Home',
-                  headerRight: () => <LanguagePackToast />,
                 }}
               />
               <Stack.Screen name="+not-found" />
