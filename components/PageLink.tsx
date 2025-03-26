@@ -46,7 +46,16 @@ const PageLink: React.FC<PageLinkProps> = ({
           }
         }}
       >
-        <Text style={{ color: theme.textColor }}>{pageText}</Text>
+        <Text
+          style={{
+            color: theme.textColor,
+            backgroundColor: readAloudMode
+              ? theme.highlightColor
+              : theme.backgroundColor,
+          }}
+        >
+          {pageText}
+        </Text>
       </TouchableOpacity>
       <Text> | </Text>
       <TouchableOpacity

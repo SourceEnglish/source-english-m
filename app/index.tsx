@@ -6,7 +6,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { t } from 'i18next';
 import PageLink from '@/components/PageLink';
 import { useSpeech } from '@/contexts/SpeechContext';
-import LanguagePackToast from '@/components/LanguagePackToast';
 
 export default function Index() {
   const { requestedLanguage } = useSpeech();

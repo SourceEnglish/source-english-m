@@ -71,7 +71,15 @@ export default function LanguagePackToast() {
             setVisible(true);
           }
         }}
-        style={{ backgroundColor: readAloudMode ? 'purple' : 'black' }}
+        style={{
+          backgroundColor: readAloudMode ? 'purple' : 'black',
+          position: 'absolute',
+          top: 10,
+          right: 10,
+          padding: 10,
+          borderRadius: 5,
+          zIndex: 50,
+        }}
       >
         <Text style={{ color: 'white' }}>Set Read Aloud</Text>
       </TouchableOpacity>
