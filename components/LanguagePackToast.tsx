@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Platform, Linking } from 'react-native';
 
-import { Button, Portal, Snackbar } from 'react-native-paper';
+import { TouchableOpacity, Text } from 'react-native';
+import Toast from 'react-native-toast-message';
 import * as Speech from 'expo-speech';
 import { useSpeech } from '@/contexts/SpeechContext';
 import languageRedirects from '@/languageRedirect.json';
@@ -39,14 +40,14 @@ export default function LanguagePackToast() {
     speakText,
     readAloudMode,
     setReadAloudMode,
-    requestedLanguage,
+    // requestedLanguage,
     setVoiceIndex,
   } = useSpeech();
   const [visible, setVisible] = useState(false);
 
   return (
     <>
-      <Button
+      <TouchableOpacity
         onPress={async () => {
           if (readAloudMode) {
             setReadAloudMode(false);
@@ -72,23 +73,19 @@ export default function LanguagePackToast() {
         }}
         style={{ backgroundColor: readAloudMode ? 'purple' : 'black' }}
       >
-        Set Read Aloud
-      </Button>
-      <Portal>
-        <Snackbar
-          icon={'alert-circle'}
-          visible={visible}
-          onDismiss={() => setVisible(false)}
-          duration={5000}
-          action={{
-            label: 'See Instructions',
-            onPress: () => Linking.openURL(selectLanguageRedirect()),
-          }}
-        >
-          To use text-to-speech, please add English (United States) / en-US as a
-          language to your device.
-        </Snackbar>
-      </Portal>
+        <Text style={{ color: 'white' }}>Set Read Aloud</Text>
+      </TouchableOpacity>
+
+      {/* <Toast
+
+        action={{
+          label: 'See Instructions',
+          onPress: () => Linking.openURL(selectLanguageRedirect()),
+        }}
+      >
+        To use text-to-speech, please add English (United States) / en-US as a
+        language to your device.
+      </Toast> */}
     </>
   );
 }

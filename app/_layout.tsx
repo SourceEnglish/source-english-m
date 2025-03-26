@@ -7,19 +7,26 @@ import i18n from '@/i18n';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LanguageSelector from '@/components/LanguageSelector';
 import { SpeechProvider } from '@/contexts/SpeechContext';
-import { Provider } from 'react-native-paper';
+
+import { ThemeProvider } from '@/contexts/ThemeContext';
 import LanguagePackToast from '@/components/LanguagePackToast';
+import { ThemeContext } from '@react-navigation/native';
+
+import { DarkTheme, DefaultTheme } from '@react-navigation/native';
+
+import { useColorScheme } from 'react-native';
 
 export default function RootLayout() {
   const { t } = useTranslation();
+  const colorScheme = useColorScheme();
   let [locale, setLocale] = useState(Localization.getLocales()[0].languageTag);
 
   return (
     <>
       <I18nextProvider i18n={i18n}>
         <SpeechProvider>
-          <Provider>
-            <LanguagePackToast />
+          <ThemeProvider>
+            {/* <LanguagePackToast /> */}
             <Stack>
               <Text>{t('home.welcome')}</Text>
               <Text>{t('home.description')}</Text>
@@ -27,7 +34,7 @@ export default function RootLayout() {
               <Stack.Screen name="index" options={{ headerTitle: 'Home' }} />
               <Stack.Screen name="+not-found" />
             </Stack>
-          </Provider>
+          </ThemeProvider>
         </SpeechProvider>
       </I18nextProvider>
     </>
