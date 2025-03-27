@@ -37,7 +37,7 @@ const PageLink: React.FC<PageLinkProps> = ({
         borderRadius: 4,
         padding: 16,
         display: 'flex',
-        justifyContent: 'center',
+
         opacity: readAloudMode ? 0.5 : 1, // Adjust opacity to indicate disabled state
         alignContent: 'center',
         textAlignVertical: 'center',
