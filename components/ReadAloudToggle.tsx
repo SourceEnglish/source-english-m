@@ -35,7 +35,7 @@ function selectLanguageRedirect(): string {
   return '';
 }
 
-export default function LanguagePackToast() {
+export default function ReadAloudToggle() {
   const {
     speakText,
     readAloudMode,
@@ -61,6 +61,7 @@ export default function LanguagePackToast() {
           voiceIndex = voices.findIndex((voice) =>
             voice.identifier.includes('Google US English')
           );
+
           setVoiceIndex(voiceIndex);
           voices.forEach((voice) => {
             if (voice.language === 'en-US') {
