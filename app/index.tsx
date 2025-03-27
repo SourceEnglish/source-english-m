@@ -24,19 +24,23 @@ export default function Index() {
         pageTextTranslated={t('letters')}
       />
 
-      <Link href={'/letters'} style={styles.link}>
-        letters{' | ' + t('letters')}
-      </Link>
-      <Link href={'/cardinalNumbers'} style={styles.link}>
-        cardinal numbers{' | ' + t('cardinal numbers')}
-      </Link>
-      <Link href={'/ordinalNumbers'} style={styles.link}>
-        ordinal numbers{' | ' + t('ordinal numbers')}
-      </Link>
-      <Link href={'/months'} style={styles.link}>
-        <Icon name="calendar-today" size={30} color="black" />
-        <Text>months</Text>
-      </Link>
+      <PageLink
+        pagePath={'/cardinalNumbers'}
+        pageText={'cardinal numbers'}
+        pageTextTranslated={t('cardinal numbers')}
+      />
+
+      <PageLink
+        pagePath={'/ordinalNumbers'}
+        pageText={'ordinal numbers'}
+        pageTextTranslated={t('ordinal numbers')}
+      />
+
+      <PageLink
+        pagePath={'/months'}
+        pageText={'months'}
+        pageTextTranslated={t('months')}
+      />
     </View>
   );
 }
