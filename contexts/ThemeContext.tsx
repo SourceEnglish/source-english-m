@@ -5,6 +5,7 @@ import { useColorScheme } from 'react-native';
 interface Theme {
   backgroundColor: string;
   textColor: string;
+  highlightColor: string;
 }
 
 // Define Context Type
@@ -17,11 +18,13 @@ interface ThemeContextType {
 const lightTheme: Theme = {
   backgroundColor: '#FFFFFF',
   textColor: '#000000',
+  highlightColor: '#8B8000',
 };
 
 const darkTheme: Theme = {
   backgroundColor: '#121212',
   textColor: '#FFFFFF',
+  highlightColor: '#8B8000',
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
