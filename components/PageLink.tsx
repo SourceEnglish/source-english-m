@@ -16,7 +16,7 @@ interface PageLinkProps {
   pagePath: string;
   pageText: string;
   pageTextTranslated: string;
-  icon?: React.ReactNode; // Optional icon prop
+  icon?: React.ReactNode;
 }
 
 const PageLink: React.FC<PageLinkProps> = ({
@@ -37,12 +37,11 @@ const PageLink: React.FC<PageLinkProps> = ({
         borderRadius: 4,
         padding: 16,
         display: 'flex',
-
+        flexDirection: 'row',
         opacity: readAloudMode ? 0.5 : 1, // Adjust opacity to indicate disabled state
         alignContent: 'center',
         textAlignVertical: 'center',
         alignItems: 'center',
-        columnGap: 5,
       }}
       onPress={(e) => {
         if (readAloudMode) {
@@ -51,7 +50,7 @@ const PageLink: React.FC<PageLinkProps> = ({
         }
       }}
     >
-      <MaterialIcons name="home" size={32} color="gray" />
+      <View style={{ paddingRight: 5 }}>{icon}</View>
       <View>
         <TouchableOpacity
           disabled={!readAloudMode}
@@ -65,9 +64,7 @@ const PageLink: React.FC<PageLinkProps> = ({
           }}
           style={{
             pointerEvents: 'auto',
-            zIndex: 1000,
             borderBottomColor: 'gray',
-
             borderBottomWidth: requestedLanguage === 'en-US' ? 0 : 1,
           }}
         >
@@ -77,7 +74,6 @@ const PageLink: React.FC<PageLinkProps> = ({
               backgroundColor: readAloudMode
                 ? theme.highlightColor
                 : theme.backgroundColor,
-
               fontSize: 16,
             }}
           >
@@ -87,9 +83,6 @@ const PageLink: React.FC<PageLinkProps> = ({
 
         {requestedLanguage !== 'en-US' && (
           <TouchableOpacity
-            style={{
-              zIndex: 1000,
-            }}
             disabled={!readAloudMode}
             onPress={(e) => {
               if (readAloudMode) {

@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import LanguageSelector from '@/components/LanguageSelector';
 import { Link } from 'expo-router';
 import { View, StyleSheet, Text } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import { t } from 'i18next';
 import PageLink from '@/components/PageLink';
 import { useSpeech } from '@/contexts/SpeechContext';
+import { MaterialIcons } from '@expo/vector-icons';
+import Octicons from '@expo/vector-icons/Octicons';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
 export default function Index() {
   const { requestedLanguage } = useSpeech();
@@ -19,24 +22,48 @@ export default function Index() {
       <LanguageSelector></LanguageSelector>
 
       <PageLink
+        icon={
+          <MaterialCommunityIcons
+            name="format-letter-case"
+            size={40}
+            color="gray"
+            style={{ width: 40, height: 40 }}
+          />
+        }
         pagePath={'/letters'}
         pageText={'letters'}
         pageTextTranslated={t('letters')}
       />
 
       <PageLink
+        icon={
+          <Octicons
+            name="number"
+            size={40}
+            color="gray"
+            style={{ width: 40, height: 40, paddingLeft: 5, paddingRight: -5 }}
+          />
+        }
         pagePath={'/cardinalNumbers'}
         pageText={'cardinal numbers'}
         pageTextTranslated={t('cardinal numbers')}
       />
 
       <PageLink
+        icon={<FontAwesome6 name="medal" size={40} color="gray" />}
         pagePath={'/ordinalNumbers'}
         pageText={'ordinal numbers'}
         pageTextTranslated={t('ordinal numbers')}
       />
 
       <PageLink
+        icon={
+          <MaterialCommunityIcons
+            name="calendar-month-outline"
+            size={40}
+            color="gray"
+          />
+        }
         pagePath={'/months'}
         pageText={'months'}
         pageTextTranslated={t('months')}
