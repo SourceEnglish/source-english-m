@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import LanguageSelector from '@/components/LanguageSelector';
 import { Link } from 'expo-router';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, ScrollView } from 'react-native';
 import { t } from 'i18next';
 import PageLink from '@/components/PageLink';
 import { useSpeech } from '@/contexts/SpeechContext';
@@ -18,57 +18,149 @@ export default function Index() {
   }, [requestedLanguage]);
 
   return (
-    <View style={[styles.thread, { gap: 10 }]}>
-      <LanguageSelector></LanguageSelector>
+    <ScrollView>
+      <View style={[styles.thread, { gap: 10 }]}>
+        <LanguageSelector></LanguageSelector>
 
-      <PageLink
-        icon={
-          <MaterialCommunityIcons
-            name="format-letter-case"
-            size={40}
-            color="gray"
-            style={{ width: 40, height: 40 }}
-          />
-        }
-        pagePath={'/letters'}
-        pageText={'letters'}
-        pageTextTranslated={t('letters')}
-      />
+        <PageLink
+          icon={
+            <MaterialCommunityIcons
+              name="format-letter-case"
+              size={40}
+              color="gray"
+              style={{ width: 40, height: 40 }}
+            />
+          }
+          pagePath={'/letters'}
+          pageText={'letters'}
+          pageTextTranslated={t('letters')}
+        />
 
-      <PageLink
-        icon={
-          <Octicons
-            name="number"
-            size={40}
-            color="gray"
-            style={{ width: 40, height: 40, paddingLeft: 5, paddingRight: -5 }}
-          />
-        }
-        pagePath={'/cardinalNumbers'}
-        pageText={'cardinal numbers'}
-        pageTextTranslated={t('cardinal numbers')}
-      />
+        <PageLink
+          icon={
+            <Octicons
+              name="number"
+              size={40}
+              color="gray"
+              style={{
+                width: 40,
+                height: 40,
+                paddingLeft: 5,
+                paddingRight: -5,
+              }}
+            />
+          }
+          pagePath={'/cardinalNumbers'}
+          pageText={'cardinal numbers'}
+          pageTextTranslated={t('cardinal numbers')}
+        />
 
-      <PageLink
-        icon={<FontAwesome6 name="medal" size={40} color="gray" />}
-        pagePath={'/ordinalNumbers'}
-        pageText={'ordinal numbers'}
-        pageTextTranslated={t('ordinal numbers')}
-      />
+        <PageLink
+          icon={<FontAwesome6 name="medal" size={40} color="gray" />}
+          pagePath={'/ordinalNumbers'}
+          pageText={'ordinal numbers'}
+          pageTextTranslated={t('ordinal numbers')}
+        />
 
-      <PageLink
-        icon={
-          <MaterialCommunityIcons
-            name="calendar-month-outline"
-            size={40}
-            color="gray"
-          />
-        }
-        pagePath={'/months'}
-        pageText={'months'}
-        pageTextTranslated={t('months')}
-      />
-    </View>
+        <PageLink
+          icon={
+            <MaterialCommunityIcons
+              name="calendar-month-outline"
+              size={40}
+              color="gray"
+            />
+          }
+          pagePath={'/months'}
+          pageText={'months'}
+          pageTextTranslated={t('months')}
+        />
+
+        <PageLink
+          icon={
+            <MaterialCommunityIcons
+              name="calendar-month-outline"
+              size={40}
+              color="gray"
+            />
+          }
+          pagePath={'/months'}
+          pageText={'months'}
+          pageTextTranslated={t('months')}
+        />
+        <PageLink
+          icon={
+            <MaterialCommunityIcons
+              name="calendar-month-outline"
+              size={40}
+              color="gray"
+            />
+          }
+          pagePath={'/months'}
+          pageText={'months'}
+          pageTextTranslated={t('months')}
+        />
+        <PageLink
+          icon={
+            <MaterialCommunityIcons
+              name="calendar-month-outline"
+              size={40}
+              color="gray"
+            />
+          }
+          pagePath={'/months'}
+          pageText={'months'}
+          pageTextTranslated={t('months')}
+        />
+        <PageLink
+          icon={
+            <MaterialCommunityIcons
+              name="calendar-month-outline"
+              size={40}
+              color="gray"
+            />
+          }
+          pagePath={'/months'}
+          pageText={'months'}
+          pageTextTranslated={t('months')}
+        />
+        <PageLink
+          icon={
+            <MaterialCommunityIcons
+              name="calendar-month-outline"
+              size={40}
+              color="gray"
+            />
+          }
+          pagePath={'/months'}
+          pageText={'months'}
+          pageTextTranslated={t('months')}
+        />
+        <PageLink
+          icon={
+            <MaterialCommunityIcons
+              name="calendar-month-outline"
+              size={40}
+              color="gray"
+            />
+          }
+          pagePath={'/months'}
+          pageText={'months'}
+          pageTextTranslated={t('months')}
+        />
+        <PageLink
+          icon={
+            <MaterialCommunityIcons
+              name="calendar-month-outline"
+              size={40}
+              color="gray"
+            />
+          }
+          pagePath={'/months'}
+          pageText={'months'}
+          pageTextTranslated={t('months')}
+        />
+      </View>
+    </ScrollView>
   );
 }
 
