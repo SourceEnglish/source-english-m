@@ -11,7 +11,7 @@ import { SpeechProvider, useSpeech } from '@/contexts/SpeechContext';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import ReadAloudToggle from '@/components/ReadAloudToggle';
 import { ThemeContext } from '@react-navigation/native';
-
+import NavigationBar from '@/components/NavigationBar';
 import { DarkTheme, DefaultTheme } from '@react-navigation/native';
 
 import { useColorScheme } from 'react-native';
@@ -30,16 +30,16 @@ export default function RootLayout() {
       <I18nextProvider i18n={i18n}>
         <SpeechProvider>
           <ThemeProvider>
-            <ReadAloudToggle />
+            <NavigationBar />
+            {/* <ReadAloudToggle /> */}
             <Stack>
               {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
-              <Stack.Screen
-                name="index"
-                options={{
-                  headerTitle: 'Home',
-                }}
-              />
+              <Stack.Screen name="index" options={{}} />
               <Stack.Screen name="+not-found" />
+              {/* <Stack.Screen key={ClipboardItem.id} name={`Page${item.id}` component={DynamicScreen}
+              initialParams={{items}}
+            
+            } /> */}
             </Stack>
           </ThemeProvider>
         </SpeechProvider>
