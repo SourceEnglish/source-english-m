@@ -37,7 +37,8 @@
       "expo-localization"
     ],
     "experiments": {
-      "typedRoutes": true
+      "typedRoutes": true,
+      "baseUrl": "/source-english"
     },
     "extra": {
       "router": {
