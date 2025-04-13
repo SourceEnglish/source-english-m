@@ -38,6 +38,38 @@ export default function Index() {
 
         <PageLink
           icon={
+            <MaterialCommunityIcons
+              name="format-letter-case"
+              size={40}
+              color="gray"
+              style={{ width: 40, height: 40 }}
+            />
+          }
+          pagePath={'/printHTML'}
+          pageText={'printHTML'}
+          pageTextTranslated={t('printHTML')}
+        />
+        <PageLink
+          icon={
+            <Octicons
+              name="number"
+              size={40}
+              color="gray"
+              style={{
+                width: 40,
+                height: 40,
+                paddingLeft: 5,
+                paddingRight: -5,
+              }}
+            />
+          }
+          pagePath={'/print'}
+          pageText={'print'}
+          pageTextTranslated={t('print')}
+        />
+
+        <PageLink
+          icon={
             <Octicons
               name="number"
               size={40}

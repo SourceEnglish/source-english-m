@@ -1,0 +1,127 @@
+{
+  "lessons": {
+    "letters": {
+      "order": 1,
+      "title": "letters",
+      "sections": {
+        "intro": {
+          "order": 1,
+          "text": "There are letters everywhere. Everywhere you look, you see letters. They are on the signs, on the labels, on the books, and even on your computer. Letters are the building blocks of words. Without letters, we wouldn't be able to read or write. In this lesson, we will learn about the letters of the alphabet."
+        },
+
+        "imageOne": {
+          "order": 1.5,
+          "image": true,
+          "src__": "600x400.svg",
+          "alt": "Uppercase 'A'",
+          "caption": "Uppercase 'A'"
+        },
+
+        "imageTwo": {
+          "order": 1.6,
+          "image": true,
+          "src__": "https://placehold.co/600x400",
+          "alt": "Lowercase 'a'",
+          "caption": "Lowercase 'a'"
+        },
+        "explanation": {
+          "order": 3,
+          "bold": true,
+          "italic": true,
+          "text": "One fish two fish red fish blue fish. This is a famous book by Dr. Seuss. It has many fun and silly pictures. The book is about different kinds of fish. Some are red, some are blue, and some are even striped! The book is very colorful and fun to read. It teaches us about colors and shapes."
+        },
+
+        "blockQuotes": {
+          "order": 4,
+          "text": "The only thing we have to fear is fear itself. - Franklin D. Roosevelt",
+          "blockquotes": true,
+          "children": {
+            "sentenceOne": {
+              "text": "In the end, we will remember not the words of our enemies, but the silence of our friends. - Martin Luther King Jr.",
+              "order": 1,
+              "blockquotes": true
+            },
+            "sentenceTwo": {
+              "text": "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
+              "order": 2,
+              "blockquotes": true
+            }
+          }
+        },
+
+        "list": {
+          "order": 5,
+          "unorderedList": true,
+          "listItems": {
+            "itemOne": {
+              "text": "Apples",
+              "order": 1,
+              "listItems": true
+            },
+            "itemTwo": {
+              "text": "Bananas",
+              "order": 2,
+              "listItems": true
+            },
+            "itemThree": {
+              "text": "Cherries",
+              "order": 3,
+              "listItems": true
+            }
+          }
+        },
+
+        "orderedList": {
+          "order": 5,
+          "orderedList": true,
+          "listItems": {
+            "itemOne": {
+              "text": "Apples",
+              "order": 1,
+              "listItems": true
+            },
+            "itemTwo": {
+              "text": "Bananas",
+              "order": 2,
+              "listItems": true
+            },
+            "itemThree": {
+              "text": "Cherries",
+              "order": 3,
+              "listItems": true
+            }
+          }
+        },
+
+        "linkedElement": {
+          "order": 6,
+          "text": "Click here to learn more about the alphabet.",
+          "link": true,
+          "url__": "https://placehold.co/600x400"
+        }
+      }
+    },
+    "letters2": {
+      "order": 1,
+      "title": "letters",
+      "sections": {
+        "intro": {
+          "order": 1,
+          "text": "There are letters everywhere. Everywhere you look, you see letters. They are on the signs, on the labels, on the books, and even on your computer. Letters are the building blocks of words. Without letters, we wouldn't be able to read or write. In this lesson, we will learn about the letters of the alphabet."
+        },
+        "imageOne": {
+          "image": true,
+          "src__": "https://placehold.co/600x400",
+          "alt": "Uppercase 'A'",
+          "caption": "Uppercase 'A'"
+        },
+        "imageTwo": {
+          "image": true,
+          "src__": "https://placehold.co/600x400",
+          "alt": "Lowercase 'a'",
+          "caption": "Lowercase 'a'"
+        }
+      }
+    }
+  }
+}
