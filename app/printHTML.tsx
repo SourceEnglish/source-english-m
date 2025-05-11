@@ -1,9 +1,16 @@
 import React from 'react';
 import { Button, View } from 'react-native';
 import { Platform } from 'react-native';
+import { t, getFixedT } from 'i18next';
+
+import { generateHeader, generateParagraph } from '@/components/HTMLGenerator';
 
 export default function App() {
-  const rat = 1.5; // Example ratio, adjust as needed
+  // Generate the header dynamically
+
+  const header = generateHeader('home.title', 'es-MX');
+  const paragraph = generateParagraph('home.description', 'es-MX');
+
   const htmlContent = `
     <html>
       <head>
@@ -11,32 +18,39 @@ export default function App() {
           @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap');
 
           @media print {
+             @page {
+      size: letter portrait;
+      margin-left: 1in;
+margin-right: 1in;
+margin-top: 1in;
+margin-bottom: 1in;
+      
+
+    }
             .page-break {
               page-break-after: always;
             }
           }
-
-          body {
-            font-family: 'Lexend', Arial, sans-serif;
+            hr {
+            padding:0;
             margin: 0;
-            padding: 20px;
+            }
+
+          html,body {
+          width: 6.5in;
+            font-family: 'Lexend', Arial, sans-serif;
+             font-size: 12pt;
+              line-height: 1.5;
+            margin: 0;
+            padding: 0;
           }
 
-          h1 {
-            color: darkblue;
-          }
+    
         </style>
       </head>
       <body>
-        <h1>Hello, World! ${rat}</h1>
-        <p>This is a test document for printing.</p>
-        <a href="#another-section">Go to Another Section</a> <!-- Internal link -->
-        <div class="page-break"></div>
-        <h2>New Section</h2>
-        <p>This is another section that will appear on a new page when printed.</p>
-        <div class="page-break"></div>
-        <h2 id="another-section">Another Section</h2> <!-- Anchor target -->
-        <p>This is yet another section that will appear on a new page when printed.</p>
+        ${generateHeader('home.title', 'es-MX')}
+        ${generateParagraph('home.description', 'es-MX')} 
       </body>
     </html>
   `;
