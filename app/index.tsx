@@ -21,6 +21,19 @@ export default function Index() {
     <ScrollView>
       <View style={[styles.thread, { gap: 10 }]}>
         <LanguageSelector></LanguageSelector>
+        <PageLink
+          icon={
+            <MaterialCommunityIcons
+              name="format-letter-case"
+              size={40}
+              color="gray"
+              style={{ width: 40, height: 40 }}
+            />
+          }
+          pagePath={'/tables'}
+          pageText={'tables'}
+          pageTextTranslated={t('tables')}
+        />
 
         <PageLink
           icon={
