@@ -24,6 +24,19 @@ export default function Index() {
         <PageLink
           icon={
             <MaterialCommunityIcons
+              name="food"
+              size={40}
+              color="gray"
+              style={{ width: 40, height: 40 }}
+            />
+          }
+          pagePath={'/food'}
+          pageText={'food'}
+          pageTextTranslated={t('food')}
+        />
+        <PageLink
+          icon={
+            <MaterialCommunityIcons
               name="format-letter-case"
               size={40}
               color="gray"

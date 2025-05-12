@@ -1,0 +1,10 @@
+{
+  "apple": {
+    "__pos": "noun",
+    "__count": "countable",
+    "__tags": ["food"],
+    "word": "apple",
+    "plural": "apples",
+    "translation_note": ""
+  }
+}
