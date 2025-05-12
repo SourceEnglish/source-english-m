@@ -26,6 +26,11 @@ export default function Food() {
       }}
     >
       <CardPreview card={{ __pos: 'noun', word: 'apple' }} />
+      <CardPreview card={{ __pos: 'noun', word: 'apple' }} />
+      <CardPreview card={{ __pos: 'noun', word: 'apple' }} />
+      <CardPreview card={{ __pos: 'noun', word: 'apple' }} />
+      <CardPreview card={{ __pos: 'noun', word: 'apple' }} />
+      <CardPreview card={{ __pos: 'noun', word: 'apple' }} />
       {/* {Object.keys(typedVocabulary).map((key) => {
         const card = typedVocabulary[key];
         return (
