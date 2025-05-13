@@ -18,7 +18,7 @@ interface ThemeContextType {
 const lightTheme: Theme = {
   backgroundColor: '#FFFFFF',
   textColor: '#000000',
-  highlightColor: '#8B8000',
+  highlightColor: '#ffff73',
 };
 
 const darkTheme: Theme = {

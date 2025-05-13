@@ -1,16 +1,9 @@
 import { Link, RelativePathString } from 'expo-router';
 import React from 'react';
-import {
-  Pressable,
-  Text,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-  View,
-} from 'react-native';
+import { View } from 'react-native';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useSpeech } from '@/contexts/SpeechContext';
-import * as Speech from 'expo-speech';
-import { MaterialIcons } from '@expo/vector-icons';
+import ReadableText from '@/components/ReadableText';
 
 interface PageLinkProps {
   pagePath: string;
@@ -26,8 +19,7 @@ const PageLink: React.FC<PageLinkProps> = ({
   icon,
 }) => {
   const { theme } = useTheme();
-  const { speakText, readAloudMode, setReadAloudMode, requestedLanguage } =
-    useSpeech();
+  const { readAloudMode, requestedLanguage } = useSpeech();
 
   return (
     <Link
@@ -38,64 +30,26 @@ const PageLink: React.FC<PageLinkProps> = ({
         padding: 16,
         display: 'flex',
         flexDirection: 'row',
-        opacity: readAloudMode ? 0.5 : 1, // Adjust opacity to indicate disabled state
+        opacity: readAloudMode ? 1 : 1,
         alignContent: 'center',
         textAlignVertical: 'center',
         alignItems: 'center',
       }}
       onPress={(e) => {
         if (readAloudMode) {
+          e.preventDefault(); // Prevent link navigation
           e.stopPropagation(); // Prevent parent link navigation
-          e.preventDefault();
         }
       }}
     >
       <View style={{ paddingRight: 5 }}>{icon}</View>
       <View>
-        <TouchableOpacity
-          disabled={!readAloudMode}
-          onPress={(e) => {
-            if (readAloudMode) {
-              e.stopPropagation(); // Prevent parent link navigation
-              e.preventDefault();
-              speakText(pageText);
-              setReadAloudMode(false);
-            }
-          }}
-          style={{
-            pointerEvents: 'auto',
-            borderBottomColor: 'gray',
-            borderBottomWidth: requestedLanguage === 'en-US' ? 0 : 1,
-          }}
-        >
-          <Text
-            style={{
-              color: theme.textColor,
-              backgroundColor: readAloudMode
-                ? theme.highlightColor
-                : theme.backgroundColor,
-              fontSize: 16,
-            }}
-          >
-            {pageText}
-          </Text>
-        </TouchableOpacity>
-
-        {requestedLanguage !== 'en-US' && (
-          <TouchableOpacity
-            disabled={!readAloudMode}
-            onPress={(e) => {
-              if (readAloudMode) {
-                e.stopPropagation(); // Prevent parent link navigation
-                e.preventDefault();
-                speakText(pageTextTranslated, true);
-                setReadAloudMode(false);
-              }
-            }}
-          >
-            <Text style={{ color: theme.textColor }}>{pageTextTranslated}</Text>
-          </TouchableOpacity>
-        )}
+        <ReadableText
+          text={pageText}
+          translatedText={
+            requestedLanguage !== 'en-US' ? pageTextTranslated : undefined
+          }
+        />
       </View>
     </Link>
   );
