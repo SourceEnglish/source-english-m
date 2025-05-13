@@ -25,6 +25,8 @@ export default function RootLayout() {
     setIsReadAloudEnabled((prev) => !prev);
   };
 
+  const headerHeight = 40; // Define a constant header height
+
   return (
     <>
       <I18nextProvider i18n={i18n}>
@@ -32,7 +34,9 @@ export default function RootLayout() {
           <ThemeProvider>
             <Stack
               screenOptions={{
-                headerRight: () => <NavigationBar />, // Add NavigationBar to all screens
+                headerRight: () => (
+                  <NavigationBar headerHeight={headerHeight} />
+                ), // Pass headerHeight to NavigationBar
               }}
             >
               <Stack.Screen name="index" options={{ title: 'Home' }} />

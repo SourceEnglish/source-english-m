@@ -1,34 +1,76 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import { useRouter } from 'expo-router'; // Use useRouter for navigation
-import ReadAloudToggle from '@/components/ReadAloudToggle'; // Import ReadAloudToggle
-import HomeIcon from '@/assets/icons/licensed/home.svg'; // Import the home.svg as a React component
-import MoreOptionsIcon from '@/assets/icons/licensed/more_options.svg'; // Import the more_options.svg as a React component
+import { useRouter } from 'expo-router';
+import * as Speech from 'expo-speech';
+import { useSpeech } from '@/contexts/SpeechContext';
+import HomeIcon from '@/assets/icons/licensed/home.svg';
+import MoreOptionsIcon from '@/assets/icons/licensed/more_options.svg';
+import SpeakIcon from '@/assets/icons/licensed/speak.svg';
+import PropTypes from 'prop-types';
 
-const NavigationBar = () => {
-  const router = useRouter(); // Get the router object for navigation
+interface NavigationBarProps {
+  headerHeight: number;
+}
+
+const NavigationBar: React.FC<NavigationBarProps> = ({ headerHeight }) => {
+  const router = useRouter();
+  const { readAloudMode, setReadAloudMode, setVoiceIndex } = useSpeech();
+  const [visible, setVisible] = useState(false);
+  const [isPressed, setIsPressed] = useState(false); // State to track button press
+
+  const handleReadAloudToggle = async () => {
+    if (readAloudMode) {
+      setReadAloudMode(false);
+      return;
+    }
+    setReadAloudMode(true);
+    const voices = await Speech.getAvailableVoicesAsync();
+    let hasEnglishUS = false;
+    let voiceIndex = voices.findIndex((voice) =>
+      voice.identifier.includes('Google US English')
+    );
+
+    setVoiceIndex(voiceIndex);
+    voices.forEach((voice) => {
+      if (voice.language === 'en-US') {
+        hasEnglishUS = true;
+      }
+    });
+    if (!hasEnglishUS) {
+      setVisible(true);
+    }
+  };
 
   return (
     <View style={styles.container}>
       {/* Home Button */}
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => router.push('/')} // Navigate to the home page
-      >
-        <HomeIcon height={34} /> {/* Use the home.svg icon */}
+      <TouchableOpacity style={styles.button} onPress={() => router.push('/')}>
+        <HomeIcon height={headerHeight} />
       </TouchableOpacity>
 
       {/* Read Aloud Toggle */}
-      <View style={styles.button}>
-        <ReadAloudToggle />
-      </View>
+      <TouchableOpacity
+        onPress={handleReadAloudToggle}
+        onPressIn={() => setIsPressed(true)} // Set isPressed to true when button is pressed
+        onPressOut={() => setIsPressed(false)} // Set isPressed to false when button is released
+        style={{
+          ...styles.button,
+          backgroundColor: isPressed || readAloudMode ? '#ffff73' : 'white',
+        }}
+      >
+        <SpeakIcon height={headerHeight} />
+      </TouchableOpacity>
 
       {/* More Options */}
       <TouchableOpacity style={styles.button}>
-        <MoreOptionsIcon height={34} /> {/* Placeholder for settings */}
+        <MoreOptionsIcon height={headerHeight} />
       </TouchableOpacity>
     </View>
   );
+};
+
+NavigationBar.propTypes = {
+  headerHeight: PropTypes.number.isRequired,
 };
 
 const styles = StyleSheet.create({
@@ -38,6 +80,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
     paddingRight: 10,
+    marginBottom: 4,
+    marginTop: 4,
     paddingLeft: 10,
     columnGap: 10,
     height: '100%',
@@ -45,12 +89,11 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 1, // Thin black border
-    borderColor: 'black', // Border color
-    borderRadius: 5, // Rounded corners
-    padding: 5, // Add some padding for better spacing
+    borderWidth: 1,
+    borderColor: 'black',
+    borderRadius: 5,
+    padding: 5,
   },
 });
 
 export default NavigationBar;
-//   },
