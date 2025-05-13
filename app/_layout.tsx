@@ -35,7 +35,7 @@ export default function RootLayout() {
                 headerRight: () => <NavigationBar />, // Add NavigationBar to all screens
               }}
             >
-              <Stack.Screen name="index" />
+              <Stack.Screen name="index" options={{ title: 'Home' }} />
               <Stack.Screen name="+not-found" />
             </Stack>
           </ThemeProvider>
