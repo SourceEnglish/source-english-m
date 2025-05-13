@@ -1,15 +1,20 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; // Ensure this is installed
-import { Link } from 'expo-router'; // Use Link for navigation
+import { useRouter } from 'expo-router'; // Use useRouter for navigation
 
 const NavigationBar = () => {
+  const router = useRouter(); // Get the router object for navigation
+
   return (
     <View style={styles.container}>
       {/* Home Button */}
-      <Link href="/" style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => router.push('/')} // Navigate to the home page
+      >
         <MaterialCommunityIcons name="home" size={36} color="gray" />
-      </Link>
+      </TouchableOpacity>
 
       {/* Text-to-Speech Button */}
       <TouchableOpacity style={styles.button}>
