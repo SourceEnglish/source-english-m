@@ -30,16 +30,13 @@ export default function RootLayout() {
       <I18nextProvider i18n={i18n}>
         <SpeechProvider>
           <ThemeProvider>
-            <NavigationBar />
-            {/* <ReadAloudToggle /> */}
-            <Stack>
-              {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
-              <Stack.Screen name="index" options={{}} />
+            <Stack
+              screenOptions={{
+                headerRight: () => <NavigationBar />, // Add NavigationBar to all screens
+              }}
+            >
+              <Stack.Screen name="index" />
               <Stack.Screen name="+not-found" />
-              {/* <Stack.Screen key={ClipboardItem.id} name={`Page${item.id}` component={DynamicScreen}
-              initialParams={{items}}
-            
-            } /> */}
             </Stack>
           </ThemeProvider>
         </SpeechProvider>
