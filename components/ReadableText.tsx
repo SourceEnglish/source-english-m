@@ -11,11 +11,13 @@ import { useTheme } from '@/contexts/ThemeContext';
 interface ReadableTextProps {
   text: string;
   translatedText?: string;
+  style?: object; // Allow custom styles to be passed
 }
 
 const ReadableText: React.FC<ReadableTextProps> = ({
   text,
   translatedText,
+  style,
 }) => {
   const { speakText, readAloudMode, setReadAloudMode } = useSpeech();
   const { theme } = useTheme();
@@ -33,14 +35,13 @@ const ReadableText: React.FC<ReadableTextProps> = ({
     <TouchableOpacity
       disabled={!readAloudMode}
       onPress={handlePress}
-      style={styles.container}
+      style={[styles.container, style]} // Merge custom styles with container styles
     >
       <Text
         style={{
-          color: theme.textColor,
-          backgroundColor: readAloudMode
-            ? theme.highlightColor
-            : theme.backgroundColor,
+          ...style, // Apply custom styles passed via the `style` prop
+          color: (style as any)?.color || theme.textColor, // Safely access custom color from style prop
+          backgroundColor: readAloudMode ? theme.highlightColor : 'transparent',
           fontSize: 16,
         }}
       >

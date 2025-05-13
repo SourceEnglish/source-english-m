@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import { Pressable } from 'react-native'; // Import Pressable for hover effects
 import posColors from '@/constants/colors';
 import AppleIcon from '@/assets/icons/licensed/apple.svg'; // Import the SVG as a React component
+import ReadableText from '@/components/ReadableText';
 
 type VocabularyCard = {
   __pos: string;
@@ -40,20 +41,11 @@ export default function CardPreview({ card }: CardPreviewProps) {
         height={isMobile ? 50 : 100}
         style={styles.svgText}
       />
-      <Text
-        style={[styles.word, isMobile ? styles.mobileWord : styles.desktopWord]}
-      >
-        {word}
-      </Text>
-      <Text
-        style={[
-          styles.pos,
-          isMobile ? styles.mobilePos : styles.desktopPos,
-          { color: borderColor },
-        ]}
-      >
-        {__pos}
-      </Text>
+      <ReadableText text={word} />
+      <ReadableText
+        text={__pos}
+        style={{ fontStyle: 'italic', color: posColors[__pos] }} // Apply italic styling and red color for the noun POS
+      />
     </Pressable>
   );
 }
@@ -87,27 +79,5 @@ const styles = StyleSheet.create({
   },
   svgText: {
     userSelect: 'none', // React Native equivalent for user-select
-  },
-  word: {
-    fontSize: 16,
-    textAlign: 'center',
-    marginBottom: 5,
-  },
-  mobileWord: {
-    fontSize: 14,
-  },
-  desktopWord: {
-    fontSize: 34,
-  },
-  pos: {
-    fontSize: 14,
-    fontStyle: 'italic',
-    textAlign: 'center',
-  },
-  mobilePos: {},
-  desktopPos: {
-    fontSize: 26,
-    fontStyle: 'italic',
-    textAlign: 'center',
   },
 });
