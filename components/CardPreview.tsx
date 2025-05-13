@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
-// import * as Svg from 'react-native-svg';
+import { Pressable } from 'react-native'; // Import Pressable for hover effects
 import posColors from '@/constants/colors';
-
-// Import the color codes
 import AppleIcon from '@/assets/icons/licensed/apple.svg'; // Import the SVG as a React component
 
 type VocabularyCard = {
@@ -15,32 +13,33 @@ type CardPreviewProps = {
   card: VocabularyCard;
 };
 
-// // Static mapping of words to their corresponding SVG components
-// const iconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
-//   apple: AppleIcon,
-//   // Add more mappings here for other icons
-// };
-
 export default function CardPreview({ card }: CardPreviewProps) {
   const { __pos, word } = card;
   const borderColor = posColors[__pos] || '#000'; // Default to black if pos is not found
+
+  // Get screen width to determine if the device is mobile
   const screenWidth = Dimensions.get('window').width;
   const isMobile = screenWidth <= 768; // Example breakpoint for mobile devices
 
-  // Resolve the icon component using the static mapping
-  // const IconComponent = iconMap[word.toLowerCase()];
+  // State to track hover
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <View
+    <Pressable
+      onHoverIn={() => setIsHovered(true)} // Trigger hover state
+      onHoverOut={() => setIsHovered(false)} // Reset hover state
       style={[
         styles.card,
         isMobile ? styles.mobileCard : styles.desktopCard,
-        ,
         { borderColor },
+        isHovered && styles.hoveredCard, // Apply hover style when hovered
       ]}
     >
-      {/* {IconComponent ? <IconComponent width={50} height={50} /> : null} */}
-      <AppleIcon width={isMobile ? 50 : 100} height={isMobile ? 50 : 100} />
+      <AppleIcon
+        width={isMobile ? 50 : 100}
+        height={isMobile ? 50 : 100}
+        style={styles.svgText}
+      />
       <Text
         style={[styles.word, isMobile ? styles.mobileWord : styles.desktopWord]}
       >
@@ -55,7 +54,7 @@ export default function CardPreview({ card }: CardPreviewProps) {
       >
         {__pos}
       </Text>
-    </View>
+    </Pressable>
   );
 }
 
@@ -71,7 +70,9 @@ const styles = StyleSheet.create({
     width: 120,
     height: 150,
   },
-
+  hoveredCard: {
+    backgroundColor: '#ffeeee', // Change background color to red when hovered
+  },
   mobileCard: {
     width: '30%', // Apply 30% width for mobile devices
     padding: 8, // Adjusted padding for mobile
@@ -84,10 +85,11 @@ const styles = StyleSheet.create({
     margin: 10, // Adjusted margin for desktop
     height: 300,
   },
-
+  svgText: {
+    userSelect: 'none', // React Native equivalent for user-select
+  },
   word: {
     fontSize: 16,
-    // fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 5,
   },
