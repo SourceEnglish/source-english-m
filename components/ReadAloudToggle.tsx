@@ -4,6 +4,7 @@ import { Platform, Linking } from 'react-native';
 import { TouchableOpacity, Text } from 'react-native';
 import Toast from 'react-native-toast-message';
 import * as Speech from 'expo-speech';
+import SpeakIcon from '@/assets/icons/licensed/speak.svg';
 import { useSpeech } from '@/contexts/SpeechContext';
 import languageRedirects from '@/languageRedirect.json';
 
@@ -73,16 +74,12 @@ export default function ReadAloudToggle() {
           }
         }}
         style={{
-          backgroundColor: readAloudMode ? 'purple' : 'black',
-          position: 'absolute',
-          top: 10,
-          right: 10,
-          padding: 10,
+          backgroundColor: readAloudMode ? 'purple' : 'white',
+
           borderRadius: 5,
-          zIndex: 50,
         }}
       >
-        <Text style={{ color: 'white' }}>Set Read Aloud</Text>
+        <SpeakIcon height={34} />
       </TouchableOpacity>
 
       {/* <Toast
