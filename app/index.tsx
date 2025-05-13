@@ -20,7 +20,7 @@ export default function Index() {
   return (
     <ScrollView>
       <View style={[styles.thread, { gap: 10 }]}>
-        <LanguageSelector></LanguageSelector>
+        {/* <LanguageSelector></LanguageSelector> */}
         <PageLink
           icon={
             <MaterialCommunityIcons

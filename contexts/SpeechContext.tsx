@@ -50,6 +50,7 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
     console.log(i18n.language);
   };
 
+  /*
   useEffect(() => {
     // Logic to reload or update the component when requestedLanguage changes
     console.log(`Language changed to: ${requestedLanguage}`);
@@ -57,6 +58,7 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
     setLanguageChanged((prev) => !prev); // Trigger re-render
     // Add any additional logic if needed
   }, [requestedLanguage]);
+   */
 
   return (
     <SpeechContext.Provider
