@@ -46,6 +46,7 @@ const PageLink: React.FC<PageLinkProps> = ({
       <View>
         <ReadableText
           text={pageText}
+          style={{ color: theme.textColor, fontSize: 20 }}
           translatedText={
             requestedLanguage !== 'en-US' ? pageTextTranslated : undefined
           }

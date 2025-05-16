@@ -44,7 +44,10 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ headerHeight }) => {
   return (
     <View style={styles.container}>
       {/* Home Button */}
-      <TouchableOpacity style={styles.button} onPress={() => router.push('/')}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => router.replace('/')}
+      >
         <HomeIcon height={headerHeight} />
       </TouchableOpacity>
 
