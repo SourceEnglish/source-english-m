@@ -35,14 +35,16 @@ const ReadableText: React.FC<ReadableTextProps> = ({
     <TouchableOpacity
       disabled={!readAloudMode}
       onPress={handlePress}
-      style={[styles.container, style]} // Merge custom styles with container styles
+      style={styles.container} // Only apply container styles here
     >
       <Text
         style={{
           ...style, // Apply custom styles passed via the `style` prop
-          color: (style as any)?.color || theme.textColor, // Safely access custom color from style prop
+          color: (style as any)?.color || theme.textColor,
           backgroundColor: readAloudMode ? theme.highlightColor : 'transparent',
-          fontSize: 16,
+          alignSelf: 'flex-start', // Prevents text from stretching
+          borderRadius: 4, // Optional: rounded highlight
+          paddingHorizontal: 2, // Optional: some padding for highlight
         }}
       >
         {text}
