@@ -9,9 +9,12 @@ import { MaterialIcons } from '@expo/vector-icons';
 import Octicons from '@expo/vector-icons/Octicons';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import { getLessons } from '@/utils/loadLessons';
+import { lessonIconMap } from '@/utils/iconMap';
 
 export default function Index() {
   const { requestedLanguage } = useSpeech();
+  const lessons = getLessons() as Array<{ name: string }>;
 
   useEffect(() => {
     // Handle language change logic here if needed
@@ -20,190 +23,18 @@ export default function Index() {
   return (
     <ScrollView>
       <View style={[styles.thread, { gap: 12 }]}>
-        {/* <LanguageSelector></LanguageSelector> */}
-        <PageLink
-          icon={
-            <MaterialCommunityIcons
-              name="format-letter-case"
-              size={40}
-              color="gray"
-              style={{ width: 40, height: 40 }}
+        {lessons.map((lesson) => {
+          const Icon = lessonIconMap[lesson.name];
+          return (
+            <PageLink
+              key={lesson.name}
+              icon={Icon ? <Icon width={32} height={32} /> : null}
+              pagePath={`/${lesson.name}`}
+              pageText={lesson.name}
+              pageTextTranslated={t(lesson.name)}
             />
-          }
-          pagePath={'/food'}
-          pageText={'food'}
-          pageTextTranslated={t('food')}
-        />
-
-        <PageLink
-          icon={
-            <MaterialCommunityIcons
-              name="format-letter-case"
-              size={40}
-              color="gray"
-              style={{ width: 40, height: 40 }}
-            />
-          }
-          pagePath={'/letters'}
-          pageText={'letters'}
-          pageTextTranslated={t('letters')}
-        />
-
-        <PageLink
-          icon={
-            <MaterialCommunityIcons
-              name="format-letter-case"
-              size={40}
-              color="gray"
-              style={{ width: 40, height: 40 }}
-            />
-          }
-          pagePath={'/printHTML'}
-          pageText={'printHTML'}
-          pageTextTranslated={t('printHTML')}
-        />
-        <PageLink
-          icon={
-            <Octicons
-              name="number"
-              size={40}
-              color="gray"
-              style={{
-                width: 40,
-                height: 40,
-                paddingLeft: 5,
-                paddingRight: -5,
-              }}
-            />
-          }
-          pagePath={'/print'}
-          pageText={'print'}
-          pageTextTranslated={t('print')}
-        />
-
-        <PageLink
-          icon={
-            <Octicons
-              name="number"
-              size={40}
-              color="gray"
-              style={{
-                width: 40,
-                height: 40,
-                paddingLeft: 5,
-                paddingRight: -5,
-              }}
-            />
-          }
-          pagePath={'/cardinalNumbers'}
-          pageText={'cardinal numbers'}
-          pageTextTranslated={t('cardinal numbers')}
-        />
-
-        <PageLink
-          icon={<FontAwesome6 name="medal" size={40} color="gray" />}
-          pagePath={'/ordinalNumbers'}
-          pageText={'ordinal numbers'}
-          pageTextTranslated={t('ordinal numbers')}
-        />
-
-        <PageLink
-          icon={
-            <MaterialCommunityIcons
-              name="calendar-month-outline"
-              size={40}
-              color="gray"
-            />
-          }
-          pagePath={'/months'}
-          pageText={'months'}
-          pageTextTranslated={t('months')}
-        />
-
-        <PageLink
-          icon={
-            <MaterialCommunityIcons
-              name="calendar-month-outline"
-              size={40}
-              color="gray"
-            />
-          }
-          pagePath={'/months'}
-          pageText={'months'}
-          pageTextTranslated={t('months')}
-        />
-        <PageLink
-          icon={
-            <MaterialCommunityIcons
-              name="calendar-month-outline"
-              size={40}
-              color="gray"
-            />
-          }
-          pagePath={'/months'}
-          pageText={'months'}
-          pageTextTranslated={t('months')}
-        />
-        <PageLink
-          icon={
-            <MaterialCommunityIcons
-              name="calendar-month-outline"
-              size={40}
-              color="gray"
-            />
-          }
-          pagePath={'/months'}
-          pageText={'months'}
-          pageTextTranslated={t('months')}
-        />
-        <PageLink
-          icon={
-            <MaterialCommunityIcons
-              name="calendar-month-outline"
-              size={40}
-              color="gray"
-            />
-          }
-          pagePath={'/months'}
-          pageText={'months'}
-          pageTextTranslated={t('months')}
-        />
-        <PageLink
-          icon={
-            <MaterialCommunityIcons
-              name="calendar-month-outline"
-              size={40}
-              color="gray"
-            />
-          }
-          pagePath={'/months'}
-          pageText={'months'}
-          pageTextTranslated={t('months')}
-        />
-        <PageLink
-          icon={
-            <MaterialCommunityIcons
-              name="calendar-month-outline"
-              size={40}
-              color="gray"
-            />
-          }
-          pagePath={'/months'}
-          pageText={'months'}
-          pageTextTranslated={t('months')}
-        />
-        <PageLink
-          icon={
-            <MaterialCommunityIcons
-              name="calendar-month-outline"
-              size={40}
-              color="gray"
-            />
-          }
-          pagePath={'/months'}
-          pageText={'months'}
-          pageTextTranslated={t('months')}
-        />
+          );
+        })}
       </View>
     </ScrollView>
   );
