@@ -3,7 +3,17 @@ import { View, StyleSheet, Dimensions } from 'react-native';
 import { Pressable } from 'react-native'; // Import Pressable for hover effects
 import posColors from '@/constants/colors';
 import AppleIcon from '@/assets/icons/licensed/apple.svg'; // Import the SVG as a React component
+import RiceIcon from '@/assets/icons/licensed/rice.svg';
 import ReadableText from '@/components/ReadableText';
+
+type VocabularyEntry = {
+  __pos: string;
+  __count?: string;
+  __tags?: string[];
+  word: string;
+  plural?: string;
+  translation_note?: string;
+};
 
 type VocabularyCard = {
   __pos: string;
