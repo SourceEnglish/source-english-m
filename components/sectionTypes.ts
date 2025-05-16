@@ -1,0 +1,27 @@
+// Section type definitions for strong typing and easier mapping
+export type SectionType =
+  | 'link'
+  | 'paragraph'
+  | 'header'
+  | 'quote'
+  | 'table'
+  | 'image'
+  | 'video'
+  | 'subheader'
+  | 'lesson_link'
+  | 'section_link';
+
+export interface Section {
+  __id?: string;
+  translator_note?: string;
+  __lessons: string[];
+  __order: number;
+  __styling?: string[];
+  text?: string;
+  __src?: string;
+  alt?: string;
+  __lesson_link?: string;
+  __section_link?: string;
+  caption?: string;
+  __type: SectionType;
+}

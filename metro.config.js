@@ -14,6 +14,10 @@ module.exports = (() => {
     assetExts: resolver.assetExts.filter((ext) => ext !== 'svg'),
     sourceExts: [...resolver.sourceExts, 'svg'],
   };
+  config.resolver.extraNodeModules = {
+    ...config.resolver.extraNodeModules,
+    'react-native-web-webview': require.resolve('react-native-web-webview'),
+  };
 
   return config;
 })();

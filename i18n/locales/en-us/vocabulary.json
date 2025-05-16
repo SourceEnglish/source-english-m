@@ -1,0 +1,22 @@
+[
+  {
+    "apple": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": ["food"],
+      "word": "apple",
+      "plural": "apples",
+      "translation_note": ""
+    }
+  },
+  {
+    "rice": {
+      "__pos": "noun",
+      "__count": "uncountable",
+      "__tags": ["food"],
+      "word": "rice",
+      "plural": "rice",
+      "translation_note": ""
+    }
+  }
+]
