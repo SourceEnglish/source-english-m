@@ -81,12 +81,15 @@ const CustomNav: React.FC<CustomNavProps> = ({
     }
   };
 
+  // Multiplier for icon size relative to headerHeight
+  const ICON_SIZE_MULTIPLIER = 0.9;
+
   return (
     <View
       style={[
         styles.container,
         {
-          height: headerHeight + (isMobile ? 20 : 8),
+          height: headerHeight + (isMobile ? 26 : 24),
           paddingTop: isMobile && Platform.OS === 'ios' ? 30 : 0,
         },
       ]}
@@ -128,7 +131,10 @@ const CustomNav: React.FC<CustomNavProps> = ({
             style={styles.navButton}
             onPress={() => router.replace('/')}
           >
-            <HomeIcon height={headerHeight} />
+            <HomeIcon
+              width={headerHeight * ICON_SIZE_MULTIPLIER}
+              height={headerHeight * ICON_SIZE_MULTIPLIER}
+            />
           </TouchableOpacity>
           {/* Read Aloud Toggle */}
           <TouchableOpacity
@@ -140,11 +146,17 @@ const CustomNav: React.FC<CustomNavProps> = ({
               backgroundColor: isPressed || readAloudMode ? '#ffff73' : 'white',
             }}
           >
-            <SpeakIcon height={headerHeight} />
+            <SpeakIcon
+              width={headerHeight * ICON_SIZE_MULTIPLIER}
+              height={headerHeight * ICON_SIZE_MULTIPLIER}
+            />
           </TouchableOpacity>
           {/* More Options */}
           <TouchableOpacity style={styles.navButton}>
-            <MoreOptionsIcon height={headerHeight} />
+            <MoreOptionsIcon
+              width={headerHeight * ICON_SIZE_MULTIPLIER}
+              height={headerHeight * ICON_SIZE_MULTIPLIER}
+            />
           </TouchableOpacity>
         </View>
       </View>
@@ -198,7 +210,8 @@ const styles = StyleSheet.create({
   navBarContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    columnGap: 10,
+    justifyContent: 'space-between',
+    columnGap: 6, // reduce gap between buttons
     height: '100%',
   },
   navButton: {
@@ -207,8 +220,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'black',
     borderRadius: 5,
-    padding: 5,
+    paddingVertical: 4,
+    paddingHorizontal: 8,
     backgroundColor: 'white',
+    minWidth: 36,
+    minHeight: 36,
+    maxWidth: 44,
+    maxHeight: 44,
   },
 });
 
