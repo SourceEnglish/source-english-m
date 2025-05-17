@@ -18,5 +18,15 @@
       "plural": "rice",
       "translation_note": ""
     }
+  },
+  {
+    "bread": {
+      "__pos": "noun",
+      "__count": "uncountable",
+      "__tags": ["food"],
+      "word": "bread",
+      "plural": "bread",
+      "translation_note": ""
+    }
   }
 ]
