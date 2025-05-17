@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
-import { Pressable } from 'react-native'; // Import Pressable for hover effects
+import { Pressable } from 'react-native';
 import posColors from '@/constants/colors';
-import AppleIcon from '@/assets/icons/licensed/apple.svg'; // Import the SVG as a React component
-import RiceIcon from '@/assets/icons/licensed/rice.svg';
 import ReadableText from '@/components/ReadableText';
+import { iconMap } from '@/utils/iconMap'; // Import the icon map
 
 type VocabularyEntry = {
   __pos: string;
@@ -26,35 +25,44 @@ type CardPreviewProps = {
 
 export default function CardPreview({ card }: CardPreviewProps) {
   const { __pos, word } = card;
-  const borderColor = posColors[__pos] || '#000'; // Default to black if pos is not found
+  const borderColor = posColors[__pos] || '#000';
 
   // Get screen width to determine if the device is mobile
   const screenWidth = Dimensions.get('window').width;
-  const isMobile = screenWidth <= 768; // Example breakpoint for mobile devices
+  const isMobile = screenWidth <= 768;
 
   // State to track hover
   const [isHovered, setIsHovered] = useState(false);
 
+  // Dynamically get the icon based on the word (or another property if needed)
+  const Icon = iconMap[word.toLowerCase()];
+
   return (
     <Pressable
-      onHoverIn={() => setIsHovered(true)} // Trigger hover state
-      onHoverOut={() => setIsHovered(false)} // Reset hover state
+      onHoverIn={() => setIsHovered(true)}
+      onHoverOut={() => setIsHovered(false)}
       style={[
         styles.card,
         isMobile ? styles.mobileCard : styles.desktopCard,
         { borderColor },
-        isHovered && styles.hoveredCard, // Apply hover style when hovered
+        isHovered && styles.hoveredCard,
       ]}
     >
-      <AppleIcon
-        width={isMobile ? 50 : 100}
-        height={isMobile ? 50 : 100}
-        style={styles.svgText}
+      {Icon && (
+        <View>
+          <Icon width={isMobile ? 40 : 120} height={isMobile ? 40 : 120} />
+        </View>
+      )}
+      <ReadableText
+        text={word}
+        style={{
+          fontSize: isMobile ? 16 : 28,
+          marginBottom: 4,
+        }}
       />
-      <ReadableText text={word} />
       <ReadableText
         text={__pos}
-        style={{ fontStyle: 'italic', color: posColors[__pos] }} // Apply italic styling and red color for the noun POS
+        style={{ fontStyle: 'italic', color: posColors[__pos] }}
       />
     </Pressable>
   );
@@ -73,21 +81,22 @@ const styles = StyleSheet.create({
     height: 150,
   },
   hoveredCard: {
-    backgroundColor: '#ffeeee', // Change background color to red when hovered
+    backgroundColor: '#ffeeee',
   },
   mobileCard: {
-    width: '30%', // Apply 30% width for mobile devices
-    padding: 8, // Adjusted padding for mobile
-    margin: 5, // Adjusted margin for mobile
+    width: '30%',
+    fontSize: 20,
+    padding: 8,
+    margin: 5,
   },
   desktopCard: {
     width: 240,
-    fontSize: 18,
-    padding: 12, // Adjusted padding for desktop
-    margin: 10, // Adjusted margin for desktop
+    fontSize: 24,
+    padding: 12,
+    margin: 10,
     height: 300,
   },
   svgText: {
-    userSelect: 'none', // React Native equivalent for user-select
+    userSelect: 'none',
   },
 });

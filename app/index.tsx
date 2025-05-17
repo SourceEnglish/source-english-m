@@ -10,7 +10,7 @@ import Octicons from '@expo/vector-icons/Octicons';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { getLessons } from '@/utils/loadLessons';
-import { lessonIconMap } from '@/utils/iconMap';
+import { iconMap } from '@/utils/iconMap';
 
 export default function Index() {
   const { requestedLanguage } = useSpeech();
@@ -24,7 +24,7 @@ export default function Index() {
     <ScrollView>
       <View style={[styles.thread, { gap: 12 }]}>
         {lessons.map((lesson) => {
-          const Icon = lessonIconMap[lesson.name];
+          const Icon = iconMap[lesson.name];
           return (
             <PageLink
               key={lesson.name}
