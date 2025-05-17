@@ -13,6 +13,7 @@ import ArrowLeft from '@/assets/icons/open_source/arrow-left.svg';
 import HomeIcon from '@/assets/icons/licensed/home.svg';
 import MoreOptionsIcon from '@/assets/icons/licensed/more_options.svg';
 import SpeakIcon from '@/assets/icons/licensed/speak.svg';
+import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 
 interface CustomNavProps {
   headerHeight: number;
@@ -58,6 +59,16 @@ const CustomNav: React.FC<CustomNavProps> = ({
     Platform.OS !== 'web' ||
     (typeof window !== 'undefined' && window.innerWidth < 600);
 
+  // Set nav bar height and icon size for mobile/desktop
+  const NAVBAR_HEIGHT = isMobile ? 72 : 80; // Increased desktop height to 80
+  const ICON_SIZE = isMobile ? 36 : 32;
+  const ICON_SIZE_MULTIPLIER = isMobile ? 1.0 : 0.9;
+  const NAV_BUTTON_PADDING_VERTICAL = isMobile ? 10 : 4;
+  const NAV_BUTTON_PADDING_HORIZONTAL = isMobile ? 16 : 8;
+
+  // Set headerHeight larger for mobile, and taller for desktop
+  const computedHeaderHeight = NAVBAR_HEIGHT; // NAVBAR_HEIGHT is now 80 on desktop
+
   // Read Aloud Toggle logic (from NavigationBar)
   const handleReadAloudToggle = async () => {
     if (readAloudMode) {
@@ -81,83 +92,72 @@ const CustomNav: React.FC<CustomNavProps> = ({
     }
   };
 
-  // Multiplier for icon size relative to headerHeight
-  const ICON_SIZE_MULTIPLIER = 0.9;
-
   return (
-    <View
-      style={[
-        styles.container,
-        {
-          height: headerHeight + (isMobile ? 26 : 24),
-          paddingTop: isMobile && Platform.OS === 'ios' ? 30 : 0,
-        },
-      ]}
-    >
-      {/* Left section: back button and title */}
-      <View
-        style={[styles.leftRow, { minWidth: isMobile ? 0 : 320 }]}
-        pointerEvents="box-none"
-      >
-        {showBack && (
-          <TouchableOpacity
-            style={[styles.backButton, isMobile ? null : { padding: 12 }]}
-            onPress={handleBack}
-            accessibilityLabel="Back"
+    <View style={[styles.containerWrapper, { height: computedHeaderHeight }]}>
+      <View style={styles.innerContainer}>
+        {/* Left section: back button and title */}
+        <View style={styles.leftRow} pointerEvents="box-none">
+          {showBack && (
+            <TouchableOpacity
+              style={[styles.backButton, isMobile ? null : { padding: 12 }]}
+              onPress={handleBack}
+              accessibilityLabel="Back"
+            >
+              <ArrowLeft
+                width={isMobile ? 32 : 32}
+                height={isMobile ? 32 : 32}
+                style={{ marginRight: isMobile ? 8 : 8 }}
+              />
+            </TouchableOpacity>
+          )}
+          <Text
+            style={[
+              styles.title,
+              { fontSize: isMobile ? 24 : 26, maxWidth: isMobile ? 240 : 400 },
+            ]}
+            numberOfLines={1}
+            ellipsizeMode="tail"
           >
-            <ArrowLeft
-              width={isMobile ? 24 : 32}
-              height={isMobile ? 24 : 32}
-              style={{ marginRight: isMobile ? 4 : 8 }}
-            />
-          </TouchableOpacity>
-        )}
-        <Text
-          style={[
-            styles.title,
-            { fontSize: isMobile ? 20 : 26, maxWidth: isMobile ? 200 : 400 },
-          ]}
-          numberOfLines={1}
-          ellipsizeMode="tail"
-        >
-          {title}
-        </Text>
-      </View>
-      {/* Right section: navigation icons */}
-      <View style={styles.absoluteRight} pointerEvents="box-none">
-        <View style={styles.navBarContainer}>
-          {/* Home Button */}
-          <TouchableOpacity
-            style={styles.navButton}
-            onPress={() => router.replace('/')}
-          >
-            <HomeIcon
-              width={headerHeight * ICON_SIZE_MULTIPLIER}
-              height={headerHeight * ICON_SIZE_MULTIPLIER}
-            />
-          </TouchableOpacity>
-          {/* Read Aloud Toggle */}
-          <TouchableOpacity
-            onPress={handleReadAloudToggle}
-            onPressIn={() => setIsPressed(true)}
-            onPressOut={() => setIsPressed(false)}
-            style={{
-              ...styles.navButton,
-              backgroundColor: isPressed || readAloudMode ? '#ffff73' : 'white',
-            }}
-          >
-            <SpeakIcon
-              width={headerHeight * ICON_SIZE_MULTIPLIER}
-              height={headerHeight * ICON_SIZE_MULTIPLIER}
-            />
-          </TouchableOpacity>
-          {/* More Options */}
-          <TouchableOpacity style={styles.navButton}>
-            <MoreOptionsIcon
-              width={headerHeight * ICON_SIZE_MULTIPLIER}
-              height={headerHeight * ICON_SIZE_MULTIPLIER}
-            />
-          </TouchableOpacity>
+            {title}
+          </Text>
+        </View>
+        {/* Right section: navigation icons */}
+        <View style={styles.rightRow} pointerEvents="box-none">
+          <View style={styles.navBarContainer}>
+            {/* Home Button */}
+            <TouchableOpacity
+              style={styles.navButton}
+              onPress={() => router.replace('/')}
+            >
+              <HomeIcon
+                width={computedHeaderHeight * ICON_SIZE_MULTIPLIER}
+                height={computedHeaderHeight * ICON_SIZE_MULTIPLIER}
+              />
+            </TouchableOpacity>
+            {/* Read Aloud Toggle */}
+            <TouchableOpacity
+              onPress={handleReadAloudToggle}
+              onPressIn={() => setIsPressed(true)}
+              onPressOut={() => setIsPressed(false)}
+              style={{
+                ...styles.navButton,
+                backgroundColor:
+                  isPressed || readAloudMode ? '#ffff73' : 'white',
+              }}
+            >
+              <SpeakIcon
+                width={computedHeaderHeight * ICON_SIZE_MULTIPLIER}
+                height={computedHeaderHeight * ICON_SIZE_MULTIPLIER}
+              />
+            </TouchableOpacity>
+            {/* More Options */}
+            {/* <TouchableOpacity style={styles.navButton}>
+              <MoreOptionsIcon
+                width={computedHeaderHeight * ICON_SIZE_MULTIPLIER}
+                height={computedHeaderHeight * ICON_SIZE_MULTIPLIER}
+              />
+            </TouchableOpacity> */}
+          </View>
         </View>
       </View>
     </View>
@@ -165,26 +165,42 @@ const CustomNav: React.FC<CustomNavProps> = ({
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  containerWrapper: {
+    width: '100%',
     backgroundColor: 'white',
     borderBottomWidth: 1,
     borderBottomColor: 'rgb(216, 216, 216)',
-    paddingHorizontal: 8,
+    paddingHorizontal: 0,
     paddingTop: Platform.OS === 'ios' ? 30 : 0,
+    alignItems: 'center',
+    // height is now set dynamically
+  },
+  innerContainer: {
+    width: '100%',
+    maxWidth: CENTERED_MAX_WIDTH,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    height: '100%',
+    paddingHorizontal: 16,
   },
   leftRow: {
     flexDirection: 'row',
     alignItems: 'center',
     height: '100%',
-    marginLeft: 8,
-    zIndex: 2,
     flex: 1,
-    minWidth: 0, // allow shrinking on mobile
+    minWidth: 0,
+  },
+  rightRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: '100%',
+    justifyContent: 'flex-end',
   },
   backButton: {
-    padding: 8,
+    padding: 8, // overridden dynamically
   },
   backText: {
     fontSize: 18,
@@ -192,26 +208,17 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   title: {
-    fontSize: 20,
+    fontSize: 20, // overridden dynamically
     fontWeight: 'bold',
     color: '#222',
     textAlign: 'left',
-    maxWidth: 200,
-  },
-  absoluteRight: {
-    position: 'absolute',
-    right: 8,
-    top: Platform.OS === 'ios' ? 30 : 0,
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-    zIndex: 2,
+    maxWidth: 200, // overridden dynamically
   },
   navBarContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    columnGap: 6, // reduce gap between buttons
+    columnGap: 10, // reduce gap between buttons
     height: '100%',
   },
   navButton: {
@@ -220,13 +227,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'black',
     borderRadius: 5,
-    paddingVertical: 4,
-    paddingHorizontal: 8,
+    paddingVertical: 4, // overridden dynamically
+    paddingHorizontal: 8, // overridden dynamically
     backgroundColor: 'white',
-    minWidth: 36,
-    minHeight: 36,
-    maxWidth: 44,
-    maxHeight: 44,
+    minWidth: 36, // overridden dynamically
+    minHeight: 36, // overridden dynamically
+    maxWidth: 48, // overridden dynamically
+    maxHeight: 48, // overridden dynamically
   },
 });
 

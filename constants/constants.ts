@@ -15,4 +15,7 @@ const posColors: Record<string, string> = {
   'proper noun': '#FF69B4',
 };
 
+// Centralized max width for centered layouts
+export const CENTERED_MAX_WIDTH = 1300;
+
 export default posColors;

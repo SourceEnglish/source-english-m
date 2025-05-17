@@ -30,10 +30,12 @@ const PageLink: React.FC<PageLinkProps> = ({
         padding: 16,
         display: 'flex',
         flexDirection: 'row',
+        width: '100%', // Make the link take full width of its container
         opacity: readAloudMode ? 1 : 1,
         alignContent: 'center',
         textAlignVertical: 'center',
         alignItems: 'center',
+        boxSizing: 'border-box',
       }}
       onPress={(e) => {
         if (readAloudMode) {

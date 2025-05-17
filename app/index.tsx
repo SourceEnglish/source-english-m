@@ -11,6 +11,7 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { getLessons } from '@/utils/loadLessons';
 import { iconMap } from '@/utils/iconMap';
+import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 
 export default function Index() {
   const { requestedLanguage } = useSpeech();
@@ -22,29 +23,43 @@ export default function Index() {
 
   return (
     <ScrollView>
-      <View style={[styles.thread, { gap: 12 }]}>
-        {lessons.map((lesson) => {
-          const Icon = iconMap[lesson.name];
-          return (
-            <PageLink
-              key={lesson.name}
-              icon={Icon ? <Icon width={32} height={32} /> : null}
-              pagePath={`/${lesson.name}`}
-              pageText={lesson.name}
-              pageTextTranslated={t(lesson.name)}
-            />
-          );
-        })}
+      <View style={styles.outerContainer}>
+        <View style={[styles.thread, { gap: 12 }]}>
+          {lessons.map((lesson) => {
+            const Icon = iconMap[lesson.name];
+            return (
+              <PageLink
+                key={lesson.name}
+                icon={Icon ? <Icon width={32} height={32} /> : null}
+                pagePath={`/${lesson.name}`}
+                pageText={lesson.name}
+                pageTextTranslated={t(lesson.name)}
+              />
+            );
+          })}
+        </View>
       </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  outerContainer: {
+    width: '100%',
+    maxWidth: CENTERED_MAX_WIDTH,
+    alignSelf: 'center',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
   thread: {
     padding: 10,
     marginLeft: 10,
     marginRight: 10,
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   button: {
     fontSize: 20,

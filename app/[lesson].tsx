@@ -1,10 +1,11 @@
 import { useLocalSearchParams } from 'expo-router';
-import { ScrollView, View, Text } from 'react-native';
+import { ScrollView, View, Text, StyleSheet } from 'react-native';
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
 import sectionsData from '@/i18n/locales/en-us/sections.json';
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import CardPreview from '@/components/CardPreview';
 import SectionRenderer from '@/components/SectionRenderer';
+import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 
 export function generateStaticParams() {
   return lessonsData.map((entry: any) => {
@@ -46,22 +47,24 @@ export default function LessonPage() {
 
     return (
       <ScrollView>
-        {/* <Text style={{ fontSize: 28, fontWeight: 'bold', margin: 16 }}>
-          {displayName}
-        </Text> */}
-        {lessonData.intro && (
-          <Text style={{ margin: 16, fontSize: 16 }}>{lessonData.intro}</Text>
-        )}
-        <View
-          style={{
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-          }}
-        >
-          {vocabEntries.map((entry: any) => (
-            <CardPreview key={entry.word} card={entry} />
-          ))}
+        <View style={styles.outerContainer}>
+          {/* <Text style={{ fontSize: 28, fontWeight: 'bold', margin: 16 }}>
+            {displayName}
+          </Text> */}
+          {lessonData.intro && (
+            <Text style={{ margin: 16, fontSize: 16 }}>{lessonData.intro}</Text>
+          )}
+          <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+            }}
+          >
+            {vocabEntries.map((entry: any) => (
+              <CardPreview key={entry.word} card={entry} />
+            ))}
+          </View>
         </View>
       </ScrollView>
     );
@@ -76,19 +79,21 @@ export default function LessonPage() {
 
     return (
       <ScrollView>
-        {/* <Text style={{ fontSize: 28, fontWeight: 'bold', margin: 16 }}>
-          {displayName}
-        </Text> */}
-        {lessonData.intro && (
-          <Text style={{ margin: 16, fontSize: 16 }}>{lessonData.intro}</Text>
-        )}
-        <View style={{ padding: 16 }}>
-          {sections.map((section: any) => (
-            <SectionRenderer
-              key={section._id || section.__order}
-              section={section}
-            />
-          ))}
+        <View style={styles.outerContainer}>
+          {/* <Text style={{ fontSize: 28, fontWeight: 'bold', margin: 16 }}>
+            {displayName}
+          </Text> */}
+          {lessonData.intro && (
+            <Text style={{ margin: 16, fontSize: 16 }}>{lessonData.intro}</Text>
+          )}
+          <View style={{ padding: 16 }}>
+            {sections.map((section: any) => (
+              <SectionRenderer
+                key={section._id || section.__order}
+                section={section}
+              />
+            ))}
+          </View>
         </View>
       </ScrollView>
     );
@@ -96,3 +101,11 @@ export default function LessonPage() {
 
   return <Text>Unknown lesson type</Text>;
 }
+
+const styles = StyleSheet.create({
+  outerContainer: {
+    width: '100%',
+    maxWidth: CENTERED_MAX_WIDTH,
+    alignSelf: 'center',
+  },
+});
