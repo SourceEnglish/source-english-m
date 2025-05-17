@@ -38,6 +38,7 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
   const [_, setLanguageChanged] = React.useState(false);
   const speakText = (text: string, useNativeLanguage?: boolean) => {
     if (text) {
+      Speech.stop(); // Stop any ongoing speech before starting new
       Speech.speak(text, {
         language: useNativeLanguage ? i18n.language : 'en-US',
         _voiceIndex: useNativeLanguage ? undefined : voiceIndex,
