@@ -11,17 +11,9 @@
   {
     "food vocabulary": {
       "name": "food vocabulary",
-      "__tags": ["crude"],
-      "__type": "vocabulary",
-      "__order": 3
-    }
-  },
-  {
-    "broods": {
-      "name": "broods",
       "__tags": ["food"],
       "__type": "vocabulary",
-      "__order": 2
+      "__order": 3
     }
   }
 ]

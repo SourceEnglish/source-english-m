@@ -10,7 +10,7 @@ import { SpeechProvider } from '@/contexts/SpeechContext';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import NavigationBar from '@/components/NavigationBar';
 import { useColorScheme } from 'react-native';
-
+import CustomNav from '@/components/NavigationBar';
 // Import lessons data and type
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
 
@@ -37,14 +37,19 @@ export default function RootLayout() {
       <I18nextProvider i18n={i18n}>
         <SpeechProvider>
           <ThemeProvider>
-            <Stack
-              screenOptions={{
-                headerRight: () => (
-                  <NavigationBar headerHeight={headerHeight} />
-                ),
-              }}
-            >
-              <Stack.Screen name="index" options={{ title: 'Home' }} />
+            <Stack>
+              <Stack.Screen
+                name="index"
+                options={{
+                  header: () => (
+                    <CustomNav
+                      headerHeight={headerHeight}
+                      title="Home"
+                      canGoBack={false}
+                    />
+                  ),
+                }}
+              />
               <Stack.Screen name="+not-found" />
               <Stack.Screen
                 name="[lesson]"
@@ -53,24 +58,25 @@ export default function RootLayout() {
                 }: {
                   route: { params?: { lesson?: string } };
                 }) => {
-                  // Get the lesson param from the route
                   const lessonParam = route.params?.lesson as
                     | string
                     | undefined;
                   const lessonKey = lessonParam
                     ? lessonParam.replace(/-/g, ' ')
                     : undefined;
-                  // Find the lesson entry
                   const lessonEntry = (
                     lessonsData as unknown as LessonEntry[]
-                  ).find((entry) => lessonParam && entry[lessonParam]);
+                  ).find((entry) => lessonKey && entry[lessonKey]);
                   const lessonData =
-                    lessonEntry && lessonParam
-                      ? lessonEntry[lessonParam]
-                      : null;
-                  // Use the lesson's name or fallback to the param
+                    lessonEntry && lessonKey ? lessonEntry[lessonKey] : null;
                   return {
-                    title: lessonData?.name || lessonParam || 'Lesson',
+                    header: () => (
+                      <CustomNav
+                        headerHeight={headerHeight}
+                        title={lessonData?.name || lessonKey || 'Lesson'}
+                      />
+                    ),
+                    gestureEnabled: true, // Enable swipe back gesture
                   };
                 }}
               />
