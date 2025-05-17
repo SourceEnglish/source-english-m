@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import { Pressable } from 'react-native';
-import posColors from '@/constants/colors';
+import posColors from '@/constants/constants';
 import ReadableText from '@/components/ReadableText';
 import { iconMap } from '@/utils/iconMap'; // Import the icon map
 
@@ -50,13 +50,13 @@ export default function CardPreview({ card }: CardPreviewProps) {
     >
       {Icon && (
         <View>
-          <Icon width={isMobile ? 40 : 120} height={isMobile ? 40 : 120} />
+          <Icon width={isMobile ? 55 : 120} height={isMobile ? 55 : 120} />
         </View>
       )}
       <ReadableText
         text={word}
         style={{
-          fontSize: isMobile ? 16 : 28,
+          fontSize: isMobile ? 18 : 28,
           marginBottom: 4,
         }}
       />
