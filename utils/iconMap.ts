@@ -8,7 +8,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   food: RiceIcon,
   apple: AppleIcon,
   bread: BreadIcon,
-  'food vocabulary': AppleIcon,
+  'food vocab': AppleIcon,
   rice: RiceIcon,
   // ...etc
 };

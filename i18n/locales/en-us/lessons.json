@@ -9,8 +9,8 @@
   },
 
   {
-    "food vocabulary": {
-      "name": "food vocabulary",
+    "food vocab": {
+      "name": "food vocab",
       "__tags": ["food"],
       "__type": "vocabulary",
       "__order": 3

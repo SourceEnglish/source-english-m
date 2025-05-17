@@ -47,7 +47,7 @@ export default function LessonPage() {
 
     return (
       <ScrollView>
-        <View style={styles.outerContainer}>
+        <View style={[styles.outerContainer, { marginTop: 10 }]}>
           {/* <Text style={{ fontSize: 28, fontWeight: 'bold', margin: 16 }}>
             {displayName}
           </Text> */}
