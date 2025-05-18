@@ -31,6 +31,7 @@ import YesterdayIcon from '@/assets/icons/licensed/yesterday.svg';
 import TodayIcon from '@/assets/icons/licensed/today.svg';
 import TomorrowIcon from '@/assets/icons/licensed/tomorrow.svg';
 import DayVocabIcon from '@/assets/icons/licensed/day_vocab.svg';
+import SpeakIcon from '@/assets/icons/licensed/speak.svg';
 
 // ...other imports
 
@@ -71,6 +72,8 @@ export const iconMap: Record<string, React.FC<any>> = {
   today: TodayIcon,
   tomorrow: TomorrowIcon,
   'days vocab': DayVocabIcon,
+
+  speak: SpeakIcon,
 
   // ...etc
 };
