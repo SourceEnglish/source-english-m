@@ -22,9 +22,9 @@ const lightTheme: Theme = {
 };
 
 const darkTheme: Theme = {
-  backgroundColor: '#121212',
-  textColor: '#FFFFFF',
-  highlightColor: '#8B8000',
+  backgroundColor: '#FFFFFF',
+  textColor: '#000000',
+  highlightColor: '#ffff73',
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
