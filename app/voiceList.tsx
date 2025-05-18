@@ -8,7 +8,7 @@ import * as Speech from 'expo-speech';
 import { useSpeech } from '@/contexts/SpeechContext';
 
 export default function voiceList() {
-  const { voiceIndex } = useSpeech();
+  const { voiceIdentifier } = useSpeech();
   const [allVoices, setAllVoices] = useState<any[]>([]);
 
   useEffect(() => {
@@ -19,8 +19,8 @@ export default function voiceList() {
   }, []);
 
   const selectedVoice =
-    typeof voiceIndex === 'number' && allVoices[voiceIndex]
-      ? allVoices[voiceIndex]
+    voiceIdentifier && allVoices.length > 0
+      ? allVoices.find((v) => v.identifier === voiceIdentifier)
       : null;
 
   return (
@@ -41,7 +41,9 @@ export default function voiceList() {
           Selected Voice Object:
         </Text>
         <Text style={{ fontFamily: 'monospace', fontSize: 13 }}>
-          {selectedVoice ? JSON.stringify(selectedVoice, null, 2) : 'No voice selected.'}
+          {selectedVoice
+            ? JSON.stringify(selectedVoice, null, 2)
+            : 'No voice selected.'}
         </Text>
       </View>
     </ScrollView>

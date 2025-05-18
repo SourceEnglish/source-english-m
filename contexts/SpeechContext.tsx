@@ -1,23 +1,35 @@
-import React, { createContext, useContext, ReactNode, useEffect } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
 import * as Speech from 'expo-speech';
 import i18n from '@/i18n';
 
 // Define the context type
 interface SpeechContextType {
   readAloudMode: boolean;
-  voiceIndex: number | undefined;
-  setVoiceIndex: (index: number | undefined) => void;
+  voiceIdentifier: string | undefined;
+  setVoiceIdentifier: (identifier: string | undefined) => void;
   setReadAloudMode: (mode: boolean) => void;
   setRequestedLanguage: (language: string) => void;
   requestedLanguage: string | null;
-
   //
   speakText: (
     text: string,
     useNativeLanguage?: boolean,
-    voiceIndex?: number
+    voiceIdentifier?: string
   ) => void;
 }
+
+const defaultVoiceIdentifiers: string[] = [
+  'Google US English',
+  'Microsoft Jenny Online (Natural) - English (United States)',
+  'Microsoft Ava Online (Natural) - English (United States)',
+  'com.apple.voice.premium.en-US.Voice1',
+  'com.apple.voice.premium.en-US.Siri_Female',
+  'com.apple.voice.premium.en-US.Samantha',
+  'com.apple.voice.enhanced.en-US.Siri_Female',
+  'com.apple.voice.compact.en-US.Samantha',
+  'com.apple.voice.super-compact.en-US.Samantha',
+  'Microsoft Zira - English (United States)',
+];
 
 // Create the SpeechContext with a default value
 const SpeechContext = createContext<SpeechContextType | undefined>(undefined);
@@ -29,25 +41,75 @@ interface SpeechProviderProps {
 
 // Provider Component
 export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
-  const [voiceIndex, setVoiceIndex] = React.useState<number | undefined>(
-    undefined
-  );
+  const [voiceIdentifier, setVoiceIdentifier] = React.useState<
+    string | undefined
+  >(undefined);
   const [readAloudMode, setReadAloudMode] = React.useState(false);
   const [requestedLanguage, setRequestedLanguage] =
     React.useState<string>('en-US');
   const [_, setLanguageChanged] = React.useState(false);
+
   const speakText = async (text: string, useNativeLanguage?: boolean) => {
     if (text) {
       Speech.stop(); // Stop any ongoing speech before starting new
-      let selectedVoice: string | undefined = undefined;
+      let selectedVoice: string | undefined = voiceIdentifier;
       try {
         const voices = await Speech.getAvailableVoicesAsync();
-        if (
-          typeof voiceIndex === 'number' &&
-          voices[voiceIndex] &&
-          voices[voiceIndex].identifier
-        ) {
-          selectedVoice = voices[voiceIndex].identifier;
+        // If no voiceIdentifier is set, select default now
+        if (!selectedVoice) {
+          let foundVoice;
+          // 1. Try to match by identifier or name from defaultVoiceIdentifiers
+          for (const identifier of defaultVoiceIdentifiers) {
+            foundVoice = voices.find(
+              (v) => v.identifier === identifier || v.name === identifier
+            );
+            if (foundVoice) {
+              console.log(foundVoice);
+              break;
+            }
+          }
+          // 2. If not found, try to pick the first en-US voice
+          if (!foundVoice) {
+            console.log('no voices found!');
+            foundVoice = voices.find(
+              (v) => v.language && v.language.toLowerCase().startsWith('en-us')
+            );
+          }
+          // 3. If still not found, fallback to first available
+          if (!foundVoice && voices.length > 0) {
+            foundVoice = voices[0];
+          }
+          if (foundVoice) {
+            selectedVoice = foundVoice.identifier;
+            setVoiceIdentifier(foundVoice.identifier);
+          }
+        } else {
+          // Validate that the selectedVoice is still available
+          if (!voices.find((v) => v.identifier === selectedVoice)) {
+            let foundVoice;
+            // 1. Try to match by identifier or name from defaultVoiceIdentifiers
+            for (const identifier of defaultVoiceIdentifiers) {
+              foundVoice = voices.find(
+                (v) => v.identifier === identifier || v.name === identifier
+              );
+              if (foundVoice) break;
+            }
+            // 2. If not found, try to pick the first en-US voice
+            if (!foundVoice) {
+              foundVoice = voices.find(
+                (v) =>
+                  v.language && v.language.toLowerCase().startsWith('en-us')
+              );
+            }
+            // 3. If still not found, fallback to first available
+            if (!foundVoice && voices.length > 0) {
+              foundVoice = voices[0];
+            }
+            if (foundVoice) {
+              selectedVoice = foundVoice.identifier;
+              setVoiceIdentifier(foundVoice.identifier);
+            }
+          }
         }
       } catch (e) {
         console.warn('Could not get voices:', e);
@@ -59,25 +121,15 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
       });
     }
     console.log(useNativeLanguage);
-    console.log('The chosen voiceIndex is: ' + voiceIndex);
+    console.log('The chosen voiceIdentifier is: ' + voiceIdentifier);
     console.log('The chosen language is: ' + i18n.language);
   };
 
-  // Custom setter for voiceIndex to log changes
-  const setVoiceIndexWithLog = (index: number | undefined) => {
-    setVoiceIndex(index);
-    console.log('voiceIndex set to:', index);
+  // Custom setter for voiceIdentifier to log changes
+  const setVoiceIdentifierWithLog = (identifier: string | undefined) => {
+    setVoiceIdentifier(identifier);
+    console.log('voiceIdentifier set to:', identifier);
   };
-
-  /*
-  useEffect(() => {
-    // Logic to reload or update the component when requestedLanguage changes
-    console.log(`Language changed to: ${requestedLanguage}`);
-    console.log('SpeechProvider component reloaded');
-    setLanguageChanged((prev) => !prev); // Trigger re-render
-    // Add any additional logic if needed
-  }, [requestedLanguage]);
-   */
 
   return (
     <SpeechContext.Provider
@@ -87,8 +139,8 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
         setRequestedLanguage,
         readAloudMode,
         setReadAloudMode,
-        voiceIndex,
-        setVoiceIndex: setVoiceIndexWithLog,
+        voiceIdentifier,
+        setVoiceIdentifier: setVoiceIdentifierWithLog,
       }}
     >
       {children}

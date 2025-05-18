@@ -31,7 +31,7 @@ const CustomNav: React.FC<CustomNavProps> = ({
 }) => {
   const router = useRouter();
   const segments = useSegments();
-  const { readAloudMode, setReadAloudMode, setVoiceIndex } = useSpeech();
+  const { readAloudMode, setReadAloudMode, setVoiceIdentifier } = useSpeech();
   const [visible, setVisible] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
 

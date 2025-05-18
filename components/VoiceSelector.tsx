@@ -19,7 +19,7 @@ const VoiceSelector: React.FC = () => {
   const [voices, setVoices] = useState<VoiceOption[]>([]);
   const [allVoices, setAllVoices] = useState<VoiceOption[]>([]); // Store all voices
   const [loading, setLoading] = useState(true);
-  const { voiceIndex, setVoiceIndex } = useSpeech();
+  const { voiceIdentifier, setVoiceIdentifier } = useSpeech();
 
   useEffect(() => {
     (async () => {
@@ -31,33 +31,21 @@ const VoiceSelector: React.FC = () => {
       );
       setVoices(enUSVoices);
       setLoading(false);
-      // If no voice is selected, default to the first en-US voice (by global index)
+      // If no voice is selected, default to the first en-US voice (by identifier)
       if (
         enUSVoices.length > 0 &&
-        (voiceIndex === undefined ||
-          !enUSVoices.some(
-            (v) =>
-              typeof voiceIndex === 'number' &&
-              allVoices[voiceIndex]?.identifier === v.identifier
-          ))
+        (!voiceIdentifier ||
+          !enUSVoices.some((v) => v.identifier === voiceIdentifier))
       ) {
-        // Find the index in allVoices of the first en-US voice
-        const firstEnUSVoice = enUSVoices[0];
-        const globalIndex = allVoices.findIndex(
-          (v) => v.identifier === firstEnUSVoice.identifier
-        );
-        setVoiceIndex(globalIndex);
+        // setVoiceIdentifier(enUSVoices[0].identifier);
       }
     })();
   }, []);
 
   const handleSelectVoice = (idx: number) => {
-    // idx is the index in enUSVoices, but we need the index in allVoices
+    // idx is the index in enUSVoices, but we need the identifier
     const selectedVoice = voices[idx];
-    const globalIndex = allVoices.findIndex(
-      (v) => v.identifier === selectedVoice.identifier
-    );
-    setVoiceIndex(globalIndex);
+    setVoiceIdentifier(selectedVoice.identifier);
   };
 
   if (loading) {
@@ -78,16 +66,13 @@ const VoiceSelector: React.FC = () => {
     <View style={styles.container}>
       <Text style={styles.header}>Select a Voice (en-US)</Text>
       {voices.map((voice, idx) => {
-        const isSelected =
-          typeof voiceIndex === 'number' &&
-          allVoices[voiceIndex]?.identifier === voice.identifier;
+        const isSelected = voiceIdentifier === voice.identifier;
         return (
           <View
             key={voice.identifier}
             style={{
               flexDirection: 'row',
-              alignItems: 'stretch', // Make both children stretch to same height
-              justifyContent: 'center',
+              alignItems: 'stretch',
               marginBottom: 10,
             }}
           >
@@ -122,7 +107,6 @@ const VoiceSelector: React.FC = () => {
                   width: 54,
                   paddingHorizontal: 0,
                   justifyContent: 'center',
-                  height: '100%',
                   alignItems: 'center',
                   marginBottom: 0,
                   backgroundColor: '#f9f9f9',
@@ -130,15 +114,15 @@ const VoiceSelector: React.FC = () => {
               ]}
               onPress={() => {
                 Speech.stop();
-                const globalIndex = allVoices.findIndex(
+                const found = allVoices.find(
                   (v) => v.identifier === voice.identifier
                 );
-                if (globalIndex !== -1) {
+                if (found) {
                   Speech.speak(
                     'This is a sample sentence spoken with the selected voice.',
                     {
-                      language: allVoices[globalIndex].language,
-                      voice: allVoices[globalIndex].identifier,
+                      language: found.language,
+                      voice: found.identifier,
                       rate: 0.9,
                     }
                   );
