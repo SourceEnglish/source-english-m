@@ -28,5 +28,256 @@
       "plural": "bread",
       "translation_note": ""
     }
+  },
+  {
+    "foggy": {
+      "__pos": "adjective",
+      "__tags": ["weather"],
+      "word": "foggy",
+      "translation_note": ""
+    }
+  },
+  {
+    "sunny": {
+      "__pos": "adjective",
+      "__tags": ["weather"],
+      "word": "sunny",
+      "translation_note": ""
+    }
+  },
+  {
+    "cloudy": {
+      "__pos": "adjective",
+      "__tags": ["weather"],
+      "word": "cloudy",
+      "translation_note": ""
+    }
+  },
+  {
+    "rainy": {
+      "__pos": "adjective",
+      "__tags": ["weather"],
+      "word": "rainy",
+      "translation_note": ""
+    }
+  },
+  {
+    "snowy": {
+      "__pos": "adjective",
+      "__tags": ["weather"],
+      "word": "snowy",
+      "translation_note": ""
+    }
+  },
+  {
+    "stormy": {
+      "__pos": "adjective",
+      "__tags": ["weather"],
+      "word": "stormy",
+      "translation_note": ""
+    }
+  },
+  {
+    "windy": {
+      "__pos": "adjective",
+      "__tags": ["weather"],
+      "word": "windy",
+      "translation_note": ""
+    }
+  },
+  {
+    "partly cloudy": {
+      "__pos": "adjective",
+      "__tags": ["weather"],
+      "word": "partly cloudy",
+      "translation_note": ""
+    }
+  },
+  {
+    "hot": {
+      "__pos": "adjective",
+      "__tags": ["weather", "temperature"],
+      "word": "hot",
+      "translation_note": ""
+    }
+  },
+  {
+    "warm": {
+      "__pos": "adjective",
+      "__tags": ["weather", "temperature"],
+      "word": "warm",
+      "translation_note": ""
+    }
+  },
+  {
+    "cool": {
+      "__pos": "adjective",
+      "__tags": ["weather", "temperature"],
+      "word": "cool",
+      "translation_note": ""
+    }
+  },
+  {
+    "cold": {
+      "__pos": "adjective",
+      "__tags": ["weather", "temperature"],
+      "word": "cold",
+      "translation_note": ""
+    }
+  },
+  {
+    "weather": {
+      "__pos": "noun",
+      "__count": "uncountable",
+      "__tags": ["weather"],
+      "word": "weather",
+      "translation_note": ""
+    }
+  },
+  {
+    "temperature": {
+      "__pos": "noun",
+      "__count": "uncountable",
+      "__tags": ["weather", "temperature"],
+      "word": "temperature",
+      "translation_note": ""
+    }
+  },
+  {
+    "Sunday": {
+      "__pos": "proper noun",
+      "__count": "countable",
+      "__tags": ["days"],
+      "word": "Sunday",
+      "plural": "Sundays",
+      "translation_note": ""
+    }
+  },
+  {
+    "Monday": {
+      "__pos": "proper noun",
+      "__count": "countable",
+      "__tags": ["days"],
+      "word": "Monday",
+      "plural": "Mondays",
+      "translation_note": ""
+    }
+  },
+  {
+    "Tuesday": {
+      "__pos": "proper noun",
+      "__count": "countable",
+      "__tags": ["days"],
+      "word": "Tuesday",
+      "plural": "Tuesdays",
+      "translation_note": ""
+    }
+  },
+  {
+    "Wednesday": {
+      "__pos": "proper noun",
+      "__count": "countable",
+      "__tags": ["days"],
+      "word": "Wednesday",
+      "plural": "Wednesdays",
+      "translation_note": ""
+    }
+  },
+  {
+    "Thursday": {
+      "__pos": "proper noun",
+      "__count": "countable",
+      "__tags": ["days"],
+      "word": "Thursday",
+      "plural": "Thursdays",
+      "translation_note": ""
+    }
+  },
+  {
+    "Friday": {
+      "__pos": "proper noun",
+      "__count": "countable",
+      "__tags": ["days"],
+      "word": "Friday",
+      "plural": "Fridays",
+      "translation_note": ""
+    }
+  },
+  {
+    "Saturday": {
+      "__pos": "proper noun",
+      "__count": "countable",
+      "__tags": ["days"],
+      "word": "Saturday",
+      "plural": "Saturdays",
+      "translation_note": ""
+    }
+  },
+  {
+    "day": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": ["days"],
+      "word": "day",
+      "plural": "days",
+      "translation_note": ""
+    }
+  },
+  {
+    "week": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": ["days"],
+      "word": "week",
+      "plural": "weeks",
+      "translation_note": ""
+    }
+  },
+  {
+    "weekend": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": ["days"],
+      "word": "weekend",
+      "plural": "weekends",
+      "translation_note": ""
+    }
+  },
+  {
+    "weekday": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": [""],
+      "word": "weekday",
+      "plural": "weekdays",
+      "translation_note": ""
+    }
+  },
+  {
+    "yesterday": {
+      "__pos": "noun",
+      "__count": "uncountable",
+      "__tags": ["days"],
+      "word": "yesterday",
+      "translation_note": ""
+    }
+  },
+  {
+    "today": {
+      "__pos": "noun",
+      "__count": "uncountable",
+      "__tags": ["days"],
+      "word": "today",
+      "translation_note": ""
+    }
+  },
+  {
+    "tomorrow": {
+      "__pos": "noun",
+      "__count": "uncountable",
+      "__tags": ["days"],
+      "word": "tomorrow",
+      "translation_note": ""
+    }
   }
 ]

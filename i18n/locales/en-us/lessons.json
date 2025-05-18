@@ -15,5 +15,21 @@
       "__type": "vocabulary",
       "__order": 3
     }
+  },
+  {
+    "weather vocab": {
+      "name": "weather vocab",
+      "__tags": ["weather"],
+      "__type": "vocabulary",
+      "__order": 4
+    }
+  },
+  {
+    "days vocab": {
+      "name": "days vocab",
+      "__tags": ["days"],
+      "__type": "vocabulary",
+      "__order": 4
+    }
   }
 ]
