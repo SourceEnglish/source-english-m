@@ -22,12 +22,14 @@ const defaultVoiceIdentifiers: string[] = [
   'Google US English',
   'Microsoft Jenny Online (Natural) - English (United States)',
   'Microsoft Ava Online (Natural) - English (United States)',
-  'com.apple.voice.premium.en-US.Voice1',
+
   'com.apple.voice.premium.en-US.Siri_Female',
   'com.apple.voice.premium.en-US.Samantha',
   'com.apple.voice.enhanced.en-US.Siri_Female',
+
   'com.apple.voice.compact.en-US.Samantha',
   'com.apple.voice.super-compact.en-US.Samantha',
+  'com.apple.voice.premium.en-US.Voice1',
   'Microsoft Zira - English (United States)',
 ];
 

@@ -25,7 +25,7 @@ export default function Index() {
     <ScrollView>
       <View style={styles.outerContainer}>
         <View style={[styles.thread, { gap: 12 }]}>
-          {/* <PageLink
+          <PageLink
             icon={
               iconMap['speak']
                 ? iconMap['speak']({ width: 32, height: 32 })
@@ -34,7 +34,7 @@ export default function Index() {
             pagePath="/voiceList"
             pageText="Voice List"
             pageTextTranslated={t('Voice List')}
-          /> */}
+          />
 
           {lessons.map((lesson) => {
             const Icon = iconMap[lesson.name];
