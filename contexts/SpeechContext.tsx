@@ -57,6 +57,7 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
       let selectedVoice: string | undefined = voiceIdentifier;
       try {
         const voices = await Speech.getAvailableVoicesAsync();
+        console.log(voices);
         // If no voiceIdentifier is set, select default now
         if (!selectedVoice) {
           let foundVoice;
