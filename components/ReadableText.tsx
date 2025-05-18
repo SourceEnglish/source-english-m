@@ -12,12 +12,17 @@ interface ReadableTextProps {
   text: string;
   translatedText?: string;
   style?: object; // Allow custom styles to be passed
+  numberOfLines?: number; // Number of lines to display before truncating
+  ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip'; // How to truncate the text
+  displayText?: string; // Optional: text to display (for truncation)
 }
 
 const ReadableText: React.FC<ReadableTextProps> = ({
   text,
   translatedText,
   style,
+  displayText,
+  ...props // Capture additional props
 }) => {
   const { speakText, readAloudMode, setReadAloudMode } = useSpeech();
   const { theme } = useTheme();
@@ -42,12 +47,17 @@ const ReadableText: React.FC<ReadableTextProps> = ({
           ...style, // Apply custom styles passed via the `style` prop
           color: (style as any)?.color || theme.textColor,
           backgroundColor: readAloudMode ? theme.highlightColor : 'transparent',
-          alignSelf: 'flex-start', // Prevents text from stretching
+          alignSelf: 'center', // Center the text block
           borderRadius: 4, // Optional: rounded highlight
           paddingHorizontal: 2, // Optional: some padding for highlight
+          textAlign: (style as any)?.textAlign || 'left',
+          width: (style as any)?.width || undefined, // Allow width to be set for wrapping
+          flexWrap: 'wrap',
         }}
+        numberOfLines={props.numberOfLines}
+        ellipsizeMode={props.ellipsizeMode}
       >
-        {text}
+        {displayText !== undefined ? displayText : text}
       </Text>
       {translatedText && (
         <Text style={{ color: theme.textColor, fontSize: 14 }}>

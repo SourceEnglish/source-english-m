@@ -30,7 +30,14 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
       {Icon && <Icon width={isMobile ? 28 : 32} height={isMobile ? 28 : 32} />}
       <ReadableText
         text={word}
-        style={{ fontSize: isMobile ? 13 : 15, marginBottom: 0 }}
+        displayText={word.length > 6 ? word.slice(0, 6) + '…' : word}
+        style={{
+          fontSize: isMobile ? 13 : 14,
+          marginBottom: 0,
+          textAlign: 'center',
+        }}
+        numberOfLines={1}
+        ellipsizeMode="tail"
       />
     </View>
   );
@@ -45,17 +52,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginHorizontal: 4,
-    width: 56,
+
     height: 70,
     flexShrink: 0,
   },
   mobile: {
-    width: 44,
+    width: 54,
     height: 56,
     padding: 2,
   },
   desktop: {
-    width: 56,
+    width: 64,
     height: 70,
     padding: 4,
   },

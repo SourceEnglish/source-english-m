@@ -58,11 +58,19 @@ export default function CardPreview({ card }: CardPreviewProps) {
         style={{
           fontSize: isMobile ? 18 : 28,
           marginBottom: 4,
+          textAlign: 'center',
+          flexWrap: 'wrap',
+          alignSelf: 'center',
+          width: '100%',
         }}
       />
       <ReadableText
         text={__pos}
-        style={{ fontStyle: 'italic', color: posColors[__pos] }}
+        style={{
+          fontStyle: 'italic',
+          color: posColors[__pos],
+          fontSize: isMobile ? 14 : 20,
+        }}
       />
     </Pressable>
   );
