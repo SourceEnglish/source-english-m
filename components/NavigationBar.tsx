@@ -81,7 +81,7 @@ const CustomNav: React.FC<CustomNavProps> = ({
     let voiceIndex = voices.findIndex((voice) =>
       voice.identifier.includes('Google US English')
     );
-    setVoiceIndex(voiceIndex);
+    // setVoiceIndex(voiceIndex);
     voices.forEach((voice) => {
       if (voice.language === 'en-US') {
         hasEnglishUS = true;

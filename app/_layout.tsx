@@ -80,6 +80,14 @@ export default function RootLayout() {
                   };
                 }}
               />
+              <Stack.Screen
+                name="voiceList"
+                options={{
+                  header: () => (
+                    <CustomNav headerHeight={headerHeight} title="Voices" />
+                  ),
+                }}
+              />
             </Stack>
           </ThemeProvider>
         </SpeechProvider>

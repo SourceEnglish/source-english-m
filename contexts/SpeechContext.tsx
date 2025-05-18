@@ -36,19 +36,37 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
   const [requestedLanguage, setRequestedLanguage] =
     React.useState<string>('en-US');
   const [_, setLanguageChanged] = React.useState(false);
-  const speakText = (text: string, useNativeLanguage?: boolean) => {
+  const speakText = async (text: string, useNativeLanguage?: boolean) => {
     if (text) {
       Speech.stop(); // Stop any ongoing speech before starting new
+      let selectedVoice: string | undefined = undefined;
+      try {
+        const voices = await Speech.getAvailableVoicesAsync();
+        if (
+          typeof voiceIndex === 'number' &&
+          voices[voiceIndex] &&
+          voices[voiceIndex].identifier
+        ) {
+          selectedVoice = voices[voiceIndex].identifier;
+        }
+      } catch (e) {
+        console.warn('Could not get voices:', e);
+      }
       Speech.speak(text, {
-        language: useNativeLanguage ? i18n.language : 'en-US',
-        _voiceIndex: useNativeLanguage ? undefined : voiceIndex,
+        language: 'en-US',
+        voice: selectedVoice,
         rate: 0.9,
       });
     }
     console.log(useNativeLanguage);
-    console.log(voiceIndex);
-    console.log('The chosen language is');
-    console.log(i18n.language);
+    console.log('The chosen voiceIndex is: ' + voiceIndex);
+    console.log('The chosen language is: ' + i18n.language);
+  };
+
+  // Custom setter for voiceIndex to log changes
+  const setVoiceIndexWithLog = (index: number | undefined) => {
+    setVoiceIndex(index);
+    console.log('voiceIndex set to:', index);
   };
 
   /*
@@ -70,7 +88,7 @@ export const SpeechProvider: React.FC<SpeechProviderProps> = ({ children }) => {
         readAloudMode,
         setReadAloudMode,
         voiceIndex,
-        setVoiceIndex,
+        setVoiceIndex: setVoiceIndexWithLog,
       }}
     >
       {children}
