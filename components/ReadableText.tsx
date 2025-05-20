@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   GestureResponderEvent,
+  TextStyle,
 } from 'react-native';
 import { useSpeech } from '@/contexts/SpeechContext';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -36,22 +37,24 @@ const ReadableText: React.FC<ReadableTextProps> = ({
     }
   };
 
+  const flatStyle = StyleSheet.flatten(style) as TextStyle | undefined;
+
   return (
     <TouchableOpacity
       disabled={!readAloudMode}
       onPress={handlePress}
-      style={styles.container} // Only apply container styles here
+      style={styles.container}
     >
       <Text
         style={{
-          ...style, // Apply custom styles passed via the `style` prop
-          color: (style as any)?.color || theme.textColor,
+          ...flatStyle,
+          color: flatStyle?.color || theme.textColor,
           backgroundColor: readAloudMode ? theme.highlightColor : 'transparent',
-          alignSelf: 'center', // Center the text block
-          borderRadius: 4, // Optional: rounded highlight
-          paddingHorizontal: 2, // Optional: some padding for highlight
-          textAlign: (style as any)?.textAlign || 'left',
-          width: (style as any)?.width || undefined, // Allow width to be set for wrapping
+          alignSelf: 'center',
+          borderRadius: 4,
+          paddingHorizontal: 2,
+          textAlign: flatStyle?.textAlign || 'left',
+          width: flatStyle?.width || undefined,
           flexWrap: 'wrap',
         }}
         numberOfLines={props.numberOfLines}

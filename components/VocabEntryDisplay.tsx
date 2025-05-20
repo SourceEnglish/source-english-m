@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import { Text, View, StyleSheet, Dimensions } from 'react-native';
 import posColors from '@/constants/constants';
 import { iconMap } from '@/utils/iconMap';
+import ReadableText from './ReadableText';
 
 interface VocabEntryDisplayProps {
   entry: {
@@ -27,21 +28,32 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
           <Icon width={isMobile ? 80 : 140} height={isMobile ? 80 : 140} />
         </View>
       )}
-      <Text style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}>
-        {word}
-      </Text>
-      <Text style={[styles.pos, { color, fontSize: isMobile ? 18 : 24 }]}>
-        {__pos}
-      </Text>
+      <ReadableText
+        text={word}
+        style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
+      />
+      <ReadableText
+        text={__pos}
+        style={[styles.pos, { color, fontSize: isMobile ? 18 : 24 }]}
+      />
       {__pos === 'noun' && plural && (
-        <Text style={styles.plural}>
-          Plural: <Text style={{ fontWeight: 'bold' }}>{plural}</Text>
-        </Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <ReadableText text="Plural:" style={styles.plural} />
+          <Text> </Text>
+          <ReadableText text={`${plural}`} style={styles.plural} />
+        </View>
       )}
       {__pos === 'noun' && __count && (
-        <Text style={styles.countable}>
-          {__count.charAt(0).toUpperCase() + __count.slice(1)} noun
-        </Text>
+        <ReadableText
+          text={`${__count.charAt(0).toUpperCase() + __count.slice(1)} noun`}
+          style={styles.countable}
+        />
       )}
     </View>
   );
