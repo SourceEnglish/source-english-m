@@ -4,6 +4,7 @@ import { Pressable } from 'react-native';
 import posColors from '@/constants/constants';
 import ReadableText from '@/components/ReadableText';
 import { iconMap } from '@/utils/iconMap'; // Import the icon map
+import { useRouter } from 'expo-router';
 
 type VocabularyEntry = {
   __pos: string;
@@ -21,9 +22,10 @@ type VocabularyCard = {
 
 type CardPreviewProps = {
   card: VocabularyCard;
+  vocabKey?: string;
 };
 
-export default function CardPreview({ card }: CardPreviewProps) {
+export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
   const { __pos, word } = card;
   const borderColor = posColors[__pos] || '#000';
 
@@ -36,9 +38,16 @@ export default function CardPreview({ card }: CardPreviewProps) {
 
   // Dynamically get the icon based on the word (or another property if needed)
   const Icon = iconMap[word.toLowerCase()];
+  const router = useRouter();
+
+  const handlePress = () => {
+    const key = vocabKey || word;
+    router.push({ pathname: '/vocab/[entry]', params: { entry: key } });
+  };
 
   return (
     <Pressable
+      onPress={handlePress}
       onHoverIn={() => setIsHovered(true)}
       onHoverOut={() => setIsHovered(false)}
       style={[

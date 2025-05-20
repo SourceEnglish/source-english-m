@@ -1,4 +1,4 @@
-import { Link, RelativePathString } from 'expo-router';
+import { Link } from 'expo-router';
 import React from 'react';
 import { View } from 'react-native';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -69,7 +69,7 @@ const PageLink: React.FC<PageLinkProps> = ({
 
   return (
     <Link
-      href={pagePath as RelativePathString}
+      href={pagePath as any}
       style={{
         backgroundColor: theme.backgroundColor,
         borderRadius: 4,

@@ -35,8 +35,9 @@ export default function LessonPage() {
     const vocabEntries = Array.isArray(vocabularyData)
       ? vocabularyData
           .map((entry: any) => {
-            const word = Object.keys(entry)[0];
-            return { word, ...entry[word] };
+            const key = Object.keys(entry)[0];
+            const cardData = entry[key];
+            return { ...cardData, vocabKey: key };
           })
           .filter((entry: any) =>
             lessonData.__tags?.some((tag: string) =>
@@ -61,7 +62,7 @@ export default function LessonPage() {
             }}
           >
             {vocabEntries.map((entry: any) => (
-              <CardPreview key={entry.word} card={entry} />
+              <CardPreview key={entry.vocabKey} card={entry} vocabKey={entry.vocabKey} />
             ))}
           </View>
         </View>

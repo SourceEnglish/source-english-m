@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stack, ScreenProps } from 'expo-router';
+import { Stack } from 'expo-router';
 import { Text, Platform, Button } from 'react-native';
 import { I18nextProvider, useTranslation } from 'react-i18next';
 import * as Localization from 'expo-localization';
@@ -58,11 +58,10 @@ export default function RootLayout() {
                 }: {
                   route: { params?: { lesson?: string } };
                 }) => {
-                  const lessonParam = route.params?.lesson as
-                    | string
-                    | undefined;
+                  const lessonParam = route.params?.lesson as string | undefined;
+                  // Decode lessonKey for display (replace dashes and decode URI)
                   const lessonKey = lessonParam
-                    ? lessonParam.replace(/-/g, ' ')
+                    ? decodeURIComponent(lessonParam.replace(/-/g, ' '))
                     : undefined;
                   const lessonEntry = (
                     lessonsData as unknown as LessonEntry[]
@@ -86,6 +85,26 @@ export default function RootLayout() {
                   header: () => (
                     <CustomNav headerHeight={headerHeight} title="Voices" />
                   ),
+                }}
+              />
+              <Stack.Screen
+                name="vocab/[entry]"
+                options={({ route }: { route: { params?: { entry?: string } } }) => {
+                  // Always get the vocab entry's word for the title
+                  const entryKey = route.params?.entry as string | undefined;
+                  let word = entryKey ? decodeURIComponent(entryKey) : '';
+                  if (entryKey) {
+                    const vocabEntryObj = (require('@/i18n/locales/en-us/vocabulary.json') as any[]).find((e: any) => Object.keys(e)[0] === entryKey);
+                    if (vocabEntryObj && vocabEntryObj[entryKey] && vocabEntryObj[entryKey].word) {
+                      word = vocabEntryObj[entryKey].word;
+                    }
+                  }
+                  return {
+                    header: () => (
+                      <CustomNav headerHeight={headerHeight} title={word} />
+                    ),
+                    gestureEnabled: true,
+                  };
                 }}
               />
             </Stack>
