@@ -5,6 +5,7 @@ import sectionsData from '@/i18n/locales/en-us/sections.json';
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import CardPreview from '@/components/CardPreview';
 import SectionRenderer from '@/components/SectionRenderer';
+import Notes from '@/components/Notes';
 import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 
 export function generateStaticParams() {
@@ -49,6 +50,7 @@ export default function LessonPage() {
     return (
       <ScrollView>
         <View style={[styles.outerContainer, { marginTop: 10 }]}>
+          <Notes noteKey={`lesson_${lessonName}`} />
           {/* <Text style={{ fontSize: 28, fontWeight: 'bold', margin: 16 }}>
             {displayName}
           </Text> */}
@@ -80,6 +82,7 @@ export default function LessonPage() {
     return (
       <ScrollView>
         <View style={styles.outerContainer}>
+          <Notes noteKey={`lesson_${lessonName}`} />
           {/* <Text style={{ fontSize: 28, fontWeight: 'bold', margin: 16 }}>
             {displayName}
           </Text> */}

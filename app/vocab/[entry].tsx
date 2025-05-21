@@ -2,6 +2,7 @@ import { useLocalSearchParams } from 'expo-router';
 import { ScrollView, View, Text, StyleSheet } from 'react-native';
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import VocabEntryDisplay from '@/components/VocabEntryDisplay';
+import Notes from '@/components/Notes';
 import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 
 export function generateStaticParams() {
@@ -30,6 +31,7 @@ export default function VocabEntryPage() {
   return (
     <ScrollView>
       <View style={styles.outerContainer}>
+        <Notes noteKey={`vocab_${entryName}`} />
         <VocabEntryDisplay entry={vocabEntry} />
       </View>
     </ScrollView>

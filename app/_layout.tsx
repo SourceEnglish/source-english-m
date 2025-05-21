@@ -11,6 +11,7 @@ import { ThemeProvider } from '@/contexts/ThemeContext';
 import NavigationBar from '@/components/NavigationBar';
 import { useColorScheme } from 'react-native';
 import CustomNav from '@/components/NavigationBar';
+import { NotesProvider } from '@/contexts/NotesContext';
 // Import lessons data and type
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
 
@@ -37,77 +38,79 @@ export default function RootLayout() {
       <I18nextProvider i18n={i18n}>
         <SpeechProvider>
           <ThemeProvider>
-            <Stack>
-              <Stack.Screen
-                name="index"
-                options={{
-                  header: () => (
-                    <CustomNav
-                      headerHeight={headerHeight}
-                      title="Home"
-                      canGoBack={false}
-                    />
-                  ),
-                }}
-              />
-              <Stack.Screen name="+not-found" />
-              <Stack.Screen
-                name="[lesson]"
-                options={({
-                  route,
-                }: {
-                  route: { params?: { lesson?: string } };
-                }) => {
-                  const lessonParam = route.params?.lesson as string | undefined;
-                  // Decode lessonKey for display (replace dashes and decode URI)
-                  const lessonKey = lessonParam
-                    ? decodeURIComponent(lessonParam.replace(/-/g, ' '))
-                    : undefined;
-                  const lessonEntry = (
-                    lessonsData as unknown as LessonEntry[]
-                  ).find((entry) => lessonKey && entry[lessonKey]);
-                  const lessonData =
-                    lessonEntry && lessonKey ? lessonEntry[lessonKey] : null;
-                  return {
+            <NotesProvider>
+              <Stack>
+                <Stack.Screen
+                  name="index"
+                  options={{
                     header: () => (
                       <CustomNav
                         headerHeight={headerHeight}
-                        title={lessonData?.name || lessonKey || 'Lesson'}
+                        title="Home"
+                        canGoBack={false}
                       />
                     ),
-                    gestureEnabled: true, // Enable swipe back gesture
-                  };
-                }}
-              />
-              <Stack.Screen
-                name="voiceList"
-                options={{
-                  header: () => (
-                    <CustomNav headerHeight={headerHeight} title="Voices" />
-                  ),
-                }}
-              />
-              <Stack.Screen
-                name="vocab/[entry]"
-                options={({ route }: { route: { params?: { entry?: string } } }) => {
-                  // Always get the vocab entry's word for the title
-                  const entryKey = route.params?.entry as string | undefined;
-                  let word = entryKey ? decodeURIComponent(entryKey) : '';
-                  if (entryKey) {
-                    const vocabEntryObj = (require('@/i18n/locales/en-us/vocabulary.json') as any[]).find((e: any) => Object.keys(e)[0] === entryKey);
-                    if (vocabEntryObj && vocabEntryObj[entryKey] && vocabEntryObj[entryKey].word) {
-                      word = vocabEntryObj[entryKey].word;
-                    }
-                  }
-                  return {
+                  }}
+                />
+                <Stack.Screen name="+not-found" />
+                <Stack.Screen
+                  name="[lesson]"
+                  options={({
+                    route,
+                  }: {
+                    route: { params?: { lesson?: string } };
+                  }) => {
+                    const lessonParam = route.params?.lesson as string | undefined;
+                    // Decode lessonKey for display (replace dashes and decode URI)
+                    const lessonKey = lessonParam
+                      ? decodeURIComponent(lessonParam.replace(/-/g, ' '))
+                      : undefined;
+                    const lessonEntry = (
+                      lessonsData as unknown as LessonEntry[]
+                    ).find((entry) => lessonKey && entry[lessonKey]);
+                    const lessonData =
+                      lessonEntry && lessonKey ? lessonEntry[lessonKey] : null;
+                    return {
+                      header: () => (
+                        <CustomNav
+                          headerHeight={headerHeight}
+                          title={lessonData?.name || lessonKey || 'Lesson'}
+                        />
+                      ),
+                      gestureEnabled: true, // Enable swipe back gesture
+                    };
+                  }}
+                />
+                <Stack.Screen
+                  name="voiceList"
+                  options={{
                     header: () => (
-                      <CustomNav headerHeight={headerHeight} title={word} />
+                      <CustomNav headerHeight={headerHeight} title="Voices" />
                     ),
-                    gestureEnabled: true,
-                  };
-                }}
-              />
-            </Stack>
+                  }}
+                />
+                <Stack.Screen
+                  name="vocab/[entry]"
+                  options={({ route }: { route: { params?: { entry?: string } } }) => {
+                    // Always get the vocab entry's word for the title
+                    const entryKey = route.params?.entry as string | undefined;
+                    let word = entryKey ? decodeURIComponent(entryKey) : '';
+                    if (entryKey) {
+                      const vocabEntryObj = (require('@/i18n/locales/en-us/vocabulary.json') as any[]).find((e: any) => Object.keys(e)[0] === entryKey);
+                      if (vocabEntryObj && vocabEntryObj[entryKey] && vocabEntryObj[entryKey].word) {
+                        word = vocabEntryObj[entryKey].word;
+                      }
+                    }
+                    return {
+                      header: () => (
+                        <CustomNav headerHeight={headerHeight} title={word} />
+                      ),
+                      gestureEnabled: true,
+                    };
+                  }}
+                />
+              </Stack>
+            </NotesProvider>
           </ThemeProvider>
         </SpeechProvider>
       </I18nextProvider>
