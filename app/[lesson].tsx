@@ -64,7 +64,11 @@ export default function LessonPage() {
             }}
           >
             {vocabEntries.map((entry: any) => (
-              <CardPreview key={entry.vocabKey} card={entry} vocabKey={entry.vocabKey} />
+              <CardPreview
+                key={entry.vocabKey}
+                card={entry}
+                vocabKey={entry.vocabKey}
+              />
             ))}
           </View>
         </View>

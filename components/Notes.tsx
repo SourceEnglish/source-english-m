@@ -40,12 +40,16 @@ const Notes: React.FC<NotesProps> = ({ noteKey }) => {
       setValue(storedNote ?? '');
       setLoaded(true);
     } else {
-      import('@react-native-async-storage/async-storage').then(AsyncStorage => {
-        AsyncStorage.default.getItem(noteKeyStorage).then((storedNote: string | null) => {
-          setValue(storedNote ?? '');
-          setLoaded(true);
-        });
-      });
+      import('@react-native-async-storage/async-storage').then(
+        (AsyncStorage) => {
+          AsyncStorage.default
+            .getItem(noteKeyStorage)
+            .then((storedNote: string | null) => {
+              setValue(storedNote ?? '');
+              setLoaded(true);
+            });
+        }
+      );
     }
     // Load collapsed state from storage
     const collapsedKey = `collapsed_${noteKey}`;
@@ -60,17 +64,21 @@ const Notes: React.FC<NotesProps> = ({ noteKey }) => {
         setCollapsedLoaded(true);
       }
     } else {
-      import('@react-native-async-storage/async-storage').then(AsyncStorage => {
-        AsyncStorage.default.getItem(collapsedKey).then((storedCollapsed: string | null) => {
-          if (storedCollapsed !== null) {
-            setCollapsed(storedCollapsed === 'true');
-            setCollapsedLoaded(true);
-          } else {
-            setCollapsed(value.trim() === '' ? true : false);
-            setCollapsedLoaded(true);
-          }
-        });
-      });
+      import('@react-native-async-storage/async-storage').then(
+        (AsyncStorage) => {
+          AsyncStorage.default
+            .getItem(collapsedKey)
+            .then((storedCollapsed: string | null) => {
+              if (storedCollapsed !== null) {
+                setCollapsed(storedCollapsed === 'true');
+                setCollapsedLoaded(true);
+              } else {
+                setCollapsed(value.trim() === '' ? true : false);
+                setCollapsedLoaded(true);
+              }
+            });
+        }
+      );
     }
   }, [noteKey]);
 

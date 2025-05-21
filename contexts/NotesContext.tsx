@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from 'react';
 import { Platform } from 'react-native';
 
 // Use AsyncStorage for native, localStorage for web
@@ -55,7 +61,9 @@ export const NotesProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <NotesContext.Provider value={contextValue}>{children}</NotesContext.Provider>
+    <NotesContext.Provider value={contextValue}>
+      {children}
+    </NotesContext.Provider>
   );
 };
 

@@ -60,7 +60,9 @@ export default function RootLayout() {
                   }: {
                     route: { params?: { lesson?: string } };
                   }) => {
-                    const lessonParam = route.params?.lesson as string | undefined;
+                    const lessonParam = route.params?.lesson as
+                      | string
+                      | undefined;
                     // Decode lessonKey for display (replace dashes and decode URI)
                     const lessonKey = lessonParam
                       ? decodeURIComponent(lessonParam.replace(/-/g, ' '))
@@ -91,13 +93,23 @@ export default function RootLayout() {
                 />
                 <Stack.Screen
                   name="vocab/[entry]"
-                  options={({ route }: { route: { params?: { entry?: string } } }) => {
+                  options={({
+                    route,
+                  }: {
+                    route: { params?: { entry?: string } };
+                  }) => {
                     // Always get the vocab entry's word for the title
                     const entryKey = route.params?.entry as string | undefined;
                     let word = entryKey ? decodeURIComponent(entryKey) : '';
                     if (entryKey) {
-                      const vocabEntryObj = (require('@/i18n/locales/en-us/vocabulary.json') as any[]).find((e: any) => Object.keys(e)[0] === entryKey);
-                      if (vocabEntryObj && vocabEntryObj[entryKey] && vocabEntryObj[entryKey].word) {
+                      const vocabEntryObj = (
+                        require('@/i18n/locales/en-us/vocabulary.json') as any[]
+                      ).find((e: any) => Object.keys(e)[0] === entryKey);
+                      if (
+                        vocabEntryObj &&
+                        vocabEntryObj[entryKey] &&
+                        vocabEntryObj[entryKey].word
+                      ) {
                         word = vocabEntryObj[entryKey].word;
                       }
                     }

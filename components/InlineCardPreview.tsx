@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import posColors from '@/constants/constants';
 import ReadableText from '@/components/ReadableText';
 import { iconMap } from '@/utils/iconMap';
@@ -15,8 +15,9 @@ interface InlineCardPreviewProps {
 const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
   const { __pos, word } = card;
   const borderColor = posColors[__pos] || '#000';
-  const screenWidth = Dimensions.get('window').width;
-  const isMobile = screenWidth <= 768;
+
+  // Use only Platform.OS for mobile/desktop check to avoid hydration/layout mismatch
+  const isMobile = Platform.OS !== 'web';
   const Icon = iconMap[word.toLowerCase()];
 
   return (

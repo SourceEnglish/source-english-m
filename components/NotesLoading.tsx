@@ -9,15 +9,17 @@ const NotesLoading: React.FC = () => (
 
 const styles = StyleSheet.create({
   container: {
-    minHeight: 40, // Match collapsed notes header height
-    height: 40, // Fixed height to match collapsed Notes
+    minHeight: 60, // Match collapsed notes header height
+    height: 60, // Fixed height to match collapsed Notes
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#f5f5f5',
-    borderRadius: 8,
     marginBottom: 2,
     paddingHorizontal: 12,
     paddingVertical: 0,
+    borderWidth: 1, // Match collapsed notes border
+    borderColor: '#bbb',
+    borderRadius: 6, // Match collapsed notes border radius
   },
 });
 

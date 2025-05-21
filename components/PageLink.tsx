@@ -126,6 +126,7 @@ const PageLink: React.FC<PageLinkProps> = ({
               alignItems: 'center',
               overflow: 'hidden',
               maxWidth: availableWidth,
+              minHeight: 56, // Prevent layout shift by reserving space for InlineCardPreviews
             }}
           >
             {vocabEntries.slice(0, maxCards).map((entry: any) => (
