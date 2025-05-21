@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Platform } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import { Pressable } from 'react-native';
 import posColors from '@/constants/constants';
 import ReadableText from '@/components/ReadableText';
@@ -29,8 +29,9 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
   const { __pos, word } = card;
   const borderColor = posColors[__pos] || '#000';
 
-  // Use only Platform.OS for mobile/desktop check to avoid hydration/layout mismatch
-  const isMobile = Platform.OS !== 'web';
+  // Get screen width to determine if the device is mobile
+  const screenWidth = Dimensions.get('window').width;
+  const isMobile = screenWidth <= 768;
 
   // State to track hover
   const [isHovered, setIsHovered] = useState(false);
@@ -54,7 +55,6 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
         isMobile ? styles.mobileCard : styles.desktopCard,
         { borderColor },
         isHovered && styles.hoveredCard,
-        { minHeight: isMobile ? 150 : 300, minWidth: isMobile ? 120 : 240 },
       ]}
     >
       {Icon && (
@@ -65,13 +65,12 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
       <ReadableText
         text={word}
         style={{
-          fontSize: isMobile ? 28 : 28,
+          fontSize: isMobile ? 18 : 28,
           marginBottom: 4,
           textAlign: 'center',
           flexWrap: 'wrap',
           alignSelf: 'center',
           width: '100%',
-          minHeight: isMobile ? 34 : 44,
         }}
       />
       <ReadableText
@@ -79,8 +78,7 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
         style={{
           fontStyle: 'italic',
           color: posColors[__pos],
-          fontSize: isMobile ? 20 : 24,
-          minHeight: isMobile ? 24 : 28,
+          fontSize: isMobile ? 14 : 20,
         }}
       />
     </Pressable>
