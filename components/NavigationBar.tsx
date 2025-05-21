@@ -55,12 +55,11 @@ const CustomNav: React.FC<CustomNavProps> = ({
   };
 
   // Responsive scaling
-  const isMobile =
-    Platform.OS !== 'web' ||
-    (typeof window !== 'undefined' && window.innerWidth < 600);
+  // Use only Platform.OS for mobile/desktop check to avoid hydration/layout mismatch
+  const isMobile = Platform.OS !== 'web';
 
   // Set nav bar height and icon size for mobile/desktop
-  const NAVBAR_HEIGHT = isMobile ? 72 : 80; // Increased desktop height to 80
+  const NAVBAR_HEIGHT = isMobile ? 72 : 80;
   const ICON_SIZE = isMobile ? 36 : 32;
   const ICON_SIZE_MULTIPLIER = isMobile ? 1.0 : 0.9;
   const NAV_BUTTON_PADDING_VERTICAL = isMobile ? 10 : 4;
