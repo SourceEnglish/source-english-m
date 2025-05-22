@@ -51,21 +51,24 @@ const PageLink: React.FC<PageLinkProps> = ({
   }
 
   // Calculate how many InlineCardPreviews can fit in the available width
-  // Assume each InlineCardPreview is ~56px wide + margin (6px), plus some space for text/icon
-  // We'll estimate available width as 100% minus the text/icon width
-  // For a more robust solution, you could use a ref and measure, but we'll use a heuristic for now
+  // The available width is the width of the PageLink minus the left and right padding (32px total)
+  // Subtract the estimated width of the icon and text (ESTIMATED_TEXT_WIDTH)
+  // Each InlineCardPreview is MAX_INLINE_CARD_WIDTH wide (including margin)
+  // The container is inside a View with marginLeft: 8, so subtract 8px as well
   const MAX_INLINE_CARD_WIDTH = 62; // 56px card + 6px margin
   const ESTIMATED_TEXT_WIDTH = 180; // icon + text
-  const ESTIMATED_LINK_PADDING = 32; // left/right padding
+  const PAGELINK_PADDING = 16;
+  const containerMarginLeft = 8;
   const TOTAL_WIDTH = typeof window !== 'undefined' ? window.innerWidth : 400;
-  const availableWidth = Math.max(
-    TOTAL_WIDTH * 0.95 - ESTIMATED_TEXT_WIDTH - ESTIMATED_LINK_PADDING,
+  const availablePreviewWidth = Math.max(
+    TOTAL_WIDTH * 0.95 -
+      ESTIMATED_TEXT_WIDTH -
+      PAGELINK_PADDING * 2 -
+      containerMarginLeft,
     MAX_INLINE_CARD_WIDTH
   );
-  const maxCards = Math.max(
-    1,
-    Math.floor(availableWidth / MAX_INLINE_CARD_WIDTH)
-  );
+  const maxCards =
+    Math.max(1, Math.floor(availablePreviewWidth / MAX_INLINE_CARD_WIDTH)) + 1;
 
   return (
     <Link
@@ -74,14 +77,12 @@ const PageLink: React.FC<PageLinkProps> = ({
         backgroundColor: theme.backgroundColor,
         borderRadius: 4,
         padding: 16,
-        display: 'flex',
-        flexDirection: 'row', // row for inline
+        display: 'flex', // Use flex, which is supported by React Native and web
+        flexDirection: 'row',
         width: '100%',
         opacity: readAloudMode ? 1 : 1,
-        alignContent: 'center',
-        textAlignVertical: 'center',
-        alignItems: 'center',
         boxSizing: 'border-box',
+        overflow: 'hidden', // Ensures children are clipped to the full Link bounds
       }}
       onPress={(e) => {
         if (readAloudMode) {
@@ -96,6 +97,7 @@ const PageLink: React.FC<PageLinkProps> = ({
           alignItems: 'center',
           flex: 1,
           minWidth: 0,
+          width: '100%', // Ensure child View fills the Link
         }}
       >
         <View style={{ paddingRight: 5 }}>{icon}</View>
@@ -124,9 +126,8 @@ const PageLink: React.FC<PageLinkProps> = ({
               flexWrap: 'nowrap',
               marginLeft: 8,
               alignItems: 'center',
-              overflow: 'hidden',
-              maxWidth: availableWidth,
-              minHeight: 56, // Prevent layout shift by reserving space for InlineCardPreviews
+              overflow: 'visible',
+              maxWidth: '100%',
             }}
           >
             {vocabEntries.slice(0, maxCards).map((entry: any) => (

@@ -31,7 +31,7 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
       {Icon && <Icon width={isMobile ? 28 : 32} height={isMobile ? 28 : 32} />}
       <ReadableText
         text={word}
-        displayText={word.length > 6 ? word.slice(0, 6) + '…' : word}
+        displayText={word.length > 7 ? word.slice(0, 6) + '…' : word}
         style={{
           fontSize: isMobile ? 13 : 14,
           marginBottom: 0,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     padding: 2,
   },
   desktop: {
-    width: 64,
+    width: 63,
     height: 70,
     padding: 4,
   },
