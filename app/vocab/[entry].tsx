@@ -43,13 +43,16 @@ const styles = StyleSheet.create({
     width: '100%',
     maxWidth: CENTERED_MAX_WIDTH,
     alignSelf: 'center',
-    marginTop: 20,
-  },
-  title: {
-    fontSize: 36,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 10,
     marginTop: 10,
+    marginBottom: 20,
+    paddingHorizontal: 16,
+    paddingVertical: 0,
   },
+  // title: {
+  //   fontSize: 36,
+  //   fontWeight: 'bold',
+  //   textAlign: 'center',
+  //   marginBottom: 10,
+  //   marginTop: 10,
+  // },
 });
