@@ -78,8 +78,7 @@ const PageLink: React.FC<PageLinkProps> = ({
         borderRadius: 4,
         padding: 10,
         paddingLeft: 16,
-        paddingTop:
-          lessonData && lessonData.__type !== 'vocabulary' ? 18 : 10,
+        paddingTop: lessonData && lessonData.__type !== 'vocabulary' ? 18 : 10,
         paddingBottom:
           lessonData && lessonData.__type !== 'vocabulary' ? 18 : 10,
         display: 'flex',
