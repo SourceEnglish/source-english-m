@@ -9,11 +9,12 @@ interface InlineCardPreviewProps {
   card: {
     __pos: string;
     word: string;
+    __forced_pronunciation?: string;
   };
 }
 
 const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
-  const { __pos, word } = card;
+  const { __pos, word, __forced_pronunciation } = card;
   const borderColor = posColors[__pos] || '#000';
 
   // Use only Platform.OS for mobile/desktop check to avoid hydration/layout mismatch
@@ -32,6 +33,7 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
       {__pos !== 'letter' && (
         <ReadableText
           text={word}
+          pronunciation={__forced_pronunciation}
           displayText={word.length > 7 ? word.slice(0, 6) + '…' : word}
           style={{
             fontSize: isMobile ? 13 : 14,

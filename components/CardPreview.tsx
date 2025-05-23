@@ -18,6 +18,7 @@ type VocabularyEntry = {
 type VocabularyCard = {
   __pos: string;
   word: string;
+  __forced_pronunciation?: string;
 };
 
 type CardPreviewProps = {
@@ -26,7 +27,7 @@ type CardPreviewProps = {
 };
 
 export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
-  const { __pos, word } = card;
+  const { __pos, word, __forced_pronunciation } = card;
   const borderColor = posColors[__pos] || '#000';
 
   // Get screen width to determine if the device is mobile
@@ -65,6 +66,7 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
       {__pos !== 'letter' && (
         <ReadableText
           text={word}
+          pronunciation={__forced_pronunciation}
           style={{
             fontSize: isMobile ? 18 : 28,
             marginBottom: 4,

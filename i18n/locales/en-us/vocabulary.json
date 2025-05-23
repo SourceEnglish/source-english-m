@@ -4,12 +4,262 @@
       "__pos": "letter",
       "__tags": ["letters"],
       "__icon_text": "Aa",
-      "__forced_pronunciation": "ey",
-
+      "__forced_pronunciation": "a",
       "word": "Aa",
       "translation_note": ""
     }
   },
+  {
+    "B": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Bb",
+      "__forced_pronunciation": "b",
+      "word": "Bb",
+      "translation_note": ""
+    }
+  },
+  {
+    "C": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Cc",
+      "__forced_pronunciation": "c",
+      "word": "Cc",
+      "translation_note": ""
+    }
+  },
+  {
+    "D": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Dd",
+      "__forced_pronunciation": "d",
+      "word": "Dd",
+      "translation_note": ""
+    }
+  },
+  {
+    "E": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Ee",
+      "__forced_pronunciation": "e",
+      "word": "Ee",
+      "translation_note": ""
+    }
+  },
+  {
+    "F": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Ff",
+      "__forced_pronunciation": "f",
+      "word": "Ff",
+      "translation_note": ""
+    }
+  },
+  {
+    "G": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Gg",
+      "__forced_pronunciation": "g",
+      "word": "Gg",
+      "translation_note": ""
+    }
+  },
+  {
+    "H": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Hh",
+      "__forced_pronunciation": "h",
+      "word": "Hh",
+      "translation_note": ""
+    }
+  },
+  {
+    "I": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Ii",
+      "__forced_pronunciation": "i",
+      "word": "Ii",
+      "translation_note": ""
+    }
+  },
+  {
+    "J": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Jj",
+      "__forced_pronunciation": "j",
+      "word": "Jj",
+      "translation_note": ""
+    }
+  },
+  {
+    "K": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Kk",
+      "__forced_pronunciation": "k",
+      "word": "Kk",
+      "translation_note": ""
+    }
+  },
+  {
+    "L": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Ll",
+      "__forced_pronunciation": "l",
+      "word": "Ll",
+      "translation_note": ""
+    }
+  },
+  {
+    "M": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Mm",
+      "__forced_pronunciation": "m",
+      "word": "Mm",
+      "translation_note": ""
+    }
+  },
+  {
+    "N": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Nn",
+      "__forced_pronunciation": "n",
+      "word": "Nn",
+      "translation_note": ""
+    }
+  },
+  {
+    "O": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Oo",
+      "__forced_pronunciation": "o",
+      "word": "Oo",
+      "translation_note": ""
+    }
+  },
+  {
+    "P": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Pp",
+      "__forced_pronunciation": "p",
+      "word": "Pp",
+      "translation_note": ""
+    }
+  },
+  {
+    "Q": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Qq",
+      "__forced_pronunciation": "q",
+      "word": "Qq",
+      "translation_note": ""
+    }
+  },
+  {
+    "R": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Rr",
+      "__forced_pronunciation": "r",
+      "word": "Rr",
+      "translation_note": ""
+    }
+  },
+  {
+    "S": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Ss",
+      "__forced_pronunciation": "s",
+      "word": "Ss",
+      "translation_note": ""
+    }
+  },
+  {
+    "T": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Tt",
+      "__forced_pronunciation": "t",
+      "word": "Tt",
+      "translation_note": ""
+    }
+  },
+  {
+    "U": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Uu",
+      "__forced_pronunciation": "u",
+      "word": "Uu",
+      "translation_note": ""
+    }
+  },
+  {
+    "V": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Vv",
+      "__forced_pronunciation": "v",
+      "word": "Vv",
+      "translation_note": ""
+    }
+  },
+  {
+    "W": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Ww",
+      "__forced_pronunciation": "w",
+      "word": "Ww",
+      "translation_note": ""
+    }
+  },
+  {
+    "X": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Xx",
+      "__forced_pronunciation": "x",
+      "word": "Xx",
+      "translation_note": ""
+    }
+  },
+  {
+    "Y": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Yy",
+      "__forced_pronunciation": "y",
+      "word": "Yy",
+      "translation_note": ""
+    }
+  },
+  {
+    "Z": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "Zz",
+      "__forced_pronunciation": "z",
+      "word": "Zz",
+      "translation_note": ""
+    }
+  },
+
   {
     "apple": {
       "__pos": "noun",

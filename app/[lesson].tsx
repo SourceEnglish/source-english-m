@@ -38,7 +38,8 @@ export default function LessonPage() {
           .map((entry: any) => {
             const key = Object.keys(entry)[0];
             const cardData = entry[key];
-            return { ...cardData, vocabKey: key };
+            // Pass __forced_pronunciation explicitly
+            return { ...cardData, vocabKey: key, __forced_pronunciation: cardData.__forced_pronunciation };
           })
           .filter((entry: any) =>
             lessonData.__tags?.some((tag: string) =>

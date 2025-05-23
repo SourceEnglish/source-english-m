@@ -16,6 +16,7 @@ interface ReadableTextProps {
   numberOfLines?: number; // Number of lines to display before truncating
   ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip'; // How to truncate the text
   displayText?: string; // Optional: text to display (for truncation)
+  pronunciation?: string; // Add this prop
 }
 
 const ReadableText: React.FC<ReadableTextProps> = ({
@@ -23,6 +24,7 @@ const ReadableText: React.FC<ReadableTextProps> = ({
   translatedText,
   style,
   displayText,
+  pronunciation, // Add this prop
   ...props // Capture additional props
 }) => {
   const { speakText, readAloudMode, setReadAloudMode } = useSpeech();
@@ -32,7 +34,7 @@ const ReadableText: React.FC<ReadableTextProps> = ({
     if (readAloudMode) {
       e.preventDefault?.(); // Prevent link navigation if available
       e.stopPropagation?.(); // Prevent parent link navigation if available
-      speakText(text);
+      speakText(pronunciation || text); // Use pronunciation if provided
       setReadAloudMode(false);
     }
   };

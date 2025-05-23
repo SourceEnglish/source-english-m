@@ -38,26 +38,24 @@ import { useFonts, Lexend_400Regular } from '@expo-google-fonts/lexend';
 import { View, Text } from 'react-native';
 import ReadableText from '@/components/ReadableText'; // Add this import
 
-export const TextIcon: React.FC<{ text: string; size?: number }> = ({
+export const TextIcon: React.FC<{ text: string; size?: number; pronunciation?: string }> = ({
   text,
   size = 32,
+  pronunciation,
 }) => (
   <View
     style={{
       width: size,
       height: size,
-      // Remove borderRadius for rectangular highlight
-      // borderRadius: size / 2,
+      borderRadius: 6,
       alignItems: 'center',
       justifyContent: 'center',
       overflow: 'hidden',
-      // Optionally add a subtle border or background for clarity
-      // backgroundColor: '#f0f0f0',
-      borderRadius: 6,
     }}
   >
     <ReadableText
       text={text}
+      pronunciation={pronunciation}
       style={{
         fontSize: 25,
         color: '#333',
@@ -153,8 +151,13 @@ export const iconMap: Record<string, React.FC<any>> = {
 export function getIconForEntry(entry: any): React.FC<any> {
   if (entry && typeof entry === 'object' && entry.__icon_text) {
     const iconText = entry.__icon_text;
+    const pronunciation = entry.__forced_pronunciation;
     return (props: any) => (
-      <TextIcon text={iconText} size={props.width || 28} />
+      <TextIcon
+        text={iconText}
+        size={props.width || 28}
+        pronunciation={pronunciation}
+      />
     );
   }
   const word = entry && entry.word ? entry.word : entry;

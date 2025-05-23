@@ -10,11 +10,12 @@ interface VocabEntryDisplayProps {
     word: string;
     plural?: string;
     __count?: string;
+    __forced_pronunciation?: string; // Add this field
   };
 }
 
 const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
-  const { __pos, word, plural, __count } = entry;
+  const { __pos, word, plural, __count, __forced_pronunciation } = entry;
   const borderColor = posColors[__pos] || '#000';
   const color = posColors[__pos] || '#000';
   const screenWidth = Dimensions.get('window').width;
@@ -31,6 +32,7 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
       {__pos !== 'letter' && (
         <ReadableText
           text={word}
+          pronunciation={__forced_pronunciation} // Pass pronunciation
           style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
         />
       )}
