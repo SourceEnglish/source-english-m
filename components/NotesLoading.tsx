@@ -51,11 +51,13 @@ const NotesLoading: React.FC<{ expanded?: boolean }> = ({ expanded }) => {
 const styles = StyleSheet.create({
   container: {
     marginBottom: 2,
+    fontFamily: 'Lexend',
     backgroundColor: '#f5f5f5',
     borderRadius: 8,
     padding: 12,
   },
   header: {
+    fontFamily: 'Lexend',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -68,6 +70,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   label: {
+    fontFamily: 'Lexend',
     fontWeight: 'bold',
   },
   chevron: {
@@ -77,6 +80,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
   input: {
+    fontFamily: 'Lexend',
     minHeight: 60,
     height: 100,
     borderColor: '#ccc',
@@ -86,6 +90,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   counterPlaceholder: {
+    fontFamily: 'Lexend',
     alignSelf: 'flex-end',
     width: 60,
     height: 14,

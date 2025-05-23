@@ -113,11 +113,13 @@ const Notes: React.FC<NotesProps> = ({ noteKey }) => {
 const styles = StyleSheet.create({
   container: {
     marginBottom: 2,
+    fontFamily: 'Lexend',
     backgroundColor: '#f5f5f5',
     borderRadius: 8,
     padding: 12,
   },
   collapseHeader: {
+    fontFamily: 'Lexend',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -130,9 +132,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   label: {
+    fontFamily: 'Lexend',
     fontWeight: 'bold',
   },
   input: {
+    fontFamily: 'Lexend',
     minHeight: 60,
     borderColor: '#ccc',
     borderWidth: 1,
@@ -144,6 +148,7 @@ const styles = StyleSheet.create({
     textAlignVertical: 'top',
   },
   counter: {
+    fontFamily: 'Lexend',
     alignSelf: 'flex-end',
     fontSize: 12,
     color: '#888',

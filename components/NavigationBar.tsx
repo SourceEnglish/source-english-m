@@ -98,7 +98,7 @@ const CustomNav: React.FC<CustomNavProps> = ({
         <View style={styles.leftRow} pointerEvents="box-none">
           {showBack && (
             <TouchableOpacity
-              style={[styles.backButton, isMobile ? null : { padding: 12 }]}
+              style={[styles.backButton, isMobile ? null : { padding: 8 }]}
               onPress={handleBack}
               accessibilityLabel="Back"
             >
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   backButton: {
-    padding: 8, // overridden dynamically
+    padding: 6, // overridden dynamically
   },
   backText: {
     fontSize: 18,
@@ -207,6 +207,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   title: {
+    fontFamily: 'Lexend',
     fontSize: 20, // overridden dynamically
     fontWeight: 'bold',
     color: '#222',

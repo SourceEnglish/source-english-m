@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Platform } from 'react-native';
 import posColors from '@/constants/constants';
 import ReadableText from '@/components/ReadableText';
-import { iconMap } from '@/utils/iconMap';
+import { getIconForEntry } from '@/utils/iconMap';
 
 // Props and types for the inline card
 interface InlineCardPreviewProps {
@@ -18,7 +18,7 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
 
   // Use only Platform.OS for mobile/desktop check to avoid hydration/layout mismatch
   const isMobile = Platform.OS !== 'web';
-  const Icon = iconMap[word.toLowerCase()];
+  const Icon = getIconForEntry(card);
 
   return (
     <View
@@ -40,6 +40,16 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
         numberOfLines={1}
         ellipsizeMode="tail"
       />
+      {/* Uncomment below if you want to show part of speech in the inline card */}
+      {/* <ReadableText
+        text={card.__pos}
+        style={{
+          fontStyle: 'italic',
+          fontSize: isMobile ? 11 : 12,
+          color: '#888',
+          textAlign: 'center',
+        }}
+      /> */}
     </View>
   );
 };

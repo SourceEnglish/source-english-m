@@ -1,5 +1,13 @@
 [
   {
+    "letters": {
+      "name": "letters",
+      "__tags": ["letters"],
+      "__type": "vocabulary",
+      "__order": 1
+    }
+  },
+  {
     "food": {
       "name": "food",
       "__tags": ["food"],

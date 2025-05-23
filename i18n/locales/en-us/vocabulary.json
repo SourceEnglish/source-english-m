@@ -1,5 +1,15 @@
 [
   {
+    "A": {
+      "__pos": "letter",
+      "__tags": ["letters"],
+      "__icon_text": "A a",
+
+      "word": "A a",
+      "translation_note": ""
+    }
+  },
+  {
     "apple": {
       "__pos": "noun",
       "__count": "countable",

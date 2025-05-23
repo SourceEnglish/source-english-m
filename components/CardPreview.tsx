@@ -3,7 +3,7 @@ import { View, StyleSheet, Dimensions } from 'react-native';
 import { Pressable } from 'react-native';
 import posColors from '@/constants/constants';
 import ReadableText from '@/components/ReadableText';
-import { iconMap } from '@/utils/iconMap'; // Import the icon map
+import { getIconForEntry } from '@/utils/iconMap'; // Import the icon getter
 import { useRouter } from 'expo-router';
 
 type VocabularyEntry = {
@@ -37,7 +37,7 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   // Dynamically get the icon based on the word (or another property if needed)
-  const Icon = iconMap[word.toLowerCase()];
+  const Icon = getIconForEntry(card);
   const router = useRouter();
 
   const handlePress = () => {
@@ -64,6 +64,16 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
       )}
       <ReadableText
         text={word}
+        displayText={
+          // Only ellipsize after the second line for multi-word entries
+          word.includes(' ')
+            ? word.length > 18
+              ? word.slice(0, 17) + '…'
+              : word
+            : word.length > 9
+            ? word.slice(0, 8) + '…'
+            : word
+        }
         style={{
           fontSize: isMobile ? 18 : 28,
           marginBottom: 4,
@@ -72,6 +82,8 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
           alignSelf: 'center',
           width: '100%',
         }}
+        numberOfLines={2}
+        ellipsizeMode="tail"
       />
       <ReadableText
         text={__pos}
@@ -79,6 +91,7 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
           fontStyle: 'italic',
           color: posColors[__pos],
           fontSize: isMobile ? 14 : 20,
+          textAlign: 'center',
         }}
       />
     </Pressable>
@@ -101,10 +114,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffeeee',
   },
   mobileCard: {
-    width: '30%',
+    width: '31%',
     fontSize: 20,
     padding: 8,
-    margin: 5,
+    margin: 4,
   },
   desktopCard: {
     width: 233,

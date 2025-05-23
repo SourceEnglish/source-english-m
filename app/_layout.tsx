@@ -12,6 +12,7 @@ import NavigationBar from '@/components/NavigationBar';
 import { useColorScheme } from 'react-native';
 import CustomNav from '@/components/NavigationBar';
 import { NotesProvider } from '@/contexts/NotesContext';
+import { useFonts, Lexend_400Regular } from '@expo-google-fonts/lexend';
 // Import lessons data and type
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
 
@@ -32,6 +33,14 @@ export default function RootLayout() {
   const [isReadAloudEnabled, setIsReadAloudEnabled] = useState(false);
 
   const headerHeight = 40; // Define a constant header height
+
+  const [fontsLoaded] = useFonts({
+    Lexend_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    return null; // or a loading spinner
+  }
 
   return (
     <>

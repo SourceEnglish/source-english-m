@@ -51,6 +51,8 @@ const ReadableText: React.FC<ReadableTextProps> = ({
           ...flatStyle,
           color: flatStyle?.color || theme.textColor,
           backgroundColor: readAloudMode ? theme.highlightColor : 'transparent',
+          fontFamily: 'Lexend',
+          fontWeight: '400',
           alignSelf: 'center',
           borderRadius: 4,
           paddingHorizontal: 2,

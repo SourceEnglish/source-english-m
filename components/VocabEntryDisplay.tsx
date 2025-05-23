@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet, Dimensions } from 'react-native';
 import posColors from '@/constants/constants';
-import { iconMap } from '@/utils/iconMap';
+import { getIconForEntry } from '@/utils/iconMap';
 import ReadableText from './ReadableText';
 
 interface VocabEntryDisplayProps {
@@ -19,7 +19,7 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
   const color = posColors[__pos] || '#000';
   const screenWidth = Dimensions.get('window').width;
   const isMobile = screenWidth <= 768;
-  const Icon = iconMap[word.toLowerCase()];
+  const Icon = getIconForEntry(entry);
 
   return (
     <View style={[styles.container, { borderColor }]}>
@@ -34,7 +34,10 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
       />
       <ReadableText
         text={__pos}
-        style={[styles.pos, { color, fontSize: isMobile ? 18 : 24 }]}
+        style={[
+          styles.pos,
+          { color, fontSize: isMobile ? 18 : 24, textAlign: 'center' },
+        ]}
       />
       {__pos === 'noun' && plural && (
         <View

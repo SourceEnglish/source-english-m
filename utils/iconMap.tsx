@@ -14,6 +14,7 @@ import ColdIcon from '@/assets/icons/licensed/cold.svg';
 import HotIcon from '@/assets/icons/licensed/hot.svg';
 import CoolIcon from '@/assets/icons/licensed/cool.svg';
 import TemperatureIcon from '@/assets/icons/licensed/temperature.svg';
+import AaIcon from '@/assets/icons/open_source/Aa.svg';
 import WeatherIcon from '@/assets/icons/licensed/weather.svg';
 import WeatherVocabIcon from '@/assets/icons/licensed/weather_vocab.svg';
 import SundayIcon from '@/assets/icons/licensed/sunday.svg';
@@ -32,10 +33,73 @@ import TodayIcon from '@/assets/icons/licensed/today.svg';
 import TomorrowIcon from '@/assets/icons/licensed/tomorrow.svg';
 import DayVocabIcon from '@/assets/icons/licensed/day_vocab.svg';
 import SpeakIcon from '@/assets/icons/licensed/speak.svg';
+import React from 'react';
+import { useFonts, Lexend_400Regular } from '@expo-google-fonts/lexend';
+import { View, Text } from 'react-native';
 
-// ...other imports
+export const TextIcon: React.FC<{ text: string; size?: number }> = ({
+  text,
+  size = 28,
+}) => (
+  <View
+    style={{
+      width: size,
+      height: size,
+      borderRadius: size / 2,
+      // backgroundColor: '#f0f0f0',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden',
+    }}
+  >
+    <Text
+      style={{
+        fontSize: size * 0.6,
+        color: '#333',
+        fontWeight: '600',
+        textAlign: 'center',
+        fontFamily: 'Lexend', // Use Lexend font
+      }}
+      selectable={false}
+    >
+      {text}
+    </Text>
+  </View>
+);
+
+export const GenericTextIcon: React.FC<{ word: string; size?: number }> = ({
+  word,
+  size = 28,
+}) => (
+  <View
+    style={{
+      width: size,
+      height: size,
+
+      borderRadius: size / 2,
+      backgroundColor: '#f0f0f0',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden',
+    }}
+  >
+    <Text
+      style={{
+        fontSize: size * 0.85,
+        color: '#333',
+        fontWeight: '600',
+        textAlign: 'center',
+        fontFamily: 'Lexend', // Use Lexend font
+      }}
+      selectable={false}
+    >
+      {word.charAt(0).toUpperCase()}
+    </Text>
+  </View>
+);
 
 export const iconMap: Record<string, React.FC<any>> = {
+  letters: AaIcon,
   food: RiceIcon,
   'weather vocabulary': WeatherVocabIcon,
 
@@ -77,3 +141,19 @@ export const iconMap: Record<string, React.FC<any>> = {
 
   // ...etc
 };
+
+// Helper to get icon for a word, optionally using iconText
+export function getIconForEntry(entry: any): React.FC<any> {
+  if (entry && typeof entry === 'object' && entry.__icon_text) {
+    const iconText = entry.__icon_text;
+    return (props: any) => (
+      <TextIcon text={iconText} size={props.width || 28} />
+    );
+  }
+  const word = entry && entry.word ? entry.word : entry;
+  const key = typeof word === 'string' ? word.toLowerCase() : '';
+  if (iconMap[key]) return iconMap[key];
+  return (props: any) => (
+    <GenericTextIcon word={word} size={props.width || 28} />
+  );
+}
