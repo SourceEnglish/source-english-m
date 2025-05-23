@@ -61,7 +61,7 @@ export const TextIcon: React.FC<{ text: string; size?: number; pronunciation?: s
         color: '#333',
         fontWeight: '500',
         textAlign: 'center',
-        fontFamily: 'Lexend',
+        fontFamily: 'Lexend_400Regular', // <-- Use the loaded font name
         marginBottom: 0,
         padding: 0,
       }}
