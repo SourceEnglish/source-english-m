@@ -46,10 +46,12 @@ const ReadableText: React.FC<ReadableTextProps> = ({
       style={styles.container}
     >
       <Text
+        selectable
         style={{
           ...flatStyle,
           color: flatStyle?.color || theme.textColor,
-          backgroundColor: readAloudMode ? theme.highlightColor : 'transparent',
+          backgroundColor:
+            readAloudMode ? theme.highlightColor : 'transparent',
           alignSelf: 'center',
           borderRadius: 4,
           paddingHorizontal: 2,
@@ -59,11 +61,15 @@ const ReadableText: React.FC<ReadableTextProps> = ({
         }}
         numberOfLines={props.numberOfLines}
         ellipsizeMode={props.ellipsizeMode}
+        selectionColor={theme.highlightColor}
       >
         {displayText !== undefined ? displayText : text}
       </Text>
       {translatedText && (
-        <Text style={{ color: theme.textColor, fontSize: 14 }}>
+        <Text
+          selectable
+          style={{ color: theme.textColor, fontSize: 14 }}
+        >
           {translatedText}
         </Text>
       )}
