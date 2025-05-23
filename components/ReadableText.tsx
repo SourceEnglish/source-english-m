@@ -50,8 +50,7 @@ const ReadableText: React.FC<ReadableTextProps> = ({
         style={{
           ...flatStyle,
           color: flatStyle?.color || theme.textColor,
-          backgroundColor:
-            readAloudMode ? theme.highlightColor : 'transparent',
+          backgroundColor: readAloudMode ? theme.highlightColor : 'transparent',
           alignSelf: 'center',
           borderRadius: 4,
           paddingHorizontal: 2,
@@ -66,10 +65,7 @@ const ReadableText: React.FC<ReadableTextProps> = ({
         {displayText !== undefined ? displayText : text}
       </Text>
       {translatedText && (
-        <Text
-          selectable
-          style={{ color: theme.textColor, fontSize: 14 }}
-        >
+        <Text selectable style={{ color: theme.textColor, fontSize: 14 }}>
           {translatedText}
         </Text>
       )}
