@@ -61,8 +61,7 @@ const Notes: React.FC<NotesProps> = ({ noteKey }) => {
     setCollapsed((prev) => !prev);
   };
 
-  if (!loaded)
-    return <NotesLoading expanded={!collapsed} />;
+  if (!loaded) return <NotesLoading expanded={!collapsed} />;
 
   return (
     <View style={styles.container}>
