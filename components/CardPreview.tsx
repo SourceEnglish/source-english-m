@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   desktopCard: {
-    width: 240,
+    width: 233,
     fontSize: 24,
     padding: 12,
     margin: 10,
