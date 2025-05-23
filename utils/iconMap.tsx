@@ -36,34 +36,41 @@ import SpeakIcon from '@/assets/icons/licensed/speak.svg';
 import React from 'react';
 import { useFonts, Lexend_400Regular } from '@expo-google-fonts/lexend';
 import { View, Text } from 'react-native';
+import ReadableText from '@/components/ReadableText'; // Add this import
 
 export const TextIcon: React.FC<{ text: string; size?: number }> = ({
   text,
-  size = 28,
+  size = 32,
 }) => (
   <View
     style={{
       width: size,
       height: size,
-      borderRadius: size / 2,
-      // backgroundColor: '#f0f0f0',
+      // Remove borderRadius for rectangular highlight
+      // borderRadius: size / 2,
       alignItems: 'center',
       justifyContent: 'center',
       overflow: 'hidden',
+      // Optionally add a subtle border or background for clarity
+      // backgroundColor: '#f0f0f0',
+      borderRadius: 6,
     }}
   >
-    <Text
+    <ReadableText
+      text={text}
       style={{
-        fontSize: size * 0.6,
+        fontSize: 25,
         color: '#333',
-        fontWeight: '600',
+        fontWeight: '500',
         textAlign: 'center',
-        fontFamily: 'Lexend', // Use Lexend font
+        fontFamily: 'Lexend',
+        marginBottom: 0,
+        padding: 0,
       }}
-      selectable={false}
-    >
-      {text}
-    </Text>
+      numberOfLines={1}
+      ellipsizeMode="tail"
+      displayText={text}
+    />
   </View>
 );
 
@@ -77,7 +84,7 @@ export const GenericTextIcon: React.FC<{ word: string; size?: number }> = ({
       height: size,
 
       borderRadius: size / 2,
-      backgroundColor: '#f0f0f0',
+      // backgroundColor: '#f0f0f0',
       alignItems: 'center',
       justifyContent: 'center',
       overflow: 'hidden',

@@ -28,10 +28,12 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
           <Icon width={isMobile ? 80 : 140} height={isMobile ? 80 : 140} />
         </View>
       )}
-      <ReadableText
-        text={word}
-        style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
-      />
+      {__pos !== 'letter' && (
+        <ReadableText
+          text={word}
+          style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
+        />
+      )}
       <ReadableText
         text={__pos}
         style={[

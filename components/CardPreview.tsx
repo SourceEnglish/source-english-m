@@ -62,29 +62,19 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
           <Icon width={isMobile ? 55 : 120} height={isMobile ? 55 : 120} />
         </View>
       )}
-      <ReadableText
-        text={word}
-        displayText={
-          // Only ellipsize after the second line for multi-word entries
-          word.includes(' ')
-            ? word.length > 18
-              ? word.slice(0, 17) + '…'
-              : word
-            : word.length > 9
-            ? word.slice(0, 8) + '…'
-            : word
-        }
-        style={{
-          fontSize: isMobile ? 18 : 28,
-          marginBottom: 4,
-          textAlign: 'center',
-          flexWrap: 'wrap',
-          alignSelf: 'center',
-          width: '100%',
-        }}
-        numberOfLines={2}
-        ellipsizeMode="tail"
-      />
+      {__pos !== 'letter' && (
+        <ReadableText
+          text={word}
+          style={{
+            fontSize: isMobile ? 18 : 28,
+            marginBottom: 4,
+            textAlign: 'center',
+            flexWrap: 'wrap',
+            alignSelf: 'center',
+            width: '100%',
+          }}
+        />
+      )}
       <ReadableText
         text={__pos}
         style={{

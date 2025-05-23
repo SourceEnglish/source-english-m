@@ -3,9 +3,10 @@
     "A": {
       "__pos": "letter",
       "__tags": ["letters"],
-      "__icon_text": "A a",
+      "__icon_text": "Aa",
+      "__forced_pronunciation": "ey",
 
-      "word": "A a",
+      "word": "Aa",
       "translation_note": ""
     }
   },

@@ -29,27 +29,19 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
       ]}
     >
       {Icon && <Icon width={isMobile ? 28 : 32} height={isMobile ? 28 : 32} />}
-      <ReadableText
-        text={word}
-        displayText={word.length > 7 ? word.slice(0, 6) + '…' : word}
-        style={{
-          fontSize: isMobile ? 13 : 14,
-          marginBottom: 0,
-          textAlign: 'center',
-        }}
-        numberOfLines={1}
-        ellipsizeMode="tail"
-      />
-      {/* Uncomment below if you want to show part of speech in the inline card */}
-      {/* <ReadableText
-        text={card.__pos}
-        style={{
-          fontStyle: 'italic',
-          fontSize: isMobile ? 11 : 12,
-          color: '#888',
-          textAlign: 'center',
-        }}
-      /> */}
+      {__pos !== 'letter' && (
+        <ReadableText
+          text={word}
+          displayText={word.length > 7 ? word.slice(0, 6) + '…' : word}
+          style={{
+            fontSize: isMobile ? 13 : 14,
+            marginBottom: 0,
+            textAlign: 'center',
+          }}
+          numberOfLines={1}
+          ellipsizeMode="tail"
+        />
+      )}
     </View>
   );
 };
