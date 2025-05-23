@@ -12,6 +12,7 @@ import { useNotes } from '@/contexts/NotesContext';
 import ChevronsUp from '@/assets/icons/open_source/chevrons-up.svg';
 import ChevronsDown from '@/assets/icons/open_source/chevrons-down.svg';
 import NotesLoading from './NotesLoading';
+import NotebookPen from '@/assets/icons/open_source/notebook-pen.svg';
 
 interface NotesProps {
   noteKey: string;
@@ -106,12 +107,16 @@ const Notes: React.FC<NotesProps> = ({ noteKey }) => {
     });
   };
 
-  if (!loaded || !collapsedLoaded) return <NotesLoading />;
+  if (!loaded || !collapsedLoaded)
+    return <NotesLoading expanded={!collapsed} />;
 
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={toggleCollapse} style={styles.collapseHeader}>
-        <Text style={styles.label}>Notes (max 1000 chars):</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <NotebookPen width={20} height={20} style={{ marginRight: 6 }} />
+          <Text style={styles.label}>Notes</Text>
+        </View>
         {collapsed ? (
           <ChevronsDown width={24} height={24} />
         ) : (

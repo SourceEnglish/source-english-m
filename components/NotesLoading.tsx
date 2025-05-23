@@ -1,62 +1,97 @@
 import React from 'react';
-import { View, StyleSheet, Dimensions, Platform } from 'react-native';
+import { View, StyleSheet, Animated, Easing, Text } from 'react-native';
+import NotebookPen from '@/assets/icons/open_source/notebook-pen.svg';
 
-const NotesLoading: React.FC = () => {
-  // Use screen width to determine if the device is mobile (like CardPreview)
-  const screenWidth = Dimensions.get('window').width;
-  const isMobile = screenWidth <= 768;
-  const platformStyle = isMobile
-    ? { minHeight: 62, height: 62 }
-    : { minHeight: 63, height: 63 };
+const PULSE_DURATION = 1200;
+
+const NotesLoading: React.FC<{ expanded?: boolean }> = ({ expanded }) => {
+  const pulseAnim = React.useRef(new Animated.Value(0.7)).current;
+
+  React.useEffect(() => {
+    if (expanded) {
+      Animated.loop(
+        Animated.sequence([
+          Animated.timing(pulseAnim, {
+            toValue: 1,
+            duration: PULSE_DURATION,
+            easing: Easing.inOut(Easing.ease),
+            useNativeDriver: false,
+          }),
+          Animated.timing(pulseAnim, {
+            toValue: 0.7,
+            duration: PULSE_DURATION,
+            easing: Easing.inOut(Easing.ease),
+            useNativeDriver: false,
+          }),
+        ])
+      ).start();
+    }
+  }, [expanded, pulseAnim]);
+
   return (
-    <View style={[styles.container, platformStyle]}>
-      <View style={styles.pulseBar} />
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <NotebookPen width={20} height={20} style={{ marginRight: 6 }} />
+          <Text style={styles.label}>Notes</Text>
+        </View>
+        {/* Placeholder for chevron icon */}
+        <View style={styles.chevron} />
+      </View>
+      {expanded && (
+        <>
+          <Animated.View style={[styles.input, { opacity: pulseAnim }]} />
+          <View style={styles.counterPlaceholder} />
+        </>
+      )}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#f5f5f5',
     marginBottom: 2,
-    paddingHorizontal: 12,
-    paddingVertical: 0,
-    borderRadius: 6, // Match collapsed notes border radius
+    backgroundColor: '#f5f5f5',
+    borderRadius: 8,
+    padding: 12,
   },
-  pulseBar: {
-    width: '100%',
-    height: 32, // Match the height of the collapseHeader in Notes
-    borderRadius: 6, // Match collapseHeader borderRadius
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 4,
+    borderWidth: 1,
+    borderColor: '#bbb',
+    borderRadius: 6,
+    paddingVertical: 4,
+    paddingHorizontal: 8,
+    backgroundColor: '#f5f5f5',
+  },
+  label: {
+    fontWeight: 'bold',
+  },
+  chevron: {
+    width: 24,
+    height: 24,
     backgroundColor: '#e0e0e0',
-    opacity: 0.7,
-    marginVertical: 4,
-    // Pulsing animation
-    shadowColor: '#bbb',
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.5,
-    shadowRadius: 4,
-    // For web, add animation
-    ...(Platform.OS === 'web'
-      ? {
-          animation: 'notesPulse 1.2s infinite',
-        }
-      : {}),
+    borderRadius: 12,
+  },
+  input: {
+    minHeight: 60,
+    height: 100,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 6,
+    backgroundColor: '#eaeaea',
+    marginBottom: 4,
+  },
+  counterPlaceholder: {
+    alignSelf: 'flex-end',
+    width: 60,
+    height: 14,
+    borderRadius: 7,
+    backgroundColor: '#e0e0e0',
   },
 });
-
-// For web: inject keyframes for pulsing animation
-if (typeof document !== 'undefined') {
-  const style = document.createElement('style');
-  style.innerHTML = `
-    @keyframes notesPulse {
-      0% { opacity: 0.7; }
-      50% { opacity: 1; }
-      100% { opacity: 0.7; }
-    }
-  `;
-  document.head.appendChild(style);
-}
 
 export default NotesLoading;
