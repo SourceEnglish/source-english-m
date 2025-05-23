@@ -76,13 +76,18 @@ const PageLink: React.FC<PageLinkProps> = ({
       style={{
         backgroundColor: theme.backgroundColor,
         borderRadius: 4,
-        padding: 16,
-        display: 'flex', // Use flex, which is supported by React Native and web
+        padding: 10,
+        paddingLeft: 16,
+        paddingTop:
+          lessonData && lessonData.__type !== 'vocabulary' ? 18 : 10,
+        paddingBottom:
+          lessonData && lessonData.__type !== 'vocabulary' ? 18 : 10,
+        display: 'flex',
         flexDirection: 'row',
         width: '100%',
         opacity: readAloudMode ? 1 : 1,
         boxSizing: 'border-box',
-        overflow: 'hidden', // Ensures children are clipped to the full Link bounds
+        overflow: 'hidden',
       }}
       onPress={(e) => {
         if (readAloudMode) {
@@ -97,11 +102,10 @@ const PageLink: React.FC<PageLinkProps> = ({
           alignItems: 'center',
           flex: 1,
           minWidth: 0,
-          width: '100%', // Ensure child View fills the Link
+          width: '100%',
         }}
       >
         <View style={{ paddingRight: 5 }}>{icon}</View>
-        {/* Vertical divider between icon and text */}
         <View
           style={{
             width: 1,
@@ -111,30 +115,35 @@ const PageLink: React.FC<PageLinkProps> = ({
             alignSelf: 'center',
           }}
         />
-        <ReadableText
-          text={pageText}
-          style={{ color: theme.textColor, fontSize: 20 }}
-          translatedText={
-            requestedLanguage !== 'en-US' ? pageTextTranslated : undefined
-          }
-        />
-        {/* InlineCardPreviews directly after text, inline, no line break */}
-        {vocabEntries.length > 0 && (
-          <View
+        <View style={{ flex: 1, minWidth: 0, alignItems: 'flex-start' }}>
+          <ReadableText
+            text={pageText}
             style={{
-              flexDirection: 'row',
-              flexWrap: 'nowrap',
-              marginLeft: 8,
-              alignItems: 'center',
-              overflow: 'visible',
-              maxWidth: '100%',
+              color: theme.textColor,
+              fontSize: 20,
+              textAlign: 'left',
             }}
-          >
-            {vocabEntries.slice(0, maxCards).map((entry: any) => (
-              <InlineCardPreview key={entry.word} card={entry} />
-            ))}
-          </View>
-        )}
+            translatedText={
+              requestedLanguage !== 'en-US' ? pageTextTranslated : undefined
+            }
+          />
+          {/* InlineCardPreviews below the text for vocabulary cards */}
+          {vocabEntries.length > 0 && (
+            <View
+              style={{
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                marginTop: 6,
+                alignItems: 'center',
+                maxWidth: '100%',
+              }}
+            >
+              {vocabEntries.slice(0, maxCards).map((entry: any) => (
+                <InlineCardPreview key={entry.word} card={entry} />
+              ))}
+            </View>
+          )}
+        </View>
       </View>
     </Link>
   );

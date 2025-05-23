@@ -37,11 +37,11 @@ import SpeakIcon from '@/assets/icons/licensed/speak.svg';
 
 export const iconMap: Record<string, React.FC<any>> = {
   food: RiceIcon,
-  'weather vocab': WeatherVocabIcon,
+  'weather vocabulary': WeatherVocabIcon,
 
   apple: AppleIcon,
   bread: BreadIcon,
-  'food vocab': AppleIcon,
+  'food vocabulary': AppleIcon,
   rice: RiceIcon,
   snowy: SnowIcon,
   rainy: RainIcon,
@@ -71,7 +71,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   yesterday: YesterdayIcon,
   today: TodayIcon,
   tomorrow: TomorrowIcon,
-  'days vocab': DayVocabIcon,
+  'day vocabulary': DayVocabIcon,
 
   speak: SpeakIcon,
 

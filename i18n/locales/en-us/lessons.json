@@ -9,24 +9,24 @@
   },
 
   {
-    "food vocab": {
-      "name": "food vocab",
+    "food vocabulary": {
+      "name": "food vocabulary",
       "__tags": ["food"],
       "__type": "vocabulary",
       "__order": 3
     }
   },
   {
-    "weather vocab": {
-      "name": "weather vocab",
+    "weather vocabulary": {
+      "name": "weather vocabulary",
       "__tags": ["weather"],
       "__type": "vocabulary",
       "__order": 4
     }
   },
   {
-    "days vocab": {
-      "name": "days vocab",
+    "day vocabulary": {
+      "name": "day vocabulary",
       "__tags": ["days"],
       "__type": "vocabulary",
       "__order": 4
