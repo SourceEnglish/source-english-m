@@ -26,11 +26,7 @@ const Notes: React.FC<NotesProps> = ({ noteKey }) => {
   const { setNote } = useNotes();
   const [value, setValue] = useState('');
   const [loaded, setLoaded] = useState(false);
-  const [collapsed, setCollapsed] = useState(() => {
-    // Default to true (closed) until we check storage
-    return true;
-  });
-  const [collapsedLoaded, setCollapsedLoaded] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const [inputHeight, setInputHeight] = useState(60);
 
   useEffect(() => {
@@ -52,35 +48,6 @@ const Notes: React.FC<NotesProps> = ({ noteKey }) => {
         }
       );
     }
-    // Load collapsed state from storage
-    const collapsedKey = `collapsed_${noteKey}`;
-    if (Platform.OS === 'web') {
-      const storedCollapsed = localStorage.getItem(collapsedKey);
-      if (storedCollapsed !== null) {
-        setCollapsed(storedCollapsed === 'true');
-        setCollapsedLoaded(true);
-      } else {
-        // If note is not empty, default to open
-        setCollapsed(value.trim() === '' ? true : false);
-        setCollapsedLoaded(true);
-      }
-    } else {
-      import('@react-native-async-storage/async-storage').then(
-        (AsyncStorage) => {
-          AsyncStorage.default
-            .getItem(collapsedKey)
-            .then((storedCollapsed: string | null) => {
-              if (storedCollapsed !== null) {
-                setCollapsed(storedCollapsed === 'true');
-                setCollapsedLoaded(true);
-              } else {
-                setCollapsed(value.trim() === '' ? true : false);
-                setCollapsedLoaded(true);
-              }
-            });
-        }
-      );
-    }
   }, [noteKey]);
 
   const handleChange = (text: string) => {
@@ -91,23 +58,10 @@ const Notes: React.FC<NotesProps> = ({ noteKey }) => {
   };
 
   const toggleCollapse = () => {
-    setCollapsed((prev) => {
-      const newCollapsed = !prev;
-      const collapsedKey = `collapsed_${noteKey}`;
-      if (Platform.OS === 'web') {
-        localStorage.setItem(collapsedKey, newCollapsed.toString());
-      } else {
-        import('@react-native-async-storage/async-storage').then(
-          (AsyncStorage) => {
-            AsyncStorage.default.setItem(collapsedKey, newCollapsed.toString());
-          }
-        );
-      }
-      return newCollapsed;
-    });
+    setCollapsed((prev) => !prev);
   };
 
-  if (!loaded || !collapsedLoaded)
+  if (!loaded)
     return <NotesLoading expanded={!collapsed} />;
 
   return (
