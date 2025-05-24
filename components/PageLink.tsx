@@ -67,8 +67,10 @@ const PageLink: React.FC<PageLinkProps> = ({
       containerMarginLeft,
     MAX_INLINE_CARD_WIDTH
   );
-  const maxCards =
-    Math.max(1, Math.floor(availablePreviewWidth / MAX_INLINE_CARD_WIDTH)) + 1;
+  const maxCards = Math.min(
+    16,
+    Math.max(3, Math.floor(availablePreviewWidth / MAX_INLINE_CARD_WIDTH) + 1)
+  );
 
   return (
     <Link
@@ -131,10 +133,11 @@ const PageLink: React.FC<PageLinkProps> = ({
             <View
               style={{
                 flexDirection: 'row',
-                flexWrap: 'wrap',
+                flexWrap: 'nowrap',
                 marginTop: 6,
                 alignItems: 'center',
                 maxWidth: '100%',
+                overflow: 'hidden',
               }}
             >
               {vocabEntries.slice(0, maxCards).map((entry: any) => (
