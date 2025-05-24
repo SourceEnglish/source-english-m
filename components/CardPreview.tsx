@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffeeee',
   },
   mobileCard: {
-    width: '31%',
+    width: '30%',
     fontSize: 20,
     padding: 8,
     margin: 4,
