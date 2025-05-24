@@ -34,15 +34,14 @@ import TomorrowIcon from '@/assets/icons/licensed/tomorrow.svg';
 import DayVocabIcon from '@/assets/icons/licensed/day_vocab.svg';
 import SpeakIcon from '@/assets/icons/licensed/speak.svg';
 import React from 'react';
-import { useFonts, Lexend_400Regular } from '@expo-google-fonts/lexend';
 import { View, Text } from 'react-native';
 import ReadableText from '@/components/ReadableText'; // Add this import
 
-export const TextIcon: React.FC<{ text: string; size?: number; pronunciation?: string }> = ({
-  text,
-  size = 32,
-  pronunciation,
-}) => (
+export const TextIcon: React.FC<{
+  text: string;
+  size?: number;
+  pronunciation?: string;
+}> = ({ text, size = 32, pronunciation }) => (
   <View
     style={{
       width: size,
