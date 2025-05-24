@@ -67,6 +67,10 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
         <ReadableText
           text={word}
           pronunciation={__forced_pronunciation}
+          displayText={word
+            .split(' ')
+            .map((w) => (w.length > 10 ? w.slice(0, 9) + '…' : w))
+            .join('\n')}
           style={{
             fontSize: isMobile ? 18 : 28,
             marginBottom: 4,
@@ -75,6 +79,8 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
             alignSelf: 'center',
             width: '100%',
           }}
+          numberOfLines={word.split(' ').length}
+          ellipsizeMode="tail"
         />
       )}
       <ReadableText
@@ -106,10 +112,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffeeee',
   },
   mobileCard: {
-    width: '30%',
+    width: '31%',
     fontSize: 20,
     padding: 8,
-    margin: 4,
+    margin: 2,
   },
   desktopCard: {
     width: 233,
