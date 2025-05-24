@@ -112,7 +112,11 @@ const CustomNav: React.FC<CustomNavProps> = ({
           <Text
             style={[
               styles.title,
-              { fontSize: isMobile ? 24 : 26, maxWidth: isMobile ? 240 : 400 },
+              {
+                fontSize: isMobile ? 24 : 26,
+                maxWidth: isMobile ? 240 : 400,
+                fontFamily: 'Lexend_400Regular',
+              },
             ]}
             numberOfLines={1}
             ellipsizeMode="tail"

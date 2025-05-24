@@ -55,6 +55,7 @@ const ReadableText: React.FC<ReadableTextProps> = ({
           alignSelf: 'center',
           borderRadius: 4,
           paddingHorizontal: 2,
+          fontFamily: flatStyle?.fontFamily || 'Lexend_400Regular',
           textAlign: flatStyle?.textAlign || 'left',
           width: flatStyle?.width || undefined,
           flexWrap: 'wrap',

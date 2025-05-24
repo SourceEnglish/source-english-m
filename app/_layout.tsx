@@ -12,9 +12,10 @@ import NavigationBar from '@/components/NavigationBar';
 import { useColorScheme } from 'react-native';
 import CustomNav from '@/components/NavigationBar';
 import { NotesProvider } from '@/contexts/NotesContext';
-import { useFonts, Lexend_400Regular } from '@expo-google-fonts/lexend';
+import { useFonts } from 'expo-font';
 
-import * as SplashScreen from 'expo-splash-screen';
+// import { Lexend_400Regular } from '@expo-google-fonts/lexend/400Regular';
+
 // Import lessons data and type
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
 
@@ -30,19 +31,14 @@ type LessonEntry = {
 };
 
 export default function RootLayout() {
-  const [loaded, error] = useFonts({
-    Lexend_400Regular,
+  let [fontsLoaded] = useFonts({
+    Lexend_400Regular: require('@/assets/fonts/Lexend_400Regular.ttf'),
   });
-
   const { t } = useTranslation();
   const colorScheme = useColorScheme();
   const [isReadAloudEnabled, setIsReadAloudEnabled] = useState(false);
 
   const headerHeight = 40; // Define a constant header height
-
-  const [fontsLoaded] = useFonts({
-    Lexend_400Regular,
-  });
 
   if (!fontsLoaded) {
     return null; // or a loading spinner
