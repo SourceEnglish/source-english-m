@@ -112,16 +112,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffeeee',
   },
   mobileCard: {
-    width: '31%',
+    width: '32%',
     fontSize: 20,
     padding: 8,
-    margin: 2,
+    margin: 1,
   },
   desktopCard: {
-    width: 233,
+    width: '18%',
     fontSize: 24,
     padding: 12,
-    margin: 10,
     height: 300,
   },
   svgText: {

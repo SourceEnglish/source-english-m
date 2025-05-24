@@ -1,11 +1,12 @@
 import { useLocalSearchParams } from 'expo-router';
-import { ScrollView, View, Text, StyleSheet } from 'react-native';
+import { ScrollView, View, Text, StyleSheet, Platform } from 'react-native';
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
 import sectionsData from '@/i18n/locales/en-us/sections.json';
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import CardPreview from '@/components/CardPreview';
 import SectionRenderer from '@/components/SectionRenderer';
 import Notes from '@/components/Notes';
+
 import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 
 export function generateStaticParams() {
@@ -66,8 +67,9 @@ export default function LessonPage() {
             style={{
               flexDirection: 'row',
               flexWrap: 'wrap',
-
-              justifyContent: 'center',
+              rowGap: 3,
+              columnGap: 3,
+              justifyContent: 'space-between',
             }}
           >
             {vocabEntries.map((entry: any) => (
