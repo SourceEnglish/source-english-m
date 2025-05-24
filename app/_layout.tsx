@@ -13,6 +13,8 @@ import { useColorScheme } from 'react-native';
 import CustomNav from '@/components/NavigationBar';
 import { NotesProvider } from '@/contexts/NotesContext';
 import { useFonts, Lexend_400Regular } from '@expo-google-fonts/lexend';
+
+import * as SplashScreen from 'expo-splash-screen';
 // Import lessons data and type
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
 
@@ -28,6 +30,10 @@ type LessonEntry = {
 };
 
 export default function RootLayout() {
+  const [loaded, error] = useFonts({
+    Lexend_400Regular,
+  });
+
   const { t } = useTranslation();
   const colorScheme = useColorScheme();
   const [isReadAloudEnabled, setIsReadAloudEnabled] = useState(false);
