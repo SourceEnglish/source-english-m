@@ -66,6 +66,8 @@ export default function LessonPage() {
             style={{
               flexDirection: 'row',
               flexWrap: 'wrap',
+
+              justifyContent: 'center',
             }}
           >
             {vocabEntries.map((entry: any) => (
