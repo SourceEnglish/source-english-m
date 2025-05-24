@@ -35,7 +35,12 @@
         }
       ],
       "expo-localization",
-      "expo-font"
+      "expo-font",
+      {
+        "fonts": [
+          "node_modules/@expo-google-fonts/lexend/400Regular/Lexend_400Regular.ttf"
+        ]
+      }
     ],
     "experiments": {
       "typedRoutes": true,
