@@ -10,20 +10,54 @@ interface VocabEntryDisplayProps {
     word: string;
     plural?: string;
     __count?: string;
-    __forced_pronunciation?: string; // Add this field
+    __forced_pronunciation?: string;
+    __vowel?: boolean;
+    __consonant?: boolean;
   };
 }
 
 const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
-  const { __pos, word, plural, __count, __forced_pronunciation } = entry;
-  const borderColor = posColors[__pos] || '#000';
+  const {
+    __pos,
+    word,
+    plural,
+    __count,
+    __forced_pronunciation,
+    __vowel,
+    __consonant,
+  } = entry as any;
+  let borderColor = posColors[__pos] || '#000';
+  let borderLeftColor = posColors[__pos] || '#000';
+  let borderTopColor = posColors[__pos] || '#000';
   const color = posColors[__pos] || '#000';
   const screenWidth = Dimensions.get('window').width;
   const isMobile = screenWidth <= 768;
   const Icon = getIconForEntry(entry);
 
+  // Special border color for letters: vowel/consonant
+  if (__pos === 'letter') {
+    if (__vowel) {
+      borderColor = posColors['vowel'] || borderColor;
+      borderLeftColor = borderColor;
+      borderTopColor = borderColor;
+      if (__consonant) {
+        borderLeftColor = posColors['consonant'] || borderLeftColor;
+        borderTopColor = posColors['consonant'] || borderTopColor;
+      }
+    } else {
+      borderColor = posColors['consonant'] || borderColor;
+      borderLeftColor = borderColor;
+      borderTopColor = borderColor;
+    }
+  }
+
   return (
-    <View style={[styles.container, { borderColor }]}>
+    <View
+      style={[
+        styles.container,
+        { borderColor, borderLeftColor, borderTopColor },
+      ]}
+    >
       {Icon && (
         <View style={styles.iconContainer}>
           <Icon width={isMobile ? 80 : 140} height={isMobile ? 80 : 140} />
@@ -32,17 +66,42 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
       {__pos !== 'letter' && (
         <ReadableText
           text={word}
-          pronunciation={__forced_pronunciation} // Pass pronunciation
+          pronunciation={__forced_pronunciation}
           style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
         />
       )}
-      <ReadableText
-        text={__pos}
-        style={[
-          styles.pos,
-          { color, fontSize: isMobile ? 18 : 24, textAlign: 'center' },
-        ]}
-      />
+
+      {__pos !== 'letter' && (
+        <ReadableText
+          text={__pos}
+          style={[
+            styles.pos,
+            { color, fontSize: isMobile ? 18 : 24, textAlign: 'center' },
+          ]}
+        />
+      )}
+      {__pos === 'letter' && __consonant && (
+        <ReadableText
+          text={__vowel ? 'consonant,' : 'consonant'}
+          style={{
+            fontStyle: 'italic',
+            color: posColors['consonant'],
+            fontSize: isMobile ? 14 : 20,
+            textAlign: 'center',
+          }}
+        />
+      )}
+      {__pos === 'letter' && __vowel && (
+        <ReadableText
+          text={'vowel'}
+          style={{
+            fontStyle: 'italic',
+            color: posColors['vowel'],
+            fontSize: isMobile ? 14 : 20,
+            textAlign: 'center',
+          }}
+        />
+      )}
       {__pos === 'noun' && plural && (
         <View
           style={{

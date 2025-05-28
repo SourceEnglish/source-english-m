@@ -34,8 +34,28 @@ export default function CardPreview({
   vocabKey,
   cardIndex,
 }: CardPreviewProps) {
-  const { __pos, word, __forced_pronunciation } = card;
-  const borderColor = posColors[__pos] || '#000';
+  const { __pos, word, __forced_pronunciation, __vowel, __consonant } =
+    card as any;
+  let borderColor = posColors[__pos] || '#000';
+  let borderLeftColor = posColors[__pos] || '#000';
+  let borderTopColor = posColors[__pos] || '#000';
+
+  // Special border color for letters: vowel/consonant
+  if (__pos === 'letter') {
+    if (__vowel) {
+      borderColor = posColors['vowel'] || borderColor;
+      borderLeftColor = borderColor;
+      borderTopColor = borderColor;
+      if (__consonant) {
+        borderLeftColor = posColors['consonant'] || borderLeftColor;
+        borderTopColor = posColors['consonant'] || borderTopColor;
+      }
+    } else {
+      borderColor = posColors['consonant'] || borderColor;
+      borderLeftColor = borderColor;
+      borderTopColor = borderColor;
+    }
+  }
 
   // Get screen width to determine if the device is mobile
   const screenWidth = Dimensions.get('window').width;
@@ -68,7 +88,7 @@ export default function CardPreview({
       style={[
         styles.card,
         isMobile ? styles.mobileCard : styles.desktopCard,
-        { borderColor },
+        { borderColor, borderLeftColor, borderTopColor },
         isHovered && styles.hoveredCard,
       ]}
     >
@@ -83,7 +103,7 @@ export default function CardPreview({
           pronunciation={__forced_pronunciation}
           displayText={word
             .split(' ')
-            .map((w) => (w.length > 10 ? w.slice(0, 9) + '…' : w))
+            .map((w: any) => (w.length > 10 ? w.slice(0, 9) + '…' : w))
             .join('\n')}
           style={{
             fontSize: isMobile ? 18 : 28,
@@ -97,15 +117,39 @@ export default function CardPreview({
           ellipsizeMode="tail"
         />
       )}
-      <ReadableText
-        text={__pos}
-        style={{
-          fontStyle: 'italic',
-          color: posColors[__pos],
-          fontSize: isMobile ? 14 : 20,
-          textAlign: 'center',
-        }}
-      />
+      {__pos !== 'letter' && (
+        <ReadableText
+          text={__pos}
+          style={{
+            fontStyle: 'italic',
+            color: posColors[__pos],
+            fontSize: isMobile ? 14 : 20,
+            textAlign: 'center',
+          }}
+        />
+      )}
+      {__pos === 'letter' && __consonant && (
+        <ReadableText
+          text={__vowel ? 'consonant,' : 'consonant'}
+          style={{
+            fontStyle: 'italic',
+            color: posColors['consonant'],
+            fontSize: isMobile ? 14 : 20,
+            textAlign: 'center',
+          }}
+        />
+      )}
+      {__pos === 'letter' && __vowel && (
+        <ReadableText
+          text={'vowel'}
+          style={{
+            fontStyle: 'italic',
+            color: posColors['vowel'],
+            fontSize: isMobile ? 14 : 20,
+            textAlign: 'center',
+          }}
+        />
+      )}
     </Pressable>
   );
 }

@@ -6,7 +6,9 @@
       "__icon_text": "Aa",
       "__forced_pronunciation": "a",
       "word": "Aa",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": true,
+      "__consonant": false
     }
   },
   {
@@ -16,7 +18,9 @@
       "__icon_text": "Bb",
       "__forced_pronunciation": "b",
       "word": "Bb",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -26,7 +30,9 @@
       "__icon_text": "Cc",
       "__forced_pronunciation": "c",
       "word": "Cc",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -36,7 +42,9 @@
       "__icon_text": "Dd",
       "__forced_pronunciation": "d",
       "word": "Dd",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -46,7 +54,9 @@
       "__icon_text": "Ee",
       "__forced_pronunciation": "e",
       "word": "Ee",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": true,
+      "__consonant": false
     }
   },
   {
@@ -56,7 +66,9 @@
       "__icon_text": "Ff",
       "__forced_pronunciation": "f",
       "word": "Ff",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -66,7 +78,9 @@
       "__icon_text": "Gg",
       "__forced_pronunciation": "g",
       "word": "Gg",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -76,7 +90,9 @@
       "__icon_text": "Hh",
       "__forced_pronunciation": "h",
       "word": "Hh",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -86,7 +102,9 @@
       "__icon_text": "Ii",
       "__forced_pronunciation": "i",
       "word": "Ii",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": true,
+      "__consonant": false
     }
   },
   {
@@ -96,7 +114,9 @@
       "__icon_text": "Jj",
       "__forced_pronunciation": "j",
       "word": "Jj",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -106,7 +126,9 @@
       "__icon_text": "Kk",
       "__forced_pronunciation": "k",
       "word": "Kk",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -116,7 +138,9 @@
       "__icon_text": "Ll",
       "__forced_pronunciation": "l",
       "word": "Ll",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -126,7 +150,9 @@
       "__icon_text": "Mm",
       "__forced_pronunciation": "m",
       "word": "Mm",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -136,7 +162,9 @@
       "__icon_text": "Nn",
       "__forced_pronunciation": "n",
       "word": "Nn",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -146,7 +174,9 @@
       "__icon_text": "Oo",
       "__forced_pronunciation": "o",
       "word": "Oo",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": true,
+      "__consonant": false
     }
   },
   {
@@ -156,7 +186,9 @@
       "__icon_text": "Pp",
       "__forced_pronunciation": "p",
       "word": "Pp",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -166,7 +198,9 @@
       "__icon_text": "Qq",
       "__forced_pronunciation": "q",
       "word": "Qq",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -176,7 +210,9 @@
       "__icon_text": "Rr",
       "__forced_pronunciation": "r",
       "word": "Rr",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -186,7 +222,9 @@
       "__icon_text": "Ss",
       "__forced_pronunciation": "s",
       "word": "Ss",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -196,7 +234,9 @@
       "__icon_text": "Tt",
       "__forced_pronunciation": "t",
       "word": "Tt",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -206,7 +246,9 @@
       "__icon_text": "Uu",
       "__forced_pronunciation": "u",
       "word": "Uu",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": true,
+      "__consonant": false
     }
   },
   {
@@ -216,7 +258,9 @@
       "__icon_text": "Vv",
       "__forced_pronunciation": "v",
       "word": "Vv",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -226,7 +270,9 @@
       "__icon_text": "Ww",
       "__forced_pronunciation": "w",
       "word": "Ww",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -236,7 +282,9 @@
       "__icon_text": "Xx",
       "__forced_pronunciation": "x",
       "word": "Xx",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
   {
@@ -246,7 +294,9 @@
       "__icon_text": "Yy",
       "__forced_pronunciation": "y",
       "word": "Yy",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": true,
+      "__consonant": true
     }
   },
   {
@@ -256,7 +306,9 @@
       "__icon_text": "Zz",
       "__forced_pronunciation": "z",
       "word": "Zz",
-      "translation_note": ""
+      "translation_note": "",
+      "__vowel": false,
+      "__consonant": true
     }
   },
 

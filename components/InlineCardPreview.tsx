@@ -14,8 +14,28 @@ interface InlineCardPreviewProps {
 }
 
 const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
-  const { __pos, word, __forced_pronunciation } = card;
-  const borderColor = posColors[__pos] || '#000';
+  const { __pos, word, __forced_pronunciation, __vowel, __consonant } =
+    card as any;
+  let borderColor = posColors[__pos] || '#000';
+  let borderLeftColor = posColors[__pos] || '#000';
+  let borderTopColor = posColors[__pos] || '#000';
+
+  // Special border color for letters: vowel/consonant
+  if (__pos === 'letter') {
+    if (__vowel) {
+      borderColor = posColors['vowel'] || borderColor;
+      borderLeftColor = borderColor;
+      borderTopColor = borderColor;
+      if (__consonant) {
+        borderLeftColor = posColors['consonant'] || borderLeftColor;
+        borderTopColor = posColors['consonant'] || borderTopColor;
+      }
+    } else {
+      borderColor = posColors['consonant'] || borderColor;
+      borderLeftColor = borderColor;
+      borderTopColor = borderColor;
+    }
+  }
 
   // Use only Platform.OS for mobile/desktop check to avoid hydration/layout mismatch
   const isMobile = Platform.OS !== 'web';
@@ -25,7 +45,7 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
     <View
       style={[
         styles.inlineCard,
-        { borderColor },
+        { borderColor, borderLeftColor, borderTopColor },
         isMobile ? styles.mobile : styles.desktop,
       ]}
     >
