@@ -5,6 +5,7 @@ import posColors from '@/constants/constants';
 import ReadableText from '@/components/ReadableText';
 import { getIconForEntry } from '@/utils/iconMap'; // Import the icon getter
 import { useRouter } from 'expo-router';
+import { useDeck } from '@/contexts/DeckContext';
 
 type VocabularyEntry = {
   __pos: string;
@@ -19,14 +20,20 @@ type VocabularyCard = {
   __pos: string;
   word: string;
   __forced_pronunciation?: string;
+  __deckArray?: any[]; // Add this line to allow __deckArray property
 };
 
 type CardPreviewProps = {
   card: VocabularyCard;
   vocabKey?: string;
+  cardIndex?: number;
 };
 
-export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
+export default function CardPreview({
+  card,
+  vocabKey,
+  cardIndex,
+}: CardPreviewProps) {
   const { __pos, word, __forced_pronunciation } = card;
   const borderColor = posColors[__pos] || '#000';
 
@@ -40,9 +47,16 @@ export default function CardPreview({ card, vocabKey }: CardPreviewProps) {
   // Dynamically get the icon based on the word (or another property if needed)
   const Icon = getIconForEntry(card);
   const router = useRouter();
+  const { deckEntries, setDeckIndex, setDeckEntries } = useDeck();
 
   const handlePress = () => {
     const key = vocabKey || word;
+    if (typeof cardIndex === 'number') {
+      setDeckIndex(cardIndex);
+    } else {
+      setDeckEntries(null);
+      setDeckIndex(null);
+    }
     router.push({ pathname: '/vocab/[entry]', params: { entry: key } });
   };
 

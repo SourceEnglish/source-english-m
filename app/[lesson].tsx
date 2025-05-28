@@ -1,3 +1,4 @@
+import React from 'react';
 import { useLocalSearchParams } from 'expo-router';
 import { ScrollView, View, Text, StyleSheet, Platform } from 'react-native';
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
@@ -6,6 +7,7 @@ import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import CardPreview from '@/components/CardPreview';
 import SectionRenderer from '@/components/SectionRenderer';
 import Notes from '@/components/Notes';
+import { useDeck } from '@/contexts/DeckContext';
 
 import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 
@@ -19,6 +21,7 @@ export function generateStaticParams() {
 export default function LessonPage() {
   const { lesson } = useLocalSearchParams();
   const lessonName = lesson as string;
+  const { setDeckEntries, setDeckIndex } = useDeck();
 
   // Find the lesson entry
   const lessonEntry = lessonsData.find((entry: any) => entry[lessonName]);
@@ -39,7 +42,6 @@ export default function LessonPage() {
           .map((entry: any) => {
             const key = Object.keys(entry)[0];
             const cardData = entry[key];
-            // Pass __forced_pronunciation explicitly
             return {
               ...cardData,
               vocabKey: key,
@@ -52,6 +54,17 @@ export default function LessonPage() {
             )
           )
       : [];
+
+    React.useEffect(() => {
+      const deckKeys = vocabEntries.map((entry: any) => entry.vocabKey);
+      setDeckEntries(deckKeys);
+      setDeckIndex(null);
+      return () => {
+        setDeckEntries(null);
+        setDeckIndex(null);
+      };
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [lessonName]);
 
     return (
       <ScrollView>
@@ -69,14 +82,16 @@ export default function LessonPage() {
               flexWrap: 'wrap',
               rowGap: 3,
               columnGap: 3,
-              justifyContent: 'space-between',
+              justifyContent:
+                Platform.OS !== 'web' ? 'space-between' : undefined,
             }}
           >
-            {vocabEntries.map((entry: any) => (
+            {vocabEntries.map((entry: any, idx: number) => (
               <CardPreview
                 key={entry.vocabKey}
                 card={entry}
                 vocabKey={entry.vocabKey}
+                cardIndex={idx}
               />
             ))}
           </View>
