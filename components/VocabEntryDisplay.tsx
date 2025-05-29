@@ -61,8 +61,8 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
       {Icon && (
         <View style={styles.iconContainer}>
           <Icon
-            textsize={isMobile ? 40 : 70}
-            textwidth={isMobile ? 70 : 120}
+            textsize={isMobile ? 40 : 60}
+            textwidth={isMobile ? 70 : 110}
             width={isMobile ? 80 : 140}
             height={isMobile ? 80 : 140}
           />
