@@ -51,8 +51,8 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
     >
       {Icon && (
         <Icon
-          textSize={isMobile ? 24 : 24}
-          textWidth={isMobile ? 42 : 42}
+          textsize={isMobile ? 24 : 24}
+          textwidth={isMobile ? 42 : 42}
           width={isMobile ? 42 : 42}
           height={isMobile ? 28 : 32}
         />
