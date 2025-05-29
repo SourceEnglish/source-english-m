@@ -49,7 +49,14 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
         isMobile ? styles.mobile : styles.desktop,
       ]}
     >
-      {Icon && <Icon width={isMobile ? 42 : 42} height={isMobile ? 28 : 32} />}
+      {Icon && (
+        <Icon
+          textSize={isMobile ? 24 : 24}
+          textWidth={isMobile ? 42 : 42}
+          width={isMobile ? 42 : 42}
+          height={isMobile ? 28 : 32}
+        />
+      )}
       {__pos !== 'letter' && (
         <ReadableText
           text={word}

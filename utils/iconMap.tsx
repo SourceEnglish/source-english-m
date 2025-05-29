@@ -40,11 +40,14 @@ import ReadableText from '@/components/ReadableText'; // Add this import
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
+  textSize?: number;
+  textWidth?: number;
+  fontSize?: number;
   pronunciation?: string;
-}> = ({ text, size = 32, pronunciation }) => (
+}> = ({ text, size = 32, fontSize, textWidth, textSize, pronunciation }) => (
   <View
     style={{
-      width: size,
+      width: textWidth ? textWidth : size,
       height: size,
       borderRadius: 6,
       alignItems: 'center',
@@ -56,7 +59,7 @@ export const TextIcon: React.FC<{
       text={text}
       pronunciation={pronunciation}
       style={{
-        fontSize: 25,
+        fontSize: textSize ? textSize : 25,
         color: '#333',
         fontWeight: '500',
         textAlign: 'center',
@@ -154,7 +157,10 @@ export function getIconForEntry(entry: any): React.FC<any> {
     return (props: any) => (
       <TextIcon
         text={iconText}
-        size={props.width || 28}
+        textWidth={props.textWidth || 25}
+        textSize={props.textSize || 25}
+        fontSize={props.fontSize || 25}
+        size={props.textWidth || 28}
         pronunciation={pronunciation}
       />
     );
