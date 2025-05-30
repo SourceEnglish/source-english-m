@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   link: {
     marginVertical: 6,
     marginHorizontal: 4,
+    alignItems: 'flex-start',
   },
 });
 

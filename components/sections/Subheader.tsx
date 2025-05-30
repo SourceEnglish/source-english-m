@@ -11,7 +11,7 @@ const Subheader = ({ text, styling }: { text: string; styling?: string[] }) => (
 const styles = StyleSheet.create({
   container: {
     marginVertical: 10,
-    marginHorizontal: 4,
+    alignItems: 'flex-start',
   },
 });
 

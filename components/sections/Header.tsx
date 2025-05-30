@@ -11,7 +11,7 @@ const Header = ({ text, styling }: { text: string; styling?: string[] }) => (
 const styles = StyleSheet.create({
   container: {
     marginVertical: 12,
-    marginHorizontal: 4,
+    alignItems: 'flex-start',
   },
 });
 

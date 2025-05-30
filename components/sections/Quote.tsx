@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f9f9f9',
     borderRadius: 6,
     padding: 6,
+    alignItems: 'flex-start',
   },
 });
 
