@@ -39,8 +39,7 @@
       "expo-font"
     ],
     "experiments": {
-      "typedRoutes": true,
-      "baseUrl": "/source-english"
+      "typedRoutes": true
     },
     "extra": {
       "router": {
