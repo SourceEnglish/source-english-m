@@ -43,22 +43,26 @@
     "__type": "table",
     "__headers": [
       {
-        "text": "person",
+        "text": "subject\nsingular (1)",
         "__type": "text"
       },
       {
-        "text": "singular",
+        "text": "\"to be\"",
         "__type": "text"
       },
       {
-        "text": "plural",
+        "text": "subject\nplural (2＋)",
+        "__type": "text"
+      },
+      {
+        "text": "\"to be\"",
         "__type": "text"
       }
     ],
     "__entries": [
       {
         "__type": "text",
-        "text": "first person"
+        "text": "I"
       },
       {
         "__type": "text",
@@ -66,11 +70,7 @@
       },
       {
         "__type": "text",
-        "text": "are"
-      },
-      {
-        "__type": "text",
-        "text": "second person"
+        "text": "we"
       },
       {
         "__type": "text",
@@ -78,15 +78,31 @@
       },
       {
         "__type": "text",
+        "text": "you"
+      },
+      {
+        "__type": "text",
         "text": "are"
       },
       {
         "__type": "text",
-        "text": "third person"
+        "text": "you"
       },
       {
         "__type": "text",
-        "text": "is\nis\nis"
+        "text": "are"
+      },
+      {
+        "__type": "text",
+        "text": "he\nshe\nit\nTom\nKim"
+      },
+      {
+        "__type": "text",
+        "text": "is"
+      },
+      {
+        "__type": "text",
+        "text": "they\nTom and Kim"
       },
       {
         "__type": "text",
