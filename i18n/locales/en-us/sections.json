@@ -35,5 +35,63 @@
     "__order": 3,
     "__type": "paragraph",
     "text": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
+  },
+  {
+    "_id": "to_be",
+    "__lessons": ["food"],
+    "__order": 1,
+    "__type": "table",
+    "__headers": [
+      {
+        "text": "person",
+        "__type": "text"
+      },
+      {
+        "text": "singular",
+        "__type": "text"
+      },
+      {
+        "text": "plural",
+        "__type": "text"
+      }
+    ],
+    "__entries": [
+      {
+        "__type": "text",
+        "text": "first person"
+      },
+      {
+        "__type": "text",
+        "text": "am"
+      },
+      {
+        "__type": "text",
+        "text": "are"
+      },
+      {
+        "__type": "text",
+        "text": "second person"
+      },
+      {
+        "__type": "text",
+        "text": "are"
+      },
+      {
+        "__type": "text",
+        "text": "are"
+      },
+      {
+        "__type": "text",
+        "text": "third person"
+      },
+      {
+        "__type": "text",
+        "text": "is\nis\nis"
+      },
+      {
+        "__type": "text",
+        "text": "are"
+      }
+    ]
   }
 ]

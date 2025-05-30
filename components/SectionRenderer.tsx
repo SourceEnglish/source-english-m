@@ -9,7 +9,9 @@ import SectionImage from '@/components/sections/SectionImage';
 import SectionVideo from '@/components/sections/SectionVideo';
 import SectionLink from '@/components/sections/SectionLink';
 import LessonLink from '@/components/sections/LessonLink';
-// Table is not yet defined
+import Table from '@/components/sections/Table'; // <-- Add this import
+
+import { TableHeader, TableEntry } from '@/components/sections/Table';
 
 const SectionRenderer = ({ section }: { section: Section }) => {
   switch (section.__type) {
@@ -61,6 +63,13 @@ const SectionRenderer = ({ section }: { section: Section }) => {
           sectionName={section.__section_link}
           text={section.text || ''}
           url={section.__src}
+        />
+      );
+    case 'table':
+      return (
+        <Table
+          headers={section.__headers || []}
+          entries={section.__entries || []}
         />
       );
     // Table and other types can be added here

@@ -1,3 +1,5 @@
+import type { TableHeader, TableEntry } from './sections/Table';
+
 // Section type definitions for strong typing and easier mapping
 export type SectionType =
   | 'link'
@@ -9,6 +11,7 @@ export type SectionType =
   | 'video'
   | 'subheader'
   | 'lesson_link'
+  | 'table'
   | 'section_link';
 
 export interface Section {
@@ -20,6 +23,8 @@ export interface Section {
   text?: string;
   __src?: string;
   alt?: string;
+  __headers?: TableHeader[];
+  __entries?: TableEntry[];
   __lesson_link?: string;
   __section_link?: string;
   caption?: string;
