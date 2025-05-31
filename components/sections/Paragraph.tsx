@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     marginHorizontal: 4,
     alignItems: 'flex-start',
+    maxWidth: 120 * 8, // Approximate 80 characters at 8px per character
   },
 });
 
