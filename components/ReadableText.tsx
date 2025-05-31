@@ -62,6 +62,7 @@ const ReadableText: React.FC<ReadableTextProps> = ({
         }}
         numberOfLines={props.numberOfLines}
         ellipsizeMode={props.ellipsizeMode}
+        selectable={true}
       >
         {displayText !== undefined ? displayText : text}
       </Text>
