@@ -33,6 +33,8 @@ import TodayIcon from '@/assets/icons/licensed/today.svg';
 import TomorrowIcon from '@/assets/icons/licensed/tomorrow.svg';
 import DayVocabIcon from '@/assets/icons/licensed/day_vocab.svg';
 import SpeakIcon from '@/assets/icons/licensed/speak.svg';
+import MonthsIcon from '@/assets/icons/licensed/months.svg';
+import NumbersIcon from '@/assets/icons/open_source/numbers.svg';
 import React from 'react';
 import { View, Text } from 'react-native';
 import ReadableText from '@/components/ReadableText'; // Add this import
@@ -109,6 +111,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   letters: AaIcon,
   food: RiceIcon,
   'weather vocabulary': WeatherVocabIcon,
+  'months vocabulary': MonthsIcon,
 
   apple: AppleIcon,
   bread: BreadIcon,
@@ -143,6 +146,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   today: TodayIcon,
   tomorrow: TomorrowIcon,
   'day vocabulary': DayVocabIcon,
+  'numbers vocabulary': NumbersIcon,
 
   speak: SpeakIcon,
 

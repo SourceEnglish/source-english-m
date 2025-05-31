@@ -97,7 +97,7 @@ export default function CardPreview({
           <Icon
             width={isMobile ? 55 : 120}
             textsize={isMobile ? 40 : 60}
-            textwidth={isMobile ? 70 : 110}
+            textwidth={isMobile ? 80 : 120}
             height={isMobile ? 55 : 120}
           />
         </View>

@@ -592,5 +592,1349 @@
       "word": "tomorrow",
       "translation_note": ""
     }
+  },
+  {
+    "january": {
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "Jan",
+      "__forced_pronunciation": "January",
+      "__abbreviations": ["Jan"],
+      "word": "January",
+      "translation_note": ""
+    }
+  },
+  {
+    "february": {
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "Feb",
+      "__forced_pronunciation": "February",
+      "__abbreviations": ["Feb"],
+      "word": "February",
+      "translation_note": ""
+    }
+  },
+  {
+    "march": {
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "Mar",
+      "__forced_pronunciation": "March",
+      "__abbreviations": ["Mar"],
+      "word": "March",
+      "translation_note": ""
+    }
+  },
+  {
+    "april": {
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "Apr",
+      "__forced_pronunciation": "April",
+      "__abbreviations": ["Apr"],
+      "word": "April",
+      "translation_note": ""
+    }
+  },
+  {
+    "may": {
+      "__season": "spring",
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "May",
+      "__forced_pronunciation": "May",
+      "word": "May",
+      "translation_note": ""
+    }
+  },
+  {
+    "june": {
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "Jun",
+      "__forced_pronunciation": "June",
+      "__abbreviations": ["Jun"],
+      "word": "June",
+      "translation_note": ""
+    }
+  },
+  {
+    "july": {
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "Jul",
+      "__forced_pronunciation": "July",
+      "__abbreviations": ["Jul"],
+      "word": "July",
+      "translation_note": ""
+    }
+  },
+  {
+    "august": {
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "Aug",
+      "__forced_pronunciation": "August",
+      "__abbreviations": ["Aug"],
+      "word": "August",
+      "translation_note": ""
+    }
+  },
+  {
+    "september": {
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "Sep",
+      "__forced_pronunciation": "September",
+      "__abbreviations": ["Sep", "Sept"],
+      "word": "September",
+      "translation_note": ""
+    }
+  },
+  {
+    "october": {
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "Oct",
+      "__forced_pronunciation": "October",
+      "__abbreviations": ["Oct"],
+      "word": "October",
+      "translation_note": ""
+    }
+  },
+  {
+    "november": {
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "Nov",
+      "__forced_pronunciation": "November",
+      "__abbreviations": ["Nov"],
+      "word": "November",
+      "translation_note": ""
+    }
+  },
+  {
+    "december": {
+      "__pos": "proper noun",
+      "__count": "uncountable",
+      "__tags": ["months"],
+      "__icon_text": "Dec",
+      "__forced_pronunciation": "December",
+      "__abbreviations": ["Dec"],
+      "word": "December",
+      "translation_note": ""
+    }
+  },
+  {
+    "one": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "one",
+      "__icon_text": "1",
+      "word": "one",
+      "plural": "ones",
+      "translation_note": ""
+    }
+  },
+  {
+    "two": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "two",
+      "__icon_text": "2",
+      "word": "two",
+      "plural": "twos",
+      "translation_note": ""
+    }
+  },
+  {
+    "three": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "three",
+      "__icon_text": "3",
+      "word": "three",
+      "plural": "threes",
+      "translation_note": ""
+    }
+  },
+  {
+    "four": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "four",
+      "__icon_text": "4",
+      "word": "four",
+      "plural": "fours",
+      "translation_note": ""
+    }
+  },
+  {
+    "five": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "five",
+      "__icon_text": "5",
+      "word": "five",
+      "plural": "fives",
+      "translation_note": ""
+    }
+  },
+  {
+    "six": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "six",
+      "__icon_text": "6",
+      "word": "six",
+      "plural": "sixes",
+      "translation_note": ""
+    }
+  },
+  {
+    "seven": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seven",
+      "__icon_text": "7",
+      "word": "seven",
+      "plural": "sevens",
+      "translation_note": ""
+    }
+  },
+  {
+    "eight": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eight",
+      "__icon_text": "8",
+      "word": "eight",
+      "plural": "eights",
+      "translation_note": ""
+    }
+  },
+  {
+    "nine": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "nine",
+      "__icon_text": "9",
+      "word": "nine",
+      "plural": "nines",
+      "translation_note": ""
+    }
+  },
+  {
+    "ten": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "ten",
+      "__icon_text": "10",
+      "word": "ten",
+      "plural": "tens",
+      "translation_note": ""
+    }
+  },
+  {
+    "eleven": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eleven",
+      "__icon_text": "11",
+      "word": "eleven",
+      "plural": "elevens",
+      "translation_note": ""
+    }
+  },
+  {
+    "twelve": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "twelve",
+      "__icon_text": "12",
+      "word": "twelve",
+      "plural": "twelves",
+      "translation_note": ""
+    }
+  },
+  {
+    "thirteen": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "thirteen",
+      "__icon_text": "13",
+      "word": "thirteen",
+      "plural": "thirteens",
+      "translation_note": ""
+    }
+  },
+  {
+    "fourteen": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fourteen",
+      "__icon_text": "14",
+      "word": "fourteen",
+      "plural": "fourteens",
+      "translation_note": ""
+    }
+  },
+  {
+    "fifteen": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fifteen",
+      "__icon_text": "15",
+      "word": "fifteen",
+      "plural": "fifteens",
+      "translation_note": ""
+    }
+  },
+  {
+    "sixteen": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "sixteen",
+      "__icon_text": "16",
+      "word": "sixteen",
+      "plural": "sixteens",
+      "translation_note": ""
+    }
+  },
+  {
+    "seventeen": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seventeen",
+      "__icon_text": "17",
+      "word": "seventeen",
+      "plural": "seventeens",
+      "translation_note": ""
+    }
+  },
+  {
+    "eighteen": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eighteen",
+      "__icon_text": "18",
+      "word": "eighteen",
+      "plural": "eighteens",
+      "translation_note": ""
+    }
+  },
+  {
+    "nineteen": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "nineteen",
+      "__icon_text": "19",
+      "word": "nineteen",
+      "plural": "nineteens",
+      "translation_note": ""
+    }
+  },
+  {
+    "twenty": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "twenty",
+      "__icon_text": "20",
+      "word": "twenty",
+      "plural": "twenties",
+      "translation_note": ""
+    }
+  },
+  {
+    "twenty-one": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "twenty one",
+      "__icon_text": "21",
+      "word": "twenty-one",
+      "plural": "twenty-ones",
+      "translation_note": ""
+    }
+  },
+  {
+    "twenty-two": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "twenty two",
+      "__icon_text": "22",
+      "word": "twenty-two",
+      "plural": "twenty-twos",
+      "translation_note": ""
+    }
+  },
+  {
+    "twenty-three": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "twenty three",
+      "__icon_text": "23",
+      "word": "twenty-three",
+      "plural": "twenty-threes",
+      "translation_note": ""
+    }
+  },
+  {
+    "twenty-four": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "twenty four",
+      "__icon_text": "24",
+      "word": "twenty-four",
+      "plural": "twenty-fours",
+      "translation_note": ""
+    }
+  },
+  {
+    "twenty-five": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "twenty five",
+      "__icon_text": "25",
+      "word": "twenty-five",
+      "plural": "twenty-fives",
+      "translation_note": ""
+    }
+  },
+  {
+    "twenty-six": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "twenty six",
+      "__icon_text": "26",
+      "word": "twenty-six",
+      "plural": "twenty-sixes",
+      "translation_note": ""
+    }
+  },
+  {
+    "twenty-seven": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "twenty seven",
+      "__icon_text": "27",
+      "word": "twenty-seven",
+      "plural": "twenty-sevens",
+      "translation_note": ""
+    }
+  },
+  {
+    "twenty-eight": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "twenty eight",
+      "__icon_text": "28",
+      "word": "twenty-eight",
+      "plural": "twenty-eights",
+      "translation_note": ""
+    }
+  },
+  {
+    "twenty-nine": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "twenty nine",
+      "__icon_text": "29",
+      "word": "twenty-nine",
+      "plural": "twenty-nines",
+      "translation_note": ""
+    }
+  },
+  {
+    "thirty": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "thirty",
+      "__icon_text": "30",
+      "word": "thirty",
+      "plural": "thirties",
+      "translation_note": ""
+    }
+  },
+  {
+    "thirty-one": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "thirty one",
+      "__icon_text": "31",
+      "word": "thirty-one",
+      "plural": "thirty-ones",
+      "translation_note": ""
+    }
+  },
+  {
+    "thirty-two": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "thirty two",
+      "__icon_text": "32",
+      "word": "thirty-two",
+      "plural": "thirty-twos",
+      "translation_note": ""
+    }
+  },
+  {
+    "thirty-three": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "thirty three",
+      "__icon_text": "33",
+      "word": "thirty-three",
+      "plural": "thirty-threes",
+      "translation_note": ""
+    }
+  },
+  {
+    "thirty-four": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "thirty four",
+      "__icon_text": "34",
+      "word": "thirty-four",
+      "plural": "thirty-fours",
+      "translation_note": ""
+    }
+  },
+  {
+    "thirty-five": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "thirty five",
+      "__icon_text": "35",
+      "word": "thirty-five",
+      "plural": "thirty-fives",
+      "translation_note": ""
+    }
+  },
+  {
+    "thirty-six": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "thirty six",
+      "__icon_text": "36",
+      "word": "thirty-six",
+      "plural": "thirty-sixes",
+      "translation_note": ""
+    }
+  },
+  {
+    "thirty-seven": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "thirty seven",
+      "__icon_text": "37",
+      "word": "thirty-seven",
+      "plural": "thirty-sevens",
+      "translation_note": ""
+    }
+  },
+  {
+    "thirty-eight": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "thirty eight",
+      "__icon_text": "38",
+      "word": "thirty-eight",
+      "plural": "thirty-eights",
+      "translation_note": ""
+    }
+  },
+  {
+    "thirty-nine": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "thirty nine",
+      "__icon_text": "39",
+      "word": "thirty-nine",
+      "plural": "thirty-nines",
+      "translation_note": ""
+    }
+  },
+  {
+    "forty": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "forty",
+      "__icon_text": "40",
+      "word": "forty",
+      "plural": "forties",
+      "translation_note": ""
+    }
+  },
+  {
+    "forty-one": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "forty one",
+      "__icon_text": "41",
+      "word": "forty-one",
+      "plural": "forty-ones",
+      "translation_note": ""
+    }
+  },
+  {
+    "forty-two": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "forty two",
+      "__icon_text": "42",
+      "word": "forty-two",
+      "plural": "forty-twos",
+      "translation_note": ""
+    }
+  },
+  {
+    "forty-three": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "forty three",
+      "__icon_text": "43",
+      "word": "forty-three",
+      "plural": "forty-threes",
+      "translation_note": ""
+    }
+  },
+  {
+    "forty-four": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "forty four",
+      "__icon_text": "44",
+      "word": "forty-four",
+      "plural": "forty-fours",
+      "translation_note": ""
+    }
+  },
+  {
+    "forty-five": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "forty five",
+      "__icon_text": "45",
+      "word": "forty-five",
+      "plural": "forty-fives",
+      "translation_note": ""
+    }
+  },
+  {
+    "forty-six": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "forty six",
+      "__icon_text": "46",
+      "word": "forty-six",
+      "plural": "forty-sixes",
+      "translation_note": ""
+    }
+  },
+  {
+    "forty-seven": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "forty seven",
+      "__icon_text": "47",
+      "word": "forty-seven",
+      "plural": "forty-sevens",
+      "translation_note": ""
+    }
+  },
+  {
+    "forty-eight": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "forty eight",
+      "__icon_text": "48",
+      "word": "forty-eight",
+      "plural": "forty-eights",
+      "translation_note": ""
+    }
+  },
+  {
+    "forty-nine": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "forty nine",
+      "__icon_text": "49",
+      "word": "forty-nine",
+      "plural": "forty-nines",
+      "translation_note": ""
+    }
+  },
+  {
+    "fifty": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fifty",
+      "__icon_text": "50",
+      "word": "fifty",
+      "plural": "fifties",
+      "translation_note": ""
+    }
+  },
+  {
+    "fifty-one": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fifty one",
+      "__icon_text": "51",
+      "word": "fifty-one",
+      "plural": "fifty-ones",
+      "translation_note": ""
+    }
+  },
+  {
+    "fifty-two": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fifty two",
+      "__icon_text": "52",
+      "word": "fifty-two",
+      "plural": "fifty-twos",
+      "translation_note": ""
+    }
+  },
+  {
+    "fifty-three": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fifty three",
+      "__icon_text": "53",
+      "word": "fifty-three",
+      "plural": "fifty-threes",
+      "translation_note": ""
+    }
+  },
+  {
+    "fifty-four": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fifty four",
+      "__icon_text": "54",
+      "word": "fifty-four",
+      "plural": "fifty-fours",
+      "translation_note": ""
+    }
+  },
+  {
+    "fifty-five": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fifty five",
+      "__icon_text": "55",
+      "word": "fifty-five",
+      "plural": "fifty-fives",
+      "translation_note": ""
+    }
+  },
+  {
+    "fifty-six": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fifty six",
+      "__icon_text": "56",
+      "word": "fifty-six",
+      "plural": "fifty-sixes",
+      "translation_note": ""
+    }
+  },
+  {
+    "fifty-seven": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fifty seven",
+      "__icon_text": "57",
+      "word": "fifty-seven",
+      "plural": "fifty-sevens",
+      "translation_note": ""
+    }
+  },
+  {
+    "fifty-eight": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fifty eight",
+      "__icon_text": "58",
+      "word": "fifty-eight",
+      "plural": "fifty-eights",
+      "translation_note": ""
+    }
+  },
+  {
+    "fifty-nine": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "fifty nine",
+      "__icon_text": "59",
+      "word": "fifty-nine",
+      "plural": "fifty-nines",
+      "translation_note": ""
+    }
+  },
+  {
+    "sixty": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "sixty",
+      "__icon_text": "60",
+      "word": "sixty",
+      "plural": "sixties",
+      "translation_note": ""
+    }
+  },
+  {
+    "sixty-one": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "sixty one",
+      "__icon_text": "61",
+      "word": "sixty-one",
+      "plural": "sixty-ones",
+      "translation_note": ""
+    }
+  },
+  {
+    "sixty-two": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "sixty two",
+      "__icon_text": "62",
+      "word": "sixty-two",
+      "plural": "sixty-twos",
+      "translation_note": ""
+    }
+  },
+  {
+    "sixty-three": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "sixty three",
+      "__icon_text": "63",
+      "word": "sixty-three",
+      "plural": "sixty-threes",
+      "translation_note": ""
+    }
+  },
+  {
+    "sixty-four": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "sixty four",
+      "__icon_text": "64",
+      "word": "sixty-four",
+      "plural": "sixty-fours",
+      "translation_note": ""
+    }
+  },
+  {
+    "sixty-five": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "sixty five",
+      "__icon_text": "65",
+      "word": "sixty-five",
+      "plural": "sixty-fives",
+      "translation_note": ""
+    }
+  },
+  {
+    "sixty-six": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "sixty six",
+      "__icon_text": "66",
+      "word": "sixty-six",
+      "plural": "sixty-sixes",
+      "translation_note": ""
+    }
+  },
+  {
+    "sixty-seven": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "sixty seven",
+      "__icon_text": "67",
+      "word": "sixty-seven",
+      "plural": "sixty-sevens",
+      "translation_note": ""
+    }
+  },
+  {
+    "sixty-eight": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "sixty eight",
+      "__icon_text": "68",
+      "word": "sixty-eight",
+      "plural": "sixty-eights",
+      "translation_note": ""
+    }
+  },
+  {
+    "sixty-nine": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "sixty nine",
+      "__icon_text": "69",
+      "word": "sixty-nine",
+      "plural": "sixty-nines",
+      "translation_note": ""
+    }
+  },
+  {
+    "seventy": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seventy",
+      "__icon_text": "70",
+      "word": "seventy",
+      "plural": "seventies",
+      "translation_note": ""
+    }
+  },
+  {
+    "seventy-one": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seventy one",
+      "__icon_text": "71",
+      "word": "seventy-one",
+      "plural": "seventy-ones",
+      "translation_note": ""
+    }
+  },
+  {
+    "seventy-two": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seventy two",
+      "__icon_text": "72",
+      "word": "seventy-two",
+      "plural": "seventy-twos",
+      "translation_note": ""
+    }
+  },
+  {
+    "seventy-three": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seventy three",
+      "__icon_text": "73",
+      "word": "seventy-three",
+      "plural": "seventy-threes",
+      "translation_note": ""
+    }
+  },
+  {
+    "seventy-four": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seventy four",
+      "__icon_text": "74",
+      "word": "seventy-four",
+      "plural": "seventy-fours",
+      "translation_note": ""
+    }
+  },
+  {
+    "seventy-five": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seventy five",
+      "__icon_text": "75",
+      "word": "seventy-five",
+      "plural": "seventy-fives",
+      "translation_note": ""
+    }
+  },
+  {
+    "seventy-six": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seventy six",
+      "__icon_text": "76",
+      "word": "seventy-six",
+      "plural": "seventy-sixes",
+      "translation_note": ""
+    }
+  },
+  {
+    "seventy-seven": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seventy seven",
+      "__icon_text": "77",
+      "word": "seventy-seven",
+      "plural": "seventy-sevens",
+      "translation_note": ""
+    }
+  },
+  {
+    "seventy-eight": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seventy eight",
+      "__icon_text": "78",
+      "word": "seventy-eight",
+      "plural": "seventy-eights",
+      "translation_note": ""
+    }
+  },
+  {
+    "seventy-nine": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "seventy nine",
+      "__icon_text": "79",
+      "word": "seventy-nine",
+      "plural": "seventy-nines",
+      "translation_note": ""
+    }
+  },
+  {
+    "eighty": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eighty",
+      "__icon_text": "80",
+      "word": "eighty",
+      "plural": "eighties",
+      "translation_note": ""
+    }
+  },
+  {
+    "eighty-one": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eighty one",
+      "__icon_text": "81",
+      "word": "eighty-one",
+      "plural": "eighty-ones",
+      "translation_note": ""
+    }
+  },
+  {
+    "eighty-two": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eighty two",
+      "__icon_text": "82",
+      "word": "eighty-two",
+      "plural": "eighty-twos",
+      "translation_note": ""
+    }
+  },
+  {
+    "eighty-three": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eighty three",
+      "__icon_text": "83",
+      "word": "eighty-three",
+      "plural": "eighty-threes",
+      "translation_note": ""
+    }
+  },
+  {
+    "eighty-four": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eighty four",
+      "__icon_text": "84",
+      "word": "eighty-four",
+      "plural": "eighty-fours",
+      "translation_note": ""
+    }
+  },
+  {
+    "eighty-five": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eighty five",
+      "__icon_text": "85",
+      "word": "eighty-five",
+      "plural": "eighty-fives",
+      "translation_note": ""
+    }
+  },
+  {
+    "eighty-six": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eighty six",
+      "__icon_text": "86",
+      "word": "eighty-six",
+      "plural": "eighty-sixes",
+      "translation_note": ""
+    }
+  },
+  {
+    "eighty-seven": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eighty seven",
+      "__icon_text": "87",
+      "word": "eighty-seven",
+      "plural": "eighty-sevens",
+      "translation_note": ""
+    }
+  },
+  {
+    "eighty-eight": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eighty eight",
+      "__icon_text": "88",
+      "word": "eighty-eight",
+      "plural": "eighty-eights",
+      "translation_note": ""
+    }
+  },
+  {
+    "eighty-nine": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "eighty nine",
+      "__icon_text": "89",
+      "word": "eighty-nine",
+      "plural": "eighty-nines",
+      "translation_note": ""
+    }
+  },
+  {
+    "ninety": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "ninety",
+      "__icon_text": "90",
+      "word": "ninety",
+      "plural": "nineties",
+      "translation_note": ""
+    }
+  },
+  {
+    "ninety-one": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "ninety one",
+      "__icon_text": "91",
+      "word": "ninety-one",
+      "plural": "ninety-ones",
+      "translation_note": ""
+    }
+  },
+  {
+    "ninety-two": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "ninety two",
+      "__icon_text": "92",
+      "word": "ninety-two",
+      "plural": "ninety-twos",
+      "translation_note": ""
+    }
+  },
+  {
+    "ninety-three": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "ninety three",
+      "__icon_text": "93",
+      "word": "ninety-three",
+      "plural": "ninety-threes",
+      "translation_note": ""
+    }
+  },
+  {
+    "ninety-four": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "ninety four",
+      "__icon_text": "94",
+      "word": "ninety-four",
+      "plural": "ninety-fours",
+      "translation_note": ""
+    }
+  },
+  {
+    "ninety-five": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "ninety five",
+      "__icon_text": "95",
+      "word": "ninety-five",
+      "plural": "ninety-fives",
+      "translation_note": ""
+    }
+  },
+  {
+    "ninety-six": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "ninety six",
+      "__icon_text": "96",
+      "word": "ninety-six",
+      "plural": "ninety-sixes",
+      "translation_note": ""
+    }
+  },
+  {
+    "ninety-seven": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "ninety seven",
+      "__icon_text": "97",
+      "word": "ninety-seven",
+      "plural": "ninety-sevens",
+      "translation_note": ""
+    }
+  },
+  {
+    "ninety-eight": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "ninety eight",
+      "__icon_text": "98",
+      "word": "ninety-eight",
+      "plural": "ninety-eights",
+      "translation_note": ""
+    }
+  },
+  {
+    "ninety-nine": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "ninety nine",
+      "__icon_text": "99",
+      "word": "ninety-nine",
+      "plural": "ninety-nines",
+      "translation_note": ""
+    }
+  },
+  {
+    "one hundred": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "one hundred",
+      "__icon_text": "100",
+      "word": "one hundred",
+      "plural": "one hundreds",
+      "translation_note": ""
+    }
   }
 ]
