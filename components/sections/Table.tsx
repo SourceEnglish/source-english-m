@@ -71,7 +71,7 @@ const Table: React.FC<TableProps> = ({ headers, entries }) => {
                 {entry.text.split('\n').map((line, i) => (
                   <ReadableText
                     text={line}
-                    style={styles.cellText}
+                    style={[styles.cellText, { textAlign: 'left' }]}
                     key={i}
                     pronunciation={entry.__forced_pronunciation}
                   />
@@ -132,13 +132,13 @@ const styles = StyleSheet.create({
   cell: {
     flex: 1,
     padding: 10,
-    paddingLeft: 0,
-    paddingRight: 0,
+    paddingLeft: 2,
+    paddingRight: 2,
     borderTopWidth: 1,
     borderTopColor: '#888', // darker line between entries
     borderRightWidth: 1,
     borderRightColor: '#888', // darker line between entries
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
     minHeight: 36,
   },
