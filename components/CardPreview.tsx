@@ -112,10 +112,7 @@ export default function CardPreview({
         <ReadableText
           text={word}
           pronunciation={__forced_pronunciation}
-          displayText={word
-            .split(' ')
-            .map((w: any) => (w.length > 10 ? w.slice(0, 9) + '…' : w))
-            .join('\n')}
+          displayText={word.length > 14 ? word.slice(0, 13) + '…' : word}
           style={{
             fontSize: isMobile ? 18 : 28,
             marginBottom: 4,
@@ -124,7 +121,7 @@ export default function CardPreview({
             alignSelf: 'center',
             width: '100%',
           }}
-          numberOfLines={word.split(' ').length}
+          numberOfLines={2}
           ellipsizeMode="tail"
         />
       )}

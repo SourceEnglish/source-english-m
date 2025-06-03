@@ -5,6 +5,7 @@ import posColors from '@/constants/constants';
 import ReadableText from '@/components/ReadableText';
 import { getIconForEntry } from '@/utils/iconMap';
 import { useRouter, useSegments } from 'expo-router';
+import { useSpeech } from '@/contexts/SpeechContext';
 
 // Context to indicate if inside a VocabularyCarousel
 export const VocabularyCarouselContext = React.createContext(false);
@@ -20,7 +21,10 @@ interface InlineCardPreviewProps {
   onPress?: () => void;
 }
 
-const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card, onPress }) => {
+const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({
+  card,
+  onPress,
+}) => {
   const {
     __pos,
     word,
@@ -60,12 +64,19 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card, onPress }) 
   const router = useRouter();
   const segments = useSegments();
 
+  // Use useSpeech to get readAloudMode
+  const { readAloudMode } = useSpeech();
+
   const handlePress = () => {
     if (onPress) {
       onPress();
       return;
     }
     if (isInCarousel) {
+      if (readAloudMode) {
+        // Do nothing if readAloudMode is true
+        return;
+      }
       // Only navigate to the vocab entry page, do not include "back" in the URL
       router.push(`/vocab/${encodeURIComponent(word)}`);
     }
