@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Dimensions } from 'react-native';
 import YoutubePlayer from 'react-native-youtube-iframe';
 import { WebView } from 'react-native-webview';
 import ReadableText from '../ReadableText';
@@ -12,6 +12,8 @@ function extractYouTubeId(url?: string) {
   );
   return match ? match[1] : undefined;
 }
+
+const windowWidth = Dimensions.get('window').width;
 
 const SectionVideo = ({
   src,
@@ -26,16 +28,17 @@ const SectionVideo = ({
   return (
     <View style={styles.container}>
       {videoId && (
-        <YoutubePlayer
-          height={180}
-          width={320}
-          videoId={videoId}
-          play={false}
-          webViewProps={{
-            accessibilityLabel: alt,
-            allowsFullscreenVideo: true,
-          }}
-        />
+        <View style={styles.videoWrapper}>
+          <YoutubePlayer
+            height={(windowWidth * 9) / 16}
+            videoId={videoId}
+            play={false}
+            webViewProps={{
+              accessibilityLabel: alt,
+              allowsFullscreenVideo: true,
+            }}
+          />
+        </View>
       )}
       {caption && <ReadableText text={caption} style={styles.caption} />}
     </View>
@@ -46,12 +49,14 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     marginVertical: 12,
+    width: '100%',
   },
-  video: {
-    width: 320,
-    height: 180,
+  videoWrapper: {
+    width: '100%',
+    aspectRatio: 16 / 9,
     borderRadius: 8,
     backgroundColor: '#000',
+    overflow: 'hidden',
   },
   caption: {
     marginTop: 6,
