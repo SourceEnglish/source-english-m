@@ -34,7 +34,13 @@ import TomorrowIcon from '@/assets/icons/licensed/tomorrow.svg';
 import DayVocabIcon from '@/assets/icons/licensed/day_vocab.svg';
 import SpeakIcon from '@/assets/icons/licensed/speak.svg';
 import MonthsIcon from '@/assets/icons/licensed/months.svg';
+import SeasonsIcon from '@/assets/icons/licensed/seasons.svg';
+import AutumnIcon from '@/assets/icons/licensed/autumn.svg';
+import SpringIcon from '@/assets/icons/licensed/spring.svg';
+import SummerIcon from '@/assets/icons/licensed/summer.svg';
+import WinterIcon from '@/assets/icons/licensed/winter.svg';
 import NumbersIcon from '@/assets/icons/open_source/numbers.svg';
+import ToBeIcon from '@/assets/icons/open_source/to_be.svg';
 import React from 'react';
 import { View, Text } from 'react-native';
 import ReadableText from '@/components/ReadableText'; // Add this import
@@ -121,6 +127,11 @@ export const iconMap: Record<string, React.FC<any>> = {
   rainy: RainIcon,
   stormy: StormIcon,
   windy: WindIcon,
+  autumn: AutumnIcon,
+  fall: AutumnIcon,
+  summer: SummerIcon,
+  winter: WinterIcon,
+  spring: SpringIcon,
   foggy: FogIcon,
   'partly cloudy': PartlyCloudyIcon,
   sunny: SunIcon,
@@ -146,8 +157,12 @@ export const iconMap: Record<string, React.FC<any>> = {
   today: TodayIcon,
   tomorrow: TomorrowIcon,
   'day vocabulary': DayVocabIcon,
+  'temperature vocabulary': TemperatureIcon,
   'numbers vocabulary': NumbersIcon,
-
+  'to be': ToBeIcon,
+  'seasons vocabulary': SeasonsIcon, // Assuming seasons vocabulary uses the same icon as weather
+  month: MonthsIcon,
+  season: SeasonsIcon,
   speak: SpeakIcon,
 
   // ...etc

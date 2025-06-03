@@ -16,29 +16,43 @@
   },
 
   {
-    "_id": "food_sleading",
-    "__lessons": ["food"],
-    "__order": 2,
+    "_id": "to_be_usage_intro",
+    "__lessons": ["to be"],
+    "__order": 0,
     "__type": "paragraph",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    "text": "The verb 'to be' is very important in English. We use 'am', 'is', and 'are' to talk about who someone is or what something is. For example:"
   },
   {
-    "_id": "food_sleadindd",
-    "__lessons": ["food"],
-    "__order": 3,
-    "__type": "paragraph",
-    "text": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+    "_id": "to_be_example_1",
+    "__lessons": ["to be"],
+    "__order": 0.1,
+    "__type": "quote",
+    "text": "I am a student."
   },
   {
-    "_id": "food_sleadindde",
-    "__lessons": ["food"],
-    "__order": 3,
+    "_id": "to_be_example_2",
+    "__lessons": ["to be"],
+    "__order": 0.2,
+    "__type": "quote",
+    "text": "She is happy."
+  },
+  {
+    "_id": "to_be_example_3",
+    "__lessons": ["to be"],
+    "__order": 0.3,
+    "__type": "quote",
+    "text": "They are friends."
+  },
+  {
+    "_id": "to_be_usage_explanation",
+    "__lessons": ["to be"],
+    "__order": 0.4,
     "__type": "paragraph",
-    "text": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
+    "text": "Use 'am' with 'I', 'is' with he, she, it, or one person, and 'are' with you, we, they, or more than one person."
   },
   {
     "_id": "to_be",
-    "__lessons": ["food"],
+    "__lessons": ["to be"],
     "__order": 1,
     "__type": "table",
     "__headers": [

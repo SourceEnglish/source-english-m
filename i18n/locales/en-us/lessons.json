@@ -8,28 +8,19 @@
     }
   },
   {
-    "food": {
-      "name": "food",
-      "__tags": ["food"],
-      "__type": "lesson",
+    "numbers vocabulary": {
+      "name": "numbers vocabulary",
+      "__tags": ["numbers"],
+      "__type": "vocabulary",
       "__order": 1
     }
   },
-
   {
-    "food vocabulary": {
-      "name": "food vocabulary",
-      "__tags": ["food"],
-      "__type": "vocabulary",
-      "__order": 3
-    }
-  },
-  {
-    "weather vocabulary": {
-      "name": "weather vocabulary",
-      "__tags": ["weather"],
-      "__type": "vocabulary",
-      "__order": 4
+    "to be": {
+      "name": "to be",
+      "__tags": ["to be"],
+      "__type": "lesson",
+      "__order": 1
     }
   },
   {
@@ -49,11 +40,28 @@
     }
   },
   {
-    "numbers vocabulary": {
-      "name": "numbers vocabulary",
-      "__tags": ["numbers"],
+    "seasons vocabulary": {
+      "name": "seasons vocabulary",
+      "__tags": ["seasons"],
       "__type": "vocabulary",
-      "__order": 1
+      "__order": 2
+    }
+  },
+
+  {
+    "weather vocabulary": {
+      "name": "weather vocabulary",
+      "__tags": ["weather"],
+      "__type": "vocabulary",
+      "__order": 4
+    }
+  },
+  {
+    "temperature vocabulary": {
+      "name": "temperature vocabulary",
+      "__tags": ["temperature"],
+      "__type": "vocabulary",
+      "__order": 3
     }
   }
 ]

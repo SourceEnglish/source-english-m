@@ -342,14 +342,7 @@
       "translation_note": ""
     }
   },
-  {
-    "foggy": {
-      "__pos": "adjective",
-      "__tags": ["weather"],
-      "word": "foggy",
-      "translation_note": ""
-    }
-  },
+
   {
     "sunny": {
       "__pos": "adjective",
@@ -371,6 +364,14 @@
       "__pos": "adjective",
       "__tags": ["weather"],
       "word": "rainy",
+      "translation_note": ""
+    }
+  },
+  {
+    "foggy": {
+      "__pos": "adjective",
+      "__tags": ["weather"],
+      "word": "foggy",
       "translation_note": ""
     }
   },
@@ -409,7 +410,7 @@
   {
     "hot": {
       "__pos": "adjective",
-      "__tags": ["weather", "temperature"],
+      "__tags": ["temperature"],
       "word": "hot",
       "translation_note": ""
     }
@@ -417,7 +418,7 @@
   {
     "warm": {
       "__pos": "adjective",
-      "__tags": ["weather", "temperature"],
+      "__tags": ["temperature"],
       "word": "warm",
       "translation_note": ""
     }
@@ -425,7 +426,7 @@
   {
     "cool": {
       "__pos": "adjective",
-      "__tags": ["weather", "temperature"],
+      "__tags": ["temperature"],
       "word": "cool",
       "translation_note": ""
     }
@@ -433,7 +434,7 @@
   {
     "cold": {
       "__pos": "adjective",
-      "__tags": ["weather", "temperature"],
+      "__tags": ["temperature"],
       "word": "cold",
       "translation_note": ""
     }
@@ -451,7 +452,7 @@
     "temperature": {
       "__pos": "noun",
       "__count": "uncountable",
-      "__tags": ["weather", "temperature"],
+      "__tags": ["temperature"],
       "word": "temperature",
       "translation_note": ""
     }
@@ -734,6 +735,16 @@
       "__forced_pronunciation": "December",
       "__abbreviations": ["Dec"],
       "word": "December",
+      "translation_note": ""
+    }
+  },
+  {
+    "month": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": ["months"],
+      "word": "month",
+      "plural": "months",
       "translation_note": ""
     }
   },
@@ -1934,6 +1945,65 @@
       "__icon_text": "100",
       "word": "one hundred",
       "plural": "one hundreds",
+      "translation_note": ""
+    }
+  },
+
+  {
+    "Winter": {
+      "__pos": "proper noun",
+      "__tags": ["seasons"],
+      "word": "Winter",
+      "plural": "Winters",
+      "translation_note": ""
+    }
+  },
+  {
+    "Spring": {
+      "__pos": "proper noun",
+      "__tags": ["seasons"],
+      "word": "Spring",
+      "plural": "Springs",
+      "translation_note": ""
+    }
+  },
+  {
+    "Summer": {
+      "__pos": "proper noun",
+      "__tags": ["seasons"],
+      "word": "Summer",
+      "plural": "Summers",
+      "translation_note": ""
+    }
+  },
+
+  {
+    "Autumn": {
+      "__pos": "proper noun",
+      "__tags": ["seasons"],
+      "__synonyms": ["Fall"],
+      "word": "Autumn",
+      "plural": "Autumns",
+      "translation_note": ""
+    }
+  },
+  {
+    "Fall": {
+      "__pos": "proper noun",
+      "__tags": ["seasons"],
+      "__synonyms": ["Autumn"],
+      "word": "Fall",
+      "plural": "Falls",
+      "translation_note": ""
+    }
+  },
+  {
+    "season": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": ["seasons"],
+      "word": "season",
+      "plural": "seasons",
       "translation_note": ""
     }
   }
