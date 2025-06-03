@@ -24,7 +24,11 @@ const SectionRenderer = ({ section }: { section: Section }) => {
       return <Header text={section.text || ''} styling={section.__styling} />;
     case 'subheader':
       return (
-        <Subheader text={section.text || ''} styling={section.__styling} />
+        <Subheader
+          text={section.text || ''}
+          styling={section.__styling}
+          __forced_pronunciation={section.__forced_pronunciation}
+        />
       );
     case 'quote':
       return <Quote text={section.text || ''} styling={section.__styling} />;
