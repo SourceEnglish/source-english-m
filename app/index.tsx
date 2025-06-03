@@ -41,7 +41,7 @@ export default function Index() {
             return (
               <PageLink
                 key={lesson.name}
-                icon={Icon ? <Icon width={32} height={32} /> : null}
+                icon={Icon ? <Icon width={40} height={40} /> : null}
                 pagePath={`/${lesson.name}`}
                 pageText={lesson.name}
                 pageTextTranslated={t(lesson.name)}

@@ -19,6 +19,7 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
   let borderColor = posColors[__pos] || '#000';
   let borderLeftColor = posColors[__pos] || '#000';
   let borderTopColor = posColors[__pos] || '#000';
+  const borderRadius = 6;
 
   // Special border color for letters: vowel/consonant
   if (__pos === 'letter') {
@@ -45,7 +46,8 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
     <View
       style={[
         styles.inlineCard,
-        { borderColor, borderLeftColor, borderTopColor },
+        { borderColor, borderLeftColor, borderTopColor, borderRadius },
+        ((__vowel || __consonant || __pos === 'number') && { borderTopWidth: borderRadius }),
         isMobile ? styles.mobile : styles.desktop,
       ]}
     >
