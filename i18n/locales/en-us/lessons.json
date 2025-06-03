@@ -79,5 +79,37 @@
       "__type": "vocabulary",
       "__order": 6
     }
+  },
+  {
+    "subject pronouns": {
+      "name": "subject pronouns",
+      "__tags": ["subject pronouns"],
+      "__type": "lesson",
+      "__order": 2
+    }
+  },
+  {
+    "subject pronouns vocabulary": {
+      "name": "subject pronouns vocabulary",
+      "__tags": ["subject pronouns"],
+      "__type": "vocabulary",
+      "__order": 2
+    }
+  },
+  {
+    "personal information": {
+      "name": "personal information",
+      "__tags": ["personal information"],
+      "__type": "lesson",
+      "__order": 7
+    }
+  },
+  {
+    "personal information vocabulary": {
+      "name": "personal information vocabulary",
+      "__tags": ["personal information"],
+      "__type": "vocabulary",
+      "__order": 7
+    }
   }
 ]

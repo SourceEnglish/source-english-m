@@ -6,6 +6,7 @@
       "__icon_text": "Aa",
       "__forced_pronunciation": "a",
       "__show_word": false,
+
       "word": "Aa",
       "translation_note": "",
       "__vowel": true,
@@ -2101,6 +2102,220 @@
       "__icon_text": "their",
       "__show_word": false,
       "word": "their",
+      "translation_note": ""
+    }
+  },
+  {
+    "I_(pronoun)": {
+      "__pos": "pronoun",
+      "__tags": ["subject pronouns"],
+      "__icon_text": "I",
+      "__show_word": false,
+      "word": "I",
+      "translation_note": ""
+    }
+  },
+  {
+    "you": {
+      "__pos": "pronoun",
+      "__tags": ["subject pronouns"],
+      "__icon_text": "you",
+      "__show_word": false,
+      "word": "you",
+      "translation_note": ""
+    }
+  },
+  {
+    "he": {
+      "__pos": "pronoun",
+      "__tags": ["subject pronouns"],
+      "__icon_text": "he",
+      "__show_word": false,
+      "word": "he",
+      "translation_note": ""
+    }
+  },
+  {
+    "she": {
+      "__pos": "pronoun",
+      "__tags": ["subject pronouns"],
+      "__icon_text": "she",
+      "__show_word": false,
+      "word": "she",
+      "translation_note": ""
+    }
+  },
+  {
+    "it": {
+      "__pos": "pronoun",
+      "__tags": ["subject pronouns"],
+      "__icon_text": "it",
+      "__show_word": false,
+      "word": "it",
+      "translation_note": ""
+    }
+  },
+  {
+    "we": {
+      "__pos": "pronoun",
+      "__tags": ["subject pronouns"],
+      "__icon_text": "we",
+      "__show_word": false,
+      "word": "we",
+      "translation_note": ""
+    }
+  },
+  {
+    "they": {
+      "__pos": "pronoun",
+      "__tags": ["subject pronouns"],
+      "__icon_text": "they",
+      "__show_word": false,
+      "word": "they",
+      "translation_note": ""
+    }
+  },
+  {
+    "name": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "name",
+      "plural": "names",
+      "translation_note": ""
+    }
+  },
+  {
+    "first name": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "first name",
+      "plural": "first names",
+      "translation_note": ""
+    }
+  },
+  {
+    "last name": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "last name",
+      "plural": "last names",
+      "translation_note": ""
+    }
+  },
+  {
+    "middle name": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "middle name",
+      "plural": "middle names",
+      "translation_note": ""
+    }
+  },
+  {
+    "address": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "address",
+      "plural": "addresses",
+      "translation_note": ""
+    }
+  },
+  {
+    "house number": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "house number",
+      "plural": "house numbers",
+      "translation_note": ""
+    }
+  },
+  {
+    "street name": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "street name",
+      "plural": "street names",
+      "translation_note": ""
+    }
+  },
+  {
+    "apartment number": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "apartment number",
+      "plural": "apartment numbers",
+      "translation_note": ""
+    }
+  },
+  {
+    "unit number": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "unit number",
+      "plural": "unit numbers",
+      "translation_note": ""
+    }
+  },
+  {
+    "city": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "city",
+      "plural": "cities",
+      "translation_note": ""
+    }
+  },
+  {
+    "state": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "state",
+      "plural": "states",
+      "translation_note": ""
+    }
+  },
+  {
+    "ZIP code": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "ZIP code",
+      "plural": "ZIP codes",
+      "translation_note": ""
+    }
+  },
+  {
+    "email address": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "email address",
+      "plural": "email addresses",
+      "translation_note": ""
+    }
+  },
+  {
+    "phone number": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "phone number",
+      "plural": "phone numbers",
+      "translation_note": ""
+    }
+  },
+  {
+    "telephone number": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "telephone number",
+      "plural": "telephone numbers",
+      "translation_note": ""
+    }
+  },
+  {
+    "date of birth": {
+      "__pos": "noun",
+      "__tags": ["personal information"],
+      "word": "date of birth",
+      "plural": "dates of birth",
       "translation_note": ""
     }
   }
