@@ -184,19 +184,84 @@
     "text": "Their dog is big."
   },
   {
+    "_id": "subject_pronouns_header",
+    "__lessons": ["subject pronouns"],
+    "__order": 0.5,
+    "__type": "header",
+    "text": "Subject Pronouns"
+  },
+
+  {
     "_id": "subject_pronouns_intro",
     "__lessons": ["subject pronouns"],
-    "__order": 0,
+    "__order": 0.5,
     "__type": "paragraph",
     "text": "Subject pronouns are words we use instead of names to talk about people or things. In English, they are: I, you, he, she, it, we, and they."
   },
   {
-    "_id": "subject_pronouns_table",
+    "_id": "subject_pronouns_table_singular_subheader",
     "__lessons": ["subject pronouns"],
-    "__order": 1,
+    "__order": 0.95,
+    "__type": "subheader",
+    "text": "Singular Subject Pronouns (1)",
+    "__forced_pronunciation": "singular subject pronouns"
+  },
+  {
+    "_id": "subject_pronouns_table_singular_carousel",
+    "__lessons": ["subject pronouns"],
+    "__order": 0.955,
+    "__type": "vocabularyCarousel",
+    "__tags": ["singular subject pronouns"]
+  },
+  {
+    "_id": "subject_pronouns_table_singular_paragraph",
+    "__lessons": ["subject pronouns"],
+    "__order": 0.96,
+    "__type": "paragraph",
+    "text": "Singular subject pronouns refer to one person, animal, or thing: I, you, he, she, and it."
+  },
+  {
+    "_id": "subject_pronouns_examples_singular_I",
+    "__lessons": ["subject pronouns"],
+    "__order": 0.9701,
+    "__type": "quote",
+    "text": "I am a student."
+  },
+  {
+    "_id": "subject_pronouns_examples_singular_you",
+    "__lessons": ["subject pronouns"],
+    "__order": 0.971,
+    "__type": "quote",
+    "text": "You are my friend."
+  },
+  {
+    "_id": "subject_pronouns_examples_singular_he",
+    "__lessons": ["subject pronouns"],
+    "__order": 0.972,
+    "__type": "quote",
+    "text": "He is Tom."
+  },
+  {
+    "_id": "subject_pronouns_examples_singular_she",
+    "__lessons": ["subject pronouns"],
+    "__order": 0.973,
+    "__type": "quote",
+    "text": "She is Kim."
+  },
+  {
+    "_id": "subject_pronouns_examples_singular_it",
+    "__lessons": ["subject pronouns"],
+    "__order": 0.974,
+    "__type": "quote",
+    "text": "It is a cat."
+  },
+  {
+    "_id": "subject_pronouns_table_singular",
+    "__lessons": ["subject pronouns"],
+    "__order": 0.965,
     "__type": "table",
     "__headers": [
-      { "text": "Subject Pronoun", "__type": "text" },
+      { "text": "Subject Pronoun (Singular)", "__type": "text" },
       { "text": "Used for", "__type": "text" },
       { "text": "Example", "__type": "text" }
     ],
@@ -205,7 +270,7 @@
       { "__type": "text", "text": "the speaker (one person)" },
       { "__type": "text", "text": "I am a student." },
       { "__type": "text", "text": "you" },
-      { "__type": "text", "text": "the listener (one or more people)" },
+      { "__type": "text", "text": "the listener (one person)" },
       { "__type": "text", "text": "You are my friend." },
       { "__type": "text", "text": "he" },
       { "__type": "text", "text": "a man or boy" },
@@ -215,36 +280,75 @@
       { "__type": "text", "text": "She is Kim." },
       { "__type": "text", "text": "it" },
       { "__type": "text", "text": "a thing, animal, or idea" },
-      { "__type": "text", "text": "It is a cat." },
+      { "__type": "text", "text": "It is a cat." }
+    ]
+  },
+  {
+    "_id": "subject_pronouns_table_plural_subheader",
+    "__lessons": ["subject pronouns"],
+    "__order": 1.05,
+    "__type": "subheader",
+    "text": "Plural Subject Pronouns (2+)",
+    "__forced_pronunciation": "plural subject pronouns"
+  },
+  {
+    "_id": "subject_pronouns_table_plural_carousel",
+    "__lessons": ["subject pronouns"],
+    "__order": 1.055,
+    "__type": "vocabularyCarousel",
+    "__tags": ["plural subject pronouns"]
+  },
+  {
+    "_id": "subject_pronouns_table_plural_paragraph",
+    "__lessons": ["subject pronouns"],
+    "__order": 1.06,
+    "__type": "paragraph",
+    "text": "Plural subject pronouns refer to more than one person, animal, or thing: we, you, and they."
+  },
+  {
+    "_id": "subject_pronouns_examples_plural_we",
+    "__lessons": ["subject pronouns"],
+    "__order": 1.11,
+    "__type": "quote",
+    "text": "We are friends."
+  },
+  {
+    "_id": "subject_pronouns_examples_plural_you",
+    "__lessons": ["subject pronouns"],
+    "__order": 1.12,
+    "__type": "quote",
+    "text": "You are my friends."
+  },
+  {
+    "_id": "subject_pronouns_examples_plural_they",
+    "__lessons": ["subject pronouns"],
+    "__order": 1.13,
+    "__type": "quote",
+    "text": "They are students."
+  },
+  {
+    "_id": "subject_pronouns_table_plural",
+    "__lessons": ["subject pronouns"],
+    "__order": 1.1,
+    "__type": "table",
+    "__headers": [
+      { "text": "Subject Pronoun (Plural)", "__type": "text" },
+      { "text": "Used for", "__type": "text" },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
       { "__type": "text", "text": "we" },
       { "__type": "text", "text": "the speaker and others" },
       { "__type": "text", "text": "We are friends." },
+      { "__type": "text", "text": "you" },
+      { "__type": "text", "text": "the listener (more than one person)" },
+      { "__type": "text", "text": "You are my friends." },
       { "__type": "text", "text": "they" },
       { "__type": "text", "text": "other people, animals, or things" },
       { "__type": "text", "text": "They are students." }
     ]
   },
-  {
-    "_id": "subject_pronouns_example_1",
-    "__lessons": ["subject pronouns"],
-    "__order": 2,
-    "__type": "quote",
-    "text": "He is a teacher."
-  },
-  {
-    "_id": "subject_pronouns_example_2",
-    "__lessons": ["subject pronouns"],
-    "__order": 3,
-    "__type": "quote",
-    "text": "We are happy."
-  },
-  {
-    "_id": "subject_pronouns_example_3",
-    "__lessons": ["subject pronouns"],
-    "__order": 4,
-    "__type": "quote",
-    "text": "It is raining."
-  },
+
   {
     "_id": "subject_pronouns_video_header",
     "__lessons": ["subject pronouns"],

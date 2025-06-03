@@ -16,6 +16,7 @@ export type SectionType =
   | 'vocabularyCarousel'; // Add this line
 
 export interface Section {
+  __forced_pronunciation?: string | undefined;
   __id?: string;
   translator_note?: string;
   __lessons: string[];

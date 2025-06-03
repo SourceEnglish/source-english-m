@@ -8,7 +8,11 @@ interface SubheaderProps {
   __forced_pronunciation?: string;
 }
 
-const Subheader = ({ text, styling, __forced_pronunciation }: SubheaderProps) => (
+const Subheader = ({
+  text,
+  styling,
+  __forced_pronunciation,
+}: SubheaderProps) => (
   <View style={styles.container}>
     <ReadableText
       text={text}

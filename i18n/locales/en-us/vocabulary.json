@@ -2120,7 +2120,7 @@
   {
     "I_(pronoun)": {
       "__pos": "pronoun",
-      "__tags": ["subject pronouns"],
+      "__tags": ["subject pronouns", "singular subject pronouns"],
       "__icon_text": "I",
       "__show_word": false,
       "word": "I",
@@ -2130,7 +2130,11 @@
   {
     "you": {
       "__pos": "pronoun",
-      "__tags": ["subject pronouns"],
+      "__tags": [
+        "subject pronouns",
+        "singular subject pronouns",
+        "plural subject pronouns"
+      ],
       "__icon_text": "you",
       "__show_word": false,
       "word": "you",
@@ -2140,7 +2144,7 @@
   {
     "he": {
       "__pos": "pronoun",
-      "__tags": ["subject pronouns"],
+      "__tags": ["subject pronouns", "singular subject pronouns"],
       "__icon_text": "he",
       "__show_word": false,
       "word": "he",
@@ -2150,7 +2154,7 @@
   {
     "she": {
       "__pos": "pronoun",
-      "__tags": ["subject pronouns"],
+      "__tags": ["subject pronouns", "singular subject pronouns"],
       "__icon_text": "she",
       "__show_word": false,
       "word": "she",
@@ -2160,7 +2164,7 @@
   {
     "it": {
       "__pos": "pronoun",
-      "__tags": ["subject pronouns"],
+      "__tags": ["subject pronouns", "singular subject pronouns"],
       "__icon_text": "it",
       "__show_word": false,
       "word": "it",
@@ -2170,7 +2174,7 @@
   {
     "we": {
       "__pos": "pronoun",
-      "__tags": ["subject pronouns"],
+      "__tags": ["subject pronouns", "plural subject pronouns"],
       "__icon_text": "we",
       "__show_word": false,
       "word": "we",
@@ -2180,7 +2184,7 @@
   {
     "they": {
       "__pos": "pronoun",
-      "__tags": ["subject pronouns"],
+      "__tags": ["subject pronouns", "plural subject pronouns"],
       "__icon_text": "they",
       "__show_word": false,
       "word": "they",
