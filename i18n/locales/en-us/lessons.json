@@ -16,40 +16,40 @@
     }
   },
   {
-    "day vocabulary": {
-      "name": "day vocabulary",
+    "day vocab": {
+      "name": "day vocab",
       "__tags": ["days"],
       "__type": "vocabulary",
       "__order": 3
     }
   },
   {
-    "months vocabulary": {
-      "name": "months vocabulary",
+    "months vocab": {
+      "name": "months vocab",
       "__tags": ["months"],
       "__type": "vocabulary",
       "__order": 4
     }
   },
   {
-    "seasons vocabulary": {
-      "name": "seasons vocabulary",
+    "seasons vocab": {
+      "name": "seasons vocab",
       "__tags": ["seasons"],
       "__type": "vocabulary",
       "__order": 5
     }
   },
   {
-    "weather vocabulary": {
-      "name": "weather vocabulary",
+    "weather vocab": {
+      "name": "weather vocab",
       "__tags": ["weather"],
       "__type": "vocabulary",
       "__order": 6
     }
   },
   {
-    "temperature vocabulary": {
-      "name": "temperature vocabulary",
+    "temperature vocab": {
+      "name": "temperature vocab",
       "__tags": ["temperature"],
       "__type": "vocabulary",
       "__order": 7
@@ -64,8 +64,8 @@
     }
   },
   {
-    "personal information vocabulary": {
-      "name": "personal information vocabulary",
+    "personal information vocab": {
+      "name": "personal information vocab",
       "__tags": ["personal information"],
       "__type": "vocabulary",
       "__order": 9
@@ -80,8 +80,8 @@
     }
   },
   {
-    "subject pronouns vocabulary": {
-      "name": "subject pronouns vocabulary",
+    "subject pronouns vocab": {
+      "name": "subject pronouns vocab",
       "__tags": ["subject pronouns"],
       "__type": "vocabulary",
       "__order": 11
@@ -104,11 +104,12 @@
     }
   },
   {
-    "possessive adjectives vocabulary": {
-      "name": "possessive adjectives vocabulary",
+    "possessive adjectives vocab": {
+      "name": "possessive adjectives vocab",
       "__tags": ["possessive adjectives"],
       "__type": "vocabulary",
-      "__order": 14
+      "__order": 14,
+      "__hidden": true
     }
   },
   {
@@ -116,7 +117,8 @@
       "name": "possessive adjectives",
       "__tags": ["possessive adjectives"],
       "__type": "lesson",
-      "__order": 15
+      "__order": 15,
+      "__hidden": true
     }
   }
 ]

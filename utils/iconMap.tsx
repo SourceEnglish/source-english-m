@@ -136,12 +136,12 @@ export const GenericTextIcon: React.FC<{ word: string; size?: number }> = ({
 export const iconMap: Record<string, React.FC<any>> = {
   letters: AaIcon,
   food: RiceIcon,
-  'weather vocabulary': WeatherVocabIcon,
-  'months vocabulary': MonthsIcon,
+  'weather vocab': WeatherVocabIcon,
+  'months vocab': MonthsIcon,
 
   apple: AppleIcon,
   bread: BreadIcon,
-  'food vocabulary': AppleIcon,
+  'food vocab': AppleIcon,
   rice: RiceIcon,
   snowy: SnowIcon,
   rainy: RainIcon,
@@ -184,21 +184,21 @@ export const iconMap: Record<string, React.FC<any>> = {
   'unit number': ApartmentNumber, // Example for a custom icon
   tomorrow: TomorrowIcon,
   'email address': EmailAddress,
-  'day vocabulary': DayVocabIcon,
-  'temperature vocabulary': TemperatureIcon,
+  'day vocab': DayVocabIcon,
+  'temperature vocab': TemperatureIcon,
   numbers: NumbersIcon,
   'to be': ToBeIcon,
   name: NameIcon, // Example for a custom icon
-  'seasons vocabulary': SeasonsIcon, // Assuming seasons vocabulary uses the same icon as weather
-  'possessive adjectives vocabulary': MyIcon, // Example for a custom icon
+  'seasons vocab': SeasonsIcon, // Assuming seasons vocab uses the same icon as weather
+  'possessive adjectives vocab': MyIcon, // Example for a custom icon
   'possessive adjectives': MyIcon, // Example for a custom icon
   'subject pronouns': YouIcon, // Example for a custom icon
   'personal information': NameIcon,
-  'personal information vocabulary': NameIcon, // Example for a custom icon
+  'personal information vocab': NameIcon, // Example for a custom icon
   'phone number': PhoneNumber, // Example for a custom icon
   'telephone number': PhoneNumber, // Example for a custom icon
 
-  'subject pronouns vocabulary': YouIcon, // Example for a custom icon
+  'subject pronouns vocab': YouIcon, // Example for a custom icon
   month: MonthsIcon,
   season: SeasonsIcon,
   speak: SpeakIcon,
