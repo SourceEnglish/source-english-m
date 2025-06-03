@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   label: {
-    fontFamily: 'Lexend',
+    fontFamily: 'Lexend_400Regular',
     fontWeight: 'bold',
   },
   input: {
