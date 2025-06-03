@@ -37,6 +37,8 @@ export default function Index() {
           /> */}
 
           {lessons.map((lesson) => {
+            // Skip lessons with __hidden property
+            if ((lesson as any).__hidden) return null;
             const Icon = iconMap[lesson.name];
             return (
               <PageLink
