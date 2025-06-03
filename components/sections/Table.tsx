@@ -11,6 +11,7 @@ export type TableHeader = {
 export type TableEntry = {
   text: string;
   __type: string;
+  __forced_pronunciation?: string; // Add this property
 };
 
 interface TableProps {
@@ -68,7 +69,12 @@ const Table: React.FC<TableProps> = ({ headers, entries }) => {
                 key={colIdx}
               >
                 {entry.text.split('\n').map((line, i) => (
-                  <ReadableText text={line} style={styles.cellText} key={i} />
+                  <ReadableText
+                    text={line}
+                    style={styles.cellText}
+                    key={i}
+                    pronunciation={entry.__forced_pronunciation}
+                  />
                 ))}
               </View>
             ))}
