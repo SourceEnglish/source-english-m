@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
 import { ScrollView, View, StyleSheet } from 'react-native';
-import InlineCardPreview, { VocabularyCarouselContext } from '../InlineCardPreview';
+import InlineCardPreview, {
+  VocabularyCarouselContext,
+} from '../InlineCardPreview';
 import vocabulary from '@/i18n/locales/en-us/vocabulary.json';
 
 interface VocabularyCarouselProps {
@@ -47,9 +49,16 @@ const VocabularyCarousel: React.FC<VocabularyCarouselProps> = ({ tags }) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 70, // Height of one InlineCardPreview (desktop) or 56 (mobile)
+    height: 100, // Height of one InlineCardPreview (desktop) or 56 (mobile)
     marginVertical: 10,
     width: '100%',
+    backgroundColor: '#d6d6d6', // Slightly darker background
+    borderRadius: 2,
+    paddingVertical: 6,
+    borderTopColor: 'black',
+    borderTopWidth: 1,
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
   },
   scrollContent: {
     alignItems: 'center',
