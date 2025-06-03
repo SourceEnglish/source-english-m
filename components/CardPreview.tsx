@@ -34,8 +34,14 @@ export default function CardPreview({
   vocabKey,
   cardIndex,
 }: CardPreviewProps) {
-  const { __pos, word, __forced_pronunciation, __vowel, __consonant, __show_word = true } =
-    card as any;
+  const {
+    __pos,
+    word,
+    __forced_pronunciation,
+    __vowel,
+    __consonant,
+    __show_word = true,
+  } = card as any;
   let borderColor = posColors[__pos] || '#000';
   let borderLeftColor = posColors[__pos] || '#000';
   let borderTopColor = posColors[__pos] || '#000';
