@@ -111,5 +111,13 @@
       "__type": "vocabulary",
       "__order": 7
     }
+  },
+  {
+    "writing the weather": {
+      "name": "writing the weather",
+      "__tags": ["weather"],
+      "__type": "lesson",
+      "__order": 8
+    }
   }
 ]

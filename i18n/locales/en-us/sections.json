@@ -362,5 +362,73 @@
     "__order": 5,
     "__type": "quote",
     "text": "My date of birth is March 5, 1985."
+  },
+  {
+    "_id": "writing_weather_intro",
+    "__lessons": ["writing the weather"],
+    "__order": 0,
+    "__type": "paragraph",
+    "text": "You can ask and answer about the weather using simple sentences. Here are some common ways to ask and answer about the weather."
+  },
+  {
+    "_id": "writing_weather_questions",
+    "__lessons": ["writing the weather"],
+    "__order": 1,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "How is the weather?" },
+      { "__type": "text", "text": "It is sunny." },
+      { "__type": "text", "text": "How is the weather today?" },
+      { "__type": "text", "text": "It is rainy today." },
+      { "__type": "text", "text": "What is the weather like?" },
+      { "__type": "text", "text": "The weather is cloudy." }
+    ]
+  },
+
+  {
+    "_id": "vocabulary_carousel_example",
+    "__lessons": ["writing the weather"],
+    "__order": 0,
+    "__type": "vocabularyCarousel",
+    "__tags": ["weather"]
+  },
+  {
+    "_id": "writing_weather_patterns",
+    "__lessons": ["writing the weather"],
+    "__order": 2,
+    "__type": "paragraph",
+    "text": "To answer, use:\n- 'It is [weather word].'\n- 'The weather is [weather word].'\nFor example: 'It is hot.' or 'The weather is cold.'"
+  },
+  {
+    "_id": "writing_weather_combine",
+    "__lessons": ["writing the weather"],
+    "__order": 2.5,
+    "__type": "paragraph",
+    "text": "You can also combine the weather and temperature in one sentence. For example: 'It is sunny and hot.'"
+  },
+  {
+    "_id": "writing_weather_examples",
+    "__lessons": ["writing the weather"],
+    "__order": 3,
+    "__type": "quote",
+    "text": "It is windy."
+  },
+  {
+    "_id": "writing_weather_examples_2",
+    "__lessons": ["writing the weather"],
+    "__order": 4,
+    "__type": "quote",
+    "text": "The weather is snowy."
+  },
+  {
+    "_id": "writing_weather_examples_3",
+    "__lessons": ["writing the weather"],
+    "__order": 5,
+    "__type": "quote",
+    "text": "It is warm today."
   }
 ]
