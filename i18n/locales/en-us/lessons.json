@@ -63,5 +63,21 @@
       "__type": "vocabulary",
       "__order": 3
     }
+  },
+  {
+    "possessive adjectives": {
+      "name": "possessive adjectives",
+      "__tags": ["possessive adjectives"],
+      "__type": "lesson",
+      "__order": 6
+    }
+  },
+  {
+    "possessive adjectives vocabulary": {
+      "name": "possessive adjectives vocabulary",
+      "__tags": ["possessive adjectives"],
+      "__type": "vocabulary",
+      "__order": 6
+    }
   }
 ]

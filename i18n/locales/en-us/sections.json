@@ -123,5 +123,64 @@
         "text": "are"
       }
     ]
+  },
+  {
+    "_id": "poss_adj_intro",
+    "__lessons": ["possessive adjectives"],
+    "__order": 0,
+    "__type": "paragraph",
+    "text": "Possessive adjectives show who owns something. In English, they are: my, your, his, her, its, our, and their. We use them before a noun."
+  },
+  {
+    "_id": "poss_adj_table",
+    "__lessons": ["possessive adjectives"],
+    "__order": 1,
+    "__type": "table",
+    "__headers": [
+      { "text": "Subject", "__type": "text" },
+      { "text": "Possessive Adjective", "__type": "text" },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "I" },
+      { "__type": "text", "text": "my" },
+      { "__type": "text", "text": "my book" },
+      { "__type": "text", "text": "you" },
+      { "__type": "text", "text": "your" },
+      { "__type": "text", "text": "your pen" },
+      { "__type": "text", "text": "he\nshe\nit" },
+      { "__type": "text", "text": "his\nher\nits" },
+      { "__type": "text", "text": "his car\nher bag\nits tail" },
+      { "__type": "text", "text": "we" },
+      { "__type": "text", "text": "our" },
+      { "__type": "text", "text": "our house" },
+      { "__type": "text", "text": "you (all)" },
+      { "__type": "text", "text": "your" },
+      { "__type": "text", "text": "your books" },
+      { "__type": "text", "text": "they" },
+      { "__type": "text", "text": "their" },
+      { "__type": "text", "text": "their dog" }
+    ]
+  },
+  {
+    "_id": "poss_adj_example_1",
+    "__lessons": ["possessive adjectives"],
+    "__order": 2,
+    "__type": "quote",
+    "text": "This is my book."
+  },
+  {
+    "_id": "poss_adj_example_2",
+    "__lessons": ["possessive adjectives"],
+    "__order": 3,
+    "__type": "quote",
+    "text": "Her bag is blue."
+  },
+  {
+    "_id": "poss_adj_example_3",
+    "__lessons": ["possessive adjectives"],
+    "__order": 4,
+    "__type": "quote",
+    "text": "Their dog is big."
   }
 ]
