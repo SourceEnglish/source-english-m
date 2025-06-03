@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, StyleSheet, Platform } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import posColors from '@/constants/constants';
 import ReadableText from '@/components/ReadableText';
 import { getIconForEntry } from '@/utils/iconMap';
+import { useRouter, useSegments } from 'expo-router';
+
+// Context to indicate if inside a VocabularyCarousel
+export const VocabularyCarouselContext = React.createContext(false);
 
 // Props and types for the inline card
 interface InlineCardPreviewProps {
@@ -12,9 +17,10 @@ interface InlineCardPreviewProps {
     word: string;
     __forced_pronunciation?: string;
   };
+  onPress?: () => void;
 }
 
-const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
+const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card, onPress }) => {
   const {
     __pos,
     word,
@@ -48,8 +54,24 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
   // Use only Platform.OS for mobile/desktop check to avoid hydration/layout mismatch
   const isMobile = Platform.OS !== 'web';
   const Icon = getIconForEntry(card);
+  const isInCarousel = useContext(VocabularyCarouselContext);
 
-  return (
+  // Expo Router navigation
+  const router = useRouter();
+  const segments = useSegments();
+
+  const handlePress = () => {
+    if (onPress) {
+      onPress();
+      return;
+    }
+    if (isInCarousel) {
+      // Only navigate to the vocab entry page, do not include "back" in the URL
+      router.push(`/vocab/${encodeURIComponent(word)}`);
+    }
+  };
+
+  const CardContent = (
     <View
       style={[
         styles.inlineCard,
@@ -84,6 +106,15 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
       )}
     </View>
   );
+
+  if (isInCarousel) {
+    return (
+      <TouchableOpacity onPress={handlePress} activeOpacity={0.7}>
+        {CardContent}
+      </TouchableOpacity>
+    );
+  }
+  return CardContent;
 };
 
 const styles = StyleSheet.create({

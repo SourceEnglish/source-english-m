@@ -10,6 +10,7 @@ import SectionVideo from '@/components/sections/SectionVideo';
 import SectionLink from '@/components/sections/SectionLink';
 import LessonLink from '@/components/sections/LessonLink';
 import Table from '@/components/sections/Table'; // <-- Add this import
+import VocabularyCarousel from '@/components/sections/VocabularyCarousel'; // <-- Add this import
 
 import { TableHeader, TableEntry } from '@/components/sections/Table';
 
@@ -72,6 +73,8 @@ const SectionRenderer = ({ section }: { section: Section }) => {
           entries={section.__entries || []}
         />
       );
+    case 'vocabularyCarousel':
+      return <VocabularyCarousel tags={section.__tags || []} />;
     // Table and other types can be added here
     default:
       return null;

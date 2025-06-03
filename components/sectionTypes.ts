@@ -12,7 +12,8 @@ export type SectionType =
   | 'subheader'
   | 'lesson_link'
   | 'table'
-  | 'section_link';
+  | 'section_link'
+  | 'vocabularyCarousel'; // Add this line
 
 export interface Section {
   __id?: string;
@@ -29,4 +30,5 @@ export interface Section {
   __section_link?: string;
   caption?: string;
   __type: SectionType;
+  __tags?: string[]; // For vocabularyCarousel
 }
