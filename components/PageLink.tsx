@@ -47,6 +47,17 @@ const PageLink: React.FC<PageLinkProps> = ({
               entry.__tags?.includes(tag)
             )
           )
+          // Sort by __display_priority if present
+          .sort((a: any, b: any) => {
+            const aHasPriority = typeof a.__display_priority === 'number';
+            const bHasPriority = typeof b.__display_priority === 'number';
+            if (aHasPriority && bHasPriority) {
+              return a.__display_priority - b.__display_priority;
+            }
+            if (aHasPriority) return -1;
+            if (bHasPriority) return 1;
+            return 0;
+          })
       : [];
   }
 
@@ -108,7 +119,9 @@ const PageLink: React.FC<PageLinkProps> = ({
       >
         <View style={{ paddingRight: 5 }}>
           {icon}
-          {lessonData && lessonData.__type === 'vocabulary' && (
+          {lessonData && lessonData.__type === 'vocabulary' &&
+            !lessonData.__tags?.includes('letters') &&
+            !lessonData.__tags?.includes('numbers') && (
             <View
               style={{
                 backgroundColor: '#176a3d',
