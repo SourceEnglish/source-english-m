@@ -765,5 +765,47 @@
     "__order": 1.51,
     "__type": "video",
     "__src": "https://www.youtube.com/watch?v=wQM_JvYyyRc"
+  },
+  {
+    "_id": "temperature_header",
+    "__lessons": ["weather"],
+    "__order": 10,
+    "__type": "header",
+    "text": "Temperature"
+  },
+  {
+    "_id": "temperature_vocab_carousel",
+    "__lessons": ["weather"],
+    "__order": 10.2,
+    "__type": "vocabularyCarousel",
+    "__tags": ["temperature"]
+  },
+  {
+    "_id": "weather_temperature_paragraph",
+    "__lessons": ["weather"],
+    "__order": 10.1,
+    "__type": "paragraph",
+    "text": "You can use temperature words with weather words to describe the weather more clearly. For example:"
+  },
+  {
+    "_id": "weather_temperature_example_1",
+    "__lessons": ["weather"],
+    "__order": 10.21,
+    "__type": "quote",
+    "text": "It is hot and sunny."
+  },
+  {
+    "_id": "weather_temperature_example_2",
+    "__lessons": ["weather"],
+    "__order": 10.22,
+    "__type": "quote",
+    "text": "It is cold and snowy."
+  },
+  {
+    "_id": "weather_temperature_example_3",
+    "__lessons": ["weather"],
+    "__order": 10.23,
+    "__type": "quote",
+    "text": "It is cool and cloudy."
   }
 ]
