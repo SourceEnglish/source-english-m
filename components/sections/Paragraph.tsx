@@ -2,10 +2,17 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import ReadableText from '../ReadableText';
 
-const Paragraph = ({ text, styling }: { text: string; styling?: string[] }) => (
+interface ParagraphProps {
+  text: string;
+  styling?: string[];
+  pronunciation?: string;
+}
+
+const Paragraph = ({ text, styling, pronunciation }: ParagraphProps) => (
   <View style={styles.container}>
     <ReadableText
       text={text}
+      pronunciation={pronunciation}
       style={{ fontSize: 16, textAlign: 'left', textIndent: 24 }}
     />
   </View>

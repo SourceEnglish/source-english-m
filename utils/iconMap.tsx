@@ -187,7 +187,8 @@ export const iconMap: Record<string, React.FC<any>> = {
   'day vocab': DayVocabIcon,
   'temperature vocab': TemperatureIcon,
   numbers: NumbersIcon,
-  'to be': ToBeIcon,
+  '"to be"': ToBeIcon,
+  '"to be" vocab': ToBeIcon,
   name: NameIcon, // Example for a custom icon
   'seasons vocab': SeasonsIcon, // Assuming seasons vocab uses the same icon as weather
   'possessive adjectives vocab': MyIcon, // Example for a custom icon

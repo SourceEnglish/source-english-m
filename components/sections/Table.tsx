@@ -6,6 +6,7 @@ import { useSpeech } from '@/contexts/SpeechContext';
 export type TableHeader = {
   text: string;
   __type: string;
+  __forced_pronunciation?: string; // Add this property
 };
 
 export type TableEntry = {
@@ -46,6 +47,7 @@ const Table: React.FC<TableProps> = ({ headers, entries }) => {
             >
               <ReadableText
                 text={header.text}
+                pronunciation={header.__forced_pronunciation}
                 style={[
                   styles.headerText,
                   readAloudMode && styles.headerTextInverted,

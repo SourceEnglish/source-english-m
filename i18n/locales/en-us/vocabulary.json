@@ -2346,5 +2346,36 @@
       "plural": "dates of birth",
       "translation_note": ""
     }
+  },
+  {
+    "am": {
+      "__pos": "verb",
+      "__tags": ["verbs", "to be"],
+      "__icon_text": "am",
+      "__show_word": false,
+      "word": "am",
+      "translation_note": ""
+    }
+  },
+  {
+    "is": {
+      "__pos": "verb",
+      "__tags": ["verbs", "to be"],
+      "__icon_text": "is",
+      "__show_word": false,
+      "word": "is",
+      "translation_note": ""
+    }
+  },
+
+  {
+    "are": {
+      "__pos": "verb",
+      "__tags": ["verbs", "to be"],
+      "__icon_text": "are",
+      "__show_word": false,
+      "word": "are",
+      "translation_note": ""
+    }
   }
 ]

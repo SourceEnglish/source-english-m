@@ -18,7 +18,11 @@ const SectionRenderer = ({ section }: { section: Section }) => {
   switch (section.__type) {
     case 'paragraph':
       return (
-        <Paragraph text={section.text || ''} styling={section.__styling} />
+        <Paragraph
+          text={section.text || ''}
+          styling={section.__styling}
+          pronunciation={section.__forced_pronunciation}
+        />
       );
     case 'header':
       return <Header text={section.text || ''} styling={section.__styling} />;
