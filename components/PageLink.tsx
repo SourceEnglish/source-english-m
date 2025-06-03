@@ -106,7 +106,39 @@ const PageLink: React.FC<PageLinkProps> = ({
           width: '100%',
         }}
       >
-        <View style={{ paddingRight: 5 }}>{icon}</View>
+        <View style={{ paddingRight: 5 }}>
+          {icon}
+          {lessonData && lessonData.__type === 'vocabulary' && (
+            <View
+              style={{
+                backgroundColor: '#176a3d',
+                borderRadius: 4,
+                paddingHorizontal: 1,
+                paddingVertical: 1,
+                marginTop: 2,
+                alignSelf: 'center',
+              }}
+            >
+              <span
+                style={{
+                  color: '#fff',
+                  fontSize: 11,
+                  textAlign: 'center',
+                  textTransform: 'uppercase',
+                  fontFamily: 'Lexend_400Regular, sans-serif',
+                  display: 'block',
+                  lineHeight: '12px',
+                  width: '100%',
+                  overflow: 'hidden',
+                  whiteSpace: 'nowrap',
+                  textOverflow: 'ellipsis',
+                }}
+              >
+                vocab
+              </span>
+            </View>
+          )}
+        </View>
         <View
           style={{
             width: 1,
