@@ -34,7 +34,7 @@ export default function CardPreview({
   vocabKey,
   cardIndex,
 }: CardPreviewProps) {
-  const { __pos, word, __forced_pronunciation, __vowel, __consonant } =
+  const { __pos, word, __forced_pronunciation, __vowel, __consonant, __show_word = true } =
     card as any;
   let borderColor = posColors[__pos] || '#000';
   let borderLeftColor = posColors[__pos] || '#000';
@@ -102,7 +102,7 @@ export default function CardPreview({
           />
         </View>
       )}
-      {__pos !== 'letter' && (
+      {__show_word !== false && __pos !== 'letter' && (
         <ReadableText
           text={word}
           pronunciation={__forced_pronunciation}

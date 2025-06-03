@@ -7,6 +7,7 @@ import { getIconForEntry } from '@/utils/iconMap';
 // Props and types for the inline card
 interface InlineCardPreviewProps {
   card: {
+    __show_word: boolean;
     __pos: string;
     word: string;
     __forced_pronunciation?: string;
@@ -14,8 +15,14 @@ interface InlineCardPreviewProps {
 }
 
 const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
-  const { __pos, word, __forced_pronunciation, __vowel, __consonant } =
-    card as any;
+  const {
+    __pos,
+    word,
+    __forced_pronunciation,
+    __vowel,
+    __consonant,
+    __show_word = true,
+  } = card as any;
   let borderColor = posColors[__pos] || '#000';
   let borderLeftColor = posColors[__pos] || '#000';
   let borderTopColor = posColors[__pos] || '#000';
@@ -47,7 +54,9 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
       style={[
         styles.inlineCard,
         { borderColor, borderLeftColor, borderTopColor, borderRadius },
-        ((__vowel || __consonant || __pos === 'number') && { borderTopWidth: borderRadius }),
+        (__vowel || __consonant || __pos === 'number') && {
+          borderTopWidth: borderRadius,
+        },
         isMobile ? styles.mobile : styles.desktop,
       ]}
     >
@@ -59,7 +68,7 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({ card }) => {
           height={isMobile ? 28 : 32}
         />
       )}
-      {__pos !== 'letter' && (
+      {__show_word && (
         <ReadableText
           text={word}
           pronunciation={__forced_pronunciation}

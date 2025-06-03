@@ -41,6 +41,7 @@ import SummerIcon from '@/assets/icons/licensed/summer.svg';
 import WinterIcon from '@/assets/icons/licensed/winter.svg';
 import NumbersIcon from '@/assets/icons/open_source/numbers.svg';
 import ToBeIcon from '@/assets/icons/open_source/to_be.svg';
+import MyIcon from '@/assets/icons/open_source/my.svg'; // Example for a custom icon
 import React from 'react';
 import { View, Text } from 'react-native';
 import ReadableText from '@/components/ReadableText'; // Add this import
@@ -67,7 +68,7 @@ export const TextIcon: React.FC<{
       text={text}
       pronunciation={pronunciation}
       style={{
-        fontSize: textsize ? textsize : 25,
+        fontSize: (textsize ? textsize : 25) * (text.length > 3 ? 0.85 : 1),
         color: '#333',
         fontWeight: '500',
         textAlign: 'center',
@@ -89,7 +90,7 @@ export const GenericTextIcon: React.FC<{ word: string; size?: number }> = ({
   <View
     style={{
       width: size,
-      height: size,
+      height: Math.max(42, size),
 
       borderRadius: size / 2,
       // backgroundColor: '#f0f0f0',
@@ -161,6 +162,8 @@ export const iconMap: Record<string, React.FC<any>> = {
   'numbers vocabulary': NumbersIcon,
   'to be': ToBeIcon,
   'seasons vocabulary': SeasonsIcon, // Assuming seasons vocabulary uses the same icon as weather
+  'possessive adjectives vocabulary': MyIcon, // Example for a custom icon
+  'possessive adjectives': MyIcon, // Example for a custom icon
   month: MonthsIcon,
   season: SeasonsIcon,
   speak: SpeakIcon,

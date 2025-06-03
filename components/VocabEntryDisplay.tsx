@@ -25,6 +25,7 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
     __forced_pronunciation,
     __vowel,
     __consonant,
+    __show_word = true,
   } = entry as any;
   let borderColor = posColors[__pos] || '#000';
   let borderLeftColor = posColors[__pos] || '#000';
@@ -68,14 +69,13 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
           />
         </View>
       )}
-      {__pos !== 'letter' && (
+      {__show_word !== false && __pos !== 'letter' && (
         <ReadableText
           text={word}
           pronunciation={__forced_pronunciation}
           style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
         />
       )}
-
       {__pos !== 'letter' && (
         <ReadableText
           text={__pos}
