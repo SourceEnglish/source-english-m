@@ -2122,6 +2122,7 @@
       "__pos": "pronoun",
       "__tags": ["subject pronouns", "singular subject pronouns"],
       "__icon_text": "I",
+      "__forced_pronunciation": "eye",
       "__show_word": false,
       "word": "I",
       "translation_note": ""

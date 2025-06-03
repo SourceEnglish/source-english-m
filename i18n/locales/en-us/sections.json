@@ -88,7 +88,7 @@
       { "text": "Example", "__type": "text" }
     ],
     "__entries": [
-      { "__type": "text", "text": "I" },
+      { "__type": "text", "text": "I", "__forced_pronunciation": "eye" },
       { "__type": "text", "text": "am" },
       { "__type": "text", "text": "I am a student." },
       {
@@ -259,7 +259,7 @@
       { "text": "Example", "__type": "text" }
     ],
     "__entries": [
-      { "__type": "text", "text": "I" },
+      { "__type": "text", "text": "I", "__forced_pronunciation": "eye" },
       { "__type": "text", "text": "my" },
       { "__type": "text", "text": "my book" },
       { "__type": "text", "text": "you" },
@@ -383,7 +383,7 @@
       { "text": "Example", "__type": "text" }
     ],
     "__entries": [
-      { "__type": "text", "text": "I" },
+      { "__type": "text", "text": "I", "__forced_pronunciation": "eye" },
       { "__type": "text", "text": "the speaker (one person)" },
       { "__type": "text", "text": "I am a student." },
       { "__type": "text", "text": "you" },
