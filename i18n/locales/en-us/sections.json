@@ -260,175 +260,275 @@
     "__src": "https://www.youtube.com/watch?v=Dr8GIp94GgA"
   },
   {
+    "_id": "personal_info_header",
+    "__lessons": ["personal information"],
+    "__order": 0,
+    "__type": "header",
+    "text": "Personal Information"
+  },
+  {
     "_id": "personal_info_intro",
     "__lessons": ["personal information"],
     "__order": 0,
     "__type": "paragraph",
     "text": "Personal information is basic information about you. You often write or say this information on forms or when meeting new people."
   },
+
   {
-    "_id": "personal_info_table",
+    "_id": "personal_info_name_header",
     "__lessons": ["personal information"],
     "__order": 1,
+    "__type": "subheader",
+    "text": "Name"
+  },
+  {
+    "_id": "personal_info_name_paragraph",
+    "__lessons": ["personal information"],
+    "__order": 1,
+    "__type": "paragraph",
+    "text": "Your name is how people identify you. It usually includes your first name, middle name, and last name."
+  },
+  {
+    "_id": "personal_info_name_carousel",
+    "__lessons": ["personal information"],
+    "__order": 1.05,
+    "__type": "vocabularyCarousel",
+    "__tags": ["personal information name"]
+  },
+  {
+    "_id": "personal_info_name_table",
+    "__lessons": ["personal information"],
+    "__order": 1.1,
     "__type": "table",
     "__headers": [
       { "text": "Term", "__type": "text" },
-      { "text": "Meaning", "__type": "text" },
-      { "text": "Example", "__type": "text" }
+      { "text": "Example", "__type": "text" },
+      { "text": "Meaning", "__type": "text" }
     ],
     "__entries": [
-      { "__type": "text", "text": "name" },
-      { "__type": "text", "text": "what you are called" },
+      { "__type": "text", "text": "name/\nfull name" },
       { "__type": "text", "text": "Anna Marie Smith " },
+      {
+        "__type": "text",
+        "text": "your first name, last name, and middle name"
+      },
       { "__type": "text", "text": "first name" },
-      { "__type": "text", "text": "your given name" },
       { "__type": "text", "text": "Anna" },
-      { "__type": "text", "text": "last name" },
-      { "__type": "text", "text": "your family name" },
-      { "__type": "text", "text": "Smith" },
+      { "__type": "text", "text": "your given name" },
       { "__type": "text", "text": "middle name" },
-      { "__type": "text", "text": "the name between your first and last name" },
       { "__type": "text", "text": "Marie" },
+      { "__type": "text", "text": "the name between your first and last name" },
+      { "__type": "text", "text": "last name" },
+      { "__type": "text", "text": "Smith" },
+      { "__type": "text", "text": "your family name or surname" }
+    ]
+  },
+
+  {
+    "_id": "personal_info_address_subheader",
+    "__lessons": ["personal information"],
+    "__order": 1.15,
+    "__type": "subheader",
+    "text": "Address"
+  },
+  {
+    "_id": "personal_info_address_paragraph",
+    "__lessons": ["personal information"],
+    "__order": 1.15,
+    "__type": "paragraph",
+    "text": "Your address tells where you live. It usually includes your house number, street, apartment / unit number, city, state, and ZIP code."
+  },
+  {
+    "_id": "personal_info_address_carousel",
+    "__lessons": ["personal information"],
+    "__order": 1.17,
+    "__type": "vocabularyCarousel",
+    "__tags": ["personal information address"]
+  },
+  {
+    "_id": "personal_info_address_table",
+    "__lessons": ["personal information"],
+    "__order": 1.2,
+    "__type": "table",
+    "__headers": [
+      { "text": "Term", "__type": "text" },
+      { "text": "Example", "__type": "text" },
+      { "text": "Meaning", "__type": "text" }
+    ],
+    "__entries": [
       { "__type": "text", "text": "address" },
+      {
+        "__type": "text",
+        "text": "123 Main St. APT A13\nSeattle, WA 98101",
+        "__forced_pronunciation": "123 Main street apartment A13 Seattle, Washington 98101"
+      },
       { "__type": "text", "text": "where you live" },
-      { "__type": "text", "text": "My address is 123 Main St." },
       { "__type": "text", "text": "house number" },
+      { "__type": "text", "text": "123" },
       { "__type": "text", "text": "the number of your house or building" },
-      { "__type": "text", "text": "The house number is 123." },
       { "__type": "text", "text": "street name" },
+      { "__type": "text", "text": "Main Street\nMain St.\nMain St" },
       { "__type": "text", "text": "the name of your street" },
-      { "__type": "text", "text": "The street name is Main St." },
-      { "__type": "text", "text": "apartment number" },
-      { "__type": "text", "text": "the number of your apartment" },
-      { "__type": "text", "text": "APT A13" },
-      { "__type": "text", "text": "unit number" },
-      { "__type": "text", "text": "the number of your unit" },
-      { "__type": "text", "text": "UNIT 45" },
+      { "__type": "text", "text": "apartment number/\nunit number" },
+      {
+        "__type": "text",
+        "text": "APT A13\nApt A13\nApartment A13\nApt. A13\n#A13",
+        "__forced_pronunciation": "Apartment A thirteen"
+      },
+      {
+        "__type": "text",
+        "text": "the number of your apartment or unit"
+      },
+
       { "__type": "text", "text": "city" },
-      { "__type": "text", "text": "the city where you live" },
       { "__type": "text", "text": "Seattle" },
+      { "__type": "text", "text": "the city where you live" },
       { "__type": "text", "text": "state" },
-      { "__type": "text", "text": "the state where you live" },
       {
         "__type": "text",
         "text": "Washington\nWA",
         "__forced_pronunciation": "Washington"
       },
+      { "__type": "text", "text": "the state where you live" },
       { "__type": "text", "text": "ZIP code" },
-      { "__type": "text", "text": "the postal code for your area" },
       { "__type": "text", "text": "98101" },
-      { "__type": "text", "text": "email address" },
-      { "__type": "text", "text": "your electronic mail address" },
-      { "__type": "text", "text": "tom98@gmail.com" },
-      { "__type": "text", "text": "phone number" },
-      { "__type": "text", "text": "your telephone number" },
-      { "__type": "text", "text": "(253) 555-1234" },
-      { "__type": "text", "text": "telephone number" },
-      { "__type": "text", "text": "your telephone number" },
-      { "__type": "text", "text": "(253) 555-1234" },
-      { "__type": "text", "text": "date of birth" },
-      { "__type": "text", "text": "the day you were born" },
       {
         "__type": "text",
-        "text": "January 13, 1990\n01/13/1990",
-        "__forced_pronunciation": "January thirteenth, ninteen ninety"
+        "text": "the ZIP code for your area"
       }
-    ]
-  },
-  {
-    "_id": "personal_info_example_1",
-    "__lessons": ["personal information"],
-    "__order": 2,
-    "__type": "quote",
-    "text": "My name is John."
-  },
-  {
-    "_id": "personal_info_example_2",
-    "__lessons": ["personal information"],
-    "__order": 3,
-    "__type": "quote",
-    "text": "My address is 456 Oak Avenue."
-  },
-  {
-    "_id": "personal_info_example_3",
-    "__lessons": ["personal information"],
-    "__order": 4,
-    "__type": "quote",
-    "text": "My phone number is 555-6789."
-  },
-  {
-    "_id": "personal_info_example_4",
-    "__lessons": ["personal information"],
-    "__order": 5,
-    "__type": "quote",
-    "text": "My date of birth is March 5, 1985."
-  },
-  {
-    "_id": "writing_weather_intro",
-    "__lessons": ["writing the weather"],
-    "__order": 0,
-    "__type": "paragraph",
-    "text": "You can ask and answer about the weather using simple sentences. Here are some common ways to ask and answer about the weather."
-  },
-  {
-    "_id": "writing_weather_questions",
-    "__lessons": ["writing the weather"],
-    "__order": 1,
-    "__type": "table",
-    "__headers": [
-      { "text": "Question", "__type": "text" },
-      { "text": "Answer", "__type": "text" }
-    ],
-    "__entries": [
-      { "__type": "text", "text": "How is the weather?" },
-      { "__type": "text", "text": "It is sunny." },
-      { "__type": "text", "text": "How is the weather today?" },
-      { "__type": "text", "text": "It is rainy today." },
-      { "__type": "text", "text": "What is the weather like?" },
-      { "__type": "text", "text": "The weather is cloudy." }
     ]
   },
 
   {
-    "_id": "vocabulary_carousel_example",
-    "__lessons": ["writing the weather"],
+    "_id": "personal_info_other_subheader",
+    "__lessons": ["personal information"],
+    "__order": 1.25,
+    "__type": "subheader",
+    "text": "Other"
+  },
+  {
+    "_id": "personal_info_other_paragraph",
+    "__lessons": ["personal information"],
+    "__order": 1.25,
+    "__type": "paragraph",
+    "text": "Other personal information includes your email address, phone number, and date of birth."
+  },
+  {
+    "_id": "personal_info_other_carousel",
+    "__lessons": ["personal information"],
+    "__order": 1.27,
+    "__type": "vocabularyCarousel",
+    "__tags": ["personal information other"]
+  },
+  {
+    "_id": "personal_info_other_table",
+    "__lessons": ["personal information"],
+    "__order": 1.3,
+    "__type": "table",
+    "__headers": [
+      { "text": "Term", "__type": "text" },
+      { "text": "Example(s)", "__type": "text" },
+      { "text": "Meaning", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "email address" },
+      { "__type": "text", "text": "tom98@gmail.com" },
+      { "__type": "text", "text": "your electronic mail address" },
+      { "__type": "text", "text": "phone number/\ntelephone number" },
+      { "__type": "text", "text": "(253) 555-1234" },
+      { "__type": "text", "text": "your telephone number" },
+      {
+        "__type": "text",
+        "text": "date of birth/\nDOB",
+        "__forced_pronunciation": "date of birth"
+      },
+      {
+        "__type": "text",
+        "text": "January 13, 1990\n01/13/1990",
+        "__forced_pronunciation": "January thirteenth, ninteen ninety"
+      },
+      { "__type": "text", "text": "the day you were born" }
+    ]
+  },
+
+  {
+    "_id": "weather",
+    "__lessons": ["weather"],
+    "__order": 0,
+    "__type": "header",
+    "text": "Weather"
+  },
+
+  {
+    "_id": "weather_carousel",
+    "__lessons": ["weather"],
     "__order": 0,
     "__type": "vocabularyCarousel",
     "__tags": ["weather"]
   },
   {
-    "_id": "writing_weather_patterns",
-    "__lessons": ["writing the weather"],
-    "__order": 2,
+    "_id": "weather_intro",
+    "__lessons": ["weather"],
+    "__order": 0,
     "__type": "paragraph",
-    "text": "To answer, use:\n- 'It is [weather word].'\n- 'The weather is [weather word].'\nFor example: 'It is hot.' or 'The weather is cold.'"
+    "text": "You can ask and answer about the weather using simple sentences. Here are some common ways to ask and answer about the weather."
+  },
+
+  {
+    "_id": "writing_weather_question_subheader",
+    "__lessons": ["weather"],
+    "__order": 1,
+    "__type": "subheader",
+    "text": "Questions"
   },
   {
-    "_id": "writing_weather_combine",
-    "__lessons": ["writing the weather"],
-    "__order": 2.5,
-    "__type": "paragraph",
-    "text": "You can also combine the weather and temperature in one sentence. For example: 'It is sunny and hot.'"
+    "_id": "writing_weather_question_examples_1",
+    "__lessons": ["weather"],
+    "__order": 3,
+    "__type": "quote",
+    "text": "How is the weather?"
+  },
+  {
+    "_id": "writing_weather_question_examples_2",
+    "__lessons": ["weather"],
+    "__order": 3,
+    "__type": "quote",
+    "text": "How is the weather today?"
+  },
+  {
+    "_id": "writing_weather_question_examples_3",
+    "__lessons": ["weather"],
+    "__order": 3,
+    "__type": "quote",
+    "text": "What is the weather like?"
+  },
+
+  {
+    "_id": "writing_weather_answer_subheader",
+    "__lessons": ["weather"],
+    "__order": 4,
+    "__type": "subheader",
+    "text": "Answers"
   },
   {
     "_id": "writing_weather_examples",
-    "__lessons": ["writing the weather"],
-    "__order": 3,
-    "__type": "quote",
-    "text": "It is windy."
-  },
-  {
-    "_id": "writing_weather_examples_2",
-    "__lessons": ["writing the weather"],
+    "__lessons": ["weather"],
     "__order": 4,
     "__type": "quote",
-    "text": "The weather is snowy."
+    "text": "It is rainy."
   },
   {
     "_id": "writing_weather_examples_3",
-    "__lessons": ["writing the weather"],
-    "__order": 5,
+    "__lessons": ["weather"],
+    "__order": 4,
     "__type": "quote",
-    "text": "It is warm today."
+    "text": "It's cloudy."
+  },
+  {
+    "_id": "writing_weather_examples_2",
+    "__lessons": ["weather"],
+    "__order": 4,
+    "__type": "quote",
+    "text": "The weather is sunny."
   }
 ]

@@ -8,19 +8,11 @@
     }
   },
   {
-    "numbers vocabulary": {
-      "name": "numbers vocabulary",
+    "numbers": {
+      "name": "numbers",
       "__tags": ["numbers"],
       "__type": "vocabulary",
-      "__order": 1
-    }
-  },
-  {
-    "to be": {
-      "name": "to be",
-      "__tags": ["to be"],
-      "__type": "lesson",
-      "__order": 1
+      "__order": 2
     }
   },
   {
@@ -28,7 +20,7 @@
       "name": "day vocabulary",
       "__tags": ["days"],
       "__type": "vocabulary",
-      "__order": 4
+      "__order": 3
     }
   },
   {
@@ -36,7 +28,7 @@
       "name": "months vocabulary",
       "__tags": ["months"],
       "__type": "vocabulary",
-      "__order": 5
+      "__order": 4
     }
   },
   {
@@ -44,16 +36,15 @@
       "name": "seasons vocabulary",
       "__tags": ["seasons"],
       "__type": "vocabulary",
-      "__order": 2
+      "__order": 5
     }
   },
-
   {
     "weather vocabulary": {
       "name": "weather vocabulary",
       "__tags": ["weather"],
       "__type": "vocabulary",
-      "__order": 4
+      "__order": 6
     }
   },
   {
@@ -61,47 +52,15 @@
       "name": "temperature vocabulary",
       "__tags": ["temperature"],
       "__type": "vocabulary",
-      "__order": 3
-    }
-  },
-  {
-    "possessive adjectives": {
-      "name": "possessive adjectives",
-      "__tags": ["possessive adjectives"],
-      "__type": "lesson",
-      "__order": 6
-    }
-  },
-  {
-    "possessive adjectives vocabulary": {
-      "name": "possessive adjectives vocabulary",
-      "__tags": ["possessive adjectives"],
-      "__type": "vocabulary",
-      "__order": 6
-    }
-  },
-  {
-    "subject pronouns": {
-      "name": "subject pronouns",
-      "__tags": ["subject pronouns"],
-      "__type": "lesson",
-      "__order": 2
-    }
-  },
-  {
-    "subject pronouns vocabulary": {
-      "name": "subject pronouns vocabulary",
-      "__tags": ["subject pronouns"],
-      "__type": "vocabulary",
-      "__order": 2
-    }
-  },
-  {
-    "personal information": {
-      "name": "personal information",
-      "__tags": ["personal information"],
-      "__type": "lesson",
       "__order": 7
+    }
+  },
+  {
+    "weather": {
+      "name": "weather",
+      "__tags": ["weather"],
+      "__type": "lesson",
+      "__order": 8
     }
   },
   {
@@ -109,15 +68,55 @@
       "name": "personal information vocabulary",
       "__tags": ["personal information"],
       "__type": "vocabulary",
-      "__order": 7
+      "__order": 9
     }
   },
   {
-    "writing the weather": {
-      "name": "writing the weather",
-      "__tags": ["weather"],
+    "personal information": {
+      "name": "personal information",
+      "__tags": ["personal information"],
       "__type": "lesson",
-      "__order": 8
+      "__order": 10
+    }
+  },
+  {
+    "subject pronouns vocabulary": {
+      "name": "subject pronouns vocabulary",
+      "__tags": ["subject pronouns"],
+      "__type": "vocabulary",
+      "__order": 11
+    }
+  },
+  {
+    "subject pronouns": {
+      "name": "subject pronouns",
+      "__tags": ["subject pronouns"],
+      "__type": "lesson",
+      "__order": 12
+    }
+  },
+  {
+    "to be": {
+      "name": "to be",
+      "__tags": ["to be"],
+      "__type": "lesson",
+      "__order": 13
+    }
+  },
+  {
+    "possessive adjectives vocabulary": {
+      "name": "possessive adjectives vocabulary",
+      "__tags": ["possessive adjectives"],
+      "__type": "vocabulary",
+      "__order": 14
+    }
+  },
+  {
+    "possessive adjectives": {
+      "name": "possessive adjectives",
+      "__tags": ["possessive adjectives"],
+      "__type": "lesson",
+      "__order": 15
     }
   }
 ]

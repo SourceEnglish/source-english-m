@@ -776,6 +776,18 @@
     }
   },
   {
+    "zero": {
+      "__pos": "number",
+      "__count": "countable",
+      "__tags": ["numbers"],
+      "__forced_pronunciation": "zero",
+      "__icon_text": "0",
+      "word": "zero",
+      "plural": "zeroes",
+      "translation_note": ""
+    }
+  },
+  {
     "one": {
       "__pos": "number",
       "__count": "countable",
@@ -2178,7 +2190,8 @@
   {
     "name": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information name"],
+      "__display_priority": 1,
       "word": "name",
       "plural": "names",
       "translation_note": ""
@@ -2187,34 +2200,39 @@
   {
     "first name": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information name"],
+      "__icon_text": "First",
       "word": "first name",
       "plural": "first names",
       "translation_note": ""
     }
   },
   {
-    "last name": {
-      "__pos": "noun",
-      "__tags": ["personal information"],
-      "word": "last name",
-      "plural": "last names",
-      "translation_note": ""
-    }
-  },
-  {
     "middle name": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information name"],
+      "__icon_text": "Middle",
       "word": "middle name",
       "plural": "middle names",
       "translation_note": ""
     }
   },
   {
+    "last name": {
+      "__pos": "noun",
+      "__tags": ["personal information", "personal information name"],
+      "__icon_text": "Last",
+      "word": "last name",
+      "plural": "last names",
+      "translation_note": ""
+    }
+  },
+
+  {
     "address": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information address"],
+      "__display_priority": 2,
       "word": "address",
       "plural": "addresses",
       "translation_note": ""
@@ -2223,25 +2241,26 @@
   {
     "house number": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information address"],
       "word": "house number",
       "plural": "house numbers",
       "translation_note": ""
     }
   },
   {
-    "street name": {
+    "street": {
       "__pos": "noun",
-      "__tags": ["personal information"],
-      "word": "street name",
-      "plural": "street names",
+      "__tags": ["personal information", "personal information address"],
+      "word": "street",
+      "plural": "streets",
       "translation_note": ""
     }
   },
   {
     "apartment number": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information address"],
+      "__forced_pronunciation": "apartment number",
       "word": "apartment number",
       "plural": "apartment numbers",
       "translation_note": ""
@@ -2250,7 +2269,7 @@
   {
     "unit number": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information address"],
       "word": "unit number",
       "plural": "unit numbers",
       "translation_note": ""
@@ -2259,7 +2278,7 @@
   {
     "city": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information address"],
       "word": "city",
       "plural": "cities",
       "translation_note": ""
@@ -2268,7 +2287,7 @@
   {
     "state": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information address"],
       "word": "state",
       "plural": "states",
       "translation_note": ""
@@ -2277,7 +2296,9 @@
   {
     "ZIP code": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information address"],
+      "__icon_text": "ZIP",
+      "__forced_pronunciation": "zip code",
       "word": "ZIP code",
       "plural": "ZIP codes",
       "translation_note": ""
@@ -2286,7 +2307,7 @@
   {
     "email address": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information other"],
       "word": "email address",
       "plural": "email addresses",
       "translation_note": ""
@@ -2295,7 +2316,8 @@
   {
     "phone number": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information other"],
+      "__display_priority": 3,
       "word": "phone number",
       "plural": "phone numbers",
       "translation_note": ""
@@ -2304,7 +2326,7 @@
   {
     "telephone number": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information other"],
       "word": "telephone number",
       "plural": "telephone numbers",
       "translation_note": ""
@@ -2313,7 +2335,9 @@
   {
     "date of birth": {
       "__pos": "noun",
-      "__tags": ["personal information"],
+      "__tags": ["personal information", "personal information other"],
+      "__icon_text": "DOB",
+      "__forced_pronunciation": "date of birth",
       "word": "date of birth",
       "plural": "dates of birth",
       "translation_note": ""
