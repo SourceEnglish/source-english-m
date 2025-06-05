@@ -19,7 +19,8 @@
     "__lessons": ["to be"],
     "__order": 0,
     "__type": "header",
-    "text": "\"To Be\""
+    "text": "\"To Be\"",
+    "__forced_pronunciation": "two bee"
   },
   {
     "_id": "to_be_vocab_carousel",
@@ -33,7 +34,8 @@
     "__lessons": ["to be"],
     "__order": 0,
     "__type": "paragraph",
-    "text": "The verb 'to be' is very important in English. We use 'am', 'is', and 'are' to talk about who someone is, how someone is, or what something is. For example:"
+    "text": "The verb 'to be' is very important in English. We use 'am', 'is', and 'are' to talk about who someone is, how someone is, or what something is. For example:",
+    "__forced_pronunciation": "The verb 'two bee' is very important in English. We use 'am', 'is', and 'are' to talk about who someone is, how someone is, or what something is. For example:"
   },
   {
     "_id": "to_be_example_1",
@@ -61,7 +63,7 @@
     "_id": "to_be_singular_header",
     "__lessons": ["to be"],
     "__order": 0.91,
-    "__type": "subheader",
+    "__type": "header",
     "text": "Singular Forms of \"To Be\" (1)",
     "__forced_pronunciation": "Singular Forms of to be"
   },
@@ -70,9 +72,25 @@
     "__lessons": ["to be"],
     "__order": 0.92,
     "__type": "paragraph",
-    "text": "Use 'am' with 'I', 'is' with he, she, it, or one person or thing, and 'are' with you (singular).",
-    "__forced_pronunciation": "Use 'am' with 'I', 'is' with he, she, it, or one person or thing, and 'are' with you."
+    "text": "Use 'am' with 'I'.",
+    "__forced_pronunciation": "Use 'am' with I."
   },
+  {
+    "_id": "to_be_singular_paragraph_2",
+    "__lessons": ["to be"],
+    "__order": 0.92,
+    "__type": "paragraph",
+    "text": "Use 'are' with 'you'.",
+    "__forced_pronunciation": "Use 'R' with you."
+  },
+  {
+    "_id": "to_be_singular_paragraph_3",
+    "__lessons": ["to be"],
+    "__order": 0.92,
+    "__type": "paragraph",
+    "text": "Use 'is' with 'he', 'she', 'it', one person (Tom or Kim), or one thing (cat or box)."
+  },
+
   {
     "_id": "to_be_singular_table",
     "__lessons": ["to be"],
@@ -84,7 +102,11 @@
         "__type": "text",
         "__forced_pronunciation": "singular subject"
       },
-      { "text": "'To Be'", "__type": "text" },
+      {
+        "text": "'To Be'",
+        "__type": "text",
+        "__forced_pronunciation": "two bee"
+      },
       { "text": "Example", "__type": "text" }
     ],
     "__entries": [
@@ -168,9 +190,9 @@
     "_id": "to_be_plural_header",
     "__lessons": ["to be"],
     "__order": 0.94,
-    "__type": "subheader",
+    "__type": "header",
     "text": "Plural Forms of \"To Be\" (2+)",
-    "__forced_pronunciation": "Plural Forms of to be"
+    "__forced_pronunciation": "Plural Forms of two bee"
   },
   {
     "_id": "to_be_plural_paragraph",
@@ -191,7 +213,11 @@
         "__type": "text",
         "__forced_pronunciation": "Plural Subject"
       },
-      { "text": "'To Be'", "__type": "text" },
+      {
+        "text": "'To Be'",
+        "__type": "text",
+        "__forced_pronunciation": "two bee"
+      },
       { "text": "Example", "__type": "text" }
     ],
     "__entries": [
