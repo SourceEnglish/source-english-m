@@ -22,10 +22,17 @@ const SectionRenderer = ({ section }: { section: Section }) => {
           text={section.text || ''}
           styling={section.__styling}
           pronunciation={section.__forced_pronunciation}
+          indentation={section.__indentation}
         />
       );
     case 'header':
-      return <Header text={section.text || ''} styling={section.__styling} />;
+      return (
+        <Header
+          text={section.text || ''}
+          styling={section.__styling}
+          __forced_pronunciation={section.__forced_pronunciation}
+        />
+      );
     case 'subheader':
       return (
         <Subheader

@@ -29,6 +29,7 @@ export interface Section {
   __entries?: TableEntry[];
   __lesson_link?: string;
   __section_link?: string;
+  __indentation?: boolean; // For paragraph indentation
   caption?: string;
   __type: SectionType;
   __tags?: string[]; // For vocabularyCarousel

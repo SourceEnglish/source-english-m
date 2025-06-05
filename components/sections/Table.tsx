@@ -6,7 +6,7 @@ import { useSpeech } from '@/contexts/SpeechContext';
 export type TableHeader = {
   text: string;
   __type: string;
-  __forced_pronunciation?: string; // Add this property
+  __forced_pronunciation?: string;
 };
 
 export type TableEntry = {

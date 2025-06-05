@@ -6,14 +6,24 @@ interface ParagraphProps {
   text: string;
   styling?: string[];
   pronunciation?: string;
+  indentation?: boolean;
 }
 
-const Paragraph = ({ text, styling, pronunciation }: ParagraphProps) => (
+const Paragraph = ({
+  text,
+  styling,
+  pronunciation,
+  indentation = false,
+}: ParagraphProps) => (
   <View style={styles.container}>
     <ReadableText
       text={text}
       pronunciation={pronunciation}
-      style={{ fontSize: 16, textAlign: 'left', textIndent: 24 }}
+      style={{
+        fontSize: 16,
+        textAlign: 'left',
+        textIndent: indentation ? 24 : 0,
+      }}
     />
   </View>
 );

@@ -2,10 +2,20 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import ReadableText from '../ReadableText';
 
-const Header = ({ text, styling }: { text: string; styling?: string[] }) => (
+interface HeaderProps {
+  text: string;
+  styling?: string[];
+  __forced_pronunciation?: string;
+}
+
+const Header = ({ text, styling, __forced_pronunciation }: HeaderProps) => (
   <>
     <View style={styles.container}>
-      <ReadableText text={text} style={{ fontSize: 28, fontWeight: 'bold' }} />
+      <ReadableText
+        text={text}
+        pronunciation={__forced_pronunciation}
+        style={{ fontSize: 28, fontWeight: 'bold' }}
+      />
     </View>
     <View style={styles.hr} />
   </>
@@ -13,7 +23,8 @@ const Header = ({ text, styling }: { text: string; styling?: string[] }) => (
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 6,
+    marginTop: 16,
+
     alignItems: 'flex-start',
   },
   hr: {
@@ -21,7 +32,7 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: '#bbb',
     marginTop: 12,
-    marginBottom: 12,
+    marginBottom: 6,
   },
 });
 
