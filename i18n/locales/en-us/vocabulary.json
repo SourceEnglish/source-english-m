@@ -2355,7 +2355,7 @@
   {
     "am": {
       "__pos": "verb",
-      "__tags": ["verbs", "to be"],
+      "__tags": ["verbs", "to be", "to be singular"],
       "__icon_text": "am",
       "__show_word": false,
       "word": "am",
@@ -2363,9 +2363,19 @@
     }
   },
   {
+    "are": {
+      "__pos": "verb",
+      "__tags": ["verbs", "to be", "to be singular", "to be plural"],
+      "__icon_text": "are",
+      "__show_word": false,
+      "word": "are",
+      "translation_note": ""
+    }
+  },
+  {
     "is": {
       "__pos": "verb",
-      "__tags": ["verbs", "to be"],
+      "__tags": ["verbs", "to be", "to be singular"],
       "__icon_text": "is",
       "__show_word": false,
       "word": "is",
@@ -2373,16 +2383,6 @@
     }
   },
 
-  {
-    "are": {
-      "__pos": "verb",
-      "__tags": ["verbs", "to be"],
-      "__icon_text": "are",
-      "__show_word": false,
-      "word": "are",
-      "translation_note": ""
-    }
-  },
   {
     "red": {
       "__pos": "adjective",
