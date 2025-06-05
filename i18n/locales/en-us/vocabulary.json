@@ -2378,5 +2378,95 @@
       "word": "are",
       "translation_note": ""
     }
+  },
+  {
+    "red": {
+      "__pos": "adjective",
+      "__tags": ["colors"],
+      "word": "red",
+      "translation_note": ""
+    }
+  },
+  {
+    "blue": {
+      "__pos": "adjective",
+      "__tags": ["colors"],
+      "word": "blue",
+      "translation_note": ""
+    }
+  },
+  {
+    "yellow": {
+      "__pos": "adjective",
+      "__tags": ["colors"],
+      "word": "yellow",
+      "translation_note": ""
+    }
+  },
+  {
+    "green": {
+      "__pos": "adjective",
+      "__tags": ["colors"],
+      "word": "green",
+      "translation_note": ""
+    }
+  },
+  {
+    "orange": {
+      "__pos": "adjective",
+      "__tags": ["colors"],
+      "word": "orange",
+      "translation_note": ""
+    }
+  },
+  {
+    "purple": {
+      "__pos": "adjective",
+      "__tags": ["colors"],
+      "word": "purple",
+      "translation_note": ""
+    }
+  },
+  {
+    "brown": {
+      "__pos": "adjective",
+      "__tags": ["colors"],
+      "word": "brown",
+      "translation_note": ""
+    }
+  },
+  {
+    "pink": {
+      "__pos": "adjective",
+      "__tags": ["colors"],
+      "word": "pink",
+      "translation_note": ""
+    }
+  },
+  {
+    "white": {
+      "__pos": "adjective",
+      "__tags": ["colors"],
+      "word": "white",
+      "translation_note": ""
+    }
+  },
+  {
+    "black": {
+      "__pos": "adjective",
+      "__tags": ["colors"],
+      "word": "black",
+      "translation_note": ""
+    }
+  },
+  {
+    "color": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": ["colors"],
+      "word": "color",
+      "plural": "colors",
+      "translation_note": ""
+    }
   }
 ]

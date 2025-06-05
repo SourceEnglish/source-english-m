@@ -40,19 +40,12 @@
     }
   },
   {
-    "weather vocab": {
-      "name": "weather vocab",
-      "__tags": ["weather"],
+    "colors vocab": {
+      "name": "colors vocab",
+      "__tags": ["colors"],
       "__type": "vocabulary",
-      "__order": 6
-    }
-  },
-  {
-    "temperature vocab": {
-      "name": "temperature vocab",
-      "__tags": ["temperature"],
-      "__type": "vocabulary",
-      "__order": 7
+      "__order": 5.5,
+      "__hidden": false
     }
   },
   {
@@ -60,15 +53,23 @@
       "name": "weather",
       "__tags": ["weather"],
       "__type": "lesson",
-      "__order": 8
+      "__order": 6
     }
   },
   {
-    "personal information vocab": {
-      "name": "personal information vocab",
-      "__tags": ["personal information"],
+    "weather vocab": {
+      "name": "weather vocab",
+      "__tags": ["weather"],
       "__type": "vocabulary",
-      "__order": 9
+      "__order": 7
+    }
+  },
+  {
+    "temperature vocab": {
+      "name": "temperature vocab",
+      "__tags": ["temperature"],
+      "__type": "vocabulary",
+      "__order": 8
     }
   },
   {
@@ -76,15 +77,15 @@
       "name": "personal information",
       "__tags": ["personal information"],
       "__type": "lesson",
-      "__order": 10
+      "__order": 9
     }
   },
   {
-    "subject pronouns vocab": {
-      "name": "subject pronouns vocab",
-      "__tags": ["subject pronouns"],
+    "personal information vocab": {
+      "name": "personal information vocab",
+      "__tags": ["personal information"],
       "__type": "vocabulary",
-      "__order": 11
+      "__order": 10
     }
   },
   {
@@ -92,15 +93,15 @@
       "name": "subject pronouns",
       "__tags": ["subject pronouns"],
       "__type": "lesson",
-      "__order": 12
+      "__order": 11
     }
   },
   {
-    "to be vocab": {
-      "name": "to be vocab",
-      "__tags": ["to be"],
+    "subject pronouns vocab": {
+      "name": "subject pronouns vocab",
+      "__tags": ["subject pronouns"],
       "__type": "vocabulary",
-      "__order": 13
+      "__order": 12
     }
   },
   {
@@ -112,11 +113,19 @@
     }
   },
   {
+    "to be vocab": {
+      "name": "to be vocab",
+      "__tags": ["to be"],
+      "__type": "vocabulary",
+      "__order": 14
+    }
+  },
+  {
     "possessive adjectives vocab": {
       "name": "possessive adjectives vocab",
       "__tags": ["possessive adjectives"],
       "__type": "vocabulary",
-      "__order": 14,
+      "__order": 15,
       "__hidden": true
     }
   },
@@ -125,7 +134,7 @@
       "name": "possessive adjectives",
       "__tags": ["possessive adjectives"],
       "__type": "lesson",
-      "__order": 15,
+      "__order": 16,
       "__hidden": true
     }
   }

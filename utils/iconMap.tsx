@@ -53,6 +53,19 @@ import StreetIcon from '@/assets/icons/licensed/street.svg'; // Example for a cu
 import YouIcon from '@/assets/icons/open_source/you.svg'; // Example for a custom icon
 import NameIcon from '@/assets/icons/licensed/name.svg'; // Example for a custom icon
 import HouseNumber from '@/assets/icons/licensed/house_number.svg'; // Example for a custom icon
+import Red from '@/assets/icons/licensed/red.svg'; // Example for a custom icon
+import Blue from '@/assets/icons/licensed/blue.svg';
+import Yellow from '@/assets/icons/licensed/yellow.svg';
+import Green from '@/assets/icons/licensed/green.svg';
+import Orange from '@/assets/icons/licensed/orange.svg';
+import Purple from '@/assets/icons/licensed/purple.svg';
+import Brown from '@/assets/icons/licensed/brown.svg';
+import Pink from '@/assets/icons/licensed/pink.svg';
+import White from '@/assets/icons/licensed/white.svg';
+import Black from '@/assets/icons/licensed/black.svg';
+import ColorIcon from '@/assets/icons/licensed/color.svg'; // Example for a custom icon
+import ColorWheelIcon from '@/assets/icons/licensed/color_wheel.svg'; // Example for a custom icon
+
 import React from 'react';
 import { View, Text } from 'react-native';
 import ReadableText from '@/components/ReadableText'; // Add this import
@@ -198,6 +211,18 @@ export const iconMap: Record<string, React.FC<any>> = {
   'personal information vocab': NameIcon, // Example for a custom icon
   'phone number': PhoneNumber, // Example for a custom icon
   'telephone number': PhoneNumber, // Example for a custom icon
+  red: Red,
+  blue: Blue,
+  yellow: Yellow,
+  green: Green,
+  orange: Orange,
+  purple: Purple,
+  brown: Brown,
+  pink: Pink,
+  white: White,
+  black: Black,
+  color: ColorWheelIcon, // Example for a custom icon
+  'colors vocab': ColorIcon, // Example for a custom icon
 
   'subject pronouns vocab': YouIcon, // Example for a custom icon
   month: MonthsIcon,
