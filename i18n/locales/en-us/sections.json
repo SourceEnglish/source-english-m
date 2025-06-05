@@ -22,20 +22,14 @@
     "__forced_pronunciation": "two bee"
   },
   {
-    "_id": "to_be_vocab_carousel",
-    "__lessons": ["to be"],
-    "__order": 4,
-    "__type": "vocabularyCarousel",
-    "__tags": ["to be"]
-  },
-  {
     "_id": "to_be_usage_intro",
     "__lessons": ["to be"],
-    "__order": 5,
+    "__order": 4,
     "__type": "paragraph",
     "text": "The verb 'to be' is very important in English. We use 'am', 'is', and 'are' to talk about who someone is, how someone is, or what something is. For example:",
     "__forced_pronunciation": "The verb 'two bee' is very important in English. We use 'am', 'is', and 'are' to talk about who someone is, how someone is, or what something is. For example:"
   },
+
   {
     "_id": "to_be_example_1",
     "__lessons": ["to be"],
@@ -64,6 +58,14 @@
     "__type": "header",
     "text": "Singular Forms of \"To Be\" (1)",
     "__forced_pronunciation": "Singular Forms of to be"
+  },
+
+  {
+    "_id": "to_be_vocab_carousel",
+    "__lessons": ["to be"],
+    "__order": 9.5,
+    "__type": "vocabularyCarousel",
+    "__tags": ["to be singular"]
   },
   {
     "_id": "to_be_singular_paragraph",
@@ -192,6 +194,13 @@
     "__forced_pronunciation": "Plural Forms of two bee"
   },
   {
+    "_id": "to_be_vocab_carousel_plural",
+    "__lessons": ["to be"],
+    "__order": 21.5,
+    "__type": "vocabularyCarousel",
+    "__tags": ["to be plural"]
+  },
+  {
     "_id": "to_be_plural_paragraph",
     "__lessons": ["to be"],
     "__order": 22,
@@ -277,7 +286,29 @@
     "__lessons": ["possessive adjectives"],
     "__order": 28,
     "__type": "paragraph",
-    "text": "Possessive adjectives show who owns something. In English, they are: my, your, his, her, its, our, and their. We use them before a noun."
+    "text": "Possessive adjectives show who owns something. In English, they are: 'my', 'your', 'his', 'her', 'its', 'our', and 'their'. We use them before a noun.",
+    "__forced_pronunciation": "Possessive adjectives show who owns something. In English, they are: my, yore, his, her, its, our, and their. We use them before a noun."
+  },
+  {
+    "_id": "poss_adj_intro_example_1",
+    "__lessons": ["possessive adjectives"],
+    "__order": 28.01,
+    "__type": "quote",
+    "text": "My name is Tom."
+  },
+  {
+    "_id": "poss_adj_intro_example_2",
+    "__lessons": ["possessive adjectives"],
+    "__order": 28.02,
+    "__type": "quote",
+    "text": "Her book is big."
+  },
+  {
+    "_id": "poss_adj_intro_example_3",
+    "__lessons": ["possessive adjectives"],
+    "__order": 28.03,
+    "__type": "quote",
+    "text": "His car is red."
   },
   {
     "_id": "poss_adj_singular_subheader",
@@ -314,7 +345,11 @@
         "__forced_pronunciation": "you"
       },
       { "__type": "text", "text": "your" },
-      { "__type": "text", "text": "your pen" },
+      {
+        "__type": "text",
+        "text": "your pen",
+        "__forced_pronunciation": "yore pen"
+      },
       { "__type": "text", "text": "he" },
       { "__type": "text", "text": "his" },
       { "__type": "text", "text": "his car" },
@@ -338,7 +373,8 @@
     "__lessons": ["possessive adjectives"],
     "__order": 29.2,
     "__type": "quote",
-    "text": "You have a pen. Your pen is blue."
+    "text": "You have a pen. Your pen is blue.",
+    "__forced_pronunciation": "You have a pen. Your pen is blue."
   },
   {
     "_id": "poss_adj_example_he",
@@ -396,7 +432,11 @@
         "__forced_pronunciation": "you"
       },
       { "__type": "text", "text": "your" },
-      { "__type": "text", "text": "your books" },
+      {
+        "__type": "text",
+        "text": "your books",
+        "__forced_pronunciation": "yore books"
+      },
       { "__type": "text", "text": "they" },
       { "__type": "text", "text": "their" },
       { "__type": "text", "text": "their dog" }
@@ -414,7 +454,8 @@
     "__lessons": ["possessive adjectives"],
     "__order": 29.91,
     "__type": "quote",
-    "text": "You have books. Your books are new."
+    "text": "You have books. Your books are new.",
+    "__forced_pronunciation": "You have books. Yore books are new."
   },
   {
     "_id": "poss_adj_example_they",
