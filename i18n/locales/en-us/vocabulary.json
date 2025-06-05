@@ -2472,5 +2472,130 @@
       "plural": "colors",
       "translation_note": ""
     }
+  },
+  {
+    "family": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "family",
+      "translation_note": ""
+    }
+  },
+
+  {
+    "father": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "father",
+      "plural": "fathers",
+      "translation_note": ""
+    }
+  },
+
+  {
+    "mother": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "mother",
+      "plural": "mothers",
+
+      "translation_note": ""
+    }
+  },
+  {
+    "parent": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "parent",
+      "plural": "parents",
+      "translation_note": ""
+    }
+  },
+  {
+    "son": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "son",
+      "plural": "sons",
+      "translation_note": ""
+    }
+  },
+  {
+    "daughter": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "daughter",
+      "plural": "daughters",
+      "translation_note": ""
+    }
+  },
+  {
+    "child": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "child",
+      "plural": "children",
+      "translation_note": ""
+    }
+  },
+  {
+    "brother": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "brother",
+      "plural": "brothers",
+      "translation_note": ""
+    }
+  },
+  {
+    "sister": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "sister",
+      "plural": "sisters",
+      "translation_note": ""
+    }
+  },
+  {
+    "sibling": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "sibling",
+      "plural": "siblings",
+      "translation_note": ""
+    }
+  },
+  {
+    "husband": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "husband",
+      "translation_note": ""
+    }
+  },
+  {
+    "wife": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "wife",
+      "translation_note": ""
+    }
+  },
+  {
+    "spouse": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "spouse",
+      "translation_note": ""
+    }
+  },
+
+  {
+    "married": {
+      "__pos": "adjective",
+      "__tags": ["family", "marital status"],
+      "word": "married",
+      "translation_note": ""
+    }
   }
 ]

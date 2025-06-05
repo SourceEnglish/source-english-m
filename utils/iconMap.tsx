@@ -66,6 +66,20 @@ import White from '@/assets/icons/licensed/white.svg';
 import Black from '@/assets/icons/licensed/black.svg';
 import ColorIcon from '@/assets/icons/licensed/color.svg'; // Example for a custom icon
 import ColorWheelIcon from '@/assets/icons/licensed/color_wheel.svg'; // Example for a custom icon
+import HusbandIcon from '@/assets/icons/licensed/husband.svg'; // Add this import
+import WifeIcon from '@/assets/icons/licensed/wife.svg'; // Add this import
+import MarriedIcon from '@/assets/icons/licensed/married.svg'; // Add this import
+import SpouseIcon from '@/assets/icons/licensed/spouse.svg'; // Add this import
+import FamilyIcon from '@/assets/icons/licensed/family.svg'; // Add this import
+import BrotherIcon from '@/assets/icons/licensed/brother.svg';
+import SiblingIcon from '@/assets/icons/licensed/sibling.svg';
+import SisterIcon from '@/assets/icons/licensed/sister.svg';
+import FatherIcon from '@/assets/icons/licensed/father.svg'; // Add this import
+import MotherIcon from '@/assets/icons/licensed/mother.svg'; // Add this import
+import ChildIcon from '@/assets/icons/licensed/child.svg'; // Add this import
+import ParentIcon from '@/assets/icons/licensed/parent.svg'; // Add this import
+import SonIcon from '@/assets/icons/licensed/son.svg'; // Add this import
+import DaughterIcon from '@/assets/icons/licensed/daughter.svg'; // Add this import
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -230,6 +244,21 @@ export const iconMap: Record<string, React.FC<any>> = {
   month: MonthsIcon,
   season: SeasonsIcon,
   speak: SpeakIcon,
+  husband: HusbandIcon,
+  wife: WifeIcon,
+  spouse: SpouseIcon,
+  married: MarriedIcon,
+  family: FamilyIcon,
+  sibling: SiblingIcon,
+  brother: BrotherIcon,
+  sister: SisterIcon,
+  father: FatherIcon, // Example for a custom icon
+  mother: MotherIcon,
+  parent: ParentIcon, // Example for a custom icon
+  child: ChildIcon, // Example for a custom icon
+  son: SonIcon,
+  daughter: DaughterIcon,
+  'family vocab': FamilyIcon, // Example for a custom icon
 
   // ...etc
 };
