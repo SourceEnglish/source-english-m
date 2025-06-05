@@ -7,9 +7,9 @@ const Quote = ({ text, styling }: { text: string; styling?: string[] }) => (
     <ReadableText
       text={text}
       style={{
-        fontStyle: 'italic',
         fontSize: 16,
         borderLeftWidth: 4,
+        color: '#171717',
         borderLeftColor: '#ccc',
         paddingLeft: 12,
       }}
