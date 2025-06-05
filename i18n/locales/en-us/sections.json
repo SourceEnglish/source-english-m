@@ -6,18 +6,17 @@
     "__type": "header",
     "text": "Header Test"
   },
-
   {
     "_id": "food_subheading",
     "__lessons": ["food"],
-    "__order": 1,
+    "__order": 2,
     "__type": "subheader",
     "text": "Subheader Test"
   },
   {
     "_id": "to_be_header",
     "__lessons": ["to be"],
-    "__order": 0,
+    "__order": 3,
     "__type": "header",
     "text": "\"To Be\"",
     "__forced_pronunciation": "two bee"
@@ -25,14 +24,14 @@
   {
     "_id": "to_be_vocab_carousel",
     "__lessons": ["to be"],
-    "__order": 0.05,
+    "__order": 4,
     "__type": "vocabularyCarousel",
     "__tags": ["to be"]
   },
   {
     "_id": "to_be_usage_intro",
     "__lessons": ["to be"],
-    "__order": 0,
+    "__order": 5,
     "__type": "paragraph",
     "text": "The verb 'to be' is very important in English. We use 'am', 'is', and 'are' to talk about who someone is, how someone is, or what something is. For example:",
     "__forced_pronunciation": "The verb 'two bee' is very important in English. We use 'am', 'is', and 'are' to talk about who someone is, how someone is, or what something is. For example:"
@@ -40,29 +39,28 @@
   {
     "_id": "to_be_example_1",
     "__lessons": ["to be"],
-    "__order": 0.1,
+    "__order": 6,
     "__type": "quote",
     "text": "I am a student."
   },
   {
     "_id": "to_be_example_2",
     "__lessons": ["to be"],
-    "__order": 0.2,
+    "__order": 7,
     "__type": "quote",
     "text": "She is happy."
   },
   {
     "_id": "to_be_example_3",
     "__lessons": ["to be"],
-    "__order": 0.3,
+    "__order": 8,
     "__type": "quote",
     "text": "They are friends."
   },
-
   {
     "_id": "to_be_singular_header",
     "__lessons": ["to be"],
-    "__order": 0.91,
+    "__order": 9,
     "__type": "header",
     "text": "Singular Forms of \"To Be\" (1)",
     "__forced_pronunciation": "Singular Forms of to be"
@@ -70,7 +68,7 @@
   {
     "_id": "to_be_singular_paragraph",
     "__lessons": ["to be"],
-    "__order": 0.92,
+    "__order": 10,
     "__type": "paragraph",
     "text": "Use 'am' with 'I'.",
     "__forced_pronunciation": "Use 'am' with I."
@@ -78,7 +76,7 @@
   {
     "_id": "to_be_singular_paragraph_2",
     "__lessons": ["to be"],
-    "__order": 0.92,
+    "__order": 11,
     "__type": "paragraph",
     "text": "Use 'are' with 'you'.",
     "__forced_pronunciation": "Use 'R' with you."
@@ -86,15 +84,14 @@
   {
     "_id": "to_be_singular_paragraph_3",
     "__lessons": ["to be"],
-    "__order": 0.92,
+    "__order": 12,
     "__type": "paragraph",
     "text": "Use 'is' with 'he', 'she', 'it', one person (Tom or Kim), or one thing (cat or box)."
   },
-
   {
     "_id": "to_be_singular_table",
     "__lessons": ["to be"],
-    "__order": 0.93,
+    "__order": 13,
     "__type": "table",
     "__headers": [
       {
@@ -140,56 +137,56 @@
   {
     "_id": "to_be_singular_examples_I",
     "__lessons": ["to be"],
-    "__order": 0.931,
+    "__order": 14,
     "__type": "quote",
     "text": "I am a student."
   },
   {
     "_id": "to_be_singular_examples_you",
     "__lessons": ["to be"],
-    "__order": 0.932,
+    "__order": 15,
     "__type": "quote",
     "text": "You are my friend."
   },
   {
     "_id": "to_be_singular_examples_he",
     "__lessons": ["to be"],
-    "__order": 0.933,
+    "__order": 16,
     "__type": "quote",
     "text": "He is happy."
   },
   {
     "_id": "to_be_singular_examples_she",
     "__lessons": ["to be"],
-    "__order": 0.934,
+    "__order": 17,
     "__type": "quote",
     "text": "She is happy."
   },
   {
     "_id": "to_be_singular_examples_it",
     "__lessons": ["to be"],
-    "__order": 0.935,
+    "__order": 18,
     "__type": "quote",
     "text": "It is a cat."
   },
   {
     "_id": "to_be_singular_examples_tom",
     "__lessons": ["to be"],
-    "__order": 0.936,
+    "__order": 19,
     "__type": "quote",
     "text": "Tom is a student."
   },
   {
     "_id": "to_be_singular_examples_kim",
     "__lessons": ["to be"],
-    "__order": 0.937,
+    "__order": 20,
     "__type": "quote",
     "text": "Kim is a teacher."
   },
   {
     "_id": "to_be_plural_header",
     "__lessons": ["to be"],
-    "__order": 0.94,
+    "__order": 21,
     "__type": "header",
     "text": "Plural Forms of \"To Be\" (2+)",
     "__forced_pronunciation": "Plural Forms of two bee"
@@ -197,7 +194,7 @@
   {
     "_id": "to_be_plural_paragraph",
     "__lessons": ["to be"],
-    "__order": 0.95,
+    "__order": 22,
     "__type": "paragraph",
     "text": "Use 'are' with you (plural), we, they, or more than one person or thing.",
     "__forced_pronunciation": "Use 'are' with you, we, they, or more than one person or thing."
@@ -205,7 +202,7 @@
   {
     "_id": "to_be_plural_table",
     "__lessons": ["to be"],
-    "__order": 0.96,
+    "__order": 23,
     "__type": "table",
     "__headers": [
       {
@@ -242,42 +239,42 @@
   {
     "_id": "to_be_plural_examples_we",
     "__lessons": ["to be"],
-    "__order": 0.961,
+    "__order": 24,
     "__type": "quote",
     "text": "We are friends."
   },
   {
     "_id": "to_be_plural_examples_you",
     "__lessons": ["to be"],
-    "__order": 0.962,
+    "__order": 25,
     "__type": "quote",
     "text": "You are my friends."
   },
   {
     "_id": "to_be_plural_examples_they",
     "__lessons": ["to be"],
-    "__order": 0.963,
+    "__order": 26,
     "__type": "quote",
     "text": "They are students."
   },
   {
-    "_id": "to_be_plural_examples_tomkim",
+    "_id": "to_be_plural_examples_tom_and_kim",
     "__lessons": ["to be"],
-    "__order": 0.964,
+    "__order": 27,
     "__type": "quote",
     "text": "Tom and Kim are teachers."
   },
   {
     "_id": "poss_adj_intro",
     "__lessons": ["possessive adjectives"],
-    "__order": 0,
+    "__order": 28,
     "__type": "paragraph",
     "text": "Possessive adjectives show who owns something. In English, they are: my, your, his, her, its, our, and their. We use them before a noun."
   },
   {
     "_id": "poss_adj_table",
     "__lessons": ["possessive adjectives"],
-    "__order": 1,
+    "__order": 29,
     "__type": "table",
     "__headers": [
       { "text": "Subject", "__type": "text" },
@@ -308,43 +305,42 @@
   {
     "_id": "poss_adj_example_1",
     "__lessons": ["possessive adjectives"],
-    "__order": 2,
+    "__order": 30,
     "__type": "quote",
     "text": "This is my book."
   },
   {
     "_id": "poss_adj_example_2",
     "__lessons": ["possessive adjectives"],
-    "__order": 3,
+    "__order": 31,
     "__type": "quote",
     "text": "Her bag is blue."
   },
   {
     "_id": "poss_adj_example_3",
     "__lessons": ["possessive adjectives"],
-    "__order": 4,
+    "__order": 32,
     "__type": "quote",
     "text": "Their dog is big."
   },
   {
     "_id": "subject_pronouns_header",
     "__lessons": ["subject pronouns"],
-    "__order": 0.5,
+    "__order": 33,
     "__type": "header",
     "text": "Subject Pronouns"
   },
-
   {
     "_id": "subject_pronouns_intro",
     "__lessons": ["subject pronouns"],
-    "__order": 0.5,
+    "__order": 34,
     "__type": "paragraph",
     "text": "Subject pronouns are words we use instead of names to talk about people or things. In English, they are: I, you, he, she, it, we, and they."
   },
   {
     "_id": "subject_pronouns_table_singular_subheader",
     "__lessons": ["subject pronouns"],
-    "__order": 0.95,
+    "__order": 35,
     "__type": "subheader",
     "text": "Singular Subject Pronouns (1)",
     "__forced_pronunciation": "singular subject pronouns"
@@ -352,56 +348,56 @@
   {
     "_id": "subject_pronouns_table_singular_carousel",
     "__lessons": ["subject pronouns"],
-    "__order": 0.955,
+    "__order": 36,
     "__type": "vocabularyCarousel",
     "__tags": ["singular subject pronouns"]
   },
   {
     "_id": "subject_pronouns_table_singular_paragraph",
     "__lessons": ["subject pronouns"],
-    "__order": 0.96,
+    "__order": 37,
     "__type": "paragraph",
     "text": "Singular subject pronouns refer to one person, animal, or thing: I, you, he, she, and it."
   },
   {
     "_id": "subject_pronouns_examples_singular_I",
     "__lessons": ["subject pronouns"],
-    "__order": 0.9701,
+    "__order": 38,
     "__type": "quote",
     "text": "I am a student."
   },
   {
     "_id": "subject_pronouns_examples_singular_you",
     "__lessons": ["subject pronouns"],
-    "__order": 0.971,
+    "__order": 39,
     "__type": "quote",
     "text": "You are my friend."
   },
   {
     "_id": "subject_pronouns_examples_singular_he",
     "__lessons": ["subject pronouns"],
-    "__order": 0.972,
+    "__order": 40,
     "__type": "quote",
     "text": "He is Tom."
   },
   {
     "_id": "subject_pronouns_examples_singular_she",
     "__lessons": ["subject pronouns"],
-    "__order": 0.973,
+    "__order": 41,
     "__type": "quote",
     "text": "She is Kim."
   },
   {
     "_id": "subject_pronouns_examples_singular_it",
     "__lessons": ["subject pronouns"],
-    "__order": 0.974,
+    "__order": 42,
     "__type": "quote",
     "text": "It is a cat."
   },
   {
     "_id": "subject_pronouns_table_singular",
     "__lessons": ["subject pronouns"],
-    "__order": 0.965,
+    "__order": 43,
     "__type": "table",
     "__headers": [
       { "text": "Subject Pronoun (Singular)", "__type": "text" },
@@ -429,7 +425,7 @@
   {
     "_id": "subject_pronouns_table_plural_subheader",
     "__lessons": ["subject pronouns"],
-    "__order": 1.05,
+    "__order": 44,
     "__type": "subheader",
     "text": "Plural Subject Pronouns (2+)",
     "__forced_pronunciation": "plural subject pronouns"
@@ -437,42 +433,42 @@
   {
     "_id": "subject_pronouns_table_plural_carousel",
     "__lessons": ["subject pronouns"],
-    "__order": 1.055,
+    "__order": 45,
     "__type": "vocabularyCarousel",
     "__tags": ["plural subject pronouns"]
   },
   {
     "_id": "subject_pronouns_table_plural_paragraph",
     "__lessons": ["subject pronouns"],
-    "__order": 1.06,
+    "__order": 46,
     "__type": "paragraph",
     "text": "Plural subject pronouns refer to more than one person, animal, or thing: we, you, and they."
   },
   {
     "_id": "subject_pronouns_examples_plural_we",
     "__lessons": ["subject pronouns"],
-    "__order": 1.11,
+    "__order": 47,
     "__type": "quote",
     "text": "We are friends."
   },
   {
     "_id": "subject_pronouns_examples_plural_you",
     "__lessons": ["subject pronouns"],
-    "__order": 1.12,
+    "__order": 48,
     "__type": "quote",
     "text": "You are my friends."
   },
   {
     "_id": "subject_pronouns_examples_plural_they",
     "__lessons": ["subject pronouns"],
-    "__order": 1.13,
+    "__order": 49,
     "__type": "quote",
     "text": "They are students."
   },
   {
     "_id": "subject_pronouns_table_plural",
     "__lessons": ["subject pronouns"],
-    "__order": 1.1,
+    "__order": 50,
     "__type": "table",
     "__headers": [
       { "text": "Subject Pronoun (Plural)", "__type": "text" },
@@ -491,61 +487,59 @@
       { "__type": "text", "text": "They are students." }
     ]
   },
-
   {
     "_id": "subject_pronouns_video_header",
     "__lessons": ["subject pronouns"],
-    "__order": 5,
+    "__order": 51,
     "__type": "header",
     "text": "Subject Pronouns Video"
   },
   {
     "_id": "subject_pronouns_video",
     "__lessons": ["subject pronouns"],
-    "__order": 6,
+    "__order": 52,
     "__type": "video",
     "__src": "https://www.youtube.com/watch?v=Dr8GIp94GgA"
   },
   {
     "_id": "personal_info_header",
     "__lessons": ["personal information"],
-    "__order": 0,
+    "__order": 53,
     "__type": "header",
     "text": "Personal Information"
   },
   {
     "_id": "personal_info_intro",
     "__lessons": ["personal information"],
-    "__order": 0,
+    "__order": 54,
     "__type": "paragraph",
     "text": "Personal information is basic information about you. You often write or say this information on forms or when meeting new people."
   },
-
   {
     "_id": "personal_info_name_header",
     "__lessons": ["personal information"],
-    "__order": 1,
+    "__order": 55,
     "__type": "subheader",
     "text": "Name"
   },
   {
     "_id": "personal_info_name_paragraph",
     "__lessons": ["personal information"],
-    "__order": 1,
+    "__order": 56,
     "__type": "paragraph",
     "text": "Your name is how people identify you. It usually includes your first name, middle name, and last name."
   },
   {
     "_id": "personal_info_name_carousel",
     "__lessons": ["personal information"],
-    "__order": 1.05,
+    "__order": 57,
     "__type": "vocabularyCarousel",
     "__tags": ["personal information name"]
   },
   {
     "_id": "personal_info_name_table",
     "__lessons": ["personal information"],
-    "__order": 1.1,
+    "__order": 58,
     "__type": "table",
     "__headers": [
       { "text": "Term", "__type": "text" },
@@ -570,32 +564,31 @@
       { "__type": "text", "text": "your family name or surname" }
     ]
   },
-
   {
     "_id": "personal_info_address_subheader",
     "__lessons": ["personal information"],
-    "__order": 1.15,
+    "__order": 59,
     "__type": "subheader",
     "text": "Address"
   },
   {
     "_id": "personal_info_address_paragraph",
     "__lessons": ["personal information"],
-    "__order": 1.15,
+    "__order": 60,
     "__type": "paragraph",
     "text": "Your address tells where you live. It usually includes your house number, street, apartment / unit number, city, state, and ZIP code."
   },
   {
     "_id": "personal_info_address_carousel",
     "__lessons": ["personal information"],
-    "__order": 1.17,
+    "__order": 61,
     "__type": "vocabularyCarousel",
     "__tags": ["personal information address"]
   },
   {
     "_id": "personal_info_address_table",
     "__lessons": ["personal information"],
-    "__order": 1.2,
+    "__order": 62,
     "__type": "table",
     "__headers": [
       { "text": "Term", "__type": "text" },
@@ -626,7 +619,6 @@
         "__type": "text",
         "text": "the number of your apartment or unit"
       },
-
       { "__type": "text", "text": "city" },
       { "__type": "text", "text": "Seattle" },
       { "__type": "text", "text": "the city where you live" },
@@ -645,32 +637,31 @@
       }
     ]
   },
-
   {
     "_id": "personal_info_other_subheader",
     "__lessons": ["personal information"],
-    "__order": 1.25,
+    "__order": 63,
     "__type": "subheader",
     "text": "Other"
   },
   {
     "_id": "personal_info_other_paragraph",
     "__lessons": ["personal information"],
-    "__order": 1.25,
+    "__order": 64,
     "__type": "paragraph",
     "text": "Other personal information includes your email address, phone number, and date of birth."
   },
   {
     "_id": "personal_info_other_carousel",
     "__lessons": ["personal information"],
-    "__order": 1.27,
+    "__order": 65,
     "__type": "vocabularyCarousel",
     "__tags": ["personal information other"]
   },
   {
     "_id": "personal_info_other_table",
     "__lessons": ["personal information"],
-    "__order": 1.3,
+    "__order": 66,
     "__type": "table",
     "__headers": [
       { "text": "Term", "__type": "text" },
@@ -697,140 +688,136 @@
       { "__type": "text", "text": "the day you were born" }
     ]
   },
-
   {
     "_id": "weather",
     "__lessons": ["weather"],
-    "__order": 0,
+    "__order": 67,
     "__type": "header",
     "text": "Weather"
   },
-
   {
     "_id": "weather_intro",
     "__lessons": ["weather"],
-    "__order": 0,
+    "__order": 68,
     "__type": "paragraph",
     "text": "You can ask and answer about the weather using simple sentences. Here are some common ways to ask and answer about the weather."
   },
   {
     "_id": "weather_carousel",
     "__lessons": ["weather"],
-    "__order": 0,
+    "__order": 69,
     "__type": "vocabularyCarousel",
     "__tags": ["weather"]
   },
-
   {
     "_id": "writing_weather_question_subheader",
     "__lessons": ["weather"],
-    "__order": 1,
+    "__order": 70,
     "__type": "subheader",
     "text": "Questions"
   },
   {
     "_id": "writing_weather_question_examples_1",
     "__lessons": ["weather"],
-    "__order": 3,
+    "__order": 71,
     "__type": "quote",
     "text": "How is the weather?"
   },
   {
     "_id": "writing_weather_question_examples_2",
     "__lessons": ["weather"],
-    "__order": 3,
+    "__order": 72,
     "__type": "quote",
     "text": "How is the weather today?"
   },
   {
     "_id": "writing_weather_question_examples_3",
     "__lessons": ["weather"],
-    "__order": 3,
+    "__order": 73,
     "__type": "quote",
     "text": "What is the weather like?"
   },
-
   {
     "_id": "writing_weather_answer_subheader",
     "__lessons": ["weather"],
-    "__order": 4,
+    "__order": 74,
     "__type": "subheader",
     "text": "Answers"
   },
   {
     "_id": "writing_weather_examples",
     "__lessons": ["weather"],
-    "__order": 4,
+    "__order": 75,
     "__type": "quote",
     "text": "It is rainy."
   },
   {
     "_id": "writing_weather_examples_3",
     "__lessons": ["weather"],
-    "__order": 4,
+    "__order": 76,
     "__type": "quote",
     "text": "It's cloudy."
   },
   {
     "_id": "writing_weather_examples_2",
     "__lessons": ["weather"],
-    "__order": 4,
+    "__order": 77,
     "__type": "quote",
     "text": "The weather is sunny."
   },
   {
     "_id": "to_be_extra_video_header",
     "__lessons": ["to be"],
-    "__order": 1.5,
+    "__order": 78,
     "__type": "header",
     "text": "\"To Be\" Video Lesson"
   },
   {
     "_id": "to_be_extra_video",
     "__lessons": ["to be"],
-    "__order": 1.51,
+    "__order": 79,
     "__type": "video",
     "__src": "https://www.youtube.com/watch?v=wQM_JvYyyRc"
   },
   {
     "_id": "temperature_header",
     "__lessons": ["weather"],
-    "__order": 10,
+    "__order": 80,
     "__type": "header",
     "text": "Temperature"
   },
   {
     "_id": "temperature_vocab_carousel",
     "__lessons": ["weather"],
-    "__order": 10.2,
+    "__order": 81,
     "__type": "vocabularyCarousel",
     "__tags": ["temperature"]
   },
   {
     "_id": "weather_temperature_paragraph",
     "__lessons": ["weather"],
-    "__order": 10.1,
+    "__order": 82,
     "__type": "paragraph",
     "text": "You can use temperature words with weather words to describe the weather more clearly. For example:"
   },
   {
     "_id": "weather_temperature_example_1",
     "__lessons": ["weather"],
-    "__order": 10.21,
+    "__order": 83,
     "__type": "quote",
     "text": "It is hot and sunny."
   },
   {
     "_id": "weather_temperature_example_2",
     "__lessons": ["weather"],
-    "__order": 10.22,
+    "__order": 84,
     "__type": "quote",
     "text": "It is cold and snowy."
   },
   {
     "_id": "weather_temperature_example_3",
     "__lessons": ["weather"],
-    "__order": 10.23,
+    "__order": 85,
     "__type": "quote",
     "text": "It is cool and cloudy."
   }
