@@ -68,7 +68,7 @@ export default function LessonPage() {
 
     return (
       <ScrollView>
-        <View style={[styles.outerContainer, { marginTop: 10 }]}>
+        <View style={[styles.outerContainerVocab, { marginTop: 10 }]}>
           <Notes noteKey={`lesson_${lessonName}`} />
           {/* <Text style={{ fontSize: 28, fontWeight: 'bold', margin: 16 }}>
             {displayName}
@@ -141,6 +141,15 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     paddingHorizontal: 4,
+    paddingVertical: 0,
+  },
+  outerContainerVocab: {
+    width: '100%',
+    maxWidth: CENTERED_MAX_WIDTH,
+    alignSelf: 'center',
+    marginTop: 20,
+    marginBottom: 20,
+    paddingHorizontal: 16,
     paddingVertical: 0,
   },
 });
