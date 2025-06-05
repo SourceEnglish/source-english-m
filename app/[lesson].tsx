@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: 20,
     marginBottom: 20,
-    paddingHorizontal: 16,
+    paddingHorizontal: 4,
     paddingVertical: 0,
   },
 });
