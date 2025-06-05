@@ -121,21 +121,21 @@
     }
   },
   {
-    "possessive adjectives vocab": {
-      "name": "possessive adjectives vocab",
-      "__tags": ["possessive adjectives"],
-      "__type": "vocabulary",
-      "__order": 15,
-      "__hidden": true
-    }
-  },
-  {
     "possessive adjectives": {
       "name": "possessive adjectives",
       "__tags": ["possessive adjectives"],
       "__type": "lesson",
+      "__order": 15,
+      "__hidden": false
+    }
+  },
+  {
+    "possessive adjectives vocab": {
+      "name": "possessive adjectives vocab",
+      "__tags": ["possessive adjectives"],
+      "__type": "vocabulary",
       "__order": 16,
-      "__hidden": true
+      "__hidden": false
     }
   }
 ]

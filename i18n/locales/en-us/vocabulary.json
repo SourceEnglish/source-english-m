@@ -2049,7 +2049,7 @@
   {
     "my": {
       "__pos": "adjective",
-      "__tags": ["possessive adjectives"],
+      "__tags": ["possessive adjectives", "possessive adjectives singular"],
       "__icon_text": "my",
       "__show_word": false,
       "word": "my",
@@ -2060,7 +2060,11 @@
   {
     "your": {
       "__pos": "adjective",
-      "__tags": ["possessive adjectives"],
+      "__tags": [
+        "possessive adjectives",
+        "possessive adjectives plural",
+        "possessive adjectives singular"
+      ],
       "__icon_text": "your",
       "__show_word": false,
       "word": "your",
@@ -2070,7 +2074,7 @@
   {
     "his": {
       "__pos": "adjective",
-      "__tags": ["possessive adjectives"],
+      "__tags": ["possessive adjectives", "possessive adjectives singular"],
       "__icon_text": "his",
       "__show_word": false,
       "word": "his",
@@ -2080,7 +2084,7 @@
   {
     "her": {
       "__pos": "adjective",
-      "__tags": ["possessive adjectives"],
+      "__tags": ["possessive adjectives", "possessive adjectives singular"],
       "__icon_text": "her",
       "__show_word": false,
       "word": "her",
@@ -2090,7 +2094,7 @@
   {
     "its": {
       "__pos": "adjective",
-      "__tags": ["possessive adjectives"],
+      "__tags": ["possessive adjectives", "possessive adjectives singular"],
       "__icon_text": "its",
       "__show_word": false,
       "word": "its",
@@ -2100,7 +2104,7 @@
   {
     "our": {
       "__pos": "adjective",
-      "__tags": ["possessive adjectives"],
+      "__tags": ["possessive adjectives", "possessive adjectives plural"],
       "__icon_text": "our",
       "__show_word": false,
       "word": "our",
@@ -2110,7 +2114,7 @@
   {
     "their": {
       "__pos": "adjective",
-      "__tags": ["possessive adjectives"],
+      "__tags": ["possessive adjectives", "possessive adjectives plural"],
       "__icon_text": "their",
       "__show_word": false,
       "word": "their",

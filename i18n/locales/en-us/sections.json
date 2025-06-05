@@ -265,6 +265,14 @@
     "text": "Tom and Kim are teachers."
   },
   {
+    "_id": "poss_adj_header",
+    "__lessons": ["possessive adjectives"],
+    "__order": 28,
+    "__type": "header",
+    "text": "Possessive Adjectives"
+  },
+
+  {
     "_id": "poss_adj_intro",
     "__lessons": ["possessive adjectives"],
     "__order": 28,
@@ -272,12 +280,27 @@
     "text": "Possessive adjectives show who owns something. In English, they are: my, your, his, her, its, our, and their. We use them before a noun."
   },
   {
-    "_id": "poss_adj_table",
+    "_id": "poss_adj_singular_subheader",
+    "__lessons": ["possessive adjectives"],
+    "__order": 28.5,
+    "__type": "subheader",
+    "text": "Possessive Adjectives for Singular Subjects (1)",
+    "__forced_pronunciation": "possessive adjectives for singular subjects"
+  },
+  {
+    "_id": "poss_adj_singular_carousel",
+    "__lessons": ["possessive adjectives"],
+    "__order": 28.6,
+    "__type": "vocabularyCarousel",
+    "__tags": ["possessive adjectives singular"]
+  },
+  {
+    "_id": "poss_adj_table_singular",
     "__lessons": ["possessive adjectives"],
     "__order": 29,
     "__type": "table",
     "__headers": [
-      { "text": "Subject", "__type": "text" },
+      { "text": "Singular Subject", "__type": "text" },
       { "text": "Possessive Adjective", "__type": "text" },
       { "text": "Example", "__type": "text" }
     ],
@@ -285,16 +308,93 @@
       { "__type": "text", "text": "I", "__forced_pronunciation": "eye" },
       { "__type": "text", "text": "my" },
       { "__type": "text", "text": "my book" },
-      { "__type": "text", "text": "you" },
+      {
+        "__type": "text",
+        "text": "you (singular)",
+        "__forced_pronunciation": "you"
+      },
       { "__type": "text", "text": "your" },
       { "__type": "text", "text": "your pen" },
-      { "__type": "text", "text": "he\nshe\nit" },
-      { "__type": "text", "text": "his\nher\nits" },
-      { "__type": "text", "text": "his car\nher bag\nits tail" },
+      { "__type": "text", "text": "he" },
+      { "__type": "text", "text": "his" },
+      { "__type": "text", "text": "his car" },
+      { "__type": "text", "text": "she" },
+      { "__type": "text", "text": "her" },
+      { "__type": "text", "text": "her bag" },
+      { "__type": "text", "text": "it" },
+      { "__type": "text", "text": "its" },
+      { "__type": "text", "text": "its tail" }
+    ]
+  },
+  {
+    "_id": "poss_adj_example_I",
+    "__lessons": ["possessive adjectives"],
+    "__order": 29.1,
+    "__type": "quote",
+    "text": "I have a book. My book is big."
+  },
+  {
+    "_id": "poss_adj_example_you",
+    "__lessons": ["possessive adjectives"],
+    "__order": 29.2,
+    "__type": "quote",
+    "text": "You have a pen. Your pen is blue."
+  },
+  {
+    "_id": "poss_adj_example_he",
+    "__lessons": ["possessive adjectives"],
+    "__order": 29.3,
+    "__type": "quote",
+    "text": "He has a car. His car is red."
+  },
+  {
+    "_id": "poss_adj_example_she",
+    "__lessons": ["possessive adjectives"],
+    "__order": 29.4,
+    "__type": "quote",
+    "text": "She has a bag. Her bag is green."
+  },
+  {
+    "_id": "poss_adj_example_it",
+    "__lessons": ["possessive adjectives"],
+    "__order": 29.5,
+    "__type": "quote",
+    "text": "It has a tail. Its tail is long."
+  },
+  {
+    "_id": "poss_adj_plural_subheader",
+    "__lessons": ["possessive adjectives"],
+    "__order": 29.6,
+    "__type": "subheader",
+    "text": "Possessive Adjectives for Plural Subjects (2+)",
+    "__forced_pronunciation": "possessive adjectives for plural subjects"
+  },
+  {
+    "_id": "poss_adj_plural_carousel",
+    "__lessons": ["possessive adjectives"],
+    "__order": 29.7,
+    "__type": "vocabularyCarousel",
+    "__tags": ["possessive adjectives plural"]
+  },
+  {
+    "_id": "poss_adj_table_plural",
+    "__lessons": ["possessive adjectives"],
+    "__order": 29.8,
+    "__type": "table",
+    "__headers": [
+      { "text": "Plural Subject", "__type": "text" },
+      { "text": "Possessive Adjective", "__type": "text" },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
       { "__type": "text", "text": "we" },
       { "__type": "text", "text": "our" },
       { "__type": "text", "text": "our house" },
-      { "__type": "text", "text": "you (all)" },
+      {
+        "__type": "text",
+        "text": "you (plural)",
+        "__forced_pronunciation": "you"
+      },
       { "__type": "text", "text": "your" },
       { "__type": "text", "text": "your books" },
       { "__type": "text", "text": "they" },
@@ -303,25 +403,25 @@
     ]
   },
   {
-    "_id": "poss_adj_example_1",
+    "_id": "poss_adj_example_we",
     "__lessons": ["possessive adjectives"],
-    "__order": 30,
+    "__order": 29.9,
     "__type": "quote",
-    "text": "This is my book."
+    "text": "We have a house. Our house is yellow."
   },
   {
-    "_id": "poss_adj_example_2",
+    "_id": "poss_adj_example_you_plural",
     "__lessons": ["possessive adjectives"],
-    "__order": 31,
+    "__order": 29.91,
     "__type": "quote",
-    "text": "Her bag is blue."
+    "text": "You have books. Your books are new."
   },
   {
-    "_id": "poss_adj_example_3",
+    "_id": "poss_adj_example_they",
     "__lessons": ["possessive adjectives"],
-    "__order": 32,
+    "__order": 29.92,
     "__type": "quote",
-    "text": "Their dog is big."
+    "text": "They have a dog. Their dog is small."
   },
   {
     "_id": "subject_pronouns_header",
