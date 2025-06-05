@@ -53,6 +53,7 @@ import StreetIcon from '@/assets/icons/licensed/street.svg'; // Example for a cu
 import YouIcon from '@/assets/icons/open_source/you.svg'; // Example for a custom icon
 import NameIcon from '@/assets/icons/licensed/name.svg'; // Example for a custom icon
 import HouseNumber from '@/assets/icons/licensed/house_number.svg'; // Example for a custom icon
+import SpeakerIcon from '@/assets/icons/licensed/speaker.svg'; // Example for a custom icon
 import Red from '@/assets/icons/licensed/red.svg'; // Example for a custom icon
 import Blue from '@/assets/icons/licensed/blue.svg';
 import Yellow from '@/assets/icons/licensed/yellow.svg';
@@ -211,6 +212,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   'personal information vocab': NameIcon, // Example for a custom icon
   'phone number': PhoneNumber, // Example for a custom icon
   'telephone number': PhoneNumber, // Example for a custom icon
+  speaker: SpeakerIcon, // Example for a custom icon
   red: Red,
   blue: Blue,
   yellow: Yellow,

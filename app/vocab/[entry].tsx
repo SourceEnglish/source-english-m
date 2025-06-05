@@ -14,6 +14,8 @@ import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 import { useDeck } from '@/contexts/DeckContext';
 import ChevronLeft from '@/assets/icons/open_source/chevron-left.svg';
 import ChevronRight from '@/assets/icons/open_source/chevron-right.svg';
+import { getIconForEntry } from '@/utils/iconMap';
+import { useSpeech } from '@/contexts/SpeechContext';
 
 export function generateStaticParams() {
   return vocabularyData.map((entry: any) => {
@@ -27,6 +29,7 @@ export default function VocabEntryPage() {
   const entryName = entry as string;
   const router = useRouter();
   const { deckEntries, deckIndex, setDeckIndex } = useDeck();
+  const { speakText } = useSpeech();
 
   React.useEffect(() => {
     // No logging or side effects needed
@@ -108,8 +111,52 @@ export default function VocabEntryPage() {
               </TouchableOpacity>
             ) : null}
           </View>
-          <View style={{ flex: 1 }}>
-            <VocabEntryDisplay entry={vocabEntry} />
+          <View
+            style={{
+              flex: 1,
+              alignItems: 'center',
+              flexDirection: 'row',
+              justifyContent: 'center',
+            }}
+          >
+            <View style={{ flex: 1 }}>
+              <VocabEntryDisplay entry={vocabEntry} />
+              <View style={{ alignItems: 'center', marginTop: 8 }}>
+                <TouchableOpacity
+                  onPress={() => {
+                    speakText(
+                      (vocabEntry as any).pronunciation ||
+                        (vocabEntry as any).__forced_pronunciation ||
+                        vocabEntry.word
+                    );
+                  }}
+                  accessibilityLabel="Play pronunciation"
+                  style={{
+                    paddingVertical: 10,
+                    paddingHorizontal: 18,
+                    borderRadius: 8,
+                    backgroundColor: '#f8f8f8',
+                    borderWidth: 1,
+                    borderColor: '#bbb',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    minHeight: 40,
+                    minWidth: 56,
+                    flexDirection: 'row',
+                    shadowColor: '#000',
+                    shadowOpacity: 0.07,
+                    shadowRadius: 2,
+                    shadowOffset: { width: 0, height: 1 },
+                  }}
+                  activeOpacity={0.7}
+                >
+                  {React.createElement(getIconForEntry({ word: 'speaker' }), {
+                    width: 24,
+                    height: 24,
+                  })}
+                </TouchableOpacity>
+              </View>
+            </View>
           </View>
           <View
             style={{
