@@ -346,7 +346,11 @@
       "__tags": ["food"],
       "word": "apple",
       "plural": "apples",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "I eat an apple every day.",
+        "She bought some apples from the market."
+      ]
     }
   },
   {
@@ -356,7 +360,8 @@
       "__tags": ["food"],
       "word": "rice",
       "plural": "rice",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Rice is a staple food in many countries."]
     }
   },
   {
@@ -2616,54 +2621,6 @@
       "__show_word": false,
       "word": "does",
       "translation_note": ""
-    }
-  },
-  {
-    "who": {
-      "__pos": "pronoun",
-      "__tags": ["wh questions", "wh who"],
-      "word": "who",
-      "translation_note": "used to ask about a person"
-    }
-  },
-  {
-    "what": {
-      "__pos": "pronoun",
-      "__tags": ["wh questions", "wh what"],
-      "word": "what",
-      "translation_note": "used to ask about a thing or information"
-    }
-  },
-  {
-    "where": {
-      "__pos": "adverb",
-      "__tags": ["wh questions", "wh where"],
-      "word": "where",
-      "translation_note": "used to ask about a place"
-    }
-  },
-  {
-    "why": {
-      "__pos": "adverb",
-      "__tags": ["wh questions", "wh why"],
-      "word": "why",
-      "translation_note": "used to ask about a reason"
-    }
-  },
-  {
-    "when": {
-      "__pos": "adverb",
-      "__tags": ["wh questions", "wh when"],
-      "word": "when",
-      "translation_note": "used to ask about time"
-    }
-  },
-  {
-    "how": {
-      "__pos": "adverb",
-      "__tags": ["wh questions", "wh how"],
-      "word": "how",
-      "translation_note": "used to ask about manner, condition, or way"
     }
   }
 ]

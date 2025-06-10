@@ -130,7 +130,7 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({
 
 const styles = StyleSheet.create({
   inlineCard: {
-    borderWidth: 1,
+    borderWidth: 2,
     borderRadius: 6,
     padding: 4,
     backgroundColor: 'white',
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginHorizontal: 4,
 
-    height: 70,
+    height: 72,
     flexShrink: 0,
   },
   mobile: {

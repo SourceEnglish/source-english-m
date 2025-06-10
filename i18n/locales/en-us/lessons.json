@@ -169,23 +169,5 @@
       "__order": 17,
       "__hidden": false
     }
-  },
-  {
-    "wh questions": {
-      "name": "wh questions",
-      "__tags": ["wh questions"],
-      "__type": "lesson",
-      "__order": 18,
-      "__hidden": false
-    }
-  },
-  {
-    "wh questions vocab": {
-      "name": "wh questions vocab",
-      "__tags": ["wh questions"],
-      "__type": "vocabulary",
-      "__order": 19,
-      "__hidden": false
-    }
   }
 ]

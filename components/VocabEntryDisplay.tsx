@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, Dimensions } from 'react-native';
 import posColors from '@/constants/constants';
 import { getIconForEntry } from '@/utils/iconMap';
 import ReadableText from './ReadableText';
+import PlayPronunciationButton from './PlayPronunciationButton';
 
 interface VocabEntryDisplayProps {
   entry: {
@@ -13,6 +14,7 @@ interface VocabEntryDisplayProps {
     __forced_pronunciation?: string;
     __vowel?: boolean;
     __consonant?: boolean;
+    examples?: string[];
   };
 }
 
@@ -34,6 +36,7 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
   const screenWidth = Dimensions.get('window').width;
   const isMobile = screenWidth <= 768;
   const Icon = getIconForEntry(entry);
+  const { examples } = entry as any;
 
   // Special border color for letters: vowel/consonant
   if (__pos === 'letter') {
@@ -53,80 +56,154 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
   }
 
   return (
-    <View
-      style={[
-        styles.container,
-        { borderColor, borderLeftColor, borderTopColor },
-      ]}
-    >
-      {Icon && (
-        <View style={styles.iconContainer}>
-          <Icon
-            textsize={isMobile ? 40 : 60}
-            textwidth={isMobile ? 80 : 120}
-            width={isMobile ? 80 : 140}
-            height={isMobile ? 80 : 140}
+    <>
+      <View
+        style={[
+          styles.container,
+          { borderColor, borderLeftColor, borderTopColor },
+        ]}
+      >
+        {Icon && (
+          <View style={styles.iconContainer}>
+            <Icon
+              textsize={isMobile ? 40 : 60}
+              textwidth={isMobile ? 80 : 120}
+              width={isMobile ? 80 : 140}
+              height={isMobile ? 80 : 140}
+            />
+          </View>
+        )}
+        {__show_word !== false && __pos !== 'letter' && (
+          <ReadableText
+            text={word}
+            pronunciation={__forced_pronunciation}
+            style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
+          />
+        )}
+        {__pos !== 'letter' && (
+          <ReadableText
+            text={__pos}
+            style={[
+              styles.pos,
+              { color, fontSize: isMobile ? 18 : 24, textAlign: 'center' },
+            ]}
+          />
+        )}
+        {__pos === 'letter' && __consonant && (
+          <ReadableText
+            text={__vowel ? 'consonant,' : 'consonant'}
+            style={{
+              fontStyle: 'italic',
+              color: posColors['consonant'],
+              fontSize: isMobile ? 14 : 20,
+              textAlign: 'center',
+            }}
+          />
+        )}
+        {__pos === 'letter' && __vowel && (
+          <ReadableText
+            text={'vowel'}
+            style={{
+              fontStyle: 'italic',
+              color: posColors['vowel'],
+              fontSize: isMobile ? 14 : 20,
+              textAlign: 'center',
+            }}
+          />
+        )}
+        {__pos === 'noun' && plural && (
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <ReadableText text="Plural:" style={styles.plural} />
+            <Text> </Text>
+            <ReadableText text={`${plural}`} style={styles.plural} />
+          </View>
+        )}
+        {__pos === 'noun' && __count && (
+          <ReadableText
+            text={`${__count.charAt(0).toUpperCase() + __count.slice(1)} noun`}
+            style={styles.countable}
+          />
+        )}
+        {/* Play pronunciation button inside the card */}
+        <View style={{ alignItems: 'center', marginTop: 8 }}>
+          <PlayPronunciationButton
+            word={word}
+            pronunciation={
+              entry.__forced_pronunciation
+                ? entry.__forced_pronunciation
+                : entry.word
+            }
           />
         </View>
-      )}
-      {__show_word !== false && __pos !== 'letter' && (
-        <ReadableText
-          text={word}
-          pronunciation={__forced_pronunciation}
-          style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
-        />
-      )}
-      {__pos !== 'letter' && (
-        <ReadableText
-          text={__pos}
-          style={[
-            styles.pos,
-            { color, fontSize: isMobile ? 18 : 24, textAlign: 'center' },
-          ]}
-        />
-      )}
-      {__pos === 'letter' && __consonant && (
-        <ReadableText
-          text={__vowel ? 'consonant,' : 'consonant'}
-          style={{
-            fontStyle: 'italic',
-            color: posColors['consonant'],
-            fontSize: isMobile ? 14 : 20,
-            textAlign: 'center',
-          }}
-        />
-      )}
-      {__pos === 'letter' && __vowel && (
-        <ReadableText
-          text={'vowel'}
-          style={{
-            fontStyle: 'italic',
-            color: posColors['vowel'],
-            fontSize: isMobile ? 14 : 20,
-            textAlign: 'center',
-          }}
-        />
-      )}
-      {__pos === 'noun' && plural && (
+      </View>
+      <View
+        style={{
+          width: '100%',
+          alignSelf: 'stretch',
+          marginVertical: 8,
+        }}
+      >
         <View
           style={{
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center',
+            borderBottomColor: 'gray',
+            borderBottomWidth: 2,
+            width: '100%',
+          }}
+        />
+      </View>
+      {/* Example sentences below the hr */}
+      {examples && Array.isArray(examples) && examples.length > 0 && (
+        <View
+          style={{
+            width: '100%',
+            alignSelf: 'stretch',
+            marginBottom: 12,
+            paddingHorizontal: 0,
           }}
         >
-          <ReadableText text="Plural:" style={styles.plural} />
-          <Text> </Text>
-          <ReadableText text={`${plural}`} style={styles.plural} />
+          <View
+            style={{
+              maxWidth: 700,
+              width: '100%',
+              alignSelf: 'flex-start',
+            }}
+          >
+            <ReadableText
+              text="Example Sentences:"
+              style={{
+                fontWeight: 'bold',
+                marginBottom: 4,
+                fontSize: isMobile ? 16 : 22,
+                color: '#333',
+                width: '100%',
+                textAlign: 'left',
+                alignSelf: 'flex-start',
+              }}
+            />
+            {examples.map((ex: string, idx: number) => (
+              <ReadableText
+                key={idx}
+                text={`• ${ex}`}
+                style={{
+                  width: '100%',
+                  fontSize: isMobile ? 15 : 19,
+                  color: '#444',
+                  marginBottom: 2,
+                  textAlign: 'left',
+                  alignSelf: 'flex-start',
+                }}
+              />
+            ))}
+          </View>
         </View>
       )}
-      {__pos === 'noun' && __count && (
-        <ReadableText
-          text={`${__count.charAt(0).toUpperCase() + __count.slice(1)} noun`}
-          style={styles.countable}
-        />
-      )}
-    </View>
+    </>
   );
 };
 
@@ -139,7 +216,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     margin: 20,
-    width: '90%',
+    width: '100%',
     alignSelf: 'center',
     maxWidth: 400,
   },
@@ -164,6 +241,32 @@ const styles = StyleSheet.create({
     marginBottom: 4,
     textAlign: 'center',
     color: '#666',
+  },
+  examplesOuterContainer: {
+    width: '100%',
+    alignSelf: 'center',
+    // Ensures full width in parent layouts like [entry]
+  },
+  examplesContainer: {
+    alignItems: 'flex-start',
+    marginTop: 0,
+    marginBottom: 12,
+    width: '90%',
+    alignSelf: 'center',
+    maxWidth: 400,
+  },
+  examplesHeader: {
+    fontWeight: 'bold',
+    marginBottom: 4,
+    fontSize: 16,
+    color: '#333',
+  },
+  exampleSentence: {
+    width: '100%',
+    fontSize: 15,
+    color: '#444',
+    marginBottom: 2,
+    textAlign: 'left',
   },
 });
 

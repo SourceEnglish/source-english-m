@@ -121,41 +121,6 @@ export default function VocabEntryPage() {
           >
             <View style={{ flex: 1 }}>
               <VocabEntryDisplay entry={vocabEntry} />
-              <View style={{ alignItems: 'center', marginTop: 8 }}>
-                <TouchableOpacity
-                  onPress={() => {
-                    speakText(
-                      (vocabEntry as any).pronunciation ||
-                        (vocabEntry as any).__forced_pronunciation ||
-                        vocabEntry.word
-                    );
-                  }}
-                  accessibilityLabel="Play pronunciation"
-                  style={{
-                    paddingVertical: 10,
-                    paddingHorizontal: 18,
-                    borderRadius: 8,
-                    backgroundColor: '#f8f8f8',
-                    borderWidth: 1,
-                    borderColor: '#bbb',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    minHeight: 40,
-                    minWidth: 56,
-                    flexDirection: 'row',
-                    shadowColor: '#000',
-                    shadowOpacity: 0.07,
-                    shadowRadius: 2,
-                    shadowOffset: { width: 0, height: 1 },
-                  }}
-                  activeOpacity={0.7}
-                >
-                  {React.createElement(getIconForEntry({ word: 'speaker' }), {
-                    width: 24,
-                    height: 24,
-                  })}
-                </TouchableOpacity>
-              </View>
             </View>
           </View>
           <View
@@ -200,7 +165,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: 10,
     marginBottom: 20,
-    paddingHorizontal: 16,
+
     paddingVertical: 0,
   },
   // title: {
