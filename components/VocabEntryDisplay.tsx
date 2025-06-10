@@ -142,67 +142,6 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
           />
         </View>
       </View>
-      <View
-        style={{
-          width: '100%',
-          alignSelf: 'stretch',
-          marginVertical: 8,
-        }}
-      >
-        <View
-          style={{
-            borderBottomColor: 'gray',
-            borderBottomWidth: 2,
-            width: '100%',
-          }}
-        />
-      </View>
-      {/* Example sentences below the hr */}
-      {examples && Array.isArray(examples) && examples.length > 0 && (
-        <View
-          style={{
-            width: '100%',
-            alignSelf: 'stretch',
-            marginBottom: 12,
-            paddingHorizontal: 0,
-          }}
-        >
-          <View
-            style={{
-              maxWidth: 700,
-              width: '100%',
-              alignSelf: 'flex-start',
-            }}
-          >
-            <ReadableText
-              text="Example Sentences:"
-              style={{
-                fontWeight: 'bold',
-                marginBottom: 4,
-                fontSize: isMobile ? 16 : 22,
-                color: '#333',
-                width: '100%',
-                textAlign: 'left',
-                alignSelf: 'flex-start',
-              }}
-            />
-            {examples.map((ex: string, idx: number) => (
-              <ReadableText
-                key={idx}
-                text={`• ${ex}`}
-                style={{
-                  width: '100%',
-                  fontSize: isMobile ? 15 : 19,
-                  color: '#444',
-                  marginBottom: 2,
-                  textAlign: 'left',
-                  alignSelf: 'flex-start',
-                }}
-              />
-            ))}
-          </View>
-        </View>
-      )}
     </>
   );
 };

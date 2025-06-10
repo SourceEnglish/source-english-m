@@ -444,7 +444,8 @@
       "__pos": "adjective",
       "__tags": ["temperature"],
       "word": "hot",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The weather is sunny and hot."]
     }
   },
   {
@@ -452,7 +453,8 @@
       "__pos": "adjective",
       "__tags": ["temperature"],
       "word": "warm",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The weather is warm and partly cloudy."]
     }
   },
   {
@@ -460,7 +462,8 @@
       "__pos": "adjective",
       "__tags": ["temperature"],
       "word": "cool",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The weather is cool and cloudy."]
     }
   },
   {
@@ -468,7 +471,8 @@
       "__pos": "adjective",
       "__tags": ["temperature"],
       "word": "cold",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The weather is snowy and cold."]
     }
   },
   {

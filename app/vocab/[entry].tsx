@@ -10,6 +10,7 @@ import {
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import VocabEntryDisplay from '@/components/VocabEntryDisplay';
 import Notes from '@/components/Notes';
+import ExampleSentences from '@/components/ExampleSentences';
 import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 import { useDeck } from '@/contexts/DeckContext';
 import ChevronLeft from '@/assets/icons/open_source/chevron-left.svg';
@@ -70,7 +71,11 @@ export default function VocabEntryPage() {
 
   // Always render the navigation row, but only show chevrons if prev/next exist
   return (
-    <ScrollView>
+    <ScrollView
+      contentContainerStyle={{
+        alignItems: 'center',
+      }}
+    >
       <View style={styles.outerContainer}>
         <Notes noteKey={`vocab_${entryName}`} />
         <View
@@ -100,7 +105,6 @@ export default function VocabEntryPage() {
                 accessibilityLabel="Previous card"
                 style={{
                   padding: 8,
-
                   borderWidth: 1,
                   borderColor: '#000000',
                   borderRadius: 8,
@@ -117,6 +121,9 @@ export default function VocabEntryPage() {
               alignItems: 'center',
               flexDirection: 'row',
               justifyContent: 'center',
+              marginLeft: 5,
+              marginRight: 5,
+              maxWidth: CENTERED_MAX_WIDTH,
             }}
           >
             <View style={{ flex: 1 }}>
@@ -153,6 +160,20 @@ export default function VocabEntryPage() {
             ) : null}
           </View>
         </View>
+      </View>
+      {/* Example sentences in their own view, styled to match Notes width */}
+      <View
+        style={{
+          width: '100%',
+          maxWidth: CENTERED_MAX_WIDTH,
+          alignSelf: 'center',
+        }}
+      >
+        <ExampleSentences
+          examples={
+            'examples' in vocabEntry ? (vocabEntry as any).examples : []
+          }
+        />
       </View>
     </ScrollView>
   );
