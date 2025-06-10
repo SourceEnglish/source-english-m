@@ -2626,5 +2626,184 @@
       "word": "does",
       "translation_note": ""
     }
+  },
+  {
+    "sick": {
+      "__pos": "adjective",
+      "__tags": ["illnesses", "illness feel"],
+      "word": "sick",
+      "translation_note": "",
+      "examples": [
+        "I'm sick today.",
+        "I feel sick",
+        "She is sick and can't go to work."
+      ]
+    }
+  },
+
+  {
+    "allergy": {
+      "__pos": "noun",
+      "__tags": ["illnesses", "illness have"],
+      "word": "allergy",
+      "plural": "allergies",
+      "translation_note": "",
+      "examples": ["I have seasonal allergies.", "She has a peanut allergy."]
+    }
+  },
+  {
+    "backache": {
+      "__pos": "noun",
+      "__tags": ["illnesses", "illness have"],
+      "word": "backache",
+      "plural": "backaches",
+      "translation_note": "",
+      "examples": ["He has a backache from lifting heavy boxes."]
+    }
+  },
+  {
+    "broken": {
+      "__pos": "adjective",
+      "__tags": ["illnesses", "illness have"],
+      "word": "broken",
+      "translation_note": "",
+      "examples": ["She has a broken arm.", "He has a broken leg."]
+    }
+  },
+  {
+    "diarrhea": {
+      "__pos": "noun",
+      "__tags": ["illnesses", "illness have"],
+      "word": "diarrhea",
+      "translation_note": "",
+      "examples": [
+        "He has diarrhea.",
+        "She can't come to school because she has diarrhea."
+      ]
+    }
+  },
+  {
+    "fever": {
+      "__pos": "noun",
+      "__tags": ["illnesses", "illness have"],
+      "word": "fever",
+      "plural": "fevers",
+      "translation_note": "",
+      "examples": ["She has a fever."]
+    }
+  },
+  {
+    "flu": {
+      "__pos": "noun",
+      "__tags": ["illnesses", "illness have"],
+      "word": "flu",
+      "translation_note": "",
+      "examples": ["He has the flu.", "I caught the flu last week."]
+    }
+  },
+  {
+    "headache": {
+      "__pos": "noun",
+      "__tags": ["illnesses", "illness have"],
+      "word": "headache",
+      "plural": "headaches",
+      "translation_note": "",
+      "examples": ["I have a headache."]
+    }
+  },
+  {
+    "nauseous": {
+      "__pos": "adjective",
+      "__tags": ["illnesses", "illness feel"],
+      "word": "nauseous",
+      "translation_note": "",
+      "examples": ["She feels nauseous after eating too much."]
+    }
+  },
+
+  {
+    "toothache": {
+      "__pos": "noun",
+      "__tags": ["illnesses", "illness have"],
+      "word": "toothache",
+      "plural": "toothaches",
+      "translation_note": "",
+      "examples": [
+        "I have a toothache.",
+        "She went to the dentist because of a toothache."
+      ]
+    }
+  },
+  {
+    "tired": {
+      "__pos": "adjective",
+      "__tags": ["illnesses", "illness feel"],
+      "word": "tired",
+      "translation_note": "",
+      "examples": ["I feel tired.", "I am tired after a long day at work."]
+    }
+  },
+  {
+    "depressed": {
+      "__pos": "adjective",
+      "__tags": ["illnesses", "illness feel"],
+      "word": "depressed",
+      "translation_note": "",
+      "examples": ["He feels depressed after losing his job."]
+    }
+  },
+  {
+    "who": {
+      "__pos": "pronoun",
+      "__tags": ["wh questions", "wh who"],
+      "word": "who",
+      "translation_note": "",
+      "examples": ["Who is your teacher?"]
+    }
+  },
+  {
+    "what": {
+      "__pos": "pronoun",
+      "__tags": ["wh questions", "wh what"],
+      "word": "what",
+      "translation_note": "",
+      "examples": ["What is your name?"]
+    }
+  },
+  {
+    "where": {
+      "__pos": "adverb",
+      "__tags": ["wh questions", "wh where"],
+      "word": "where",
+      "translation_note": "",
+      "examples": ["Where do you live?"]
+    }
+  },
+  {
+    "when": {
+      "__pos": "adverb",
+      "__tags": ["wh questions", "wh when"],
+      "word": "when",
+      "translation_note": "",
+      "examples": ["When is your birthday?"]
+    }
+  },
+  {
+    "why": {
+      "__pos": "adverb",
+      "__tags": ["wh questions", "wh why"],
+      "word": "why",
+      "translation_note": "",
+      "examples": ["Why are you late?"]
+    }
+  },
+  {
+    "how": {
+      "__pos": "adverb",
+      "__tags": ["wh questions", "wh how"],
+      "word": "how",
+      "translation_note": "",
+      "examples": ["How are you?"]
+    }
   }
 ]

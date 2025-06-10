@@ -1575,5 +1575,161 @@
     "__order": 31,
     "__type": "video",
     "__src": "https://www.youtube.com/watch?v=x_4AjSwTXdc"
+  },
+  {
+    "_id": "illnesses_i_feel_header",
+    "__lessons": ["illnesses"],
+    "__order": 1,
+    "__type": "header",
+    "text": "feel / \"to be\""
+  },
+  {
+    "_id": "illnesses_i_feel_intro",
+    "__lessons": ["illnesses"],
+    "__order": 2,
+    "__type": "paragraph",
+    "text": "Use 'feel' or \"to be\" (am / is / are) with adjectives to talk about how you feel or your condition."
+  },
+  {
+    "_id": "illnesses_i_feel_carousel",
+    "__lessons": ["illnesses"],
+    "__order": 3,
+    "__type": "vocabularyCarousel",
+    "__tags": ["illness feel"],
+    "filter": "adjective"
+  },
+  {
+    "_id": "illnesses_i_feel_examples",
+    "__lessons": ["illnesses"],
+    "__order": 4,
+    "__type": "list",
+    "items": [
+      "I feel sick.",
+      "I feel nauseous.",
+      "I feel depressed.",
+      "I feel tired."
+    ]
+  },
+  {
+    "_id": "illnesses_i_feel_quote_sick",
+    "__lessons": ["illnesses"],
+    "__order": 4.1,
+    "__type": "quote",
+    "text": "She is sick."
+  },
+  {
+    "_id": "illnesses_i_feel_quote_nauseous",
+    "__lessons": ["illnesses"],
+    "__order": 4.2,
+    "__type": "quote",
+    "text": "I feel nauseous."
+  },
+  {
+    "_id": "illnesses_i_feel_quote_broken",
+    "__lessons": ["illnesses"],
+    "__order": 4.3,
+    "__type": "quote",
+    "text": "He feels tired."
+  },
+  {
+    "_id": "illnesses_i_feel_quote_tired",
+    "__lessons": ["illnesses"],
+    "__order": 4.4,
+    "__type": "quote",
+    "text": "I am depressed."
+  },
+  {
+    "_id": "illnesses_i_have_header",
+    "__lessons": ["illnesses"],
+    "__order": 5,
+    "__type": "header",
+    "text": "have"
+  },
+  {
+    "_id": "illnesses_i_have_intro",
+    "__lessons": ["illnesses"],
+    "__order": 6,
+    "__type": "paragraph",
+    "text": "Use 'have' / 'has' with nouns to talk about illnesses or symptoms. The adjective 'broken' is used with body parts to describe injuries."
+  },
+  {
+    "_id": "illnesses_i_have_carousel",
+    "__lessons": ["illnesses"],
+    "__order": 7,
+    "__type": "vocabularyCarousel",
+    "__tags": ["illness have"],
+    "filter": "noun"
+  },
+  {
+    "_id": "illnesses_i_have_examples",
+    "__lessons": ["illnesses"],
+    "__order": 8,
+    "__type": "list",
+    "items": [
+      "I have a headache.",
+      "I have a fever.",
+      "I have the flu.",
+      "I have a backache.",
+      "I have a toothache.",
+      "I have diarrhea.",
+      "I have an allergy.",
+      "I have a broken arm."
+    ]
+  },
+  {
+    "_id": "illnesses_i_have_quote_headache",
+    "__lessons": ["illnesses"],
+    "__order": 8.1,
+    "__type": "quote",
+    "text": "I have a headache."
+  },
+  {
+    "_id": "illnesses_i_have_quote_fever",
+    "__lessons": ["illnesses"],
+    "__order": 8.2,
+    "__type": "quote",
+    "text": "He has a fever."
+  },
+  {
+    "_id": "illnesses_i_have_quote_flu",
+    "__lessons": ["illnesses"],
+    "__order": 8.3,
+    "__type": "quote",
+    "text": "You have the flu."
+  },
+  {
+    "_id": "illnesses_i_have_quote_backache",
+    "__lessons": ["illnesses"],
+    "__order": 8.4,
+    "__type": "quote",
+    "text": "He has a backache."
+  },
+  {
+    "_id": "illnesses_i_have_quote_toothache",
+    "__lessons": ["illnesses"],
+    "__order": 8.5,
+    "__type": "quote",
+    "text": "I have a toothache."
+  },
+  {
+    "_id": "illnesses_i_have_quote_diarrhea",
+    "__lessons": ["illnesses"],
+    "__order": 8.6,
+    "__type": "quote",
+    "text": "I have diarrhea."
+  },
+  {
+    "_id": "illnesses_i_have_quote_allergy",
+    "__lessons": ["illnesses"],
+    "__order": 8.7,
+    "__type": "quote",
+    "text": "They have allergies."
+  },
+  {
+    "_id": "illnesses_i_have_quote_broken",
+    "__lessons": ["illnesses"],
+    "__order": 8.8,
+    "__type": "quote",
+    "text": "She has a broken arm."
   }
 ]

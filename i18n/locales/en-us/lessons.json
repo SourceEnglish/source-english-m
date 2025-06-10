@@ -169,5 +169,41 @@
       "__order": 17,
       "__hidden": false
     }
+  },
+  {
+    "illnesses": {
+      "name": "illnesses",
+      "__tags": ["illnesses"],
+      "__type": "lesson",
+      "__order": 18,
+      "__hidden": false
+    }
+  },
+  {
+    "illnesses vocab": {
+      "name": "illnesses vocab",
+      "__tags": ["illnesses"],
+      "__type": "vocabulary",
+      "__order": 19,
+      "__hidden": false
+    }
+  },
+  {
+    "wh questions": {
+      "name": "wh questions",
+      "__tags": ["wh questions"],
+      "__type": "lesson",
+      "__order": 20,
+      "__hidden": false
+    }
+  },
+  {
+    "wh questions vocab": {
+      "name": "wh questions vocab",
+      "__tags": ["wh questions"],
+      "__type": "vocabulary",
+      "__order": 21,
+      "__hidden": false
+    }
   }
 ]

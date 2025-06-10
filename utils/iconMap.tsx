@@ -89,6 +89,18 @@ import WhyIcon from '@/assets/icons/licensed/why.svg'; // Add this import
 import WhenIcon from '@/assets/icons/licensed/when.svg'; // Add this import
 import HowIcon from '@/assets/icons/licensed/how.svg'; // Add this import
 import WhIcon from '@/assets/icons/open_source/wh_questions.svg'; // Add this import
+import AllergyIcon from '@/assets/icons/licensed/allergy.svg';
+import BackacheIcon from '@/assets/icons/licensed/backache.svg';
+import BrokenIcon from '@/assets/icons/licensed/broken.svg';
+import DiarrheaIcon from '@/assets/icons/licensed/diarrhea.svg';
+import FeverIcon from '@/assets/icons/licensed/fever.svg';
+import FluIcon from '@/assets/icons/licensed/flu.svg';
+import HeadacheIcon from '@/assets/icons/licensed/headache.svg';
+import NauseousIcon from '@/assets/icons/licensed/nauseous.svg';
+import SickIcon from '@/assets/icons/licensed/sick.svg';
+import ToothacheIcon from '@/assets/icons/licensed/toothache.svg';
+import TiredIcon from '@/assets/icons/licensed/tired.svg'; // Add this import
+import DepressedIcon from '@/assets/icons/licensed/depressed.svg'; // Add this import
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -279,6 +291,20 @@ export const iconMap: Record<string, React.FC<any>> = {
   how: HowIcon,
   'wh questions': WhIcon, // Example for a custom icon
   'wh questions vocab': WhIcon, // Example for a custom icon
+  allergy: AllergyIcon,
+  backache: BackacheIcon,
+  broken: BrokenIcon,
+  diarrhea: DiarrheaIcon,
+  fever: FeverIcon,
+  flu: FluIcon,
+  headache: HeadacheIcon,
+  nauseous: NauseousIcon,
+  sick: SickIcon,
+  toothache: ToothacheIcon,
+  'illnesses vocab': SickIcon, // Example for a custom icon
+  illnesses: SickIcon, // Example for a custom icon
+  tired: TiredIcon,
+  depressed: DepressedIcon,
 
   // ...etc
 };
