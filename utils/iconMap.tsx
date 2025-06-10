@@ -80,6 +80,15 @@ import ChildIcon from '@/assets/icons/licensed/child.svg'; // Add this import
 import ParentIcon from '@/assets/icons/licensed/parent.svg'; // Add this import
 import SonIcon from '@/assets/icons/licensed/son.svg'; // Add this import
 import DaughterIcon from '@/assets/icons/licensed/daughter.svg'; // Add this import
+import AdjectivesIcon from '@/assets/icons/open_source/adjective.svg'; // Example for a custom icon
+import YesIcon from '@/assets/icons/open_source/yes.svg'; // Example for a custom icon
+import WhoIcon from '@/assets/icons/licensed/who.svg'; // Add this import
+import WhatIcon from '@/assets/icons/licensed/what.svg'; // Add this import
+import WhereIcon from '@/assets/icons/licensed/where.svg'; // Add this import
+import WhyIcon from '@/assets/icons/licensed/why.svg'; // Add this import
+import WhenIcon from '@/assets/icons/licensed/when.svg'; // Add this import
+import HowIcon from '@/assets/icons/licensed/how.svg'; // Add this import
+import WhIcon from '@/assets/icons/open_source/wh_questions.svg'; // Add this import
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -258,7 +267,18 @@ export const iconMap: Record<string, React.FC<any>> = {
   child: ChildIcon, // Example for a custom icon
   son: SonIcon,
   daughter: DaughterIcon,
+  adjectives: AdjectivesIcon, // Example for a custom icon
+  YesIcon: YesIcon, // Example for a custom icon
+  'yes no questions': YesIcon, // Example for a custom icon
   'family vocab': FamilyIcon, // Example for a custom icon
+  who: WhoIcon,
+  what: WhatIcon,
+  where: WhereIcon,
+  why: WhyIcon,
+  when: WhenIcon,
+  how: HowIcon,
+  'wh questions': WhIcon, // Example for a custom icon
+  'wh questions vocab': WhIcon, // Example for a custom icon
 
   // ...etc
 };

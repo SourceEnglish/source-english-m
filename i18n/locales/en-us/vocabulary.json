@@ -2597,5 +2597,73 @@
       "word": "married",
       "translation_note": ""
     }
+  },
+  {
+    "do": {
+      "__pos": "verb",
+      "__tags": ["verbs", "auxiliary verbs", "do"],
+      "__icon_text": "do",
+      "__show_word": false,
+      "word": "do",
+      "translation_note": ""
+    }
+  },
+  {
+    "does": {
+      "__pos": "verb",
+      "__tags": ["verbs", "auxiliary verbs", "do"],
+      "__icon_text": "does",
+      "__show_word": false,
+      "word": "does",
+      "translation_note": ""
+    }
+  },
+  {
+    "who": {
+      "__pos": "pronoun",
+      "__tags": ["wh questions", "wh who"],
+      "word": "who",
+      "translation_note": "used to ask about a person"
+    }
+  },
+  {
+    "what": {
+      "__pos": "pronoun",
+      "__tags": ["wh questions", "wh what"],
+      "word": "what",
+      "translation_note": "used to ask about a thing or information"
+    }
+  },
+  {
+    "where": {
+      "__pos": "adverb",
+      "__tags": ["wh questions", "wh where"],
+      "word": "where",
+      "translation_note": "used to ask about a place"
+    }
+  },
+  {
+    "why": {
+      "__pos": "adverb",
+      "__tags": ["wh questions", "wh why"],
+      "word": "why",
+      "translation_note": "used to ask about a reason"
+    }
+  },
+  {
+    "when": {
+      "__pos": "adverb",
+      "__tags": ["wh questions", "wh when"],
+      "word": "when",
+      "translation_note": "used to ask about time"
+    }
+  },
+  {
+    "how": {
+      "__pos": "adverb",
+      "__tags": ["wh questions", "wh how"],
+      "word": "how",
+      "translation_note": "used to ask about manner, condition, or way"
+    }
   }
 ]

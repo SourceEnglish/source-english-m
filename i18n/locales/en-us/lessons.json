@@ -133,6 +133,16 @@
   },
 
   {
+    "adjectives": {
+      "name": "adjectives",
+      "__tags": ["adjectives"],
+      "__type": "lesson",
+      "__order": 14.75,
+      "__hidden": false
+    }
+  },
+
+  {
     "possessive adjectives": {
       "name": "possessive adjectives",
       "__tags": ["possessive adjectives"],
@@ -147,6 +157,34 @@
       "__tags": ["possessive adjectives"],
       "__type": "vocabulary",
       "__order": 16,
+      "__hidden": false
+    }
+  },
+
+  {
+    "yes no questions": {
+      "name": "yes no questions",
+      "__tags": ["yes no questions"],
+      "__type": "lesson",
+      "__order": 17,
+      "__hidden": false
+    }
+  },
+  {
+    "wh questions": {
+      "name": "wh questions",
+      "__tags": ["wh questions"],
+      "__type": "lesson",
+      "__order": 18,
+      "__hidden": false
+    }
+  },
+  {
+    "wh questions vocab": {
+      "name": "wh questions vocab",
+      "__tags": ["wh questions"],
+      "__type": "vocabulary",
+      "__order": 19,
       "__hidden": false
     }
   }

@@ -961,5 +961,617 @@
     "__order": 85,
     "__type": "quote",
     "text": "It is cool and cloudy."
+  },
+  {
+    "_id": "yes_no_questions_header",
+    "__lessons": ["yes no questions"],
+    "__order": 1,
+    "__type": "header",
+    "text": "Yes/No Questions"
+  },
+  {
+    "_id": "yes_no_questions_intro",
+    "__lessons": ["yes no questions"],
+    "__order": 2,
+    "__type": "paragraph",
+    "text": "Yes/No questions are questions you answer with \"Yes\" or \"No.\" Two common ways to make these quesions are with the verb \"to be\" (am / is / are) and the verb do (do / does).",
+    "__forced_pronunciation": "Yes or No questions are questions you answer with \"yes\" or \"no\". Two common ways to make these quesions are with the verb \"to be\" (am / is / are) and the verb do (do / does)."
+  },
+  {
+    "_id": "yes_no_questions_be_header",
+    "__lessons": ["yes no questions"],
+    "__order": 3,
+    "__type": "subheader",
+    "text": "Questions with \"To Be\" "
+  },
+  {
+    "_id": "yes_no_questions_be_carousel",
+    "__lessons": ["yes no questions"],
+    "__order": 3.5,
+    "__type": "vocabularyCarousel",
+    "__tags": ["to be"]
+  },
+  {
+    "_id": "yes_no_questions_be_pattern",
+    "__lessons": ["yes no questions"],
+    "__order": 4,
+    "__type": "paragraph",
+    "text": "If the question uses \"to be\" (am, is, are), put \"to be\" first, then the subject (person or pronoun)."
+  },
+  {
+    "_id": "yes_no_questions_be_examples",
+    "__lessons": ["yes no questions"],
+    "__order": 5,
+    "__type": "table",
+    "__headers": [
+      { "text": "Pattern", "__type": "text" },
+      { "text": "Question", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Are you a student?" },
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Is she at home?" },
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Are they ready?" },
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Is the weather cold?" },
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Are we late?" },
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Is he your friend?" }
+    ]
+  },
+  {
+    "_id": "yes_no_questions_be_short_answers_header",
+    "__lessons": ["yes no questions"],
+    "__order": 6,
+    "__type": "subheader",
+    "text": "Positive Short Answers with \"To Be\""
+  },
+  {
+    "_id": "yes_no_questions_be_short_answers_positive",
+    "__lessons": ["yes no questions"],
+    "__order": 7,
+    "__type": "paragraph",
+    "text": "Say \"Yes, I am\" or \"Yes, she is.\" Do not use contractions in the positive answer."
+  },
+  {
+    "_id": "yes_no_questions_be_short_answers_positive_table",
+    "__lessons": ["yes no questions"],
+    "__order": 8,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Correct Short Answer", "__type": "text" },
+      { "text": "❌Incorrect", "__type": "text" }
+    ],
+    "__entries": [
+      {
+        "__type": "text",
+        "text": "Are you a student?"
+      },
+      {
+        "__type": "text",
+        "text": "Yes, I am.\nYes, I am a student."
+      },
+      {
+        "__type": "text",
+        "text": "❌Yes, I'm."
+      },
+      {
+        "__type": "text",
+        "text": "Is she at home?"
+      },
+      {
+        "__type": "text",
+        "text": "Yes, she is.\nYes, she is at home."
+      },
+      {
+        "__type": "text",
+        "text": "❌Yes, she's."
+      },
+      {
+        "__type": "text",
+        "text": "Are they ready?"
+      },
+      {
+        "__type": "text",
+        "text": "Yes, they are.\nYes, they are ready."
+      },
+      {
+        "__type": "text",
+        "text": "❌Yes, they're."
+      },
+      {
+        "__type": "text",
+        "text": "Is the weather cold?"
+      },
+      {
+        "__type": "text",
+        "text": "Yes, it is.\nYes, it is cold."
+      },
+      {
+        "__type": "text",
+        "text": "❌Yes, it's."
+      },
+      {
+        "__type": "text",
+        "text": "Are we late?"
+      },
+      {
+        "__type": "text",
+        "text": "Yes, we are.\nYes, we are late."
+      },
+      {
+        "__type": "text",
+        "text": "❌Yes, we're."
+      },
+      {
+        "__type": "text",
+        "text": "Is he your friend?"
+      },
+      {
+        "__type": "text",
+        "text": "Yes, he is.\nYes, he is my friend."
+      },
+      {
+        "__type": "text",
+        "text": "❌Yes, he's."
+      }
+    ]
+  },
+  {
+    "_id": "yes_no_questions_be_short_answers_negative_header",
+    "__lessons": ["yes no questions"],
+    "__order": 9,
+    "__type": "subheader",
+    "text": "Negative Short Answers with \"To Be\""
+  },
+  {
+    "_id": "yes_no_questions_be_short_answers_negative_paragraph",
+    "__lessons": ["yes no questions"],
+    "__order": 9.5,
+    "__type": "paragraph",
+    "text": "For negative short answers, you can say \"No, I'm not\" or \"No, she isn't.\" You can use \"is not\" or \"isn't\". Both are correct."
+  },
+  {
+    "_id": "yes_no_questions_do_carousel",
+    "__lessons": ["yes no questions"],
+    "__order": 12.5,
+    "__type": "vocabularyCarousel",
+    "__tags": ["do"]
+  },
+  {
+    "_id": "yes_no_questions_other_verbs_header",
+    "__lessons": ["yes no questions"],
+    "__order": 11,
+    "__type": "subheader",
+    "text": "Yes/No Questions with Other Verbs"
+  },
+  {
+    "_id": "yes_no_questions_other_verbs_pattern",
+    "__lessons": ["yes no questions"],
+    "__order": 12,
+    "__type": "paragraph",
+    "text": "If the question does not use \"to be,\" start with \"do\" or \"does.\" Use \"do\" for I, you, we, they. Use \"does\" for he, she, it."
+  },
+  {
+    "_id": "yes_no_questions_other_verbs_examples_table",
+    "__lessons": ["yes no questions"],
+    "__order": 13,
+    "__type": "table",
+    "__headers": [
+      { "text": "Pattern", "__type": "text" },
+      { "text": "Question", "__type": "text" },
+      { "text": "Positive Answer", "__type": "text" },
+      { "text": "Negative Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "Do/Does + subject + verb" },
+      { "__type": "text", "text": "Do you like pizza?" },
+      { "__type": "text", "text": "Yes, I do.\nYes, I like pizza." },
+      { "__type": "text", "text": "No, I don't.\nNo, I don't like pizza." },
+      { "__type": "text", "text": "Do/Does + subject + verb " },
+      { "__type": "text", "text": "Does she play tennis?" },
+      { "__type": "text", "text": "Yes, she does.\nYes, she plays tennis." },
+      {
+        "__type": "text",
+        "text": "No, she doesn't.\nNo, she doesn't play tennis."
+      },
+      { "__type": "text", "text": "Do/Does + subject + verb" },
+      { "__type": "text", "text": "Do they speak English?" },
+      { "__type": "text", "text": "Yes, they do.\nYes, they speak English." },
+      {
+        "__type": "text",
+        "text": "No, they don't.\nNo, they don't speak English."
+      },
+      { "__type": "text", "text": "Do/Does + subject + verb" },
+      { "__type": "text", "text": "Does he work here?" },
+      { "__type": "text", "text": "Yes, he does.\nYes, he works here." },
+      {
+        "__type": "text",
+        "text": "No, he doesn't.\nNo, he doesn't work here."
+      },
+      { "__type": "text", "text": "Do/Does + subject + verb" },
+      { "__type": "text", "text": "Do we have class today?" },
+      { "__type": "text", "text": "Yes, we do.\nYes, we have class today." },
+      {
+        "__type": "text",
+        "text": "No, we don't.\nNo, we don't have class today."
+      }
+    ]
+  },
+  {
+    "_id": "yes_no_questions_extra_video_header",
+    "__lessons": ["yes no questions"],
+    "__order": 14,
+    "__type": "header",
+    "text": "Yes/No Questions Video"
+  },
+  {
+    "_id": "yes_no_questions_extra_video",
+    "__lessons": ["yes no questions"],
+    "__order": 15,
+    "__type": "video",
+    "__src": "https://youtu.be/YIkewDhlSwQ?si=TTnLf5ep92vhDgJ3"
+  },
+  {
+    "_id": "adjectives_header",
+    "__lessons": ["adjectives"],
+    "__order": 1,
+    "__type": "header",
+    "text": "Adjectives"
+  },
+  {
+    "_id": "adjectives_video",
+    "__lessons": ["adjectives"],
+    "__order": 2,
+    "__type": "video",
+    "__src": "https://www.youtube.com/watch?v=LiYxv0vudmc"
+  },
+  {
+    "_id": "wh_questions_header",
+    "__lessons": ["wh questions"],
+    "__order": 1,
+    "__type": "header",
+    "text": "Wh- Questions"
+  },
+  {
+    "_id": "wh_questions_intro",
+    "__lessons": ["wh questions"],
+    "__order": 2,
+    "__type": "paragraph",
+    "text": "Wh- questions are questions that begin with words like who, what, where, when, why, or how. We use them to ask for information, not just yes or no."
+  },
+  {
+    "_id": "wh_questions_vocab_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 3,
+    "__type": "vocabularyCarousel",
+    "__tags": ["wh questions"]
+  },
+  {
+    "_id": "wh_questions_words_table",
+    "__lessons": ["wh questions"],
+    "__order": 4,
+    "__type": "table",
+    "__headers": [
+      { "text": "Wh- Word", "__type": "text" },
+      { "text": "Used for", "__type": "text" },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "who" },
+      { "__type": "text", "text": "person" },
+      { "__type": "text", "text": "Who is your teacher?" },
+      { "__type": "text", "text": "what" },
+      { "__type": "text", "text": "thing or information" },
+      { "__type": "text", "text": "What is your name?" },
+      { "__type": "text", "text": "where" },
+      { "__type": "text", "text": "place" },
+      { "__type": "text", "text": "Where do you live?" },
+      { "__type": "text", "text": "when" },
+      { "__type": "text", "text": "time" },
+      { "__type": "text", "text": "When is your birthday?" },
+      { "__type": "text", "text": "why" },
+      { "__type": "text", "text": "reason" },
+      { "__type": "text", "text": "Why are you late?" },
+      { "__type": "text", "text": "how" },
+      { "__type": "text", "text": "manner or way" },
+      { "__type": "text", "text": "How are you?" }
+    ]
+  },
+  {
+    "_id": "wh_questions_patterns_header",
+    "__lessons": ["wh questions"],
+    "__order": 5,
+    "__type": "subheader",
+    "text": "Common Patterns for Wh- Questions"
+  },
+  {
+    "_id": "wh_questions_pattern_do",
+    "__lessons": ["wh questions"],
+    "__order": 6,
+    "__type": "paragraph",
+    "text": "Pattern 1: Wh- word + do/does + subject + verb\nExample: Where do you live?\nExample: What does she eat?"
+  },
+  {
+    "_id": "wh_questions_pattern_be",
+    "__lessons": ["wh questions"],
+    "__order": 7,
+    "__type": "paragraph",
+    "text": "Pattern 2: Wh- word + be (am/is/are) + subject\nExample: How are you?\nExample: Where is your book?"
+  },
+
+  {
+    "_id": "wh_questions_examples_list",
+    "__lessons": ["wh questions"],
+    "__order": 9,
+    "__type": "list",
+    "items": [
+      "Who is your teacher?",
+      "What is your name?",
+      "Where do you live?",
+      "When is your birthday?",
+      "Why are you late?",
+      "How are you?",
+      "What do you like?",
+      "Where is the school?"
+    ]
+  },
+
+  {
+    "_id": "wh_questions_who_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 12,
+    "__type": "subheader",
+    "text": "Who"
+  },
+  {
+    "_id": "wh_questions_who_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 12.1,
+    "__type": "vocabularyCarousel",
+    "__tags": ["wh who"]
+  },
+  {
+    "_id": "wh_questions_who_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 13,
+    "__type": "paragraph",
+    "text": "Use 'who' to ask about a person."
+  },
+  {
+    "_id": "wh_questions_who_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 14,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "Who is your teacher?" },
+      { "__type": "text", "text": "My teacher is Ms. Lee." },
+      { "__type": "text", "text": "Who are they?" },
+      { "__type": "text", "text": "They are my friends." },
+      { "__type": "text", "text": "Who lives here?" },
+      { "__type": "text", "text": "My brother lives here." }
+    ]
+  },
+  {
+    "_id": "wh_questions_what_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 15,
+    "__type": "subheader",
+    "text": "What"
+  },
+  {
+    "_id": "wh_questions_what_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 15.1,
+    "__type": "vocabularyCarousel",
+    "__tags": ["wh what"]
+  },
+  {
+    "_id": "wh_questions_what_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 16,
+    "__type": "paragraph",
+    "text": "Use 'what' to ask about a thing or information."
+  },
+  {
+    "_id": "wh_questions_what_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 17,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "What is your name?" },
+      { "__type": "text", "text": "My name is Anna." },
+      { "__type": "text", "text": "What is your favorite color?" },
+      { "__type": "text", "text": "My favorite color is blue." },
+      { "__type": "text", "text": "What is this?" },
+      { "__type": "text", "text": "This is a book." },
+      { "__type": "text", "text": "What time is it?" },
+      { "__type": "text", "text": "It is three o'clock." },
+      { "__type": "text", "text": "What day is it?" },
+      { "__type": "text", "text": "It is Wednesday." },
+      { "__type": "text", "text": "What month is it?" },
+      { "__type": "text", "text": "It is June." }
+    ]
+  },
+  {
+    "_id": "wh_questions_where_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 18,
+    "__type": "subheader",
+    "text": "Where"
+  },
+  {
+    "_id": "wh_questions_where_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 18.1,
+    "__type": "vocabularyCarousel",
+    "__tags": ["wh where"]
+  },
+  {
+    "_id": "wh_questions_where_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 19,
+    "__type": "paragraph",
+    "text": "Use 'where' to ask about a place."
+  },
+  {
+    "_id": "wh_questions_where_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 20,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "Where do you live?" },
+      { "__type": "text", "text": "I live in Seattle." },
+      { "__type": "text", "text": "Where is your book?" },
+      { "__type": "text", "text": "My book is on the table." },
+      { "__type": "text", "text": "Where are you from?" },
+      { "__type": "text", "text": "I am from Mexico." }
+    ]
+  },
+  {
+    "_id": "wh_questions_when_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 21,
+    "__type": "subheader",
+    "text": "When"
+  },
+  {
+    "_id": "wh_questions_when_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 21.1,
+    "__type": "vocabularyCarousel",
+    "__tags": ["wh when"]
+  },
+  {
+    "_id": "wh_questions_when_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 22,
+    "__type": "paragraph",
+    "text": "Use 'when' to ask about time."
+  },
+  {
+    "_id": "wh_questions_when_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 23,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "When is your birthday?" },
+      { "__type": "text", "text": "My birthday is on July fourth." },
+      { "__type": "text", "text": "When do you wake up?" },
+      { "__type": "text", "text": "I wake up at 7:00 a.m." },
+      { "__type": "text", "text": "When does class start?" },
+      { "__type": "text", "text": "Class starts at 6:00 p.m." }
+    ]
+  },
+  {
+    "_id": "wh_questions_why_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 24,
+    "__type": "subheader",
+    "text": "Why"
+  },
+  {
+    "_id": "wh_questions_why_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 24.1,
+    "__type": "vocabularyCarousel",
+    "__tags": ["wh why"]
+  },
+  {
+    "_id": "wh_questions_why_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 25,
+    "__type": "paragraph",
+    "text": "Use 'why' to ask about a reason."
+  },
+  {
+    "_id": "wh_questions_why_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 26,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "Why are you late?" },
+      { "__type": "text", "text": "I missed the bus." },
+
+      { "__type": "text", "text": "Why do you like Summer?" },
+      { "__type": "text", "text": "Because it is sunny and hot." }
+    ]
+  },
+  {
+    "_id": "wh_questions_how_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 27,
+    "__type": "subheader",
+    "text": "How"
+  },
+  {
+    "_id": "wh_questions_how_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 27.1,
+    "__type": "vocabularyCarousel",
+    "__tags": ["wh how"]
+  },
+  {
+    "_id": "wh_questions_how_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 28,
+    "__type": "paragraph",
+    "text": "Use 'how' to ask about manner, condition, quantity, or way."
+  },
+  {
+    "_id": "wh_questions_how_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 29,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "How are you?" },
+      { "__type": "text", "text": "I am fine, thank you." },
+      { "__type": "text", "text": "How do you spell your name?" },
+      { "__type": "text", "text": "A-N-N-A" },
+      { "__type": "text", "text": "How many children do you have?" },
+      { "__type": "text", "text": "I have three children." }
+    ]
+  },
+  {
+    "_id": "wh_questions_video_header",
+    "__lessons": ["wh questions"],
+    "__order": 30,
+    "__type": "header",
+    "text": "Wh- Questions Video"
+  },
+  {
+    "_id": "wh_questions_video",
+    "__lessons": ["wh questions"],
+    "__order": 31,
+    "__type": "video",
+    "__src": "https://www.youtube.com/watch?v=x_4AjSwTXdc"
   }
 ]
