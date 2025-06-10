@@ -17,7 +17,7 @@ const ExampleSentences: React.FC<ExampleSentencesProps> = ({ examples }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.inner}>
+      <View style={[styles.inner, { alignItems: 'flex-start' }]}>
         <ReadableText
           text="Example Sentences"
           style={{
@@ -25,7 +25,7 @@ const ExampleSentences: React.FC<ExampleSentencesProps> = ({ examples }) => {
             marginBottom: 4,
             fontSize: isMobile ? 16 : 22,
             color: '#333',
-            width: '100%',
+            // width intentionally omitted
             textAlign: 'left',
             alignSelf: 'flex-start',
           }}
@@ -34,10 +34,8 @@ const ExampleSentences: React.FC<ExampleSentencesProps> = ({ examples }) => {
       <View
         style={{
           width: '100%',
-          backgroundColor: 'blue',
-
           minWidth: '100%',
-
+          alignSelf: 'stretch',
           marginVertical: 8,
         }}
       >
@@ -50,20 +48,20 @@ const ExampleSentences: React.FC<ExampleSentencesProps> = ({ examples }) => {
           }}
         />
       </View>
-      <View style={styles.inner}>
+      <View style={[styles.inner, { alignItems: 'flex-start' }]}>
         {examples.map((ex: string, idx: number) => (
-          <ReadableText
-            key={idx}
-            text={`• ${ex}`}
-            style={{
-              width: '100%',
-              fontSize: isMobile ? 15 : 19,
-              color: '#444',
-              marginBottom: 2,
-              textAlign: 'left',
-              alignSelf: 'flex-start',
-            }}
-          />
+          <View key={idx} style={{ width: '100%', alignItems: 'flex-start' }}>
+            <ReadableText
+              text={`• ${ex}`}
+              style={{
+                fontSize: isMobile ? 15 : 19,
+                color: '#444',
+                marginBottom: 2,
+                textAlign: 'left',
+                alignSelf: 'flex-start',
+              }}
+            />
+          </View>
         ))}
       </View>
     </View>
