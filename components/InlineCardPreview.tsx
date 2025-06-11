@@ -60,7 +60,10 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({
   // Use __objectKey if provided, otherwise use the object key from the parent if available
   const Icon = getIconForEntry({
     ...card,
-    __objectKey: (card as any).__objectKey || Object.keys(card).length === 1 ? Object.keys(card)[0] : card.word,
+    __objectKey:
+      (card as any).__objectKey || Object.keys(card).length === 1
+        ? Object.keys(card)[0]
+        : card.word,
   });
   const isInCarousel = useContext(VocabularyCarouselContext);
 
