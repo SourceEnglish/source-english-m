@@ -4,6 +4,7 @@ import {
   ScrollView,
   StyleSheet,
   useWindowDimensions,
+  Platform,
 } from 'react-native';
 import ReadableText from './ReadableText';
 
@@ -100,13 +101,25 @@ function getPresentContinuous(
 const Table: React.FC<{
   title: string;
   rows: { subject: Subject; form: string }[];
-}> = ({ title, rows }) => {
+  isSimpleTense?: boolean;
+}> = ({ title, rows, isSimpleTense }) => {
   // Import readAloudMode from SpeechContext
   const { readAloudMode } = require('@/contexts/SpeechContext').useSpeech();
 
   return (
-    <View style={styles.tableContainer}>
-      <View style={styles.tableRowHeader}>
+    <View
+      style={[
+        styles.tableContainer,
+        // Fix for Android: backgroundColor must be set on the outermost View
+        isSimpleTense ? styles.simpleTenseTableContainer : null,
+      ]}
+    >
+      <View
+        style={[
+          styles.tableRowHeader,
+          isSimpleTense && styles.simpleTenseHeader,
+        ]}
+      >
         <View style={[styles.cell, styles.headerCell, styles.cellBorderRight]}>
           <ReadableText
             text="Subject"
@@ -190,13 +203,12 @@ export const VerbConjugationTables: React.FC<VerbConjugationTablesProps> = ({
   // Center the Present Simple table on mount
   useEffect(() => {
     if (scrollRef.current) {
-      // There are 3 tables: Past, Present, Future
-      // Center the Present (middle) table
-      // Each tableContainer has width 220 + marginHorizontal: 12 (so 24 total margin)
       const tableWidth = 220 + 24;
-      // The Present Simple table is the second (index 1)
       const offset = tableWidth * 1 - screenWidth / 2 + tableWidth / 2;
-      scrollRef.current.scrollTo({ x: offset > 0 ? offset : 0, animated: true });
+      scrollRef.current.scrollTo({
+        x: offset > 0 ? offset : 0,
+        animated: true,
+      });
     }
   }, [screenWidth]);
 
@@ -233,29 +245,32 @@ export const VerbConjugationTables: React.FC<VerbConjugationTablesProps> = ({
           }}
         />
       </View>
-      <ScrollView
-        ref={scrollRef}
-        horizontal
-        contentContainerStyle={styles.tablesRow}
-        showsHorizontalScrollIndicator={false}
-      >
-        <View>
-          <ReadableText text="Past Simple" style={styles.readableLabel} />
-          <Table title="Past Simple" rows={pastRows} />
-        </View>
-        <View>
-          <ReadableText
-            text="Present Simple"
-            style={styles.readableLabel}
-            pronunciation='"present" simple'
-          />
-          <Table title="Present Simple" rows={presentRows} />
-        </View>
-        <View>
-          <ReadableText text="Future Simple" style={styles.readableLabel} />
-          <Table title="Future Simple" rows={futureRows} />
-        </View>
-      </ScrollView>
+      {/* Scrollable row with dark background and borders */}
+      <View style={styles.scrollableRowOuter}>
+        <ScrollView
+          ref={scrollRef}
+          horizontal
+          contentContainerStyle={styles.tablesRow}
+          showsHorizontalScrollIndicator={false}
+        >
+          <View>
+            <ReadableText text="Past Simple" style={styles.readableLabel} />
+            <Table title="Past Simple" rows={pastRows} isSimpleTense />
+          </View>
+          <View>
+            <ReadableText
+              text="Present Simple"
+              style={styles.readableLabel}
+              pronunciation='"present" simple'
+            />
+            <Table title="Present Simple" rows={presentRows} isSimpleTense />
+          </View>
+          <View>
+            <ReadableText text="Future Simple" style={styles.readableLabel} />
+            <Table title="Future Simple" rows={futureRows} isSimpleTense />
+          </View>
+        </ScrollView>
+      </View>
       <View style={styles.presentContinuousRow}>
         <View>
           <ReadableText
@@ -282,10 +297,23 @@ const styles = StyleSheet.create({
     maxWidth: 700,
     alignSelf: 'center',
   },
+  scrollableRowOuter: {
+    backgroundColor: '#d6d6d6',
+    borderRadius: 2,
+    borderTopColor: 'black',
+    borderTopWidth: 2,
+    borderBottomColor: 'black',
+    borderBottomWidth: 2,
+    marginBottom: 8,
+    marginTop: 2,
+    paddingBottom: 18,
+    paddingVertical: 6,
+  },
   tablesRow: {
     flexDirection: 'row',
-    paddingBottom: 16,
     alignItems: 'flex-start',
+    // Remove paddingBottom so the background color is flush
+    // paddingBottom: 16,
   },
   presentContinuousRow: {
     alignItems: 'center',
@@ -297,7 +325,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 12,
     backgroundColor: '#fff',
     borderRadius: 8,
-    elevation: 2,
+    elevation: Platform.OS === 'android' ? 4 : 2,
     shadowColor: '#000',
     shadowOpacity: 0.08,
     shadowRadius: 4,
@@ -306,11 +334,23 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#bbb',
   },
+  simpleTenseTableContainer: {
+    backgroundColor: '#e0e0e0',
+    borderColor: '#000',
+    borderWidth: 1,
+  },
   tableRowHeader: {
     flexDirection: 'row',
     backgroundColor: '#333',
     minHeight: 36,
     alignItems: 'center',
+  },
+  simpleTenseHeader: {
+    backgroundColor: '#d6d6d6',
+    borderTopColor: '#000',
+    borderTopWidth: 1,
+    borderBottomColor: '#000',
+    borderBottomWidth: 1,
   },
   tableRow: {
     flexDirection: 'row',
