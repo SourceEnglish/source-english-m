@@ -212,7 +212,7 @@
       "__tags": ["verbs"],
       "__type": "lesson",
       "__order": 22,
-      "__hidden": false
+      "__hidden": true
     }
   },
   {
