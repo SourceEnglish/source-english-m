@@ -3,9 +3,8 @@ import {
   View,
   ScrollView,
   StyleSheet,
-  useWindowDimensions,
   Platform,
-  Dimensions, // <-- add this import
+  Dimensions,
 } from 'react-native';
 import ReadableText from './ReadableText';
 
@@ -50,7 +49,43 @@ type VerbConjugationTablesProps = {
   entry: VocabularyEntry[string];
 };
 
+function getPastSimple(subject: Subject, past: string): string {
+  // Special case for "to be"
+  if (past === 'was/were' || past === 'was') {
+    if (['I', 'he', 'she', 'it'].includes(subject)) return 'was';
+    return 'were';
+  }
+  // Special case for "go"
+  if (past === 'went') return 'went';
+  // Special case for "do"
+  if (past === 'did') return 'did';
+  // Special case for "have"
+  if (past === 'had') return 'had';
+  return past;
+}
+
 function getPresentSimple(subject: Subject, base: string): string {
+  // Special case for "to be"
+  if (base === 'am/are/is' || base === 'be') {
+    if (subject === 'I') return 'am';
+    if (['he', 'she', 'it'].includes(subject)) return 'is';
+    return 'are';
+  }
+  // Special case for "go"
+  if (base === 'go') {
+    if (['he', 'she', 'it'].includes(subject)) return 'goes';
+    return 'go';
+  }
+  // Special case for "do"
+  if (base === 'do') {
+    if (['he', 'she', 'it'].includes(subject)) return 'does';
+    return 'do';
+  }
+  // Special case for "have"
+  if (base === 'have') {
+    if (['he', 'she', 'it'].includes(subject)) return 'has';
+    return 'have';
+  }
   // 3rd person singular
   if (['he', 'she', 'it'].includes(subject)) {
     if (base.endsWith('y') && !/[aeiou]y$/.test(base)) {
@@ -71,11 +106,17 @@ function getPresentSimple(subject: Subject, base: string): string {
   return base;
 }
 
-function getPastSimple(_subject: Subject, past: string): string {
-  return past;
-}
-
 function getFutureSimple(subject: Subject, base: string): string {
+  // Special case for "to be"
+  if (base === 'am/are/is' || base === 'be') {
+    return 'will be';
+  }
+  // Special case for "go"
+  if (base === 'go') return 'will go';
+  // Special case for "do"
+  if (base === 'do') return 'will do';
+  // Special case for "have"
+  if (base === 'have') return 'will have';
   return `${subject === 'I' ? 'will' : 'will'} ${base}`;
 }
 

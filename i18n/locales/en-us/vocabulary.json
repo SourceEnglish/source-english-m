@@ -2409,14 +2409,44 @@
     "be": {
       "__pos": "verb",
       "__tags": ["verbs", "to be"],
-      "__icon_text": "to be",
+      "__icon_text": "be",
       "__show_word": false,
       "word": "be",
       "conjugation": {
-        "present": "am",
+        "present": "be",
         "present_participle": "being",
         "past": "was"
       }
+    }
+  },
+  {
+    "do": {
+      "__pos": "verb",
+      "__tags": ["verbs", "to do"],
+      "__icon_text": "do",
+      "__show_word": false,
+      "conjugation": {
+        "past": "did",
+        "present": "do",
+        "present_participle": "doing"
+      },
+      "word": "do",
+      "translation_note": ""
+    }
+  },
+  {
+    "go": {
+      "__pos": "verb",
+      "__tags": ["verbs", "to do"],
+      "__icon_text": "go",
+      "__show_word": false,
+      "conjugation": {
+        "past": "went",
+        "present": "go",
+        "present_participle": "going"
+      },
+      "word": "go",
+      "translation_note": ""
     }
   },
 
@@ -2424,14 +2454,14 @@
     "have": {
       "__pos": "verb",
       "__tags": ["verbs", "to have"],
-      "__icon_text": "to have",
+      "__icon_text": "have",
       "__show_word": false,
       "conjugation": {
         "past": "had",
         "present": "have",
         "present_participle": "having"
       },
-      "word": "to have",
+      "word": "have",
       "translation_note": ""
     }
   },
@@ -2650,26 +2680,7 @@
       "translation_note": ""
     }
   },
-  {
-    "do": {
-      "__pos": "verb",
-      "__tags": ["verbs", "auxiliary verbs", "do"],
-      "__icon_text": "do",
-      "__show_word": false,
-      "word": "do",
-      "translation_note": ""
-    }
-  },
-  {
-    "does": {
-      "__pos": "verb",
-      "__tags": ["verbs", "auxiliary verbs", "do"],
-      "__icon_text": "does",
-      "__show_word": false,
-      "word": "does",
-      "translation_note": ""
-    }
-  },
+
   {
     "sick": {
       "__pos": "adjective",
