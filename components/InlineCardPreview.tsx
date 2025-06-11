@@ -81,8 +81,10 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({
         // Do nothing if readAloudMode is true
         return;
       }
-      // Only navigate to the vocab entry page, do not include "back" in the URL
-      router.push(`/vocab/${encodeURIComponent(word)}`);
+      // Redirect to __redirect if present, otherwise use word
+      const redirect = (card as any).__redirect;
+      const target = redirect ? redirect : word;
+      router.push(`/vocab/${encodeURIComponent(target)}`);
     }
   };
 
