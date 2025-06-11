@@ -48,7 +48,13 @@ export default function VocabEntryPage() {
       }
     : null;
 
-  if (!vocabEntry) {
+  // Type guard: check for required fields
+  if (
+    !vocabEntry ||
+    typeof vocabEntry !== 'object' ||
+    !('__pos' in vocabEntry) ||
+    !('word' in vocabEntry)
+  ) {
     return <Text>Vocab entry not found</Text>;
   }
 
@@ -180,21 +186,20 @@ export default function VocabEntryPage() {
         />
       </View>
       {/* Verb conjugation tables for verbs, below example sentences */}
-      {'__pos' in vocabEntry &&
-        vocabEntry.__pos === 'verb' &&
-        'conjugation' in vocabEntry &&
-        vocabEntry.conjugation && (
-          <View
-            style={{
-              width: '100%',
-              maxWidth: CENTERED_MAX_WIDTH,
-              alignSelf: 'center',
-              marginTop: 12,
-            }}
-          >
+      <View
+        style={{
+          width: '100%',
+          alignSelf: 'stretch',
+          marginTop: 12,
+        }}
+      >
+        {'__pos' in vocabEntry &&
+          vocabEntry.__pos === 'verb' &&
+          'conjugation' in vocabEntry &&
+          vocabEntry.conjugation && (
             <VerbConjugationTables entry={vocabEntry as any} />
-          </View>
-        )}
+          )}
+      </View>
     </ScrollView>
   );
 }

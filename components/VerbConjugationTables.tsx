@@ -5,6 +5,7 @@ import {
   StyleSheet,
   useWindowDimensions,
   Platform,
+  Dimensions, // <-- add this import
 } from 'react-native';
 import ReadableText from './ReadableText';
 
@@ -173,7 +174,7 @@ export const VerbConjugationTables: React.FC<VerbConjugationTablesProps> = ({
   entry,
 }) => {
   const { conjugation } = entry;
-  const { width: screenWidth } = useWindowDimensions();
+  const screenWidth = Dimensions.get('window').width;
   const isMobile = screenWidth <= 768;
 
   // Table data
@@ -200,17 +201,27 @@ export const VerbConjugationTables: React.FC<VerbConjugationTablesProps> = ({
   // Ref for horizontal ScrollView
   const scrollRef = useRef<ScrollView>(null);
 
-  // Center the Present Simple table on mount
+  // Center the Present Simple table on mount if isMobile, without animation on first render
   useEffect(() => {
-    if (scrollRef.current) {
+    if (isMobile && scrollRef.current) {
       const tableWidth = 220 + 24;
       const offset = tableWidth * 1 - screenWidth / 2 + tableWidth / 2;
-      scrollRef.current.scrollTo({
-        x: offset > 0 ? offset : 0,
-        animated: true,
-      });
+      // Use setTimeout to ensure scroll happens after layout, and use animated: false for first render
+      setTimeout(() => {
+        scrollRef.current?.scrollTo({
+          x: offset > 0 ? offset : 0,
+          animated: false,
+        });
+      }, 0);
     }
-  }, [screenWidth]);
+    // Only run on mount and when screenWidth/isMobile changes
+  }, [screenWidth, isMobile]);
+
+  // Dynamically set justifyContent for tablesRow
+  const tablesRowStyle = {
+    ...styles.tablesRow,
+    justifyContent: isMobile ? ('flex-start' as const) : ('center' as const),
+  };
 
   return (
     <View style={[styles.verbConjugationTables, styles.sectionContainer]}>
@@ -250,7 +261,7 @@ export const VerbConjugationTables: React.FC<VerbConjugationTablesProps> = ({
         <ScrollView
           ref={scrollRef}
           horizontal
-          contentContainerStyle={styles.tablesRow}
+          contentContainerStyle={tablesRowStyle}
           showsHorizontalScrollIndicator={false}
         >
           <View>
@@ -288,14 +299,19 @@ export const VerbConjugationTables: React.FC<VerbConjugationTablesProps> = ({
 const styles = StyleSheet.create({
   verbConjugationTables: {
     width: '100%',
+
+    alignSelf: 'center',
   },
   sectionContainer: {
     marginBottom: 12,
     backgroundColor: '#f5f5f5',
     borderRadius: 8,
     padding: 12,
-    maxWidth: 700,
+    maxWidth: 1300,
+
     alignSelf: 'center',
+
+    width: '100%',
   },
   scrollableRowOuter: {
     backgroundColor: '#d6d6d6',
@@ -308,17 +324,25 @@ const styles = StyleSheet.create({
     marginTop: 2,
     paddingBottom: 18,
     paddingVertical: 6,
+    width: '100%',
+
+    alignSelf: 'center',
+    maxWidth: 1300,
   },
   tablesRow: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
-    // Remove paddingBottom so the background color is flush
-    // paddingBottom: 16,
+    alignItems: 'center',
+    width: '100%',
+    maxWidth: 1300,
+    // Do not set justifyContent here; it is set dynamically above
   },
   presentContinuousRow: {
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 8,
+    width: '100%',
+    alignSelf: 'center',
+    maxWidth: 700,
   },
   tableContainer: {
     width: 220,
@@ -333,6 +357,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderWidth: 1,
     borderColor: '#bbb',
+    alignSelf: 'center',
   },
   simpleTenseTableContainer: {
     backgroundColor: '#e0e0e0',
@@ -344,6 +369,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#333',
     minHeight: 36,
     alignItems: 'center',
+    justifyContent: 'center', // Center the first row horizontally
   },
   simpleTenseHeader: {
     backgroundColor: '#d6d6d6',
