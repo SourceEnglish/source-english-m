@@ -101,6 +101,7 @@ import SickIcon from '@/assets/icons/licensed/sick.svg';
 import ToothacheIcon from '@/assets/icons/licensed/toothache.svg';
 import TiredIcon from '@/assets/icons/licensed/tired.svg'; // Add this import
 import DepressedIcon from '@/assets/icons/licensed/depressed.svg'; // Add this import
+import ColdIllnessIcon from '@/assets/icons/licensed/cold_(illness).svg'; // Add this import
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -305,6 +306,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   illnesses: SickIcon, // Example for a custom icon
   tired: TiredIcon,
   depressed: DepressedIcon,
+  "cold_(illness)": ColdIllnessIcon, // Map to cold_(illness) icon
 
   // ...etc
 };
@@ -325,10 +327,17 @@ export function getIconForEntry(entry: any): React.FC<any> {
       />
     );
   }
-  const word = entry && entry.word ? entry.word : entry;
-  const key = typeof word === 'string' ? word.toLowerCase() : '';
+  // Use the object key (entry name) if available for icon mapping
+  let key = '';
+  if (entry && entry.__objectKey) {
+    key = entry.__objectKey.toLowerCase();
+  } else if (entry && entry.word) {
+    key = entry.word.toLowerCase();
+  } else if (typeof entry === 'string') {
+    key = entry.toLowerCase();
+  }
   if (iconMap[key]) return iconMap[key];
   return (props: any) => (
-    <GenericTextIcon word={word} size={props.width || 28} />
+    <GenericTextIcon word={entry.word || entry} size={props.width || 28} />
   );
 }

@@ -71,7 +71,10 @@ export default function CardPreview({
   const [isHovered, setIsHovered] = useState(false);
 
   // Dynamically get the icon based on the word (or another property if needed)
-  const Icon = getIconForEntry(card);
+  const Icon = getIconForEntry({
+    ...card,
+    __objectKey: vocabKey || word,
+  });
   const router = useRouter();
   const { deckEntries, setDeckIndex, setDeckEntries } = useDeck();
 

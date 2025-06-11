@@ -2661,15 +2661,7 @@
       "examples": ["He has a backache from lifting heavy boxes."]
     }
   },
-  {
-    "broken": {
-      "__pos": "adjective",
-      "__tags": ["illnesses", "illness have"],
-      "word": "broken",
-      "translation_note": "",
-      "examples": ["She has a broken arm.", "He has a broken leg."]
-    }
-  },
+
   {
     "diarrhea": {
       "__pos": "noun",
@@ -2680,6 +2672,15 @@
         "He has diarrhea.",
         "She can't come to school because she has diarrhea."
       ]
+    }
+  },
+  {
+    "cold_(illness)": {
+      "__pos": "noun",
+      "__tags": ["illnesses", "illness have"],
+      "word": "cold",
+      "translation_note": "",
+      "examples": ["I have a cold."]
     }
   },
   {
@@ -2743,6 +2744,7 @@
       "examples": ["I feel tired.", "I am tired after a long day at work."]
     }
   },
+
   {
     "depressed": {
       "__pos": "adjective",
@@ -2750,6 +2752,15 @@
       "word": "depressed",
       "translation_note": "",
       "examples": ["He feels depressed after losing his job."]
+    }
+  },
+  {
+    "broken": {
+      "__pos": "adjective",
+      "__tags": ["illnesses", "illness have"],
+      "word": "broken",
+      "translation_note": "",
+      "examples": ["She has a broken arm.", "He has a broken leg."]
     }
   },
   {

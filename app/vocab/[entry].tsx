@@ -41,7 +41,10 @@ export default function VocabEntryPage() {
     (e: any) => Object.keys(e)[0] === entryName
   );
   const vocabEntry = vocabEntryObj
-    ? vocabEntryObj[entryName as keyof typeof vocabEntryObj]
+    ? {
+        ...vocabEntryObj[entryName as keyof typeof vocabEntryObj],
+        __objectKey: entryName, // Pass the object key for icon mapping
+      }
     : null;
 
   if (!vocabEntry) {
