@@ -2391,7 +2391,50 @@
       "translation_note": ""
     }
   },
+  {
+    "run": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "run",
+      "conjugation": {
+        "present": "run",
+        "present_participle": "running",
+        "past": "ran"
+      },
+      "examples": ["I run in the park every morning."],
+      "translation_note": ""
+    }
+  },
+  {
+    "be": {
+      "__pos": "verb",
+      "__tags": ["verbs", "to be"],
+      "__icon_text": "to be",
+      "__show_word": false,
+      "word": "be",
+      "conjugation": {
+        "present": "am",
+        "present_participle": "being",
+        "past": "was"
+      }
+    }
+  },
 
+  {
+    "have": {
+      "__pos": "verb",
+      "__tags": ["verbs", "to have"],
+      "__icon_text": "to have",
+      "__show_word": false,
+      "conjugation": {
+        "past": "had",
+        "present": "have",
+        "present_participle": "having"
+      },
+      "word": "to have",
+      "translation_note": ""
+    }
+  },
   {
     "red": {
       "__pos": "adjective",

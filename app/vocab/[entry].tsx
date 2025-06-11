@@ -17,6 +17,7 @@ import ChevronLeft from '@/assets/icons/open_source/chevron-left.svg';
 import ChevronRight from '@/assets/icons/open_source/chevron-right.svg';
 import { getIconForEntry } from '@/utils/iconMap';
 import { useSpeech } from '@/contexts/SpeechContext';
+import VerbConjugationTables from '@/components/VerbConjugationTables';
 
 export function generateStaticParams() {
   return vocabularyData.map((entry: any) => {
@@ -178,6 +179,22 @@ export default function VocabEntryPage() {
           }
         />
       </View>
+      {/* Verb conjugation tables for verbs, below example sentences */}
+      {'__pos' in vocabEntry &&
+        vocabEntry.__pos === 'verb' &&
+        'conjugation' in vocabEntry &&
+        vocabEntry.conjugation && (
+          <View
+            style={{
+              width: '100%',
+              maxWidth: CENTERED_MAX_WIDTH,
+              alignSelf: 'center',
+              marginTop: 12,
+            }}
+          >
+            <VerbConjugationTables entry={vocabEntry as any} />
+          </View>
+        )}
     </ScrollView>
   );
 }

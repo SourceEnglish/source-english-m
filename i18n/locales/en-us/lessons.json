@@ -205,5 +205,23 @@
       "__order": 21,
       "__hidden": false
     }
+  },
+  {
+    "verbs": {
+      "name": "verbs",
+      "__tags": ["verbs"],
+      "__type": "lesson",
+      "__order": 22,
+      "__hidden": false
+    }
+  },
+  {
+    "verbs vocab": {
+      "name": "verbs vocab",
+      "__tags": ["verbs"],
+      "__type": "vocabulary",
+      "__order": 23,
+      "__hidden": false
+    }
   }
 ]

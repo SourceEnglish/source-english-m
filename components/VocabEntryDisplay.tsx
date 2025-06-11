@@ -15,6 +15,7 @@ interface VocabEntryDisplayProps {
     __vowel?: boolean;
     __consonant?: boolean;
     examples?: string[];
+    conjugation?: any; // Add this line to allow conjugation property
   };
 }
 
