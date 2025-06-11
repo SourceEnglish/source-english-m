@@ -2361,36 +2361,7 @@
       "translation_note": ""
     }
   },
-  {
-    "am": {
-      "__pos": "verb",
-      "__tags": ["verbs", "to be", "to be singular"],
-      "__icon_text": "am",
-      "__show_word": false,
-      "word": "am",
-      "translation_note": ""
-    }
-  },
-  {
-    "are": {
-      "__pos": "verb",
-      "__tags": ["verbs", "to be", "to be singular", "to be plural"],
-      "__icon_text": "are",
-      "__show_word": false,
-      "word": "are",
-      "translation_note": ""
-    }
-  },
-  {
-    "is": {
-      "__pos": "verb",
-      "__tags": ["verbs", "to be", "to be singular"],
-      "__icon_text": "is",
-      "__show_word": false,
-      "word": "is",
-      "translation_note": ""
-    }
-  },
+
   {
     "run": {
       "__pos": "verb",
