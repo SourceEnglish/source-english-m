@@ -241,19 +241,13 @@ export const VerbConjugationTables: React.FC<VerbConjugationTablesProps> = ({
 
   // Ref for horizontal ScrollView
   const scrollRef = useRef<ScrollView>(null);
-  const didInitialScroll = useRef(false);
 
-  // Smoothly center the Present Simple table on mount if isMobile, only once
+  // Center the Present Simple table on mount if isMobile, without animation on first render
   useEffect(() => {
-    if (
-      isMobile &&
-      scrollRef.current &&
-      !didInitialScroll.current
-    ) {
-      didInitialScroll.current = true;
+    if (isMobile && scrollRef.current) {
       const tableWidth = 220 + 24;
       const offset = tableWidth * 1 - screenWidth / 2 + tableWidth / 2;
-      // Use setTimeout to ensure scroll happens after layout, and use animated: true for smooth scroll
+      // Use setTimeout to ensure scroll happens after layout, and use animated: false for first render
       setTimeout(() => {
         scrollRef.current?.scrollTo({
           x: offset > 0 ? offset : 0,
@@ -261,6 +255,7 @@ export const VerbConjugationTables: React.FC<VerbConjugationTablesProps> = ({
         });
       }, 0);
     }
+    // Only run on mount and when screenWidth/isMobile changes
   }, [screenWidth, isMobile]);
 
   // Dynamically set justifyContent for tablesRow
