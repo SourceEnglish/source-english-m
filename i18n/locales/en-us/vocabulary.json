@@ -2379,7 +2379,7 @@
   {
     "be": {
       "__pos": "verb",
-      "__tags": ["verbs", "to be", "to be yes"],
+      "__tags": ["verbs", "be", "to be", "to be yes"],
       "__icon_text": "be",
       "__show_word": false,
       "word": "be",

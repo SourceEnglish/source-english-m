@@ -22,6 +22,13 @@
     "__forced_pronunciation": "two bee"
   },
   {
+    "_id": "to_be_be_tag_carousel",
+    "__lessons": ["to be"],
+    "__order": 3.1,
+    "__type": "vocabularyCarousel",
+    "__tags": ["be"]
+  },
+  {
     "_id": "to_be_usage_intro",
     "__lessons": ["to be"],
     "__order": 4,
