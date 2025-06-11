@@ -2377,42 +2377,9 @@
     }
   },
   {
-    "am": {
-      "__pos": "verb",
-      "__redirect": "be",
-      "__tags": ["to be singular"],
-      "__icon_text": "am",
-      "__show_word": false,
-      "word": "am",
-      "translation_note": ""
-    }
-  },
-  {
-    "are": {
-      "__pos": "verb",
-      "__redirect": "be",
-      "__tags": ["to be singular", "to be plural"],
-      "__icon_text": "are",
-      "__show_word": false,
-      "word": "are",
-      "translation_note": ""
-    }
-  },
-  {
-    "is": {
-      "__pos": "verb",
-      "__redirect": "be",
-      "__tags": ["to be singular"],
-      "__icon_text": "is",
-      "__show_word": false,
-      "word": "is",
-      "translation_note": ""
-    }
-  },
-  {
     "be": {
       "__pos": "verb",
-      "__tags": ["verbs", "to be"],
+      "__tags": ["verbs", "to be", "to be yes"],
       "__icon_text": "be",
       "__show_word": false,
       "word": "be",
@@ -2424,9 +2391,43 @@
     }
   },
   {
+    "am": {
+      "__pos": "verb",
+      "__redirect": "be",
+      "__tags": ["to be singular", "to be yes"],
+      "__icon_text": "am",
+      "__show_word": false,
+      "word": "am",
+      "translation_note": ""
+    }
+  },
+  {
+    "are": {
+      "__pos": "verb",
+      "__redirect": "be",
+      "__tags": ["to be singular", "to be plural", "to be yes"],
+      "__icon_text": "are",
+      "__show_word": false,
+      "word": "are",
+      "translation_note": ""
+    }
+  },
+  {
+    "is": {
+      "__pos": "verb",
+      "__redirect": "be",
+      "__tags": ["to be singular", "to be yes"],
+      "__icon_text": "is",
+      "__show_word": false,
+      "word": "is",
+      "translation_note": ""
+    }
+  },
+
+  {
     "do": {
       "__pos": "verb",
-      "__tags": ["verbs", "to do"],
+      "__tags": ["verbs", "do"],
       "__icon_text": "do",
       "__show_word": false,
       "conjugation": {
@@ -2435,6 +2436,17 @@
         "present_participle": "doing"
       },
       "word": "do",
+      "translation_note": ""
+    }
+  },
+  {
+    "does": {
+      "__pos": "verb",
+      "__redirect": "do",
+      "__tags": ["do"],
+      "__icon_text": "does",
+      "__show_word": false,
+      "word": "does",
       "translation_note": ""
     }
   },
