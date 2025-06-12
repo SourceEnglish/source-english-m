@@ -173,8 +173,9 @@ export default function SearchBar() {
     key?: string;
     redirect?: string;
   }) => {
+    // Do not blur the searchbar when selecting from the dropdown
     setQuery('');
-    setFocused(false);
+    // setFocused(false); // <-- Remove this line to keep focus on the searchbar
     if (item.type === 'lesson') {
       router.push(`/${item.name}`);
     } else {
@@ -330,10 +331,21 @@ export default function SearchBar() {
               } else if (item.type === 'vocab' && item.pos) {
                 emoji = posEmoji[item.pos] || posEmoji.default;
               }
+              // Prevent focus from shifting away on press/longPress
+              const handlePress = (e: any) => {
+                e.preventDefault?.();
+                e.stopPropagation?.();
+                handleSelect(item);
+                // Refocus the input if needed
+                inputRef.current?.focus();
+              };
               return (
                 <TouchableOpacity
                   style={styles.suggestion}
-                  onPress={() => handleSelect(item)}
+                  onPress={handlePress}
+                  onLongPress={handlePress}
+                  delayLongPress={100}
+                  activeOpacity={0.6}
                 >
                   <Text style={styles.suggestionText}>
                     {emoji + ' '}
