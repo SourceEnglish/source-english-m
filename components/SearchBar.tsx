@@ -29,14 +29,13 @@ const posEmoji: Record<string, string> = {
   default: '📝',
 };
 
-function flattenVocabulary(
-  vocabArr: any[]
-): {
+function flattenVocabulary(vocabArr: any[]): {
   word: string;
   clarifier?: string;
   key: string;
   altWords?: string[];
   pos?: string;
+  redirect?: string;
 }[] {
   // Prevent duplicate display of the same word+clarifier+key combo, but allow both "I" (letter) and "I (pronoun)"
   const seen = new Set<string>();
@@ -46,6 +45,7 @@ function flattenVocabulary(
     key: string;
     altWords?: string[];
     pos?: string;
+    redirect?: string;
   }[] = [];
   vocabArr.forEach((entry) => {
     const key = Object.keys(entry)[0];
@@ -64,6 +64,7 @@ function flattenVocabulary(
           clarifier: undefined,
           key,
           pos: value.__pos,
+          redirect: value.__redirect,
         });
         seen.add(sig);
       }
@@ -85,6 +86,7 @@ function flattenVocabulary(
           key,
           altWords: [value.__icon_text, value.word],
           pos: value.__pos,
+          redirect: value.__redirect,
         });
         seen.add(sig);
       }
@@ -100,6 +102,7 @@ function flattenVocabulary(
           clarifier,
           key,
           pos: value.__pos,
+          redirect: value.__redirect,
         });
         seen.add(sig);
       }
@@ -142,8 +145,53 @@ export default function SearchBar() {
   const inputRef = useRef<TextInput>(null);
   const router = useRouter();
 
-  const lessons = getLessons() as Array<{ name: string; __hidden?: boolean }>;
+  // const lessons = getLessons() as Array<{ name: string; __hidden?: boolean }>;
   const vocabEntries = flattenVocabulary(vocabulary as any[]);
+
+  // Helper to resolve redirect for vocab entries
+  function resolveRedirect(item: { key?: string; redirect?: string }) {
+    let targetKey = item.key;
+    let redirect = item.redirect;
+    // Follow redirects up to a reasonable depth to avoid infinite loops
+    let depth = 0;
+    while (redirect && depth < 5) {
+      const found = vocabEntries.find((v) => v.key === redirect);
+      if (found) {
+        targetKey = found.key;
+        redirect = found.redirect;
+        depth++;
+      } else {
+        break;
+      }
+    }
+    return targetKey;
+  }
+
+  const handleSelect = (item: {
+    type: string;
+    name: string;
+    key?: string;
+    redirect?: string;
+  }) => {
+    setQuery('');
+    setFocused(false);
+    if (item.type === 'lesson') {
+      router.push(`/${item.name}`);
+    } else {
+      // If vocab entry has a redirect, resolve it
+      // Find the vocab entry by key to get its redirect property
+      const vocabEntry = vocabEntries.find((v) => v.key === item.key);
+      const targetKey =
+        vocabEntry && vocabEntry.redirect
+          ? resolveRedirect(vocabEntry)
+          : item.key || item.name;
+      if (targetKey) {
+        router.push(`/vocab/${encodeURIComponent(targetKey)}`);
+      }
+    }
+  };
+
+  const lessons = getLessons() as Array<{ name: string; __hidden?: boolean }>;
 
   // Prepare all suggestions (lessons and vocab, no prioritization by default)
   type Suggestion = {
@@ -254,16 +302,6 @@ export default function SearchBar() {
   } else {
     suggestions = allSuggestions.slice(0, MAX_SUGGESTIONS);
   }
-
-  const handleSelect = (item: { type: string; name: string; key?: string }) => {
-    setQuery('');
-    setFocused(false);
-    if (item.type === 'lesson') {
-      router.push(`/${item.name}`);
-    } else {
-      router.push(`/vocab/${encodeURIComponent(item.key || item.name)}`);
-    }
-  };
 
   return (
     <View style={styles.container}>
