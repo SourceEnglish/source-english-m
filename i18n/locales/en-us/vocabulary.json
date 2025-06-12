@@ -2483,6 +2483,38 @@
     }
   },
   {
+    "has": {
+      "__pos": "verb",
+      "__redirect": "have",
+      "__icon_text": "has",
+      "__show_word": false,
+      "word": "has",
+      "translation_note": ""
+    }
+  },
+
+  {
+    "does": {
+      "__pos": "verb",
+      "__redirect": "do",
+      "__icon_text": "does",
+      "__show_word": false,
+      "word": "does",
+      "translation_note": ""
+    }
+  },
+  {
+    "goes": {
+      "__pos": "verb",
+      "__redirect": "go",
+      "__icon_text": "goes",
+      "__show_word": false,
+      "word": "goes",
+      "translation_note": ""
+    }
+  },
+
+  {
     "red": {
       "__pos": "adjective",
       "__tags": ["colors"],
