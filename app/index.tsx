@@ -12,6 +12,7 @@ import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { getLessons } from '@/utils/loadLessons';
 import { iconMap } from '@/utils/iconMap';
 import { CENTERED_MAX_WIDTH } from '@/constants/constants';
+import SearchBar from '@/components/SearchBar';
 
 export default function Index() {
   const { requestedLanguage } = useSpeech();
@@ -25,6 +26,9 @@ export default function Index() {
     <ScrollView>
       <View style={styles.outerContainer}>
         <View style={[styles.thread, { gap: 12 }]}>
+          <View style={{ width: '100%', zIndex: 1 }}>
+            <SearchBar />
+          </View>
           {/* <PageLink
             icon={
               iconMap['speak']
