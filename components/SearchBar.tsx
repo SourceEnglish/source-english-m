@@ -15,8 +15,125 @@ import { t } from 'i18next';
 
 const MAX_SUGGESTIONS = 8;
 
-function flattenVocabulary(vocabArr: any[]): string[] {
-  return vocabArr.map((entry) => Object.keys(entry)[0]);
+// Emoji map for __pos
+const posEmoji: Record<string, string> = {
+  letter: '🔡',
+  number: '🔢',
+  noun: '📦',
+  'proper noun': '🏷️',
+  pronoun: '🙋',
+  verb: '🏃',
+  adjective: '🎨',
+  adverb: '🕒',
+  // fallback
+  default: '📝',
+};
+
+function flattenVocabulary(
+  vocabArr: any[]
+): {
+  word: string;
+  clarifier?: string;
+  key: string;
+  altWords?: string[];
+  pos?: string;
+}[] {
+  // Prevent duplicate display of the same word+clarifier+key combo, but allow both "I" (letter) and "I (pronoun)"
+  const seen = new Set<string>();
+  const result: {
+    word: string;
+    clarifier?: string;
+    key: string;
+    altWords?: string[];
+    pos?: string;
+  }[] = [];
+  vocabArr.forEach((entry) => {
+    const key = Object.keys(entry)[0];
+    const value = entry[key];
+
+    if (
+      value &&
+      typeof value === 'object' &&
+      value.__pos === 'letter' &&
+      key.length === 1
+    ) {
+      const sig = `${key}|letter|${key}`;
+      if (!seen.has(sig)) {
+        result.push({
+          word: key,
+          clarifier: undefined,
+          key,
+          pos: value.__pos,
+        });
+        seen.add(sig);
+      }
+      return;
+    }
+
+    if (
+      value &&
+      typeof value === 'object' &&
+      value.__pos === 'number' &&
+      value.__icon_text &&
+      value.word
+    ) {
+      const sig = `${value.word}|${value.__clarifier || ''}|${key}`;
+      if (!seen.has(sig)) {
+        result.push({
+          word: value.word,
+          clarifier: value.__clarifier,
+          key,
+          altWords: [value.__icon_text, value.word],
+          pos: value.__pos,
+        });
+        seen.add(sig);
+      }
+      return;
+    }
+
+    if (value && typeof value === 'object' && value.word) {
+      const clarifier = value.__clarifier;
+      const sig = `${value.word}|${clarifier || ''}|${key}`;
+      if (!seen.has(sig)) {
+        result.push({
+          word: value.word,
+          clarifier,
+          key,
+          pos: value.__pos,
+        });
+        seen.add(sig);
+      }
+    } else if (!value || typeof value !== 'object') {
+      const sig = `${key}||${key}`;
+      if (!seen.has(sig)) {
+        result.push({ word: key, key });
+        seen.add(sig);
+      }
+    }
+  });
+  return result;
+}
+
+// Utility: Simple Levenshtein distance for fuzzy matching
+function levenshtein(a: string, b: string): number {
+  const an = a.length;
+  const bn = b.length;
+  if (an === 0) return bn;
+  if (bn === 0) return an;
+  const matrix = Array.from({ length: an + 1 }, () => Array(bn + 1).fill(0));
+  for (let i = 0; i <= an; i++) matrix[i][0] = i;
+  for (let j = 0; j <= bn; j++) matrix[0][j] = j;
+  for (let i = 1; i <= an; i++) {
+    for (let j = 1; j <= bn; j++) {
+      const cost = a[i - 1].toLowerCase() === b[j - 1].toLowerCase() ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1, // deletion
+        matrix[i][j - 1] + 1, // insertion
+        matrix[i - 1][j - 1] + cost // substitution
+      );
+    }
+  }
+  return matrix[an][bn];
 }
 
 export default function SearchBar() {
@@ -26,26 +143,125 @@ export default function SearchBar() {
   const router = useRouter();
 
   const lessons = getLessons() as Array<{ name: string; __hidden?: boolean }>;
-  const vocabWords = flattenVocabulary(vocabulary as any[]);
+  const vocabEntries = flattenVocabulary(vocabulary as any[]);
 
-  const suggestions = [
+  // Prepare all suggestions (lessons and vocab, no prioritization by default)
+  type Suggestion = {
+    type: string;
+    name: string;
+    clarifier?: string;
+    key?: string;
+    altWords?: string[];
+    pos?: string;
+  };
+
+  let allSuggestions: Suggestion[] = [
     ...lessons
       .filter((l) => !l.__hidden)
-      .map((l) => ({ type: 'lesson', name: l.name })),
-    ...vocabWords.map((w) => ({ type: 'vocab', name: w })),
-  ]
-    .filter((item) =>
-      item.name.toLowerCase().includes(query.trim().toLowerCase())
+      .map((l) => {
+        // Determine emoji for lessons
+        let emoji = '📘';
+        if (l.name.endsWith('vocab')) emoji = '📗';
+        return { type: 'lesson', name: l.name, emoji, altWords: undefined };
+      }),
+    ...vocabEntries.map((v) => ({
+      type: 'vocab',
+      name: v.word,
+      clarifier: v.clarifier,
+      key: v.key,
+      altWords: v.altWords,
+      pos: v.pos,
+    })),
+  ].filter((item) => {
+    const q = query.trim().toLowerCase();
+    if (item.name.toLowerCase().includes(q)) return true;
+    if (
+      item.altWords &&
+      item.altWords.some((alt) => alt.toLowerCase().includes(q))
     )
-    .slice(0, MAX_SUGGESTIONS);
+      return true;
+    return false;
+  });
 
-  const handleSelect = (item: { type: string; name: string }) => {
+  // Sort suggestions by closeness to query using Levenshtein distance, then by startsWith, then alphabetically
+  if (query.length > 0) {
+    allSuggestions = allSuggestions
+      .map((item) => {
+        const q = query.toLowerCase();
+        // Use the closest altWord for distance if available
+        let minLev = levenshtein(q, item.name.toLowerCase());
+        let starts = item.name.toLowerCase().startsWith(q) ? 0 : 1;
+        if (item.altWords && item.altWords.length > 0) {
+          for (const alt of item.altWords) {
+            const lev = levenshtein(q, alt.toLowerCase());
+            if (lev < minLev) minLev = lev;
+            if (alt.toLowerCase().startsWith(q)) starts = 0;
+          }
+        }
+        return {
+          ...item,
+          _lev: minLev,
+          _starts: starts,
+        };
+      })
+      .sort((a, b) => {
+        if (a._starts !== b._starts) return a._starts - b._starts;
+        if (a._lev !== b._lev) return a._lev - b._lev;
+        return a.name.localeCompare(b.name);
+      });
+  }
+
+  // If the query is a single letter, prioritize single letter vocab entries
+  let suggestions: {
+    type: string;
+    name: string;
+    clarifier?: string;
+    key?: string;
+    pos?: string;
+    emoji?: string;
+  }[] = [];
+
+  if (query.length === 1 && /^[a-zA-Z]$/.test(query)) {
+    const letter = query.toUpperCase();
+
+    const singleLetterVocab = vocabEntries
+      .filter((v) => v.word.length === 1 && v.word.toUpperCase() === letter)
+      .map((v) => ({
+        type: 'vocab',
+        name: v.word,
+        clarifier: v.clarifier,
+        key: v.key,
+        pos: v.pos,
+      }));
+
+    const rest = allSuggestions.filter(
+      (item) =>
+        !(
+          item.type === 'vocab' &&
+          item.name.length === 1 &&
+          item.name.toUpperCase() === letter
+        ) &&
+        !(
+          item.type === 'vocab' &&
+          item.key &&
+          item.key.length === 1 &&
+          item.key.toUpperCase() === letter &&
+          item.key === item.name
+        )
+    );
+
+    suggestions = [...singleLetterVocab, ...rest].slice(0, MAX_SUGGESTIONS);
+  } else {
+    suggestions = allSuggestions.slice(0, MAX_SUGGESTIONS);
+  }
+
+  const handleSelect = (item: { type: string; name: string; key?: string }) => {
     setQuery('');
     setFocused(false);
     if (item.type === 'lesson') {
       router.push(`/${item.name}`);
     } else {
-      router.push(`/vocab/${encodeURIComponent(item.name)}`);
+      router.push(`/vocab/${encodeURIComponent(item.key || item.name)}`);
     }
   };
 
@@ -67,18 +283,28 @@ export default function SearchBar() {
           <FlatList
             keyboardShouldPersistTaps="handled"
             data={suggestions}
-            keyExtractor={(item) => `${item.type}:${item.name}`}
-            renderItem={({ item }) => (
-              <TouchableOpacity
-                style={styles.suggestion}
-                onPress={() => handleSelect(item)}
-              >
-                <Text style={styles.suggestionText}>
-                  {item.type === 'lesson' ? '📘 ' : '🔤 '}
-                  {t(item.name)}
-                </Text>
-              </TouchableOpacity>
-            )}
+            keyExtractor={(item) => `${item.type}:${item.key || item.name}`}
+            renderItem={({ item }) => {
+              let emoji = '📝';
+              if (item.type === 'lesson') {
+                emoji =
+                  item.emoji || (item.name.endsWith('vocab') ? '📗' : '📘');
+              } else if (item.type === 'vocab' && item.pos) {
+                emoji = posEmoji[item.pos] || posEmoji.default;
+              }
+              return (
+                <TouchableOpacity
+                  style={styles.suggestion}
+                  onPress={() => handleSelect(item)}
+                >
+                  <Text style={styles.suggestionText}>
+                    {emoji + ' '}
+                    {t(item.name)}
+                    {item.clarifier ? ` (${item.clarifier})` : ''}
+                  </Text>
+                </TouchableOpacity>
+              );
+            }}
           />
         </View>
       )}

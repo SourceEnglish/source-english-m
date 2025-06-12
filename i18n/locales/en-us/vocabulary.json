@@ -2131,10 +2131,11 @@
     }
   },
   {
-    "I_(pronoun)": {
+    "I (pronoun)": {
       "__pos": "pronoun",
       "__tags": ["subject pronouns", "singular subject pronouns"],
       "__icon_text": "I",
+      "__clarifier": "pronoun",
       "__forced_pronunciation": "eye",
       "__show_word": false,
       "word": "I",
