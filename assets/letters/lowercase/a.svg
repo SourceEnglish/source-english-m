@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" xmlns="http://www.w3.org/2000/svg" width="18.429" height="18.65" viewBox="0 0 18.429 18.65">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #ff9ff2;
+        stroke-miterlimit: 10;
+        stroke-width: 2.5px;
+      }
+    </style>
+  </defs>
+  <line id="_2" data-name="2" class="cls-1" x1="17.178" y1="1.25" x2="17.178" y2="17.399"/>
+  <circle id="_1" data-name="1" class="cls-2" cx="9.215" cy="9.435" r="7.964"/>
+</svg>

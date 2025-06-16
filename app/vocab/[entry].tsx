@@ -18,6 +18,13 @@ import ChevronRight from '@/assets/icons/open_source/chevron-right.svg';
 import { getIconForEntry } from '@/utils/iconMap';
 import { useSpeech } from '@/contexts/SpeechContext';
 import VerbConjugationTables from '@/components/VerbConjugationTables';
+import AnimatedUppercaseA from '@/assets/animated/uppercase/A';
+import AnimatedLowercaseA from '@/assets/animated/lowercase/a';
+import AnimatedLowercaseO from '@/assets/animated/lowercase/o';
+import AnimatedLowercaseB from '@/assets/animated/lowercase/b';
+import AnimatedLowercaseC from '@/assets/animated/lowercase/c';
+import AnimatedLowercaseD from '@/assets/animated/lowercase/d';
+import AnimatedUppercaseC from '@/assets/animated/uppercase/C';
 
 export function generateStaticParams() {
   return vocabularyData.map((entry: any) => {
@@ -76,6 +83,157 @@ export default function VocabEntryPage() {
     if (deckIndex < deckEntries.length - 1) {
       nextEntry = deckEntries[deckIndex + 1];
       nextIdx = deckIndex + 1;
+    }
+  }
+
+  // Helper: get animated letter component if this is a letter entry
+  let AnimatedLetterComponent: React.FC<any> | null = null;
+  if (vocabEntry.__pos === 'letter') {
+    const word = vocabEntry.word || '';
+    const upper = word.charAt(0);
+    const lower = word.charAt(1);
+
+    // Only render if both uppercase and lowercase are available
+    if (upper === 'A' && lower === 'a') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100,
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedUppercaseA width={70} height={100} />
+          </View>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedLowercaseA width={50} height={70} />
+          </View>
+        </View>
+      );
+    } else if (upper === 'B' && lower === 'b') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100,
+          }}
+        >
+          {/* No uppercase B animation yet */}
+          <View style={{ flex: 1 }} />
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedLowercaseB width={50} height={70} />
+          </View>
+        </View>
+      );
+    } else if (upper === 'C' && lower === 'c') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100,
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedUppercaseC width={70} height={100} />
+          </View>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedLowercaseC width={50} height={70} />
+          </View>
+        </View>
+      );
+    } else if (upper === 'D' && lower === 'd') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100,
+          }}
+        >
+          {/* No uppercase D animation yet */}
+          <View style={{ flex: 1 }} />
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedLowercaseD width={50} height={70} />
+          </View>
+        </View>
+      );
+    } else if (upper === 'O' && lower === 'o') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100,
+          }}
+        >
+          {/* No uppercase O animation yet */}
+          <View style={{ flex: 1 }} />
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedLowercaseO width={50} height={70} />
+          </View>
+        </View>
+      );
+    } else if (upper === 'A') {
+      AnimatedLetterComponent = AnimatedUppercaseA;
+    } else if (upper === 'C') {
+      AnimatedLetterComponent = AnimatedUppercaseC;
+    } else if (lower === 'a') {
+      AnimatedLetterComponent = AnimatedLowercaseA;
+    } else if (lower === 'b') {
+      AnimatedLetterComponent = AnimatedLowercaseB;
+    } else if (lower === 'c') {
+      AnimatedLetterComponent = AnimatedLowercaseC;
+    } else if (lower === 'd') {
+      AnimatedLetterComponent = AnimatedLowercaseD;
+    } else if (lower === 'o') {
+      AnimatedLetterComponent = AnimatedLowercaseO;
+    } else {
+      AnimatedLetterComponent = null;
     }
   }
 
@@ -171,35 +329,59 @@ export default function VocabEntryPage() {
           </View>
         </View>
       </View>
-      {/* Example sentences in their own view, styled to match Notes width */}
       <View
         style={{
           width: '100%',
-          maxWidth: CENTERED_MAX_WIDTH,
           alignSelf: 'center',
+          marginTop: 24,
+          marginBottom: 24,
         }}
       >
-        <ExampleSentences
-          examples={
-            'examples' in vocabEntry ? (vocabEntry as any).examples : []
-          }
-        />
+        {/* Example sentences in their own view, styled to match Notes width */}
+        <View
+          style={{
+            width: '100%',
+            maxWidth: CENTERED_MAX_WIDTH,
+            alignSelf: 'center',
+          }}
+        >
+          <ExampleSentences
+            examples={
+              'examples' in vocabEntry ? (vocabEntry as any).examples : []
+            }
+          />
+        </View>
+        {/* Verb conjugation tables for verbs, below example sentences */}
+        <View
+          style={{
+            width: '100%',
+            alignSelf: 'stretch',
+            marginTop: 12,
+          }}
+        >
+          {'__pos' in vocabEntry &&
+            vocabEntry.__pos === 'verb' &&
+            'conjugation' in vocabEntry &&
+            vocabEntry.conjugation && (
+              <VerbConjugationTables entry={vocabEntry as any} />
+            )}
+        </View>
       </View>
-      {/* Verb conjugation tables for verbs, below example sentences */}
-      <View
-        style={{
-          width: '100%',
-          alignSelf: 'stretch',
-          marginTop: 12,
-        }}
-      >
-        {'__pos' in vocabEntry &&
-          vocabEntry.__pos === 'verb' &&
-          'conjugation' in vocabEntry &&
-          vocabEntry.conjugation && (
-            <VerbConjugationTables entry={vocabEntry as any} />
-          )}
-      </View>
+      {/* Animated letter drawing at the very bottom */}
+      {AnimatedLetterComponent && (
+        <View
+          style={{
+            alignItems: 'center',
+            marginTop: 24,
+            marginBottom: 32,
+            minHeight: 100,
+            flexDirection: 'row',
+            justifyContent: 'center',
+          }}
+        >
+          <AnimatedLetterComponent width={100} height={140} />
+        </View>
+      )}
     </ScrollView>
   );
 }
@@ -222,3 +404,95 @@ const styles = StyleSheet.create({
   //   marginTop: 10,
   // },
 });
+//                   });
+//                 }}
+//                 accessibilityLabel="Next card"
+//                 style={{
+//                   padding: 8,
+//                   borderWidth: 1,
+//                   borderColor: '#888',
+//                   borderRadius: 8,
+//                   backgroundColor: '#f0f0f0',
+//                 }}
+//               >
+//                 <ChevronRight width={32} height={32} />
+//               </TouchableOpacity>
+//             ) : null}
+//           </View>
+//         </View>
+//       </View>
+//       <View
+//         style={{
+//           width: '100%',
+//           alignSelf: 'center',
+//           marginTop: 24,
+//           marginBottom: 24,
+//         }}
+//       >
+//         {/* Example sentences in their own view, styled to match Notes width */}
+//         <View
+//           style={{
+//             width: '100%',
+//             maxWidth: CENTERED_MAX_WIDTH,
+//             alignSelf: 'center',
+//           }}
+//         >
+//           <ExampleSentences
+//             examples={
+//               'examples' in vocabEntry ? (vocabEntry as any).examples : []
+//             }
+//           />
+//         </View>
+//         {/* Verb conjugation tables for verbs, below example sentences */}
+//         <View
+//           style={{
+//             width: '100%',
+//             alignSelf: 'stretch',
+//             marginTop: 12,
+//           }}
+//         >
+//           {'__pos' in vocabEntry &&
+//             vocabEntry.__pos === 'verb' &&
+//             'conjugation' in vocabEntry &&
+//             vocabEntry.conjugation && (
+//               <VerbConjugationTables entry={vocabEntry as any} />
+//             )}
+//         </View>
+//       </View>
+//       {/* Animated letter drawing at the very bottom */}
+//       {AnimatedLetterComponent && (
+//         <View
+//           style={{
+//             alignItems: 'center',
+//             marginTop: 24,
+//             marginBottom: 32,
+//             minHeight: 100,
+//             flexDirection: 'row',
+//             justifyContent: 'center',
+//           }}
+//         >
+//           <AnimatedLetterComponent width={100} height={140} />
+//         </View>
+//       )}
+//     </ScrollView>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   outerContainer: {
+//     width: '100%',
+//     maxWidth: CENTERED_MAX_WIDTH,
+//     alignSelf: 'center',
+//     marginTop: 10,
+//     marginBottom: 20,
+
+//     paddingVertical: 0,
+//   },
+//   // title: {
+//   //   fontSize: 36,
+//   //   fontWeight: 'bold',
+//   //   textAlign: 'center',
+//   //   marginBottom: 10,
+//   //   marginTop: 10,
+//   // },
+// });

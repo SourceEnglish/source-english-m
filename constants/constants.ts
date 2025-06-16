@@ -21,4 +21,13 @@ const posColors: Record<string, string> = {
 // Centralized max width for centered layouts
 export const CENTERED_MAX_WIDTH = 1300;
 
+// Stroke colors for animated letters (by order)
+export const ANIMATED_LETTER_COLORS = [
+  '#d40000', // red
+  '#ff9100', // orange
+  '#0a9a00', // pink
+  '#1976D2', // blue (for 4-stroke letters)
+  '#43a047', // green (for 5th stroke if needed)
+];
+
 export default posColors;
