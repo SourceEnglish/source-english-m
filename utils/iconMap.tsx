@@ -104,6 +104,7 @@ import TiredIcon from '@/assets/icons/licensed/tired.svg'; // Add this import
 import DepressedIcon from '@/assets/icons/licensed/depressed.svg'; // Add this import
 import ColdIllnessIcon from '@/assets/icons/licensed/cold_(illness).svg'; // Add this import
 import RunIcon from '@/assets/icons/licensed/run.svg'; // Add this import
+import VerbIcon from '@/assets/icons/open_source/verb.svg'; // Add this import
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -311,6 +312,8 @@ export const iconMap: Record<string, React.FC<any>> = {
   depressed: DepressedIcon,
   'cold_(illness)': ColdIllnessIcon, // Map to cold_(illness) icon
   run: RunIcon,
+  'verbs vocab': VerbIcon, // Example for a custom icon
+  verbs: VerbIcon, // Example for a custom icon
 
   // ...etc
 };
