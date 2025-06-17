@@ -63,6 +63,7 @@ import Purple from '@/assets/icons/licensed/purple.svg';
 import Brown from '@/assets/icons/licensed/brown.svg';
 import Pink from '@/assets/icons/licensed/pink.svg';
 import White from '@/assets/icons/licensed/white.svg';
+import Gray from '@/assets/icons/licensed/gray.svg'; // Example for a custom icon
 import Black from '@/assets/icons/licensed/black.svg';
 import ColorIcon from '@/assets/icons/licensed/color.svg'; // Example for a custom icon
 import ColorWheelIcon from '@/assets/icons/licensed/color_wheel.svg'; // Example for a custom icon
@@ -259,6 +260,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   brown: Brown,
   pink: Pink,
   white: White,
+  gray: Gray, // Example for a custom icon
   black: Black,
   color: ColorWheelIcon, // Example for a custom icon
   'colors vocab': ColorIcon, // Example for a custom icon

@@ -2392,6 +2392,17 @@
     }
   },
   {
+    "to be": {
+      "__pos": "verb",
+      "__redirect": "be",
+      "__tags": [],
+      "__icon_text": "to be",
+      "__show_word": false,
+      "word": "to be",
+      "translation_note": ""
+    }
+  },
+  {
     "am": {
       "__pos": "verb",
       "__redirect": "be",
@@ -2583,6 +2594,14 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "white",
+      "translation_note": ""
+    }
+  },
+  {
+    "gray": {
+      "__pos": "adjective",
+      "__tags": ["colors"],
+      "word": "gray",
       "translation_note": ""
     }
   },
