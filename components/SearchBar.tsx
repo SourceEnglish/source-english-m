@@ -97,10 +97,77 @@ function flattenVocabulary(vocabArr: any[]): {
       const clarifier = value.__clarifier;
       const sig = `${value.word}|${clarifier || ''}|${key}`;
       if (!seen.has(sig)) {
+        // If verb with conjugation, add conjugated forms and present simple 3rd person singular to altWords
+        let altWords: string[] | undefined = undefined;
+        if (
+          value.__pos === 'verb' &&
+          value.word &&
+          value.conjugation &&
+          typeof value.conjugation === 'object'
+        ) {
+          // Compute present simple 3rd person singular, including for phrasal verbs
+          const base = value.word;
+          let thirdPerson: string | undefined = undefined;
+          if (base) {
+            // Handle phrasal verbs (e.g., "get up" -> "gets up")
+            const phrasalMatch = base.match(/^([a-zA-Z]+)( .+)$/);
+            if (phrasalMatch) {
+              const verb = phrasalMatch[1];
+              const rest = phrasalMatch[2];
+              let third = '';
+              if (verb.endsWith('y') && !/[aeiou]y$/.test(verb)) {
+                third = verb.slice(0, -1) + 'ies';
+              } else if (
+                verb.endsWith('s') ||
+                verb.endsWith('sh') ||
+                verb.endsWith('ch') ||
+                verb.endsWith('x') ||
+                verb.endsWith('z') ||
+                verb.endsWith('o')
+              ) {
+                third = verb + 'es';
+              } else {
+                third = verb + 's';
+              }
+              thirdPerson = third + rest;
+            } else {
+              // Not a phrasal verb
+              if (base.endsWith('y') && !/[aeiou]y$/.test(base)) {
+                thirdPerson = base.slice(0, -1) + 'ies';
+              } else if (
+                base.endsWith('s') ||
+                base.endsWith('sh') ||
+                base.endsWith('ch') ||
+                base.endsWith('x') ||
+                base.endsWith('z') ||
+                base.endsWith('o')
+              ) {
+                thirdPerson = base + 'es';
+              } else {
+                thirdPerson = base + 's';
+              }
+            }
+          }
+          altWords = [
+            value.word,
+            ...Object.values(value.conjugation).filter(
+              (v) => typeof v === 'string'
+            ),
+          ];
+          // Add present simple 3rd person singular if not already present
+          if (thirdPerson && !altWords.includes(thirdPerson)) {
+            altWords.push(thirdPerson);
+          }
+          // Remove duplicates and falsy
+          altWords = altWords.filter(
+            (v, i, arr) => !!v && arr.indexOf(v) === i
+          );
+        }
         result.push({
           word: value.word,
           clarifier,
           key,
+          altWords,
           pos: value.__pos,
           redirect: value.__redirect,
         });
