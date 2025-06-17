@@ -1762,5 +1762,132 @@
     "__order": 8.8,
     "__type": "quote",
     "text": "She has a broken arm."
+  },
+  {
+    "_id": "simple_present_header",
+    "__lessons": ["simple present tense"],
+    "__order": 1,
+    "__type": "header",
+    "text": "Simple Present Tense"
+  },
+  {
+    "_id": "simple_present_intro",
+    "__lessons": ["simple present tense"],
+    "__order": 2,
+    "__type": "paragraph",
+    "text": "The simple present tense is used to talk about things that are always true, habits, or routines."
+  },
+  {
+    "_id": "simple_present_usage",
+    "__lessons": ["simple present tense"],
+    "__order": 3,
+    "__type": "paragraph",
+    "text": "Use the base form of the verb for I, you, we, and they. \n\nFor subject-verb agreement, change the verb for he, she, and it."
+  },
+
+  {
+    "_id": "simple_present_usage_2",
+    "__lessons": ["simple present tense"],
+    "__order": 3.1,
+    "__type": "paragraph",
+    "text": "When the subject is he, she, or it, here are the ways we change the base form of the verb:"
+  },
+  {
+    "_id": "simple_present_examples",
+    "__lessons": ["simple present tense"],
+    "__order": 4,
+    "__type": "list",
+    "items": [
+      "I eat breakfast every day.",
+      "She works at a hospital.",
+      "They play soccer on weekends.",
+      "He goes to school by bus."
+    ]
+  },
+  {
+    "_id": "simple_present_table",
+    "__lessons": ["simple present tense"],
+    "__order": 3,
+    "__type": "table",
+    "__headers": [
+      { "text": "Subject", "__type": "text" },
+      { "text": "Verb", "__type": "text" },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "I/You/We/They" },
+      { "__type": "text", "text": "live" },
+      { "__type": "text", "text": "We live in Seattle." },
+      { "__type": "text", "text": "He/She/It" },
+      { "__type": "text", "text": "lives" },
+      { "__type": "text", "text": "She lives in Seattle." }
+    ]
+  },
+
+  {
+    "_id": "simple_present_question_examples",
+    "__lessons": ["simple present tense"],
+    "__order": 9,
+    "__type": "list",
+    "items": ["Do you like pizza?", "Does she work here?"]
+  },
+  {
+    "_id": "simple_present_third_person_rules",
+    "__lessons": ["simple present tense"],
+    "__order": 4.5,
+    "__type": "table",
+    "__headers": [
+      { "text": "Verb Ending", "__type": "text" },
+      { "text": "Rule", "__type": "text" },
+      { "text": "Example Words", "__type": "text" },
+      { "text": "Example Sentence", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "most verbs" },
+      { "__type": "text", "text": "add s" },
+      { "__type": "text", "text": "jump\nwalk\nread" },
+      {
+        "__type": "text",
+        "text": "He jumps high.\nShe walks to school.\nHe reads every night."
+      },
+
+      { "__type": "text", "text": "ends with consonant + y" },
+      { "__type": "text", "text": "remove y, add ies" },
+      { "__type": "text", "text": "cry\nstudy" },
+      { "__type": "text", "text": "She cries a lot.\nHe studies English." },
+
+      { "__type": "text", "text": "ends with -s, -x, -z, -ch, -sh" },
+      { "__type": "text", "text": "add es" },
+      { "__type": "text", "text": "watch\nbrush" },
+      { "__type": "text", "text": "He watches TV.\nShe brushes her teeth." },
+
+      { "__type": "text", "text": "ends with -o" },
+      { "__type": "text", "text": "add es" },
+      { "__type": "text", "text": "go" },
+      { "__type": "text", "text": "She goes to school." },
+
+      { "__type": "text", "text": "irregular: have" },
+      { "__type": "text", "text": "has" },
+      { "__type": "text", "text": "have" },
+      { "__type": "text", "text": "She has a car." },
+      { "__type": "text", "text": "irregular: to be" },
+      { "__type": "text", "text": "is" },
+      { "__type": "text", "text": "to be" },
+      { "__type": "text", "text": "She is a teacher." }
+    ]
+  },
+  {
+    "_id": "simple_present_video_subheader",
+    "__lessons": ["simple present tense"],
+    "__order": 99,
+    "__type": "subheader",
+    "text": "Simple Present Tense Video"
+  },
+  {
+    "_id": "simple_present_video",
+    "__lessons": ["simple present tense"],
+    "__order": 100,
+    "__type": "video",
+    "__src": "https://youtu.be/nvVdIJ0las0?si=my13z7J-7n1TjNCH"
   }
 ]

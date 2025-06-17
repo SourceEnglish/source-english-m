@@ -208,6 +208,24 @@
     }
   },
   {
+    "simple present tense": {
+      "name": "simple present tense",
+      "__tags": ["simple present tense"],
+      "__type": "lesson",
+      "__order": 22,
+      "__hidden": false
+    }
+  },
+  {
+    "simple present tense vocab": {
+      "name": "simple present tense vocab",
+      "__tags": ["simple present tense"],
+      "__type": "vocabulary",
+      "__order": 23,
+      "__hidden": true
+    }
+  },
+  {
     "verbs": {
       "name": "verbs",
       "__tags": ["verbs"],
