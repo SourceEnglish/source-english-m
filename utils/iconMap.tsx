@@ -105,6 +105,33 @@ import DepressedIcon from '@/assets/icons/licensed/depressed.svg'; // Add this i
 import ColdIllnessIcon from '@/assets/icons/licensed/cold_(illness).svg'; // Add this import
 import RunIcon from '@/assets/icons/licensed/run.svg'; // Add this import
 import VerbIcon from '@/assets/icons/open_source/verb.svg'; // Add this import
+import GoIcon from '@/assets/icons/licensed/go.svg';
+import HaveIcon from '@/assets/icons/licensed/have.svg';
+import JumpIcon from '@/assets/icons/licensed/jump.svg';
+import LikeIcon from '@/assets/icons/licensed/like.svg';
+import ListenIcon from '@/assets/icons/licensed/listen.svg';
+import LoveIcon from '@/assets/icons/licensed/love.svg';
+import ReadIcon from '@/assets/icons/licensed/read.svg';
+import RelaxIcon from '@/assets/icons/licensed/relax.svg';
+import ShowerIcon from '@/assets/icons/licensed/shower.svg';
+import SingIcon from '@/assets/icons/licensed/sing.svg';
+import SleepIcon from '@/assets/icons/licensed/sleep.svg';
+import StopIcon from '@/assets/icons/licensed/stop.svg';
+import StudyIcon from '@/assets/icons/licensed/study.svg';
+import WakeUpIcon from '@/assets/icons/licensed/wake_up.svg';
+import WalkIcon from '@/assets/icons/licensed/walk.svg';
+import WatchIcon from '@/assets/icons/licensed/watch.svg';
+import WriteIcon from '@/assets/icons/licensed/write.svg';
+import CryIcon from '@/assets/icons/licensed/cry.svg';
+import BrushIcon from '@/assets/icons/licensed/brush.svg';
+import DrinkIcon from '@/assets/icons/licensed/drink.svg';
+import DriveIcon from '@/assets/icons/licensed/drive.svg';
+import EatIcon from '@/assets/icons/licensed/eat.svg';
+import FlyIcon from '@/assets/icons/licensed/fly.svg';
+import MakeIcon from '@/assets/icons/licensed/make.svg';
+import CookIcon from '@/assets/icons/licensed/cook.svg';
+import GetUpIcon from '@/assets/icons/licensed/get_up.svg';
+import PresentSimpleIcon from '@/assets/icons/open_source/present_simple.svg';
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -134,11 +161,11 @@ export const TextIcon: React.FC<{
       style={{
         fontSize:
           (textsize ? textsize : 25) *
-          (text.length > 5
+          (text && text.length > 5
             ? 0.6
-            : text.length > 3
+            : text && text.length > 3
             ? 0.8
-            : text.length > 2
+            : text && text.length > 2
             ? 0.85
             : 1),
         color: '#333',
@@ -314,6 +341,33 @@ export const iconMap: Record<string, React.FC<any>> = {
   run: RunIcon,
   'verbs vocab': VerbIcon, // Example for a custom icon
   verbs: VerbIcon, // Example for a custom icon
+  go: GoIcon,
+  have: HaveIcon,
+  jump: JumpIcon,
+  like: LikeIcon,
+  listen: ListenIcon,
+  love: LoveIcon,
+  read: ReadIcon,
+  relax: RelaxIcon,
+  shower: ShowerIcon,
+  sing: SingIcon,
+  sleep: SleepIcon,
+  stop: StopIcon,
+  study: StudyIcon,
+  'wake up': WakeUpIcon,
+  walk: WalkIcon,
+  watch: WatchIcon,
+  write: WriteIcon,
+  cry: CryIcon,
+  brush: BrushIcon,
+  drink: DrinkIcon,
+  drive: DriveIcon,
+  eat: EatIcon,
+  fly: FlyIcon,
+  'get up': GetUpIcon,
+  'simple present tense': PresentSimpleIcon,
+  make: MakeIcon,
+  cook: CookIcon,
 
   // ...etc
 };

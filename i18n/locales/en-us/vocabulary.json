@@ -2466,8 +2466,8 @@
     "go": {
       "__pos": "verb",
       "__tags": ["verbs", "to do"],
-      "__icon_text": "go",
-      "__show_word": false,
+
+      "__show_word": true,
       "conjugation": {
         "past": "went",
         "present": "go",
@@ -2482,8 +2482,8 @@
     "have": {
       "__pos": "verb",
       "__tags": ["verbs", "to have"],
-      "__icon_text": "have",
-      "__show_word": false,
+
+      "__show_word": true,
       "conjugation": {
         "past": "had",
         "present": "have",
@@ -2937,6 +2937,364 @@
       "word": "how",
       "translation_note": "",
       "examples": ["How are you?"]
+    }
+  },
+  {
+    "jump": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "jump",
+      "conjugation": {
+        "present": "jump",
+        "present_participle": "jumping",
+        "past": "jumped"
+      },
+      "examples": ["I jump over the puddle."],
+      "translation_note": ""
+    }
+  },
+  {
+    "like": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "like",
+      "conjugation": {
+        "present": "like",
+        "present_participle": "liking",
+        "past": "liked"
+      },
+      "examples": ["They like apples."],
+      "translation_note": ""
+    }
+  },
+  {
+    "listen": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "listen",
+      "conjugation": {
+        "present": "listen",
+        "present_participle": "listening",
+        "past": "listened"
+      },
+      "examples": ["We listen to music."],
+      "translation_note": ""
+    }
+  },
+  {
+    "love": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "love",
+      "conjugation": {
+        "present": "love",
+        "present_participle": "loving",
+        "past": "loved"
+      },
+      "examples": ["She loves her family."],
+      "translation_note": ""
+    }
+  },
+  {
+    "read": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "read",
+      "conjugation": {
+        "present": "read",
+        "present_participle": "reading",
+        "past": "read"
+      },
+      "examples": ["I read a book."],
+      "translation_note": ""
+    }
+  },
+  {
+    "relax": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "relax",
+      "conjugation": {
+        "present": "relax",
+        "present_participle": "relaxing",
+        "past": "relaxed"
+      },
+      "examples": ["I relax on weekends."],
+      "translation_note": ""
+    }
+  },
+  {
+    "shower": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "shower",
+      "conjugation": {
+        "present": "shower",
+        "present_participle": "showering",
+        "past": "showered"
+      },
+      "examples": ["I shower every morning."],
+      "translation_note": ""
+    }
+  },
+  {
+    "sing": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "sing",
+      "conjugation": {
+        "present": "sing",
+        "present_participle": "singing",
+        "past": "sang"
+      },
+      "examples": ["She sings beautifully."],
+      "translation_note": ""
+    }
+  },
+  {
+    "sleep": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "sleep",
+      "conjugation": {
+        "present": "sleep",
+        "present_participle": "sleeping",
+        "past": "slept"
+      },
+      "examples": ["I sleep at 10 p.m."],
+      "translation_note": ""
+    }
+  },
+  {
+    "stop": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "stop",
+      "conjugation": {
+        "present": "stop",
+        "present_participle": "stopping",
+        "past": "stopped"
+      },
+      "examples": ["Please stop talking."],
+      "translation_note": ""
+    }
+  },
+  {
+    "study": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "study",
+      "conjugation": {
+        "present": "study",
+        "present_participle": "studying",
+        "past": "studied"
+      },
+      "examples": ["They study English every day."],
+      "translation_note": ""
+    }
+  },
+  {
+    "wake up": {
+      "__pos": "verb",
+      "__tags": ["verbs", "phrasal verbs"],
+
+      "word": "wake up",
+      "conjugation": {
+        "present": "wake up",
+        "present_participle": "waking up",
+        "past": "woke up"
+      },
+      "examples": ["I wake up at 7 a.m."],
+      "translation_note": ""
+    }
+  },
+  {
+    "get up": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "get up",
+      "conjugation": {
+        "present": "get up",
+        "present_participle": "getting up",
+        "past": "got up"
+      },
+      "examples": ["I get up early every day."],
+      "translation_note": ""
+    }
+  },
+  {
+    "walk": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "walk",
+      "conjugation": {
+        "present": "walk",
+        "present_participle": "walking",
+        "past": "walked"
+      },
+      "examples": ["We walk to school."],
+      "translation_note": ""
+    }
+  },
+  {
+    "watch": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "watch",
+      "conjugation": {
+        "present": "watch",
+        "present_participle": "watching",
+        "past": "watched"
+      },
+      "examples": ["They watch TV at night."],
+      "translation_note": ""
+    }
+  },
+  {
+    "write": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "write",
+      "conjugation": {
+        "present": "write",
+        "present_participle": "writing",
+        "past": "wrote"
+      },
+      "examples": ["I write a letter."],
+      "translation_note": ""
+    }
+  },
+  {
+    "cry": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "cry",
+      "conjugation": {
+        "present": "cry",
+        "present_participle": "crying",
+        "past": "cried"
+      },
+      "examples": ["Babies cry when they are hungry."],
+      "translation_note": ""
+    }
+  },
+  {
+    "brush": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "brush",
+      "conjugation": {
+        "present": "brush",
+        "present_participle": "brushing",
+        "past": "brushed"
+      },
+      "examples": ["I brush my teeth every morning."],
+      "translation_note": ""
+    }
+  },
+  {
+    "drink": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "drink",
+      "conjugation": {
+        "present": "drink",
+        "present_participle": "drinking",
+        "past": "drank"
+      },
+      "examples": ["She drinks water."],
+      "translation_note": ""
+    }
+  },
+  {
+    "drive": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "drive",
+      "conjugation": {
+        "present": "drive",
+        "present_participle": "driving",
+        "past": "drove"
+      },
+      "examples": ["He drives to work."],
+      "translation_note": ""
+    }
+  },
+  {
+    "eat": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "eat",
+      "conjugation": {
+        "present": "eat",
+        "present_participle": "eating",
+        "past": "ate"
+      },
+      "examples": ["I eat breakfast every day."],
+      "translation_note": ""
+    }
+  },
+  {
+    "fly": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "fly",
+      "conjugation": {
+        "present": "fly",
+        "present_participle": "flying",
+        "past": "flew"
+      },
+      "examples": ["Birds fly in the sky."],
+      "translation_note": ""
+    }
+  },
+  {
+    "make": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "make",
+      "conjugation": {
+        "present": "make",
+        "present_participle": "making",
+        "past": "made"
+      },
+      "examples": ["I make breakfast every morning."],
+      "translation_note": ""
+    }
+  },
+  {
+    "cook": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "cook",
+      "conjugation": {
+        "present": "cook",
+        "present_participle": "cooking",
+        "past": "cooked"
+      },
+      "examples": ["She cooks dinner for her family."],
+      "translation_note": ""
     }
   }
 ]
