@@ -86,8 +86,30 @@ function getPresentSimple(subject: Subject, base: string): string {
     if (['he', 'she', 'it'].includes(subject)) return 'has';
     return 'have';
   }
-  // 3rd person singular
+  // Handle phrasal verbs for 3rd person singular
   if (['he', 'she', 'it'].includes(subject)) {
+    const phrasalMatch = base.match(/^([a-zA-Z]+)( .+)$/);
+    if (phrasalMatch) {
+      const verb = phrasalMatch[1];
+      const rest = phrasalMatch[2];
+      let third = '';
+      if (verb.endsWith('y') && !/[aeiou]y$/.test(verb)) {
+        third = verb.slice(0, -1) + 'ies';
+      } else if (
+        verb.endsWith('s') ||
+        verb.endsWith('sh') ||
+        verb.endsWith('ch') ||
+        verb.endsWith('x') ||
+        verb.endsWith('z') ||
+        verb.endsWith('o')
+      ) {
+        third = verb + 'es';
+      } else {
+        third = verb + 's';
+      }
+      return third + rest;
+    }
+    // Not a phrasal verb
     if (base.endsWith('y') && !/[aeiou]y$/.test(base)) {
       return base.slice(0, -1) + 'ies';
     }
