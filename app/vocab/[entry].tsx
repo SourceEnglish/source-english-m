@@ -19,12 +19,21 @@ import { getIconForEntry } from '@/utils/iconMap';
 import { useSpeech } from '@/contexts/SpeechContext';
 import VerbConjugationTables from '@/components/VerbConjugationTables';
 import AnimatedUppercaseA from '@/assets/animated/uppercase/A';
+import AnimatedUppercaseB from '@/assets/animated/uppercase/B';
+import AnimatedUppercaseC from '@/assets/animated/uppercase/C';
+import AnimatedUppercaseD from '@/assets/animated/uppercase/D';
+import AnimatedUppercaseE from '@/assets/animated/uppercase/E';
+import AnimatedUppercaseF from '@/assets/animated/uppercase/F';
+import AnimatedUppercaseR from '@/assets/animated/uppercase/R';
+
 import AnimatedLowercaseA from '@/assets/animated/lowercase/a';
 import AnimatedLowercaseO from '@/assets/animated/lowercase/o';
 import AnimatedLowercaseB from '@/assets/animated/lowercase/b';
 import AnimatedLowercaseC from '@/assets/animated/lowercase/c';
 import AnimatedLowercaseD from '@/assets/animated/lowercase/d';
-import AnimatedUppercaseC from '@/assets/animated/uppercase/C';
+import AnimatedLowercaseE from '@/assets/animated/lowercase/e';
+import AnimatedLowercaseF from '@/assets/animated/lowercase/f';
+import AnimatedLowercaseR from '@/assets/animated/lowercase/r';
 
 export function generateStaticParams() {
   return vocabularyData.map((entry: any) => {
@@ -132,8 +141,6 @@ export default function VocabEntryPage() {
             minHeight: 100,
           }}
         >
-          {/* No uppercase B animation yet */}
-          <View style={{ flex: 1 }} />
           <View
             style={{
               flex: 1,
@@ -141,7 +148,16 @@ export default function VocabEntryPage() {
               alignItems: 'center',
             }}
           >
-            <AnimatedLowercaseB width={50} height={70} />
+            <AnimatedUppercaseB width={70} height={100} />
+          </View>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedLowercaseB width={70} height={100} />
           </View>
         </View>
       );
@@ -183,8 +199,6 @@ export default function VocabEntryPage() {
             minHeight: 100,
           }}
         >
-          {/* No uppercase D animation yet */}
-          <View style={{ flex: 1 }} />
           <View
             style={{
               flex: 1,
@@ -192,7 +206,16 @@ export default function VocabEntryPage() {
               alignItems: 'center',
             }}
           >
-            <AnimatedLowercaseD width={50} height={70} />
+            <AnimatedUppercaseD width={70} height={100} />
+          </View>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedLowercaseD width={70} height={100} />
           </View>
         </View>
       );
@@ -218,8 +241,97 @@ export default function VocabEntryPage() {
           </View>
         </View>
       );
+    } else if (upper === 'E' && lower === 'e') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100,
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedUppercaseE width={70} height={100} />
+          </View>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedLowercaseE width={50} height={70} />
+          </View>
+        </View>
+      );
+    } else if (upper === 'F' && lower === 'f') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100,
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedUppercaseF width={70} height={100} />
+          </View>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedLowercaseF width={50} height={100} />
+          </View>
+        </View>
+      );
+    } else if (upper === 'R' && lower === 'r') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100,
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedUppercaseR width={70} height={100} />
+          </View>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedLowercaseR width={50} height={60} />
+          </View>
+        </View>
+      );
     } else if (upper === 'A') {
       AnimatedLetterComponent = AnimatedUppercaseA;
+    } else if (upper === 'B') {
+      AnimatedLetterComponent = AnimatedUppercaseB;
     } else if (upper === 'C') {
       AnimatedLetterComponent = AnimatedUppercaseC;
     } else if (lower === 'a') {
@@ -232,6 +344,10 @@ export default function VocabEntryPage() {
       AnimatedLetterComponent = AnimatedLowercaseD;
     } else if (lower === 'o') {
       AnimatedLetterComponent = AnimatedLowercaseO;
+    } else if (lower === 'e') {
+      AnimatedLetterComponent = AnimatedLowercaseE;
+    } else if (lower === 'f') {
+      AnimatedLetterComponent = AnimatedLowercaseF;
     } else {
       AnimatedLetterComponent = null;
     }
@@ -396,13 +512,6 @@ const styles = StyleSheet.create({
 
     paddingVertical: 0,
   },
-  // title: {
-  //   fontSize: 36,
-  //   fontWeight: 'bold',
-  //   textAlign: 'center',
-  //   marginBottom: 10,
-  //   marginTop: 10,
-  // },
 });
 //                   });
 //                 }}

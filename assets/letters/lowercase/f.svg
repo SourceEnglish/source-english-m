@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.549 36.169">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-width: 2.5px;
+      }
+    </style>
+  </defs>
+  <line id="_2" data-name="2" class="cls-1" x1="1.25" y1="12.338" x2="14.263" y2="12.338"/>
+  <path id="_1" data-name="1" class="cls-1" d="M6.32,34.919V6.817c0-1.317.195-2.387.584-3.21.389-.823.943-1.422,1.661-1.796.718-.374,1.541-.561,2.469-.561,1.077,0,1.953.172,2.626.516s1.22.801,1.639,1.369"/>
+</svg>
