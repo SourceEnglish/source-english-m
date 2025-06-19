@@ -1865,7 +1865,6 @@
       { "__type": "text", "text": "add es" },
       { "__type": "text", "text": "go" },
       { "__type": "text", "text": "She goes to school." },
-
       { "__type": "text", "text": "irregular: have" },
       { "__type": "text", "text": "has" },
       { "__type": "text", "text": "have" },
@@ -1889,5 +1888,75 @@
     "__order": 100,
     "__type": "video",
     "__src": "https://youtu.be/nvVdIJ0las0?si=my13z7J-7n1TjNCH"
+  },
+  {
+    "_id": "adverbs_of_frequency_header",
+    "__lessons": ["adverbs of frequency"],
+    "__order": 1,
+    "__type": "header",
+    "text": "Adverbs of Frequency"
+  },
+  {
+    "_id": "adverbs_of_frequency_intro",
+    "__lessons": ["adverbs of frequency"],
+    "__order": 2,
+    "__type": "paragraph",
+    "text": "Adverbs of frequency tell us how often something happens. They are often used with the present simple tense to talk about habits and routines."
+  },
+  {
+    "_id": "adverbs_of_frequency_vocab_carousel",
+    "__lessons": ["adverbs of frequency"],
+    "__order": 2,
+    "__type": "vocabularyCarousel",
+    "__tags": ["adverbs of frequency"]
+  },
+  {
+    "_id": "adverbs_of_frequency_table",
+    "__lessons": ["adverbs of frequency"],
+    "__order": 3,
+    "__type": "table",
+    "__headers": [
+      { "text": "Adverb", "__type": "text" },
+      { "text": "Approximate Frequency", "__type": "text" },
+      { "text": "Example Sentence", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "Always" },
+      { "__type": "text", "text": "100%" },
+      { "__type": "text", "text": "I always wake up early." },
+      { "__type": "text", "text": "Usually" },
+      { "__type": "text", "text": "90%" },
+      { "__type": "text", "text": "She usually eats lunch at noon." },
+      { "__type": "text", "text": "Often" },
+      { "__type": "text", "text": "70–80%" },
+      { "__type": "text", "text": "We often go to the park." },
+      { "__type": "text", "text": "Sometimes" },
+      { "__type": "text", "text": "50%" },
+      { "__type": "text", "text": "He sometimes watches movies at night." },
+      { "__type": "text", "text": "Occasionally" },
+      { "__type": "text", "text": "30–40%" },
+      { "__type": "text", "text": "They occasionally eat out." },
+      { "__type": "text", "text": "Rarely" },
+      { "__type": "text", "text": "10%" },
+      { "__type": "text", "text": "I rarely drink soda." },
+
+      { "__type": "text", "text": "Never" },
+      { "__type": "text", "text": "0%" },
+      { "__type": "text", "text": "He never smokes." }
+    ]
+  },
+  {
+    "_id": "adverbs_of_frequency_video_subheader",
+    "__lessons": ["adverbs of frequency"],
+    "__order": 98,
+    "__type": "subheader",
+    "text": "Adverbs of Frequency Video"
+  },
+  {
+    "_id": "adverbs_of_frequency_video",
+    "__lessons": ["adverbs of frequency"],
+    "__order": 99,
+    "__type": "video",
+    "__src": "https://youtu.be/p8I5zw2Rels?si=fFZAmrDTlSyRAwvK"
   }
 ]

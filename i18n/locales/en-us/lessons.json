@@ -242,5 +242,23 @@
       "__order": 14.7,
       "__hidden": false
     }
+  },
+  {
+    "adverbs of frequency": {
+      "name": "adverbs of frequency",
+      "__tags": ["adverbs of frequency"],
+      "__type": "lesson",
+      "__order": 24,
+      "__hidden": false
+    }
+  },
+  {
+    "adverbs of frequency vocab": {
+      "name": "adverbs of frequency vocab",
+      "__tags": ["adverbs of frequency"],
+      "__type": "vocabulary",
+      "__order": 25,
+      "__hidden": false
+    }
   }
 ]
