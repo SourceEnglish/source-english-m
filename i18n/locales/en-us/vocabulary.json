@@ -2388,7 +2388,8 @@
         "present": "be",
         "present_participle": "being",
         "past": "was"
-      }
+      },
+      "examples": ["I am a student.", "You are happy.", "She is a teacher."]
     }
   },
   {
@@ -2448,7 +2449,12 @@
         "present_participle": "doing"
       },
       "word": "do",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "I do my homework.",
+        "You do the dishes.",
+        "He does his job well."
+      ]
     }
   },
   {
@@ -2474,6 +2480,11 @@
         "present_participle": "going"
       },
       "word": "go",
+      "examples": [
+        "I go to the store on Mondays.",
+        "She goes to school at 6:00 p.m."
+      ],
+
       "translation_note": ""
     }
   },
@@ -2489,6 +2500,7 @@
         "present": "have",
         "present_participle": "having"
       },
+      "examples": ["I have three children.", "She has a pencil."],
       "word": "have",
       "translation_note": ""
     }
@@ -3294,6 +3306,87 @@
         "past": "cooked"
       },
       "examples": ["She cooks dinner for her family."],
+      "translation_note": ""
+    }
+  },
+  {
+    "always": {
+      "__pos": "adverb",
+      "__tags": ["adverbs of frequency"],
+      "word": "always",
+      "translation_note": "",
+      "examples": ["I always wake up early."]
+    }
+  },
+  {
+    "usually": {
+      "__pos": "adverb",
+      "__tags": ["adverbs of frequency"],
+      "word": "usually",
+      "translation_note": "",
+      "examples": ["She usually eats lunch at noon."]
+    }
+  },
+  {
+    "often": {
+      "__pos": "adverb",
+      "__tags": ["adverbs of frequency"],
+      "word": "often",
+      "translation_note": "",
+      "examples": ["We often go to the park."]
+    }
+  },
+  {
+    "sometimes": {
+      "__pos": "adverb",
+      "__tags": ["adverbs of frequency"],
+      "word": "sometimes",
+      "translation_note": "",
+      "examples": ["He sometimes watches movies at night."]
+    }
+  },
+  {
+    "occasionally": {
+      "__pos": "adverb",
+      "__tags": ["adverbs of frequency"],
+      "word": "occasionally",
+      "translation_note": "",
+      "examples": ["They occasionally eat out."]
+    }
+  },
+  {
+    "rarely": {
+      "__pos": "adverb",
+      "__tags": ["adverbs of frequency"],
+      "word": "rarely",
+      "translation_note": "",
+      "examples": ["I rarely drink soda."]
+    }
+  },
+
+  {
+    "never": {
+      "__pos": "adverb",
+      "__tags": ["adverbs of frequency"],
+      "word": "never",
+      "translation_note": "",
+      "examples": ["He never smokes."]
+    }
+  },
+  {
+    "arrive": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "arrive",
+      "conjugation": {
+        "present": "arrive",
+        "present_participle": "arriving",
+        "past": "arrived"
+      },
+      "examples": [
+        "I arrive at school at 8 a.m.",
+        "They arrived late to the meeting."
+      ],
       "translation_note": ""
     }
   }

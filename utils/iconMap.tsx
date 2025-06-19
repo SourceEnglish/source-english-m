@@ -132,6 +132,7 @@ import MakeIcon from '@/assets/icons/licensed/make.svg';
 import CookIcon from '@/assets/icons/licensed/cook.svg';
 import GetUpIcon from '@/assets/icons/licensed/get_up.svg';
 import PresentSimpleIcon from '@/assets/icons/open_source/present_simple.svg';
+import ArriveIcon from '@/assets/icons/licensed/arrive.svg';
 import FrequencyIcon from '@/assets/icons/licensed/frequency.svg'; // Add this import
 
 import React from 'react';
