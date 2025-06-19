@@ -12,6 +12,7 @@ import { useRouter } from 'expo-router';
 import { getLessons } from '@/utils/loadLessons';
 import vocabulary from '@/i18n/locales/en-us/vocabulary.json';
 import { t } from 'i18next';
+import SearchIcon from '@/assets/icons/open_source/search.svg';
 
 const MAX_SUGGESTIONS = 8;
 
@@ -373,17 +374,20 @@ export default function SearchBar() {
 
   return (
     <View style={styles.container}>
-      <TextInput
-        ref={inputRef}
-        style={styles.input}
-        placeholder={t('Search for lessons or vocabulary')}
-        value={query}
-        onChangeText={setQuery}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setTimeout(() => setFocused(false), 150)}
-        autoCorrect={false}
-        autoCapitalize="none"
-      />
+      <View style={styles.inputRow}>
+        <SearchIcon width={22} height={22} style={styles.searchIcon} />
+        <TextInput
+          ref={inputRef}
+          style={styles.input}
+          placeholder={t('Search for lessons or vocabulary')}
+          value={query}
+          onChangeText={setQuery}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setTimeout(() => setFocused(false), 150)}
+          autoCorrect={false}
+          autoCapitalize="none"
+        />
+      </View>
       {focused && query.length > 0 && suggestions.length > 0 && (
         <View style={styles.dropdown}>
           <FlatList
@@ -436,11 +440,26 @@ const styles = StyleSheet.create({
     zIndex: 100,
     marginBottom: 16,
   },
-  input: {
+  inputRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#fff',
     borderColor: '#aaa',
     borderWidth: 1,
     borderRadius: 8,
+    paddingLeft: 8,
+    paddingVertical: 0,
+  },
+  searchIcon: {
+    marginRight: 6,
+    color: '#888',
+  },
+  input: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    // Remove border and radius here, handled by inputRow
+    borderWidth: 0,
+    borderRadius: 0,
     padding: 10,
     fontSize: 16,
     width: '100%',
