@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="P" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.449 35.875">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-width: 2.5px;
+      }
+    </style>
+  </defs>
+  <path id="_2" data-name=" 2" class="cls-2" d="M1.543,16.513h12.414c2.544,0,4.553-.721,6.029-2.162,1.475-1.442,2.213-3.197,2.213-5.266,0-1.458-.382-2.781-1.145-3.968-.763-1.187-1.781-2.128-3.053-2.824-1.272-.695-2.671-1.043-4.197-1.043H1.543"/>
+  <line id="_1" data-name=" 1" class="cls-1" x1="1.25" y1="1.25" x2="1.25" y2="34.625"/>
+</svg>

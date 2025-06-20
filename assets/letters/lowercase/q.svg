@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="q" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.986 36.139">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #23ff00;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-width: 2.5px;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #ff9ff2;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <path id="_3" data-name="3" class="cls-1" d="M22.656,11.975c.027,7.638.054,15.276.081,22.914"/>
+  <path id="_2" data-name="2" class="cls-2" d="M22.716,1.408c-.013,3.589-.027,7.178-.04,10.767"/>
+  <ellipse id="_1" data-name="1" class="cls-3" cx="11.963" cy="12.175" rx="10.713" ry="10.925"/>
+</svg>

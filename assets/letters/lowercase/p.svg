@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="p" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.926 36.139">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #000;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-miterlimit: 10;
+        stroke-width: 2.5px;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #ff9ff2;
+      }
+    </style>
+  </defs>
+  <ellipse id="_2" data-name="2" class="cls-2" cx="11.963" cy="12.175" rx="10.713" ry="10.925"/>
+  <line id="_1" data-name="1" class="cls-1" x1="1.25" y1="1.25" x2="1.25" y2="34.889"/>
+</svg>

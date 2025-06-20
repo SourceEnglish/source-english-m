@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="i" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.581 24.517">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ff9ff2;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2.5px;
+      }
+    </style>
+  </defs>
+  <line id="_1" data-name="1" class="cls-1" x1="1.25" y1="6.65" x2="1.25" y2="23.267"/>
+  <circle id="_2" data-name="2" class="cls-1" cx="1.3" cy="1.281" r=".031"/>
+</svg>

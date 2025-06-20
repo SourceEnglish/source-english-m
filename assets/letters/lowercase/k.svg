@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="k" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.45 35.917">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #1500bf;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-width: 2.5px;
+      }
+
+      .cls-2 {
+        stroke: #000;
+      }
+
+      .cls-3 {
+        stroke: #e60aff;
+      }
+    </style>
+  </defs>
+  <line class="cls-2" x1="1.25" y1="1.25" x2="1.25" y2="34.667"/>
+  <line class="cls-3" x1="1.32" y1="26.275" x2="11.2" y2="34.583"/>
+  <line class="cls-1" x1="11.2" y1="17.946" x2="1.32" y2="26.255"/>
+</svg>
