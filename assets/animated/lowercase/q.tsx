@@ -21,7 +21,7 @@ const strokes = [
     cy: 12.175,
     rx: 10.713,
     ry: 10.925,
-    color: ANIMATED_LETTER_COLORS[1], // pink (#ff9ff2)
+    color: ANIMATED_LETTER_COLORS[0], // pink (#ff9ff2)
     length:
       Math.PI *
       (3 * (10.713 + 10.925) -
