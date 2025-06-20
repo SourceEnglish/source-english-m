@@ -36,6 +36,8 @@ import AnimatedUppercaseT from '@/assets/animated/uppercase/T';
 import AnimatedUppercaseV from '@/assets/animated/uppercase/V';
 import AnimatedUppercaseW from '@/assets/animated/uppercase/W';
 import AnimatedUppercaseX from '@/assets/animated/uppercase/X';
+import AnimatedUppercaseO from '@/assets/animated/uppercase/O';
+import AnimatedUppercaseQ from '@/assets/animated/uppercase/Q';
 
 import AnimatedLowercaseA from '@/assets/animated/lowercase/a';
 import AnimatedLowercaseO from '@/assets/animated/lowercase/o';
@@ -263,8 +265,14 @@ export default function VocabEntryPage() {
             gap: 16, // Add gap between uppercase and lowercase
           }}
         >
-          {/* No uppercase O animation yet */}
-          <View style={{ flex: 1 }} />
+          <View
+            style={{
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedUppercaseO width={70} height={100} />
+          </View>
           <View
             style={{
               justifyContent: 'flex-end',
@@ -406,8 +414,14 @@ export default function VocabEntryPage() {
             gap: 16, // Add gap between uppercase and lowercase
           }}
         >
-          {/* No uppercase Q animation yet */}
-          <View style={{ flex: 1 }} />
+          <View
+            style={{
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+            }}
+          >
+            <AnimatedUppercaseQ width={70} height={100} />
+          </View>
           <View
             style={{
               justifyContent: 'flex-end',
@@ -859,33 +873,35 @@ export default function VocabEntryPage() {
           }}
         >
           {/* If AnimatedLetterComponent is a pair, render as-is (it already handles sizing). If it's a single letter, pass width/height. */}
-          {// List of all letter pairs handled above
-          [
-            'Aa',
-            'Bb',
-            'Cc',
-            'Dd',
-            'Ee',
-            'Ff',
-            'Gg',
-            'Hh',
-            'Ii',
-            'Jj',
-            'Kk',
-            'Ll',
-            'Oo',
-            'Pp',
-            'Qq',
-            'Rr',
-            'Tt',
-            'Vv',
-            'Ww',
-            'Xx',
-          ].includes(vocabEntry.word || '') ? (
-            <AnimatedLetterComponent />
-          ) : (
-            <AnimatedLetterComponent width={100} height={140} />
-          )}
+          {
+            // List of all letter pairs handled above
+            [
+              'Aa',
+              'Bb',
+              'Cc',
+              'Dd',
+              'Ee',
+              'Ff',
+              'Gg',
+              'Hh',
+              'Ii',
+              'Jj',
+              'Kk',
+              'Ll',
+              'Oo',
+              'Pp',
+              'Qq',
+              'Rr',
+              'Tt',
+              'Vv',
+              'Ww',
+              'Xx',
+            ].includes(vocabEntry.word || '') ? (
+              <AnimatedLetterComponent />
+            ) : (
+              <AnimatedLetterComponent width={100} height={140} />
+            )
+          }
         </View>
       )}
     </ScrollView>
