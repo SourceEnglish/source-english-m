@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="w" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.167 18.067">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #2c1fff;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2.5px;
+      }
+
+      .cls-2 {
+        stroke: #b400ac;
+      }
+    </style>
+  </defs>
+  <line id="_1" data-name="1" class="cls-1" x1="6.667" y1="16.815" x2="1.25" y2="1.255"/>
+  <line id="_2" data-name="2" class="cls-2" x1="6.667" y1="16.81" x2="12.083" y2="1.25"/>
+  <line id="_3" data-name="3" class="cls-1" x1="17.5" y1="16.817" x2="12.083" y2="1.257"/>
+  <line id="_4" data-name="4" class="cls-2" x1="17.5" y1="16.812" x2="22.917" y2="1.252"/>
+</svg>

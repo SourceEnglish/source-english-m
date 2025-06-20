@@ -32,6 +32,10 @@ import AnimatedUppercaseI from '@/assets/animated/uppercase/I';
 import AnimatedUppercaseJ from '@/assets/animated/uppercase/J';
 import AnimatedUppercaseK from '@/assets/animated/uppercase/K';
 import AnimatedUppercaseL from '@/assets/animated/uppercase/L';
+import AnimatedUppercaseT from '@/assets/animated/uppercase/T';
+import AnimatedUppercaseV from '@/assets/animated/uppercase/V';
+import AnimatedUppercaseW from '@/assets/animated/uppercase/W';
+import AnimatedUppercaseX from '@/assets/animated/uppercase/X';
 
 import AnimatedLowercaseA from '@/assets/animated/lowercase/a';
 import AnimatedLowercaseO from '@/assets/animated/lowercase/o';
@@ -49,6 +53,10 @@ import AnimatedLowercaseI from '@/assets/animated/lowercase/i';
 import AnimatedLowercaseJ from '@/assets/animated/lowercase/j';
 import AnimatedLowercaseK from '@/assets/animated/lowercase/k';
 import AnimatedLowercaseL from '@/assets/animated/lowercase/l';
+import AnimatedLowercaseT from '@/assets/animated/lowercase/t';
+import AnimatedLowercaseV from '@/assets/animated/lowercase/v';
+import AnimatedLowercaseW from '@/assets/animated/lowercase/w';
+import AnimatedLowercaseX from '@/assets/animated/lowercase/x';
 
 export function generateStaticParams() {
   return vocabularyData.map((entry: any) => {
@@ -588,6 +596,102 @@ export default function VocabEntryPage() {
           </View>
         </View>
       );
+    } else if (upper === 'T' && lower === 't') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100 + (hasDescender ? lowerHeight / 2 : 0),
+            gap: 16,
+          }}
+        >
+          <View style={{ justifyContent: 'flex-end', alignItems: 'center' }}>
+            <AnimatedUppercaseT width={70} height={100} />
+          </View>
+          <View
+            style={{
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+              transform: [{ translateY: lowerTranslateY }],
+            }}
+          >
+            <AnimatedLowercaseT width={50} height={100} />
+          </View>
+        </View>
+      );
+    } else if (upper === 'V' && lower === 'v') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100 + (hasDescender ? lowerHeight / 2 : 0),
+            gap: 16,
+          }}
+        >
+          <View style={{ justifyContent: 'flex-end', alignItems: 'center' }}>
+            <AnimatedUppercaseV width={70} height={100} />
+          </View>
+          <View
+            style={{
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+              transform: [{ translateY: lowerTranslateY }],
+            }}
+          >
+            <AnimatedLowercaseV width={50} height={lowerHeight} />
+          </View>
+        </View>
+      );
+    } else if (upper === 'W' && lower === 'w') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100 + (hasDescender ? lowerHeight / 2 : 0),
+            gap: 16,
+          }}
+        >
+          <View style={{ justifyContent: 'flex-end', alignItems: 'center' }}>
+            <AnimatedUppercaseW width={90} height={100} />
+          </View>
+          <View
+            style={{
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+              transform: [{ translateY: lowerTranslateY }],
+            }}
+          >
+            <AnimatedLowercaseW width={60} height={lowerHeight} />
+          </View>
+        </View>
+      );
+    } else if (upper === 'X' && lower === 'x') {
+      AnimatedLetterComponent = () => (
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            minHeight: 100 + (hasDescender ? lowerHeight / 2 : 0),
+            gap: 16,
+          }}
+        >
+          <View style={{ justifyContent: 'flex-end', alignItems: 'center' }}>
+            <AnimatedUppercaseX width={70} height={100} />
+          </View>
+          <View
+            style={{
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+              transform: [{ translateY: lowerTranslateY }],
+            }}
+          >
+            <AnimatedLowercaseX width={50} height={lowerHeight} />
+          </View>
+        </View>
+      );
     } else if (upper === 'A') {
       AnimatedLetterComponent = AnimatedUppercaseA;
     } else if (upper === 'B') {
@@ -754,7 +858,34 @@ export default function VocabEntryPage() {
             justifyContent: 'center',
           }}
         >
-          <AnimatedLetterComponent width={100} height={140} />
+          {/* If AnimatedLetterComponent is a pair, render as-is (it already handles sizing). If it's a single letter, pass width/height. */}
+          {// List of all letter pairs handled above
+          [
+            'Aa',
+            'Bb',
+            'Cc',
+            'Dd',
+            'Ee',
+            'Ff',
+            'Gg',
+            'Hh',
+            'Ii',
+            'Jj',
+            'Kk',
+            'Ll',
+            'Oo',
+            'Pp',
+            'Qq',
+            'Rr',
+            'Tt',
+            'Vv',
+            'Ww',
+            'Xx',
+          ].includes(vocabEntry.word || '') ? (
+            <AnimatedLetterComponent />
+          ) : (
+            <AnimatedLetterComponent width={100} height={140} />
+          )}
         </View>
       )}
     </ScrollView>
