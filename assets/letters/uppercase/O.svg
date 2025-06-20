@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="O" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.773 35.773">
+<svg id="O" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 35.8 35.8">
+  <!-- Generator: Adobe Illustrator 29.2.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 116)  -->
   <defs>
     <style>
-      .cls-1 {
+      .st0 {
         fill: none;
         stroke: #ff9ff2;
+        stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 2.5px;
       }
     </style>
   </defs>
-  <circle id="_1" data-name=" 1" class="cls-1" cx="17.886" cy="17.886" r="16.636"/>
+  <circle id="_1" class="st0" cx="17.9" cy="17.9" r="16.6"/>
 </svg>

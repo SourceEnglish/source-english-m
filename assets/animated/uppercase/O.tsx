@@ -90,6 +90,8 @@ export default function AnimatedUppercaseO({
             strokeWidth={2.5}
             strokeMiterlimit={10}
             strokeDasharray={strokes[0].length}
+            strokeLinecap="round"
+            strokeLinejoin="round"
             animatedProps={animatedPropsArr[0]}
             fill="none"
           />
