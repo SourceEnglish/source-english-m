@@ -156,6 +156,7 @@ export default function AnimatedLetter({
           {/* Static light gray background strokes */}
           {strokes.map((stroke, i) => {
             if (stroke.type === 'line') {
+              const { transform, ...restStroke } = stroke;
               return (
                 <Line
                   key={`bg-line-${i}`}
@@ -169,11 +170,12 @@ export default function AnimatedLetter({
                   strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
                   strokeDasharray={stroke.length}
                   fill="none"
-                  {...stroke}
+                  {...(transform ? { transform } : {})}
                 />
               );
             }
             if (stroke.type === 'path') {
+              const { transform, ...restStroke } = stroke;
               return (
                 <Path
                   key={`bg-path-${i}`}
@@ -184,13 +186,12 @@ export default function AnimatedLetter({
                   strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
                   strokeDasharray={stroke.length}
                   fill="none"
-                  {...stroke}
+                  {...(transform ? { transform } : {})}
                 />
               );
             }
             if (stroke.type === 'circle') {
-              // Reference working a.tsx: apply transform as a string, and do not spread transform from stroke
-              // Only use transform if present, otherwise undefined
+              const { transform, ...restStroke } = stroke;
               return (
                 <Circle
                   key={`bg-circle-${i}`}
@@ -203,8 +204,7 @@ export default function AnimatedLetter({
                   strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
                   strokeDasharray={stroke.length}
                   fill="none"
-                  transform={stroke.transform}
-                  // Do not spread {...stroke} to avoid overriding transform
+                  {...(transform ? { transform } : {})}
                 />
               );
             }
@@ -213,6 +213,7 @@ export default function AnimatedLetter({
           {/* Animated strokes */}
           {strokes.map((stroke, i) => {
             if (stroke.type === 'line') {
+              const { transform, ...restStroke } = stroke;
               return (
                 <AnimatedLine
                   key={i}
@@ -226,11 +227,12 @@ export default function AnimatedLetter({
                   strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
                   strokeDasharray={stroke.length}
                   animatedProps={animatedPropsArr[i]}
-                  {...stroke}
+                  {...(transform ? { transform } : {})}
                 />
               );
             }
             if (stroke.type === 'path') {
+              const { transform, ...restStroke } = stroke;
               return (
                 <AnimatedPath
                   key={i}
@@ -242,12 +244,12 @@ export default function AnimatedLetter({
                   strokeDasharray={stroke.length}
                   animatedProps={animatedPropsArr[i]}
                   fill="none"
-                  {...stroke}
+                  {...(transform ? { transform } : {})}
                 />
               );
             }
             if (stroke.type === 'circle') {
-              // Reference working a.tsx: apply transform as a string, and do not spread transform from stroke
+              const { transform, ...restStroke } = stroke;
               return (
                 <AnimatedCircle
                   key={i}
@@ -261,8 +263,7 @@ export default function AnimatedLetter({
                   strokeDasharray={stroke.length}
                   animatedProps={animatedPropsArr[i]}
                   fill="none"
-                  transform={stroke.transform}
-                  // Do not spread {...stroke} to avoid overriding transform
+                  {...(transform ? { transform } : {})}
                 />
               );
             }

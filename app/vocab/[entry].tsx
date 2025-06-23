@@ -193,7 +193,7 @@ export default function VocabEntryPage() {
               marginRight: 8, // Add margin between uppercase and lowercase
             }}
           >
-            <AnimatedUppercaseB width={70} height={100} />
+            {GetAnimatedLetter('B')}
           </View>
           <View
             style={{
@@ -202,7 +202,7 @@ export default function VocabEntryPage() {
               transform: [{ translateY: lowerTranslateY }],
             }}
           >
-            <AnimatedLowercaseB width={70} height={100} />
+            {GetAnimatedLetter('b')}
           </View>
         </View>
       );
@@ -223,7 +223,7 @@ export default function VocabEntryPage() {
               marginRight: 8, // Add margin between uppercase and lowercase
             }}
           >
-            <AnimatedUppercaseC width={70} height={100} />
+            {GetAnimatedLetter('C')}
           </View>
           <View
             style={{
@@ -232,7 +232,7 @@ export default function VocabEntryPage() {
               transform: [{ translateY: lowerTranslateY }],
             }}
           >
-            <AnimatedLowercaseC width={50} height={lowerHeight} />
+            {GetAnimatedLetter('c')}
           </View>
         </View>
       );
@@ -253,7 +253,7 @@ export default function VocabEntryPage() {
               marginRight: 8, // Add margin between uppercase and lowercase
             }}
           >
-            <AnimatedUppercaseD width={70} height={100} />
+            {GetAnimatedLetter('D')}
           </View>
           <View
             style={{
@@ -262,7 +262,7 @@ export default function VocabEntryPage() {
               transform: [{ translateY: lowerTranslateY }],
             }}
           >
-            <AnimatedLowercaseD width={70} height={100} />
+            {GetAnimatedLetter('d')}
           </View>
         </View>
       );
@@ -312,7 +312,7 @@ export default function VocabEntryPage() {
               marginRight: 8, // Add margin between uppercase and lowercase
             }}
           >
-            <AnimatedUppercaseE width={70} height={100} />
+            {GetAnimatedLetter('E')}
           </View>
           <View
             style={{
@@ -321,7 +321,7 @@ export default function VocabEntryPage() {
               transform: [{ translateY: lowerTranslateY }],
             }}
           >
-            <AnimatedLowercaseE width={50} height={lowerHeight} />
+            {GetAnimatedLetter('e')}
           </View>
         </View>
       );
