@@ -1998,61 +1998,89 @@
   },
 
   {
-    "Winter": {
-      "__pos": "proper noun",
-      "__tags": ["seasons"],
-      "word": "Winter",
-      "plural": "Winters",
-      "translation_note": ""
-    }
-  },
-  {
-    "Spring": {
-      "__pos": "proper noun",
-      "__tags": ["seasons"],
-      "word": "Spring",
-      "plural": "Springs",
-      "translation_note": ""
-    }
-  },
-  {
-    "Summer": {
-      "__pos": "proper noun",
-      "__tags": ["seasons"],
-      "word": "Summer",
-      "plural": "Summers",
-      "translation_note": ""
-    }
-  },
-
-  {
-    "Autumn": {
-      "__pos": "proper noun",
-      "__tags": ["seasons"],
-      "__synonyms": ["Fall"],
-      "word": "Autumn",
-      "plural": "Autumns",
-      "translation_note": ""
-    }
-  },
-  {
-    "Fall": {
-      "__pos": "proper noun",
-      "__tags": ["seasons"],
-      "__synonyms": ["Autumn"],
-      "word": "Fall",
-      "plural": "Falls",
-      "translation_note": ""
-    }
-  },
-  {
     "season": {
       "__pos": "noun",
       "__count": "countable",
       "__tags": ["seasons"],
       "word": "season",
       "plural": "seasons",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "Spring is my favorite season.",
+        "There are four seasons in a year."
+      ]
+    }
+  },
+  {
+    "winter": {
+      "__pos": "noun",
+      "__tags": ["seasons"],
+      "word": "winter",
+      "plural": "winters",
+      "translation_note": "",
+      "examples": [
+        "Winter is cold and snowy.",
+        "It often snows in winter.",
+        "Winter is the coldest season."
+      ]
+    }
+  },
+  {
+    "spring": {
+      "__pos": "noun",
+      "__tags": ["seasons"],
+      "word": "spring",
+      "plural": "springs",
+      "translation_note": "",
+      "examples": [
+        "Spring is warm and rainy.",
+        "Flowers bloom in spring.",
+        "Spring comes after winter."
+      ]
+    }
+  },
+  {
+    "summer": {
+      "__pos": "noun",
+      "__tags": ["seasons"],
+      "word": "summer",
+      "plural": "summers",
+      "translation_note": "",
+      "examples": [
+        "Summer is hot and sunny.",
+        "We go to the beach in summer.",
+        "Summer is the hottest season."
+      ]
+    }
+  },
+  {
+    "autumn": {
+      "__pos": "noun",
+      "__tags": ["seasons"],
+      "__synonyms": ["Fall"],
+      "word": "autumn",
+      "plural": "autumns",
+      "translation_note": "",
+      "examples": [
+        "Autumn is cool and windy.",
+        "Leaves fall from the trees in autumn.",
+        "Autumn is also called fall."
+      ]
+    }
+  },
+  {
+    "fall": {
+      "__pos": "noun",
+      "__tags": ["seasons"],
+      "__synonyms": ["Autumn"],
+      "word": "fall",
+      "plural": "falls",
+      "translation_note": "",
+      "examples": [
+        "Fall is cool and windy.",
+        "The weather gets cooler in fall.",
+        "Many people enjoy the colors of fall."
+      ]
     }
   },
   {
