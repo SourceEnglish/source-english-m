@@ -7,6 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
+import { GetAnimatedLetter } from '@/constants/StrokeData';
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import VocabEntryDisplay from '@/components/VocabEntryDisplay';
 import Notes from '@/components/Notes';
@@ -42,8 +43,6 @@ import AnimatedUppercaseM from '@/assets/animated/uppercase/M';
 import AnimatedUppercaseN from '@/assets/animated/uppercase/N';
 import AnimatedUppercaseS from '@/assets/animated/uppercase/S';
 import AnimatedUppercaseU from '@/assets/animated/uppercase/U';
-import AnimatedUppercaseY from '@/assets/animated/uppercase/Y';
-import AnimatedUppercaseZ from '@/assets/animated/uppercase/Z';
 
 import AnimatedLowercaseA from '@/assets/animated/lowercase/a';
 import AnimatedLowercaseO from '@/assets/animated/lowercase/o';
@@ -705,7 +704,7 @@ export default function VocabEntryPage() {
           }}
         >
           <View style={{ justifyContent: 'flex-end', alignItems: 'center' }}>
-            <AnimatedUppercaseX width={70} height={100} />
+            {GetAnimatedLetter('X')}
           </View>
           <View
             style={{
@@ -714,7 +713,7 @@ export default function VocabEntryPage() {
               transform: [{ translateY: lowerTranslateY }],
             }}
           >
-            <AnimatedLowercaseX width={50} height={lowerHeight} />
+            {GetAnimatedLetter('x')}
           </View>
         </View>
       );
@@ -825,7 +824,7 @@ export default function VocabEntryPage() {
           }}
         >
           <View style={{ justifyContent: 'flex-end', alignItems: 'center' }}>
-            <AnimatedUppercaseY width={70} height={100} />
+            {GetAnimatedLetter('Y')}
           </View>
           <View
             style={{
@@ -849,7 +848,7 @@ export default function VocabEntryPage() {
           }}
         >
           <View style={{ justifyContent: 'flex-end', alignItems: 'center' }}>
-            <AnimatedUppercaseZ width={70} height={100} />
+            {GetAnimatedLetter('Z')}
           </View>
           <View
             style={{
