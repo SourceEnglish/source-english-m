@@ -1,5 +1,5 @@
 import React from 'react';
-import Svg, { Line, Path, Circle } from 'react-native-svg';
+import Svg, { Line, Path, Circle, G } from 'react-native-svg';
 import Animated, {
   useSharedValue,
   useAnimatedProps,
@@ -32,6 +32,9 @@ type CircleStroke = {
   r: number;
   color: string;
   length: number;
+  rotation?: number;
+  transform?: string; // For rotation/translation
+
   [key: string]: any;
 };
 export type Stroke = LineStroke | PathStroke | CircleStroke;
@@ -92,6 +95,31 @@ export default function AnimatedLetter({
     };
   }, [progress, strokes, durations]);
 
+  // Get viewBox height for vertical translation
+  const vb = (svgProps?.viewBox || viewBox).split(' ').map(Number);
+  const viewBoxHeight = vb[3];
+
+  // Compute minY and maxY from all strokes
+  let minY = Infinity,
+    maxY = -Infinity;
+  strokes.forEach((stroke) => {
+    if (stroke.type === 'line') {
+      minY = Math.min(minY, stroke.y1, stroke.y2);
+      maxY = Math.max(maxY, stroke.y1, stroke.y2);
+    } else if (stroke.type === 'circle') {
+      minY = Math.min(minY, stroke.cy - stroke.r);
+      maxY = Math.max(maxY, stroke.cy + stroke.r);
+    } else if (stroke.type === 'path') {
+      // Path: skip for now, or parse path for bounds if needed
+    }
+  });
+  if (!isFinite(minY) || !isFinite(maxY)) {
+    minY = 0;
+    maxY = viewBoxHeight;
+  }
+  const drawingHeight = maxY - minY;
+  const offsetY = viewBoxHeight - drawingHeight - minY;
+
   // Animated props for each stroke
   const animatedPropsArr = strokes.map((stroke, i) => {
     if (stroke.type === 'circle') {
@@ -124,118 +152,123 @@ export default function AnimatedLetter({
         style={style}
         {...svgProps}
       >
-        {/* Static light gray background strokes */}
-        {strokes.map((stroke, i) => {
-          if (stroke.type === 'line') {
-            return (
-              <Line
-                key={`bg-line-${i}`}
-                x1={stroke.x1}
-                y1={stroke.y1}
-                x2={stroke.x2}
-                y2={stroke.y2}
-                stroke="#e0e0e0"
-                strokeWidth={stroke.strokeWidth ?? 2.5}
-                strokeLinecap={stroke.strokeLinecap ?? 'round'}
-                strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
-                strokeDasharray={stroke.length}
-                fill="none"
-                {...stroke}
-              />
-            );
-          }
-          if (stroke.type === 'path') {
-            return (
-              <Path
-                key={`bg-path-${i}`}
-                d={stroke.d}
-                stroke="#e0e0e0"
-                strokeWidth={stroke.strokeWidth ?? 2.5}
-                strokeLinecap={stroke.strokeLinecap ?? 'round'}
-                strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
-                strokeDasharray={stroke.length}
-                fill="none"
-                {...stroke}
-              />
-            );
-          }
-          if (stroke.type === 'circle') {
-            return (
-              <Circle
-                key={`bg-circle-${i}`}
-                cx={stroke.cx}
-                cy={stroke.cy}
-                r={stroke.r}
-                stroke="#e0e0e0"
-                strokeWidth={stroke.strokeWidth ?? 2.5}
-                strokeLinecap={stroke.strokeLinecap ?? 'round'}
-                strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
-                strokeDasharray={stroke.length}
-                fill="none"
-                transform={stroke.transform}
-                {...stroke}
-              />
-            );
-          }
-          return null;
-        })}
-        {/* Animated strokes */}
-        {strokes.map((stroke, i) => {
-          if (stroke.type === 'line') {
-            return (
-              <AnimatedLine
-                key={i}
-                x1={stroke.x1}
-                y1={stroke.y1}
-                x2={stroke.x2}
-                y2={stroke.y2}
-                stroke={stroke.color}
-                strokeWidth={stroke.strokeWidth ?? 2.5}
-                strokeLinecap={stroke.strokeLinecap ?? 'round'}
-                strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
-                strokeDasharray={stroke.length}
-                animatedProps={animatedPropsArr[i]}
-                {...stroke}
-              />
-            );
-          }
-          if (stroke.type === 'path') {
-            return (
-              <AnimatedPath
-                key={i}
-                d={stroke.d}
-                stroke={stroke.color}
-                strokeWidth={stroke.strokeWidth ?? 2.5}
-                strokeLinecap={stroke.strokeLinecap ?? 'round'}
-                strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
-                strokeDasharray={stroke.length}
-                animatedProps={animatedPropsArr[i]}
-                fill="none"
-                {...stroke}
-              />
-            );
-          }
-          if (stroke.type === 'circle') {
-            return (
-              <AnimatedCircle
-                key={i}
-                cx={stroke.cx}
-                cy={stroke.cy}
-                r={stroke.r}
-                stroke={stroke.color}
-                strokeWidth={stroke.strokeWidth ?? 2.5}
-                strokeLinecap={stroke.strokeLinecap ?? 'round'}
-                strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
-                strokeDasharray={stroke.length}
-                animatedProps={animatedPropsArr[i]}
-                fill="none"
-                transform={stroke.transform}
-                {...stroke}
-              />
-            );
-          }
-          return null;
-        })}
+        <G transform={`translate(0, ${offsetY})`}>
+          {/* Static light gray background strokes */}
+          {strokes.map((stroke, i) => {
+            if (stroke.type === 'line') {
+              return (
+                <Line
+                  key={`bg-line-${i}`}
+                  x1={stroke.x1}
+                  y1={stroke.y1}
+                  x2={stroke.x2}
+                  y2={stroke.y2}
+                  stroke="#e0e0e0"
+                  strokeWidth={stroke.strokeWidth ?? 2.5}
+                  strokeLinecap={stroke.strokeLinecap ?? 'round'}
+                  strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
+                  strokeDasharray={stroke.length}
+                  fill="none"
+                  {...stroke}
+                />
+              );
+            }
+            if (stroke.type === 'path') {
+              return (
+                <Path
+                  key={`bg-path-${i}`}
+                  d={stroke.d}
+                  stroke="#e0e0e0"
+                  strokeWidth={stroke.strokeWidth ?? 2.5}
+                  strokeLinecap={stroke.strokeLinecap ?? 'round'}
+                  strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
+                  strokeDasharray={stroke.length}
+                  fill="none"
+                  {...stroke}
+                />
+              );
+            }
+            if (stroke.type === 'circle') {
+              // Reference working a.tsx: apply transform as a string, and do not spread transform from stroke
+              // Only use transform if present, otherwise undefined
+              return (
+                <Circle
+                  key={`bg-circle-${i}`}
+                  cx={stroke.cx}
+                  cy={stroke.cy}
+                  r={stroke.r}
+                  stroke="#e0e0e0"
+                  strokeWidth={stroke.strokeWidth ?? 2.5}
+                  strokeLinecap={stroke.strokeLinecap ?? 'round'}
+                  strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
+                  strokeDasharray={stroke.length}
+                  fill="none"
+                  transform={stroke.transform}
+                  // Do not spread {...stroke} to avoid overriding transform
+                />
+              );
+            }
+            return null;
+          })}
+          {/* Animated strokes */}
+          {strokes.map((stroke, i) => {
+            if (stroke.type === 'line') {
+              return (
+                <AnimatedLine
+                  key={i}
+                  x1={stroke.x1}
+                  y1={stroke.y1}
+                  x2={stroke.x2}
+                  y2={stroke.y2}
+                  stroke={stroke.color}
+                  strokeWidth={stroke.strokeWidth ?? 2.5}
+                  strokeLinecap={stroke.strokeLinecap ?? 'round'}
+                  strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
+                  strokeDasharray={stroke.length}
+                  animatedProps={animatedPropsArr[i]}
+                  {...stroke}
+                />
+              );
+            }
+            if (stroke.type === 'path') {
+              return (
+                <AnimatedPath
+                  key={i}
+                  d={stroke.d}
+                  stroke={stroke.color}
+                  strokeWidth={stroke.strokeWidth ?? 2.5}
+                  strokeLinecap={stroke.strokeLinecap ?? 'round'}
+                  strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
+                  strokeDasharray={stroke.length}
+                  animatedProps={animatedPropsArr[i]}
+                  fill="none"
+                  {...stroke}
+                />
+              );
+            }
+            if (stroke.type === 'circle') {
+              // Reference working a.tsx: apply transform as a string, and do not spread transform from stroke
+              return (
+                <AnimatedCircle
+                  key={i}
+                  cx={stroke.cx}
+                  cy={stroke.cy}
+                  r={stroke.r}
+                  stroke={stroke.color}
+                  strokeWidth={stroke.strokeWidth ?? 2.5}
+                  strokeLinecap={stroke.strokeLinecap ?? 'round'}
+                  strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
+                  strokeDasharray={stroke.length}
+                  animatedProps={animatedPropsArr[i]}
+                  fill="none"
+                  transform={stroke.transform}
+                  // Do not spread {...stroke} to avoid overriding transform
+                />
+              );
+            }
+            return null;
+          })}
+        </G>
       </Svg>
     </>
   );

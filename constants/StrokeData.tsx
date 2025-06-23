@@ -29,6 +29,28 @@ function getDefaultDurations(letter: string): number[] {
     strokes.length > 0 ? defaultDuration / strokes.length : defaultDuration;
   return Array(strokes.length).fill(perStroke);
 }
+const aStrokes: Stroke[] = [
+  {
+    type: 'circle',
+    cx: 9.215,
+    cy: 9.435,
+    r: 7.964,
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 2 * Math.PI * 7.964,
+    transform: `rotate(150 9.215 9.435) scale(-1 1) translate(-18.429 0)`,
+  },
+
+  {
+    type: 'line',
+    x1: 17.178,
+    y1: 1.25,
+    x2: 17.178,
+    y2: 17.399,
+    color: ANIMATED_LETTER_COLORS[1],
+    length: 16.149,
+  },
+];
+strokeMap.set('a', aStrokes);
 
 const xStrokes: Stroke[] = [
   {
@@ -53,6 +75,37 @@ const xStrokes: Stroke[] = [
   },
 ];
 strokeMap.set('x', xStrokes);
+
+const Astrokes: Stroke[] = [
+  {
+    type: 'line',
+    x1: 14.584,
+    y1: 1.25,
+    x2: 1.25,
+    y2: 34.708,
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 36,
+  },
+  {
+    type: 'line',
+    x1: 14.584,
+    y1: 1.25,
+    x2: 27.918,
+    y2: 34.708,
+    color: ANIMATED_LETTER_COLORS[1],
+    length: 36,
+  },
+  {
+    type: 'line',
+    x1: 5.763,
+    y1: 23.383,
+    x2: 23.405,
+    y2: 23.383,
+    color: ANIMATED_LETTER_COLORS[2],
+    length: 17.642,
+  },
+];
+strokeMap.set('A', Astrokes);
 
 const Xstrokes: Stroke[] = [
   {

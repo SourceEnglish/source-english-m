@@ -163,7 +163,7 @@ export default function VocabEntryPage() {
               alignItems: 'center',
             }}
           >
-            <AnimatedUppercaseA width={70} height={100} />
+            {GetAnimatedLetter('A')}
           </View>
           <View
             style={{
@@ -172,7 +172,7 @@ export default function VocabEntryPage() {
               transform: [{ translateY: lowerTranslateY }],
             }}
           >
-            <AnimatedLowercaseA width={50} height={lowerHeight} />
+            {GetAnimatedLetter('a')}
           </View>
         </View>
       );
