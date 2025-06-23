@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="M" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.017 35.913">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #2aa2ff;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2.5px;
+      }
+    </style>
+  </defs>
+  <line id="_1" data-name="1" class="cls-1" x1="1.25" y1="1.31" x2="1.25" y2="34.588"/>
+  <line id="_2" data-name="2" class="cls-1" x1="1.25" y1="1.31" x2="15.933" y2="34.663"/>
+  <line id="_3" data-name="3" class="cls-1" x1="30.767" y1="1.25" x2="16.083" y2="34.603"/>
+  <line id="_4" data-name="4" class="cls-1" x1="30.767" y1="1.31" x2="30.767" y2="34.588"/>
+</svg>

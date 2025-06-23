@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Y" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.4 35.828">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #00b47f;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2.5px;
+      }
+    </style>
+  </defs>
+  <line id="_1" data-name="1" class="cls-1" x1="1.25" y1="1.25" x2="13.7" y2="18.745"/>
+  <line id="_2" data-name="2" class="cls-1" x1="26.15" y1="1.25" x2="13.7" y2="18.745"/>
+  <line id="_3" data-name="3" class="cls-1" x1="13.7" y1="18.745" x2="13.7" y2="34.578"/>
+</svg>
