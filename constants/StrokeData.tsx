@@ -179,17 +179,19 @@ const hStrokes: Stroke[] = [
   {
     type: 'line',
     x1: 1.25,
-    y1: 1.25,
+    y1: 1.5,
     x2: 1.25,
     y2: 34.858,
     color: ANIMATED_LETTER_COLORS[0],
     length: 33.608,
+    transform: 'translate(0, -1.75)',
   },
   {
     type: 'path',
     d: 'M1.25,34.858v-10.85c0-1.389.236-2.525.707-3.407.472-.882,1.149-1.527,2.031-1.935.883-.408,1.965-.612,3.247-.612,1.282,0,2.364.204,3.247.612.883.408,1.56,1.053,2.031,1.935.472.882.707 2.018.707 3.407v10.85',
     color: ANIMATED_LETTER_COLORS[0],
     length: 50,
+    transform: 'translate(0, -1.75)',
   },
 ];
 strokeMap.set('h', hStrokes);
@@ -636,7 +638,7 @@ const Hstrokes: Stroke[] = [
   {
     type: 'line',
     x1: 1.25,
-    y1: 1.25,
+    y1: 0,
     x2: 1.25,
     y2: 34.667,
     color: ANIMATED_LETTER_COLORS[0],
@@ -645,7 +647,7 @@ const Hstrokes: Stroke[] = [
   {
     type: 'line',
     x1: 24.948,
-    y1: 1.25,
+    y1: 0,
     x2: 24.948,
     y2: 34.667,
     color: ANIMATED_LETTER_COLORS[1],
