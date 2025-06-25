@@ -61,6 +61,7 @@ const bStrokes: Stroke[] = [
     y2: 34.8,
     color: ANIMATED_LETTER_COLORS[0],
     length: 33.6,
+    transform: `translate(0 -1.4)`,
   },
   {
     type: 'circle',
@@ -70,7 +71,7 @@ const bStrokes: Stroke[] = [
     color: ANIMATED_LETTER_COLORS[1],
     length: 2 * Math.PI * 8,
     rotation: 210,
-    transform: `rotate(180 9.2 26.9) scale(1 1) translate(0 0)`,
+    transform: `rotate(180 9.2 26.9) scale(1 1) translate(0 1.4)`,
   },
 ];
 strokeMap.set('b', bStrokes);
