@@ -158,6 +158,37 @@ const fStrokes: Stroke[] = [
 ];
 strokeMap.set('f', fStrokes);
 
+const uStrokes: Stroke[] = [
+  {
+    type: 'path',
+    d: 'M1.2,1.2v9.8c0,1.2.2,2.3.7,3.2.5.9,1.2,1.7,2.1,2.2.9.5,1.9.8,3,.8s2.2-.3,3.1-.8c.9-.5,1.6-1.3,2.1-2.2s.8-2,.8-3.2V1.2',
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 36, // Approximate, matches pathLength in u.tsx
+    transform: 'translate(0, -1.5)',
+  },
+  {
+    type: 'line',
+    x1: 13.1,
+    y1: 1.2,
+    x2: 13.1,
+    y2: 17.3,
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 16.1,
+    transform: 'translate(0, -1.5)',
+  },
+];
+strokeMap.set('u', uStrokes);
+
+const Ustrokes: Stroke[] = [
+  {
+    type: 'path',
+    d: 'M1.2,1.2v20.5c0,2.5.5,4.8,1.6,6.7,1,2,2.5,3.5,4.3,4.6,1.9,1.1,4,1.7,6.3,1.7s4.6-.6,6.5-1.7c1.9-1.1,3.4-2.7,4.5-4.6,1.1-2,1.6-4.2,1.6-6.7V1.2',
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 90, // Approximate, matches pathLength in U.tsx
+  },
+];
+strokeMap.set('U', Ustrokes);
+
 const gStrokes: Stroke[] = [
   {
     type: 'circle',
