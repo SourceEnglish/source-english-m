@@ -890,28 +890,28 @@ const qStrokes: Stroke[] = [
     type: 'circle',
     cx: 11.963,
     cy: 12.175,
-    r: 10.713,
+    r: 7.964,
 
     color: ANIMATED_LETTER_COLORS[0],
     length:
       Math.PI *
       (3 * (10.713 + 10.925) -
         Math.sqrt((3 * 10.713 + 10.925) * (10.713 + 3 * 10.925))),
-    transform: 'scale(1 -1) translate(0 -14.35)',
+    transform: 'scale(1 -1) translate(0 -8.5)',
   },
   {
     type: 'path',
     d: 'M22.676,12.175V1.408',
     color: ANIMATED_LETTER_COLORS[0],
     length: 10.767,
-    transform: 'translate(0 -9.5)',
+    transform: 'translate(-3 -13.5)',
   },
   {
     type: 'path',
     d: 'M22.656,11.975c.027,7.638.054,15.276.081,22.914',
     color: ANIMATED_LETTER_COLORS[0],
     length: 25,
-    transform: 'translate(0 -9.5)',
+    transform: 'translate(-3 -13.5)',
   },
 ];
 strokeMap.set('q', qStrokes);
