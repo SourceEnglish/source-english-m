@@ -119,7 +119,7 @@ const eStrokes: Stroke[] = [
     color: ANIMATED_LETTER_COLORS[0],
     length: 60,
 
-    transform: 'translate(1,26.5)',
+    transform: 'translate(1, 23.1)',
   },
 ];
 strokeMap.set('e', eStrokes);
@@ -556,6 +556,7 @@ const Estrokes: Stroke[] = [
     y2: 34.625,
     color: ANIMATED_LETTER_COLORS[0],
     length: 33.375,
+    transform: 'translate(0, -1.35)',
   },
   {
     type: 'line',
@@ -565,6 +566,7 @@ const Estrokes: Stroke[] = [
     y2: 1.25,
     color: ANIMATED_LETTER_COLORS[1],
     length: 21.25,
+    transform: 'translate(0, -1.35)',
   },
   {
     type: 'line',
@@ -574,6 +576,7 @@ const Estrokes: Stroke[] = [
     y2: 17.937,
     color: ANIMATED_LETTER_COLORS[2],
     length: 16.25,
+    transform: 'translate(0, -1.35)',
   },
   {
     type: 'line',
@@ -583,6 +586,7 @@ const Estrokes: Stroke[] = [
     y2: 34.625,
     color: ANIMATED_LETTER_COLORS[3],
     length: 21.25,
+    transform: 'translate(0, -1.35  )',
   },
 ];
 strokeMap.set('E', Estrokes);
