@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import Svg, { Line, Path, Circle, G } from 'react-native-svg';
 import Animated, {
   useSharedValue,
@@ -52,6 +53,7 @@ type AnimatedLetterProps = {
   viewBox?: string;
   style?: any;
   svgProps?: any;
+  letter?: string;
 };
 
 export default function AnimatedLetter({
@@ -95,9 +97,10 @@ export default function AnimatedLetter({
     };
   }, [progress, strokes, durations]);
 
-  // Get viewBox height for vertical translation
-  const vb = (svgProps?.viewBox || viewBox).split(' ').map(Number);
-  const viewBoxHeight = vb[3];
+  // Use viewBox from props or default
+  let vbArr = (svgProps?.viewBox || viewBox).split(' ').map(Number);
+  let viewBoxHeight = vbArr[3];
+  let viewBoxWidth = vbArr[2];
 
   // Compute minY and maxY from all strokes
   let minY = Infinity,
@@ -118,6 +121,8 @@ export default function AnimatedLetter({
     maxY = viewBoxHeight;
   }
   const drawingHeight = maxY - minY;
+  const drawingWidth = viewBoxWidth;
+  // Always align to bottom
   const offsetY = viewBoxHeight - drawingHeight - minY;
 
   // Animated props for each stroke
@@ -143,46 +148,14 @@ export default function AnimatedLetter({
   });
 
   return (
-    <>
+    <View style={[{ width, height, position: 'relative' }, style]}>
       <Svg
         width={width}
         height={height}
         viewBox={vbArr.join(' ')}
         fill="none"
-        style={style}
         {...svgProps}
       >
-        {/* Letter height background lines */}
-        <G>
-          {/* Top solid line */}
-          <Line
-            x1={0}
-            y1={0}
-            x2={viewBoxWidth}
-            y2={0}
-            stroke="#000"
-            strokeWidth={0.6}
-          />
-          {/* Bottom solid line */}
-          <Line
-            x1={0}
-            y1={viewBoxHeight}
-            x2={viewBoxWidth}
-            y2={viewBoxHeight}
-            stroke="#000"
-            strokeWidth={0.6}
-          />
-          {/* Center dotted line */}
-          <Line
-            x1={0}
-            y1={viewBoxHeight / 2}
-            x2={viewBoxWidth}
-            y2={viewBoxHeight / 2}
-            stroke="#ADD8E6"
-            strokeWidth={0.4}
-            strokeDasharray="2,2"
-          />
-        </G>
         <G transform={`translate(0, ${offsetY})`}>
           {/* Static light gray background strokes */}
           {strokes.map((stroke, i) => {
@@ -302,6 +275,6 @@ export default function AnimatedLetter({
           })}
         </G>
       </Svg>
-    </>
+    </View>
   );
 }

@@ -19,6 +19,7 @@ import ChevronRight from '@/assets/icons/open_source/chevron-right.svg';
 import { getIconForEntry } from '@/utils/iconMap';
 import { useSpeech } from '@/contexts/SpeechContext';
 import VerbConjugationTables from '@/components/VerbConjugationTables';
+import Svg, { Line, G } from 'react-native-svg';
 
 export function generateStaticParams() {
   return vocabularyData.map((entry: any) => {
@@ -107,15 +108,98 @@ export default function VocabEntryPage() {
     const lowerTranslateY = hasDescender ? 100 / 3 : 0; // 1/3 lower than others
     containerMarginTop = 0;
 
+    // Letter height background lines (shared for both letters)
+    const LetterHeightLines = ({
+      width = 100,
+      height = 100,
+      viewBox = '0 0 44 36',
+      letter = lower,
+    }: {
+      width?: number;
+      height?: number;
+      viewBox?: string;
+      letter?: string;
+    }) => {
+      const descenderLetters = ['g', 'j', 'p', 'q', 'y'];
+      let vbArr = viewBox.split(' ').map(Number);
+      let viewBoxHeight = vbArr[3];
+      let viewBoxWidth = vbArr[2];
+      // Do not adjust viewBoxHeight for descenders here
+      // Calculate scale to stretch lines across the full container width
+      const scaleX = width / viewBoxWidth;
+      // Y positions in SVG coordinates
+      const topY = 5.5;
+      const bottomY = viewBoxHeight - 5.5;
+      const centerY = viewBoxHeight / 2;
+      return (
+        <Svg
+          width={width}
+          height={height}
+          viewBox={`0 0 ${width} ${height}`}
+          fill="none"
+          style={{
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            zIndex: 0,
+            pointerEvents: 'none',
+          }}
+        >
+          <G>
+            {/* Top solid line */}
+            <Line
+              x1={0}
+              y1={topY * (height / viewBoxHeight)}
+              x2={width}
+              y2={topY * (height / viewBoxHeight)}
+              stroke="#000"
+              strokeWidth={0.6}
+            />
+            {/* Bottom solid line */}
+            <Line
+              x1={0}
+              y1={bottomY * (height / viewBoxHeight)}
+              x2={width}
+              y2={bottomY * (height / viewBoxHeight)}
+              stroke="#000"
+              strokeWidth={0.6}
+            />
+            {/* Center dotted line */}
+            <Line
+              x1={0}
+              y1={centerY * (height / viewBoxHeight)}
+              x2={width}
+              y2={centerY * (height / viewBoxHeight)}
+              stroke="#ADD8E6"
+              strokeWidth={0.4}
+              strokeDasharray="6,6"
+            />
+          </G>
+        </Svg>
+      );
+    };
+
     AnimatedLetterComponent = () => (
       <View
         style={{
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'center',
+          position: 'relative',
+          width: 200,
+          height: 120,
         }}
       >
-        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+        {/* Letter height background lines, absolutely positioned */}
+        <LetterHeightLines width={200} height={120} letter={lower} />
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 1,
+            flex: 1,
+          }}
+        >
           {GetAnimatedLetter(upper)}
         </View>
         <View
@@ -123,6 +207,8 @@ export default function VocabEntryPage() {
             justifyContent: 'center',
             alignItems: 'center',
             transform: [{ translateY: lowerTranslateY }],
+            zIndex: 1,
+            flex: 1,
           }}
         >
           {GetAnimatedLetter(lower)}
