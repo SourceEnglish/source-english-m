@@ -1184,6 +1184,7 @@ const Wstrokes: Stroke[] = [
     y2: 34.708,
     color: ANIMATED_LETTER_COLORS[0],
     length: Math.sqrt(Math.pow(11.417 - 1.25, 2) + Math.pow(34.708 - 1.25, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1195,6 +1196,7 @@ const Wstrokes: Stroke[] = [
     length: Math.sqrt(
       Math.pow(21.583 - 11.417, 2) + Math.pow(34.708 - 1.25, 2)
     ),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1206,6 +1208,7 @@ const Wstrokes: Stroke[] = [
     length: Math.sqrt(
       Math.pow(31.896 - 21.729, 2) + Math.pow(34.708 - 1.25, 2)
     ),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1217,6 +1220,7 @@ const Wstrokes: Stroke[] = [
     length: Math.sqrt(
       Math.pow(42.062 - 31.896, 2) + Math.pow(34.708 - 1.25, 2)
     ),
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('W', Wstrokes);
