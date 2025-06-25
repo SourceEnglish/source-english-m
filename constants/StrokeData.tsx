@@ -892,13 +892,13 @@ const pStrokes: Stroke[] = [
     type: 'circle',
     cx: 11.963,
     cy: 12.175,
-    r: 10.713,
+    r: 8,
     color: ANIMATED_LETTER_COLORS[1],
     length:
       Math.PI *
       (3 * (10.713 + 10.925) -
         Math.sqrt((3 * 10.713 + 10.925) * (10.713 + 3 * 10.925))),
-    transform: 'scale(-1 -1) translate(-23.926 -23.926)',
+    transform: 'scale(-1 -1) translate(-21.1 -23)',
   },
 ];
 strokeMap.set('p', pStrokes);
@@ -912,12 +912,14 @@ const Pstrokes: Stroke[] = [
     y2: 34.625,
     color: ANIMATED_LETTER_COLORS[0],
     length: 33.375,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'path',
     d: 'M1.543,1.25h12.414c2.544,0,4.553,0.721,6.029,2.162,1.475,1.442,2.213,3.197,2.213,5.266,0,1.458-.382,2.781-1.145,3.968-.763,1.187-1.781,2.128-3.053,2.824-1.272,0.695-2.671,1.043-4.197,1.043H1.543',
     color: ANIMATED_LETTER_COLORS[1],
     length: 60,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('P', Pstrokes);
