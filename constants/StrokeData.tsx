@@ -97,7 +97,7 @@ const dStrokes: Stroke[] = [
     y2: 34.815,
     color: ANIMATED_LETTER_COLORS[0],
     length: 33.565,
-    transform: 'translate(10   -1.25)',
+    transform: 'translate(10.4   -1.25)',
   },
   {
     type: 'circle',
