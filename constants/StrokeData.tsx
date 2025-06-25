@@ -1044,6 +1044,7 @@ const tStrokes: Stroke[] = [
     y2: 34.625,
     color: ANIMATED_LETTER_COLORS[0],
     length: 34.625 - 1.25,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1053,6 +1054,7 @@ const tStrokes: Stroke[] = [
     y2: 10.018,
     color: ANIMATED_LETTER_COLORS[1],
     length: 16.042 - 1.25,
+    transform: 'translate(0, 6)',
   },
 ];
 strokeMap.set('t', tStrokes);
@@ -1066,6 +1068,7 @@ const Tstrokes: Stroke[] = [
     y2: 1.25,
     color: ANIMATED_LETTER_COLORS[0],
     length: 24.653 - 1.25,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1075,6 +1078,7 @@ const Tstrokes: Stroke[] = [
     y2: 34.625,
     color: ANIMATED_LETTER_COLORS[1],
     length: 34.625 - 1.25,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('T', Tstrokes);
