@@ -1031,6 +1031,26 @@ const Rstrokes: Stroke[] = [
   },
 ];
 strokeMap.set('R', Rstrokes);
+const rStrokes: Stroke[] = [
+  {
+    type: 'line',
+    x1: 1.25,
+    y1: 1.25,
+    x2: 1.25,
+    y2: 16.883,
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 16.883 - 1.25,
+    transform: 'translate(0, -1.5)',
+  },
+  {
+    type: 'path',
+    d: 'M1.25,5.962c.538-.98,1.194-1.869,1.968-2.665.774-.796,1.62-1.374,2.539-1.733.919-.359,1.838-.356,2.758.009.313.124.59.27.831.439.242.168.448.359.619.571',
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 24, // Approximate, adjust for animation speed if needed
+    transform: 'translate(0, -1.5)',
+  },
+];
+strokeMap.set('r', rStrokes);
 
 // Lowercase s strokes (from s.tsx)
 const sStrokes: Stroke[] = [
