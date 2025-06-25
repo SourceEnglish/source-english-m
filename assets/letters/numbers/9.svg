@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_8" data-name="8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.692 35.745">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #23ff00;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-width: 2.5px;
+      }
+
+      .cls-2 {
+        stroke: #ff9ff2;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <path id="_3" data-name=" 3" class="cls-1" d="M19.354,9.302c.029,8.398.058,16.796.087,25.194"/>
+  <circle id="_1" data-name=" 1" class="cls-2" cx="10.315" cy="10.315" r="9.065"/>
+</svg>

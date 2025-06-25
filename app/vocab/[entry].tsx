@@ -93,40 +93,45 @@ export default function VocabEntryPage() {
     }
   }
 
-  // Animated letter logic (only for letters)
+  // Animated letter/number logic (for letters and numbers)
   let AnimatedLetterComponent: React.FC<any> | null = null;
   let containerMarginTop = 0;
-  if (vocabEntry.__pos === 'letter') {
+  const numbers = [
+    'zero',
+    'one',
+    'two',
+    'three',
+    'four',
+    'five',
+    'six',
+    'seven',
+    'eight',
+    'nine',
+  ];
+  if (
+    vocabEntry.__pos === 'letter' ||
+    (vocabEntry.__pos === 'number' && numbers.includes(vocabEntry.word))
+  ) {
     const word = vocabEntry.word || '';
-    const upper = word.charAt(0);
-    const lower = word.charAt(1);
+    const isNumber = vocabEntry.__pos === 'number';
 
     const descenderLetters = ['g', 'j', 'p', 'q', 'y'];
-    const hasDescender = descenderLetters.includes(lower);
 
-    // Only apply lowering to the lowercase letter when shown with uppercase
-    const lowerTranslateY = hasDescender ? 100 / 3 : 0; // 1/3 lower than others
-    containerMarginTop = 0;
-
-    // Letter height background lines (shared for both letters)
+    // Letter height background lines (shared for both letters and numbers)
     const LetterHeightLines = ({
       width = 100,
       height = 100,
       viewBox = '0 0 44 36',
-      letter = lower,
+      letter = '',
     }: {
       width?: number;
       height?: number;
       viewBox?: string;
       letter?: string;
     }) => {
-      const descenderLetters = ['g', 'j', 'p', 'q', 'y'];
       let vbArr = viewBox.split(' ').map(Number);
       let viewBoxHeight = vbArr[3];
       let viewBoxWidth = vbArr[2];
-      // Do not adjust viewBoxHeight for descenders here
-      // Calculate scale to stretch lines across the full container width
-      const scaleX = width / viewBoxWidth;
       // Y positions in SVG coordinates
       const topY = 5.5;
       const bottomY = viewBoxHeight - 5.5;
@@ -179,42 +184,78 @@ export default function VocabEntryPage() {
       );
     };
 
-    AnimatedLetterComponent = () => (
-      <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'center',
-          position: 'relative',
-          width: 200,
-          height: 120,
-        }}
-      >
-        {/* Letter height background lines, absolutely positioned */}
-        <LetterHeightLines width={200} height={120} letter={lower} />
+    if (isNumber) {
+      // For numbers, just show the animated number (single digit, 0-9)
+      AnimatedLetterComponent = () => (
         <View
           style={{
-            justifyContent: 'center',
+            flexDirection: 'row',
             alignItems: 'center',
-            zIndex: 1,
-            flex: 1,
+            justifyContent: 'center',
+            position: 'relative',
+            width: 120,
+            height: 120,
           }}
         >
-          {GetAnimatedLetter(upper)}
+          {/* Letter height background lines, absolutely positioned */}
+          <LetterHeightLines width={120} height={120} letter={word} />
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              zIndex: 1,
+              flex: 1,
+            }}
+          >
+            {GetAnimatedLetter(word)}
+          </View>
         </View>
+      );
+    } else {
+      // For letters, show uppercase and lowercase side by side
+      const upper = word.charAt(0);
+      const lower = word.charAt(1);
+      const hasDescender = descenderLetters.includes(lower);
+      const lowerTranslateY = hasDescender ? 100 / 3 : 0; // 1/3 lower than others
+      containerMarginTop = 0;
+
+      AnimatedLetterComponent = () => (
         <View
           style={{
-            justifyContent: 'center',
+            flexDirection: 'row',
             alignItems: 'center',
-            transform: [{ translateY: lowerTranslateY }],
-            zIndex: 1,
-            flex: 1,
+            justifyContent: 'center',
+            position: 'relative',
+            width: 200,
+            height: 120,
           }}
         >
-          {GetAnimatedLetter(lower)}
+          {/* Letter height background lines, absolutely positioned */}
+          <LetterHeightLines width={200} height={120} letter={lower} />
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              zIndex: 1,
+              flex: 1,
+            }}
+          >
+            {GetAnimatedLetter(upper)}
+          </View>
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              transform: [{ translateY: lowerTranslateY }],
+              zIndex: 1,
+              flex: 1,
+            }}
+          >
+            {GetAnimatedLetter(lower)}
+          </View>
         </View>
-      </View>
-    );
+      );
+    }
   }
 
   // Always render the navigation row, but only show chevrons if prev/next exist

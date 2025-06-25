@@ -2,6 +2,7 @@ import React from 'react';
 
 import AnimatedLetter from '@/components/AnimatedLetter';
 import { Stroke } from '@/components/AnimatedLetter';
+import { stroke } from 'pdf-lib';
 
 export const ANIMATED_LETTER_COLORS = [
   '#d40000', // red
@@ -29,6 +30,18 @@ function getDefaultDurations(letter: string): number[] {
     strokes.length > 0 ? defaultDuration / strokes.length : defaultDuration;
   return Array(strokes.length).fill(perStroke);
 }
+
+const zeroStrokes: Stroke[] = [
+  {
+    type: 'path',
+    d: 'M12.308,34.748c-3.609,0-6.354-1.473-8.236-4.419-1.882-2.946-2.822-7.071-2.822-12.377,0-5.336.964-9.454,2.892-12.353C6.07,2.7,8.822,1.25,12.4,1.25c3.609,0,6.354,1.465,8.236,4.395,1.882,2.93,2.822,7.063,2.822,12.4,0,5.336-.964,9.454-2.892,12.353-1.928,2.899-4.681,4.349-8.259,4.349Z',
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 90, // Approximate, adjust as needed for animation speed
+    transform: 'scale(1,-1) translate(0,-36)',
+  },
+];
+strokeMap.set('zero', zeroStrokes);
+
 const aStrokes: Stroke[] = [
   {
     type: 'circle',
@@ -1300,56 +1313,136 @@ const Zstrokes: Stroke[] = [
 ];
 strokeMap.set('Z', Zstrokes);
 
-// Lowercase r strokes (from r.tsx)
-const rStrokes: Stroke[] = [
+// --- Animated number strokes (0-9) ---
+
+const oneStrokes: Stroke[] = [
   {
     type: 'line',
     x1: 1.25,
     y1: 1.25,
     x2: 1.25,
-    y2: 16.883,
+    y2: 34.612,
     color: ANIMATED_LETTER_COLORS[0],
-    length: 15.633,
-    transform: 'translate(0, -1.5)',
-  },
-  {
-    type: 'path',
-    d: 'M1.25,5.962c.538-.98,1.194-1.869,1.968-2.665.774-.796,1.62-1.374,2.539-1.733.919-.359,1.838-.356,2.758.009.313.124.59.27.831.439.242.168.448.359.619.571',
-    color: ANIMATED_LETTER_COLORS[0],
-    length: 12,
+    length: 34.612 - 1.25,
     transform: 'translate(0, -1.5)',
   },
 ];
-strokeMap.set('r', rStrokes);
-
-// Lowercase u strokes (from u.tsx)
-const uStrokes: Stroke[] = [
+strokeMap.set('one', oneStrokes);
+const twoNumStrokes: Stroke[] = [
   {
     type: 'path',
-    d: 'M1.2,1.2v9.8c0,1.2.2,2.3.7,3.2.5.9,1.2,1.7,2.1,2.2.9.5,1.9.8,3,.8s2.2-.3,3.1-.8c.9-.5,1.6-1.3,2.1-2.2s.8-2,.8-3.2V1.2',
+    d: 'M3.603,4.711c1.054-.997,2.371-1.823,3.952-2.478,1.581-.655,3.24-.983,4.978-.983,1.88,0,3.475.306,4.786.919,1.31.612,2.307,1.503,2.991,2.67.684,1.168,1.025,2.578,1.025,4.23,0,1.196-.199,2.386-.598,3.568s-.99,2.379-1.773,3.589c-.783,1.211-1.787,2.457-3.012,3.739l-10.084,10.725-2.083,2.179c-.114.114-.207.256-.278.427-.071.171-.107.328-.107.47,0,.256.1.484.299.684s.484.299.855.299h16.664',
     color: ANIMATED_LETTER_COLORS[0],
-    length: 36, // Approximate, matches pathLength in u.tsx
+    length: 90, // Approximate, adjust for animation speed if needed
+  },
+];
+strokeMap.set('two', twoNumStrokes);
+
+const threeNumStrokes: Stroke[] = [
+  {
+    type: 'path',
+    d: 'M2.623,5.041c1.171-1.202,2.612-2.134,4.323-2.797,1.711-.663,3.475-.994,5.293-.994,1.972,0,3.66.324,5.062.971,1.402.647,2.481,1.58,3.236,2.797.755,1.217,1.133,2.674,1.133,4.369,0,1.356-.254,2.597-.763,3.722-.509,1.125-1.233,2.08-2.173,2.866-.94.786-4.071,1.942-11.185,1.687l7.114-.144c2.281.401,4.764 1.014 6.013 2.478 1.248 1.464 1.872 3.305 1.872 5.524 0 1.849-.408 3.452-1.225 4.808-.817 1.356-1.988 2.404-3.513 3.144-1.526.74-3.352 1.11-5.478 1.11-1.911 0-3.768-.3-5.571-.901-1.803-.601-3.367-1.487-4.692-2.658',
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 110,
+  },
+];
+strokeMap.set('three', threeNumStrokes);
+
+const fourNumStrokes: Stroke[] = [
+  {
+    type: 'line',
+    x1: 15.8,
+    y1: 1.3,
+    x2: 1.2,
+    y2: 23.4,
+    color: ANIMATED_LETTER_COLORS[0],
+    length: Math.sqrt(Math.pow(15.8 - 1.2, 2) + Math.pow(1.3 - 23.4, 2)),
+    transform: 'translate(0, -1.5)',
+  },
+
+  {
+    type: 'line',
+    x1: 1.2,
+    y1: 23.4,
+    x2: 21.9,
+    y2: 23.4,
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 21.9 - 1.2,
     transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
-    x1: 13.1,
-    y1: 1.2,
-    x2: 13.1,
-    y2: 17.3,
-    color: ANIMATED_LETTER_COLORS[0],
-    length: 16.1,
+    x1: 15.8,
+    y1: 1.3,
+    x2: 15.8,
+    y2: 34.8,
+    color: ANIMATED_LETTER_COLORS[1],
+    length: 34.8 - 1.3,
     transform: 'translate(0, -1.5)',
   },
 ];
-strokeMap.set('u', uStrokes);
+strokeMap.set('four', fourNumStrokes);
 
-const Ustrokes: Stroke[] = [
+const fiveNumStrokes: Stroke[] = [
   {
     type: 'path',
-    d: 'M1.2,1.2v20.5c0,2.5.5,4.8,1.6,6.7,1,2,2.5,3.5,4.3,4.6,1.9,1.1,4,1.7,6.3,1.7s4.6-.6,6.5-1.7c1.9-1.1,3.4-2.7,4.5-4.6,1.1-2,1.6-4.2,1.6-6.7V1.2',
+    // Reversed the topmost stroke: original was "M2.3,1.2h16.9"
+    d: 'M19.2,1.2H2.3H1.3v18.1c.8-1.4,2-2.5,3.4-3.3,1.5-.8,3.1-1.2,5-1.2s3.7.4,5.1,1.3c1.4.8,2.5,2,3.3,3.5s1.2,3.3,1.2,5.3-.4,3.6-1.2,5.1-2,2.7-3.4,3.5c-1.5.9-3.3,1.3-5.3,1.3s-3.6-.3-5.4-.9-2-.8-2.6-1.2',
     color: ANIMATED_LETTER_COLORS[0],
-    length: 90, // Approximate, matches pathLength in U.tsx
+    length: 110, // Adjust if you want more accurate animation speed
   },
 ];
-strokeMap.set('U', Ustrokes);
+strokeMap.set('five', fiveNumStrokes);
+
+const sixNumStrokes: Stroke[] = [
+  {
+    type: 'path',
+    d: 'M17.956,2.85s-.402-.299-.877-.569c-1.288-.733-2.69-.98-4.062-1.024-2.319-.074-4.324.51-6.014 1.753-1.691 1.243-3.011 3.146-3.959 5.71-.949 2.564-1.485 5.772-1.608 9.624l-.185 6.463c0 1.854.394 3.489 1.181 4.906.787 1.417 1.871 2.527 3.253 3.332 1.382.805 2.982 1.207 4.801 1.207s3.419-.402 4.801-1.207c1.382-.805 2.466-1.915 3.253-3.332.787-1.417 1.181-3.052 1.181-4.906s-.394-3.489-1.181-4.906-1.871-2.527-3.253-3.332c-1.382-.805-2.982-1.207-4.801-1.207s-2.963.325-4.624 1.022c0 0-4.426 1.959-4.611 7.924',
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 120,
+  },
+];
+strokeMap.set('six', sixNumStrokes);
+const sevenNumStrokes: Stroke[] = [
+  {
+    type: 'path',
+    d: 'M1.2,1.2H21.7L6.8,34.8',
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 65, // Approximate, adjust for animation speed if needed
+  },
+];
+strokeMap.set('seven', sevenNumStrokes);
+const eightNumStrokes: Stroke[] = [
+  {
+    type: 'path',
+    d: 'M10.757,1.281c-1.248-.015-2.676.166-3.84.549-1.163.383-2.15.868-2.961,1.653-.811.685-1.445,1.572-1.903,2.559s-.649,2.078-.663,3.269.157,1.79.504,2.588.873,1.5,1.578,2.204c.794.705,1.767,1.312,2.918,1.922,1.241.611,2.573,1.024,4.171,1.54l.178.002c1.598.516,2.93.929,4.083,1.44s2.126,1.118,2.921,1.724c.794.705,1.408,1.507,1.754,2.405s.6,1.994.585,3.185-.395,3.173-1.124,4.456c-.729,1.282-1.81,2.262-3.244,2.94s-3.131.955-5.003.933',
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 55, // Approximate, adjust for animation speed if needed
+  },
+  {
+    type: 'path',
+    d: 'M10.684,34.62c-1.871.036-3.57-.228-5.01-.896s-2.528-1.639-3.266-2.916c-.738-1.277-1.133-3.256-1.156-4.447s.223-2.289.562-3.189.947-1.707,1.736-2.418c.79-.611,1.759-1.226,2.908-1.745s2.478-.942,4.072-1.47l.294-.103c1.594-.528,2.807-.851,4.043-1.471,1.147-.618,2.116-1.233,2.904-1.944.699-.709,1.221-1.414,1.561-2.216s.508-1.4.484-2.592-.223-2.28-.688-3.264-1.106-1.866-1.922-2.545c-.817-.779-1.807-1.256-2.974-1.631-1.166-.375-2.596-.545-3.843-.521',
+    color: ANIMATED_LETTER_COLORS[0],
+    length: 55, // Approximate, adjust for animation speed if needed
+  },
+];
+strokeMap.set('eight', eightNumStrokes);
+const nineNumStrokes: Stroke[] = [
+  {
+    type: 'circle',
+    cx: 10.315,
+    cy: 10.315,
+    r: 9.065,
+    color: ANIMATED_LETTER_COLORS[0], // matches SVG .cls-2
+    length: 2 * Math.PI * 9.065,
+    transform: 'scale(-1,1) translate(0, 3.9) rotate(180)', // Reverse direction horizontally, keep vertical shift
+  },
+  {
+    type: 'path',
+    d: 'M19.354,9.302c.029,8.398.058,16.796.087,25.194',
+    color: ANIMATED_LETTER_COLORS[0], // matches SVG .cls-1
+    length: 25, // Approximate, adjust for animation speed if needed
+    transform: 'translate(0 -16.8)',
+  },
+];
+strokeMap.set('nine', nineNumStrokes);
