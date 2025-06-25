@@ -148,31 +148,29 @@ strokeMap.set('f', fStrokes);
 const gStrokes: Stroke[] = [
   {
     type: 'circle',
-    cx: 11.963,
-    cy: 12.175,
-    r: 10.713,
-    color: ANIMATED_LETTER_COLORS[0],
-    length:
-      Math.PI *
-      (3 * (10.713 + 10.925) -
-        Math.sqrt((3 * 10.713 + 10.925) * (10.713 + 3 * 10.925))),
-    transform: 'rotate(180) scale(-1 1) translate(0 -11.35)',
+    cx: 9.2,
+    cy: 9.3,
+    r: 8,
+    color: ANIMATED_LETTER_COLORS[0], // #5fe6ff
+    length: 2 * Math.PI * 8,
+    transform: 'rotate(180) scale(-1 1)  translate(0 -2.8)',
   },
-  // Ascender (top vertical)
+  {
+    type: 'line',
+    x1: 17.2,
+    y2: 1.2,
+    x2: 17.2,
+    y1: 9.3,
+    color: ANIMATED_LETTER_COLORS[0], // #ff9ff2
+    length: 8.1, // vertical line, length = 8.1
+    transform: 'translate(0, -15)',
+  },
   {
     type: 'path',
-    d: 'M22.716,12.175V1.408',
-    color: ANIMATED_LETTER_COLORS[0],
-    length: 10.767,
-    transform: 'translate(0, -13)',
-  },
-  // Descender (tail)
-  {
-    type: 'path',
-    d: 'M22.676,12.175c.013,3.753.026,7.507.04,11.26,0,1.777-.27,3.373-.809,4.786-.539,1.413-1.289,2.608-2.251,3.584-.961.976-2.069,1.726-3.322,2.251-1.253.524-2.593.787-4.021.787-2.367,0-4.096-.686-4.436-.83-1.676-.713-2.815-1.717-3.474-2.404',
-    color: ANIMATED_LETTER_COLORS[0],
-    length: 38,
-    transform: 'translate(0, -13)',
+    d: 'M17.2,9c0,3.1,0,9.3,0,12.4,0,1.5-.2,2.8-.7,4s-1.1,2.2-1.9,3c-.8.8-1.7,1.4-2.8,1.9-1.1.4-2.2.7-3.4.7-2,0-3.4-.6-3.7-.7-1.4-.6-2.4-1.4-2.9-2',
+    color: ANIMATED_LETTER_COLORS[0], // #23ff00
+    length: 38, // visually estimated
+    transform: 'translate(0, -15)',
   },
 ];
 strokeMap.set('g', gStrokes);
