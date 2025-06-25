@@ -298,18 +298,21 @@ const mStrokes: Stroke[] = [
     y2: 17.268,
     color: ANIMATED_LETTER_COLORS[0],
     length: 16.017, // 17.268 - 1.251
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'path',
     d: 'M1.25,17.268V7.49c0-1.21.261-2.284.783-3.222.522-.938,1.237-1.675,2.144-2.212.908-.537,1.943-.806,3.108-.806,1.134,0,2.144.268,3.029.806.885.537,1.577,1.274,2.076,2.212.499.938.749,2.012.749,3.222v9.778',
     color: ANIMATED_LETTER_COLORS[0],
-    length: 38, // Approximate, matches pathLength1 in m.tsx
+    length: 45, // Approximate, matches pathLength1 in m.tsx
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'path',
     d: 'M13.139,17.268V7.49c0-1.21.261-2.284.783-3.222.522-.938,1.237-1.675,2.144-2.212.908-.537,1.943-.806,3.108-.806,1.134,0,2.144.268,3.029.806.885.537,1.577,1.274,2.076,2.212.499.938.749,2.012.749,3.222v9.778',
     color: ANIMATED_LETTER_COLORS[0],
-    length: 38, // Approximate, matches pathLength2 in m.tsx
+    length: 45, // Approximate, matches pathLength2 in m.tsx
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('m', mStrokes);
@@ -323,6 +326,7 @@ const Mstrokes: Stroke[] = [
     y2: 34.588,
     color: ANIMATED_LETTER_COLORS[0],
     length: 34.588 - 1.31,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -332,6 +336,7 @@ const Mstrokes: Stroke[] = [
     y2: 34.663,
     color: ANIMATED_LETTER_COLORS[1],
     length: Math.sqrt(Math.pow(15.933 - 1.25, 2) + Math.pow(34.663 - 1.31, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -343,6 +348,7 @@ const Mstrokes: Stroke[] = [
     length: Math.sqrt(
       Math.pow(30.767 - 16.083, 2) + Math.pow(1.25 - 34.603, 2)
     ),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -352,6 +358,7 @@ const Mstrokes: Stroke[] = [
     y2: 34.588,
     color: ANIMATED_LETTER_COLORS[1],
     length: 34.588 - 1.31,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('M', Mstrokes);
