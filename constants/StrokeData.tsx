@@ -37,7 +37,7 @@ const aStrokes: Stroke[] = [
     r: 7.964,
     color: ANIMATED_LETTER_COLORS[0],
     length: 2 * Math.PI * 7.964,
-    transform: `rotate(150 9.215 9.435) scale(-1 1) translate(-18.429 0)`,
+    transform: `rotate(150 9.215 9.435) scale(-1 1) translate(-15.3 0)`,
   },
   {
     type: 'line',
@@ -47,6 +47,7 @@ const aStrokes: Stroke[] = [
     y2: 17.399,
     color: ANIMATED_LETTER_COLORS[1],
     length: 16.149,
+    transform: `translate(2.9 -1.6)`,
   },
 ];
 strokeMap.set('a', aStrokes);
@@ -460,6 +461,7 @@ const Astrokes: Stroke[] = [
     y2: 34.708,
     color: ANIMATED_LETTER_COLORS[0],
     length: 36,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -469,6 +471,7 @@ const Astrokes: Stroke[] = [
     y2: 34.708,
     color: ANIMATED_LETTER_COLORS[1],
     length: 36,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -478,6 +481,7 @@ const Astrokes: Stroke[] = [
     y2: 23.383,
     color: ANIMATED_LETTER_COLORS[2],
     length: 17.642,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('A', Astrokes);
