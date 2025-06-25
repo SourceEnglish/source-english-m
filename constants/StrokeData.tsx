@@ -1304,6 +1304,7 @@ const uStrokes: Stroke[] = [
     d: 'M1.2,1.2v9.8c0,1.2.2,2.3.7,3.2.5.9,1.2,1.7,2.1,2.2.9.5,1.9.8,3,.8s2.2-.3,3.1-.8c.9-.5,1.6-1.3,2.1-2.2s.8-2,.8-3.2V1.2',
     color: ANIMATED_LETTER_COLORS[0],
     length: 36, // Approximate, matches pathLength in u.tsx
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1313,6 +1314,7 @@ const uStrokes: Stroke[] = [
     y2: 17.3,
     color: ANIMATED_LETTER_COLORS[0],
     length: 16.1,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('u', uStrokes);
