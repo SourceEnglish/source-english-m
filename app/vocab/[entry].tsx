@@ -99,27 +99,28 @@ export default function VocabEntryPage() {
     const word = vocabEntry.word || '';
     const upper = word.charAt(0);
     const lower = word.charAt(1);
+
     const descenderLetters = ['g', 'j', 'p', 'q', 'y'];
     const hasDescender = descenderLetters.includes(lower);
-    const lowerHeight = hasDescender ? 100 : 70;
-    const lowerTranslateY = hasDescender ? lowerHeight / 4 : 0;
-    containerMarginTop = hasDescender ? -lowerTranslateY : 0;
+
+    // Only apply lowering to the lowercase letter when shown with uppercase
+    const lowerTranslateY = hasDescender ? 100 / 3 : 0; // 1/3 lower than others
+    containerMarginTop = 0;
 
     AnimatedLetterComponent = () => (
       <View
         style={{
           flexDirection: 'row',
-          alignItems: 'flex-end',
-          minHeight: 100 + (hasDescender ? lowerHeight / 2 : 0),
-          gap: 16,
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
-        <View style={{ justifyContent: 'flex-end', alignItems: 'center' }}>
+        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
           {GetAnimatedLetter(upper)}
         </View>
         <View
           style={{
-            justifyContent: 'flex-end',
+            justifyContent: 'center',
             alignItems: 'center',
             transform: [{ translateY: lowerTranslateY }],
           }}
