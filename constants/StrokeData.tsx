@@ -930,28 +930,28 @@ const qStrokes: Stroke[] = [
     type: 'circle',
     cx: 11.963,
     cy: 12.175,
-    r: 7.964,
+    r: 8,
 
     color: ANIMATED_LETTER_COLORS[0],
     length:
       Math.PI *
       (3 * (10.713 + 10.925) -
         Math.sqrt((3 * 10.713 + 10.925) * (10.713 + 3 * 10.925))),
-    transform: 'scale(1 -1) translate(0 -8.5)',
+    transform: 'scale(1 -1) translate(0 -8.3)',
   },
   {
     type: 'path',
     d: 'M22.676,12.175V1.408',
     color: ANIMATED_LETTER_COLORS[0],
     length: 10.767,
-    transform: 'translate(-3 -13.5)',
+    transform: 'translate(-2.9 -13.3)',
   },
   {
     type: 'path',
     d: 'M22.656,11.975c.027,7.638.054,15.276.081,22.914',
     color: ANIMATED_LETTER_COLORS[0],
     length: 25,
-    transform: 'translate(-3 -13.5)',
+    transform: 'translate(-2.9 -13.3)',
   },
 ];
 strokeMap.set('q', qStrokes);
@@ -964,7 +964,7 @@ const Qstrokes: Stroke[] = [
     r: 16.636,
     color: ANIMATED_LETTER_COLORS[0],
     length: 2 * Math.PI * 16.636,
-    transform: 'scale(-1,1) translate(-35.773,0) rotate(-90 17.886 17.886)',
+    transform: 'scale(-1,1) translate(-35.773,-1.5) rotate(-90 17.886 17.886)',
   },
   {
     type: 'line',
@@ -976,6 +976,7 @@ const Qstrokes: Stroke[] = [
     length: Math.sqrt(
       Math.pow(31.599 - 18.923, 2) + Math.pow(34.522 - 21.846, 2)
     ),
+    transform: 'translate(0 -1.5)',
   },
 ];
 strokeMap.set('Q', Qstrokes);
