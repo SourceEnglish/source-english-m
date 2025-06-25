@@ -205,6 +205,7 @@ const iStrokes: Stroke[] = [
     y2: 23.267,
     color: ANIMATED_LETTER_COLORS[0],
     length: 23.267 - 6.65,
+    transform: 'translate(1 -1.5 )', // Adjust to match vertical position
   },
   {
     type: 'circle',
@@ -213,6 +214,7 @@ const iStrokes: Stroke[] = [
     r: 0.8,
     color: ANIMATED_LETTER_COLORS[1],
     length: 2 * Math.PI * 0.8,
+    transform: 'translate(1 -1.5 )', // Adjust to match vertical position
   },
 ];
 strokeMap.set('i', iStrokes);
@@ -674,6 +676,7 @@ const Istrokes: Stroke[] = [
     y2: 34.625,
     color: ANIMATED_LETTER_COLORS[0],
     length: 33.375,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
