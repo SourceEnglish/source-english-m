@@ -154,7 +154,7 @@ const gStrokes: Stroke[] = [
       Math.PI *
       (3 * (10.713 + 10.925) -
         Math.sqrt((3 * 10.713 + 10.925) * (10.713 + 3 * 10.925))),
-    transform: 'rotate(180) scale(-1 1) translate(0 -14.35)',
+    transform: 'rotate(180) scale(-1 1) translate(0 -11.35)',
   },
   // Ascender (top vertical)
   {
@@ -162,7 +162,7 @@ const gStrokes: Stroke[] = [
     d: 'M22.716,12.175V1.408',
     color: ANIMATED_LETTER_COLORS[0],
     length: 10.767,
-    transform: 'translate(0, -10)',
+    transform: 'translate(0, -13)',
   },
   // Descender (tail)
   {
@@ -170,7 +170,7 @@ const gStrokes: Stroke[] = [
     d: 'M22.676,12.175c.013,3.753.026,7.507.04,11.26,0,1.777-.27,3.373-.809,4.786-.539,1.413-1.289,2.608-2.251,3.584-.961.976-2.069,1.726-3.322,2.251-1.253.524-2.593.787-4.021.787-2.367,0-4.096-.686-4.436-.83-1.676-.713-2.815-1.717-3.474-2.404',
     color: ANIMATED_LETTER_COLORS[0],
     length: 38,
-    transform: 'translate(0, -10)',
+    transform: 'translate(0, -13)',
   },
 ];
 strokeMap.set('g', gStrokes);
