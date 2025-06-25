@@ -130,7 +130,7 @@ const fStrokes: Stroke[] = [
     d: 'M15.299,3.135c-.419-.568-.963-1.025-1.639-1.369s-1.549-.516-2.626-.516c-.928,0-1.751.187-2.469.561-.718.374-1.272.973-1.661,1.796-.389.823-.584,1.893-.584,3.21v28.102',
     color: ANIMATED_LETTER_COLORS[0],
     length: 60,
-    transform: 'translate(0, -20)',
+    transform: 'translate(0, -23.7)',
   },
   {
     type: 'line',
@@ -140,7 +140,7 @@ const fStrokes: Stroke[] = [
     y2: 12.338,
     color: ANIMATED_LETTER_COLORS[1],
     length: 13.013,
-    transform: 'translate(0, -20)',
+    transform: 'translate(0, -23.7)',
   },
 ];
 strokeMap.set('f', fStrokes);
@@ -595,18 +595,19 @@ const Fstrokes: Stroke[] = [
   {
     type: 'line',
     x1: 1.25,
-    y1: 1.25,
+    y1: 0,
     x2: 1.25,
-    y2: 34.625,
+    y2: 35,
     color: ANIMATED_LETTER_COLORS[0],
     length: 33.375,
+    transform: 'translate(0, .25)',
   },
   {
     type: 'line',
     x1: 1.25,
-    y1: 1.25,
+    y1: 0,
     x2: 22.5,
-    y2: 1.25,
+    y2: 0,
     color: ANIMATED_LETTER_COLORS[1],
     length: 21.25,
   },
@@ -618,6 +619,7 @@ const Fstrokes: Stroke[] = [
     y2: 17.937,
     color: ANIMATED_LETTER_COLORS[2],
     length: 16.25,
+    transform: 'translate(0, -1)',
   },
 ];
 strokeMap.set('F', Fstrokes);
