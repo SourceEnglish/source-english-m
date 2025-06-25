@@ -187,6 +187,7 @@ export default function AnimatedLetter({
                   stroke="#e0e0e0"
                   strokeWidth={stroke.strokeWidth ?? 2.5}
                   strokeLinecap={stroke.strokeLinecap ?? 'round'}
+                  strokeLinejoin="round"
                   strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
                   strokeDasharray={stroke.length}
                   fill="none"
@@ -244,6 +245,7 @@ export default function AnimatedLetter({
                   stroke={stroke.color}
                   strokeWidth={stroke.strokeWidth ?? 2.5}
                   strokeLinecap={stroke.strokeLinecap ?? 'round'}
+                  strokeLinejoin="round"
                   strokeMiterlimit={stroke.strokeMiterlimit ?? 10}
                   strokeDasharray={stroke.length}
                   animatedProps={animatedPropsArr[i]}
