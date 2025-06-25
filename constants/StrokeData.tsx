@@ -418,21 +418,21 @@ strokeMap.set('X', Xstrokes);
 const yStrokes: Stroke[] = [
   {
     type: 'line',
-    x2: 11.721,
-    y2: 17,
-    x1: 1.25,
-    y1: 1.25,
+    x2: 8.825,
+    y2: 16.942,
+    x1: 1.92,
+    y1: 1.327,
     color: ANIMATED_LETTER_COLORS[0],
-    length: Math.sqrt(Math.pow(11.721 - 1.25, 2) + Math.pow(18.815 - 1.25, 2)),
+    length: Math.sqrt(Math.pow(8.825 - 1.92, 2) + Math.pow(16.942 - 1.327, 2)),
   },
   {
     type: 'line',
-    x1: 22.365,
+    x2: 1.25,
+    y2: 34.334,
+    x1: 15.88,
     y1: 1.25,
-    x2: 2.365,
-    y2: 33,
     color: ANIMATED_LETTER_COLORS[1],
-    length: Math.sqrt(Math.pow(22.266 - 2.365, 2) + Math.pow(1.25 - 34.635, 2)),
+    length: Math.sqrt(Math.pow(15.88 - 1.25, 2) + Math.pow(1.25 - 34.334, 2)),
   },
 ];
 strokeMap.set('y', yStrokes);

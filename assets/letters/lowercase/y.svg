@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="g" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.119 36.077">
+<svg id="g" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.13 35.584">
   <defs>
     <style>
       .cls-1 {
         fill: none;
-        stroke: #a25fff;
+        stroke: #2c1fff;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 2.5px;
       }
     </style>
   </defs>
-  <line id="_1" data-name="1" class="cls-1" x1="1.25" y1="1.25" x2="13.56" y2="19.636"/>
-  <line id="_2" data-name="2" class="cls-1" x1="25.869" y1="1.25" x2="3.389" y2="34.827"/>
+  <line id="_2" data-name=" 2" class="cls-1" x1="1.25" y1="34.334" x2="15.88" y2="1.25"/>
+  <line id="_1" data-name=" 1" class="cls-1" x1="8.825" y1="16.942" x2="1.92" y2="1.327"/>
 </svg>
