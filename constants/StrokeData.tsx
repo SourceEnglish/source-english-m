@@ -34,7 +34,7 @@ const aStrokes: Stroke[] = [
     type: 'circle',
     cx: 9.215,
     cy: 9.435,
-    r: 7.964,
+    r: 8,
     color: ANIMATED_LETTER_COLORS[0],
     length: 2 * Math.PI * 7.964,
     transform: `rotate(150 9.215 9.435) scale(-1 1) translate(-15.3 0)`,
