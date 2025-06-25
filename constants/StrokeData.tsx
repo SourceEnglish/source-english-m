@@ -140,7 +140,7 @@ const fStrokes: Stroke[] = [
     y2: 12.338,
     color: ANIMATED_LETTER_COLORS[1],
     length: 13.013,
-    transform: 'translate(0, -23.7)',
+    transform: 'translate(0, -18.5)',
   },
 ];
 strokeMap.set('f', fStrokes);
