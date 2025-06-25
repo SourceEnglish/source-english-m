@@ -283,6 +283,7 @@ const lStrokes: Stroke[] = [
     y2: 34.612,
     color: ANIMATED_LETTER_COLORS[0],
     length: 34.612 - 1.25,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('l', lStrokes);
@@ -770,6 +771,7 @@ const Lstrokes: Stroke[] = [
     y2: 34.612,
     color: ANIMATED_LETTER_COLORS[0],
     length: 34.612 - 1.25,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -779,6 +781,7 @@ const Lstrokes: Stroke[] = [
     y2: 34.573,
     color: ANIMATED_LETTER_COLORS[0],
     length: 16.93 - 1.264,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('L', Lstrokes);
