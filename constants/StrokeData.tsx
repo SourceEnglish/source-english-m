@@ -376,6 +376,7 @@ const xStrokes: Stroke[] = [
     length: Math.sqrt(
       Math.pow(13.904 - 1.511, 2) + Math.pow(17.307 - 1.269, 2)
     ),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -385,6 +386,7 @@ const xStrokes: Stroke[] = [
     y2: 17.288,
     color: ANIMATED_LETTER_COLORS[1],
     length: Math.sqrt(Math.pow(13.643 - 1.25, 2) + Math.pow(17.288 - 1.25, 2)),
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('x', xStrokes);
@@ -398,6 +400,7 @@ const Xstrokes: Stroke[] = [
     y2: 34.6,
     color: ANIMATED_LETTER_COLORS[0],
     length: Math.sqrt(Math.pow(24.6 - 1.2, 2) + Math.pow(34.6 - 1.2, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -407,6 +410,7 @@ const Xstrokes: Stroke[] = [
     y2: 34.6,
     color: ANIMATED_LETTER_COLORS[1],
     length: Math.sqrt(Math.pow(24.6 - 1.2, 2) + Math.pow(34.6 - 1.2, 2)),
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('X', Xstrokes);
