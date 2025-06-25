@@ -97,17 +97,17 @@ const dStrokes: Stroke[] = [
     y2: 34.815,
     color: ANIMATED_LETTER_COLORS[0],
     length: 33.565,
-    transform: 'translate(8 0)',
+    transform: 'translate(10   -1.25)',
   },
   {
     type: 'circle',
     cx: 9.215,
     cy: 26.852,
-    r: 7.964,
+    r: 8,
     color: ANIMATED_LETTER_COLORS[1],
     length: 2 * Math.PI * 7.964,
 
-    transform: 'rotate(150 9.215 26.852) scale(-1 1) translate(-18.429 0)',
+    transform: 'rotate(150 9.215 26.852) scale(-1 1) translate(-15.8 0)',
   },
 ];
 strokeMap.set('d', dStrokes);
@@ -535,12 +535,14 @@ const Dstrokes: Stroke[] = [
     y2: 34.749,
     color: ANIMATED_LETTER_COLORS[0],
     length: 33.375,
+    transform: 'translate(0, -1.4)',
   },
   {
     type: 'path',
     d: 'M1.25,1.25h11.843c2.046,0,4.004.416,5.874,1.247,1.87.831,3.532,1.998,4.987,3.5s2.605,3.276,3.452,5.322c.847,2.046,1.271,4.283,1.271,6.713,0,2.397-.424,4.619-1.271,6.665-.847,2.046-1.998,3.828-3.452,5.346-1.454,1.518-3.117,2.693-4.987,3.524-1.87.831-3.828,1.247-5.874,1.247H1.25',
     color: ANIMATED_LETTER_COLORS[1],
     length: 80,
+    transform: 'translate(0, -1.4)',
   },
 ];
 strokeMap.set('D', Dstrokes);
