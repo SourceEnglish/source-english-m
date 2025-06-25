@@ -226,7 +226,7 @@ const jStrokes: Stroke[] = [
     d: 'M10.522,6.65v23.217c0,.946-.146,1.788-.438,2.525-.292.737-.779,1.315-1.461,1.732s-1.607.626-2.776.626h-.71c-.93,0-1.847-.692-2.004-.802-2.246-1.587-1.857-4.99-1.857-5.032',
     color: ANIMATED_LETTER_COLORS[0],
     length: 40, // Approximate, for strokeDasharray
-    transform: 'translate(0, -35)',
+    transform: 'translate(0, -36)',
   },
   {
     type: 'circle',
@@ -235,7 +235,7 @@ const jStrokes: Stroke[] = [
     r: 0.8,
     color: ANIMATED_LETTER_COLORS[1],
     length: 2 * Math.PI * 0.8,
-    transform: 'translate(0, -35)',
+    transform: 'translate(0, -36)',
   },
 ];
 strokeMap.set('j', jStrokes);
@@ -686,6 +686,7 @@ const Istrokes: Stroke[] = [
     y2: 1.25,
     color: ANIMATED_LETTER_COLORS[1],
     length: 14.833,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -695,6 +696,7 @@ const Istrokes: Stroke[] = [
     y2: 34.625,
     color: ANIMATED_LETTER_COLORS[2],
     length: 14.833,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('I', Istrokes);
