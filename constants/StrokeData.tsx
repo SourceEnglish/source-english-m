@@ -418,21 +418,21 @@ strokeMap.set('X', Xstrokes);
 const yStrokes: Stroke[] = [
   {
     type: 'line',
+    x2: 11.721,
+    y2: 17,
     x1: 1.25,
     y1: 1.25,
-    x2: 13.56,
-    y2: 19.636,
     color: ANIMATED_LETTER_COLORS[0],
-    length: Math.sqrt(Math.pow(13.56 - 1.25, 2) + Math.pow(19.636 - 1.25, 2)),
+    length: Math.sqrt(Math.pow(11.721 - 1.25, 2) + Math.pow(18.815 - 1.25, 2)),
   },
   {
     type: 'line',
-    x1: 25.869,
+    x1: 22.365,
     y1: 1.25,
-    x2: 3.389,
-    y2: 34.827,
+    x2: 2.365,
+    y2: 33,
     color: ANIMATED_LETTER_COLORS[1],
-    length: Math.sqrt(Math.pow(25.869 - 3.389, 2) + Math.pow(1.25 - 34.827, 2)),
+    length: Math.sqrt(Math.pow(22.266 - 2.365, 2) + Math.pow(1.25 - 34.635, 2)),
   },
 ];
 strokeMap.set('y', yStrokes);
@@ -1238,6 +1238,7 @@ const Ystrokes: Stroke[] = [
     y2: 18.745,
     color: ANIMATED_LETTER_COLORS[0],
     length: Math.sqrt(Math.pow(13.7 - 1.25, 2) + Math.pow(18.745 - 1.25, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1247,6 +1248,7 @@ const Ystrokes: Stroke[] = [
     y2: 18.745,
     color: ANIMATED_LETTER_COLORS[1],
     length: Math.sqrt(Math.pow(26.15 - 13.7, 2) + Math.pow(1.25 - 18.745, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1256,6 +1258,7 @@ const Ystrokes: Stroke[] = [
     y2: 34.578,
     color: ANIMATED_LETTER_COLORS[1],
     length: 34.578 - 18.745,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('Y', Ystrokes);
