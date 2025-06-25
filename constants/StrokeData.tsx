@@ -803,12 +803,14 @@ const nStrokes: Stroke[] = [
     y2: 17.267,
     color: ANIMATED_LETTER_COLORS[0],
     length: 32, // Approximate, matches lineLength in n.tsx
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'path',
     d: 'M1.25,17.267V7.489c0-1.21.261-2.284.783-3.222.522-.938,1.237-1.675,2.144-2.212.908-.537,1.943-.806,3.108-.806,1.134,0,2.144.268,3.029.806.885.537,1.577,1.274,2.076,2.212.499.938.749,2.012.749,3.222v9.778',
     color: ANIMATED_LETTER_COLORS[0],
     length: 42, // Approximate, matches pathLength in n.tsx
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('n', nStrokes);
@@ -822,6 +824,7 @@ const Nstrokes: Stroke[] = [
     y2: 34.576,
     color: ANIMATED_LETTER_COLORS[0],
     length: 34.576 - 1.25,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -831,6 +834,7 @@ const Nstrokes: Stroke[] = [
     y2: 34.576,
     color: ANIMATED_LETTER_COLORS[1],
     length: Math.sqrt(Math.pow(26.972 - 1.25, 2) + Math.pow(34.576 - 1.25, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -840,6 +844,7 @@ const Nstrokes: Stroke[] = [
     y2: 1.25,
     color: ANIMATED_LETTER_COLORS[1],
     length: 34.576 - 1.25,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('N', Nstrokes);
