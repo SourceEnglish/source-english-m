@@ -662,7 +662,7 @@ const Hstrokes: Stroke[] = [
     x2: 1.25,
     y2: 34.667,
     color: ANIMATED_LETTER_COLORS[0],
-    length: 33.417,
+    length: 34,
   },
   {
     type: 'line',
@@ -671,7 +671,7 @@ const Hstrokes: Stroke[] = [
     x2: 24.948,
     y2: 34.667,
     color: ANIMATED_LETTER_COLORS[1],
-    length: 33.417,
+    length: 34,
   },
   {
     type: 'line',
