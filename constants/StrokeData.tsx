@@ -856,10 +856,10 @@ const oStrokes: Stroke[] = [
     type: 'circle',
     cx: 9.215,
     cy: 9.215,
-    r: 7.964,
+    r: 8,
     color: ANIMATED_LETTER_COLORS[0],
     length: 2 * Math.PI * 7.964,
-    transform: 'rotate(-90 9.215 9.215) scale(1 -1) translate(-2, -18.429)',
+    transform: 'rotate(-90 9.215 9.215) scale(1 -1) translate(1.5, -18.429)',
   },
 ];
 strokeMap.set('o', oStrokes);
@@ -869,10 +869,10 @@ const Ostrokes: Stroke[] = [
     type: 'circle',
     cx: 17.886,
     cy: 17.886,
-    r: 16.636,
+    r: 16.8,
     color: ANIMATED_LETTER_COLORS[0],
     length: 2 * Math.PI * 16.636,
-    transform: 'scale(-1,1) translate(-35.773,0) rotate(-90 17.886 17.886)',
+    transform: 'scale(-1,1) translate(-38 -1.5) rotate(-90 17.886 17.886)',
   },
 ];
 strokeMap.set('O', Ostrokes);
