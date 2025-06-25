@@ -249,6 +249,7 @@ const kStrokes: Stroke[] = [
     y2: 34.667,
     color: ANIMATED_LETTER_COLORS[0],
     length: 34.667 - 1.25,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -258,6 +259,7 @@ const kStrokes: Stroke[] = [
     y2: 26.255,
     color: ANIMATED_LETTER_COLORS[1],
     length: Math.sqrt(Math.pow(11.2 - 1.32, 2) + Math.pow(26.255 - 17.946, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -267,6 +269,7 @@ const kStrokes: Stroke[] = [
     y2: 34.583,
     color: ANIMATED_LETTER_COLORS[2],
     length: Math.sqrt(Math.pow(11.2 - 1.32, 2) + Math.pow(34.583 - 26.275, 2)),
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('k', kStrokes);
@@ -731,6 +734,7 @@ const Kstrokes: Stroke[] = [
     y2: 34.625,
     color: ANIMATED_LETTER_COLORS[0],
     length: 34.625 - 1.292,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -740,6 +744,7 @@ const Kstrokes: Stroke[] = [
     y2: 17.917,
     color: ANIMATED_LETTER_COLORS[1],
     length: Math.sqrt(Math.pow(19.002 - 1.339, 2) + Math.pow(17.917 - 1.25, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -751,6 +756,7 @@ const Kstrokes: Stroke[] = [
     length: Math.sqrt(
       Math.pow(19.002 - 1.339, 2) + Math.pow(34.625 - 17.958, 2)
     ),
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('K', Kstrokes);
