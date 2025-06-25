@@ -1092,6 +1092,7 @@ const vStrokes: Stroke[] = [
     y2: 16.942,
     color: ANIMATED_LETTER_COLORS[0],
     length: Math.sqrt(Math.pow(8.155 - 1.25, 2) + Math.pow(16.942 - 1.327, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1101,6 +1102,7 @@ const vStrokes: Stroke[] = [
     y2: 1.25,
     color: ANIMATED_LETTER_COLORS[0],
     length: Math.sqrt(Math.pow(15.21 - 8.305, 2) + Math.pow(1.25 - 16.865, 2)),
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('v', vStrokes);
@@ -1114,6 +1116,7 @@ const Vstrokes: Stroke[] = [
     y2: 34.7,
     color: ANIMATED_LETTER_COLORS[0],
     length: Math.sqrt(Math.pow(14.3 - 1.2, 2) + Math.pow(34.7 - 1.2, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1123,6 +1126,7 @@ const Vstrokes: Stroke[] = [
     y2: 1.3,
     color: ANIMATED_LETTER_COLORS[0],
     length: Math.sqrt(Math.pow(27.4 - 14.4, 2) + Math.pow(34.7 - 1.3, 2)),
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('V', Vstrokes);
