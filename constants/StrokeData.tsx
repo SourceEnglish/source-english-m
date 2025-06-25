@@ -990,12 +990,14 @@ const Rstrokes: Stroke[] = [
     y2: 34.625,
     color: ANIMATED_LETTER_COLORS[0],
     length: 33.375,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'path',
     d: 'M1.543,1.25h12.414c2.544,0,4.553,0.721,6.029,2.162,1.475,1.442,2.213,3.197,2.213,5.266,0,1.458-.382,2.781-1.145,3.968-.763,1.187-1.781,2.128-3.053,2.824-1.272,0.695-2.671,1.043-4.197,1.043H1.543',
     color: ANIMATED_LETTER_COLORS[1],
     length: 60,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1005,6 +1007,7 @@ const Rstrokes: Stroke[] = [
     y2: 34.451,
     color: ANIMATED_LETTER_COLORS[1],
     length: 30,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('R', Rstrokes);
@@ -1277,12 +1280,14 @@ const rStrokes: Stroke[] = [
     y2: 16.883,
     color: ANIMATED_LETTER_COLORS[0],
     length: 15.633,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'path',
     d: 'M1.25,5.962c.538-.98,1.194-1.869,1.968-2.665.774-.796,1.62-1.374,2.539-1.733.919-.359,1.838-.356,2.758.009.313.124.59.27.831.439.242.168.448.359.619.571',
     color: ANIMATED_LETTER_COLORS[0],
     length: 12,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('r', rStrokes);
