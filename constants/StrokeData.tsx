@@ -446,6 +446,7 @@ const zStrokes: Stroke[] = [
     y2: 1.25,
     color: ANIMATED_LETTER_COLORS[0],
     length: 12.211 - 1.25,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -455,6 +456,7 @@ const zStrokes: Stroke[] = [
     y2: 16.808,
     color: ANIMATED_LETTER_COLORS[0],
     length: Math.sqrt(Math.pow(12.211 - 1.25, 2) + Math.pow(16.808 - 1.25, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -464,6 +466,7 @@ const zStrokes: Stroke[] = [
     y2: 16.808,
     color: ANIMATED_LETTER_COLORS[0],
     length: 12.406 - 1.25,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('z', zStrokes);
@@ -1272,6 +1275,7 @@ const Zstrokes: Stroke[] = [
     y2: 1.25,
     color: ANIMATED_LETTER_COLORS[0],
     length: 26.181 - 2.597,
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1281,6 +1285,7 @@ const Zstrokes: Stroke[] = [
     y2: 34.683,
     color: ANIMATED_LETTER_COLORS[0],
     length: Math.sqrt(Math.pow(26.181 - 1.25, 2) + Math.pow(34.683 - 1.25, 2)),
+    transform: 'translate(0, -1.5)',
   },
   {
     type: 'line',
@@ -1290,6 +1295,7 @@ const Zstrokes: Stroke[] = [
     y2: 34.683,
     color: ANIMATED_LETTER_COLORS[0],
     length: 26.181 - 1.25,
+    transform: 'translate(0, -1.5)',
   },
 ];
 strokeMap.set('Z', Zstrokes);
