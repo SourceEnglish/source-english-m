@@ -83,7 +83,7 @@ const cStrokes: Stroke[] = [
     color: ANIMATED_LETTER_COLORS[0],
     length: 37,
     // This path is flipped vertically so it starts at the bottom of the viewBox
-    transform: 'scale(1,-1) translate(0,-36)',
+    transform: 'scale(1,-1) translate(0,-36.5)',
   },
 ];
 strokeMap.set('c', cStrokes);
@@ -521,7 +521,7 @@ const Cstrokes: Stroke[] = [
     d: 'M29.691,29.615c-3.122,3.142-7.373,4.911-11.803,4.911-9.127,0-16.638-7.511-16.638-16.638S8.761,1.25,17.888,1.25c4.259,0,8.36,1.635,11.45,4.567',
     color: ANIMATED_LETTER_COLORS[0],
     length: 77,
-    transform: 'scale(1, -1) translate(0, -35)',
+    transform: 'scale(1, -1) translate(0, -35.75)',
   },
 ];
 strokeMap.set('C', Cstrokes);
