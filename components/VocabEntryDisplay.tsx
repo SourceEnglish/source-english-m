@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     width: '100%',
     alignSelf: 'center',
     maxWidth: 400,
-    minHeight: 300,
+    minHeight: 350,
   },
   iconContainer: {
     marginBottom: 16,
