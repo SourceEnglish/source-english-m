@@ -68,7 +68,7 @@ const ExampleSentences: React.FC<ExampleSentencesProps> = ({ examples }) => {
   );
 };
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     width: '100%',
     maxWidth: CENTERED_MAX_WIDTH,
