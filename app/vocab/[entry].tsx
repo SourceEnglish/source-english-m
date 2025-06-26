@@ -280,6 +280,8 @@ export default function VocabEntryPage() {
               width: 48,
               alignItems: 'center',
               justifyContent: 'center',
+              height: '100%',
+              marginHorizontal: 4,
             }}
           >
             {prevEntry ? (
@@ -297,6 +299,8 @@ export default function VocabEntryPage() {
                   borderWidth: 1,
                   borderColor: '#000000',
                   borderRadius: 8,
+                  height: '100%',
+                  justifyContent: 'center',
                   backgroundColor: '#f0f0f0',
                 }}
               >
@@ -323,7 +327,9 @@ export default function VocabEntryPage() {
             style={{
               width: 48,
               alignItems: 'center',
+              height: '100%',
               justifyContent: 'center',
+              marginHorizontal: 4,
             }}
           >
             {nextEntry ? (
@@ -341,7 +347,9 @@ export default function VocabEntryPage() {
                   borderWidth: 1,
                   borderColor: '#888',
                   borderRadius: 8,
+                  height: '100%',
                   backgroundColor: '#f0f0f0',
+                  justifyContent: 'center',
                 }}
               >
                 <ChevronRight width={32} height={32} />
