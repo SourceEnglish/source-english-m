@@ -2,6 +2,7 @@ import React from 'react';
 import ReadableText from './ReadableText';
 import { View, StyleSheet, useWindowDimensions } from 'react-native';
 import { CENTERED_MAX_WIDTH } from '@/constants/constants';
+import VocabularySection from './VocabularySection';
 
 interface ExampleSentencesProps {
   examples?: string[];
@@ -16,21 +17,7 @@ const ExampleSentences: React.FC<ExampleSentencesProps> = ({ examples }) => {
   }
 
   return (
-    <View style={styles.container}>
-      <View style={[styles.inner, { alignItems: 'flex-start' }]}>
-        <ReadableText
-          text="Example Sentences"
-          style={{
-            fontWeight: 'bold',
-            marginBottom: 4,
-            fontSize: isMobile ? 16 : 22,
-            color: '#333',
-            // width intentionally omitted
-            textAlign: 'left',
-            alignSelf: 'flex-start',
-          }}
-        />
-      </View>
+    <VocabularySection headerText="Example Sentences">
       <View
         style={{
           width: '100%',
@@ -39,14 +26,7 @@ const ExampleSentences: React.FC<ExampleSentencesProps> = ({ examples }) => {
           marginVertical: 8,
         }}
       >
-        <View
-          style={{
-            borderBottomColor: 'gray',
-            borderBottomWidth: 2,
-            width: '100%',
-            minWidth: '100%',
-          }}
-        />
+        {/* Divider is now handled by VocabularySection */}
       </View>
       <View style={[styles.inner, { alignItems: 'flex-start' }]}>
         {examples.map((ex: string, idx: number) => (
@@ -64,7 +44,7 @@ const ExampleSentences: React.FC<ExampleSentencesProps> = ({ examples }) => {
           </View>
         ))}
       </View>
-    </View>
+    </VocabularySection>
   );
 };
 

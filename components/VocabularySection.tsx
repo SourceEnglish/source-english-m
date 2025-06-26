@@ -1,16 +1,18 @@
 import React from 'react';
 import { View, StyleSheet, useWindowDimensions } from 'react-native';
 import ReadableText from './ReadableText';
-import { styles as exampleStyles } from '@/components/ExampleSentences';
+import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 
 type VocabularySectionProps = {
   children?: React.ReactNode;
   headerText?: string;
+  hasDivider?: boolean;
 };
 
 export default function VocabularySection({
   children,
   headerText,
+  hasDivider = true,
 }: VocabularySectionProps) {
   const { width: screenWidth } = useWindowDimensions();
   const isMobile = screenWidth <= 768;
@@ -42,7 +44,7 @@ export default function VocabularySection({
         <View
           style={{
             borderBottomColor: 'gray',
-            borderBottomWidth: 2,
+            borderBottomWidth: hasDivider ? 2 : 0,
             width: '100%',
             minWidth: '100%',
           }}
@@ -52,3 +54,19 @@ export default function VocabularySection({
     </View>
   );
 }
+export const exampleStyles = StyleSheet.create({
+  container: {
+    width: '100%',
+    maxWidth: CENTERED_MAX_WIDTH,
+    alignSelf: 'center',
+    marginBottom: 12,
+    backgroundColor: '#f5f5f5',
+    borderRadius: 8,
+    padding: 12,
+  },
+  inner: {
+    maxWidth: 700,
+    width: '100%',
+    alignSelf: 'flex-start',
+  },
+});

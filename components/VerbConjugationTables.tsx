@@ -7,6 +7,7 @@ import {
   Dimensions,
 } from 'react-native';
 import ReadableText from './ReadableText';
+import VocabularySection from './VocabularySection';
 
 type Subject =
   | 'I'
@@ -287,38 +288,7 @@ export const VerbConjugationTables: React.FC<VerbConjugationTablesProps> = ({
   };
 
   return (
-    <View style={[styles.verbConjugationTables, styles.sectionContainer]}>
-      {/* Section header and hr, copied from ExampleSentences */}
-      <View style={[styles.headerContainer, { alignItems: 'flex-start' }]}>
-        <ReadableText
-          text="Verb Conjugation"
-          style={{
-            fontWeight: 'bold',
-            marginBottom: 4,
-            fontSize: isMobile ? 16 : 22,
-            color: '#333',
-            textAlign: 'left',
-            alignSelf: 'flex-start',
-          }}
-        />
-      </View>
-      <View
-        style={{
-          width: '100%',
-          minWidth: '100%',
-          alignSelf: 'stretch',
-          marginVertical: 8,
-        }}
-      >
-        <View
-          style={{
-            borderBottomColor: 'gray',
-            borderBottomWidth: 2,
-            width: '100%',
-            minWidth: '100%',
-          }}
-        />
-      </View>
+    <VocabularySection headerText="Verb Conjugation" hasDivider={false}>
       {/* Scrollable row with dark background and borders */}
       <View style={styles.scrollableRowOuter}>
         <ScrollView
@@ -355,7 +325,7 @@ export const VerbConjugationTables: React.FC<VerbConjugationTablesProps> = ({
           <Table title="Present Continuous" rows={presentContinuousRows} />
         </View>
       </View>
-    </View>
+    </VocabularySection>
   );
 };
 
