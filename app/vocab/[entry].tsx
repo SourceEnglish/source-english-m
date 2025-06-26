@@ -21,6 +21,7 @@ import { useSpeech } from '@/contexts/SpeechContext';
 import VerbConjugationTables from '@/components/VerbConjugationTables';
 import Svg, { Line, G } from 'react-native-svg';
 import LetterFormation from '@/components/LetterFormation';
+import VocabularySection from '@/components/VocabularySection';
 
 export function generateStaticParams() {
   return vocabularyData.map((entry: any) => {
@@ -399,13 +400,19 @@ export default function VocabEntryPage() {
       </View>
       {/* Animated letter drawing at the very bottom (only for letters) */}
       {AnimatedLetterComponent && (
-        <LetterFormation isNumber={vocabEntry.__pos === 'number'}>
+        <VocabularySection
+          headerText={
+            vocabEntry.__pos === 'number'
+              ? 'Number Formation'
+              : 'Letter Formation'
+          }
+        >
           {AnimatedLetterComponent && (
             <View
               style={{
                 alignItems: 'center',
-                marginTop: 24 + containerMarginTop,
-                marginBottom: 32,
+                marginTop: 0 + containerMarginTop,
+
                 minHeight: 100,
                 flexDirection: 'row',
                 justifyContent: 'center',
@@ -414,7 +421,7 @@ export default function VocabEntryPage() {
               <AnimatedLetterComponent />
             </View>
           )}
-        </LetterFormation>
+        </VocabularySection>
       )}
     </ScrollView>
   );
