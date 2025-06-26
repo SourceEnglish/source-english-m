@@ -540,12 +540,17 @@ const Astrokes: Stroke[] = [
   },
   {
     type: 'line',
-    x1: 5.763,
-    y1: 23.383,
-    x2: 23.405,
-    y2: 23.383,
+    // Calculate the center y between the two diagonal endpoints
+    // (y2 of first line + y2 of second line) / 2 = (34.708 + 34.708) / 2 = 34.708
+    // But to center vertically, use (1.25 + 34.708) / 2 = 17.979
+    // However, for a typical A, the crossbar is usually at about 60% down from the top
+    // Let's use y = 20 for a visually centered crossbar
+    x1: 7,
+    y1: 20,
+    x2: 22.3,
+    y2: 20,
     color: ANIMATED_LETTER_COLORS[2],
-    length: 17.642,
+    length: 22.7 - 6.5,
     transform: 'translate(0, -1.5)',
   },
 ];
