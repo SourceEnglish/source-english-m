@@ -16,8 +16,8 @@
     }
   },
   {
-    "multigraphs": {
-      "name": "multigraphs",
+    "digraphs": {
+      "name": "digraphs",
       "__tags": ["multigraphs"],
       "__type": "vocabulary",
       "__order": 3
