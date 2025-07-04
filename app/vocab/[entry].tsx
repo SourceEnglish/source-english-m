@@ -12,6 +12,7 @@ import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import VocabEntryDisplay from '@/components/VocabEntryDisplay';
 import Notes from '@/components/Notes';
 import ExampleSentences from '@/components/ExampleSentences';
+import ExampleWord from '@/components/ExampleWord';
 import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 import { useDeck } from '@/contexts/DeckContext';
 import ChevronLeft from '@/assets/icons/open_source/chevron-left.svg';
@@ -110,6 +111,7 @@ export default function VocabEntryPage() {
     'eight',
     'nine',
   ];
+  // Only show animated formation for letter or number, not multigraph
   if (
     vocabEntry.__pos === 'letter' ||
     (vocabEntry.__pos === 'number' && numbers.includes(vocabEntry.word))
@@ -368,7 +370,7 @@ export default function VocabEntryPage() {
           marginBottom: 24,
         }}
       >
-        {/* Example sentences in their own view, styled to match Notes width */}
+        {/* Example sentences or words in their own view, styled to match Notes width */}
         <View
           style={{
             width: '100%',
@@ -376,11 +378,20 @@ export default function VocabEntryPage() {
             alignSelf: 'center',
           }}
         >
-          <ExampleSentences
-            examples={
-              'examples' in vocabEntry ? (vocabEntry as any).examples : []
-            }
-          />
+          {vocabEntry.__pos === 'multigraph' ? (
+            <ExampleWord
+              examples={
+                'examples' in vocabEntry ? (vocabEntry as any).examples : []
+              }
+              highlight={vocabEntry.word}
+            />
+          ) : (
+            <ExampleSentences
+              examples={
+                'examples' in vocabEntry ? (vocabEntry as any).examples : []
+              }
+            />
+          )}
         </View>
         {/* Verb conjugation tables for verbs, below example sentences */}
         <View

@@ -13,6 +13,7 @@ interface VocabEntryDisplayProps {
     __count?: string;
     __forced_pronunciation?: string;
     __vowel?: boolean;
+    __ipa?: string;
     __consonant?: boolean;
     examples?: string[];
     conjugation?: any; // Add this line to allow conjugation property
@@ -29,6 +30,9 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
     __vowel,
     __consonant,
     __show_word = true,
+    __icon_text,
+    examples,
+    __tags,
   } = entry as any;
   let borderColor = posColors[__pos] || '#000';
   let borderLeftColor = posColors[__pos] || '#000';
@@ -37,7 +41,6 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
   const screenWidth = Dimensions.get('window').width;
   const isMobile = screenWidth <= 768;
   const Icon = getIconForEntry(entry);
-  const { examples } = entry as any;
 
   // Special border color for letters: vowel/consonant
   if (__pos === 'letter') {
@@ -54,6 +57,13 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
       borderLeftColor = borderColor;
       borderTopColor = borderColor;
     }
+  }
+
+  // Special color for multigraphs
+  if (__pos === 'multigraph') {
+    borderColor = posColors['multigraph'] || '#8e44ad';
+    borderLeftColor = borderColor;
+    borderTopColor = borderColor;
   }
 
   return (
@@ -74,14 +84,44 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
             />
           </View>
         )}
-        {__show_word !== false && __pos !== 'letter' && (
-          <ReadableText
-            text={word}
-            pronunciation={__forced_pronunciation}
-            style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
-          />
+        {/* Multigraph display */}
+        {__pos === 'multigraph' && (
+          <>
+            <ReadableText
+              text={word.length == 2 ? 'digraph' : 'multigraph'}
+              style={{
+                fontStyle: 'italic',
+                color: posColors['multigraph'] || '#8e44ad',
+                fontSize: isMobile ? 18 : 24,
+                textAlign: 'center',
+                marginBottom: 8,
+              }}
+            />
+            {'__ipa' in entry && entry.__ipa && (
+              <ReadableText
+                text={`/${entry.__ipa}/`}
+                pronunciation={entry.__forced_pronunciation ?? entry.word}
+                style={{
+                  fontSize: isMobile ? 22 : 32,
+                  color: '#222',
+                  fontFamily: 'Lexend_400Regular',
+                  textAlign: 'center',
+                  marginBottom: 8,
+                }}
+              />
+            )}
+          </>
         )}
-        {__pos !== 'letter' && (
+        {__show_word !== false &&
+          __pos !== 'letter' &&
+          __pos !== 'multigraph' && (
+            <ReadableText
+              text={word}
+              pronunciation={__forced_pronunciation}
+              style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
+            />
+          )}
+        {__pos !== 'letter' && __pos !== 'multigraph' && (
           <ReadableText
             text={__pos}
             style={[
@@ -142,6 +182,7 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
             }
           />
         </View>
+        {/* Multigraph examples */}
       </View>
     </>
   );

@@ -63,6 +63,13 @@ export default function CardPreview({
     }
   }
 
+  // Special color for multigraphs
+  if (__pos === 'multigraph') {
+    borderColor = posColors['multigraph'] || '#8e44ad';
+    borderLeftColor = borderColor;
+    borderTopColor = borderColor;
+  }
+
   // Get screen width to determine if the device is mobile
   const screenWidth = Dimensions.get('window').width;
   const isMobile = screenWidth <= 768;
@@ -111,24 +118,47 @@ export default function CardPreview({
           />
         </View>
       )}
-      {__show_word !== false && __pos !== 'letter' && (
-        <ReadableText
-          text={word}
-          pronunciation={__forced_pronunciation}
-          displayText={word.length > 14 ? word.slice(0, 13) + '…' : word}
-          style={{
-            fontSize: isMobile ? 18 : 28,
-            marginBottom: 4,
-            textAlign: 'center',
-            flexWrap: 'wrap',
-            alignSelf: 'center',
-            width: '100%',
-          }}
-          numberOfLines={2}
-          ellipsizeMode="tail"
-        />
+      {/* Multigraph display */}
+      {__pos === 'multigraph' && (
+        <>
+          <ReadableText
+            text={
+              word.length === 2
+                ? 'digraph'
+                : word.length === 3
+                ? 'trigraph'
+                : 'multigraph'
+            }
+            style={{
+              fontStyle: 'italic',
+              color: posColors['multigraph'] || '#8e44ad',
+              fontSize: isMobile ? 13 : 18,
+              textAlign: 'center',
+              marginBottom: 2,
+            }}
+          />
+        </>
       )}
-      {__pos !== 'letter' && (
+      {__show_word !== false &&
+        __pos !== 'letter' &&
+        __pos !== 'multigraph' && (
+          <ReadableText
+            text={word}
+            pronunciation={__forced_pronunciation}
+            displayText={word.length > 14 ? word.slice(0, 13) + '…' : word}
+            style={{
+              fontSize: isMobile ? 18 : 28,
+              marginBottom: 4,
+              textAlign: 'center',
+              flexWrap: 'wrap',
+              alignSelf: 'center',
+              width: '100%',
+            }}
+            numberOfLines={2}
+            ellipsizeMode="tail"
+          />
+        )}
+      {__pos !== 'letter' && __pos !== 'multigraph' && (
         <ReadableText
           text={__pos}
           style={{

@@ -134,6 +134,13 @@ import GetUpIcon from '@/assets/icons/licensed/get_up.svg';
 import PresentSimpleIcon from '@/assets/icons/open_source/present_simple.svg';
 import ArriveIcon from '@/assets/icons/licensed/arrive.svg';
 import FrequencyIcon from '@/assets/icons/licensed/frequency.svg'; // Add this import
+import TreeIcon from '@/assets/icons/licensed/tree.svg'; // Example for a custom icon
+import SheepIcon from '@/assets/icons/licensed/sheep.svg'; // Example for a custom icon
+import WaitIcon from '@/assets/icons/licensed/wait.svg'; // Example for a custom icon
+import TrainIcon from '@/assets/icons/licensed/train.svg'; // Example for a custom icon
+import ToothIcon from '@/assets/icons/licensed/tooth.svg';
+import ThinkIcon from '@/assets/icons/licensed/think.svg';
+import ThingIcon from '@/assets/icons/licensed/thing.svg'; // Add this import
 import WatchTimeIcon from '@/assets/icons/licensed/watch_(time).svg'; // Add this import
 import SunglassesIcon from '@/assets/icons/licensed/sunglasses.svg'; // Add this import
 import ShirtIcon from '@/assets/icons/licensed/shirt.svg'; // Add this import
@@ -149,6 +156,9 @@ import BeltIcon from '@/assets/icons/licensed/belt.svg';
 import RingIcon from '@/assets/icons/licensed/ring.svg';
 import ShortsIcon from '@/assets/icons/licensed/shorts.svg';
 import ClothingIcon from '@/assets/icons/licensed/clothing.svg'; // Example for a custom icon
+import ChairIcon from '@/assets/icons/licensed/chair.svg'; // Example for a custom icon
+import ChickenIcon from '@/assets/icons/licensed/chicken.svg'; // Example for a custom icon
+import TeacherIcon from '@/assets/icons/licensed/teacher.svg'; // Add this import
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -389,6 +399,13 @@ export const iconMap: Record<string, React.FC<any>> = {
   'adverbs of frequency': FrequencyIcon, // Example for a custom icon
   'adverbs of frequency vocab': FrequencyIcon, // Example for a custom icon
   arrive: ArriveIcon,
+  tree: TreeIcon, // Example for a custom iconz`
+  sheep: SheepIcon, // Example for a custom icon
+  wait: WaitIcon,
+  train: TrainIcon, // Example for a custom icon
+  tooth: ToothIcon,
+  think: ThinkIcon,
+  thing: ThingIcon,
   shirt: ShirtIcon,
   sunglasses: SunglassesIcon,
   skirt: SkirtIcon,
@@ -405,6 +422,9 @@ export const iconMap: Record<string, React.FC<any>> = {
   clothing: ClothingIcon, // Example for a custom icon
   'clothing vocab': ClothingIcon,
   'clothes vocab': ClothingIcon,
+  chair: ChairIcon, // Example for a custom icon
+  chicken: ChickenIcon, // Example for a custom icon
+  teacher: TeacherIcon,
 
   // ...etc
 };

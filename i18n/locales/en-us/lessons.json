@@ -16,6 +16,14 @@
     }
   },
   {
+    "multigraphs": {
+      "name": "multigraphs",
+      "__tags": ["multigraphs"],
+      "__type": "vocabulary",
+      "__order": 3
+    }
+  },
+  {
     "day vocab": {
       "name": "day vocab",
       "__tags": ["days"],
