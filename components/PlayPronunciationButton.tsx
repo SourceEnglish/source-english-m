@@ -2,6 +2,8 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { getIconForEntry } from '@/utils/iconMap';
 import { useSpeech } from '@/contexts/SpeechContext';
+import { Audio } from 'expo-av';
+import { soundsMap } from '@/constants/constants';
 
 interface PlayPronunciationButtonProps {
   word: string;
@@ -16,11 +18,22 @@ const PlayPronunciationButton: React.FC<PlayPronunciationButtonProps> = ({
 }) => {
   const { speakText } = useSpeech();
 
+  const handlePress = () => {
+    if (pronunciation && pronunciation.endsWith('.wav')) {
+      const soundPath = soundsMap.get(pronunciation);
+      if (soundPath) {
+        Audio.Sound.createAsync(soundPath).then(({ sound }) => {
+          sound.playAsync();
+        });
+        return;
+      }
+    }
+    speakText(pronunciation || word);
+  };
+
   return (
     <TouchableOpacity
-      onPress={() => {
-        speakText(pronunciation || word);
-      }}
+      onPress={handlePress}
       accessibilityLabel="Play pronunciation"
       style={{
         paddingVertical: 10,

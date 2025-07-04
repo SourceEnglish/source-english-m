@@ -1,3 +1,15 @@
+const tʃ = require('@/assets/sounds/tʃ.wav');
+const ʃ = require('@/assets/sounds/ʃ.wav');
+const θ = require('@/assets/sounds/θ.wav');
+const ð = require('@/assets/sounds/ð.wav');
+
+export const soundsMap: Map<string, any> = new Map([
+  ['tʃ.wav', tʃ],
+  ['ʃ.wav', ʃ],
+  ['θ.wav', θ],
+  ['ð.wav', ð],
+]);
+
 const posColors: Record<string, string> = {
   adverb: '#FFB6C1',
   preposition: '#ADD8E6',
@@ -16,6 +28,7 @@ const posColors: Record<string, string> = {
   'proper noun': '#FF69B4',
   vowel: '#0C71B9',
   consonant: '#F44C40',
+  multigraph: '#8e44ad', // Add this line for multigraph color
 };
 
 // Centralized max width for centered layouts
