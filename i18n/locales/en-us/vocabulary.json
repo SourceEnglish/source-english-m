@@ -3373,6 +3373,40 @@
     }
   },
 
+  {
+    "a_(article)": {
+      "__pos": "article",
+      "__tags": ["articles"],
+      "__icon_text": "a",
+      "__show_word": false,
+      "word": "a",
+      "__objectKey": "a_(article)",
+      "translation_note": "",
+      "examples": ["I have a dog.", "She is a teacher."]
+    }
+  },
+  {
+    "an": {
+      "__pos": "article",
+      "__tags": ["articles"],
+      "__icon_text": "an",
+      "__show_word": false,
+      "word": "an",
+      "translation_note": "",
+      "examples": ["I saw an elephant.", "He is an engineer."]
+    }
+  },
+  {
+    "the": {
+      "__pos": "article",
+      "__tags": ["articles"],
+      "__icon_text": "the",
+      "__show_word": false,
+      "word": "the",
+      "translation_note": "",
+      "examples": ["The cat is sleeping.", "The sun is shining."]
+    }
+  },
 
   {
     "always": {

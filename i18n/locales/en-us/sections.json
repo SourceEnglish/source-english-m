@@ -1958,5 +1958,108 @@
     "__order": 99,
     "__type": "video",
     "__src": "https://youtu.be/p8I5zw2Rels?si=fFZAmrDTlSyRAwvK"
+  },
+  {
+    "_id": "articles_header",
+    "__lessons": ["articles"],
+    "__order": 1,
+    "__type": "header",
+    "text": "Articles: a, an, the"
+  },
+  {
+    "_id": "articles_intro",
+    "__lessons": ["articles"],
+    "__order": 2,
+    "__type": "paragraph",
+    "text": "Articles are small words used before nouns. In English, there are three articles: 'a', 'an', and 'the'."
+  },
+  {
+    "_id": "articles_vocab_carousel",
+    "__lessons": ["articles"],
+    "__order": 3,
+    "__type": "vocabularyCarousel",
+    "__tags": ["articles"]
+  },
+  {
+    "_id": "articles_a_an_subheader",
+    "__lessons": ["articles"],
+    "__order": 4,
+    "__type": "subheader",
+    "text": "Indefinite Articles: a, an"
+  },
+  {
+    "_id": "articles_a_an_paragraph",
+    "__lessons": ["articles"],
+    "__order": 5,
+    "__type": "paragraph",
+    "text": "Use 'a' before words that begin with a consonant sound. Use 'an' before words that begin with a vowel sound (a, e, i, o, u)."
+  },
+  {
+    "_id": "articles_a_an_examples",
+    "__lessons": ["articles"],
+    "__order": 6,
+    "__type": "table",
+    "__headers": [
+      { "text": "Article", "__type": "text" },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "a" },
+      { "__type": "text", "text": "a cat, a book, a teacher" },
+      { "__type": "text", "text": "an" },
+      { "__type": "text", "text": "an apple, an egg, an umbrella" }
+    ]
+  },
+  {
+    "_id": "articles_the_subheader",
+    "__lessons": ["articles"],
+    "__order": 7,
+    "__type": "subheader",
+    "text": "Definite Article: the"
+  },
+  {
+    "_id": "articles_the_paragraph",
+    "__lessons": ["articles"],
+    "__order": 8,
+    "__type": "paragraph",
+    "text": "Use 'the' when you are talking about a specific thing or something that is already known."
+  },
+  {
+    "_id": "articles_the_examples",
+    "__lessons": ["articles"],
+    "__order": 9,
+    "__type": "table",
+    "__headers": [
+      { "text": "Article", "__type": "text" },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "the" },
+      {
+        "__type": "text",
+        "text": "the sun, the teacher, the book on the table"
+      }
+    ]
+  },
+  {
+    "_id": "articles_examples_list",
+    "__lessons": ["articles"],
+    "__order": 10,
+    "__type": "list",
+    "items": ["I have a dog.", "She is an engineer.", "The cat is sleeping."]
+  },
+  {
+    "_id": "articles_video_subheader",
+    "__lessons": ["articles"],
+    "__order": 99,
+    "__type": "subheader",
+    "text": "Articles Video"
+  },
+  {
+    "_id": "articles_video",
+    "__lessons": ["articles"],
+    "__order": 100,
+    "__type": "video",
+    "__src": "https://www.youtube.com/watch?v=RDkx4J__-QY"
   }
 ]

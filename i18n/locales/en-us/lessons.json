@@ -277,5 +277,23 @@
       "__order": 26,
       "__hidden": false
     }
+  },
+  {
+    "articles": {
+      "name": "articles",
+      "__tags": ["articles"],
+      "__type": "lesson",
+      "__order": 27,
+      "__hidden": false
+    }
+  },
+  {
+    "articles vocab": {
+      "name": "articles vocab",
+      "__tags": ["articles"],
+      "__type": "vocabulary",
+      "__order": 28,
+      "__hidden": false
+    }
   }
 ]
