@@ -3175,6 +3175,21 @@
     }
   },
   {
+    "watch": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+
+      "word": "watch",
+      "conjugation": {
+        "present": "watch",
+        "present_participle": "watching",
+        "past": "watched"
+      },
+      "examples": ["We watch TV in the evening."],
+      "translation_note": ""
+    }
+  },
+  {
     "walk": {
       "__pos": "verb",
       "__tags": ["verbs"],
@@ -3189,17 +3204,7 @@
       "translation_note": ""
     }
   },
-  {
-    "watch_(time)": {
-      "__pos": "noun",
-      "__tags": ["clothing", "accessories"],
 
-      "word": "watch",
-      "plural": "watches",
-      "translation_note": "",
-      "examples": ["I wear a watch on my wrist."]
-    }
-  },
   {
     "sunglasses": {
       "__pos": "noun",
@@ -3244,6 +3249,7 @@
       "examples": ["I bought a new pair of shoes."]
     }
   },
+
   {
     "shirt": {
       "__pos": "noun",
@@ -3351,6 +3357,17 @@
       "plural": "rings",
       "translation_note": "",
       "examples": ["She wears a gold ring on her finger."]
+    }
+  },
+  {
+    "watch_(time)": {
+      "__pos": "noun",
+      "__tags": ["clothing", "accessories"],
+
+      "word": "watch",
+      "plural": "watches",
+      "translation_note": "",
+      "examples": ["I wear a watch on my wrist."]
     }
   },
 
