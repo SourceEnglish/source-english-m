@@ -77,16 +77,17 @@ export default function CardPreview({
   // State to track hover
   const [isHovered, setIsHovered] = useState(false);
 
-  // Dynamically get the icon based on the word (or another property if needed)
+  // Dynamically get the icon based on the __objectKey (or vocabKey or word)
+  const objectKey = (card as any).__objectKey || vocabKey || word;
   const Icon = getIconForEntry({
     ...card,
-    __objectKey: vocabKey || word,
+    __objectKey: objectKey,
   });
   const router = useRouter();
   const { deckEntries, setDeckIndex, setDeckEntries } = useDeck();
 
   const handlePress = () => {
-    const key = vocabKey || word;
+    const key = objectKey || word;
     if (typeof cardIndex === 'number') {
       setDeckIndex(cardIndex);
     } else {

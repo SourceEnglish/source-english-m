@@ -13,7 +13,12 @@ const VocabularyCarousel: React.FC<VocabularyCarouselProps> = ({ tags }) => {
   // Flatten vocabulary (array of objects) to array of entries
   const vocabEntries = useMemo(() => {
     return vocabulary
-      .flatMap((entryObj: any) => Object.values(entryObj))
+      .flatMap((entryObj: any) =>
+        Object.entries(entryObj).map(([key, entry]) => ({
+          ...entry,
+          __objectKey: key,
+        }))
+      )
       .filter(
         (entry: any) =>
           entry.__tags && entry.__tags.some((tag: string) => tags.includes(tag))
@@ -30,15 +35,8 @@ const VocabularyCarousel: React.FC<VocabularyCarouselProps> = ({ tags }) => {
         >
           {vocabEntries.map((entry, idx) => (
             <InlineCardPreview
-              card={
-                entry as {
-                  __show_word: boolean;
-                  __pos: string;
-                  word: string;
-                  __forced_pronunciation?: string;
-                }
-              }
-              key={idx}
+              card={entry}
+              key={entry.__objectKey || idx}
             />
           ))}
         </ScrollView>

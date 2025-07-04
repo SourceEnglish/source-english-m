@@ -40,7 +40,10 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
   const color = posColors[__pos] || '#000';
   const screenWidth = Dimensions.get('window').width;
   const isMobile = screenWidth <= 768;
-  const Icon = getIconForEntry(entry);
+  const Icon = getIconForEntry({
+    ...entry,
+    __objectKey: (entry as any).__objectKey || entry.word,
+  });
 
   // Special border color for letters: vowel/consonant
   if (__pos === 'letter') {

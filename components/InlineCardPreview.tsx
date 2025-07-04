@@ -58,12 +58,12 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({
   // Use only Platform.OS for mobile/desktop check to avoid hydration/layout mismatch
   const isMobile = Platform.OS !== 'web';
   // Use __objectKey if provided, otherwise use the object key from the parent if available
+  const objectKey =
+    (card as any).__objectKey ||
+    (Object.keys(card).length === 1 ? Object.keys(card)[0] : card.word);
   const Icon = getIconForEntry({
     ...card,
-    __objectKey:
-      (card as any).__objectKey || Object.keys(card).length === 1
-        ? Object.keys(card)[0]
-        : card.word,
+    __objectKey: objectKey,
   });
   const isInCarousel = useContext(VocabularyCarouselContext);
 
@@ -84,9 +84,9 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({
         // Do nothing if readAloudMode is true
         return;
       }
-      // Redirect to __redirect if present, otherwise use word
+      // Redirect to __redirect if present, otherwise use __objectKey or word
       const redirect = (card as any).__redirect;
-      const target = redirect ? redirect : word;
+      const target = redirect ? redirect : objectKey;
       router.push(`/vocab/${encodeURIComponent(target)}`);
     }
   };

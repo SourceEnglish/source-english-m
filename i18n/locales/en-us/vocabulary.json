@@ -2159,8 +2159,9 @@
     }
   },
   {
-    "I (pronoun)": {
+    "I_(pronoun)": {
       "__pos": "pronoun",
+      "__objectKey": "I_(pronoun)",
       "__tags": ["subject pronouns", "singular subject pronouns"],
       "__icon_text": "I",
       "__clarifier": "pronoun",
@@ -2840,6 +2841,7 @@
     "cold_(illness)": {
       "__pos": "noun",
       "__tags": ["illnesses", "illness have"],
+      "__objectKey": "cold_(illness)",
       "word": "cold",
       "translation_note": "",
       "examples": ["I have a cold."]
@@ -3363,11 +3365,22 @@
     "watch_(time)": {
       "__pos": "noun",
       "__tags": ["clothing", "accessories"],
-
+      "__objectKey": "watch_(time)",
       "word": "watch",
       "plural": "watches",
       "translation_note": "",
       "examples": ["I wear a watch on my wrist."]
+    }
+  },
+
+
+  {
+    "always": {
+      "__pos": "adverb",
+      "__tags": ["adverbs of frequency"],
+      "word": "always",
+      "translation_note": "",
+      "examples": ["She always arrives on time."]
     }
   },
 
@@ -3578,9 +3591,10 @@
     }
   },
   {
-    "th (voiced)": {
-      "word": "th (voiced)",
+    "th_(voiced)": {
+      "word": "th_(voiced)",
       "__forced_pronunciation": "ð.wav",
+      "__objectKey": "th_(voiced)",
       "__pos": "multigraph",
       "__ipa": "ð",
       "__tags": ["multigraphs"],
