@@ -13,6 +13,7 @@ import VocabEntryDisplay from '@/components/VocabEntryDisplay';
 import Notes from '@/components/Notes';
 import ExampleSentences from '@/components/ExampleSentences';
 import ExampleWord from '@/components/ExampleWord';
+import ExampleEntries from '@/components/ExampleEntries';
 import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 import { useDeck } from '@/contexts/DeckContext';
 import ChevronLeft from '@/assets/icons/open_source/chevron-left.svg';
@@ -379,12 +380,18 @@ export default function VocabEntryPage() {
           }}
         >
           {vocabEntry.__pos === 'multigraph' ? (
-            <ExampleWord
-              examples={
-                'examples' in vocabEntry ? (vocabEntry as any).examples : []
-              }
-              highlight={vocabEntry.word}
-            />
+            (vocabEntry as any).__exampleEntries && (
+              <ExampleEntries
+                entries={(vocabEntry as any).__exampleEntries.map((e: any) => ({
+                  ipa: e.__ipa,
+                  pronunciation: e.__forced_pronunciation,
+                  examples: e.examples || [],
+                  header: e.header,
+                  header_pronunciation: e.__header_pronunciation,
+                }))}
+                highlight={vocabEntry.word}
+              />
+            )
           ) : (
             <ExampleSentences
               examples={

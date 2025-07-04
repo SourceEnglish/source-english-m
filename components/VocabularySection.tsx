@@ -7,12 +7,14 @@ type VocabularySectionProps = {
   children?: React.ReactNode;
   headerText?: string;
   hasDivider?: boolean;
+  headerItem?: React.ReactNode;
 };
 
 export default function VocabularySection({
   children,
   headerText,
   hasDivider = true,
+  headerItem,
 }: VocabularySectionProps) {
   const { width: screenWidth } = useWindowDimensions();
   const isMobile = screenWidth <= 768;
@@ -34,6 +36,7 @@ export default function VocabularySection({
           />
         </View>
       )}
+      {headerItem && headerItem}
       <View
         style={{
           width: '100%',

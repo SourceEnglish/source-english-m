@@ -3543,7 +3543,15 @@
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ee",
       "__show_word": false,
-      "examples": ["tree", "sleep", "sheep"]
+      "__exampleEntries": [
+        {
+          "__ipa": "i",
+          "__forced_pronunciation": "i.wav",
+          "examples": ["tree", "sleep", "sheep"],
+          "header": "/i/",
+          "__header_pronunciation": "i.wav"
+        }
+      ]
     }
   },
   {
@@ -3551,23 +3559,38 @@
       "word": "ai",
       "__forced_pronunciation": "eɪ.wav",
       "__pos": "multigraph",
-      "__ipa": "eɪ",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ai",
       "__show_word": false,
-      "examples": ["rainy", "wait", "train"]
+      "__exampleEntries": [
+        {
+          "__ipa": "eɪ",
+          "__forced_pronunciation": "eɪ.wav",
+          "examples": ["rainy", "wait", "train"],
+          "header": "/eɪ/",
+          "__header_pronunciation": "eɪ.wav"
+        }
+      ]
     }
   },
+
   {
     "ay": {
       "word": "ay",
       "__forced_pronunciation": "eɪ.wav",
       "__pos": "multigraph",
-      "__ipa": "eɪ",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ay",
       "__show_word": false,
-      "examples": ["play", "day", "say"]
+      "__exampleEntries": [
+        {
+          "__ipa": "eɪ",
+          "__forced_pronunciation": "eɪ.wav",
+          "examples": ["play", "day", "say"],
+          "header": "/eɪ/",
+          "__header_pronunciation": "eɪ.wav"
+        }
+      ]
     }
   },
   {
@@ -3575,11 +3598,18 @@
       "word": "ea",
       "__forced_pronunciation": "i.wav",
       "__pos": "multigraph",
-      "__ipa": "i",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ea",
       "__show_word": false,
-      "examples": ["eat", "meat", "sea"]
+      "__exampleEntries": [
+        {
+          "__ipa": "i",
+          "__forced_pronunciation": "i.wav",
+          "examples": ["eat", "meat", "sea"],
+          "header": "/i/",
+          "__header_pronunciation": "i.wav"
+        }
+      ]
     }
   },
   {
@@ -3587,11 +3617,18 @@
       "word": "ie",
       "__forced_pronunciation": "aɪ.wav",
       "__pos": "multigraph",
-      "__ipa": "aɪ",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ie",
       "__show_word": false,
-      "examples": ["die", "tie", "lie"]
+      "__exampleEntries": [
+        {
+          "__ipa": "aɪ",
+          "__forced_pronunciation": "aɪ.wav",
+          "examples": ["pie", "tie", "lie"],
+          "header": "/aɪ/",
+          "__header_pronunciation": "aɪ.wav"
+        }
+      ]
     }
   },
   {
@@ -3599,11 +3636,18 @@
       "word": "oa",
       "__forced_pronunciation": "oʊ.wav",
       "__pos": "multigraph",
-      "__ipa": "oʊ",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "oa",
       "__show_word": false,
-      "examples": ["boat", "throat", "coat"]
+      "__exampleEntries": [
+        {
+          "__ipa": "oʊ",
+          "__forced_pronunciation": "oʊ.wav",
+          "examples": ["boat", "goat", "coat"],
+          "header": "/oʊ/",
+          "__header_pronunciation": "oʊ.wav"
+        }
+      ]
     }
   },
   {
@@ -3615,7 +3659,15 @@
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ou",
       "__show_word": false,
-      "examples": ["mouth", "house", "cloudy"]
+      "__exampleEntries": [
+        {
+          "__ipa": "aʊ",
+          "__forced_pronunciation": "aʊ.wav",
+          "examples": ["cloud", "house", "mouse"],
+          "header": "/aʊ/",
+          "__header_pronunciation": "aʊ.wav"
+        }
+      ]
     }
   },
   {
@@ -3627,46 +3679,49 @@
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ow",
       "__show_word": false,
-      "examples": ["cow", "how", "brown"]
+      "__exampleEntries": [
+        {
+          "__ipa": "aʊ",
+          "__forced_pronunciation": "aʊ.wav",
+          "examples": ["cow", "how", "brown"],
+          "header": "/aʊ/",
+          "__header_pronunciation": "aʊ.wav"
+        },
+        {
+          "__ipa": "oʊ",
+          "__forced_pronunciation": "oʊ.wav",
+          "examples": ["snowy", "know", "window"],
+          "header": "/oʊ/",
+          "__header_pronunciation": "oʊ.wav"
+        }
+      ]
     }
   },
-  {
-    "ow_(long)": {
-      "word": "ow_(long)",
-      "__forced_pronunciation": "oʊ.wav",
-      "__pos": "multigraph",
-      "__ipa": "oʊ",
-      "__tags": ["multigraphs", "vowel multigraphs"],
-      "__icon_text": "ow",
-      "__show_word": false,
-      "__objectKey": "ow_(long)",
-      "examples": ["snowy", "know", "window"]
-    }
-  },
+
   {
     "oo": {
       "word": "oo",
       "__forced_pronunciation": "ʊ.wav",
       "__pos": "multigraph",
-      "__ipa": "ʊ",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "oo",
       "__show_word": false,
-      "examples": ["book", "foot", "cook"]
-    }
-  },
-
-  {
-    "oo_(long)": {
-      "word": "oo_(long)",
-      "__forced_pronunciation": "u.wav",
-      "__pos": "multigraph",
-      "__ipa": "u",
-      "__tags": ["multigraphs", "vowel multigraphs"],
-      "__icon_text": "oo",
-      "__show_word": false,
-      "__objectKey": "oo_(long)",
-      "examples": ["moon", "food", "tooth"]
+      "__exampleEntries": [
+        {
+          "__ipa": "ʊ",
+          "__forced_pronunciation": "ʊ.wav",
+          "examples": ["book", "foot", "cook"],
+          "header": "/ʊ/",
+          "__header_pronunciation": "ʊ.wav"
+        },
+        {
+          "__ipa": "u",
+          "__forced_pronunciation": "u.wav",
+          "examples": ["moon", "food", "tooth"],
+          "header": "/u/",
+          "__header_pronunciation": "u.wav"
+        }
+      ]
     }
   },
 
@@ -3675,23 +3730,38 @@
       "word": "ch",
       "__forced_pronunciation": "tʃ.wav",
       "__pos": "multigraph",
-      "__ipa": "tʃ",
       "__tags": ["multigraphs"],
       "__icon_text": "ch",
       "__show_word": false,
-      "examples": ["chair", "chicken", "teacher"]
+      "__exampleEntries": [
+        {
+          "__ipa": "tʃ",
+          "__forced_pronunciation": "tʃ.wav",
+          "examples": ["chair", "chicken", "cheese"],
+          "header": "/tʃ/",
+          "__header_pronunciation": "tʃ.wav"
+        }
+      ]
     }
   },
+
   {
     "au": {
       "word": "au",
       "__forced_pronunciation": "ɔ.wav",
       "__pos": "multigraph",
-      "__ipa": "ɔ",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "au",
       "__show_word": false,
-      "examples": ["autumn", "August", "daughter"]
+      "__exampleEntries": [
+        {
+          "__ipa": "ɔ",
+          "__forced_pronunciation": "ɔ.wav",
+          "examples": ["autumn", "caught", "sauce"],
+          "header": "/ɔ/",
+          "__header_pronunciation": "ɔ.wav"
+        }
+      ]
     }
   },
 
@@ -3700,11 +3770,18 @@
       "word": "sh",
       "__forced_pronunciation": "ʃ.wav",
       "__pos": "multigraph",
-      "__ipa": "ʃ",
       "__tags": ["multigraphs"],
       "__icon_text": "sh",
       "__show_word": false,
-      "examples": ["shoe", "she", "sheep"]
+      "__exampleEntries": [
+        {
+          "__ipa": "ʃ",
+          "__forced_pronunciation": "ʃ.wav",
+          "examples": ["shoe", "she", "sheep"],
+          "header": "/ʃ/",
+          "__header_pronunciation": "ʃ.wav"
+        }
+      ]
     }
   },
   {
@@ -3740,31 +3817,32 @@
       ]
     }
   },
-  {
-    "th_(voiced)": {
-      "word": "th_(voiced)",
-      "__forced_pronunciation": "ð.wav",
-      "__objectKey": "th_(voiced)",
-      "__pos": "multigraph",
-      "__ipa": "ð",
-      "__tags": ["multigraphs", "consonant multigraphs"],
-      "__icon_text": "th",
-      "__show_word": false,
 
-      "examples": ["they", "mother", "weather"]
-    }
-  },
   {
     "th": {
       "word": "th",
+
       "__forced_pronunciation": "θ.wav",
       "__pos": "multigraph",
-      "__ipa": "θ",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "th",
       "__show_word": false,
-
-      "examples": ["think", "month", "thing"]
+      "__exampleEntries": [
+        {
+          "__ipa": "θ",
+          "__forced_pronunciation": "θ.wav",
+          "examples": ["think", "thing", "month"],
+          "header": "/θ/",
+          "__header_pronunciation": "θ.wav"
+        },
+        {
+          "__ipa": "ð",
+          "__forced_pronunciation": "ð.wav",
+          "examples": ["they", "mother", "weather"],
+          "header": "/ð/",
+          "__header_pronunciation": "ð.wav"
+        }
+      ]
     }
   },
   {
@@ -3772,12 +3850,18 @@
       "word": "ph",
       "__forced_pronunciation": "f.wav",
       "__pos": "multigraph",
-      "__ipa": "f",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "ph",
       "__show_word": false,
-
-      "examples": ["phone", "photo", "alphabet"]
+      "__exampleEntries": [
+        {
+          "__ipa": "f",
+          "__forced_pronunciation": "f.wav",
+          "examples": ["phone", "photo", "alphabet"],
+          "header": "/f/",
+          "__header_pronunciation": "f.wav"
+        }
+      ]
     }
   },
   {
@@ -3785,11 +3869,18 @@
       "word": "wh",
       "__forced_pronunciation": "w.wav",
       "__pos": "multigraph",
-      "__ipa": "w",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "wh",
       "__show_word": false,
-      "examples": ["what", "where", "white"]
+      "__exampleEntries": [
+        {
+          "__ipa": "w",
+          "__forced_pronunciation": "w.wav",
+          "examples": ["what", "where", "white"],
+          "header": "/w/",
+          "__header_pronunciation": "w.wav"
+        }
+      ]
     }
   },
   {
@@ -3797,11 +3888,18 @@
       "word": "ck",
       "__forced_pronunciation": "k.wav",
       "__pos": "multigraph",
-      "__ipa": "k",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "ck",
       "__show_word": false,
-      "examples": ["sick", "clock", "black"]
+      "__exampleEntries": [
+        {
+          "__ipa": "k",
+          "__forced_pronunciation": "k.wav",
+          "examples": ["clock", "sick", "black"],
+          "header": "/k/",
+          "__header_pronunciation": "k.wav"
+        }
+      ]
     }
   },
   {
@@ -3809,11 +3907,18 @@
       "word": "ng",
       "__forced_pronunciation": "ŋ.wav",
       "__pos": "multigraph",
-      "__ipa": "ŋ",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "ng",
       "__show_word": false,
-      "examples": ["ring", "sing", "thing"]
+      "__exampleEntries": [
+        {
+          "__ipa": "ŋ",
+          "__forced_pronunciation": "ŋ.wav",
+          "examples": ["ring", "sing", "thing"],
+          "header": "/ŋ/",
+          "__header_pronunciation": "ŋ.wav"
+        }
+      ]
     }
   },
   {
@@ -3825,7 +3930,15 @@
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "qu",
       "__show_word": false,
-      "examples": ["quarter", "quick", "question"]
+      "__exampleEntries": [
+        {
+          "__ipa": "kw",
+          "__forced_pronunciation": "kw.wav",
+          "examples": ["quick", "queen", "question"],
+          "header": "/kw/",
+          "__header_pronunciation": "kw.wav"
+        }
+      ]
     }
   },
   {
@@ -3833,11 +3946,18 @@
       "word": "wr",
       "__forced_pronunciation": "r.wav",
       "__pos": "multigraph",
-      "__ipa": "r",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "wr",
       "__show_word": false,
-      "examples": ["write", "wrong", "wrist"]
+      "__exampleEntries": [
+        {
+          "__ipa": "r",
+          "__forced_pronunciation": "r.wav",
+          "examples": ["write", "wrong", "wrist"],
+          "header": "/r/",
+          "__header_pronunciation": "r.wav"
+        }
+      ]
     }
   },
   {
@@ -3845,13 +3965,21 @@
       "word": "kn",
       "__forced_pronunciation": "n.wav",
       "__pos": "multigraph",
-      "__ipa": "n",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "kn",
       "__show_word": false,
-      "examples": ["know", "knife", "knee"]
+      "__exampleEntries": [
+        {
+          "__ipa": "n",
+          "__forced_pronunciation": "n.wav",
+          "examples": ["know", "knife", "knee"],
+          "header": "/n/",
+          "__header_pronunciation": "n.wav"
+        }
+      ]
     }
   },
+
   {
     "photo": {
       "__pos": "noun",

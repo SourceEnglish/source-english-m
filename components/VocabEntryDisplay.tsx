@@ -15,6 +15,7 @@ interface VocabEntryDisplayProps {
     __vowel?: boolean;
     __ipa?: string;
     __consonant?: boolean;
+    __exampleEntries?: any;
     examples?: string[];
     conjugation?: any; // Add this line to allow conjugation property
   };
@@ -30,6 +31,7 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
     __vowel,
     __consonant,
     __show_word = true,
+    __exampleEntries = [],
     __icon_text,
     examples,
     __tags,
@@ -100,19 +102,7 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
                 marginBottom: 8,
               }}
             />
-            {'__ipa' in entry && entry.__ipa && (
-              <ReadableText
-                text={`/${entry.__ipa}/`}
-                pronunciation={entry.__forced_pronunciation ?? entry.word}
-                style={{
-                  fontSize: isMobile ? 22 : 32,
-                  color: '#222',
-                  fontFamily: 'Lexend_400Regular',
-                  textAlign: 'center',
-                  marginBottom: 8,
-                }}
-              />
-            )}
+            {/* Do not show IPA or pronunciation button or text for multigraphs */}
           </>
         )}
         {__show_word !== false &&
@@ -175,16 +165,18 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
           />
         )}
         {/* Play pronunciation button inside the card */}
-        <View style={{ alignItems: 'center', marginTop: 8 }}>
-          <PlayPronunciationButton
-            word={word}
-            pronunciation={
-              entry.__forced_pronunciation
-                ? entry.__forced_pronunciation
-                : entry.word
-            }
-          />
-        </View>
+        {__pos !== 'multigraph' && (
+          <View style={{ alignItems: 'center', marginTop: 8 }}>
+            <PlayPronunciationButton
+              word={word}
+              pronunciation={
+                entry.__forced_pronunciation
+                  ? entry.__forced_pronunciation
+                  : entry.word
+              }
+            />
+          </View>
+        )}
         {/* Multigraph examples */}
       </View>
     </>
