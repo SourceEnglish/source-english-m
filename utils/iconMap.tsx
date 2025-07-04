@@ -134,6 +134,21 @@ import GetUpIcon from '@/assets/icons/licensed/get_up.svg';
 import PresentSimpleIcon from '@/assets/icons/open_source/present_simple.svg';
 import ArriveIcon from '@/assets/icons/licensed/arrive.svg';
 import FrequencyIcon from '@/assets/icons/licensed/frequency.svg'; // Add this import
+import WatchTimeIcon from '@/assets/icons/licensed/watch_(time).svg'; // Add this import
+import SunglassesIcon from '@/assets/icons/licensed/sunglasses.svg'; // Add this import
+import ShirtIcon from '@/assets/icons/licensed/shirt.svg'; // Add this import
+import SkirtIcon from '@/assets/icons/licensed/skirt.svg';
+import ShoeIcon from '@/assets/icons/licensed/shoe.svg';
+import PantsIcon from '@/assets/icons/licensed/pants.svg';
+import HatIcon from '@/assets/icons/licensed/hat.svg';
+import GloveIcon from '@/assets/icons/licensed/glove.svg';
+import GlassesIcon from '@/assets/icons/licensed/glasses.svg';
+import DressIcon from '@/assets/icons/licensed/dress.svg';
+import CoatIcon from '@/assets/icons/licensed/coat.svg';
+import BeltIcon from '@/assets/icons/licensed/belt.svg';
+import RingIcon from '@/assets/icons/licensed/ring.svg';
+import ShortsIcon from '@/assets/icons/licensed/shorts.svg';
+import ClothingIcon from '@/assets/icons/licensed/clothing.svg'; // Example for a custom icon
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -359,6 +374,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   'wake up': WakeUpIcon,
   walk: WalkIcon,
   watch: WatchIcon,
+  'watch_(time)': WatchTimeIcon, // Example for a custom icon
   write: WriteIcon,
   cry: CryIcon,
   brush: BrushIcon,
@@ -373,6 +389,22 @@ export const iconMap: Record<string, React.FC<any>> = {
   'adverbs of frequency': FrequencyIcon, // Example for a custom icon
   'adverbs of frequency vocab': FrequencyIcon, // Example for a custom icon
   arrive: ArriveIcon,
+  shirt: ShirtIcon,
+  sunglasses: SunglassesIcon,
+  skirt: SkirtIcon,
+  shoe: ShoeIcon,
+  pants: PantsIcon,
+  hat: HatIcon,
+  glove: GloveIcon,
+  glasses: GlassesIcon,
+  dress: DressIcon,
+  coat: CoatIcon,
+  belt: BeltIcon,
+  ring: RingIcon,
+  shorts: ShortsIcon,
+  clothing: ClothingIcon, // Example for a custom icon
+  'clothing vocab': ClothingIcon,
+  'clothes vocab': ClothingIcon,
 
   // ...etc
 };

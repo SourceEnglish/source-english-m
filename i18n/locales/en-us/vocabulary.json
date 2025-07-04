@@ -3190,162 +3190,170 @@
     }
   },
   {
-    "watch": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
+    "watch_(time)": {
+      "__pos": "noun",
+      "__tags": ["clothing", "accessories"],
 
       "word": "watch",
-      "conjugation": {
-        "present": "watch",
-        "present_participle": "watching",
-        "past": "watched"
-      },
-      "examples": ["They watch TV at night."],
-      "translation_note": ""
-    }
-  },
-  {
-    "write": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
-
-      "word": "write",
-      "conjugation": {
-        "present": "write",
-        "present_participle": "writing",
-        "past": "wrote"
-      },
-      "examples": ["I write a letter."],
-      "translation_note": ""
-    }
-  },
-  {
-    "cry": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
-
-      "word": "cry",
-      "conjugation": {
-        "present": "cry",
-        "present_participle": "crying",
-        "past": "cried"
-      },
-      "examples": ["Babies cry when they are hungry."],
-      "translation_note": ""
-    }
-  },
-  {
-    "brush": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
-
-      "word": "brush",
-      "conjugation": {
-        "present": "brush",
-        "present_participle": "brushing",
-        "past": "brushed"
-      },
-      "examples": ["I brush my teeth every morning."],
-      "translation_note": ""
-    }
-  },
-  {
-    "drink": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
-
-      "word": "drink",
-      "conjugation": {
-        "present": "drink",
-        "present_participle": "drinking",
-        "past": "drank"
-      },
-      "examples": ["She drinks water."],
-      "translation_note": ""
-    }
-  },
-  {
-    "drive": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
-
-      "word": "drive",
-      "conjugation": {
-        "present": "drive",
-        "present_participle": "driving",
-        "past": "drove"
-      },
-      "examples": ["He drives to work."],
-      "translation_note": ""
-    }
-  },
-  {
-    "eat": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
-
-      "word": "eat",
-      "conjugation": {
-        "present": "eat",
-        "present_participle": "eating",
-        "past": "ate"
-      },
-      "examples": ["I eat breakfast every day."],
-      "translation_note": ""
-    }
-  },
-  {
-    "fly": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
-
-      "word": "fly",
-      "conjugation": {
-        "present": "fly",
-        "present_participle": "flying",
-        "past": "flew"
-      },
-      "examples": ["Birds fly in the sky."],
-      "translation_note": ""
-    }
-  },
-  {
-    "make": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
-      "word": "make",
-      "conjugation": {
-        "present": "make",
-        "present_participle": "making",
-        "past": "made"
-      },
-      "examples": ["I make breakfast every morning."],
-      "translation_note": ""
-    }
-  },
-  {
-    "cook": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
-      "word": "cook",
-      "conjugation": {
-        "present": "cook",
-        "present_participle": "cooking",
-        "past": "cooked"
-      },
-      "examples": ["She cooks dinner for her family."],
-      "translation_note": ""
-    }
-  },
-  {
-    "always": {
-      "__pos": "adverb",
-      "__tags": ["adverbs of frequency"],
-      "word": "always",
+      "plural": "watches",
       "translation_note": "",
-      "examples": ["I always wake up early."]
+      "examples": ["I wear a watch on my wrist."]
     }
   },
+  {
+    "sunglasses": {
+      "__pos": "noun",
+      "__tags": ["clothing", "accessories"],
+
+      "word": "sunglasses",
+      "plural": "sunglasses",
+      "translation_note": "",
+      "examples": ["She wears sunglasses on sunny days."]
+    }
+  },
+  {
+    "skirt": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+
+      "word": "skirt",
+      "plural": "skirts",
+      "translation_note": "",
+      "examples": ["She is wearing a blue skirt."]
+    }
+  },
+  {
+    "shorts": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+
+      "word": "shorts",
+      "plural": "shorts",
+      "translation_note": "",
+      "examples": ["He wears shorts in the summer."]
+    }
+  },
+  {
+    "shoe": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+
+      "word": "shoe",
+      "plural": "shoes",
+      "translation_note": "",
+      "examples": ["I bought a new pair of shoes."]
+    }
+  },
+  {
+    "shirt": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+
+      "word": "shirt",
+      "plural": "shirts",
+      "translation_note": "",
+      "examples": ["He is wearing a white shirt."]
+    }
+  },
+  {
+    "pants": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+
+      "word": "pants",
+      "plural": "pants",
+      "translation_note": "",
+      "examples": ["She wears pants to work."]
+    }
+  },
+  {
+    "hat": {
+      "__pos": "noun",
+      "__tags": ["clothing", "accessories"],
+
+      "word": "hat",
+      "plural": "hats",
+      "translation_note": "",
+      "examples": ["He puts on his hat before going outside."]
+    }
+  },
+  {
+    "glove": {
+      "__pos": "noun",
+      "__tags": ["clothing", "accessories"],
+
+      "word": "glove",
+      "plural": "gloves",
+      "translation_note": "",
+      "examples": ["She wears gloves in the winter."]
+    }
+  },
+  {
+    "glasses": {
+      "__pos": "noun",
+      "__tags": ["clothing", "accessories"],
+
+      "word": "glasses",
+      "plural": "glasses",
+      "translation_note": "",
+      "examples": ["He wears glasses to see better."]
+    }
+  },
+  {
+    "dress": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+
+      "word": "dress",
+      "plural": "dresses",
+      "translation_note": "",
+      "examples": ["She is wearing a red dress."]
+    }
+  },
+  {
+    "coat": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+
+      "word": "coat",
+      "plural": "coats",
+      "translation_note": "",
+      "examples": ["He puts on his coat when it's cold."]
+    }
+  },
+  {
+    "clothing": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+      "word": "clothing",
+      "plural": "clothing",
+      "translation_note": "",
+      "examples": ["She bought new clothing for the winter."]
+    }
+  },
+  {
+    "belt": {
+      "__pos": "noun",
+      "__tags": ["clothing", "accessories"],
+
+      "word": "belt",
+      "plural": "belts",
+      "translation_note": "",
+      "examples": ["He wears a belt with his pants."]
+    }
+  },
+  {
+    "ring": {
+      "__pos": "noun",
+      "__tags": ["clothing", "accessories"],
+
+      "word": "ring",
+      "plural": "rings",
+      "translation_note": "",
+      "examples": ["She wears a gold ring on her finger."]
+    }
+  },
+
   {
     "usually": {
       "__pos": "adverb",
@@ -3416,6 +3424,200 @@
         "They arrived late to the meeting."
       ],
       "translation_note": ""
+    }
+  },
+  {
+    "tree": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "plural": "trees",
+      "word": "tree",
+      "examples": ["The tree is tall.", "I see a tree in the park."],
+      "translation_note": ""
+    }
+  },
+  {
+    "sea": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "plural": "seas",
+      "word": "sea",
+      "examples": ["The sea is calm today.", "We went swimming in the sea."],
+      "translation_note": ""
+    }
+  },
+  {
+    "sheep": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals"],
+      "plural": "sheep",
+      "word": "sheep",
+      "examples": ["The sheep are grazing in the field."],
+      "translation_note": ""
+    }
+  },
+  {
+    "wait": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "wait",
+      "conjugation": {
+        "present": "wait",
+        "present_participle": "waiting",
+        "past": "waited"
+      },
+      "examples": ["Please wait for me.", "I will wait for the bus."],
+      "translation_note": ""
+    }
+  },
+  {
+    "train": {
+      "__pos": "noun",
+      "__tags": ["nouns", "transportation"],
+      "plural": "trains",
+      "word": "train",
+      "examples": ["The train is arriving.", "I take the train to work."],
+      "translation_note": ""
+    }
+  },
+  {
+    "ee": {
+      "word": "ee",
+      "__pos": "multigraph",
+      "__ipa": "i",
+      "__tags": ["multigraphs"],
+      "__icon_text": "ee",
+      "__show_word": false,
+      "examples": ["tree", "sleep", "sheep"]
+    }
+  },
+  {
+    "ai": {
+      "word": "ai",
+      "__forced_pronunciation": "eigh",
+      "__pos": "multigraph",
+      "__ipa": "eɪ",
+      "__tags": ["multigraphs"],
+      "__icon_text": "ai",
+      "__show_word": false,
+      "examples": ["rainy", "wait", "train"]
+    }
+  },
+  {
+    "ch": {
+      "word": "ch",
+      "__forced_pronunciation": "tʃ.wav",
+      "__pos": "multigraph",
+      "__ipa": "tʃ",
+      "__tags": ["multigraphs"],
+      "__icon_text": "ch",
+      "__show_word": false,
+      "examples": ["chair", "chicken", "teacher"]
+    }
+  },
+  {
+    "sh": {
+      "word": "sh",
+      "__forced_pronunciation": "ʃ.wav",
+      "__pos": "multigraph",
+      "__ipa": "ʃ",
+      "__tags": ["multigraphs"],
+      "__icon_text": "sh",
+      "__show_word": false,
+      "examples": ["shoe", "she", "sheep"]
+    }
+  },
+  {
+    "teacher": {
+      "__pos": "noun",
+      "__tags": ["nouns", "people"],
+      "word": "teacher",
+      "plural": "teachers",
+      "translation_note": "",
+      "examples": ["My teacher is very kind.", "She is a math teacher."]
+    }
+  },
+  {
+    "chicken": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals"],
+      "word": "chicken",
+      "plural": "chickens",
+      "translation_note": "",
+      "examples": ["The chicken is clucking.", "I like to eat chicken."]
+    }
+  },
+  {
+    "chair": {
+      "__pos": "noun",
+      "__tags": ["nouns", "furniture"],
+      "word": "chair",
+      "plural": "chairs",
+      "translation_note": "",
+      "examples": [
+        "The chair is comfortable.",
+        "I need a new chair for my desk."
+      ]
+    }
+  },
+  {
+    "th (voiced)": {
+      "word": "th (voiced)",
+      "__forced_pronunciation": "ð.wav",
+      "__pos": "multigraph",
+      "__ipa": "ð",
+      "__tags": ["multigraphs"],
+      "__icon_text": "th",
+      "__show_word": false,
+
+      "examples": ["they", "mother", "weather"]
+    }
+  },
+  {
+    "th": {
+      "word": "th",
+      "__forced_pronunciation": "θ.wav",
+      "__pos": "multigraph",
+      "__ipa": "θ",
+      "__tags": ["multigraphs"],
+      "__icon_text": "th",
+      "__show_word": false,
+
+      "examples": ["think", "month", "thing"]
+    }
+  },
+  {
+    "tooth": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body parts"],
+      "word": "tooth",
+      "plural": "teeth",
+      "translation_note": "",
+      "examples": ["She brushes her teeth every day."]
+    }
+  },
+  {
+    "think": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "think",
+      "conjugation": {
+        "present": "think",
+        "present_participle": "thinking",
+        "past": "thought"
+      },
+      "examples": ["I think about my future.", "She thinks it's a good idea."],
+      "translation_note": ""
+    }
+  },
+  {
+    "thing": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "word": "thing",
+      "plural": "things",
+      "translation_note": "",
+      "examples": ["What is that thing?", "I have many things to do."]
     }
   }
 ]

@@ -260,5 +260,14 @@
       "__order": 25,
       "__hidden": false
     }
+  },
+  {
+    "clothes vocab": {
+      "name": "clothes vocab",
+      "__tags": ["clothing"],
+      "__type": "vocabulary",
+      "__order": 26,
+      "__hidden": false
+    }
   }
 ]
