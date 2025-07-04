@@ -2684,16 +2684,6 @@
   },
 
   {
-    "mother": {
-      "__pos": "noun",
-      "__tags": ["family"],
-      "word": "mother",
-      "plural": "mothers",
-
-      "translation_note": ""
-    }
-  },
-  {
     "parent": {
       "__pos": "noun",
       "__tags": ["family"],
@@ -3549,7 +3539,8 @@
       "word": "ee",
       "__pos": "multigraph",
       "__ipa": "i",
-      "__tags": ["multigraphs"],
+      "__forced_pronunciation": "i.wav",
+      "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ee",
       "__show_word": false,
       "examples": ["tree", "sleep", "sheep"]
@@ -3558,15 +3549,127 @@
   {
     "ai": {
       "word": "ai",
-      "__forced_pronunciation": "eigh",
+      "__forced_pronunciation": "eɪ.wav",
       "__pos": "multigraph",
       "__ipa": "eɪ",
-      "__tags": ["multigraphs"],
+      "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ai",
       "__show_word": false,
       "examples": ["rainy", "wait", "train"]
     }
   },
+  {
+    "ay": {
+      "word": "ay",
+      "__forced_pronunciation": "eɪ.wav",
+      "__pos": "multigraph",
+      "__ipa": "eɪ",
+      "__tags": ["multigraphs", "vowel multigraphs"],
+      "__icon_text": "ay",
+      "__show_word": false,
+      "examples": ["play", "day", "say"]
+    }
+  },
+  {
+    "ea": {
+      "word": "ea",
+      "__forced_pronunciation": "i.wav",
+      "__pos": "multigraph",
+      "__ipa": "i",
+      "__tags": ["multigraphs", "vowel multigraphs"],
+      "__icon_text": "ea",
+      "__show_word": false,
+      "examples": ["eat", "meat", "sea"]
+    }
+  },
+  {
+    "ie": {
+      "word": "ie",
+      "__forced_pronunciation": "aɪ.wav",
+      "__pos": "multigraph",
+      "__ipa": "aɪ",
+      "__tags": ["multigraphs", "vowel multigraphs"],
+      "__icon_text": "ie",
+      "__show_word": false,
+      "examples": ["die", "tie", "lie"]
+    }
+  },
+  {
+    "oa": {
+      "word": "oa",
+      "__forced_pronunciation": "oʊ.wav",
+      "__pos": "multigraph",
+      "__ipa": "oʊ",
+      "__tags": ["multigraphs", "vowel multigraphs"],
+      "__icon_text": "oa",
+      "__show_word": false,
+      "examples": ["boat", "throat", "coat"]
+    }
+  },
+  {
+    "ou": {
+      "word": "ou",
+      "__forced_pronunciation": "aʊ.wav",
+      "__pos": "multigraph",
+      "__ipa": "aʊ",
+      "__tags": ["multigraphs", "vowel multigraphs"],
+      "__icon_text": "ou",
+      "__show_word": false,
+      "examples": ["mouth", "house", "cloudy"]
+    }
+  },
+  {
+    "ow": {
+      "word": "ow",
+      "__forced_pronunciation": "aʊ.wav",
+      "__pos": "multigraph",
+      "__ipa": "aʊ",
+      "__tags": ["multigraphs", "vowel multigraphs"],
+      "__icon_text": "ow",
+      "__show_word": false,
+      "examples": ["cow", "how", "brown"]
+    }
+  },
+  {
+    "ow_(long)": {
+      "word": "ow_(long)",
+      "__forced_pronunciation": "oʊ.wav",
+      "__pos": "multigraph",
+      "__ipa": "oʊ",
+      "__tags": ["multigraphs", "vowel multigraphs"],
+      "__icon_text": "ow",
+      "__show_word": false,
+      "__objectKey": "ow_(long)",
+      "examples": ["snowy", "know", "window"]
+    }
+  },
+  {
+    "oo": {
+      "word": "oo",
+      "__forced_pronunciation": "ʊ.wav",
+      "__pos": "multigraph",
+      "__ipa": "ʊ",
+      "__tags": ["multigraphs", "vowel multigraphs"],
+      "__icon_text": "oo",
+      "__show_word": false,
+      "examples": ["book", "foot", "cook"]
+    }
+  },
+
+  {
+    "oo_(long)": {
+      "word": "oo_(long)",
+      "__forced_pronunciation": "u.wav",
+      "__pos": "multigraph",
+      "__ipa": "u",
+      "__tags": ["multigraphs", "vowel multigraphs"],
+      "__icon_text": "oo",
+      "__show_word": false,
+      "__objectKey": "oo_(long)",
+      "examples": ["moon", "food", "tooth"]
+    }
+  },
+
   {
     "ch": {
       "word": "ch",
@@ -3579,6 +3682,19 @@
       "examples": ["chair", "chicken", "teacher"]
     }
   },
+  {
+    "au": {
+      "word": "au",
+      "__forced_pronunciation": "ɔ.wav",
+      "__pos": "multigraph",
+      "__ipa": "ɔ",
+      "__tags": ["multigraphs", "vowel multigraphs"],
+      "__icon_text": "au",
+      "__show_word": false,
+      "examples": ["autumn", "August", "daughter"]
+    }
+  },
+
   {
     "sh": {
       "word": "sh",
@@ -3631,7 +3747,7 @@
       "__objectKey": "th_(voiced)",
       "__pos": "multigraph",
       "__ipa": "ð",
-      "__tags": ["multigraphs"],
+      "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "th",
       "__show_word": false,
 
@@ -3644,11 +3760,135 @@
       "__forced_pronunciation": "θ.wav",
       "__pos": "multigraph",
       "__ipa": "θ",
-      "__tags": ["multigraphs"],
+      "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "th",
       "__show_word": false,
 
       "examples": ["think", "month", "thing"]
+    }
+  },
+  {
+    "ph": {
+      "word": "ph",
+      "__forced_pronunciation": "f.wav",
+      "__pos": "multigraph",
+      "__ipa": "f",
+      "__tags": ["multigraphs", "consonant multigraphs"],
+      "__icon_text": "ph",
+      "__show_word": false,
+
+      "examples": ["phone", "photo", "alphabet"]
+    }
+  },
+  {
+    "wh": {
+      "word": "wh",
+      "__forced_pronunciation": "w.wav",
+      "__pos": "multigraph",
+      "__ipa": "w",
+      "__tags": ["multigraphs", "consonant multigraphs"],
+      "__icon_text": "wh",
+      "__show_word": false,
+      "examples": ["what", "where", "white"]
+    }
+  },
+  {
+    "ck": {
+      "word": "ck",
+      "__forced_pronunciation": "k.wav",
+      "__pos": "multigraph",
+      "__ipa": "k",
+      "__tags": ["multigraphs", "consonant multigraphs"],
+      "__icon_text": "ck",
+      "__show_word": false,
+      "examples": ["sick", "clock", "black"]
+    }
+  },
+  {
+    "ng": {
+      "word": "ng",
+      "__forced_pronunciation": "ŋ.wav",
+      "__pos": "multigraph",
+      "__ipa": "ŋ",
+      "__tags": ["multigraphs", "consonant multigraphs"],
+      "__icon_text": "ng",
+      "__show_word": false,
+      "examples": ["ring", "sing", "thing"]
+    }
+  },
+  {
+    "qu": {
+      "word": "qu",
+      "__forced_pronunciation": "kw.wav",
+      "__pos": "multigraph",
+      "__ipa": "kw",
+      "__tags": ["multigraphs", "consonant multigraphs"],
+      "__icon_text": "qu",
+      "__show_word": false,
+      "examples": ["quarter", "quick", "question"]
+    }
+  },
+  {
+    "wr": {
+      "word": "wr",
+      "__forced_pronunciation": "r.wav",
+      "__pos": "multigraph",
+      "__ipa": "r",
+      "__tags": ["multigraphs", "consonant multigraphs"],
+      "__icon_text": "wr",
+      "__show_word": false,
+      "examples": ["write", "wrong", "wrist"]
+    }
+  },
+  {
+    "kn": {
+      "word": "kn",
+      "__forced_pronunciation": "n.wav",
+      "__pos": "multigraph",
+      "__ipa": "n",
+      "__tags": ["multigraphs", "consonant multigraphs"],
+      "__icon_text": "kn",
+      "__show_word": false,
+      "examples": ["know", "knife", "knee"]
+    }
+  },
+  {
+    "photo": {
+      "__pos": "noun",
+      "__tags": ["nouns", "photography"],
+      "word": "photo",
+      "plural": "photos",
+      "translation_note": "",
+      "examples": ["She took a photo of the sunset.", "I love old photos."]
+    }
+  },
+  {
+    "weather": {
+      "__pos": "noun",
+      "__tags": ["nouns", "nature"],
+      "word": "weather",
+      "translation_note": "",
+      "examples": ["The weather is nice today.", "I like sunny weather."]
+    }
+  },
+  {
+    "they": {
+      "__pos": "pronoun",
+      "__tags": ["pronouns", "people"],
+      "word": "they",
+      "translation_note": "",
+      "examples": ["They are my friends.", "They like to play soccer."]
+    }
+  },
+  {
+    "mother": {
+      "__pos": "noun",
+      "__tags": ["nouns", "family"],
+      "__objectKey": "mother",
+      "word": "mother",
+      "plural": "mothers",
+      "translation_note": "",
+      "examples": ["My mother is very caring.", "She is a good mother."]
     }
   },
   {

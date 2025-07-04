@@ -16,9 +16,17 @@
     }
   },
   {
-    "digraphs": {
-      "name": "digraphs",
-      "__tags": ["multigraphs"],
+    "consonant digraphs": {
+      "name": "consonant digraphs",
+      "__tags": ["consonant multigraphs"],
+      "__type": "vocabulary",
+      "__order": 3
+    }
+  },
+  {
+    "vowel digraphs": {
+      "name": "vowel digraphs",
+      "__tags": ["vowel multigraphs"],
       "__type": "vocabulary",
       "__order": 3
     }
