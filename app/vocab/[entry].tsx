@@ -24,6 +24,7 @@ import VerbConjugationTables from '@/components/VerbConjugationTables';
 import Svg, { Line, G } from 'react-native-svg';
 import LetterFormation from '@/components/LetterFormation';
 import VocabularySection from '@/components/VocabularySection';
+import LetterVariations from '@/components/LetterVariants';
 
 export function generateStaticParams() {
   return vocabularyData.map((entry: any) => {
@@ -442,6 +443,31 @@ export default function VocabEntryPage() {
           )}
         </VocabularySection>
       )}
+      {/* Letter/number alternative variants */}
+      {'__lowercase_variants' in vocabEntry &&
+        Array.isArray((vocabEntry as any).__lowercase_variants) &&
+        (vocabEntry as any).__lowercase_variants.length > 0 && (
+          <LetterVariations
+            variations={(vocabEntry as any).__lowercase_variants}
+            headerText="Other Formations (Lowercase)"
+          />
+        )}
+      {'__uppercase_variants' in vocabEntry &&
+        Array.isArray((vocabEntry as any).__uppercase_variants) &&
+        (vocabEntry as any).__uppercase_variants.length > 0 && (
+          <LetterVariations
+            variations={(vocabEntry as any).__uppercase_variants}
+            headerText="Other Formations (Uppercase)"
+          />
+        )}
+      {'__variants' in vocabEntry &&
+        Array.isArray((vocabEntry as any).__variants) &&
+        (vocabEntry as any).__variants.length > 0 && (
+          <LetterVariations
+            variations={(vocabEntry as any).__variants}
+            headerText="Other Formations"
+          />
+        )}
     </ScrollView>
   );
 }

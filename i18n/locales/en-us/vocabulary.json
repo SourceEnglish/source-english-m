@@ -6,6 +6,7 @@
       "__icon_text": "Aa",
       "__forced_pronunciation": "a",
       "__show_word": false,
+      "__lowercase_variants": ["a_variant_0"],
 
       "word": "Aa",
       "translation_note": "",
@@ -181,6 +182,7 @@
       "__icon_text": "Gg",
       "__forced_pronunciation": "g",
       "__show_word": false,
+      "__lowercase_variants": ["g_variant_0"],
       "word": "Gg",
       "translation_note": "",
       "__vowel": false,
@@ -442,6 +444,7 @@
       "translation_note": "",
       "__vowel": false,
       "__consonant": true,
+      "__lowercase_variants": ["q_variant_0"],
       "__exampleEntries": [
         {
           "__ipa": "kw",
@@ -1151,6 +1154,7 @@
       "__tags": ["numbers"],
       "__forced_pronunciation": "one",
       "__icon_text": "1",
+      "__variants": ["one_variant_0", "one_variant_1"],
       "word": "one",
       "plural": "ones",
       "translation_note": ""

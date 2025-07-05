@@ -168,6 +168,11 @@ import DeerIcon from '@/assets/icons/licensed/deer.svg';
 import FishIcon from '@/assets/icons/licensed/fish.svg';
 import PetIcon from '@/assets/icons/licensed/pet.svg';
 import AnimalIcon from '@/assets/icons/licensed/animal.svg';
+import LowercaseAVariant from '@/assets/icons/open_source/a_variant_0.svg';
+import LowercaseGVariant from '@/assets/icons/open_source/g_variant_0.svg';
+import LowercaseQVariant from '@/assets/icons/open_source/q_variant_0.svg';
+import OneVariant0 from '@/assets/icons/open_source/one_variant_0.svg';
+import OneVariant1 from '@/assets/icons/open_source/one_variant_1.svg';
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -444,6 +449,11 @@ export const iconMap: Record<string, React.FC<any>> = {
   pet: PetIcon,
   animal: AnimalIcon,
   'animals vocab': AnimalIcon, // Example for a custom icon
+  a_variant_0: LowercaseAVariant, // Example for a custom icon
+  g_variant_0: LowercaseGVariant, // Example for a custom icon
+  q_variant_0: LowercaseQVariant, // Example for a custom icon
+  one_variant_0: OneVariant0,
+  one_variant_1: OneVariant1, // Example for a custom icon
 
   // ...etc
 };
