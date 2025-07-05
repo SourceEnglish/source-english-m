@@ -32,6 +32,15 @@
     }
   },
   {
+    "rhotic vowels": {
+      "name": "rhotic vowels",
+      "__tags": ["rhotic vowels"],
+      "__type": "vocabulary",
+      "__order": 3.5
+    }
+  },
+
+  {
     "day vocab": {
       "name": "day vocab",
       "__tags": ["days"],

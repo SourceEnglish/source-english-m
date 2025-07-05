@@ -21,7 +21,7 @@ const ɛ = require('@/assets/sounds/ɛ.wav');
 const ɝ = require('@/assets/sounds/ɝ.wav');
 const ɛr = require('@/assets/sounds/ɛr.wav');
 const f = require('@/assets/sounds/f.wav');
-const ɡ = require('@/assets/sounds/ɡ.wav');
+const g = require('@/assets/sounds/g.wav');
 const h = require('@/assets/sounds/h.wav');
 const i = require('@/assets/sounds/i.wav');
 const ɪ = require('@/assets/sounds/ɪ.wav');
@@ -47,6 +47,8 @@ const z = require('@/assets/sounds/z.wav');
 const ʒ = require('@/assets/sounds/ʒ.wav');
 const ʔ = require('@/assets/sounds/ʔ.wav');
 const kw = require('@/assets/sounds/kw.wav');
+const ks = require('@/assets/sounds/ks.wav');
+const ju = require('@/assets/sounds/ju.wav');
 
 export const soundsMap: Map<string, any> = new Map([
   ['tʃ.wav', tʃ],
@@ -60,6 +62,7 @@ export const soundsMap: Map<string, any> = new Map([
   ['ɑr.wav', ɑr],
   ['aʊ.wav', aʊ],
   ['b.wav', b],
+  ['g.wav', g],
   ['ɔ.wav', ɔ],
   ['ɔɪ.wav', ɔɪ],
   ['ɔr.wav', ɔr],
@@ -72,7 +75,7 @@ export const soundsMap: Map<string, any> = new Map([
   ['ɝ.wav', ɝ],
   ['ɛr.wav', ɛr],
   ['f.wav', f],
-  ['ɡ.wav', ɡ],
+  ['g.wav', g],
   ['h.wav', h],
   ['i.wav', i],
   ['ɪ.wav', ɪ],
@@ -98,6 +101,8 @@ export const soundsMap: Map<string, any> = new Map([
   ['ʒ.wav', ʒ],
   ['ʔ.wav', ʔ],
   ['kw.wav', kw],
+  ['ks.wav', ks],
+  ['ju.wav', ju],
 ]);
 
 const posColors: Record<string, string> = {

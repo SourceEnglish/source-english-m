@@ -10,7 +10,37 @@
       "word": "Aa",
       "translation_note": "",
       "__vowel": true,
-      "__consonant": false
+      "__consonant": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "æ",
+          "__forced_pronunciation": "æ.wav",
+          "examples": ["cat", "apple", "hat"],
+          "header": "/æ/ (short)",
+          "__header_pronunciation": "æ.wav"
+        },
+        {
+          "__ipa": "eɪ",
+          "__forced_pronunciation": "eɪ.wav",
+          "examples": ["cake", "play", "name"],
+          "header": "/eɪ/ (long)",
+          "__header_pronunciation": "eɪ.wav"
+        },
+        {
+          "__ipa": "ə",
+          "__forced_pronunciation": "ə.wav",
+          "examples": ["sofa", "America", "comma"],
+          "header": "/ə/ (schwa)",
+          "__header_pronunciation": "ə.wav"
+        },
+        {
+          "__ipa": "ɑ",
+          "__forced_pronunciation": "ɑ.wav",
+          "examples": ["father", "car", "park"],
+          "header": "/ɑ/ (broad)",
+          "__header_pronunciation": "ɑ.wav"
+        }
+      ]
     }
   },
   {
@@ -23,7 +53,16 @@
       "word": "Bb",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "b",
+          "__forced_pronunciation": "b.wav",
+          "examples": ["boy", "bird", "bus"],
+          "header": "/b/",
+          "__header_pronunciation": "b.wav"
+        }
+      ]
     }
   },
   {
@@ -36,7 +75,23 @@
       "word": "Cc",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "c",
+          "__forced_pronunciation": "k.wav",
+          "examples": ["cat", "car", "coat"],
+          "header": "/k/",
+          "__header_pronunciation": "k.wav"
+        },
+        {
+          "__ipa": "s",
+          "__forced_pronunciation": "s.wav",
+          "examples": ["city", "cent", "circle"],
+          "header": "/s/",
+          "__header_pronunciation": "s.wav"
+        }
+      ]
     }
   },
   {
@@ -49,7 +104,16 @@
       "word": "Dd",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "d",
+          "__forced_pronunciation": "d.wav",
+          "examples": ["dog", "door", "duck"],
+          "header": "/d/",
+          "__header_pronunciation": "d.wav"
+        }
+      ]
     }
   },
   {
@@ -62,7 +126,30 @@
       "word": "Ee",
       "translation_note": "",
       "__vowel": true,
-      "__consonant": false
+      "__consonant": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɛ",
+          "__forced_pronunciation": "ɛ.wav",
+          "examples": ["bed", "red", "pen"],
+          "header": "/ɛ/ (short)",
+          "__header_pronunciation": "ɛ.wav"
+        },
+        {
+          "__ipa": "i",
+          "__forced_pronunciation": "i.wav",
+          "examples": ["he", "she", "we"],
+          "header": "/i/ (long)",
+          "__header_pronunciation": "i.wav"
+        },
+        {
+          "__ipa": "ə",
+          "__forced_pronunciation": "ə.wav",
+          "examples": ["problem", "open", "sentence"],
+          "header": "/ə/ (schwa)",
+          "__header_pronunciation": "ə.wav"
+        }
+      ]
     }
   },
   {
@@ -75,7 +162,16 @@
       "word": "Ff",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "f",
+          "__forced_pronunciation": "f.wav",
+          "examples": ["fish", "family", "four"],
+          "header": "/f/",
+          "__header_pronunciation": "f.wav"
+        }
+      ]
     }
   },
   {
@@ -88,7 +184,16 @@
       "word": "Gg",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɡ",
+          "__forced_pronunciation": "g.wav",
+          "examples": ["girl", "go", "green"],
+          "header": "/ɡ/",
+          "__header_pronunciation": "g.wav"
+        }
+      ]
     }
   },
   {
@@ -101,7 +206,16 @@
       "word": "Hh",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "h",
+          "__forced_pronunciation": "h.wav",
+          "examples": ["hat", "house", "hello"],
+          "header": "/h/",
+          "__header_pronunciation": "h.wav"
+        }
+      ]
     }
   },
   {
@@ -114,7 +228,30 @@
       "word": "Ii",
       "translation_note": "",
       "__vowel": true,
-      "__consonant": false
+      "__consonant": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɪ",
+          "__forced_pronunciation": "ɪ.wav",
+          "examples": ["sit", "big", "fish"],
+          "header": "/ɪ/ (short)",
+          "__header_pronunciation": "ɪ.wav"
+        },
+        {
+          "__ipa": "aɪ",
+          "__forced_pronunciation": "aɪ.wav",
+          "examples": ["like", "time", "five"],
+          "header": "/aɪ/ (long)",
+          "__header_pronunciation": "aɪ.wav"
+        },
+        {
+          "__ipa": "ə",
+          "__forced_pronunciation": "ə.wav",
+          "examples": ["pencil", "animal", "April"],
+          "header": "/ə/ (schwa)",
+          "__header_pronunciation": "ə.wav"
+        }
+      ]
     }
   },
   {
@@ -127,7 +264,16 @@
       "word": "Jj",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "dʒ",
+          "__forced_pronunciation": "dʒ.wav",
+          "examples": ["juice", "job", "July"],
+          "header": "/dʒ/",
+          "__header_pronunciation": "dʒ.wav"
+        }
+      ]
     }
   },
   {
@@ -140,7 +286,16 @@
       "word": "Kk",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "k",
+          "__forced_pronunciation": "k.wav",
+          "examples": ["kid", "kind", "kiss"],
+          "header": "/k/",
+          "__header_pronunciation": "k.wav"
+        }
+      ]
     }
   },
   {
@@ -153,7 +308,16 @@
       "word": "Ll",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "l",
+          "__forced_pronunciation": "l.wav",
+          "examples": ["lamp", "like", "love"],
+          "header": "/l/",
+          "__header_pronunciation": "l.wav"
+        }
+      ]
     }
   },
   {
@@ -166,7 +330,16 @@
       "word": "Mm",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "m",
+          "__forced_pronunciation": "m.wav",
+          "examples": ["man", "month", "May"],
+          "header": "/m/",
+          "__header_pronunciation": "m.wav"
+        }
+      ]
     }
   },
   {
@@ -179,7 +352,16 @@
       "word": "Nn",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "n",
+          "__forced_pronunciation": "n.wav",
+          "examples": ["no", "number", "new"],
+          "header": "/n/",
+          "__header_pronunciation": "n.wav"
+        }
+      ]
     }
   },
   {
@@ -192,7 +374,39 @@
       "word": "Oo",
       "translation_note": "",
       "__vowel": true,
-      "__consonant": false
+      "__consonant": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɑ",
+          "__forced_pronunciation": "ɑ.wav",
+          "examples": ["hot", "not", "stop"],
+          "header": "/ɑ/ (short)",
+          "__header_pronunciation": "ɑ.wav"
+        },
+
+        {
+          "__ipa": "oʊ",
+          "__forced_pronunciation": "oʊ.wav",
+          "examples": ["go", "no", "home"],
+          "header": "/oʊ/ (long)",
+          "__header_pronunciation": "oʊ.wav"
+        },
+
+        {
+          "__ipa": "u",
+          "__forced_pronunciation": "u.wav",
+          "examples": ["do", "to", "who"],
+          "header": "/u/ (long U)",
+          "__header_pronunciation": "u.wav"
+        },
+        {
+          "__ipa": "ɔ",
+          "__forced_pronunciation": "ɔ.wav",
+          "examples": ["dog", "off", "long"],
+          "header": "/ɔ/ (open)",
+          "__header_pronunciation": "ɔ.wav"
+        }
+      ]
     }
   },
   {
@@ -205,7 +419,16 @@
       "word": "Pp",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "p",
+          "__forced_pronunciation": "p.wav",
+          "examples": ["pen", "pig", "person"],
+          "header": "/p/",
+          "__header_pronunciation": "p.wav"
+        }
+      ]
     }
   },
   {
@@ -218,7 +441,16 @@
       "word": "Qq",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "kw",
+          "__forced_pronunciation": "kw.wav",
+          "examples": ["queen", "quick", "question"],
+          "header": "/kw/",
+          "__header_pronunciation": "kw.wav"
+        }
+      ]
     }
   },
   {
@@ -231,7 +463,16 @@
       "word": "Rr",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "r",
+          "__forced_pronunciation": "r.wav",
+          "examples": ["red", "run", "rainy"],
+          "header": "/r/",
+          "__header_pronunciation": "r.wav"
+        }
+      ]
     }
   },
   {
@@ -244,7 +485,16 @@
       "word": "Ss",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "s",
+          "__forced_pronunciation": "s.wav",
+          "examples": ["sunny", "stop", "school"],
+          "header": "/s/",
+          "__header_pronunciation": "s.wav"
+        }
+      ]
     }
   },
   {
@@ -257,7 +507,16 @@
       "word": "Tt",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "t",
+          "__forced_pronunciation": "t.wav",
+          "examples": ["tall", "table", "teacher"],
+          "header": "/t/",
+          "__header_pronunciation": "t.wav"
+        }
+      ]
     }
   },
   {
@@ -270,7 +529,37 @@
       "word": "Uu",
       "translation_note": "",
       "__vowel": true,
-      "__consonant": false
+      "__consonant": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ʌ",
+          "__forced_pronunciation": "ʌ.wav",
+          "examples": ["cup", "sunny", "up"],
+          "header": "/ʌ/ (short)",
+          "__header_pronunciation": "ʌ.wav"
+        },
+        {
+          "__ipa": "ju",
+          "__forced_pronunciation": "ju.wav",
+          "examples": ["use", "uniform", "university"],
+          "header": "/ju/ (long)",
+          "__header_pronunciation": "ju.wav"
+        },
+        {
+          "__ipa": "u",
+          "__forced_pronunciation": "u.wav",
+          "examples": ["June", "blue", "fruit"],
+          "header": "/uː/ (long oo)",
+          "__header_pronunciation": "u.wav"
+        },
+        {
+          "__ipa": "ʊ",
+          "__forced_pronunciation": "ʊ.wav",
+          "examples": ["put", "pull", "push"],
+          "header": "/ʊ/ (short oo)",
+          "__header_pronunciation": "ʊ.wav"
+        }
+      ]
     }
   },
   {
@@ -283,7 +572,16 @@
       "word": "Vv",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "v",
+          "__forced_pronunciation": "v.wav",
+          "examples": ["very", "vehicle", "video"],
+          "header": "/v/",
+          "__header_pronunciation": "v.wav"
+        }
+      ]
     }
   },
   {
@@ -296,7 +594,16 @@
       "word": "Ww",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "w",
+          "__forced_pronunciation": "w.wav",
+          "examples": ["water", "window", "woman"],
+          "header": "/w/",
+          "__header_pronunciation": "w.wav"
+        }
+      ]
     }
   },
   {
@@ -309,7 +616,16 @@
       "word": "Xx",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "ks",
+          "__forced_pronunciation": "ks.wav",
+          "examples": ["box", "six", "next"],
+          "header": "/ks/",
+          "__header_pronunciation": "ks.wav"
+        }
+      ]
     }
   },
   {
@@ -322,7 +638,30 @@
       "word": "Yy",
       "translation_note": "",
       "__vowel": true,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "j",
+          "__forced_pronunciation": "j.wav",
+          "examples": ["yellow", "you", "yes"],
+          "header": "/j/ (consonant)",
+          "__header_pronunciation": "j.wav"
+        },
+        {
+          "__ipa": "i",
+          "__forced_pronunciation": "i.wav",
+          "examples": ["candy", "happy", "sunny"],
+          "header": "/i/ (short)",
+          "__header_pronunciation": "i.wav"
+        },
+        {
+          "__ipa": "aɪ",
+          "__forced_pronunciation": "aɪ.wav",
+          "examples": ["my", "fly", "sky"],
+          "header": "/aɪ/ (long)",
+          "__header_pronunciation": "aɪ.wav"
+        }
+      ]
     }
   },
   {
@@ -335,7 +674,16 @@
       "word": "Zz",
       "translation_note": "",
       "__vowel": false,
-      "__consonant": true
+      "__consonant": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "z",
+          "__forced_pronunciation": "z.wav",
+          "examples": ["zero", "zoo", "pizza"],
+          "header": "/z/",
+          "__header_pronunciation": "z.wav"
+        }
+      ]
     }
   },
 
@@ -3979,7 +4327,184 @@
       ]
     }
   },
-
+  {
+    "er": {
+      "word": "er",
+      "__forced_pronunciation": "ɝ.wav",
+      "__pos": "multigraph",
+      "__tags": ["multigraphs", "rhotic vowels"],
+      "__icon_text": "er",
+      "__show_word": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɚ",
+          "__forced_pronunciation": "ɚ.wav",
+          "examples": ["mother", "number", "teacher"],
+          "header": "/ɚ/",
+          "__header_pronunciation": "ɚ.wav"
+        }
+      ]
+    }
+  },
+  {
+    "ir": {
+      "word": "ir",
+      "__forced_pronunciation": "ɝ.wav",
+      "__pos": "multigraph",
+      "__tags": ["multigraphs", "rhotic vowels"],
+      "__icon_text": "ir",
+      "__show_word": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɝ",
+          "__forced_pronunciation": "ɝ.wav",
+          "examples": ["bird", "girl", "shirt"],
+          "header": "/ɝ/",
+          "__header_pronunciation": "ɝ.wav"
+        }
+      ]
+    }
+  },
+  {
+    "ur": {
+      "word": "ur",
+      "__forced_pronunciation": "ɝ.wav",
+      "__pos": "multigraph",
+      "__tags": ["multigraphs", "rhotic vowels"],
+      "__icon_text": "ur",
+      "__show_word": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɝ",
+          "__forced_pronunciation": "ɝ.wav",
+          "examples": ["fur", "turn", "nurse"],
+          "header": "/ɝ/",
+          "__header_pronunciation": "ɝ.wav"
+        }
+      ]
+    }
+  },
+  {
+    "ear": {
+      "word": "ear",
+      "__forced_pronunciation": "ɪr.wav",
+      "__pos": "multigraph",
+      "__tags": ["multigraphs", "rhotic vowels"],
+      "__icon_text": "ear",
+      "__show_word": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɪr",
+          "__forced_pronunciation": "ɪr.wav",
+          "examples": ["ear", "dear", "fear"],
+          "header": "/ɪr/",
+          "__header_pronunciation": "ɪr.wav"
+        }
+      ]
+    }
+  },
+  {
+    "eer": {
+      "word": "eer",
+      "__forced_pronunciation": "ɪr.wav",
+      "__pos": "multigraph",
+      "__tags": ["multigraphs", "rhotic vowels"],
+      "__icon_text": "eer",
+      "__show_word": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɪr",
+          "__forced_pronunciation": "ɪr.wav",
+          "examples": ["deer", "career", "peer"],
+          "header": "/ɪr/",
+          "__header_pronunciation": "ɪr.wav"
+        }
+      ]
+    }
+  },
+  {
+    "air": {
+      "word": "air",
+      "__forced_pronunciation": "ɛr.wav",
+      "__pos": "multigraph",
+      "__tags": ["multigraphs", "rhotic vowels"],
+      "__icon_text": "air",
+      "__show_word": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɛr",
+          "__forced_pronunciation": "ɛr.wav",
+          "examples": ["air", "hair", "fair"],
+          "header": "/ɛr/",
+          "__header_pronunciation": "ɛr.wav"
+        }
+      ]
+    }
+  },
+  {
+    "ar": {
+      "word": "ar",
+      "__forced_pronunciation": "ɑr.wav",
+      "__pos": "multigraph",
+      "__tags": ["multigraphs", "rhotic vowels"],
+      "__icon_text": "ar",
+      "__show_word": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɑr",
+          "__forced_pronunciation": "ɑr.wav",
+          "examples": ["car", "star", "are"],
+          "header": "/ɑr/",
+          "__header_pronunciation": "ɑr.wav"
+        }
+      ]
+    }
+  },
+  {
+    "or": {
+      "word": "or",
+      "__forced_pronunciation": "ɔr.wav",
+      "__pos": "multigraph",
+      "__tags": ["multigraphs", "rhotic vowels"],
+      "__icon_text": "or",
+      "__show_word": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɔr",
+          "__forced_pronunciation": "ɔr.wav",
+          "examples": ["or", "for", "corn"],
+          "header": "/ɔr/",
+          "__header_pronunciation": "ɔr.wav"
+        },
+        {
+          "__ipa": "ɚ",
+          "__forced_pronunciation": "ɚ.wav",
+          "examples": ["word", "color", "work"],
+          "header": "/ɚ/",
+          "__header_pronunciation": "ɚ.wav"
+        }
+      ]
+    }
+  },
+  {
+    "ire": {
+      "word": "ire",
+      "__forced_pronunciation": "aɪr.wav",
+      "__pos": "multigraph",
+      "__tags": ["multigraphs", "rhotic vowels"],
+      "__icon_text": "ire",
+      "__show_word": false,
+      "__exampleEntries": [
+        {
+          "__ipa": "aɪr",
+          "__forced_pronunciation": "aɪr.wav",
+          "examples": ["fire", "tire", "wire"],
+          "header": "/aɪr/",
+          "__header_pronunciation": "aɪr.wav"
+        }
+      ]
+    }
+  },
   {
     "photo": {
       "__pos": "noun",

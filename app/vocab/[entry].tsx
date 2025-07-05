@@ -379,7 +379,8 @@ export default function VocabEntryPage() {
             alignSelf: 'center',
           }}
         >
-          {vocabEntry.__pos === 'multigraph' ? (
+          {vocabEntry.__pos === 'multigraph' ||
+          vocabEntry.__pos === 'letter' ? (
             (vocabEntry as any).__exampleEntries && (
               <ExampleEntries
                 entries={(vocabEntry as any).__exampleEntries.map((e: any) => ({
