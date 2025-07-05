@@ -109,7 +109,7 @@
         {
           "__ipa": "d",
           "__forced_pronunciation": "d.wav",
-          "examples": ["dog", "door", "duck"],
+          "examples": ["dog", "door", "December"],
           "header": "/d/",
           "__header_pronunciation": "d.wav"
         }
@@ -3848,16 +3848,7 @@
       "translation_note": ""
     }
   },
-  {
-    "sheep": {
-      "__pos": "noun",
-      "__tags": ["nouns", "animals"],
-      "plural": "sheep",
-      "word": "sheep",
-      "examples": ["The sheep are grazing in the field."],
-      "translation_note": ""
-    }
-  },
+
   {
     "wait": {
       "__pos": "verb",
@@ -4576,6 +4567,125 @@
       "plural": "things",
       "translation_note": "",
       "examples": ["What is that thing?", "I have many things to do."]
+    }
+  },
+  {
+    "cat": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals", "pets"],
+      "word": "cat",
+      "plural": "cats",
+      "translation_note": "",
+      "examples": [
+        "The cat is sleeping on the sofa.",
+        "She has two cats at home."
+      ]
+    }
+  },
+  {
+    "dog": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals", "pets"],
+      "word": "dog",
+      "plural": "dogs",
+      "translation_note": "",
+      "examples": [
+        "The dog is barking.",
+        "He takes his dog for a walk every day."
+      ]
+    }
+  },
+  {
+    "cow": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals", "farm animals"],
+      "word": "cow",
+      "plural": "cows",
+      "translation_note": "",
+      "examples": [
+        "The cow gives us milk.",
+        "There are many cows in the field."
+      ]
+    }
+  },
+
+  {
+    "bird": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals"],
+      "word": "bird",
+      "plural": "birds",
+      "translation_note": "",
+      "examples": ["The bird is singing.", "I saw many birds in the park."]
+    }
+  },
+  {
+    "pig": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals", "farm animals"],
+      "word": "pig",
+      "plural": "pigs",
+      "translation_note": "",
+      "examples": [
+        "The pig is rolling in the mud.",
+        "There are five pigs on the farm."
+      ]
+    }
+  },
+  {
+    "sheep": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals", "farm animals"],
+      "word": "sheep",
+      "plural": "sheep",
+      "translation_note": "",
+      "examples": [
+        "The sheep are grazing in the field.",
+        "We saw a flock of sheep."
+      ]
+    }
+  },
+  {
+    "deer": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals", "wild animals"],
+      "word": "deer",
+      "plural": "deer",
+      "translation_note": "",
+      "examples": [
+        "A deer ran across the road.",
+        "There are many deer in the forest."
+      ]
+    }
+  },
+  {
+    "fish": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals"],
+      "word": "fish",
+      "plural": "fish",
+      "translation_note": "",
+      "examples": ["I have a goldfish.", "We saw many fish in the aquarium."]
+    }
+  },
+  {
+    "pet": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals", "pets"],
+      "word": "pet",
+      "plural": "pets",
+      "translation_note": "",
+      "examples": ["A cat is a common pet.", "Do you have any pets?"]
+    }
+  },
+  {
+    "animal": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals"],
+      "word": "animal",
+      "plural": "animals",
+      "translation_note": "",
+      "examples": ["A dog is an animal.", "There are many animals at the zoo."]
     }
   }
 ]

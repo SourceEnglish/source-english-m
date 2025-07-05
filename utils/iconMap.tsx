@@ -159,6 +159,15 @@ import ClothingIcon from '@/assets/icons/licensed/clothing.svg'; // Example for 
 import ChairIcon from '@/assets/icons/licensed/chair.svg'; // Example for a custom icon
 import ChickenIcon from '@/assets/icons/licensed/chicken.svg'; // Example for a custom icon
 import TeacherIcon from '@/assets/icons/licensed/teacher.svg'; // Add this import
+import CatIcon from '@/assets/icons/licensed/cat.svg';
+import DogIcon from '@/assets/icons/licensed/dog.svg';
+import CowIcon from '@/assets/icons/licensed/cow.svg';
+import BirdIcon from '@/assets/icons/licensed/bird.svg';
+import PigIcon from '@/assets/icons/licensed/pig.svg';
+import DeerIcon from '@/assets/icons/licensed/deer.svg';
+import FishIcon from '@/assets/icons/licensed/fish.svg';
+import PetIcon from '@/assets/icons/licensed/pet.svg';
+import AnimalIcon from '@/assets/icons/licensed/animal.svg';
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -425,6 +434,16 @@ export const iconMap: Record<string, React.FC<any>> = {
   chair: ChairIcon, // Example for a custom icon
   chicken: ChickenIcon, // Example for a custom icon
   teacher: TeacherIcon,
+  cat: CatIcon,
+  dog: DogIcon,
+  cow: CowIcon,
+  bird: BirdIcon,
+  pig: PigIcon,
+  deer: DeerIcon,
+  fish: FishIcon,
+  pet: PetIcon,
+  animal: AnimalIcon,
+  'animals vocab': AnimalIcon, // Example for a custom icon
 
   // ...etc
 };
