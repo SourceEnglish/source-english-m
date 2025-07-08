@@ -13,6 +13,7 @@ import { getLessons } from '@/utils/loadLessons';
 import vocabulary from '@/i18n/locales/en-us/vocabulary.json';
 import { t } from 'i18next';
 import SearchIcon from '@/assets/icons/open_source/search.svg';
+import { findIconComponent } from '@/utils/iconMap';
 
 const MAX_SUGGESTIONS = 8;
 
@@ -37,6 +38,7 @@ function flattenVocabulary(vocabArr: any[]): {
   altWords?: string[];
   pos?: string;
   redirect?: string;
+  __icon_text?: string;
 }[] {
   // Prevent duplicate display of the same word+clarifier+key combo, but allow both "I" (letter) and "I (pronoun)"
   const seen = new Set<string>();
@@ -47,6 +49,7 @@ function flattenVocabulary(vocabArr: any[]): {
     altWords?: string[];
     pos?: string;
     redirect?: string;
+    __icon_text?: string;
   }[] = [];
   vocabArr.forEach((entry) => {
     const key = Object.keys(entry)[0];
@@ -66,6 +69,7 @@ function flattenVocabulary(vocabArr: any[]): {
           key,
           pos: value.__pos,
           redirect: value.__redirect,
+          __icon_text: value.__icon_text,
         });
         seen.add(sig);
       }
@@ -88,6 +92,7 @@ function flattenVocabulary(vocabArr: any[]): {
           altWords: [value.__icon_text, value.word],
           pos: value.__pos,
           redirect: value.__redirect,
+          __icon_text: value.__icon_text,
         });
         seen.add(sig);
       }
@@ -171,6 +176,7 @@ function flattenVocabulary(vocabArr: any[]): {
           altWords,
           pos: value.__pos,
           redirect: value.__redirect,
+          __icon_text: value.__icon_text,
         });
         seen.add(sig);
       }
@@ -270,6 +276,7 @@ export default function SearchBar() {
     key?: string;
     altWords?: string[];
     pos?: string;
+    __icon_text?: string;
   };
 
   let allSuggestions: Suggestion[] = [
@@ -288,6 +295,7 @@ export default function SearchBar() {
       key: v.key,
       altWords: v.altWords,
       pos: v.pos,
+      __icon_text: v.__icon_text,
     })),
   ].filter((item) => {
     const q = query.trim().toLowerCase();
@@ -336,6 +344,7 @@ export default function SearchBar() {
     key?: string;
     pos?: string;
     emoji?: string;
+    __icon_text?: string;
   }[] = [];
 
   if (query.length === 1 && /^[a-zA-Z]$/.test(query)) {
@@ -349,6 +358,7 @@ export default function SearchBar() {
         clarifier: v.clarifier,
         key: v.key,
         pos: v.pos,
+        __icon_text: v.__icon_text,
       }));
 
     const rest = allSuggestions.filter(
@@ -395,19 +405,22 @@ export default function SearchBar() {
             data={suggestions}
             keyExtractor={(item) => `${item.type}:${item.key || item.name}`}
             renderItem={({ item }) => {
-              let emoji = '📝';
+              // Use icon instead of emoji
+              let iconComponent: React.FC<any>;
               if (item.type === 'lesson') {
-                emoji =
-                  item.emoji || (item.name.endsWith('vocab') ? '📗' : '📘');
-              } else if (item.type === 'vocab' && item.pos) {
-                emoji = posEmoji[item.pos] || posEmoji.default;
+                iconComponent = findIconComponent({ name: item.name });
+              } else {
+                // For vocab, try to find the vocab entry for more info
+                const vocabEntry =
+                  vocabEntries.find((v) => v.key === item.key) || item;
+                iconComponent = findIconComponent(vocabEntry);
               }
+              const Icon = iconComponent;
               // Prevent focus from shifting away on press/longPress
               const handlePress = (e: any) => {
                 e.preventDefault?.();
                 e.stopPropagation?.();
                 handleSelect(item);
-                // Refocus the input if needed
                 inputRef.current?.focus();
               };
               return (
@@ -418,11 +431,22 @@ export default function SearchBar() {
                   delayLongPress={100}
                   activeOpacity={0.6}
                 >
-                  <Text style={styles.suggestionText}>
-                    {emoji + ' '}
-                    {t(item.name)}
-                    {item.clarifier ? ` (${item.clarifier})` : ''}
-                  </Text>
+                  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Icon width={22} height={22} style={{ marginRight: 8 }} />
+                    <View
+                      style={{
+                        width: 1,
+                        height: 22,
+                        backgroundColor: '#e0e0e0',
+                        marginHorizontal: 8,
+                        borderRadius: 1,
+                      }}
+                    />
+                    <Text style={styles.suggestionText}>
+                      {t(item.name)}
+                      {item.clarifier ? ` (${item.clarifier})` : ''}
+                    </Text>
+                  </View>
                 </TouchableOpacity>
               );
             }}

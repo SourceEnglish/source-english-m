@@ -183,19 +183,22 @@ export const TextIcon: React.FC<{
   text: string;
   size?: number;
   textsize?: number;
-  textwidth?: number;
   fontSize?: number;
   pronunciation?: string;
-}> = ({ text, size = 32, fontSize, textwidth, textsize, pronunciation }) => (
+  style?: any;
+}> = ({ text, size = 32, fontSize, textsize, pronunciation, style }) => (
   <View
-    style={{
-      width: textwidth ? textwidth : size,
-      height: size,
-      borderRadius: 6,
-      alignItems: 'center',
-      justifyContent: 'center',
-      overflow: 'hidden',
-    }}
+    style={[
+      {
+        width: size,
+        height: size,
+        borderRadius: 6,
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+      },
+      style,
+    ]}
   >
     <ReadableText
       text={text}
@@ -213,7 +216,7 @@ export const TextIcon: React.FC<{
         color: '#333',
         fontWeight: '500',
         textAlign: 'center',
-        fontFamily: 'Lexend_400Regular', // <-- Use the loaded font name
+        fontFamily: 'Lexend_400Regular',
         marginBottom: 0,
         padding: 0,
       }}
@@ -467,7 +470,6 @@ export function getIconForEntry(entry: any): React.FC<any> {
     return (props: any) => (
       <TextIcon
         text={iconText}
-        textwidth={props.textwidth || 25}
         textsize={props.textsize || 25}
         fontSize={props.fontSize || 25}
         size={props.textwidth || 28}
@@ -488,4 +490,50 @@ export function getIconForEntry(entry: any): React.FC<any> {
   return (props: any) => (
     <GenericTextIcon word={entry.word || entry} size={props.width || 28} />
   );
+}
+
+// New: Find icon component for a suggestion entry (by various keys, fallback to TextIcon)
+export function findIconComponent(entry: any): React.FC<any> {
+  // Try __objectKey, key, word, name, pos, tags, etc.
+  const tryKeys: string[] = [];
+  if (entry.__objectKey) tryKeys.push(entry.__objectKey.toLowerCase());
+  if (entry.key) tryKeys.push(entry.key.toLowerCase());
+  if (entry.word) tryKeys.push(entry.word.toLowerCase());
+  if (entry.name) tryKeys.push(entry.name.toLowerCase());
+  if (entry.pos) tryKeys.push(entry.pos.toLowerCase());
+  if (Array.isArray(entry.__tags))
+    tryKeys.push(...entry.__tags.map((t: string) => t.toLowerCase()));
+  // Try each key in iconMap
+  for (const k of tryKeys) {
+    if (iconMap[k]) return iconMap[k];
+  }
+  // Fallback: if __icon_text is present, use TextIcon
+  if (entry.__icon_text) {
+    const iconText = entry.__icon_text;
+    const pronunciation = entry.__forced_pronunciation;
+    return (props: any) => {
+      const size = props.width || props.height || 22;
+      const charCount = (iconText || '').length || 1;
+      let fontSize = (size / (charCount * 0.6)) * 0.95;
+      if (fontSize > size * 0.95) fontSize = size * 0.95;
+      if (fontSize < 8) fontSize = 8;
+      return (
+        <TextIcon
+          text={iconText}
+          size={size}
+          textsize={fontSize}
+          fontSize={fontSize}
+          pronunciation={pronunciation}
+          style={props.style}
+        />
+      );
+    };
+  }
+  // Fallback: show first letter as GenericTextIcon
+  return (props: any) => {
+    const size = props.width || props.height || 22;
+    return (
+      <GenericTextIcon word={entry.word || entry.name || ''} size={size} />
+    );
+  };
 }
