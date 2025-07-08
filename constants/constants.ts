@@ -106,8 +106,8 @@ export const soundsMap: Map<string, any> = new Map([
 ]);
 
 const posColors: Record<string, string> = {
-  adverb: '#FFB6C1',
-  preposition: '#ADD8E6',
+  adverb: '#E00078',
+  preposition: '#389BBC',
   noun: '#D32F2F', // Prominent red
   verb: '#438943',
 
@@ -124,6 +124,8 @@ const posColors: Record<string, string> = {
   vowel: '#0C71B9',
   consonant: '#F44C40',
   multigraph: '#8e44ad', // Add this line for multigraph color
+  article: '#6E6E6E',
+  letter: '#000000',
 };
 
 // Centralized max width for centered layouts
@@ -135,7 +137,127 @@ export const ANIMATED_LETTER_COLORS = [
   '#ff9100', // orange
   '#0a9a00', // pink
   '#1976D2', // blue (for 4-stroke letters)
-  '#43a047', // green (for 5th stroke if needed)
+  '#9300f5', // green (for 5th stroke if needed)
 ];
+
+// Approximate Lexend font character widths (relative to fontSize)
+const lexendCharWidths: Record<string, number> = {
+  ' ': 0.28,
+  '.': 0.28,
+  ',': 0.28,
+  ':': 0.28,
+  ';': 0.28,
+  '|': 0.28,
+  '!': 0.32,
+  i: 0.32,
+  l: 0.32,
+  I: 0.36,
+  j: 0.36,
+  t: 0.38,
+  f: 0.42,
+  r: 0.44,
+  s: 0.48,
+  J: 0.48,
+  '1': 0.48,
+  a: 0.54,
+  c: 0.54,
+  e: 0.54,
+  o: 0.54,
+  u: 0.54,
+  v: 0.54,
+  x: 0.54,
+  z: 0.54,
+  b: 0.58,
+  d: 0.58,
+  g: 0.58,
+  h: 0.58,
+  k: 0.58,
+  n: 0.58,
+  p: 0.58,
+  q: 0.58,
+  y: 0.58,
+  m: 0.7,
+  w: 0.68,
+  A: 0.62,
+  B: 0.62,
+  C: 0.62,
+  D: 0.62,
+  E: 0.62,
+  F: 0.62,
+  G: 0.62,
+  H: 0.62,
+  K: 0.62,
+  L: 0.62,
+  N: 0.62,
+  O: 0.62,
+  P: 0.62,
+  Q: 0.62,
+  R: 0.62,
+  S: 0.62,
+  U: 0.62,
+  V: 0.62,
+  X: 0.62,
+  Y: 0.62,
+  Z: 0.62,
+  M: 0.75,
+  W: 0.75,
+  '0': 0.58,
+  '2': 0.58,
+  '3': 0.58,
+  '4': 0.58,
+  '5': 0.58,
+  '6': 0.58,
+  '7': 0.58,
+  '8': 0.58,
+  '9': 0.58,
+  '-': 0.38,
+  _: 0.48,
+  '+': 0.48,
+  '=': 0.48,
+  '/': 0.38,
+  '\\': 0.38,
+  '*': 0.48,
+  '?': 0.54,
+  '@': 0.68,
+  '#': 0.58,
+  $: 0.58,
+  '%': 0.68,
+  '&': 0.62,
+  '^': 0.48,
+  '(': 0.36,
+  ')': 0.36,
+  '[': 0.36,
+  ']': 0.36,
+  '{': 0.36,
+  '}': 0.36,
+  '<': 0.48,
+  '>': 0.48,
+  "'": 0.22,
+  '"': 0.32,
+};
+
+export function getLexendFontSizeToFit(
+  text: string,
+  boxSize: number,
+  minFontSize: number = 8
+): number {
+  function estimateTextWidth(text: string, fontSize: number) {
+    let total = 0;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      total += lexendCharWidths[c] ?? 0.58;
+    }
+    return total * fontSize;
+  }
+  let fontSize = boxSize * 0.9;
+  for (let trySize = fontSize; trySize >= minFontSize; trySize -= 0.5) {
+    if (estimateTextWidth(text, trySize) <= boxSize * 0.92) {
+      fontSize = trySize;
+      break;
+    }
+  }
+  if (fontSize < minFontSize) fontSize = minFontSize;
+  return fontSize;
+}
 
 export default posColors;

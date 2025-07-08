@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import { Pressable } from 'react-native';
-import posColors from '@/constants/constants';
+import posColors, { getLexendFontSizeToFit } from '@/constants/constants';
 import ReadableText from '@/components/ReadableText';
 import { getIconForEntry } from '@/utils/iconMap'; // Import the icon getter
 import { useRouter } from 'expo-router';
@@ -97,6 +97,14 @@ export default function CardPreview({
     router.push({ pathname: '/vocab/[entry]', params: { entry: key } });
   };
 
+  // Calculate preview font size for the word (for truncation)
+  const previewBoxSize = isMobile ? 90 : 120;
+  const previewFontSize = getLexendFontSizeToFit(
+    word,
+    previewBoxSize,
+    isMobile ? 12 : 16
+  );
+
   return (
     <Pressable
       onPress={handlePress}
@@ -148,7 +156,7 @@ export default function CardPreview({
             pronunciation={__forced_pronunciation}
             displayText={word.length > 14 ? word.slice(0, 13) + '…' : word}
             style={{
-              fontSize: isMobile ? 18 : 28,
+              fontSize: word.length > 10 ? previewFontSize : isMobile ? 18 : 28,
               marginBottom: 4,
               textAlign: 'center',
               flexWrap: 'wrap',

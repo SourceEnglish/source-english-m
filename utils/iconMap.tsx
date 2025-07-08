@@ -553,7 +553,7 @@ export function findIconComponent(entry: any): React.FC<any> {
       q: 0.58,
       y: 0.58,
       m: 0.7,
-      w: 0.7,
+      w: 0.68,
       // Average uppercase
       A: 0.62,
       B: 0.62,
