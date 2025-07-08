@@ -1,18 +1,19 @@
 import { Link } from 'expo-router';
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useSpeech } from '@/contexts/SpeechContext';
 import ReadableText from '@/components/ReadableText';
 import InlineCardPreview from '@/components/InlineCardPreview';
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
-
+import CardsIcon from '@/assets/icons/licensed/cards.svg';
 interface PageLinkProps {
   pagePath: string;
   pageText: string;
   pageTextTranslated: string;
   icon?: React.ReactNode;
+  index?: number; // Optional index prop for testing purposes
 }
 
 const PageLink: React.FC<PageLinkProps> = ({
@@ -20,6 +21,7 @@ const PageLink: React.FC<PageLinkProps> = ({
   pageText,
   pageTextTranslated,
   icon,
+  index,
 }) => {
   const { theme } = useTheme();
   const { readAloudMode, requestedLanguage } = useSpeech();
@@ -35,18 +37,41 @@ const PageLink: React.FC<PageLinkProps> = ({
     // Use type assertion to access the property
     lessonData = (lessonEntry as Record<string, any>)[lessonKey];
   }
-  if (lessonData && lessonData.__type === 'vocabulary') {
+  if (
+    (lessonData && lessonData.__type === 'vocabulary') ||
+    (lessonData?.__type === 'lesson' && lessonData.__vocab_lesson)
+  ) {
     vocabEntries = Array.isArray(vocabularyData)
       ? vocabularyData
           .map((entry: any) => {
             const word = Object.keys(entry)[0];
             return { word, ...entry[word] };
           })
-          .filter((entry: any) =>
-            lessonData.__tags?.some((tag: string) =>
-              entry.__tags?.includes(tag)
-            )
-          )
+          .filter((entry: any) => {
+            if (lessonData?.__type === 'lesson') {
+              // If lessonData is a lesson, get entries from its __vocab_lesson instead
+              if (lessonData.__vocab_lesson) {
+                // Find the vocab lesson entry
+                const vocabLessonEntry = lessonsData.find(
+                  (entry: any) =>
+                    Object.keys(entry)[0] === lessonData.__vocab_lesson
+                );
+                const vocabLessonData = vocabLessonEntry
+                  ? (vocabLessonEntry as Record<string, any>)[
+                      lessonData.__vocab_lesson
+                    ]
+                  : null;
+                return vocabLessonData?.__tags?.some((tag: string) =>
+                  entry.__tags?.includes(tag)
+                );
+              }
+              return false;
+            } else {
+              lessonData.__tags?.some((tag: string) =>
+                entry.__tags?.includes(tag)
+              );
+            }
+          })
           // Sort by __display_priority if present
           .sort((a: any, b: any) => {
             const aHasPriority = typeof a.__display_priority === 'number';
@@ -84,46 +109,147 @@ const PageLink: React.FC<PageLinkProps> = ({
   );
 
   return (
-    <Link
-      href={pagePath as any}
+    <View
       style={{
+        flexDirection: 'row',
+        alignItems: 'stretch',
+        width: '100%',
+        gap: 0,
         backgroundColor: theme.backgroundColor,
         borderRadius: 4,
         padding: 10,
-        paddingLeft: 16,
-        paddingTop: lessonData && lessonData.__type !== 'vocabulary' ? 18 : 10,
-        paddingBottom:
-          lessonData && lessonData.__type !== 'vocabulary' ? 18 : 10,
-        display: 'flex',
-        flexDirection: 'row',
-        width: '100%',
-        opacity: readAloudMode ? 1 : 1,
+        paddingLeft: 10,
+        paddingTop: 10,
+        paddingBottom: 10,
+        borderWidth: 1,
+        borderColor: 'black',
         boxSizing: 'border-box',
         overflow: 'hidden',
       }}
-      onPress={(e) => {
-        if (readAloudMode) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-      }}
     >
-      <View
+      {/* Main page link */}
+      <Link
+        className="rat"
+        href={pagePath as any}
         style={{
+          display: 'flex',
           flexDirection: 'row',
+          width: '75%',
+          opacity: readAloudMode ? 1 : 1,
           alignItems: 'center',
-          flex: 1,
-          minWidth: 0,
-          width: '100%',
+          backgroundColor: 'transparent',
+          // Removed: backgroundColor, borderRadius, padding, boxSizing, overflow
+        }}
+        onPress={(e) => {
+          if (readAloudMode) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
         }}
       >
-        {/* If lessonData is a lesson and has __vocab_lesson, wrap .vocab in a Link */}
-        {lessonData &&
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            flex: 1,
+            minWidth: 0,
+            width: '100%',
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              minWidth: 0,
+              alignItems: 'flex-start',
+              flexDirection: 'column',
+            }}
+          >
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                flexWrap: 'nowrap',
+              }}
+            >
+              {typeof index === 'number' && (
+                <ReadableText
+                  text={String(index).padStart(2, '0')}
+                  pronunciation={'' + index}
+                  style={{
+                    color: theme.textColor,
+                    fontSize: 20,
+                    textAlign: 'left',
+                    marginRight: 6,
+                  }}
+                />
+              )}
+              <Text>{'| '}</Text>
+              <ReadableText
+                text={pageText}
+                style={{
+                  color: theme.textColor,
+                  fontSize: 20,
+                  textAlign: 'left',
+                }}
+                translatedText={
+                  requestedLanguage !== 'en-US' ? pageTextTranslated : undefined
+                }
+              />
+            </View>
+            {/* InlineCardPreviews below the text for vocabulary cards */}
+            {vocabEntries.length > 0 && (
+              <View
+                style={{
+                  flexDirection: 'row',
+                  flexWrap: 'nowrap',
+                  marginTop: 6,
+                  alignItems: 'center',
+                  maxWidth: '100%',
+                  overflow: 'hidden',
+                }}
+              >
+                {vocabEntries.slice(0, maxCards).map((entry: any) => (
+                  <InlineCardPreview key={entry.word} card={entry} />
+                ))}
+              </View>
+            )}
+          </View>
+        </View>
+      </Link>
+      {/* Divider */}
+      <View
+        style={{
+          width: 0,
+          height: '100%',
+          backgroundColor: '#d0d0d0',
+          marginLeft: 5,
+          marginRight: 25,
+
+          alignSelf: 'center',
+        }}
+      />
+      {/* Vocab link as sibling if lessonData is a lesson and has __vocab_lesson */}
+      {lessonData &&
         lessonData.__type === 'lesson' &&
-        lessonData.__vocab_lesson ? (
+        lessonData.__vocab_lesson && (
           <Link
             href={`/${lessonData.__vocab_lesson}`}
-            style={{ textDecorationLine: 'none' }}
+            style={{
+              width: '25%',
+              textDecorationLine: 'none',
+              backgroundColor: '#f0f4fc',
+              borderLeftWidth: 2,
+              borderColor: '#a8b2c5', // 30% darker than #f0f4fc
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingLeft: 10,
+              paddingRight: 10,
+              marginTop: -10,
+              marginBottom: -10,
+              marginRight: -10,
+              marginLeft: -10,
+            }}
             onPress={(e) => {
               if (readAloudMode) {
                 e.preventDefault();
@@ -134,96 +260,42 @@ const PageLink: React.FC<PageLinkProps> = ({
             <View
               className="vocab"
               style={{
-                paddingRight: 5,
-                backgroundColor: 'red',
+                paddingRight: 4,
+
                 cursor: 'pointer',
+                height: '100%',
+                justifyContent: 'center',
+
+                alignItems: 'center',
+                display: 'flex',
+                flexDirection: 'row',
+
+                borderColor: 'black',
+                borderRadius: 4,
               }}
             >
-              {icon}
+              <View
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '100%',
+                }}
+              >
+                {icon}
+                <ReadableText
+                  text={'vocab'}
+                  style={{
+                    fontSize: 16,
+
+                    textAlign: 'center',
+                  }}
+                ></ReadableText>
+              </View>
             </View>
           </Link>
-        ) : (
-          <View
-            className="rat"
-            style={{ paddingRight: 5, backgroundColor: 'red' }}
-          >
-            {icon}
-            {lessonData &&
-              lessonData.__type === 'vocabulary' &&
-              !lessonData.__tags?.includes('letters') &&
-              !lessonData.__tags?.includes('numbers') && (
-                <View
-                  style={{
-                    backgroundColor: '#176a3d',
-                    borderRadius: 4,
-                    paddingHorizontal: 1,
-                    paddingVertical: 1,
-                    marginTop: 2,
-                    alignSelf: 'center',
-                  }}
-                >
-                  <span
-                    style={{
-                      color: '#fff',
-                      fontSize: 11,
-                      textAlign: 'center',
-                      textTransform: 'uppercase',
-                      fontFamily: 'Lexend_400Regular, sans-serif',
-                      display: 'block',
-                      lineHeight: '12px',
-                      width: '100%',
-                      overflow: 'hidden',
-                      whiteSpace: 'nowrap',
-                      textOverflow: 'ellipsis',
-                    }}
-                  >
-                    vocab
-                  </span>
-                </View>
-              )}
-          </View>
         )}
-        <View
-          style={{
-            width: 1,
-            height: 28,
-            backgroundColor: '#d0d0d0',
-            marginHorizontal: 10,
-            alignSelf: 'center',
-          }}
-        />
-        <View style={{ flex: 1, minWidth: 0, alignItems: 'flex-start' }}>
-          <ReadableText
-            text={pageText}
-            style={{
-              color: theme.textColor,
-              fontSize: 20,
-              textAlign: 'left',
-            }}
-            translatedText={
-              requestedLanguage !== 'en-US' ? pageTextTranslated : undefined
-            }
-          />
-          {/* InlineCardPreviews below the text for vocabulary cards */}
-          {vocabEntries.length > 0 && (
-            <View
-              style={{
-                flexDirection: 'row',
-                flexWrap: 'nowrap',
-                marginTop: 6,
-                alignItems: 'center',
-                maxWidth: '100%',
-                overflow: 'hidden',
-              }}
-            >
-              {vocabEntries.slice(0, maxCards).map((entry: any) => (
-                <InlineCardPreview key={entry.word} card={entry} />
-              ))}
-            </View>
-          )}
-        </View>
-      </View>
-    </Link>
+    </View>
   );
 };
 

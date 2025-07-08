@@ -1,3 +1,4 @@
+import CardsIcon from '@/assets/icons/licensed/cards.svg';
 import AppleIcon from '@/assets/icons/licensed/apple.svg';
 import RiceIcon from '@/assets/icons/licensed/rice.svg';
 import BreadIcon from '@/assets/icons/licensed/bread.svg';
@@ -255,11 +256,11 @@ export const GenericTextIcon: React.FC<{ word: string; size?: number }> = ({
 );
 
 export const iconMap: Record<string, React.FC<any>> = {
+  cards: CardsIcon,
   letters: AaIcon,
   food: RiceIcon,
   'weather vocab': WeatherVocabIcon,
   'months vocab': MonthsIcon,
-
   apple: AppleIcon,
   bread: BreadIcon,
   'food vocab': AppleIcon,

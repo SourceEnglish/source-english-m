@@ -43,15 +43,21 @@ export default function Index() {
           {lessons.map((lesson, index) => {
             // Skip lessons with __hidden property
             if ((lesson as any).__hidden) return null;
-            const Icon = iconMap[lesson.name];
+            // Skip vocabulary lessons that have a __lesson property
+            if (
+              (lesson as any).__type === 'vocabulary' &&
+              (lesson as any).__lesson
+            )
+              return null;
+            const Icon = iconMap['cards'];
             return (
               <PageLink
                 key={lesson.name}
-                icon={Icon ? <Icon width={40} height={40} /> : null}
+                icon={Icon ? <Icon width={60} height={60} /> : null}
                 pagePath={`/${lesson.name}`}
                 pageText={lesson.name}
+                index={index + 1}
                 pageTextTranslated={t(lesson.name)}
-                index={index}
               />
             );
           })}
