@@ -201,9 +201,9 @@
   },
 
   {
-    "yes no questions": {
-      "name": "yes no questions",
-      "__tags": ["yes no questions"],
+    "yes or no questions": {
+      "name": "yes or no questions",
+      "__tags": ["yes or no questions"],
       "__type": "lesson",
       "__order": 17,
       "__hidden": false
@@ -293,7 +293,8 @@
       "__tags": ["adverbs of frequency"],
       "__type": "lesson",
       "__order": 24,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab_lesson": "adverbs of frequency vocab"
     }
   },
   {
@@ -302,7 +303,8 @@
       "__tags": ["adverbs of frequency"],
       "__type": "vocabulary",
       "__order": 25,
-      "__hidden": false
+      "__hidden": false,
+      "__lesson": "adverbs of frequency"
     }
   },
   {
@@ -320,7 +322,8 @@
       "__tags": ["articles"],
       "__type": "lesson",
       "__order": 27,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab_lesson": "articles vocab"
     }
   },
   {
@@ -329,7 +332,8 @@
       "__tags": ["articles"],
       "__type": "vocabulary",
       "__order": 28,
-      "__hidden": false
+      "__hidden": false,
+      "__lesson": "articles"
     }
   },
   {

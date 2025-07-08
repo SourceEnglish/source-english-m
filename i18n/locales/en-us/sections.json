@@ -971,14 +971,14 @@
   },
   {
     "_id": "yes_no_questions_header",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 1,
     "__type": "header",
     "text": "Yes/No Questions"
   },
   {
     "_id": "yes_no_questions_intro",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 2,
     "__type": "paragraph",
     "text": "Yes/No questions are questions you answer with \"Yes\" or \"No.\" Two common ways to make these quesions are with the verb \"to be\" (am / is / are) and the verb do (do / does).",
@@ -986,28 +986,28 @@
   },
   {
     "_id": "yes_no_questions_be_header",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 3,
     "__type": "subheader",
     "text": "Questions with \"To Be\" "
   },
   {
     "_id": "yes_no_questions_be_carousel",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 3.5,
     "__type": "vocabularyCarousel",
     "__tags": ["to be yes"]
   },
   {
     "_id": "yes_no_questions_be_pattern",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 4,
     "__type": "paragraph",
     "text": "If the question uses \"to be\" (am, is, are), put \"to be\" first, then the subject (person or pronoun)."
   },
   {
     "_id": "yes_no_questions_be_examples",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 5,
     "__type": "table",
     "__headers": [
@@ -1031,21 +1031,21 @@
   },
   {
     "_id": "yes_no_questions_be_short_answers_header",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 6,
     "__type": "subheader",
     "text": "Positive Short Answers with \"To Be\""
   },
   {
     "_id": "yes_no_questions_be_short_answers_positive",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 7,
     "__type": "paragraph",
     "text": "Say \"Yes, I am\" or \"Yes, she is.\" Do not use contractions in the positive answer."
   },
   {
     "_id": "yes_no_questions_be_short_answers_positive_table",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 8,
     "__type": "table",
     "__headers": [
@@ -1130,21 +1130,21 @@
   },
   {
     "_id": "yes_no_questions_be_short_answers_negative_header",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 9,
     "__type": "subheader",
     "text": "Negative Short Answers with \"To Be\""
   },
   {
     "_id": "yes_no_questions_be_short_answers_negative_paragraph",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 9.5,
     "__type": "paragraph",
     "text": "For negative short answers, you can say \"No, I'm not\" or \"No, she isn't.\" You can use \"is not\" or \"isn't\". Both are correct."
   },
   {
     "_id": "yes_no_questions_be_short_answers_negative_examples",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 9.6,
     "__type": "table",
     "__headers": [
@@ -1168,28 +1168,28 @@
   },
   {
     "_id": "yes_no_questions_do_carousel",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 12.5,
     "__type": "vocabularyCarousel",
     "__tags": ["do"]
   },
   {
     "_id": "yes_no_questions_other_verbs_header",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 11,
     "__type": "subheader",
     "text": "Yes/No Questions with Other Verbs"
   },
   {
     "_id": "yes_no_questions_other_verbs_pattern",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 12,
     "__type": "paragraph",
     "text": "If the question does not use \"to be,\" start with \"do\" or \"does.\" Use \"do\" for I, you, we, they. Use \"does\" for he, she, it."
   },
   {
     "_id": "yes_no_questions_other_verbs_examples_table",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 13,
     "__type": "table",
     "__headers": [
@@ -1235,14 +1235,14 @@
   },
   {
     "_id": "yes_no_questions_extra_video_header",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 14,
     "__type": "header",
     "text": "Yes/No Questions Video"
   },
   {
     "_id": "yes_no_questions_extra_video",
-    "__lessons": ["yes no questions"],
+    "__lessons": ["yes or no questions"],
     "__order": 15,
     "__type": "video",
     "__src": "https://youtu.be/YIkewDhlSwQ?si=TTnLf5ep92vhDgJ3"

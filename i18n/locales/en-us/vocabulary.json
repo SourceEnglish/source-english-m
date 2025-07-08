@@ -2917,6 +2917,16 @@
       "translation_note": ""
     }
   },
+  {
+    "color": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": ["colors"],
+      "word": "color",
+      "plural": "colors",
+      "translation_note": ""
+    }
+  },
 
   {
     "red": {
@@ -3006,16 +3016,7 @@
       "translation_note": ""
     }
   },
-  {
-    "color": {
-      "__pos": "noun",
-      "__count": "countable",
-      "__tags": ["colors"],
-      "word": "color",
-      "plural": "colors",
-      "translation_note": ""
-    }
-  },
+
   {
     "family": {
       "__pos": "noun",
@@ -4137,16 +4138,7 @@
       "examples": ["My teacher is very kind.", "She is a math teacher."]
     }
   },
-  {
-    "chicken": {
-      "__pos": "noun",
-      "__tags": ["nouns", "animals"],
-      "word": "chicken",
-      "plural": "chickens",
-      "translation_note": "",
-      "examples": ["The chicken is clucking.", "I like to eat chicken."]
-    }
-  },
+
   {
     "chair": {
       "__pos": "noun",
@@ -4574,6 +4566,16 @@
     }
   },
   {
+    "animal": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals"],
+      "word": "animal",
+      "plural": "animals",
+      "translation_note": "",
+      "examples": ["A dog is an animal.", "There are many animals at the zoo."]
+    }
+  },
+  {
     "cat": {
       "__pos": "noun",
       "__tags": ["nouns", "animals", "pets"],
@@ -4597,6 +4599,16 @@
         "The dog is barking.",
         "He takes his dog for a walk every day."
       ]
+    }
+  },
+  {
+    "chicken": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals"],
+      "word": "chicken",
+      "plural": "chickens",
+      "translation_note": "",
+      "examples": ["The chicken is clucking.", "I like to eat chicken."]
     }
   },
   {
@@ -4680,16 +4692,6 @@
       "plural": "pets",
       "translation_note": "",
       "examples": ["A cat is a common pet.", "Do you have any pets?"]
-    }
-  },
-  {
-    "animal": {
-      "__pos": "noun",
-      "__tags": ["nouns", "animals"],
-      "word": "animal",
-      "plural": "animals",
-      "translation_note": "",
-      "examples": ["A dog is an animal.", "There are many animals at the zoo."]
     }
   }
 ]
