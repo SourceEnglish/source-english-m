@@ -66,11 +66,13 @@ const PageLink: React.FC<PageLinkProps> = ({
                 );
               }
               return false;
-            } else {
-              lessonData.__tags?.some((tag: string) =>
+            } else if (lessonData?.__type === 'vocabulary') {
+              // For vocabulary lessons, filter by tags
+              return lessonData.__tags?.some((tag: string) =>
                 entry.__tags?.includes(tag)
               );
             }
+            return false;
           })
           // Sort by __display_priority if present
           .sort((a: any, b: any) => {
