@@ -114,17 +114,8 @@ const PageLink: React.FC<PageLinkProps> = ({
         flexDirection: 'row',
         alignItems: 'stretch',
         width: '100%',
-        gap: 0,
-        backgroundColor: theme.backgroundColor,
-        borderRadius: 4,
-        padding: 10,
-        paddingLeft: 10,
-        paddingTop: 10,
-        paddingBottom: 10,
-        borderWidth: 1,
-        borderColor: 'black',
-        boxSizing: 'border-box',
-        overflow: 'hidden',
+        // Minimal styling, just layout
+        gap: 2, // small gap between links
       }}
     >
       {/* Main page link */}
@@ -132,13 +123,16 @@ const PageLink: React.FC<PageLinkProps> = ({
         className="rat"
         href={pagePath as any}
         style={{
+          flex: 1,
           display: 'flex',
           flexDirection: 'row',
-          width: '75%',
-          opacity: readAloudMode ? 1 : 1,
           alignItems: 'center',
-          backgroundColor: 'transparent',
-          // Removed: backgroundColor, borderRadius, padding, boxSizing, overflow
+          backgroundColor: '#f8f8f8',
+          borderRadius: 4,
+          borderWidth: 1,
+          borderColor: '#d0d0d0',
+          padding: 10,
+          minWidth: 0,
         }}
         onPress={(e) => {
           if (readAloudMode) {
@@ -153,7 +147,6 @@ const PageLink: React.FC<PageLinkProps> = ({
             alignItems: 'center',
             flex: 1,
             minWidth: 0,
-            width: '100%',
           }}
         >
           <View
@@ -183,7 +176,7 @@ const PageLink: React.FC<PageLinkProps> = ({
                   }}
                 />
               )}
-              <Text>{'| '}</Text>
+              <Text style={{ color: 'gray', fontSize: 18 }}>{'| '}</Text>
               <ReadableText
                 text={pageText}
                 style={{
@@ -204,7 +197,7 @@ const PageLink: React.FC<PageLinkProps> = ({
                   flexWrap: 'nowrap',
                   marginTop: 6,
                   alignItems: 'center',
-                  maxWidth: '100%',
+
                   overflow: 'hidden',
                 }}
               >
@@ -216,18 +209,7 @@ const PageLink: React.FC<PageLinkProps> = ({
           </View>
         </View>
       </Link>
-      {/* Divider */}
-      <View
-        style={{
-          width: 0,
-          height: '100%',
-          backgroundColor: '#d0d0d0',
-          marginLeft: 5,
-          marginRight: 25,
 
-          alignSelf: 'center',
-        }}
-      />
       {/* Vocab link as sibling if lessonData is a lesson and has __vocab_lesson */}
       {lessonData &&
         lessonData.__type === 'lesson' &&
@@ -235,20 +217,17 @@ const PageLink: React.FC<PageLinkProps> = ({
           <Link
             href={`/${lessonData.__vocab_lesson}`}
             style={{
-              width: '25%',
-              textDecorationLine: 'none',
-              backgroundColor: '#f0f4fc',
-              borderLeftWidth: 2,
-              borderColor: '#a8b2c5', // 30% darker than #f0f4fc
+              width: '20%',
               display: 'flex',
+              flexDirection: 'row',
               alignItems: 'center',
               justifyContent: 'center',
-              paddingLeft: 10,
-              paddingRight: 10,
-              marginTop: -10,
-              marginBottom: -10,
-              marginRight: -10,
-              marginLeft: -10,
+              backgroundColor: '#f8f8f8',
+              borderRadius: 4,
+              borderWidth: 1,
+              borderColor: '#d0d0d0',
+              padding: 10,
+              minWidth: 0,
             }}
             onPress={(e) => {
               if (readAloudMode) {
@@ -261,15 +240,12 @@ const PageLink: React.FC<PageLinkProps> = ({
               className="vocab"
               style={{
                 paddingRight: 4,
-
                 cursor: 'pointer',
                 height: '100%',
                 justifyContent: 'center',
-
                 alignItems: 'center',
                 display: 'flex',
                 flexDirection: 'row',
-
                 borderColor: 'black',
                 borderRadius: 4,
               }}
@@ -279,7 +255,6 @@ const PageLink: React.FC<PageLinkProps> = ({
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  width: '100%',
                 }}
               >
                 {icon}
