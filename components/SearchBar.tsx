@@ -278,17 +278,28 @@ export default function SearchBar() {
     altWords?: string[];
     pos?: string;
     __icon_text?: string;
+    lessonIndex?: number;
   };
 
+  // Add lessonIndex to lessons for rendering index as TextIcon
+  // Use the same logic as PageLink to skip certain lessons in the index
+  // (e.g., skip lessons with __hidden or any other custom logic)
+  // We'll assign lessonIndex based on the filtered, visible lessons only.
+  const visibleLessons = lessons.filter((l) => !l.__hidden);
   let allSuggestions: Suggestion[] = [
-    ...lessons
-      .filter((l) => !l.__hidden)
-      .map((l) => {
-        // Determine emoji for lessons
-        let emoji = '📘';
-        if (l.name.endsWith('vocab')) emoji = '📗';
-        return { type: 'lesson', name: l.name, emoji, altWords: undefined };
-      }),
+    ...visibleLessons.map((l, idx) => {
+      // Determine emoji for lessons
+      let emoji = '📘';
+      if (l.name && l.name.endsWith('vocab')) emoji = '📗';
+      // Use the index in the visible list for lessonIndex
+      return {
+        type: 'lesson',
+        name: l.name,
+        emoji,
+        altWords: undefined,
+        lessonIndex: idx + 1,
+      };
+    }),
     ...vocabEntries.map((v) => ({
       type: 'vocab',
       name: v.word,
@@ -409,7 +420,31 @@ export default function SearchBar() {
               // Use icon instead of emoji
               let iconComponent: React.FC<any>;
               if (item.type === 'lesson') {
-                iconComponent = findIconComponent({ name: item.name });
+                // Render green book emoji as the icon for lessons
+                iconComponent = (props: any) => {
+                  const { width = 22, height = 22, style } = props || {};
+                  return (
+                    <View
+                      style={{
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width,
+                        height,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: Math.min(width, height) * 0.95,
+                          color: undefined,
+                          textAlign: 'center',
+                          fontFamily: 'Lexend_400Regular',
+                        }}
+                      >
+                        {item.name.endsWith('vocab') ? '📗' : '📘'}
+                      </Text>
+                    </View>
+                  );
+                };
               } else {
                 // For vocab, try to find the vocab entry for more info
                 const vocabEntry =
@@ -454,6 +489,38 @@ export default function SearchBar() {
                     <Text style={styles.suggestionText}>
                       {t(item.name)}
                       {item.clarifier ? ` (${item.clarifier})` : ''}
+                    </Text>
+                    {/* Divider and POS/lesson type */}
+                    <View
+                      style={{
+                        width: 2,
+                        height: 22,
+                        backgroundColor:
+                          item.type === 'vocab'
+                            ? posColors[item.pos || 'default'] ||
+                              posColors.default
+                            : item.type === 'lesson'
+                            ? '#000000'
+                            : '#000000',
+                        marginHorizontal: 8,
+                        borderRadius: 1,
+                      }}
+                    />
+                    <Text
+                      style={{
+                        fontSize: 15,
+                        color:
+                          item.type === 'vocab'
+                            ? posColors[item.pos || 'default'] ||
+                              posColors.default
+                            : item.type === 'lesson'
+                            ? '#000000'
+                            : '#000000',
+                        fontWeight: 'bold',
+                        textTransform: 'capitalize',
+                      }}
+                    >
+                      {item.type === 'lesson' ? 'lesson' : item.pos || ''}
                     </Text>
                   </View>
                 </TouchableOpacity>
