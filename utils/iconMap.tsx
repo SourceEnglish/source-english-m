@@ -196,6 +196,7 @@ export const TextIcon: React.FC<{
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
+        // Remove margin/padding here
       },
       style,
     ]}
@@ -219,6 +220,7 @@ export const TextIcon: React.FC<{
         fontFamily: 'Lexend_400Regular',
         marginBottom: 0,
         padding: 0,
+        // Remove margin/padding here as well
       }}
       numberOfLines={1}
       ellipsizeMode="tail"
@@ -511,11 +513,126 @@ export function findIconComponent(entry: any): React.FC<any> {
   if (entry.__icon_text) {
     const iconText = entry.__icon_text;
     const pronunciation = entry.__forced_pronunciation;
+    // Approximate Lexend font character widths (relative to fontSize)
+    const lexendCharWidths: Record<string, number> = {
+      // Narrowest
+      ' ': 0.28,
+      '.': 0.28,
+      ',': 0.28,
+      ':': 0.28,
+      ';': 0.28,
+      '|': 0.28,
+      '!': 0.32,
+      i: 0.32,
+      l: 0.32,
+      I: 0.36,
+      j: 0.36,
+      t: 0.38,
+      // Slightly narrow
+      f: 0.42,
+      r: 0.44,
+      s: 0.48,
+      J: 0.48,
+      '1': 0.48,
+      // Average lowercase
+      a: 0.54,
+      c: 0.54,
+      e: 0.54,
+      o: 0.54,
+      u: 0.54,
+      v: 0.54,
+      x: 0.54,
+      z: 0.54,
+      b: 0.58,
+      d: 0.58,
+      g: 0.58,
+      h: 0.58,
+      k: 0.58,
+      n: 0.58,
+      p: 0.58,
+      q: 0.58,
+      y: 0.58,
+      m: 0.7,
+      w: 0.7,
+      // Average uppercase
+      A: 0.62,
+      B: 0.62,
+      C: 0.62,
+      D: 0.62,
+      E: 0.62,
+      F: 0.62,
+      G: 0.62,
+      H: 0.62,
+      K: 0.62,
+      L: 0.62,
+      N: 0.62,
+      O: 0.62,
+      P: 0.62,
+      Q: 0.62,
+      R: 0.62,
+      S: 0.62,
+      U: 0.62,
+      V: 0.62,
+      X: 0.62,
+      Y: 0.62,
+      Z: 0.62,
+      // Wide uppercase
+      M: 0.75,
+      W: 0.75,
+      // Digits
+      '0': 0.58,
+      '2': 0.58,
+      '3': 0.58,
+      '4': 0.58,
+      '5': 0.58,
+      '6': 0.58,
+      '7': 0.58,
+      '8': 0.58,
+      '9': 0.58,
+      // Symbols
+      '-': 0.38,
+      _: 0.48,
+      '+': 0.48,
+      '=': 0.48,
+      '/': 0.38,
+      '\\': 0.38,
+      '*': 0.48,
+      '?': 0.54,
+      '@': 0.68,
+      '#': 0.58,
+      $: 0.58,
+      '%': 0.68,
+      '&': 0.62,
+      '^': 0.48,
+      '(': 0.36,
+      ')': 0.36,
+      '[': 0.36,
+      ']': 0.36,
+      '{': 0.36,
+      '}': 0.36,
+      '<': 0.48,
+      '>': 0.48,
+      "'": 0.22,
+      '"': 0.32,
+    };
+    function estimateTextWidth(text: string, fontSize: number) {
+      let total = 0;
+      for (let i = 0; i < text.length; i++) {
+        const c = text[i];
+        total += lexendCharWidths[c] ?? 0.58; // fallback to average width
+      }
+      return total * fontSize;
+    }
     return (props: any) => {
       const size = props.width || props.height || 22;
-      const charCount = (iconText || '').length || 1;
-      let fontSize = (size / (charCount * 0.6)) * 0.95;
-      if (fontSize > size * 0.95) fontSize = size * 0.95;
+      // Iteratively find the largest fontSize that fits
+      let fontSize = size * 0.9;
+      for (let trySize = fontSize; trySize >= 8; trySize -= 0.5) {
+        if (estimateTextWidth(iconText, trySize) <= size * 0.92) {
+          fontSize = trySize;
+          break;
+        }
+      }
       if (fontSize < 8) fontSize = 8;
       return (
         <TextIcon

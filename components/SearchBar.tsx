@@ -14,6 +14,7 @@ import vocabulary from '@/i18n/locales/en-us/vocabulary.json';
 import { t } from 'i18next';
 import SearchIcon from '@/assets/icons/open_source/search.svg';
 import { findIconComponent } from '@/utils/iconMap';
+import posColors from '@/constants/constants';
 
 const MAX_SUGGESTIONS = 8;
 
@@ -432,12 +433,20 @@ export default function SearchBar() {
                   activeOpacity={0.6}
                 >
                   <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <Icon width={22} height={22} style={{ marginRight: 8 }} />
                     <View
                       style={{
-                        width: 1,
+                        minWidth: 30,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <Icon width={22} height={22} />
+                    </View>
+                    <View
+                      style={{
+                        width: 2,
                         height: 22,
-                        backgroundColor: '#e0e0e0',
+                        backgroundColor: 'gray',
                         marginHorizontal: 8,
                         borderRadius: 1,
                       }}
