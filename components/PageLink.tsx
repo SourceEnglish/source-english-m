@@ -117,41 +117,72 @@ const PageLink: React.FC<PageLinkProps> = ({
           width: '100%',
         }}
       >
-        <View style={{ paddingRight: 5 }}>
-          {icon}
-          {lessonData && lessonData.__type === 'vocabulary' &&
-            !lessonData.__tags?.includes('letters') &&
-            !lessonData.__tags?.includes('numbers') && (
+        {/* If lessonData is a lesson and has __vocab_lesson, wrap .vocab in a Link */}
+        {lessonData &&
+        lessonData.__type === 'lesson' &&
+        lessonData.__vocab_lesson ? (
+          <Link
+            href={`/${lessonData.__vocab_lesson}`}
+            style={{ textDecorationLine: 'none' }}
+            onPress={(e) => {
+              if (readAloudMode) {
+                e.preventDefault();
+                e.stopPropagation();
+              }
+            }}
+          >
             <View
+              className="vocab"
               style={{
-                backgroundColor: '#176a3d',
-                borderRadius: 4,
-                paddingHorizontal: 1,
-                paddingVertical: 1,
-                marginTop: 2,
-                alignSelf: 'center',
+                paddingRight: 5,
+                backgroundColor: 'red',
+                cursor: 'pointer',
               }}
             >
-              <span
-                style={{
-                  color: '#fff',
-                  fontSize: 11,
-                  textAlign: 'center',
-                  textTransform: 'uppercase',
-                  fontFamily: 'Lexend_400Regular, sans-serif',
-                  display: 'block',
-                  lineHeight: '12px',
-                  width: '100%',
-                  overflow: 'hidden',
-                  whiteSpace: 'nowrap',
-                  textOverflow: 'ellipsis',
-                }}
-              >
-                vocab
-              </span>
+              {icon}
             </View>
-          )}
-        </View>
+          </Link>
+        ) : (
+          <View
+            className="rat"
+            style={{ paddingRight: 5, backgroundColor: 'red' }}
+          >
+            {icon}
+            {lessonData &&
+              lessonData.__type === 'vocabulary' &&
+              !lessonData.__tags?.includes('letters') &&
+              !lessonData.__tags?.includes('numbers') && (
+                <View
+                  style={{
+                    backgroundColor: '#176a3d',
+                    borderRadius: 4,
+                    paddingHorizontal: 1,
+                    paddingVertical: 1,
+                    marginTop: 2,
+                    alignSelf: 'center',
+                  }}
+                >
+                  <span
+                    style={{
+                      color: '#fff',
+                      fontSize: 11,
+                      textAlign: 'center',
+                      textTransform: 'uppercase',
+                      fontFamily: 'Lexend_400Regular, sans-serif',
+                      display: 'block',
+                      lineHeight: '12px',
+                      width: '100%',
+                      overflow: 'hidden',
+                      whiteSpace: 'nowrap',
+                      textOverflow: 'ellipsis',
+                    }}
+                  >
+                    vocab
+                  </span>
+                </View>
+              )}
+          </View>
+        )}
         <View
           style={{
             width: 1,

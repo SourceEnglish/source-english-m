@@ -40,7 +40,7 @@ export default function Index() {
             pageTextTranslated={t('Voice List')}
           /> */}
 
-          {lessons.map((lesson) => {
+          {lessons.map((lesson, index) => {
             // Skip lessons with __hidden property
             if ((lesson as any).__hidden) return null;
             const Icon = iconMap[lesson.name];
@@ -51,6 +51,7 @@ export default function Index() {
                 pagePath={`/${lesson.name}`}
                 pageText={lesson.name}
                 pageTextTranslated={t(lesson.name)}
+                index={index}
               />
             );
           })}

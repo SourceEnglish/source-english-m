@@ -89,7 +89,8 @@
       "name": "weather",
       "__tags": ["weather"],
       "__type": "lesson",
-      "__order": 6
+      "__order": 6,
+      "__vocab_lesson": "weather vocab"
     }
   },
   {
@@ -97,7 +98,9 @@
       "name": "weather vocab",
       "__tags": ["weather"],
       "__type": "vocabulary",
-      "__order": 7
+      "__order": 7,
+      "__lesson": "weather",
+      "__hidden": true
     }
   },
   {
@@ -113,7 +116,8 @@
       "name": "personal information",
       "__tags": ["personal information"],
       "__type": "lesson",
-      "__order": 9
+      "__order": 9,
+      "__vocab_lesson": "personal information vocab"
     }
   },
   {
@@ -121,7 +125,9 @@
       "name": "personal information vocab",
       "__tags": ["personal information"],
       "__type": "vocabulary",
-      "__order": 10
+      "__order": 10,
+      "__lesson": "personal information",
+      "__hidden": true
     }
   },
   {
@@ -129,7 +135,8 @@
       "name": "subject pronouns",
       "__tags": ["subject pronouns"],
       "__type": "lesson",
-      "__order": 11
+      "__order": 11,
+      "__vocab_lesson": "subject pronouns vocab"
     }
   },
   {
@@ -137,7 +144,9 @@
       "name": "subject pronouns vocab",
       "__tags": ["subject pronouns"],
       "__type": "vocabulary",
-      "__order": 12
+      "__order": 12,
+      "__lesson": "subject pronouns",
+      "__hidden": true
     }
   },
   {
@@ -145,7 +154,8 @@
       "name": "to be",
       "__tags": ["to be"],
       "__type": "lesson",
-      "__order": 13
+      "__order": 13,
+      "__vocab_lesson": "to be vocab"
     }
   },
   {
@@ -154,7 +164,8 @@
       "__tags": ["to be"],
       "__type": "vocabulary",
       "__hidden": true,
-      "__order": 14
+      "__order": 14,
+      "__lesson": "to be"
     }
   },
 
@@ -174,7 +185,8 @@
       "__tags": ["possessive adjectives"],
       "__type": "lesson",
       "__order": 15,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab_lesson": "possessive adjectives vocab"
     }
   },
   {
@@ -183,7 +195,8 @@
       "__tags": ["possessive adjectives"],
       "__type": "vocabulary",
       "__order": 16,
-      "__hidden": false
+      "__hidden": true,
+      "__lesson": "possessive adjectives"
     }
   },
 
@@ -202,7 +215,8 @@
       "__tags": ["illnesses"],
       "__type": "lesson",
       "__order": 18,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab_lesson": "illnesses vocab"
     }
   },
   {
@@ -211,7 +225,8 @@
       "__tags": ["illnesses"],
       "__type": "vocabulary",
       "__order": 19,
-      "__hidden": false
+      "__hidden": true,
+      "__lesson": "illnesses"
     }
   },
   {
@@ -220,7 +235,8 @@
       "__tags": ["wh questions"],
       "__type": "lesson",
       "__order": 20,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab_lesson": "wh questions vocab"
     }
   },
   {
@@ -229,7 +245,8 @@
       "__tags": ["wh questions"],
       "__type": "vocabulary",
       "__order": 21,
-      "__hidden": false
+      "__hidden": true,
+      "__lesson": "wh questions"
     }
   },
   {
@@ -238,7 +255,8 @@
       "__tags": ["simple present tense"],
       "__type": "lesson",
       "__order": 22,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab_lesson": "simple present tense vocab"
     }
   },
   {
@@ -247,7 +265,8 @@
       "__tags": ["simple present tense"],
       "__type": "vocabulary",
       "__order": 23,
-      "__hidden": true
+      "__hidden": true,
+      "__lesson": "simple present tense"
     }
   },
   {
