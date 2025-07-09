@@ -5,7 +5,7 @@
       "__tags": ["letters"],
       "__icon_text": "Aa",
       "__forced_pronunciation": "a",
-      "__show_word": false,
+      "__show_word": true,
       "__lowercase_variants": ["a_variant_0"],
 
       "word": "Aa",
@@ -50,7 +50,7 @@
       "__tags": ["letters"],
       "__icon_text": "Bb",
       "__forced_pronunciation": "b",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Bb",
       "translation_note": "",
       "__vowel": false,
@@ -72,7 +72,7 @@
       "__tags": ["letters"],
       "__icon_text": "Cc",
       "__forced_pronunciation": "c",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Cc",
       "translation_note": "",
       "__vowel": false,
@@ -101,7 +101,7 @@
       "__tags": ["letters"],
       "__icon_text": "Dd",
       "__forced_pronunciation": "d",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Dd",
       "translation_note": "",
       "__vowel": false,
@@ -123,7 +123,7 @@
       "__tags": ["letters"],
       "__icon_text": "Ee",
       "__forced_pronunciation": "e",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Ee",
       "translation_note": "",
       "__vowel": true,
@@ -159,7 +159,7 @@
       "__tags": ["letters"],
       "__icon_text": "Ff",
       "__forced_pronunciation": "f",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Ff",
       "translation_note": "",
       "__vowel": false,
@@ -181,7 +181,7 @@
       "__tags": ["letters"],
       "__icon_text": "Gg",
       "__forced_pronunciation": "g",
-      "__show_word": false,
+      "__show_word": true,
       "__lowercase_variants": ["g_variant_0"],
       "word": "Gg",
       "translation_note": "",
@@ -204,7 +204,7 @@
       "__tags": ["letters"],
       "__icon_text": "Hh",
       "__forced_pronunciation": "h",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Hh",
       "translation_note": "",
       "__vowel": false,
@@ -226,7 +226,7 @@
       "__tags": ["letters"],
       "__icon_text": "Ii",
       "__forced_pronunciation": "i",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Ii",
       "translation_note": "",
       "__vowel": true,
@@ -262,7 +262,7 @@
       "__tags": ["letters"],
       "__icon_text": "Jj",
       "__forced_pronunciation": "j",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Jj",
       "translation_note": "",
       "__vowel": false,
@@ -284,7 +284,7 @@
       "__tags": ["letters"],
       "__icon_text": "Kk",
       "__forced_pronunciation": "k",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Kk",
       "translation_note": "",
       "__vowel": false,
@@ -306,7 +306,7 @@
       "__tags": ["letters"],
       "__icon_text": "Ll",
       "__forced_pronunciation": "l",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Ll",
       "translation_note": "",
       "__vowel": false,
@@ -328,7 +328,7 @@
       "__tags": ["letters"],
       "__icon_text": "Mm",
       "__forced_pronunciation": "m",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Mm",
       "translation_note": "",
       "__vowel": false,
@@ -350,7 +350,7 @@
       "__tags": ["letters"],
       "__icon_text": "Nn",
       "__forced_pronunciation": "n",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Nn",
       "translation_note": "",
       "__vowel": false,
@@ -372,7 +372,7 @@
       "__tags": ["letters"],
       "__icon_text": "Oo",
       "__forced_pronunciation": "o",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Oo",
       "translation_note": "",
       "__vowel": true,
@@ -417,7 +417,7 @@
       "__tags": ["letters"],
       "__icon_text": "Pp",
       "__forced_pronunciation": "p",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Pp",
       "translation_note": "",
       "__vowel": false,
@@ -439,7 +439,7 @@
       "__tags": ["letters"],
       "__icon_text": "Qq",
       "__forced_pronunciation": "q",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Qq",
       "translation_note": "",
       "__vowel": false,
@@ -462,7 +462,7 @@
       "__tags": ["letters"],
       "__icon_text": "Rr",
       "__forced_pronunciation": "r",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Rr",
       "translation_note": "",
       "__vowel": false,
@@ -484,7 +484,7 @@
       "__tags": ["letters"],
       "__icon_text": "Ss",
       "__forced_pronunciation": "s",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Ss",
       "translation_note": "",
       "__vowel": false,
@@ -506,7 +506,7 @@
       "__tags": ["letters"],
       "__icon_text": "Tt",
       "__forced_pronunciation": "t",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Tt",
       "translation_note": "",
       "__vowel": false,
@@ -528,7 +528,7 @@
       "__tags": ["letters"],
       "__icon_text": "Uu",
       "__forced_pronunciation": "u",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Uu",
       "translation_note": "",
       "__vowel": true,
@@ -571,7 +571,7 @@
       "__tags": ["letters"],
       "__icon_text": "Vv",
       "__forced_pronunciation": "v",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Vv",
       "translation_note": "",
       "__vowel": false,
@@ -593,7 +593,7 @@
       "__tags": ["letters"],
       "__icon_text": "Ww",
       "__forced_pronunciation": "w",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Ww",
       "translation_note": "",
       "__vowel": false,
@@ -615,7 +615,7 @@
       "__tags": ["letters"],
       "__icon_text": "Xx",
       "__forced_pronunciation": "x",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Xx",
       "translation_note": "",
       "__vowel": false,
@@ -637,7 +637,7 @@
       "__tags": ["letters"],
       "__icon_text": "Yy",
       "__forced_pronunciation": "y",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Yy",
       "translation_note": "",
       "__vowel": true,
@@ -673,7 +673,7 @@
       "__tags": ["letters"],
       "__icon_text": "Zz",
       "__forced_pronunciation": "z",
-      "__show_word": false,
+      "__show_word": true,
       "word": "Zz",
       "translation_note": "",
       "__vowel": false,
@@ -2472,7 +2472,7 @@
       "__pos": "adjective",
       "__tags": ["possessive adjectives", "possessive adjectives singular"],
       "__icon_text": "my",
-      "__show_word": false,
+      "__show_word": true,
       "word": "my",
 
       "translation_note": ""
@@ -2487,7 +2487,7 @@
         "possessive adjectives singular"
       ],
       "__icon_text": "your",
-      "__show_word": false,
+      "__show_word": true,
       "word": "your",
       "translation_note": ""
     }
@@ -2497,7 +2497,7 @@
       "__pos": "adjective",
       "__tags": ["possessive adjectives", "possessive adjectives singular"],
       "__icon_text": "his",
-      "__show_word": false,
+      "__show_word": true,
       "word": "his",
       "translation_note": ""
     }
@@ -2507,7 +2507,7 @@
       "__pos": "adjective",
       "__tags": ["possessive adjectives", "possessive adjectives singular"],
       "__icon_text": "her",
-      "__show_word": false,
+      "__show_word": true,
       "word": "her",
       "translation_note": ""
     }
@@ -2517,7 +2517,7 @@
       "__pos": "adjective",
       "__tags": ["possessive adjectives", "possessive adjectives singular"],
       "__icon_text": "its",
-      "__show_word": false,
+      "__show_word": true,
       "word": "its",
       "translation_note": ""
     }
@@ -2527,7 +2527,7 @@
       "__pos": "adjective",
       "__tags": ["possessive adjectives", "possessive adjectives plural"],
       "__icon_text": "our",
-      "__show_word": false,
+      "__show_word": true,
       "word": "our",
       "translation_note": ""
     }
@@ -2537,7 +2537,7 @@
       "__pos": "adjective",
       "__tags": ["possessive adjectives", "possessive adjectives plural"],
       "__icon_text": "their",
-      "__show_word": false,
+      "__show_word": true,
       "word": "their",
       "translation_note": ""
     }
@@ -2550,7 +2550,7 @@
       "__icon_text": "I",
       "__clarifier": "pronoun",
       "__forced_pronunciation": "eye",
-      "__show_word": false,
+      "__show_word": true,
       "word": "I",
       "translation_note": ""
     }
@@ -2564,7 +2564,7 @@
         "plural subject pronouns"
       ],
       "__icon_text": "you",
-      "__show_word": false,
+      "__show_word": true,
       "word": "you",
       "translation_note": ""
     }
@@ -2574,7 +2574,7 @@
       "__pos": "pronoun",
       "__tags": ["subject pronouns", "singular subject pronouns"],
       "__icon_text": "he",
-      "__show_word": false,
+      "__show_word": true,
       "word": "he",
       "translation_note": ""
     }
@@ -2584,7 +2584,7 @@
       "__pos": "pronoun",
       "__tags": ["subject pronouns", "singular subject pronouns"],
       "__icon_text": "she",
-      "__show_word": false,
+      "__show_word": true,
       "word": "she",
       "translation_note": ""
     }
@@ -2594,7 +2594,7 @@
       "__pos": "pronoun",
       "__tags": ["subject pronouns", "singular subject pronouns"],
       "__icon_text": "it",
-      "__show_word": false,
+      "__show_word": true,
       "word": "it",
       "translation_note": ""
     }
@@ -2604,7 +2604,7 @@
       "__pos": "pronoun",
       "__tags": ["subject pronouns", "plural subject pronouns"],
       "__icon_text": "we",
-      "__show_word": false,
+      "__show_word": true,
       "word": "we",
       "translation_note": ""
     }
@@ -2614,7 +2614,7 @@
       "__pos": "pronoun",
       "__tags": ["subject pronouns", "plural subject pronouns"],
       "__icon_text": "they",
-      "__show_word": false,
+      "__show_word": true,
       "word": "they",
       "translation_note": ""
     }
@@ -2795,7 +2795,7 @@
       "__pos": "verb",
       "__tags": ["verbs", "be", "to be", "to be yes", "yes or no questions"],
       "__icon_text": "be",
-      "__show_word": false,
+      "__show_word": true,
       "word": "be",
       "conjugation": {
         "present": "be",
@@ -2855,7 +2855,7 @@
       "__pos": "verb",
       "__tags": ["verbs", "do", "yes or no questions"],
       "__icon_text": "do",
-      "__show_word": false,
+      "__show_word": true,
       "conjugation": {
         "past": "did",
         "present": "do",
@@ -3728,7 +3728,7 @@
       "__pos": "article",
       "__tags": ["articles"],
       "__icon_text": "a",
-      "__show_word": false,
+      "__show_word": true,
       "word": "a",
       "__objectKey": "a_(article)",
       "translation_note": "",
@@ -3740,7 +3740,7 @@
       "__pos": "article",
       "__tags": ["articles"],
       "__icon_text": "an",
-      "__show_word": false,
+      "__show_word": true,
       "word": "an",
       "translation_note": "",
       "examples": ["I saw an elephant.", "He is an engineer."]
@@ -3751,7 +3751,7 @@
       "__pos": "article",
       "__tags": ["articles"],
       "__icon_text": "the",
-      "__show_word": false,
+      "__show_word": true,
       "word": "the",
       "translation_note": "",
       "examples": ["The cat is sleeping.", "The sun is shining."]
@@ -3893,7 +3893,7 @@
       "__forced_pronunciation": "i.wav",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ee",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "i",
@@ -3912,7 +3912,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ai",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "eɪ",
@@ -3932,7 +3932,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ay",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "eɪ",
@@ -3951,7 +3951,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ea",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "i",
@@ -3970,7 +3970,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ie",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "aɪ",
@@ -3989,7 +3989,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "oa",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "oʊ",
@@ -4009,7 +4009,7 @@
       "__ipa": "aʊ",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ou",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "aʊ",
@@ -4029,7 +4029,7 @@
       "__ipa": "aʊ",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "ow",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "aʊ",
@@ -4056,7 +4056,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "oo",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ʊ",
@@ -4083,7 +4083,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs"],
       "__icon_text": "ch",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "tʃ",
@@ -4103,7 +4103,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "vowel multigraphs"],
       "__icon_text": "au",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ɔ",
@@ -4123,7 +4123,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs"],
       "__icon_text": "sh",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ʃ",
@@ -4168,7 +4168,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "th",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "θ",
@@ -4194,7 +4194,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "ph",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "f",
@@ -4213,7 +4213,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "wh",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "w",
@@ -4232,7 +4232,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "ck",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "k",
@@ -4251,7 +4251,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "ng",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ŋ",
@@ -4271,7 +4271,7 @@
       "__ipa": "kw",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "qu",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "kw",
@@ -4290,7 +4290,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "wr",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "r",
@@ -4309,7 +4309,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "kn",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "n",
@@ -4328,7 +4328,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "rhotic vowels"],
       "__icon_text": "er",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ɚ",
@@ -4347,7 +4347,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "rhotic vowels"],
       "__icon_text": "ir",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ɝ",
@@ -4366,7 +4366,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "rhotic vowels"],
       "__icon_text": "ur",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ɝ",
@@ -4385,7 +4385,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "rhotic vowels"],
       "__icon_text": "ear",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ɪr",
@@ -4404,7 +4404,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "rhotic vowels"],
       "__icon_text": "eer",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ɪr",
@@ -4423,7 +4423,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "rhotic vowels"],
       "__icon_text": "air",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ɛr",
@@ -4442,7 +4442,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "rhotic vowels"],
       "__icon_text": "ar",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ɑr",
@@ -4461,7 +4461,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "rhotic vowels"],
       "__icon_text": "or",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "ɔr",
@@ -4487,7 +4487,7 @@
       "__pos": "multigraph",
       "__tags": ["multigraphs", "rhotic vowels"],
       "__icon_text": "ire",
-      "__show_word": false,
+      "__show_word": true,
       "__exampleEntries": [
         {
           "__ipa": "aɪr",

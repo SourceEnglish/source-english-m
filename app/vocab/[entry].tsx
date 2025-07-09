@@ -62,7 +62,9 @@ export default function VocabEntryPage() {
   );
   const vocabEntry = vocabEntryObj
     ? {
-        ...vocabEntryObj[Object.keys(vocabEntryObj)[0] as keyof typeof vocabEntryObj],
+        ...vocabEntryObj[
+          Object.keys(vocabEntryObj)[0] as keyof typeof vocabEntryObj
+        ],
         __objectKey: Object.keys(vocabEntryObj)[0], // always use the original key for display
       }
     : null;

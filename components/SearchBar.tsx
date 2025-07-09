@@ -41,6 +41,11 @@ function flattenVocabulary(vocabArr: any[]): {
     const key = Object.keys(entry)[0];
     const value = entry[key];
 
+    // Skip vocab entries with __show_word: false
+    if (value && typeof value === 'object' && value.__show_word === false) {
+      return;
+    }
+
     if (
       value &&
       typeof value === 'object' &&
