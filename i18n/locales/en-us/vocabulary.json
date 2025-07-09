@@ -231,6 +231,7 @@
       "translation_note": "",
       "__vowel": true,
       "__consonant": false,
+      "__uppercase_variants": ["I_variant_0"],
       "__exampleEntries": [
         {
           "__ipa": "ɪ",
@@ -262,6 +263,7 @@
       "__tags": ["letters"],
       "__icon_text": "Jj",
       "__forced_pronunciation": "j",
+      "__uppercase_variants": ["J_variant_0"],
       "__show_word": true,
       "word": "Jj",
       "translation_note": "",
@@ -1014,6 +1016,16 @@
     }
   },
   {
+    "month": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": ["months"],
+      "word": "month",
+      "plural": "months",
+      "translation_note": ""
+    }
+  },
+  {
     "january": {
       "__pos": "proper noun",
       "__count": "uncountable",
@@ -1157,16 +1169,7 @@
       "translation_note": ""
     }
   },
-  {
-    "month": {
-      "__pos": "noun",
-      "__count": "countable",
-      "__tags": ["months"],
-      "word": "month",
-      "plural": "months",
-      "translation_note": ""
-    }
-  },
+
   {
     "zero": {
       "__pos": "number",
@@ -1174,6 +1177,7 @@
       "__tags": ["numbers"],
       "__forced_pronunciation": "zero",
       "__icon_text": "0",
+      "__variants": ["zero_variant_0"],
       "word": "zero",
       "plural": "zeroes",
       "translation_note": ""
@@ -1223,6 +1227,7 @@
       "__tags": ["numbers"],
       "__forced_pronunciation": "four",
       "__icon_text": "4",
+      "__variants": ["four_variant_0", "four_variant_1"],
       "word": "four",
       "plural": "fours",
       "translation_note": ""
@@ -1259,6 +1264,7 @@
       "__tags": ["numbers"],
       "__forced_pronunciation": "seven",
       "__icon_text": "7",
+      "__variants": ["seven_variant_0", "seven_variant_1", "seven_variant_2"],
       "word": "seven",
       "plural": "sevens",
       "translation_note": ""
@@ -1283,6 +1289,7 @@
       "__tags": ["numbers"],
       "__forced_pronunciation": "nine",
       "__icon_text": "9",
+      "__variants": ["nine_variant_0"],
       "word": "nine",
       "plural": "nines",
       "translation_note": ""

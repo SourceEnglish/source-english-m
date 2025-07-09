@@ -171,8 +171,18 @@ import AnimalIcon from '@/assets/icons/licensed/animal.svg';
 import LowercaseAVariant from '@/assets/icons/open_source/a_variant_0.svg';
 import LowercaseGVariant from '@/assets/icons/open_source/g_variant_0.svg';
 import LowercaseQVariant from '@/assets/icons/open_source/q_variant_0.svg';
+import UppercaseIVariant from '@/assets/icons/open_source/I_variant_0.svg'; // Example for a custom icon
+import UppercaseJVariant from '@/assets/icons/open_source/J_variant_0.svg'; // Example for a custom icon
+
 import OneVariant0 from '@/assets/icons/open_source/one_variant_0.svg';
 import OneVariant1 from '@/assets/icons/open_source/one_variant_1.svg';
+import ZeroVariant0 from '@/assets/icons/open_source/zero_variant_0.svg'; // Example for a custom icon
+import FourVariant0 from '@/assets/icons/open_source/four_variant_0.svg'; // Example for a custom icon
+import FourVariant1 from '@/assets/icons/open_source/four_variant_1.svg'; // Example for a custom icon
+import SevenVariant0 from '@/assets/icons/open_source/seven_variant_0.svg'; // Example for a custom icon
+import SevenVariant1 from '@/assets/icons/open_source/seven_variant_1.svg'; // Example for a custom icon
+import SevenVariant2 from '@/assets/icons/open_source/seven_variant_2.svg'; // Example for a custom icon
+import NineVariant0 from '@/assets/icons/open_source/nine_variant_0.svg'; // Example for a custom icon
 
 import AlwaysIcon from '@/assets/icons/licensed/always.svg'; // Example for a custom icon
 import UsuallyIcon from '@/assets/icons/licensed/usually.svg'; // Example for a custom icon
@@ -504,8 +514,19 @@ export const iconMap: Record<string, React.FC<any>> = {
   a_variant_0: LowercaseAVariant, // Example for a custom icon
   g_variant_0: LowercaseGVariant, // Example for a custom icon
   q_variant_0: LowercaseQVariant, // Example for a custom icon
+  i_variant_0: UppercaseIVariant, // Example for a custom icon
+  j_variant_0: UppercaseJVariant, // Example for a custom icon
+
+  zero_variant_0: ZeroVariant0, // Example for a custom icon
   one_variant_0: OneVariant0,
   one_variant_1: OneVariant1, // Example for a custom icon
+  four_variant_0: FourVariant0, // Example for a custom icon
+  four_variant_1: FourVariant1, // Example for a custom icon
+  seven_variant_0: SevenVariant0, // Example for a custom icon
+  seven_variant_1: SevenVariant1, // Example for a custom icon
+  seven_variant_2: SevenVariant2, // Example for a custom icon
+  nine_variant_0: NineVariant0, // Example for a custom icon
+
   always: AlwaysIcon, // Example for a custom icon
   usually: UsuallyIcon, // Example for a custom icon
   often: OftenIcon, // Example for a custom icon
