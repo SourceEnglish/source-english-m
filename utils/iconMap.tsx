@@ -198,6 +198,7 @@ import StudentIcon from '@/assets/icons/licensed/student.svg'; // Example for a 
 import TableIcon from '@/assets/icons/licensed/table.svg'; // Example for a custom icon
 
 import AirplaneIcon from '@/assets/icons/licensed/airplane.svg'; // Example for a custom icon
+import BusStopIcon from '@/assets/icons/licensed/bus_stop.svg'; // Example for a custom icon
 import AirportIcon from '@/assets/icons/licensed/airport.svg'; // Example for a custom icon
 import BicycleIcon from '@/assets/icons/licensed/bicycle.svg'; // Example for a custom icon
 import BoatIcon from '@/assets/icons/licensed/boat.svg'; // Example for a custom icon
@@ -529,6 +530,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   whiteboard: WhiteboardIcon,
 
   airplane: AirplaneIcon,
+  bus_stop: BusStopIcon,
   airport: AirportIcon,
   bicycle: BicycleIcon,
   boat: BoatIcon,

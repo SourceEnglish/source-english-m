@@ -5046,6 +5046,24 @@
       "examples": ["She can drive a car.", "He is driving to work."]
     }
   },
+
+  {
+    "ride": {
+      "__pos": "verb",
+      "__tags": ["vehicle", "verb"],
+      "word": "ride",
+      "conjugation": {
+        "present": "ride",
+        "present_participle": "riding",
+        "past": "rode"
+      },
+      "translation_note": "",
+      "examples": [
+        "I ride my bicycle to school.",
+        "They ride the bus every day."
+      ]
+    }
+  },
   {
     "fly": {
       "__pos": "verb",
@@ -5061,19 +5079,15 @@
     }
   },
   {
-    "ride": {
-      "__pos": "verb",
-      "__tags": ["vehicle", "verb"],
-      "word": "ride",
-      "conjugation": {
-        "present": "ride",
-        "present_participle": "riding",
-        "past": "rode"
-      },
+    "bus stop": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "place"],
+      "word": "bus stop",
+      "plural": "bus stops",
       "translation_note": "",
       "examples": [
-        "I ride my bicycle to school.",
-        "They ride the bus every day."
+        "We waited at the bus stop.",
+        "The bus stop is near my house."
       ]
     }
   },
