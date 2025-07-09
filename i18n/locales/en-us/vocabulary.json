@@ -447,6 +447,7 @@
       "__vowel": false,
       "__consonant": true,
       "__lowercase_variants": ["q_variant_0"],
+      "__uppercase_variants": ["q_variant_1"],
       "__exampleEntries": [
         {
           "__ipa": "kw",

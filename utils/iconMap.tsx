@@ -173,6 +173,7 @@ import LowercaseGVariant from '@/assets/icons/open_source/g_variant_0.svg';
 import LowercaseQVariant from '@/assets/icons/open_source/q_variant_0.svg';
 import UppercaseIVariant from '@/assets/icons/open_source/I_variant_0.svg'; // Example for a custom icon
 import UppercaseJVariant from '@/assets/icons/open_source/J_variant_0.svg'; // Example for a custom icon
+import UppercaseQVariant from '@/assets/icons/open_source/q_variant_1.svg'; // Example for a custom icon
 
 import OneVariant0 from '@/assets/icons/open_source/one_variant_0.svg';
 import OneVariant1 from '@/assets/icons/open_source/one_variant_1.svg';
@@ -514,6 +515,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   a_variant_0: LowercaseAVariant, // Example for a custom icon
   g_variant_0: LowercaseGVariant, // Example for a custom icon
   q_variant_0: LowercaseQVariant, // Example for a custom icon
+  q_variant_1: UppercaseQVariant,
   i_variant_0: UppercaseIVariant, // Example for a custom icon
   j_variant_0: UppercaseJVariant, // Example for a custom icon
 
