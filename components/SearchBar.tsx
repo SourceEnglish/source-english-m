@@ -441,6 +441,13 @@ export default function SearchBar() {
           onBlur={() => setTimeout(() => setFocused(false), 150)}
           autoCorrect={false}
           autoCapitalize="none"
+          onSubmitEditing={() => {
+            if (suggestions.length > 0) {
+              handleSelect(suggestions[0]);
+              // Optionally blur or keep focus as desired
+              // inputRef.current?.blur();
+            }
+          }}
         />
       </View>
       {focused && query.length > 0 && suggestions.length > 0 && (
