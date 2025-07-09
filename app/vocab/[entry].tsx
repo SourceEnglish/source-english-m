@@ -12,7 +12,6 @@ import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import VocabEntryDisplay from '@/components/VocabEntryDisplay';
 import Notes from '@/components/Notes';
 import ExampleSentences from '@/components/ExampleSentences';
-import ExampleWord from '@/components/ExampleWord';
 import ExampleEntries from '@/components/ExampleEntries';
 import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 import { useDeck } from '@/contexts/DeckContext';
