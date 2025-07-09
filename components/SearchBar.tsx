@@ -155,6 +155,12 @@ function flattenVocabulary(vocabArr: any[]): {
           if (thirdPerson && !altWords.includes(thirdPerson)) {
             altWords.push(thirdPerson);
           }
+          // Add alternates for "be"
+          if (value.word === 'be') {
+            ['am', 'are', 'is', 'were'].forEach((form) => {
+              if (!altWords!.includes(form)) altWords!.push(form);
+            });
+          }
           // Remove duplicates and falsy
           altWords = altWords.filter(
             (v, i, arr) => !!v && arr.indexOf(v) === i
@@ -450,15 +456,14 @@ export default function SearchBar() {
               // Add type assertion to help TypeScript
               const vocabEntry =
                 item.type === 'vocab'
-                  ? (vocabEntries.find((v) => v.key === item.key) ||
-                    item) as {
-                    key?: string;
-                    word?: string;
-                    plural?: string;
-                    conjugation?: Record<string, string>;
-                    pos?: string;
-                    [key: string]: any;
-                  }
+                  ? ((vocabEntries.find((v) => v.key === item.key) || item) as {
+                      key?: string;
+                      word?: string;
+                      plural?: string;
+                      conjugation?: Record<string, string>;
+                      pos?: string;
+                      [key: string]: any;
+                    })
                   : undefined;
 
               if (item.type === 'lesson') {
