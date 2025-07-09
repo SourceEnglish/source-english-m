@@ -6032,7 +6032,7 @@
       "__pos": "adverb",
       "__tags": ["adverbs", "intensifiers"],
       "__icon_text": "very",
-      "__show_word": false,
+      "__show_word": true,
       "word": "very",
       "translation_note": "",
       "examples": ["She is very happy.", "It is very cold today."]
@@ -6043,7 +6043,7 @@
       "__pos": "preposition",
       "__tags": ["prepositions"],
       "__icon_text": "to",
-      "__show_word": false,
+      "__show_word": true,
       "word": "to",
       "translation_note": "",
       "examples": ["I go to school.", "Give the book to her."]
@@ -6084,7 +6084,7 @@
       "word": "use",
       "__icon_text": "use",
       "__forced_pronunciation": "yooz",
-      "__show_word": false,
+      "__show_word": true,
       "conjugation": {
         "present": "use",
         "present_participle": "using",
