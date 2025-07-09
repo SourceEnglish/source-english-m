@@ -203,6 +203,7 @@ import AirportIcon from '@/assets/icons/licensed/airport.svg'; // Example for a 
 import BicycleIcon from '@/assets/icons/licensed/bicycle.svg'; // Example for a custom icon
 import BoatIcon from '@/assets/icons/licensed/boat.svg'; // Example for a custom icon
 import BusIcon from '@/assets/icons/licensed/bus.svg'; // Example for a custom icon
+
 import CarIcon from '@/assets/icons/licensed/car.svg'; // Example for a custom icon
 import GasStationIcon from '@/assets/icons/licensed/gas_station.svg'; // Example for a custom icon
 import HelicopterIcon from '@/assets/icons/licensed/helicopter.svg'; // Example for a custom icon
@@ -535,6 +536,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   bicycle: BicycleIcon,
   boat: BoatIcon,
   bus: BusIcon,
+  'bus stop': BusStopIcon, // Example for a custom icon
   car: CarIcon,
   'gas station': GasStationIcon,
   helicopter: HelicopterIcon,
