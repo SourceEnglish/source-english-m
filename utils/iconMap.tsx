@@ -128,7 +128,6 @@ import BrushIcon from '@/assets/icons/licensed/brush.svg';
 import DrinkIcon from '@/assets/icons/licensed/drink.svg';
 import DriveIcon from '@/assets/icons/licensed/drive.svg';
 import EatIcon from '@/assets/icons/licensed/eat.svg';
-import FlyIcon from '@/assets/icons/licensed/fly.svg';
 import MakeIcon from '@/assets/icons/licensed/make.svg';
 import CookIcon from '@/assets/icons/licensed/cook.svg';
 import GetUpIcon from '@/assets/icons/licensed/get_up.svg';
@@ -210,6 +209,7 @@ import LightRailIcon from '@/assets/icons/licensed/light_rail.svg'; // Example f
 import MotorcycleIcon from '@/assets/icons/licensed/motorcycle.svg'; // Example for a custom icon
 import ParkingLotIcon from '@/assets/icons/licensed/parking_lot.svg'; // Example for a custom icon
 import RideIcon from '@/assets/icons/licensed/ride.svg'; // Example for a custom icon
+import FlyIcon from '@/assets/icons/licensed/fly.svg'; // Example for a custom icon
 import TrainStationIcon from '@/assets/icons/licensed/train_station.svg'; // Example for a custom icon
 import TruckIcon from '@/assets/icons/licensed/truck.svg'; // Example for a custom icon
 import VanIcon from '@/assets/icons/licensed/van.svg'; // Example for a custom icon

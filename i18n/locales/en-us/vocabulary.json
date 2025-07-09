@@ -5047,6 +5047,20 @@
     }
   },
   {
+    "fly": {
+      "__pos": "verb",
+      "__tags": ["vehicle", "verb"],
+      "word": "fly",
+      "conjugation": {
+        "present": "fly",
+        "present_participle": "flying",
+        "past": "flew"
+      },
+      "translation_note": "",
+      "examples": ["Birds can fly.", "The airplane flies high."]
+    }
+  },
+  {
     "ride": {
       "__pos": "verb",
       "__tags": ["vehicle", "verb"],
