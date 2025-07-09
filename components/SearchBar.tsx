@@ -561,6 +561,7 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     borderRadius: 0,
     padding: 10,
+    fontFamily: 'Lexend_400Regular',
     fontSize: 16,
     width: '100%',
   },
