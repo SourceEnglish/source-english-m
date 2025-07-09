@@ -764,7 +764,8 @@
       "__count": "uncountable",
       "__tags": ["weather"],
       "word": "weather",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The weather is nice today.", "What is the weather like?"]
     }
   },
 
@@ -773,7 +774,8 @@
       "__pos": "adjective",
       "__tags": ["weather"],
       "word": "sunny",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["It is sunny outside.", "We like sunny days."]
     }
   },
   {
@@ -781,7 +783,8 @@
       "__pos": "adjective",
       "__tags": ["weather"],
       "word": "cloudy",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The sky is cloudy.", "It is cloudy today."]
     }
   },
   {
@@ -789,7 +792,11 @@
       "__pos": "adjective",
       "__tags": ["weather"],
       "word": "rainy",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "It is rainy this morning.",
+        "I use an umbrella on rainy days."
+      ]
     }
   },
   {
@@ -797,7 +804,8 @@
       "__pos": "adjective",
       "__tags": ["weather"],
       "word": "foggy",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["It is foggy outside.", "Driving is hard when it is foggy."]
     }
   },
   {
@@ -805,7 +813,11 @@
       "__pos": "adjective",
       "__tags": ["weather"],
       "word": "snowy",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "It is snowy in winter.",
+        "We play in the snow on snowy days."
+      ]
     }
   },
   {
@@ -813,7 +825,8 @@
       "__pos": "adjective",
       "__tags": ["weather"],
       "word": "stormy",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The weather is stormy.", "We stay inside on stormy days."]
     }
   },
   {
@@ -821,7 +834,8 @@
       "__pos": "adjective",
       "__tags": ["weather"],
       "word": "windy",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["It is windy today.", "The trees move when it is windy."]
     }
   },
   {
@@ -829,7 +843,11 @@
       "__pos": "adjective",
       "__tags": ["weather"],
       "word": "partly cloudy",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "The sky is partly cloudy.",
+        "It is partly cloudy this afternoon."
+      ]
     }
   },
 
@@ -839,7 +857,11 @@
       "__count": "uncountable",
       "__tags": ["temperature", "weather"],
       "word": "temperature",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "The temperature is very high today.",
+        "What is the temperature outside?"
+      ]
     }
   },
 
@@ -880,13 +902,28 @@
     }
   },
   {
+    "day": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": ["days"],
+      "word": "day",
+      "plural": "days",
+      "translation_note": "",
+      "examples": ["Today is a sunny day.", "There are seven days in a week."]
+    }
+  },
+  {
     "Sunday": {
       "__pos": "proper noun",
       "__count": "countable",
       "__tags": ["days"],
       "word": "Sunday",
       "plural": "Sundays",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "Sunday is the first day of the week.",
+        "We go to church on Sundays."
+      ]
     }
   },
   {
@@ -896,7 +933,8 @@
       "__tags": ["days"],
       "word": "Monday",
       "plural": "Mondays",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Monday comes after Sunday.", "I start work on Monday."]
     }
   },
   {
@@ -906,7 +944,11 @@
       "__tags": ["days"],
       "word": "Tuesday",
       "plural": "Tuesdays",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "Tuesday is the second day of the week.",
+        "We have a meeting on Tuesday."
+      ]
     }
   },
   {
@@ -916,7 +958,11 @@
       "__tags": ["days"],
       "word": "Wednesday",
       "plural": "Wednesdays",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "Wednesday is in the middle of the week.",
+        "She has a class on Wednesday."
+      ]
     }
   },
   {
@@ -926,7 +972,11 @@
       "__tags": ["days"],
       "word": "Thursday",
       "plural": "Thursdays",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "Thursday comes before Friday.",
+        "We play soccer on Thursday."
+      ]
     }
   },
   {
@@ -936,7 +986,11 @@
       "__tags": ["days"],
       "word": "Friday",
       "plural": "Fridays",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "Friday is the last workday for many people.",
+        "I go out with friends on Friday."
+      ]
     }
   },
   {
@@ -946,19 +1000,14 @@
       "__tags": ["days"],
       "word": "Saturday",
       "plural": "Saturdays",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "Saturday is a weekend day.",
+        "We relax at home on Saturday."
+      ]
     }
   },
-  {
-    "day": {
-      "__pos": "noun",
-      "__count": "countable",
-      "__tags": ["days"],
-      "word": "day",
-      "plural": "days",
-      "translation_note": ""
-    }
-  },
+
   {
     "week": {
       "__pos": "noun",
@@ -966,7 +1015,11 @@
       "__tags": ["days"],
       "word": "week",
       "plural": "weeks",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "There are seven days in a week.",
+        "I go to school five days a week."
+      ]
     }
   },
   {
@@ -976,7 +1029,11 @@
       "__tags": ["days"],
       "word": "weekend",
       "plural": "weekends",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "The weekend is Saturday and Sunday.",
+        "We visit family on the weekend."
+      ]
     }
   },
   {
@@ -986,7 +1043,8 @@
       "__tags": [""],
       "word": "weekday",
       "plural": "weekdays",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Monday is a weekday.", "I work on weekdays."]
     }
   },
   {
@@ -995,7 +1053,8 @@
       "__count": "uncountable",
       "__tags": ["days"],
       "word": "yesterday",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Yesterday was Friday.", "I went to the park yesterday."]
     }
   },
   {
@@ -1004,7 +1063,8 @@
       "__count": "uncountable",
       "__tags": ["days"],
       "word": "today",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Today is Monday.", "I feel happy today."]
     }
   },
   {
@@ -1013,7 +1073,8 @@
       "__count": "uncountable",
       "__tags": ["days"],
       "word": "tomorrow",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Tomorrow is Saturday.", "We have a test tomorrow."]
     }
   },
   {
@@ -1023,7 +1084,11 @@
       "__tags": ["months"],
       "word": "month",
       "plural": "months",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "There are twelve months in a year.",
+        "My birthday is next month."
+      ]
     }
   },
   {
@@ -1035,7 +1100,11 @@
       "__forced_pronunciation": "January",
       "__abbreviations": ["Jan"],
       "word": "January",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "January is the first month of the year.",
+        "It is cold in January."
+      ]
     }
   },
   {
@@ -1047,7 +1116,11 @@
       "__forced_pronunciation": "February",
       "__abbreviations": ["Feb"],
       "word": "February",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "February has 28 or 29 days.",
+        "Valentine's Day is in February."
+      ]
     }
   },
   {
@@ -1059,7 +1132,8 @@
       "__forced_pronunciation": "March",
       "__abbreviations": ["Mar"],
       "word": "March",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["March is the third month.", "Spring begins in March."]
     }
   },
   {
@@ -1071,7 +1145,8 @@
       "__forced_pronunciation": "April",
       "__abbreviations": ["Apr"],
       "word": "April",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["April comes after March.", "It often rains in April."]
     }
   },
   {
@@ -1083,7 +1158,8 @@
       "__icon_text": "May",
       "__forced_pronunciation": "May",
       "word": "May",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["May is a spring month.", "Flowers bloom in May."]
     }
   },
   {
@@ -1095,7 +1171,8 @@
       "__forced_pronunciation": "June",
       "__abbreviations": ["Jun"],
       "word": "June",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["June is the start of summer.", "School ends in June."]
     }
   },
   {
@@ -1107,7 +1184,8 @@
       "__forced_pronunciation": "July",
       "__abbreviations": ["Jul"],
       "word": "July",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["July is a hot month.", "Independence Day is in July."]
     }
   },
   {
@@ -1119,7 +1197,11 @@
       "__forced_pronunciation": "August",
       "__abbreviations": ["Aug"],
       "word": "August",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "August is the eighth month.",
+        "Many people go on vacation in August."
+      ]
     }
   },
   {
@@ -1131,7 +1213,11 @@
       "__forced_pronunciation": "September",
       "__abbreviations": ["Sep", "Sept"],
       "word": "September",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "September is the start of autumn.",
+        "School starts in September."
+      ]
     }
   },
   {
@@ -1143,7 +1229,8 @@
       "__forced_pronunciation": "October",
       "__abbreviations": ["Oct"],
       "word": "October",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["October is the tenth month.", "Halloween is in October."]
     }
   },
   {
@@ -1155,7 +1242,11 @@
       "__forced_pronunciation": "November",
       "__abbreviations": ["Nov"],
       "word": "November",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "November comes before December.",
+        "Thanksgiving is in November."
+      ]
     }
   },
   {
@@ -1167,7 +1258,11 @@
       "__forced_pronunciation": "December",
       "__abbreviations": ["Dec"],
       "word": "December",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "December is the last month of the year.",
+        "Christmas is in December."
+      ]
     }
   },
 
@@ -1181,6 +1276,11 @@
       "__variants": ["zero_variant_0"],
       "word": "zero",
       "plural": "zeroes",
+      "examples": [
+        "There are zero apples in the basket.",
+        "The temperature dropped to zero degrees.",
+        "He scored zero points on the test."
+      ],
       "translation_note": ""
     }
   },
@@ -1194,7 +1294,8 @@
       "__variants": ["one_variant_0", "one_variant_1"],
       "word": "one",
       "plural": "ones",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["I have one brother.", "There is one apple on the table."]
     }
   },
   {
@@ -1206,7 +1307,8 @@
       "__icon_text": "2",
       "word": "two",
       "plural": "twos",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["She has two cats.", "We bought two books."]
     }
   },
   {
@@ -1218,7 +1320,11 @@
       "__icon_text": "3",
       "word": "three",
       "plural": "threes",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "There are three chairs in the room.",
+        "He has three pencils."
+      ]
     }
   },
   {
@@ -1231,7 +1337,8 @@
       "__variants": ["four_variant_0", "four_variant_1"],
       "word": "four",
       "plural": "fours",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["We have four seasons in a year.", "She has four friends."]
     }
   },
   {
@@ -1243,7 +1350,11 @@
       "__icon_text": "5",
       "word": "five",
       "plural": "fives",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "There are five people in my family.",
+        "He can count to five."
+      ]
     }
   },
   {
@@ -1255,7 +1366,8 @@
       "__icon_text": "6",
       "word": "six",
       "plural": "sixes",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The clock shows six o'clock.", "She has six balloons."]
     }
   },
   {
@@ -1268,7 +1380,8 @@
       "__variants": ["seven_variant_0", "seven_variant_1", "seven_variant_2"],
       "word": "seven",
       "plural": "sevens",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["There are seven days in a week.", "He found seven coins."]
     }
   },
   {
@@ -1280,7 +1393,11 @@
       "__icon_text": "8",
       "word": "eight",
       "plural": "eights",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "She is eight years old.",
+        "There are eight crayons in the box."
+      ]
     }
   },
   {
@@ -1293,7 +1410,11 @@
       "__variants": ["nine_variant_0"],
       "word": "nine",
       "plural": "nines",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "Nine students are in the class.",
+        "He woke up at nine o'clock."
+      ]
     }
   },
   {
@@ -1305,7 +1426,8 @@
       "__icon_text": "10",
       "word": "ten",
       "plural": "tens",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["I have ten fingers.", "There are ten apples in the basket."]
     }
   },
   {
@@ -1317,7 +1439,11 @@
       "__icon_text": "11",
       "word": "eleven",
       "plural": "elevens",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "The meeting starts at eleven o'clock.",
+        "She counted eleven stars."
+      ]
     }
   },
   {
@@ -1329,7 +1455,11 @@
       "__icon_text": "12",
       "word": "twelve",
       "plural": "twelves",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "There are twelve months in a year.",
+        "He ate twelve grapes."
+      ]
     }
   },
   {
@@ -1341,7 +1471,11 @@
       "__icon_text": "13",
       "word": "thirteen",
       "plural": "thirteens",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "She is thirteen years old.",
+        "There are thirteen students in the group."
+      ]
     }
   },
   {
@@ -1353,7 +1487,11 @@
       "__icon_text": "14",
       "word": "fourteen",
       "plural": "fourteens",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "He has fourteen pencils.",
+        "The bus arrives at fourteen minutes past the hour."
+      ]
     }
   },
   {
@@ -1365,7 +1503,11 @@
       "__icon_text": "15",
       "word": "fifteen",
       "plural": "fifteens",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "There are fifteen chairs in the room.",
+        "She read fifteen pages."
+      ]
     }
   },
   {
@@ -1377,7 +1519,11 @@
       "__icon_text": "16",
       "word": "sixteen",
       "plural": "sixteens",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "He is sixteen years old.",
+        "Sixteen students passed the test."
+      ]
     }
   },
   {
@@ -1389,7 +1535,11 @@
       "__icon_text": "17",
       "word": "seventeen",
       "plural": "seventeens",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "There are seventeen desks in the classroom.",
+        "She has seventeen stickers."
+      ]
     }
   },
   {
@@ -1401,7 +1551,11 @@
       "__icon_text": "18",
       "word": "eighteen",
       "plural": "eighteens",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "He will be eighteen next year.",
+        "Eighteen people came to the party."
+      ]
     }
   },
   {
@@ -1413,7 +1567,11 @@
       "__icon_text": "19",
       "word": "nineteen",
       "plural": "nineteens",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "She found nineteen shells on the beach.",
+        "Nineteen students are present today."
+      ]
     }
   },
   {
@@ -1425,7 +1583,11 @@
       "__icon_text": "20",
       "word": "twenty",
       "plural": "twenties",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "There are twenty questions on the test.",
+        "He has twenty dollars."
+      ]
     }
   },
   {
@@ -1437,7 +1599,11 @@
       "__icon_text": "21",
       "word": "twenty-one",
       "plural": "twenty-ones",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "She is twenty-one years old.",
+        "There are twenty-one students in the class."
+      ]
     }
   },
   {
@@ -1449,7 +1615,11 @@
       "__icon_text": "22",
       "word": "twenty-two",
       "plural": "twenty-twos",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "He answered twenty-two questions.",
+        "The room has twenty-two chairs."
+      ]
     }
   },
   {
@@ -1461,7 +1631,11 @@
       "__icon_text": "23",
       "word": "twenty-three",
       "plural": "twenty-threes",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "There are twenty-three books on the shelf.",
+        "She counted twenty-three birds."
+      ]
     }
   },
   {
@@ -1473,7 +1647,11 @@
       "__icon_text": "24",
       "word": "twenty-four",
       "plural": "twenty-fours",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "A day has twenty-four hours.",
+        "He bought twenty-four eggs."
+      ]
     }
   },
   {
@@ -1485,7 +1663,11 @@
       "__icon_text": "25",
       "word": "twenty-five",
       "plural": "twenty-fives",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "She scored twenty-five points.",
+        "There are twenty-five students in the group."
+      ]
     }
   },
   {
@@ -2482,8 +2664,8 @@
       "__icon_text": "my",
       "__show_word": true,
       "word": "my",
-
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["This is my book.", "My house is big."]
     }
   },
   {
@@ -2497,7 +2679,8 @@
       "__icon_text": "your",
       "__show_word": true,
       "word": "your",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Is this your pen?", "Your car is red."]
     }
   },
   {
@@ -2507,7 +2690,8 @@
       "__icon_text": "his",
       "__show_word": true,
       "word": "his",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["His name is John.", "This is his backpack."]
     }
   },
   {
@@ -2517,7 +2701,8 @@
       "__icon_text": "her",
       "__show_word": true,
       "word": "her",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Her dress is blue.", "This is her dog."]
     }
   },
   {
@@ -2527,7 +2712,8 @@
       "__icon_text": "its",
       "__show_word": true,
       "word": "its",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The cat licked its paw.", "The tree lost its leaves."]
     }
   },
   {
@@ -2537,7 +2723,8 @@
       "__icon_text": "our",
       "__show_word": true,
       "word": "our",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Our teacher is kind.", "This is our classroom."]
     }
   },
   {
@@ -2547,7 +2734,8 @@
       "__icon_text": "their",
       "__show_word": true,
       "word": "their",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Their house is near the park.", "They love their dog."]
     }
   },
   {
@@ -2560,7 +2748,8 @@
       "__forced_pronunciation": "eye",
       "__show_word": true,
       "word": "I",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["I am a student.", "I like apples."]
     }
   },
   {
@@ -2574,7 +2763,8 @@
       "__icon_text": "you",
       "__show_word": true,
       "word": "you",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["You are my friend.", "You have a nice smile."]
     }
   },
   {
@@ -2584,7 +2774,8 @@
       "__icon_text": "he",
       "__show_word": true,
       "word": "he",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["He is a teacher.", "He likes to play soccer."]
     }
   },
   {
@@ -2594,7 +2785,8 @@
       "__icon_text": "she",
       "__show_word": true,
       "word": "she",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["She is my sister.", "She reads books every day."]
     }
   },
   {
@@ -2604,7 +2796,8 @@
       "__icon_text": "it",
       "__show_word": true,
       "word": "it",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["It is raining.", "It is a big dog."]
     }
   },
   {
@@ -2614,7 +2807,8 @@
       "__icon_text": "we",
       "__show_word": true,
       "word": "we",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["We are classmates.", "We like pizza."]
     }
   },
   {
@@ -2624,7 +2818,8 @@
       "__icon_text": "they",
       "__show_word": true,
       "word": "they",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["They are my friends.", "They play basketball."]
     }
   },
   {
@@ -2634,7 +2829,8 @@
       "__display_priority": 1,
       "word": "name",
       "plural": "names",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["My name is John.", "Please write your name on the form."]
     }
   },
   {
@@ -2644,7 +2840,8 @@
       "__icon_text": "First",
       "word": "first name",
       "plural": "first names",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["My first name is Sarah.", "Write your first name here."]
     }
   },
   {
@@ -2654,7 +2851,8 @@
       "__icon_text": "Middle",
       "word": "middle name",
       "plural": "middle names",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Do you have a middle name?", "Her middle name is Ann."]
     }
   },
   {
@@ -2664,7 +2862,8 @@
       "__icon_text": "Last",
       "word": "last name",
       "plural": "last names",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["My last name is Smith.", "Please spell your last name."]
     }
   },
 
@@ -2675,7 +2874,11 @@
       "__display_priority": 2,
       "word": "address",
       "plural": "addresses",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "What is your address?",
+        "Please write your address on the envelope."
+      ]
     }
   },
   {
@@ -2684,7 +2887,8 @@
       "__tags": ["personal information", "personal information address"],
       "word": "house number",
       "plural": "house numbers",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["My house number is 123.", "Write your house number here."]
     }
   },
   {
@@ -2693,7 +2897,8 @@
       "__tags": ["personal information", "personal information address"],
       "word": "street",
       "plural": "streets",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["I live on Main Street.", "What is the name of your street?"]
     }
   },
   {
@@ -2703,7 +2908,11 @@
       "__forced_pronunciation": "apartment number",
       "word": "apartment number",
       "plural": "apartment numbers",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "My apartment number is 5B.",
+        "Please include your apartment number."
+      ]
     }
   },
   {
@@ -2712,7 +2921,11 @@
       "__tags": ["personal information", "personal information address"],
       "word": "unit number",
       "plural": "unit numbers",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "The unit number is 202.",
+        "Write your unit number on the form."
+      ]
     }
   },
   {
@@ -2721,7 +2934,8 @@
       "__tags": ["personal information", "personal information address"],
       "word": "city",
       "plural": "cities",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["I live in the city of Seattle.", "What city are you from?"]
     }
   },
   {
@@ -2730,7 +2944,11 @@
       "__tags": ["personal information", "personal information address"],
       "word": "state",
       "plural": "states",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "She lives in the state of California.",
+        "Write your state on the application."
+      ]
     }
   },
   {
@@ -2741,7 +2959,8 @@
       "__forced_pronunciation": "zip code",
       "word": "ZIP code",
       "plural": "ZIP codes",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["My ZIP code is 98101.", "Please enter your ZIP code."]
     }
   },
   {
@@ -2750,7 +2969,11 @@
       "__tags": ["personal information", "personal information other"],
       "word": "email address",
       "plural": "email addresses",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "What is your email address?",
+        "Please provide your email address."
+      ]
     }
   },
   {
@@ -2760,7 +2983,11 @@
       "__display_priority": 3,
       "word": "phone number",
       "plural": "phone numbers",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "My phone number is 555-1234.",
+        "Can I have your phone number?"
+      ]
     }
   },
   {
@@ -2769,7 +2996,11 @@
       "__tags": ["personal information", "personal information other"],
       "word": "telephone number",
       "plural": "telephone numbers",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "Please write your telephone number.",
+        "What is your telephone number?"
+      ]
     }
   },
   {
@@ -2780,7 +3011,11 @@
       "__forced_pronunciation": "date of birth",
       "word": "date of birth",
       "plural": "dates of birth",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "My date of birth is January 1, 2000.",
+        "Please enter your date of birth."
+      ]
     }
   },
 
@@ -2964,7 +3199,11 @@
       "__tags": ["colors"],
       "word": "color",
       "plural": "colors",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "Red is my favorite color.",
+        "There are many colors in the rainbow."
+      ]
     }
   },
 
@@ -2973,7 +3212,8 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "red",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The apple is red.", "She wears a red dress."]
     }
   },
   {
@@ -2981,7 +3221,8 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "blue",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The sky is blue.", "He has a blue backpack."]
     }
   },
   {
@@ -2989,7 +3230,8 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "yellow",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The sun is yellow.", "She has a yellow pencil."]
     }
   },
   {
@@ -2997,7 +3239,8 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "green",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The grass is green.", "He is wearing a green shirt."]
     }
   },
   {
@@ -3005,7 +3248,8 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "orange",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The orange is orange.", "She has an orange hat."]
     }
   },
   {
@@ -3013,7 +3257,11 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "purple",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "She likes purple flowers.",
+        "He is wearing a purple sweater."
+      ]
     }
   },
   {
@@ -3021,7 +3269,8 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "brown",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The table is brown.", "He has brown hair."]
     }
   },
   {
@@ -3029,7 +3278,8 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "pink",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The flowers are pink.", "She wears a pink skirt."]
     }
   },
   {
@@ -3037,7 +3287,8 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "white",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The snow is white.", "He has a white shirt."]
     }
   },
   {
@@ -3045,7 +3296,8 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "gray",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The clouds are gray.", "She has gray shoes."]
     }
   },
   {
@@ -3053,16 +3305,20 @@
       "__pos": "adjective",
       "__tags": ["colors"],
       "word": "black",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["The cat is black.", "He wears black pants."]
     }
   },
-
   {
     "family": {
       "__pos": "noun",
       "__tags": ["family"],
       "word": "family",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "My family is very important to me.",
+        "We have a big family."
+      ]
     }
   },
 
@@ -3072,7 +3328,11 @@
       "__tags": ["family"],
       "word": "father",
       "plural": "fathers",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "My father is a doctor.",
+        "His father cooks dinner every night."
+      ]
     }
   },
 
@@ -3082,7 +3342,11 @@
       "__tags": ["family"],
       "word": "parent",
       "plural": "parents",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "My parents are kind.",
+        "Each child has at least one parent."
+      ]
     }
   },
   {
@@ -3091,7 +3355,11 @@
       "__tags": ["family"],
       "word": "son",
       "plural": "sons",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "They have one son and two daughters.",
+        "His son is five years old."
+      ]
     }
   },
   {
@@ -3100,7 +3368,8 @@
       "__tags": ["family"],
       "word": "daughter",
       "plural": "daughters",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Their daughter goes to college.", "She has two daughters."]
     }
   },
 
@@ -3110,7 +3379,8 @@
       "__tags": ["family"],
       "word": "brother",
       "plural": "brothers",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["My brother is older than me.", "She has three brothers."]
     }
   },
   {
@@ -3119,7 +3389,8 @@
       "__tags": ["family"],
       "word": "sister",
       "plural": "sisters",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["Her sister lives in New York.", "I have one sister."]
     }
   },
   {
@@ -3128,7 +3399,8 @@
       "__tags": ["family"],
       "word": "sibling",
       "plural": "siblings",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": ["He has two siblings.", "Siblings often play together."]
     }
   },
   {
@@ -3136,7 +3408,11 @@
       "__pos": "noun",
       "__tags": ["family"],
       "word": "husband",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "Her husband is very supportive.",
+        "She and her husband travel a lot."
+      ]
     }
   },
   {
@@ -3144,7 +3420,11 @@
       "__pos": "noun",
       "__tags": ["family"],
       "word": "wife",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "His wife is a teacher.",
+        "They have been married for ten years."
+      ]
     }
   },
   {
@@ -3152,7 +3432,11 @@
       "__pos": "noun",
       "__tags": ["family"],
       "word": "spouse",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "You can bring your spouse to the party.",
+        "Each spouse has different hobbies."
+      ]
     }
   },
 
@@ -3161,7 +3445,11 @@
       "__pos": "adjective",
       "__tags": ["family", "marital status"],
       "word": "married",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "They are married.",
+        "My parents have been married for twenty years."
+      ]
     }
   },
 
@@ -4500,15 +4788,6 @@
     }
   },
   {
-    "weather": {
-      "__pos": "noun",
-      "__tags": ["nouns", "nature"],
-      "word": "weather",
-      "translation_note": "",
-      "examples": ["The weather is nice today.", "I like sunny weather."]
-    }
-  },
-  {
     "mother": {
       "__pos": "noun",
       "__tags": ["nouns", "family"],
@@ -5839,7 +6118,7 @@
       "__pos": "noun",
       "__count": "countable",
       "__tags": ["numbers", "nouns"],
-      "__icon_text": "123",
+      "__icon_text": "1,2,3",
       "word": "number",
       "plural": "numbers",
       "translation_note": "",
