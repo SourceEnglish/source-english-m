@@ -1992,7 +1992,8 @@
     "__lessons": ["articles"],
     "__order": 5,
     "__type": "paragraph",
-    "text": "Use 'a' before words that begin with a consonant sound. Use 'an' before words that begin with a vowel sound (a, e, i, o, u)."
+    "text": "Use 'a' before words that begin with a consonant sound. Use 'an' before words that begin with a vowel sound (a, e, i, o, u).",
+    "__forced_pronunciation": "Use 'a' before words that begin with a consonant sound. Use 'Ann' before words that begin with a vowel sound (a, e, i, o, u)."
   },
   {
     "_id": "articles_a_an_examples",
