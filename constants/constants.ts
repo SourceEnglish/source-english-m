@@ -236,22 +236,29 @@ const lexendCharWidths: Record<string, number> = {
   '"': 0.32,
 };
 
+// getLexendFontSizeToFit is used to scale each word individually in CardPreview
 export function getLexendFontSizeToFit(
   text: string,
   boxSize: number,
   minFontSize: number = 8
 ): number {
-  function estimateTextWidth(text: string, fontSize: number) {
+  function estimateTextWidth(word: string, fontSize: number) {
     let total = 0;
-    for (let i = 0; i < text.length; i++) {
-      const c = text[i];
+    for (let i = 0; i < word.length; i++) {
+      const c = word[i];
       total += lexendCharWidths[c] ?? 0.58;
     }
     return total * fontSize;
   }
+
+  // Split text into words and find the largest width
+  const words = text.split(/\s+/);
   let fontSize = boxSize * 0.9;
   for (let trySize = fontSize; trySize >= minFontSize; trySize -= 0.5) {
-    if (estimateTextWidth(text, trySize) <= boxSize * 0.92) {
+    const maxWidth = Math.max(
+      ...words.map((word) => estimateTextWidth(word, trySize))
+    );
+    if (maxWidth <= boxSize * 0.92) {
       fontSize = trySize;
       break;
     }

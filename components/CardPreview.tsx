@@ -97,13 +97,10 @@ export default function CardPreview({
     router.push({ pathname: '/vocab/[entry]', params: { entry: key } });
   };
 
-  // Calculate preview font size for the word (for truncation)
+  // Calculate preview font size for each word (for truncation)
   const previewBoxSize = isMobile ? 90 : 120;
-  const previewFontSize = getLexendFontSizeToFit(
-    word,
-    previewBoxSize,
-    isMobile ? 12 : 16
-  );
+  const minFontSize = isMobile ? 12 : 16;
+  const words = word.split(/\s+/);
 
   return (
     <Pressable
@@ -151,21 +148,44 @@ export default function CardPreview({
       {__show_word !== false &&
         __pos !== 'letter' &&
         __pos !== 'multigraph' && (
-          <ReadableText
-            text={word}
-            pronunciation={__forced_pronunciation}
-            displayText={word.length > 14 ? word.slice(0, 13) + '…' : word}
+          <View
             style={{
-              fontSize: word.length > 10 ? previewFontSize : isMobile ? 18 : 28,
-              marginBottom: 4,
-              textAlign: 'center',
+              flexDirection: 'row',
               flexWrap: 'wrap',
-              alignSelf: 'center',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginBottom: 4,
               width: '100%',
             }}
-            numberOfLines={2}
-            ellipsizeMode="tail"
-          />
+          >
+            {words.map((w, idx) => {
+              // Truncate if needed
+              const displayText = w.length > 14 ? w.slice(0, 13) + '…' : w;
+              const fontSize =
+                w.length > 10
+                  ? getLexendFontSizeToFit(w, previewBoxSize, minFontSize)
+                  : isMobile
+                  ? 18
+                  : 28;
+              return (
+                <ReadableText
+                  key={idx}
+                  text={w}
+                  pronunciation={__forced_pronunciation}
+                  displayText={displayText}
+                  style={{
+                    fontSize,
+                    textAlign: 'center',
+                    flexWrap: 'wrap',
+                    alignSelf: 'center',
+                    marginRight: idx < words.length - 1 ? 4 : 0,
+                  }}
+                  numberOfLines={2}
+                  ellipsizeMode="tail"
+                />
+              );
+            })}
+          </View>
         )}
       {__pos !== 'letter' && __pos !== 'multigraph' && (
         <ReadableText
