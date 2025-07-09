@@ -158,15 +158,25 @@ export default function CardPreview({
               width: '100%',
             }}
           >
-            {words.map((w, idx) => {
+            {words.map((w: string, idx: number) => {
               // Truncate if needed
-              const displayText = w.length > 14 ? w.slice(0, 13) + '…' : w;
-              const fontSize =
+              const displayText: string =
+                w.length > 14 ? w.slice(0, 13) + '…' : w;
+              const fontSize: number =
                 w.length > 10
                   ? getLexendFontSizeToFit(w, previewBoxSize, minFontSize)
                   : isMobile
                   ? 18
                   : 28;
+              interface ReadableTextProps {
+                key: number;
+                text: string;
+                pronunciation?: string;
+                displayText: string;
+                style: object;
+                numberOfLines: number;
+                ellipsizeMode: 'tail' | 'head' | 'middle' | 'clip';
+              }
               return (
                 <ReadableText
                   key={idx}

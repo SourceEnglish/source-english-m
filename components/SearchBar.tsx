@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   Text,
   StyleSheet,
-  Dimensions,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { getLessons } from '@/utils/loadLessons';
@@ -155,6 +154,41 @@ function flattenVocabulary(vocabArr: any[]): {
           altWords = altWords.filter(
             (v, i, arr) => !!v && arr.indexOf(v) === i
           );
+        }
+        // Add plural forms for nouns
+        if (value.__pos === 'noun' && value.word) {
+          let plural: string | undefined = undefined;
+          // Use explicit plural property if present, otherwise fall back to rules
+          if (typeof value.plural === 'string' && value.plural.length > 0) {
+            plural = value.plural;
+          } else {
+            const base = value.word;
+            // Basic English pluralization rules
+            if (base.endsWith('y') && !/[aeiou]y$/.test(base)) {
+              plural = base.slice(0, -1) + 'ies';
+            } else if (
+              base.endsWith('s') ||
+              base.endsWith('sh') ||
+              base.endsWith('ch') ||
+              base.endsWith('x') ||
+              base.endsWith('z')
+            ) {
+              plural = base + 'es';
+            } else {
+              plural = base + 's';
+            }
+          }
+          // Add plural to altWords if not already present
+          if (plural && plural !== value.word) {
+            if (!altWords) altWords = [value.word];
+            if (!altWords.includes(plural)) {
+              altWords.push(plural);
+            }
+            // Remove duplicates and falsy
+            altWords = altWords.filter(
+              (v, i, arr) => !!v && arr.indexOf(v) === i
+            );
+          }
         }
         result.push({
           word: value.word,
@@ -343,6 +377,7 @@ export default function SearchBar() {
     pos?: string;
     emoji?: string;
     __icon_text?: string;
+    altWords?: string[]; // <-- Always include altWords for consistency
   }[] = [];
 
   if (query.length === 1 && /^[a-zA-Z]$/.test(query)) {
@@ -357,6 +392,7 @@ export default function SearchBar() {
         key: v.key,
         pos: v.pos,
         __icon_text: v.__icon_text,
+        altWords: v.altWords, // <-- Add altWords here
       }));
 
     const rest = allSuggestions.filter(
@@ -405,6 +441,21 @@ export default function SearchBar() {
             renderItem={({ item }) => {
               // Use icon instead of emoji
               let iconComponent: React.FC<any>;
+              // Define vocabEntry for use in all branches
+              // Add type assertion to help TypeScript
+              const vocabEntry =
+                item.type === 'vocab'
+                  ? (vocabEntries.find((v) => v.key === item.key) ||
+                    item) as {
+                    key?: string;
+                    word?: string;
+                    plural?: string;
+                    conjugation?: Record<string, string>;
+                    pos?: string;
+                    [key: string]: any;
+                  }
+                  : undefined;
+
               if (item.type === 'lesson') {
                 // Render green book emoji as the icon for lessons
                 iconComponent = (props: any) => {
@@ -433,11 +484,74 @@ export default function SearchBar() {
                 };
               } else {
                 // For vocab, try to find the vocab entry for more info
-                const vocabEntry =
-                  vocabEntries.find((v) => v.key === item.key) || item;
                 iconComponent = findIconComponent(vocabEntry);
               }
               const Icon = iconComponent;
+
+              // Determine display text and part of speech for suggestion
+              let displayText = t(item.name);
+              let partOfSpeech =
+                item.type === 'lesson' ? 'lesson' : item.pos || '';
+
+              // If the query matches an altWord (not the base), show "altWord (base)" and adjust part of speech
+              if (
+                item.altWords &&
+                item.altWords.length > 0 &&
+                typeof query === 'string' &&
+                query.length > 0
+              ) {
+                const q = query.trim().toLowerCase();
+                // Find the best altWord match
+                const matchedAlt = item.altWords.find(
+                  (alt) => alt.toLowerCase() === q && alt !== item.name
+                );
+                if (matchedAlt) {
+                  displayText = `${matchedAlt} (${item.name})`;
+                  // Adjust part of speech for plural nouns
+                  if (
+                    item.pos === 'noun' &&
+                    vocabEntry &&
+                    typeof vocabEntry.plural === 'string' &&
+                    matchedAlt === vocabEntry.plural &&
+                    matchedAlt !== item.name
+                  ) {
+                    partOfSpeech = 'Noun (plural)';
+                  }
+                  // Adjust part of speech for conjugated verbs
+                  if (
+                    item.pos === 'verb' &&
+                    vocabEntry &&
+                    vocabEntry.conjugation &&
+                    typeof vocabEntry.conjugation === 'object'
+                  ) {
+                    // Find which conjugation key matches the altWord
+                    const foundKey = Object.entries(
+                      vocabEntry.conjugation
+                    ).find(
+                      ([k, v]) =>
+                        typeof v === 'string' &&
+                        v.toLowerCase() === matchedAlt.toLowerCase()
+                    );
+                    if (foundKey) {
+                      // Capitalize first letter of key for display
+                      const tense = foundKey[0]
+                        .replace(/_/g, ' ')
+                        .replace(/\b\w/g, (c) => c.toUpperCase());
+                      partOfSpeech = `verb (${tense})`;
+                    } else {
+                      // Check for present simple 3rd person singular
+                      // If not found in conjugation, but is a 3rd person form
+                      if (
+                        matchedAlt !== item.name &&
+                        matchedAlt !== vocabEntry.word
+                      ) {
+                        partOfSpeech = 'verb (3rd person singular)';
+                      }
+                    }
+                  }
+                }
+              }
+
               // Prevent focus from shifting away on press/longPress
               const handlePress = (e: any) => {
                 e.preventDefault?.();
@@ -473,7 +587,7 @@ export default function SearchBar() {
                       }}
                     />
                     <Text style={styles.suggestionText}>
-                      {t(item.name)}
+                      {displayText}
                       {item.clarifier ? ` (${item.clarifier})` : ''}
                     </Text>
                     {/* Divider and POS/lesson type */}
@@ -506,7 +620,7 @@ export default function SearchBar() {
                         textTransform: 'capitalize',
                       }}
                     >
-                      {item.type === 'lesson' ? 'lesson' : item.pos || ''}
+                      {partOfSpeech}
                     </Text>
                   </View>
                 </TouchableOpacity>
@@ -564,6 +678,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 8,
     maxHeight: 240,
     zIndex: 9999,
+    fontFamily: 'Lexend_400Regular',
     elevation: 10,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -577,5 +692,6 @@ const styles = StyleSheet.create({
   },
   suggestionText: {
     fontSize: 16,
+    fontFamily: 'Lexend_400Regular',
   },
 });
