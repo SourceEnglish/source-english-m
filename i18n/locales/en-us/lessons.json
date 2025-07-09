@@ -206,7 +206,19 @@
       "__tags": ["yes or no questions"],
       "__type": "lesson",
       "__order": 17,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab_lesson": "yes or no questions vocab"
+    }
+  },
+
+  {
+    "yes or no questions vocab": {
+      "name": "yes or no questions vocab",
+      "__tags": ["yes or no questions"],
+      "__type": "vocabulary",
+      "__order": 17,
+      "__hidden": false,
+      "__lesson": "yes or no questions"
     }
   },
   {
@@ -255,18 +267,7 @@
       "__tags": ["simple present tense"],
       "__type": "lesson",
       "__order": 22,
-      "__hidden": false,
-      "__vocab_lesson": "simple present tense vocab"
-    }
-  },
-  {
-    "simple present tense vocab": {
-      "name": "simple present tense vocab",
-      "__tags": ["simple present tense"],
-      "__type": "vocabulary",
-      "__order": 23,
-      "__hidden": true,
-      "__lesson": "simple present tense"
+      "__hidden": false
     }
   },
   {
