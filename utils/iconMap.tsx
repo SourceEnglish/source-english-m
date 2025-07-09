@@ -185,6 +185,20 @@ import NeverIcon from '@/assets/icons/licensed/never.svg'; // Example for a cust
 import NotIcon from '@/assets/icons/licensed/not.svg'; // Example for a custom icon
 
 import NoIcon from '@/assets/icons/licensed/no.svg'; // Example for a custom icon
+import BackpackIcon from '@/assets/icons/licensed/backpack.svg'; // Example for a custom icon
+import BookIcon from '@/assets/icons/licensed/book.svg'; // Example for a custom icon
+import ClassIcon from '@/assets/icons/licensed/class.svg'; // Example for a custom icon
+import DeskIcon from '@/assets/icons/licensed/desk.svg'; // Example for a custom icon
+import EraserIcon from '@/assets/icons/licensed/eraser.svg'; // Example for a custom icon
+import MarkerIcon from '@/assets/icons/licensed/marker.svg'; // Example for a custom icon
+import NotebookIcon from '@/assets/icons/licensed/notebook.svg'; // Example for a custom icon
+import PaperIcon from '@/assets/icons/licensed/paper.svg'; // Example for a custom icon
+import PenIcon from '@/assets/icons/licensed/pen.svg'; // Example for a custom icon
+import PencilIcon from '@/assets/icons/licensed/pencil.svg'; // Example for a custom icon
+import StudentIcon from '@/assets/icons/licensed/student.svg'; // Example for a custom icon
+import TableIcon from '@/assets/icons/licensed/table.svg'; // Example for a custom icon
+
+import WhiteboardIcon from '@/assets/icons/licensed/whiteboard.svg'; // Example for a custom icon
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -481,6 +495,21 @@ export const iconMap: Record<string, React.FC<any>> = {
   rarely: RarelyIcon, // Example for a custom icon
   never: NeverIcon, // Example for a custom icon
   not: NotIcon,
+
+  backpack: BackpackIcon,
+  book: BookIcon,
+  class: ClassIcon,
+  classroom: ClassIcon,
+  desk: DeskIcon,
+  eraser: EraserIcon,
+  marker: MarkerIcon,
+  notebook: NotebookIcon,
+  paper: PaperIcon,
+  pen: PenIcon,
+  pencil: PencilIcon,
+  student: StudentIcon,
+  table: TableIcon,
+  whiteboard: WhiteboardIcon,
 
   // ...etc
 };

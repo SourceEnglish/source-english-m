@@ -3386,21 +3386,7 @@
       "translation_note": ""
     }
   },
-  {
-    "listen": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
 
-      "word": "listen",
-      "conjugation": {
-        "present": "listen",
-        "present_participle": "listening",
-        "past": "listened"
-      },
-      "examples": ["We listen to music."],
-      "translation_note": ""
-    }
-  },
   {
     "love": {
       "__pos": "verb",
@@ -3416,21 +3402,7 @@
       "translation_note": ""
     }
   },
-  {
-    "read": {
-      "__pos": "verb",
-      "__tags": ["verbs"],
 
-      "word": "read",
-      "conjugation": {
-        "present": "read",
-        "present_participle": "reading",
-        "past": "read"
-      },
-      "examples": ["I read a book."],
-      "translation_note": ""
-    }
-  },
   {
     "relax": {
       "__pos": "verb",
@@ -4177,7 +4149,7 @@
   {
     "chair": {
       "__pos": "noun",
-      "__tags": ["nouns", "furniture"],
+      "__tags": ["nouns", "furniture", "class"],
       "word": "chair",
       "plural": "chairs",
       "translation_note": "",
@@ -4727,6 +4699,207 @@
       "plural": "pets",
       "translation_note": "",
       "examples": ["A cat is a common pet.", "Do you have any pets?"]
+    }
+  },
+  {
+    "backpack": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "backpack",
+      "plural": "backpacks",
+      "translation_note": "",
+      "examples": ["I carry my books in a backpack."]
+    }
+  },
+  {
+    "book": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "book",
+      "plural": "books",
+      "translation_note": "",
+      "examples": ["She reads a book every night."]
+    }
+  },
+  {
+    "class": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "class",
+      "plural": "classes",
+      "translation_note": "",
+      "examples": ["Our class starts at 9 a.m."]
+    }
+  },
+  {
+    "desk": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "desk",
+      "plural": "desks",
+      "translation_note": "",
+      "examples": ["The student sits at a desk."]
+    }
+  },
+  {
+    "eraser": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "eraser",
+      "plural": "erasers",
+      "translation_note": "",
+      "examples": ["Use an eraser to fix your mistake."]
+    }
+  },
+  {
+    "marker": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "marker",
+      "plural": "markers",
+      "translation_note": "",
+      "examples": ["The teacher writes with a marker."]
+    }
+  },
+  {
+    "notebook": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "notebook",
+      "plural": "notebooks",
+      "translation_note": "",
+      "examples": ["Write your notes in your notebook."]
+    }
+  },
+  {
+    "paper": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "paper",
+      "plural": "papers",
+      "translation_note": "",
+      "examples": ["Please hand in your paper."]
+    }
+  },
+  {
+    "pen": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "pen",
+      "plural": "pens",
+      "translation_note": "",
+      "examples": ["I write with a pen."]
+    }
+  },
+  {
+    "pencil": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "pencil",
+      "plural": "pencils",
+      "translation_note": "",
+      "examples": ["Sharpen your pencil before class."]
+    }
+  },
+  {
+    "student": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "student",
+      "plural": "students",
+      "translation_note": "",
+      "examples": ["Each student has a desk."]
+    }
+  },
+  {
+    "table": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "table",
+      "plural": "tables",
+      "translation_note": "",
+      "examples": ["We sit around the table."]
+    }
+  },
+  {
+    "teacher": {
+      "__pos": "noun",
+      "__tags": ["class", "jobs"],
+      "word": "teacher",
+      "plural": "teachers",
+      "translation_note": "",
+      "examples": ["The teacher helps the students."]
+    }
+  },
+  {
+    "whiteboard": {
+      "__pos": "noun",
+      "__tags": ["class"],
+      "word": "whiteboard",
+      "plural": "whiteboards",
+      "translation_note": "",
+      "examples": ["The teacher writes on the whiteboard."]
+    }
+  },
+  {
+    "read": {
+      "__pos": "verb",
+      "__tags": ["verbs", "read", "class"],
+
+      "word": "read",
+      "conjugation": {
+        "present": "read",
+        "present_participle": "reading",
+        "past": "read"
+      },
+      "examples": ["I read a book."],
+      "translation_note": ""
+    }
+  },
+  {
+    "speak": {
+      "__pos": "verb",
+      "__tags": ["verbs", "class"],
+      "word": "speak",
+      "conjugation": {
+        "present": "speak",
+        "present_participle": "speaking",
+        "past": "spoke"
+      },
+      "examples": ["I speak English.", "She speaks very clearly."],
+      "translation_note": ""
+    }
+  },
+  {
+    "write": {
+      "__pos": "verb",
+      "__tags": ["verbs", "class"],
+      "word": "write",
+      "conjugation": {
+        "present": "write",
+        "present_participle": "writing",
+        "past": "wrote"
+      },
+      "examples": [
+        "I write letters to my parents.",
+        "She writes in her notebook."
+      ],
+      "translation_note": ""
+    }
+  },
+  {
+    "listen": {
+      "__pos": "verb",
+      "__tags": ["verbs", "class"],
+
+      "word": "listen",
+      "conjugation": {
+        "present": "listen",
+        "present_participle": "listening",
+        "past": "listened"
+      },
+      "examples": ["We listen to music."],
+      "translation_note": ""
     }
   }
 ]
