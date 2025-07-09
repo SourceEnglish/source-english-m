@@ -354,5 +354,14 @@
       "__order": 30,
       "__hidden": false
     }
+  },
+  {
+    "vehicle vocab": {
+      "name": "vehicle vocab",
+      "__tags": ["vehicle"],
+      "__type": "vocabulary",
+      "__order": 15,
+      "__hidden": false
+    }
   }
 ]

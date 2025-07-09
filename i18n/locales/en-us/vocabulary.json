@@ -4901,5 +4901,219 @@
       "examples": ["We listen to music."],
       "translation_note": ""
     }
+  },
+  {
+    "vehicle": {
+      "__pos": "noun",
+      "__tags": ["vehicle"],
+      "word": "vehicle",
+      "plural": "vehicles",
+      "translation_note": "",
+      "examples": [
+        "A car is a type of vehicle.",
+        "There are many vehicles on the road."
+      ]
+    }
+  },
+  {
+    "car": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "street vehicle"],
+      "word": "car",
+      "plural": "cars",
+      "translation_note": "",
+      "examples": [
+        "She drives a red car.",
+        "There are many cars in the parking lot."
+      ]
+    }
+  },
+  {
+    "bus": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "street vehicle"],
+      "word": "bus",
+      "plural": "buses",
+      "translation_note": "",
+      "examples": ["I take the bus to school.", "The bus is full of people."]
+    }
+  },
+  {
+    "truck": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "street vehicle"],
+      "word": "truck",
+      "plural": "trucks",
+      "translation_note": "",
+      "examples": [
+        "A truck carries heavy things.",
+        "The truck is parked outside."
+      ]
+    }
+  },
+  {
+    "van": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "street vehicle"],
+      "word": "van",
+      "plural": "vans",
+      "translation_note": "",
+      "examples": ["They have a white van.", "The van can carry many people."]
+    }
+  },
+  {
+    "bicycle": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "street vehicle"],
+      "word": "bicycle",
+      "plural": "bicycles",
+      "translation_note": "",
+      "examples": ["He rides his bicycle to work.", "A bicycle has two wheels."]
+    }
+  },
+  {
+    "motorcycle": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "street vehicle"],
+      "word": "motorcycle",
+      "plural": "motorcycles",
+      "translation_note": "",
+      "examples": [
+        "A motorcycle is faster than a bicycle.",
+        "He wears a helmet when riding his motorcycle."
+      ]
+    }
+  },
+  {
+    "light rail": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "street vehicle"],
+      "word": "light rail",
+      "translation_note": "",
+      "examples": [
+        "The city has a new light rail system.",
+        "We took the light rail downtown."
+      ]
+    }
+  },
+  {
+    "boat": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "other vehicle"],
+      "word": "boat",
+      "plural": "boats",
+      "translation_note": "",
+      "examples": ["We went fishing on a boat.", "The boat is on the lake."]
+    }
+  },
+  {
+    "airplane": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "other vehicle"],
+      "word": "airplane",
+      "plural": "airplanes",
+      "translation_note": "",
+      "examples": [
+        "The airplane is flying in the sky.",
+        "We traveled by airplane."
+      ]
+    }
+  },
+  {
+    "helicopter": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "other vehicle"],
+      "word": "helicopter",
+      "plural": "helicopters",
+      "translation_note": "",
+      "examples": [
+        "The helicopter landed on the roof.",
+        "A helicopter can fly straight up."
+      ]
+    }
+  },
+  {
+    "drive": {
+      "__pos": "verb",
+      "__tags": ["vehicle", "verb"],
+      "word": "drive",
+      "conjugation": {
+        "present": "drive",
+        "present_participle": "driving",
+        "past": "drove"
+      },
+      "translation_note": "",
+      "examples": ["She can drive a car.", "He is driving to work."]
+    }
+  },
+  {
+    "ride": {
+      "__pos": "verb",
+      "__tags": ["vehicle", "verb"],
+      "word": "ride",
+      "conjugation": {
+        "present": "ride",
+        "present_participle": "riding",
+        "past": "rode"
+      },
+      "translation_note": "",
+      "examples": [
+        "I ride my bicycle to school.",
+        "They ride the bus every day."
+      ]
+    }
+  },
+
+  {
+    "train station": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "place"],
+      "word": "train station",
+      "plural": "train stations",
+      "translation_note": "",
+      "examples": [
+        "We waited at the train station.",
+        "The train station is very busy."
+      ]
+    }
+  },
+  {
+    "airport": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "place"],
+      "word": "airport",
+      "plural": "airports",
+      "translation_note": "",
+      "examples": [
+        "The airplane is at the airport.",
+        "We arrived at the airport early."
+      ]
+    }
+  },
+  {
+    "gas station": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "place"],
+      "word": "gas station",
+      "plural": "gas stations",
+      "translation_note": "",
+      "examples": [
+        "We stopped at the gas station.",
+        "The gas station is on the corner."
+      ]
+    }
+  },
+  {
+    "parking lot": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "place"],
+      "word": "parking lot",
+      "plural": "parking lots",
+      "translation_note": "",
+      "examples": [
+        "The parking lot is full.",
+        "I parked my car in the parking lot."
+      ]
+    }
   }
 ]

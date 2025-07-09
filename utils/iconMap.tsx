@@ -198,6 +198,23 @@ import PencilIcon from '@/assets/icons/licensed/pencil.svg'; // Example for a cu
 import StudentIcon from '@/assets/icons/licensed/student.svg'; // Example for a custom icon
 import TableIcon from '@/assets/icons/licensed/table.svg'; // Example for a custom icon
 
+import AirplaneIcon from '@/assets/icons/licensed/airplane.svg'; // Example for a custom icon
+import AirportIcon from '@/assets/icons/licensed/airport.svg'; // Example for a custom icon
+import BicycleIcon from '@/assets/icons/licensed/bicycle.svg'; // Example for a custom icon
+import BoatIcon from '@/assets/icons/licensed/boat.svg'; // Example for a custom icon
+import BusIcon from '@/assets/icons/licensed/bus.svg'; // Example for a custom icon
+import CarIcon from '@/assets/icons/licensed/car.svg'; // Example for a custom icon
+import GasStationIcon from '@/assets/icons/licensed/gas_station.svg'; // Example for a custom icon
+import HelicopterIcon from '@/assets/icons/licensed/helicopter.svg'; // Example for a custom icon
+import LightRailIcon from '@/assets/icons/licensed/light_rail.svg'; // Example for a custom icon
+import MotorcycleIcon from '@/assets/icons/licensed/motorcycle.svg'; // Example for a custom icon
+import ParkingLotIcon from '@/assets/icons/licensed/parking_lot.svg'; // Example for a custom icon
+import RideIcon from '@/assets/icons/licensed/ride.svg'; // Example for a custom icon
+import TrainStationIcon from '@/assets/icons/licensed/train_station.svg'; // Example for a custom icon
+import TruckIcon from '@/assets/icons/licensed/truck.svg'; // Example for a custom icon
+import VanIcon from '@/assets/icons/licensed/van.svg'; // Example for a custom icon
+import VehicleIcon from '@/assets/icons/licensed/vehicle.svg'; // Example for a custom icon
+
 import WhiteboardIcon from '@/assets/icons/licensed/whiteboard.svg'; // Example for a custom icon
 
 import React from 'react';
@@ -510,6 +527,23 @@ export const iconMap: Record<string, React.FC<any>> = {
   student: StudentIcon,
   table: TableIcon,
   whiteboard: WhiteboardIcon,
+
+  airplane: AirplaneIcon,
+  airport: AirportIcon,
+  bicycle: BicycleIcon,
+  boat: BoatIcon,
+  bus: BusIcon,
+  car: CarIcon,
+  'gas station': GasStationIcon,
+  helicopter: HelicopterIcon,
+  'light rail': LightRailIcon,
+  motorcycle: MotorcycleIcon,
+  'parking lot': ParkingLotIcon,
+  ride: RideIcon,
+  'train station': TrainStationIcon,
+  truck: TruckIcon,
+  van: VanIcon,
+  vehicle: VehicleIcon,
 
   // ...etc
 };
