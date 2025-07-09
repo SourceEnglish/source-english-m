@@ -1,6 +1,6 @@
 import React from 'react';
 import ReadableText from './ReadableText';
-import { View, StyleSheet, useWindowDimensions } from 'react-native';
+import { Text, View, StyleSheet, useWindowDimensions } from 'react-native';
 import { CENTERED_MAX_WIDTH } from '@/constants/constants';
 import VocabularySection from './VocabularySection';
 
@@ -32,7 +32,8 @@ const ExampleSentences: React.FC<ExampleSentencesProps> = ({ examples }) => {
         {examples.map((ex: string, idx: number) => (
           <View key={idx} style={{ width: '100%', alignItems: 'flex-start' }}>
             <ReadableText
-              text={`• ${ex}`}
+              text={'• ' + ex}
+              pronunciation={ex}
               style={{
                 fontSize: isMobile ? 15 : 19,
                 color: '#444',
