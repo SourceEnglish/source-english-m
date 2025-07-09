@@ -3109,7 +3109,12 @@
       "__tags": ["family"],
       "word": "child",
       "plural": "children",
-      "translation_note": ""
+      "translation_note": "",
+      "examples": [
+        "The child is playing in the park.",
+        "She has one child.",
+        "Children go to school every day."
+      ]
     }
   },
   {
@@ -4579,7 +4584,11 @@
       "word": "person",
       "plural": "people",
       "translation_note": "",
-      "examples": ["There is one person in the room.", "She is a nice person."]
+      "examples": [
+        "There is one person in the room.",
+        "She is a nice person.",
+        "The bus is full of people."
+      ]
     }
   },
   {
@@ -4622,7 +4631,11 @@
       "word": "baby",
       "plural": "babies",
       "translation_note": "",
-      "examples": ["The baby is sleeping.", "She has a baby."]
+      "examples": [
+        "The baby is sleeping.",
+        "She has a baby.",
+        "The babies are crying."
+      ]
     }
   },
   {
