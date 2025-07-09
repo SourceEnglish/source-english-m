@@ -84,9 +84,25 @@ const InlineCardPreview: React.FC<InlineCardPreviewProps> = ({
         // Do nothing if readAloudMode is true
         return;
       }
-      // Redirect to __redirect if present, otherwise use __objectKey or word
       const redirect = (card as any).__redirect;
-      const target = redirect ? redirect : objectKey;
+      const isProperNoun =
+        card.__pos === 'month' ||
+        card.__pos === 'proper_noun' ||
+        card.__pos === 'proper noun';
+      let target;
+      if (redirect) {
+        target = redirect;
+      } else if (isProperNoun) {
+        if ((card as any).__objectKey) {
+          target = (card as any).__objectKey.toLowerCase();
+        } else if (card.word) {
+          target = card.word.toLowerCase();
+        } else {
+          target = objectKey.toLowerCase();
+        }
+      } else {
+        target = objectKey;
+      }
       router.push(`/vocab/${encodeURIComponent(target)}`);
     }
   };

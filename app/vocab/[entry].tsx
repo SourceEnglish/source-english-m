@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
 
 export default function VocabEntryPage() {
   const { entry } = useLocalSearchParams();
-  const entryName = entry as string;
+  const entryName = (entry as string)?.toLowerCase();
   const router = useRouter();
   const { deckEntries, deckIndex, setDeckIndex } = useDeck();
   const { speakText } = useSpeech();
@@ -58,12 +58,12 @@ export default function VocabEntryPage() {
 
   // Find the vocab entry
   const vocabEntryObj = vocabularyData.find(
-    (e: any) => Object.keys(e)[0] === entryName
+    (e: any) => Object.keys(e)[0].toLowerCase() === entryName
   );
   const vocabEntry = vocabEntryObj
     ? {
-        ...vocabEntryObj[entryName as keyof typeof vocabEntryObj],
-        __objectKey: entryName, // Pass the object key for icon mapping
+        ...vocabEntryObj[Object.keys(vocabEntryObj)[0] as keyof typeof vocabEntryObj],
+        __objectKey: Object.keys(vocabEntryObj)[0], // always use the original key for display
       }
     : null;
 
