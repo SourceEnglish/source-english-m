@@ -171,6 +171,13 @@ const Table: React.FC<{
   // Import readAloudMode from SpeechContext
   const { readAloudMode } = require('@/contexts/SpeechContext').useSpeech();
 
+  // Get the verb for special pronunciation logic
+  // Only used for past tense of "read"
+  const verb =
+    typeof rows[0]?.form === 'string' && rows[0]?.form.toLowerCase() === 'read'
+      ? 'read'
+      : undefined;
+
   return (
     <View
       style={[
@@ -207,6 +214,13 @@ const Table: React.FC<{
       {rows.map(({ subject, form }, idx) => {
         const isDivider = idx === 5;
         const pronunciation = subject === 'you (plural)' ? 'you' : undefined;
+        // Force pronunciation to "red" for past tense of "read"
+        const forcePronunciation =
+          title === 'Past Simple' &&
+          typeof form === 'string' &&
+          form.toLowerCase() === 'read'
+            ? 'red'
+            : undefined;
         return (
           <React.Fragment key={subject}>
             {isDivider && <View style={styles.singPlurDivider} />}
@@ -224,7 +238,11 @@ const Table: React.FC<{
                 />
               </View>
               <View style={styles.cell}>
-                <ReadableText text={form} style={styles.cellText} />
+                <ReadableText
+                  text={form}
+                  pronunciation={forcePronunciation}
+                  style={styles.cellText}
+                />
               </View>
             </View>
           </React.Fragment>
