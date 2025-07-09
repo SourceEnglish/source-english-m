@@ -240,6 +240,61 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import ReadableText from '@/components/ReadableText'; // Add this import
 
+import AmericaIcon from '@/assets/icons/licensed/america.svg';
+import BedIcon from '@/assets/icons/licensed/bed.svg';
+import BigIcon from '@/assets/icons/licensed/big.svg';
+import BoxIcon from '@/assets/icons/licensed/box.svg';
+import CakeIcon from '@/assets/icons/licensed/cake.svg';
+import CandyIcon from '@/assets/icons/licensed/candy.svg';
+import CentIcon from '@/assets/icons/licensed/cent.svg';
+import CupIcon from '@/assets/icons/licensed/cup.svg';
+import DoorIcon from '@/assets/icons/licensed/door.svg';
+import FitIcon from '@/assets/icons/licensed/fit.svg';
+import FruitIcon from '@/assets/icons/licensed/fruit.svg';
+import HappyIcon from '@/assets/icons/licensed/happy.svg';
+import HelloIcon from '@/assets/icons/licensed/hello.svg';
+import JobIcon from '@/assets/icons/licensed/job.svg';
+import JuiceIcon from '@/assets/icons/licensed/juice.svg';
+import KeyIcon from '@/assets/icons/licensed/key.svg';
+import KindIcon from '@/assets/icons/licensed/kind.svg';
+import LampIcon from '@/assets/icons/licensed/lamp.svg';
+import LongIcon from '@/assets/icons/licensed/long.svg';
+import LoudIcon from '@/assets/icons/licensed/loud.svg';
+import NewIcon from '@/assets/icons/licensed/new.svg';
+import NextIcon from '@/assets/icons/licensed/next.svg';
+import OffIcon from '@/assets/icons/licensed/off.svg';
+import OnIcon from '@/assets/icons/licensed/on.svg';
+import OpenIcon from '@/assets/icons/licensed/open.svg';
+import ParkIcon from '@/assets/icons/licensed/park.svg';
+import PlayIcon from '@/assets/icons/licensed/play.svg';
+import PizzaIcon from '@/assets/icons/licensed/pizza.svg';
+import ProblemIcon from '@/assets/icons/licensed/problem.svg';
+import PullIcon from '@/assets/icons/licensed/pull.svg';
+import PushIcon from '@/assets/icons/licensed/push.svg';
+import PutIcon from '@/assets/icons/licensed/put.svg';
+import QuestionIcon from '@/assets/icons/licensed/question.svg';
+import QuickIcon from '@/assets/icons/licensed/quick.svg';
+import QuietIcon from '@/assets/icons/licensed/quiet.svg';
+import SchoolIcon from '@/assets/icons/licensed/school.svg';
+import ShortIcon from '@/assets/icons/licensed/short.svg';
+import SkyIcon from '@/assets/icons/licensed/sky.svg';
+import SmallIcon from '@/assets/icons/licensed/small.svg';
+import SofaIcon from '@/assets/icons/licensed/sofa.svg';
+import TallIcon from '@/assets/icons/licensed/tall.svg';
+import TimeIcon from '@/assets/icons/licensed/time.svg';
+import UniformIcon from '@/assets/icons/licensed/uniform.svg';
+import UniversityIcon from '@/assets/icons/licensed/university.svg';
+import UpIcon from '@/assets/icons/licensed/up.svg';
+import VideoIcon from '@/assets/icons/licensed/video.svg';
+import WaterIcon from '@/assets/icons/licensed/water.svg';
+import WindowIcon from '@/assets/icons/licensed/window.svg';
+import ZooIcon from '@/assets/icons/licensed/zoo.svg';
+import CircleIcon from '@/assets/icons/open_source/circle.svg';
+import SentenceIcon from '@/assets/icons/open_source/sentence.svg';
+import CommaIcon from '@/assets/icons/licensed/comma.svg';
+import HomeIcon from '@/assets/icons/licensed/home.svg';
+import SitIcon from '@/assets/icons/licensed/sit.svg';
+
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -583,6 +638,62 @@ export const iconMap: Record<string, React.FC<any>> = {
   boy: BoyIcon,
   girl: GirlIcon,
   baby: BabyIcon,
+  america: AmericaIcon,
+  bed: BedIcon,
+  big: BigIcon,
+  box: BoxIcon,
+  cake: CakeIcon,
+  candy: CandyIcon,
+  cent: CentIcon,
+  cup: CupIcon,
+  door: DoorIcon,
+  fit: FitIcon,
+  fruit: FruitIcon,
+  happy: HappyIcon,
+  hello: HelloIcon,
+  job: JobIcon,
+  juice: JuiceIcon,
+  key: KeyIcon,
+  kind: KindIcon,
+  lamp: LampIcon,
+  long: LongIcon,
+  loud: LoudIcon,
+  new: NewIcon,
+  next: NextIcon,
+  off: OffIcon,
+  on: OnIcon,
+  open: OpenIcon,
+  park: ParkIcon,
+  play: PlayIcon,
+  pizza: PizzaIcon,
+  problem: ProblemIcon,
+  pull: PullIcon,
+  push: PushIcon,
+  put: PutIcon,
+  question: QuestionIcon,
+  quick: QuickIcon,
+  quiet: QuietIcon,
+  school: SchoolIcon,
+  short: ShortIcon,
+  sky: SkyIcon,
+  small: SmallIcon,
+  sofa: SofaIcon,
+  tall: TallIcon,
+  time: TimeIcon,
+  uniform: UniformIcon,
+  university: UniversityIcon,
+  up: UpIcon,
+  video: VideoIcon,
+  water: WaterIcon,
+  window: WindowIcon,
+  zoo: ZooIcon,
+  circle: CircleIcon,
+  sentence: SentenceIcon,
+  comma: CommaIcon,
+  home: HomeIcon, // Example for a custom icon
+  house: HomeIcon,
+  kid: ChildIcon,
+  sit: SitIcon,
 
   // ...etc
 };

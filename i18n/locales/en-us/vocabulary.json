@@ -295,7 +295,7 @@
         {
           "__ipa": "k",
           "__forced_pronunciation": "k.wav",
-          "examples": ["kid", "kind", "kiss"],
+          "examples": ["kid", "kind", "key"],
           "header": "/k/",
           "__header_pronunciation": "k.wav"
         }
@@ -452,7 +452,7 @@
         {
           "__ipa": "kw",
           "__forced_pronunciation": "kw.wav",
-          "examples": ["queen", "quick", "question"],
+          "examples": ["quiet", "quick", "question"],
           "header": "/kw/",
           "__header_pronunciation": "kw.wav"
         }
@@ -3103,20 +3103,7 @@
       "translation_note": ""
     }
   },
-  {
-    "child": {
-      "__pos": "noun",
-      "__tags": ["family"],
-      "word": "child",
-      "plural": "children",
-      "translation_note": "",
-      "examples": [
-        "The child is playing in the park.",
-        "She has one child.",
-        "Children go to school every day."
-      ]
-    }
-  },
+
   {
     "brother": {
       "__pos": "noun",
@@ -4279,7 +4266,7 @@
         {
           "__ipa": "kw",
           "__forced_pronunciation": "kw.wav",
-          "examples": ["quick", "queen", "question"],
+          "examples": ["quick", "quiet", "question"],
           "header": "/kw/",
           "__header_pronunciation": "kw.wav"
         }
@@ -4621,6 +4608,19 @@
       "examples": [
         "The child is laughing.",
         "There are many children at the park."
+      ]
+    }
+  },
+  {
+    "kid": {
+      "__pos": "noun",
+      "__tags": ["people", "person group"],
+      "word": "kid",
+      "plural": "kids",
+      "translation_note": "",
+      "examples": [
+        "The kid is playing outside.",
+        "There are many kids in the park."
       ]
     }
   },
@@ -5220,6 +5220,632 @@
       "examples": [
         "The parking lot is full.",
         "I parked my car in the parking lot."
+      ]
+    }
+  },
+  {
+    "America": {
+      "__pos": "proper noun",
+      "__tags": ["places", "countries"],
+      "word": "America",
+      "translation_note": "",
+      "examples": ["America is a large country.", "She lives in America."]
+    }
+  },
+  {
+    "bed": {
+      "__pos": "noun",
+      "__tags": ["furniture"],
+      "word": "bed",
+      "plural": "beds",
+      "translation_note": "",
+      "examples": ["I sleep in my bed.", "The bed is comfortable."]
+    }
+  },
+  {
+    "big": {
+      "__pos": "adjective",
+      "__tags": ["size"],
+      "word": "big",
+      "translation_note": "",
+      "examples": ["The house is big.", "He has big hands."]
+    }
+  },
+  {
+    "box": {
+      "__pos": "noun",
+      "__tags": ["objects"],
+      "word": "box",
+      "plural": "boxes",
+      "translation_note": "",
+      "examples": ["The box is heavy.", "She put toys in the box."]
+    }
+  },
+  {
+    "cake": {
+      "__pos": "noun",
+      "__tags": ["food"],
+      "word": "cake",
+      "plural": "cakes",
+      "translation_note": "",
+      "examples": ["I like chocolate cake.", "She baked a cake."]
+    }
+  },
+  {
+    "candy": {
+      "__pos": "noun",
+      "__tags": ["food", "sweets"],
+      "word": "candy",
+      "plural": "candies",
+      "translation_note": "",
+      "examples": ["Children like candy.", "He ate a piece of candy."]
+    }
+  },
+  {
+    "cent": {
+      "__pos": "noun",
+      "__tags": ["money"],
+      "word": "cent",
+      "plural": "cents",
+      "translation_note": "",
+      "examples": ["A penny is one cent.", "This costs fifty cents."]
+    }
+  },
+  {
+    "cup": {
+      "__pos": "noun",
+      "__tags": ["kitchen", "container"],
+      "word": "cup",
+      "plural": "cups",
+      "translation_note": "",
+      "examples": ["I drink tea from a cup.", "She has a blue cup."]
+    }
+  },
+  {
+    "door": {
+      "__pos": "noun",
+      "__tags": ["house", "objects"],
+      "word": "door",
+      "plural": "doors",
+      "translation_note": "",
+      "examples": ["Open the door.", "The door is closed."]
+    }
+  },
+  {
+    "fit": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "fit",
+      "conjugation": {
+        "present": "fit",
+        "present_participle": "fitting",
+        "past": "fit"
+      },
+      "translation_note": "",
+      "examples": ["The shoes fit well.", "Does this shirt fit you?"]
+    }
+  },
+  {
+    "fruit": {
+      "__pos": "noun",
+      "__tags": ["food"],
+      "word": "fruit",
+      "plural": "fruits",
+      "translation_note": "",
+      "examples": ["Apple is a fruit.", "She eats a lot of fruit."]
+    }
+  },
+  {
+    "happy": {
+      "__pos": "adjective",
+      "__tags": ["feelings"],
+      "word": "happy",
+      "translation_note": "",
+      "examples": ["I am happy today.", "She looks happy."]
+    }
+  },
+  {
+    "hello": {
+      "__pos": "interjection",
+      "__tags": ["greetings"],
+      "word": "hello",
+      "translation_note": "",
+      "examples": ["Hello! How are you?", "She said hello to her friend."]
+    }
+  },
+  {
+    "job": {
+      "__pos": "noun",
+      "__tags": ["work"],
+      "word": "job",
+      "plural": "jobs",
+      "translation_note": "",
+      "examples": ["He has a new job.", "What is your job?"]
+    }
+  },
+  {
+    "juice": {
+      "__pos": "noun",
+      "__tags": ["food", "drink"],
+      "word": "juice",
+      "plural": "juices",
+      "translation_note": "",
+      "examples": ["I drink orange juice.", "She likes apple juice."]
+    }
+  },
+  {
+    "key": {
+      "__pos": "noun",
+      "__tags": ["objects"],
+      "word": "key",
+      "plural": "keys",
+      "translation_note": "",
+      "examples": ["I lost my key.", "This key opens the door."]
+    }
+  },
+  {
+    "kind": {
+      "__pos": "adjective",
+      "__tags": ["personality"],
+      "word": "kind",
+      "translation_note": "",
+      "examples": ["She is very kind.", "Be kind to others."]
+    }
+  },
+  {
+    "lamp": {
+      "__pos": "noun",
+      "__tags": ["furniture", "objects"],
+      "word": "lamp",
+      "plural": "lamps",
+      "translation_note": "",
+      "examples": ["The lamp is on the table.", "Turn on the lamp."]
+    }
+  },
+  {
+    "long": {
+      "__pos": "adjective",
+      "__tags": ["size"],
+      "word": "long",
+      "translation_note": "",
+      "examples": ["She has long hair.", "The road is long."]
+    }
+  },
+  {
+    "loud": {
+      "__pos": "adjective",
+      "__tags": ["sound"],
+      "word": "loud",
+      "translation_note": "",
+      "examples": ["The music is loud.", "He spoke in a loud voice."]
+    }
+  },
+  {
+    "new": {
+      "__pos": "adjective",
+      "__tags": ["time"],
+      "word": "new",
+      "translation_note": "",
+      "examples": ["I have a new car.", "She bought new shoes."]
+    }
+  },
+  {
+    "next": {
+      "__pos": "adjective",
+      "__tags": ["order"],
+      "word": "next",
+      "translation_note": "",
+      "examples": ["Who is next?", "The next bus arrives soon."]
+    }
+  },
+  {
+    "off": {
+      "__pos": "preposition",
+      "__tags": ["prepositions"],
+      "word": "off",
+      "translation_note": "",
+      "examples": ["Turn off the light.", "The cat jumped off the table."]
+    }
+  },
+  {
+    "on": {
+      "__pos": "preposition",
+      "__tags": ["prepositions"],
+      "word": "on",
+      "translation_note": "",
+      "examples": ["The book is on the table.", "Turn on the TV."]
+    }
+  },
+  {
+    "open": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "open",
+      "conjugation": {
+        "present": "open",
+        "present_participle": "opening",
+        "past": "opened"
+      },
+      "translation_note": "",
+      "examples": ["Open the window.", "The store opens at 9 a.m."]
+    }
+  },
+  {
+    "park": {
+      "__pos": "noun",
+      "__tags": ["places"],
+      "word": "park",
+      "plural": "parks",
+      "translation_note": "",
+      "examples": ["We play in the park.", "The park is beautiful."]
+    }
+  },
+  {
+    "play": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "play",
+      "conjugation": {
+        "present": "play",
+        "present_participle": "playing",
+        "past": "played"
+      },
+      "translation_note": "",
+      "examples": ["Children play outside.", "I play soccer."]
+    }
+  },
+  {
+    "pizza": {
+      "__pos": "noun",
+      "__tags": ["food"],
+      "word": "pizza",
+      "plural": "pizzas",
+      "translation_note": "",
+      "examples": ["We ordered a pizza.", "Pizza is my favorite food."]
+    }
+  },
+  {
+    "problem": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "word": "problem",
+      "plural": "problems",
+      "translation_note": "",
+      "examples": ["I have a problem.", "Let's solve this problem."]
+    }
+  },
+  {
+    "pull": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "pull",
+      "conjugation": {
+        "present": "pull",
+        "present_participle": "pulling",
+        "past": "pulled"
+      },
+      "translation_note": "",
+      "examples": ["Pull the door.", "She pulled the rope."]
+    }
+  },
+  {
+    "push": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "push",
+      "conjugation": {
+        "present": "push",
+        "present_participle": "pushing",
+        "past": "pushed"
+      },
+      "translation_note": "",
+      "examples": ["Push the button.", "He pushed the box."]
+    }
+  },
+  {
+    "put": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "put",
+      "conjugation": {
+        "present": "put",
+        "present_participle": "putting",
+        "past": "put"
+      },
+      "translation_note": "",
+      "examples": ["Put the book on the table.", "She put on her coat."]
+    }
+  },
+  {
+    "question": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "word": "question",
+      "plural": "questions",
+      "translation_note": "",
+      "examples": ["I have a question.", "Ask a question."]
+    }
+  },
+  {
+    "quick": {
+      "__pos": "adjective",
+      "__tags": ["speed"],
+      "word": "quick",
+      "translation_note": "",
+      "examples": ["He is quick.", "Give a quick answer."]
+    }
+  },
+  {
+    "quiet": {
+      "__pos": "adjective",
+      "__tags": ["sound"],
+      "word": "quiet",
+      "translation_note": "",
+      "examples": ["Be quiet, please.", "The room is quiet."]
+    }
+  },
+  {
+    "school": {
+      "__pos": "noun",
+      "__tags": ["places", "education"],
+      "word": "school",
+      "plural": "schools",
+      "translation_note": "",
+      "examples": ["I go to school.", "The school is big."]
+    }
+  },
+  {
+    "short": {
+      "__pos": "adjective",
+      "__tags": ["size"],
+      "word": "short",
+      "translation_note": "",
+      "examples": ["He is short.", "The story is short."]
+    }
+  },
+  {
+    "sky": {
+      "__pos": "noun",
+      "__tags": ["nature"],
+      "word": "sky",
+      "translation_note": "",
+      "examples": ["The sky is blue.", "Birds fly in the sky."]
+    }
+  },
+  {
+    "small": {
+      "__pos": "adjective",
+      "__tags": ["size"],
+      "word": "small",
+      "translation_note": "",
+      "examples": ["The dog is small.", "She has small hands."]
+    }
+  },
+  {
+    "sofa": {
+      "__pos": "noun",
+      "__tags": ["furniture"],
+      "word": "sofa",
+      "plural": "sofas",
+      "translation_note": "",
+      "examples": ["I sit on the sofa.", "The sofa is soft."]
+    }
+  },
+  {
+    "tall": {
+      "__pos": "adjective",
+      "__tags": ["size"],
+      "word": "tall",
+      "translation_note": "",
+      "examples": ["He is tall.", "The building is tall."]
+    }
+  },
+  {
+    "time": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "word": "time",
+      "plural": "times",
+      "translation_note": "",
+      "examples": ["What time is it?", "I have no time."]
+    }
+  },
+  {
+    "uniform": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+      "word": "uniform",
+      "plural": "uniforms",
+      "translation_note": "",
+      "examples": ["Students wear a uniform.", "She has a blue uniform."]
+    }
+  },
+  {
+    "university": {
+      "__pos": "noun",
+      "__tags": ["places", "education"],
+      "word": "university",
+      "plural": "universities",
+      "translation_note": "",
+      "examples": ["He goes to university.", "The university is large."]
+    }
+  },
+  {
+    "up": {
+      "__pos": "adverb",
+      "__tags": ["direction"],
+      "word": "up",
+      "translation_note": "",
+      "examples": ["Look up.", "She went up the stairs."]
+    }
+  },
+  {
+    "video": {
+      "__pos": "noun",
+      "__tags": ["media"],
+      "word": "video",
+      "plural": "videos",
+      "translation_note": "",
+      "examples": ["I watched a video.", "She made a video."]
+    }
+  },
+  {
+    "water": {
+      "__pos": "noun",
+      "__tags": ["nature", "drink"],
+      "word": "water",
+      "translation_note": "",
+      "examples": ["I drink water.", "Water is important."]
+    }
+  },
+  {
+    "window": {
+      "__pos": "noun",
+      "__tags": ["house", "objects"],
+      "word": "window",
+      "plural": "windows",
+      "translation_note": "",
+      "examples": ["Open the window.", "The window is clean."]
+    }
+  },
+  {
+    "zoo": {
+      "__pos": "noun",
+      "__tags": ["places"],
+      "word": "zoo",
+      "plural": "zoos",
+      "translation_note": "",
+      "examples": ["We went to the zoo.", "There are many animals in the zoo."]
+    }
+  },
+  {
+    "circle": {
+      "__pos": "noun",
+      "__tags": ["shapes"],
+      "word": "circle",
+      "plural": "circles",
+      "translation_note": "",
+      "examples": ["Draw a circle.", "The table is a circle."]
+    }
+  },
+  {
+    "sentence": {
+      "__pos": "noun",
+      "__tags": ["grammar"],
+      "word": "sentence",
+      "plural": "sentences",
+      "translation_note": "",
+      "examples": ["Write a sentence.", "This sentence is long."]
+    }
+  },
+  {
+    "comma": {
+      "__pos": "noun",
+      "__tags": ["grammar", "punctuation"],
+      "word": "comma",
+      "plural": "commas",
+      "translation_note": "",
+      "examples": ["Use a comma in the sentence.", "A comma separates words."]
+    }
+  },
+  {
+    "very": {
+      "__pos": "adverb",
+      "__tags": ["adverbs", "intensifiers"],
+      "__icon_text": "very",
+      "__show_word": false,
+      "word": "very",
+      "translation_note": "",
+      "examples": ["She is very happy.", "It is very cold today."]
+    }
+  },
+  {
+    "to": {
+      "__pos": "preposition",
+      "__tags": ["prepositions"],
+      "__icon_text": "to",
+      "__show_word": false,
+      "word": "to",
+      "translation_note": "",
+      "examples": ["I go to school.", "Give the book to her."]
+    }
+  },
+  {
+    "home": {
+      "__pos": "noun",
+      "__tags": ["places", "house"],
+      "word": "home",
+      "plural": "homes",
+      "translation_note": "",
+      "examples": [
+        "I am at home.",
+        "She goes home after school.",
+        "Home is where the heart is."
+      ]
+    }
+  },
+  {
+    "house": {
+      "__pos": "noun",
+      "__tags": ["places", "house"],
+      "word": "house",
+      "plural": "houses",
+      "translation_note": "",
+      "examples": [
+        "I live in a house.",
+        "The house is big and white.",
+        "There is a garden in front of the house."
+      ]
+    }
+  },
+  {
+    "use": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "use",
+      "__icon_text": "use",
+      "__forced_pronunciation": "yooz",
+      "__show_word": false,
+      "conjugation": {
+        "present": "use",
+        "present_participle": "using",
+        "past": "used"
+      },
+      "translation_note": "",
+      "examples": ["I use a pen to write.", "She uses her phone every day."]
+    }
+  },
+  {
+    "sit": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "sit",
+      "conjugation": {
+        "present": "sit",
+        "present_participle": "sitting",
+        "past": "sat"
+      },
+      "examples": [
+        "Please sit down.",
+        "They sit on the bench.",
+        "She is sitting in the chair."
+      ],
+      "translation_note": ""
+    }
+  },
+
+  {
+    "number": {
+      "__pos": "noun",
+      "__count": "countable",
+      "__tags": ["numbers", "nouns"],
+      "__icon_text": "123",
+      "word": "number",
+      "plural": "numbers",
+      "translation_note": "",
+      "examples": [
+        "What is your phone number?",
+        "Write the number on the paper."
       ]
     }
   }
