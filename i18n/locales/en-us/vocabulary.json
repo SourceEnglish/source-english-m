@@ -4143,16 +4143,6 @@
       ]
     }
   },
-  {
-    "teacher": {
-      "__pos": "noun",
-      "__tags": ["nouns", "people"],
-      "word": "teacher",
-      "plural": "teachers",
-      "translation_note": "",
-      "examples": ["My teacher is very kind.", "She is a math teacher."]
-    }
-  },
 
   {
     "chair": {
@@ -4527,15 +4517,6 @@
     }
   },
   {
-    "they": {
-      "__pos": "pronoun",
-      "__tags": ["pronouns", "people"],
-      "word": "they",
-      "translation_note": "",
-      "examples": ["They are my friends.", "They like to play soccer."]
-    }
-  },
-  {
     "mother": {
       "__pos": "noun",
       "__tags": ["nouns", "family"],
@@ -4568,6 +4549,80 @@
       },
       "examples": ["I think about my future.", "She thinks it's a good idea."],
       "translation_note": ""
+    }
+  },
+
+  {
+    "man": {
+      "__pos": "noun",
+      "__tags": ["people", "person group"],
+      "word": "man",
+      "plural": "men",
+      "translation_note": "",
+      "examples": ["The man is tall.", "He is a kind man."]
+    }
+  },
+  {
+    "woman": {
+      "__pos": "noun",
+      "__tags": ["people", "person group"],
+      "word": "woman",
+      "plural": "women",
+      "translation_note": "",
+      "examples": ["The woman is smiling.", "She is a strong woman."]
+    }
+  },
+  {
+    "person": {
+      "__pos": "noun",
+      "__tags": ["people", "person group"],
+      "word": "person",
+      "plural": "people",
+      "translation_note": "",
+      "examples": ["There is one person in the room.", "She is a nice person."]
+    }
+  },
+  {
+    "boy": {
+      "__pos": "noun",
+      "__tags": ["people", "person group"],
+      "word": "boy",
+      "plural": "boys",
+      "translation_note": "",
+      "examples": ["The boy is playing.", "He is a young boy."]
+    }
+  },
+  {
+    "girl": {
+      "__pos": "noun",
+      "__tags": ["people", "person group"],
+      "word": "girl",
+      "plural": "girls",
+      "translation_note": "",
+      "examples": ["The girl is reading.", "She is a smart girl."]
+    }
+  },
+  {
+    "child": {
+      "__pos": "noun",
+      "__tags": ["people", "person group"],
+      "word": "child",
+      "plural": "children",
+      "translation_note": "",
+      "examples": [
+        "The child is laughing.",
+        "There are many children at the park."
+      ]
+    }
+  },
+  {
+    "baby": {
+      "__pos": "noun",
+      "__tags": ["people", "person group"],
+      "word": "baby",
+      "plural": "babies",
+      "translation_note": "",
+      "examples": ["The baby is sleeping.", "She has a baby."]
     }
   },
   {
@@ -4836,7 +4891,10 @@
       "word": "teacher",
       "plural": "teachers",
       "translation_note": "",
-      "examples": ["The teacher helps the students."]
+      "examples": [
+        "The teacher helps the students.",
+        "She is an English teacher."
+      ]
     }
   },
   {

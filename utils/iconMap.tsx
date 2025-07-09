@@ -227,6 +227,12 @@ import TrainStationIcon from '@/assets/icons/licensed/train_station.svg'; // Exa
 import TruckIcon from '@/assets/icons/licensed/truck.svg'; // Example for a custom icon
 import VanIcon from '@/assets/icons/licensed/van.svg'; // Example for a custom icon
 import VehicleIcon from '@/assets/icons/licensed/vehicle.svg'; // Example for a custom icon
+import ManIcon from '@/assets/icons/licensed/man.svg'; // Add this import
+import WomanIcon from '@/assets/icons/licensed/woman.svg'; // Add this import
+import PersonIcon from '@/assets/icons/licensed/person.svg'; // Add this import
+import BoyIcon from '@/assets/icons/licensed/boy.svg'; // Add this import
+import GirlIcon from '@/assets/icons/licensed/girl.svg'; // Add this import
+import BabyIcon from '@/assets/icons/licensed/baby.svg'; // Add this import
 
 import WhiteboardIcon from '@/assets/icons/licensed/whiteboard.svg'; // Example for a custom icon
 
@@ -571,6 +577,12 @@ export const iconMap: Record<string, React.FC<any>> = {
   truck: TruckIcon,
   van: VanIcon,
   vehicle: VehicleIcon,
+  man: ManIcon, // Add this import
+  woman: WomanIcon,
+  person: PersonIcon,
+  boy: BoyIcon,
+  girl: GirlIcon,
+  baby: BabyIcon,
 
   // ...etc
 };

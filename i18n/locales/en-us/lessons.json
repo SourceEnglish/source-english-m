@@ -363,5 +363,14 @@
       "__order": 15,
       "__hidden": false
     }
+  },
+  {
+    "people vocab": {
+      "name": "people vocab",
+      "__tags": ["people", "person group"],
+      "__type": "vocabulary",
+      "__order": 14.6,
+      "__hidden": false
+    }
   }
 ]
