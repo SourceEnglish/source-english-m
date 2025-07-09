@@ -691,6 +691,36 @@
   },
 
   {
+    "yes": {
+      "__pos": "interjection",
+      "__tags": ["affirmation", "yes or no questions"],
+      "word": "yes",
+      "translation_note": "",
+
+      "examples": ["Yes, I agree.", "Do you want to go? Yes!"]
+    }
+  },
+  {
+    "no": {
+      "__pos": "interjection",
+      "__tags": ["negation", "yes or no questions"],
+      "word": "no",
+      "translation_note": "",
+
+      "examples": ["No, I don't agree.", "Do you want to go? No!"]
+    }
+  },
+  {
+    "not": {
+      "__pos": "adverb",
+      "__tags": ["negation", "yes or no questions"],
+      "word": "not",
+      "translation_note": "",
+      "examples": ["I do not like broccoli.", "She is not coming to the party."]
+    }
+  },
+
+  {
     "apple": {
       "__pos": "noun",
       "__count": "countable",
@@ -722,6 +752,15 @@
       "__tags": ["food"],
       "word": "bread",
       "plural": "bread",
+      "translation_note": ""
+    }
+  },
+  {
+    "weather": {
+      "__pos": "noun",
+      "__count": "uncountable",
+      "__tags": ["weather"],
+      "word": "weather",
       "translation_note": ""
     }
   },
@@ -790,10 +829,21 @@
       "translation_note": ""
     }
   },
+
+  {
+    "temperature": {
+      "__pos": "noun",
+      "__count": "uncountable",
+      "__tags": ["temperature", "weather"],
+      "word": "temperature",
+      "translation_note": ""
+    }
+  },
+
   {
     "hot": {
       "__pos": "adjective",
-      "__tags": ["temperature"],
+      "__tags": ["temperature", "weather"],
       "word": "hot",
       "translation_note": "",
       "examples": ["The weather is sunny and hot."]
@@ -802,7 +852,7 @@
   {
     "warm": {
       "__pos": "adjective",
-      "__tags": ["temperature"],
+      "__tags": ["temperature", "weather"],
       "word": "warm",
       "translation_note": "",
       "examples": ["The weather is warm and partly cloudy."]
@@ -811,7 +861,7 @@
   {
     "cool": {
       "__pos": "adjective",
-      "__tags": ["temperature"],
+      "__tags": ["temperature", "weather"],
       "word": "cool",
       "translation_note": "",
       "examples": ["The weather is cool and cloudy."]
@@ -820,28 +870,10 @@
   {
     "cold": {
       "__pos": "adjective",
-      "__tags": ["temperature"],
+      "__tags": ["temperature", "weather"],
       "word": "cold",
       "translation_note": "",
       "examples": ["The weather is snowy and cold."]
-    }
-  },
-  {
-    "weather": {
-      "__pos": "noun",
-      "__count": "uncountable",
-      "__tags": ["weather"],
-      "word": "weather",
-      "translation_note": ""
-    }
-  },
-  {
-    "temperature": {
-      "__pos": "noun",
-      "__count": "uncountable",
-      "__tags": ["temperature"],
-      "word": "temperature",
-      "translation_note": ""
     }
   },
   {
@@ -2761,7 +2793,7 @@
   {
     "be": {
       "__pos": "verb",
-      "__tags": ["verbs", "be", "to be", "to be yes"],
+      "__tags": ["verbs", "be", "to be", "to be yes", "yes or no questions"],
       "__icon_text": "be",
       "__show_word": false,
       "word": "be",
@@ -2821,7 +2853,7 @@
   {
     "do": {
       "__pos": "verb",
-      "__tags": ["verbs", "do"],
+      "__tags": ["verbs", "do", "yes or no questions"],
       "__icon_text": "do",
       "__show_word": false,
       "conjugation": {
@@ -3549,6 +3581,40 @@
       "translation_note": ""
     }
   },
+  {
+    "clothing": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+      "word": "clothing",
+      "plural": "clothing",
+      "translation_note": "",
+      "examples": ["She bought new clothing for the winter."]
+    }
+  },
+
+  {
+    "shirt": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+
+      "word": "shirt",
+      "plural": "shirts",
+      "translation_note": "",
+      "examples": ["He is wearing a white shirt."]
+    }
+  },
+
+  {
+    "pants": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+
+      "word": "pants",
+      "plural": "pants",
+      "translation_note": "",
+      "examples": ["She wears pants to work."]
+    }
+  },
 
   {
     "sunglasses": {
@@ -3595,28 +3661,6 @@
     }
   },
 
-  {
-    "shirt": {
-      "__pos": "noun",
-      "__tags": ["clothing"],
-
-      "word": "shirt",
-      "plural": "shirts",
-      "translation_note": "",
-      "examples": ["He is wearing a white shirt."]
-    }
-  },
-  {
-    "pants": {
-      "__pos": "noun",
-      "__tags": ["clothing"],
-
-      "word": "pants",
-      "plural": "pants",
-      "translation_note": "",
-      "examples": ["She wears pants to work."]
-    }
-  },
   {
     "hat": {
       "__pos": "noun",
@@ -3672,16 +3716,7 @@
       "examples": ["He puts on his coat when it's cold."]
     }
   },
-  {
-    "clothing": {
-      "__pos": "noun",
-      "__tags": ["clothing"],
-      "word": "clothing",
-      "plural": "clothing",
-      "translation_note": "",
-      "examples": ["She bought new clothing for the winter."]
-    }
-  },
+
   {
     "belt": {
       "__pos": "noun",

@@ -83,7 +83,7 @@ import ParentIcon from '@/assets/icons/licensed/parent.svg'; // Add this import
 import SonIcon from '@/assets/icons/licensed/son.svg'; // Add this import
 import DaughterIcon from '@/assets/icons/licensed/daughter.svg'; // Add this import
 import AdjectivesIcon from '@/assets/icons/open_source/adjective.svg'; // Example for a custom icon
-import YesIcon from '@/assets/icons/open_source/yes.svg'; // Example for a custom icon
+import YesIcon from '@/assets/icons/licensed/yes.svg'; // Example for a custom icon
 import WhoIcon from '@/assets/icons/licensed/who.svg'; // Add this import
 import WhatIcon from '@/assets/icons/licensed/what.svg'; // Add this import
 import WhereIcon from '@/assets/icons/licensed/where.svg'; // Add this import
@@ -174,6 +174,17 @@ import LowercaseGVariant from '@/assets/icons/open_source/g_variant_0.svg';
 import LowercaseQVariant from '@/assets/icons/open_source/q_variant_0.svg';
 import OneVariant0 from '@/assets/icons/open_source/one_variant_0.svg';
 import OneVariant1 from '@/assets/icons/open_source/one_variant_1.svg';
+
+import AlwaysIcon from '@/assets/icons/licensed/always.svg'; // Example for a custom icon
+import UsuallyIcon from '@/assets/icons/licensed/usually.svg'; // Example for a custom icon
+import OftenIcon from '@/assets/icons/licensed/often.svg'; // Example for a custom icon
+import SometimesIcon from '@/assets/icons/licensed/sometimes.svg'; // Example for a custom icon
+import OccasionallyIcon from '@/assets/icons/licensed/occasionally.svg'; // Example for a custom icon
+import RarelyIcon from '@/assets/icons/licensed/rarely.svg'; // Example for a custom icon
+import NeverIcon from '@/assets/icons/licensed/never.svg'; // Example for a custom icon
+import NotIcon from '@/assets/icons/licensed/not.svg'; // Example for a custom icon
+
+import NoIcon from '@/assets/icons/licensed/no.svg'; // Example for a custom icon
 
 import React from 'react';
 import { View, Text } from 'react-native';
@@ -455,11 +466,21 @@ export const iconMap: Record<string, React.FC<any>> = {
   pet: PetIcon,
   animal: AnimalIcon,
   'animals vocab': AnimalIcon, // Example for a custom icon
+  yes: YesIcon, // Example for a custom icon
+  no: NoIcon, // Example for a custom icon
   a_variant_0: LowercaseAVariant, // Example for a custom icon
   g_variant_0: LowercaseGVariant, // Example for a custom icon
   q_variant_0: LowercaseQVariant, // Example for a custom icon
   one_variant_0: OneVariant0,
   one_variant_1: OneVariant1, // Example for a custom icon
+  always: AlwaysIcon, // Example for a custom icon
+  usually: UsuallyIcon, // Example for a custom icon
+  often: OftenIcon, // Example for a custom icon
+  sometimes: SometimesIcon, // Example for a custom icon
+  occasionally: OccasionallyIcon, // Example for a custom icon
+  rarely: RarelyIcon, // Example for a custom icon
+  never: NeverIcon, // Example for a custom icon
+  not: NotIcon,
 
   // ...etc
 };
