@@ -364,6 +364,55 @@ export default function VocabEntryPage() {
           </View>
         </View>
       </View>
+      {/* Animated letter drawing at the very top (only for letters/numbers) */}
+      {AnimatedLetterComponent && (
+        <VocabularySection
+          headerText={
+            vocabEntry.__pos === 'number'
+              ? 'Number Formation'
+              : 'Letter Formation'
+          }
+        >
+          {AnimatedLetterComponent && (
+            <View
+              style={{
+                alignItems: 'center',
+                marginTop: 0 + containerMarginTop,
+                minHeight: 100,
+                flexDirection: 'row',
+                justifyContent: 'center',
+              }}
+            >
+              <AnimatedLetterComponent />
+            </View>
+          )}
+        </VocabularySection>
+      )}
+      {/* Letter/number alternative variants */}
+      {'__lowercase_variants' in vocabEntry &&
+        Array.isArray((vocabEntry as any).__lowercase_variants) &&
+        (vocabEntry as any).__lowercase_variants.length > 0 && (
+          <LetterVariations
+            variations={(vocabEntry as any).__lowercase_variants}
+            headerText="Other Formations (Lowercase)"
+          />
+        )}
+      {'__uppercase_variants' in vocabEntry &&
+        Array.isArray((vocabEntry as any).__uppercase_variants) &&
+        (vocabEntry as any).__uppercase_variants.length > 0 && (
+          <LetterVariations
+            variations={(vocabEntry as any).__uppercase_variants}
+            headerText="Other Formations (Uppercase)"
+          />
+        )}
+      {'__variants' in vocabEntry &&
+        Array.isArray((vocabEntry as any).__variants) &&
+        (vocabEntry as any).__variants.length > 0 && (
+          <LetterVariations
+            variations={(vocabEntry as any).__variants}
+            headerText="Other Formations"
+          />
+        )}
       <View
         style={{
           width: '100%',
@@ -418,56 +467,6 @@ export default function VocabEntryPage() {
             )}
         </View>
       </View>
-      {/* Animated letter drawing at the very bottom (only for letters) */}
-      {AnimatedLetterComponent && (
-        <VocabularySection
-          headerText={
-            vocabEntry.__pos === 'number'
-              ? 'Number Formation'
-              : 'Letter Formation'
-          }
-        >
-          {AnimatedLetterComponent && (
-            <View
-              style={{
-                alignItems: 'center',
-                marginTop: 0 + containerMarginTop,
-
-                minHeight: 100,
-                flexDirection: 'row',
-                justifyContent: 'center',
-              }}
-            >
-              <AnimatedLetterComponent />
-            </View>
-          )}
-        </VocabularySection>
-      )}
-      {/* Letter/number alternative variants */}
-      {'__lowercase_variants' in vocabEntry &&
-        Array.isArray((vocabEntry as any).__lowercase_variants) &&
-        (vocabEntry as any).__lowercase_variants.length > 0 && (
-          <LetterVariations
-            variations={(vocabEntry as any).__lowercase_variants}
-            headerText="Other Formations (Lowercase)"
-          />
-        )}
-      {'__uppercase_variants' in vocabEntry &&
-        Array.isArray((vocabEntry as any).__uppercase_variants) &&
-        (vocabEntry as any).__uppercase_variants.length > 0 && (
-          <LetterVariations
-            variations={(vocabEntry as any).__uppercase_variants}
-            headerText="Other Formations (Uppercase)"
-          />
-        )}
-      {'__variants' in vocabEntry &&
-        Array.isArray((vocabEntry as any).__variants) &&
-        (vocabEntry as any).__variants.length > 0 && (
-          <LetterVariations
-            variations={(vocabEntry as any).__variants}
-            headerText="Other Formations"
-          />
-        )}
     </ScrollView>
   );
 }
