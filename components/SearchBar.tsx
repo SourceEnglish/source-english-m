@@ -18,20 +18,6 @@ import posColors from '@/constants/constants';
 
 const MAX_SUGGESTIONS = 8;
 
-// Emoji map for __pos
-const posEmoji: Record<string, string> = {
-  letter: '🔡',
-  number: '🔢',
-  noun: '📦',
-  'proper noun': '🏷️',
-  pronoun: '🙋',
-  verb: '🏃',
-  adjective: '🎨',
-  adverb: '🕒',
-  // fallback
-  default: '📝',
-};
-
 function flattenVocabulary(vocabArr: any[]): {
   word: string;
   clarifier?: string;
