@@ -917,6 +917,10 @@
       "__pos": "proper noun",
       "__count": "countable",
       "__tags": ["days"],
+      "__abbreviations": ["Sun"],
+      "__abbreviation_pronunciations": {
+        "Sun": "Sunday"
+      },
       "word": "Sunday",
       "plural": "Sundays",
       "translation_note": "",
@@ -931,6 +935,10 @@
       "__pos": "proper noun",
       "__count": "countable",
       "__tags": ["days"],
+      "__abbreviations": ["Mon"],
+      "__abbreviation_pronunciations": {
+        "Mon": "Monday"
+      },
       "word": "Monday",
       "plural": "Mondays",
       "translation_note": "",
@@ -942,6 +950,11 @@
       "__pos": "proper noun",
       "__count": "countable",
       "__tags": ["days"],
+      "__abbreviations": ["Tue", "Tues"],
+      "__abbreviation_pronunciations": {
+        "Tue": "Tuesday",
+        "Tues": "Tuesday"
+      },
       "word": "Tuesday",
       "plural": "Tuesdays",
       "translation_note": "",
@@ -956,6 +969,10 @@
       "__pos": "proper noun",
       "__count": "countable",
       "__tags": ["days"],
+      "__abbreviations": ["Wed"],
+      "__abbreviation_pronunciations": {
+        "Wed": "Wednesday"
+      },
       "word": "Wednesday",
       "plural": "Wednesdays",
       "translation_note": "",
@@ -970,6 +987,11 @@
       "__pos": "proper noun",
       "__count": "countable",
       "__tags": ["days"],
+      "__abbreviations": ["Thu", "Thurs"],
+      "__abbreviation_pronunciations": {
+        "Thu": "Thursday",
+        "Thurs": "Thursday"
+      },
       "word": "Thursday",
       "plural": "Thursdays",
       "translation_note": "",
@@ -984,6 +1006,10 @@
       "__pos": "proper noun",
       "__count": "countable",
       "__tags": ["days"],
+      "__abbreviations": ["Fri"],
+      "__abbreviation_pronunciations": {
+        "Fri": "Friday"
+      },
       "word": "Friday",
       "plural": "Fridays",
       "translation_note": "",
@@ -998,6 +1024,10 @@
       "__pos": "proper noun",
       "__count": "countable",
       "__tags": ["days"],
+      "__abbreviations": ["Sat"],
+      "__abbreviation_pronunciations": {
+        "Sat": "Saturday"
+      },
       "word": "Saturday",
       "plural": "Saturdays",
       "translation_note": "",
@@ -1099,6 +1129,9 @@
       "__icon_text": "Jan",
       "__forced_pronunciation": "January",
       "__abbreviations": ["Jan"],
+      "__abbreviation_pronunciations": {
+        "Jan": "January"
+      },
       "word": "January",
       "translation_note": "",
       "examples": [
@@ -1115,6 +1148,9 @@
       "__icon_text": "Feb",
       "__forced_pronunciation": "February",
       "__abbreviations": ["Feb"],
+      "__abbreviation_pronunciations": {
+        "Feb": "February"
+      },
       "word": "February",
       "translation_note": "",
       "examples": [
@@ -1131,6 +1167,9 @@
       "__icon_text": "Mar",
       "__forced_pronunciation": "March",
       "__abbreviations": ["Mar"],
+      "__abbreviation_pronunciations": {
+        "Mar": "March"
+      },
       "word": "March",
       "translation_note": "",
       "examples": ["March is the third month.", "Spring begins in March."]
@@ -1144,6 +1183,9 @@
       "__icon_text": "Apr",
       "__forced_pronunciation": "April",
       "__abbreviations": ["Apr"],
+      "__abbreviation_pronunciations": {
+        "Apr": "April"
+      },
       "word": "April",
       "translation_note": "",
       "examples": ["April comes after March.", "It often rains in April."]
@@ -1170,6 +1212,9 @@
       "__icon_text": "Jun",
       "__forced_pronunciation": "June",
       "__abbreviations": ["Jun"],
+      "__abbreviation_pronunciations": {
+        "Jun": "June"
+      },
       "word": "June",
       "translation_note": "",
       "examples": ["June is the start of summer.", "School ends in June."]
@@ -1183,6 +1228,9 @@
       "__icon_text": "Jul",
       "__forced_pronunciation": "July",
       "__abbreviations": ["Jul"],
+      "__abbreviation_pronunciations": {
+        "Jul": "July"
+      },
       "word": "July",
       "translation_note": "",
       "examples": ["July is a hot month.", "Independence Day is in July."]
@@ -1196,6 +1244,9 @@
       "__icon_text": "Aug",
       "__forced_pronunciation": "August",
       "__abbreviations": ["Aug"],
+      "__abbreviation_pronunciations": {
+        "Aug": "August"
+      },
       "word": "August",
       "translation_note": "",
       "examples": [
@@ -1212,6 +1263,10 @@
       "__icon_text": "Sep",
       "__forced_pronunciation": "September",
       "__abbreviations": ["Sep", "Sept"],
+      "__abbreviation_pronunciations": {
+        "Sep": "September",
+        "Sept": "September"
+      },
       "word": "September",
       "translation_note": "",
       "examples": [
@@ -1228,6 +1283,9 @@
       "__icon_text": "Oct",
       "__forced_pronunciation": "October",
       "__abbreviations": ["Oct"],
+      "__abbreviation_pronunciations": {
+        "Oct": "October"
+      },
       "word": "October",
       "translation_note": "",
       "examples": ["October is the tenth month.", "Halloween is in October."]
@@ -1241,6 +1299,9 @@
       "__icon_text": "Nov",
       "__forced_pronunciation": "November",
       "__abbreviations": ["Nov"],
+      "__abbreviation_pronunciations": {
+        "Nov": "November"
+      },
       "word": "November",
       "translation_note": "",
       "examples": [
@@ -1257,6 +1318,9 @@
       "__icon_text": "Dec",
       "__forced_pronunciation": "December",
       "__abbreviations": ["Dec"],
+      "__abbreviation_pronunciations": {
+        "Dec": "December"
+      },
       "word": "December",
       "translation_note": "",
       "examples": [
@@ -2631,7 +2695,10 @@
     "autumn": {
       "__pos": "noun",
       "__tags": ["seasons"],
-      "__synonyms": ["Fall"],
+      "__synonyms": ["fall"],
+      "synonym_notes": {
+        "fall": "Commonly used in American English."
+      },
       "word": "autumn",
       "plural": "autumns",
       "translation_note": "",
@@ -2646,7 +2713,10 @@
     "fall": {
       "__pos": "noun",
       "__tags": ["seasons"],
-      "__synonyms": ["Autumn"],
+      "__synonyms": ["autumn"],
+      "__synonym_notes": {
+        "autumn": "Commonly used in British English."
+      },
       "word": "fall",
       "plural": "falls",
       "translation_note": "",
@@ -4881,6 +4951,10 @@
     "child": {
       "__pos": "noun",
       "__tags": ["people", "person group"],
+      "__synonyms": ["kid"],
+      "synonym_notes": {
+        "kid": "Informal term for a child."
+      },
       "word": "child",
       "plural": "children",
       "translation_note": "",
@@ -4894,6 +4968,10 @@
     "kid": {
       "__pos": "noun",
       "__tags": ["people", "person group"],
+      "__synonyms": ["child"],
+      "synonym_notes": {
+        "child": "Formal term for a kid."
+      },
       "word": "kid",
       "plural": "kids",
       "translation_note": "",
@@ -5360,6 +5438,7 @@
       "translation_note": "",
       "examples": [
         "A motorcycle is faster than a bicycle.",
+        "She rides a motorcycle to work.",
         "He wears a helmet when riding his motorcycle."
       ]
     }
@@ -5390,12 +5469,33 @@
     "airplane": {
       "__pos": "noun",
       "__tags": ["vehicle", "other vehicle"],
+      "__synonyms": ["plane"],
+      "synonym_notes": {
+        "plane": "Informal term for an airplane."
+      },
       "word": "airplane",
       "plural": "airplanes",
       "translation_note": "",
       "examples": [
         "The airplane is flying in the sky.",
         "We traveled by airplane."
+      ]
+    }
+  },
+  {
+    "plane": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "other vehicle"],
+      "__synonyms": ["airplane"],
+      "synonym_notes": {
+        "airplane": "Formal term for a plane."
+      },
+      "word": "plane",
+      "plural": "planes",
+      "translation_note": "",
+      "examples": [
+        "The plane took off on time.",
+        "She is afraid of flying in a plane."
       ]
     }
   },
@@ -5528,6 +5628,13 @@
     "America": {
       "__pos": "proper noun",
       "__tags": ["places", "countries"],
+      "__synonyms": ["United States of America", "United States"],
+      "__abbreviations": ["US", "USA"],
+
+      "synonym_notes": {
+        "United States of America": "Formal name for America.",
+        "United States": "Common name for America."
+      },
       "word": "America",
       "translation_note": "",
       "examples": ["America is a large country.", "She lives in America."]

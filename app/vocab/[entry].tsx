@@ -24,6 +24,7 @@ import Svg, { Line, G } from 'react-native-svg';
 import LetterFormation from '@/components/LetterFormation';
 import VocabularySection from '@/components/VocabularySection';
 import LetterVariations from '@/components/LetterVariants';
+import AbbreviationsDisplay from '@/components/AbbreviationsDisplay';
 import SynonymDisplay from '@/components/SynonymDisplay';
 
 export function generateStaticParams() {
@@ -415,6 +416,21 @@ export default function VocabEntryPage() {
             headerText="Other Formations"
           />
         )}
+
+      {/* Abbreviations section */}
+      {'__abbreviations' in vocabEntry &&
+        Array.isArray((vocabEntry as any).__abbreviations) &&
+        (vocabEntry as any).__abbreviations.length > 0 && (
+          <AbbreviationsDisplay
+            abbreviations={(vocabEntry as any).__abbreviations}
+            abbreviationNotes={(vocabEntry as any).__abbreviation_notes}
+            abbreviationPronunciations={
+              (vocabEntry as any).__abbreviation_pronunciations
+            }
+            word={vocabEntry.word}
+          />
+        )}
+
       {/* Synonyms section */}
       {'__synonyms' in vocabEntry &&
         Array.isArray((vocabEntry as any).__synonyms) &&

@@ -21,6 +21,9 @@ interface VocabEntryDisplayProps {
     __synonyms?: string[]; // Add synonyms support
     synonym_notes?: Record<string, string>; // Add synonym notes support (alternative field name)
     __synonym_pronunciations?: Record<string, string>; // Add synonym pronunciations support
+    __abbreviations?: string[]; // Add abbreviations support
+    __abbreviation_notes?: Record<string, string>; // Add abbreviation notes support
+    __abbreviation_pronunciations?: Record<string, string>; // Add abbreviation pronunciations support
   };
 }
 
