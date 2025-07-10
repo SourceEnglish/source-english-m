@@ -5641,6 +5641,42 @@
     }
   },
   {
+    "United States": {
+      "__pos": "proper noun",
+      "__tags": ["places", "countries"],
+      "__synonyms": ["America", "United States of America"],
+      "__abbreviations": ["US", "USA"],
+      "synonym_notes": {
+        "America": "Common name for the United States.",
+        "United States of America": "Formal name for the United States."
+      },
+      "word": "United States",
+      "translation_note": "",
+      "examples": [
+        "The United States is a large country.",
+        "She traveled to the United States last year."
+      ]
+    }
+  },
+  {
+    "United States of America": {
+      "__pos": "proper noun",
+      "__tags": ["places", "countries"],
+      "__synonyms": ["America", "United States"],
+      "__abbreviations": ["US", "USA"],
+      "synonym_notes": {
+        "America": "Common name for the United States of America.",
+        "United States": "Short form for United States of America."
+      },
+      "word": "United States of America",
+      "translation_note": "",
+      "examples": [
+        "The United States of America is often called the USA.",
+        "She was born in the United States of America."
+      ]
+    }
+  },
+  {
     "bed": {
       "__pos": "noun",
       "__tags": ["furniture"],

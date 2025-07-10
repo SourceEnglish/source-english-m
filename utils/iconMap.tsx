@@ -640,6 +640,8 @@ export const iconMap: Record<string, React.FC<any>> = {
   girl: GirlIcon,
   baby: BabyIcon,
   america: AmericaIcon,
+  'united states': AmericaIcon,
+  'united states of america': AmericaIcon,
   bed: BedIcon,
   big: BigIcon,
   box: BoxIcon,
