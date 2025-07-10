@@ -24,6 +24,7 @@ import Svg, { Line, G } from 'react-native-svg';
 import LetterFormation from '@/components/LetterFormation';
 import VocabularySection from '@/components/VocabularySection';
 import LetterVariations from '@/components/LetterVariants';
+import SynonymDisplay from '@/components/SynonymDisplay';
 
 export function generateStaticParams() {
   return vocabularyData.map((entry: any) => {
@@ -414,6 +415,18 @@ export default function VocabEntryPage() {
             headerText="Other Formations"
           />
         )}
+      {/* Synonyms section */}
+      {'__synonyms' in vocabEntry &&
+        Array.isArray((vocabEntry as any).__synonyms) &&
+        (vocabEntry as any).__synonyms.length > 0 && (
+          <SynonymDisplay
+            synonyms={(vocabEntry as any).__synonyms}
+            synonymNotes={(vocabEntry as any).synonym_notes}
+            synonymPronunciations={(vocabEntry as any).__synonym_pronunciations}
+            word={vocabEntry.word}
+          />
+        )}
+
       <View
         style={{
           width: '100%',

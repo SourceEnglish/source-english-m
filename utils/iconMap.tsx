@@ -618,6 +618,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   bus_stop: BusStopIcon,
   airport: AirportIcon,
   bicycle: BicycleIcon,
+  bike: BicycleIcon, // Example for a custom icon
   boat: BoatIcon,
   bus: BusIcon,
   'bus stop': BusStopIcon, // Example for a custom icon

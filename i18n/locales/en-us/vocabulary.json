@@ -5323,10 +5323,32 @@
     "bicycle": {
       "__pos": "noun",
       "__tags": ["vehicle", "street vehicle"],
+      "__synonyms": ["bike"],
+      "synonym_notes": {
+        "bike": "Informal term for a bicycle."
+      },
+      "__synonym_pronunciations": ["bike"],
       "word": "bicycle",
       "plural": "bicycles",
       "translation_note": "",
       "examples": ["He rides his bicycle to work.", "A bicycle has two wheels."]
+    }
+  },
+  {
+    "bike": {
+      "__pos": "noun",
+      "__tags": ["vehicle", "street vehicle"],
+      "__synonyms": ["bicycle"],
+      "synonym_notes": {
+        "bicycle": "Formal term for a bike."
+      },
+      "word": "bike",
+      "plural": "bikes",
+      "translation_note": "",
+      "examples": [
+        "She rides her bike every day.",
+        "A bike is good for exercise."
+      ]
     }
   },
   {

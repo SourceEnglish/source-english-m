@@ -18,6 +18,9 @@ interface VocabEntryDisplayProps {
     __exampleEntries?: any;
     examples?: string[];
     conjugation?: any; // Add this line to allow conjugation property
+    __synonyms?: string[]; // Add synonyms support
+    synonym_notes?: Record<string, string>; // Add synonym notes support (alternative field name)
+    __synonym_pronunciations?: Record<string, string>; // Add synonym pronunciations support
   };
 }
 
