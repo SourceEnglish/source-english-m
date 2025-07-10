@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   },
   synonymMain: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'center', // Center vertically
     marginBottom: 4,
   },
   synonymContent: {
@@ -130,8 +130,11 @@ const styles = StyleSheet.create({
   },
   synonymLine: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     marginBottom: 2,
+    flexWrap: 'wrap', // Allow wrapping for long content
+    flexShrink: 1,
+    minWidth: 0,
   },
   synonymText: {
     fontWeight: '600',
@@ -144,6 +147,8 @@ const styles = StyleSheet.create({
   },
   arrow: {
     color: '#34495e',
+    flexShrink: 0,
+    alignSelf: 'center',
   },
   synonymNote: {
     color: '#7f8c8d',
