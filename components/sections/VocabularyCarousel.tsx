@@ -4,18 +4,25 @@ import InlineCardPreview, {
   VocabularyCarouselContext,
 } from '../InlineCardPreview';
 import vocabulary from '@/i18n/locales/en-us/vocabulary.json';
+import { useDeck } from '@/contexts/DeckContext';
+import { useRouter } from 'expo-router';
+import { useSpeech } from '@/contexts/SpeechContext';
 
 interface VocabularyCarouselProps {
   tags: string[]; // Array of tags to filter vocabulary
 }
 
 const VocabularyCarousel: React.FC<VocabularyCarouselProps> = ({ tags }) => {
+  const { setDeckEntries, setDeckIndex } = useDeck();
+  const router = useRouter();
+  const { readAloudMode } = useSpeech();
+
   // Flatten vocabulary (array of objects) to array of entries
   const vocabEntries = useMemo(() => {
     return vocabulary
       .flatMap((entryObj: any) =>
         Object.entries(entryObj).map(([key, entry]) => ({
-          ...entry,
+          ...(entry as any),
           __objectKey: key,
         }))
       )
@@ -24,6 +31,44 @@ const VocabularyCarousel: React.FC<VocabularyCarouselProps> = ({ tags }) => {
           entry.__tags && entry.__tags.some((tag: string) => tags.includes(tag))
       );
   }, [tags]);
+
+  // Create array of entry keys for the deck
+  const deckEntryKeys = useMemo(() => {
+    return vocabEntries.map((entry) => entry.__objectKey);
+  }, [vocabEntries]);
+
+  const handleCardPress = (entry: any, index: number) => {
+    if (readAloudMode) {
+      // Do nothing if readAloudMode is true
+      return;
+    }
+
+    // Set the deck to the current carousel entries
+    setDeckEntries(deckEntryKeys);
+    setDeckIndex(index);
+
+    // Navigate to the vocab entry
+    const redirect = entry.__redirect;
+    const isProperNoun =
+      entry.__pos === 'month' ||
+      entry.__pos === 'proper_noun' ||
+      entry.__pos === 'proper noun';
+    let target;
+    if (redirect) {
+      target = redirect;
+    } else if (isProperNoun) {
+      if (entry.__objectKey) {
+        target = entry.__objectKey.toLowerCase();
+      } else if (entry.word) {
+        target = entry.word.toLowerCase();
+      } else {
+        target = entry.__objectKey.toLowerCase();
+      }
+    } else {
+      target = entry.__objectKey;
+    }
+    router.push(`/vocab/${encodeURIComponent(target)}`);
+  };
 
   return (
     <VocabularyCarouselContext.Provider value={true}>
@@ -37,6 +82,7 @@ const VocabularyCarousel: React.FC<VocabularyCarouselProps> = ({ tags }) => {
             <InlineCardPreview
               card={entry}
               key={entry.__objectKey || idx}
+              onPress={() => handleCardPress(entry, idx)}
             />
           ))}
         </ScrollView>
