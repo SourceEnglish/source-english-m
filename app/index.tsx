@@ -1,3 +1,12 @@
+if (typeof document !== 'undefined') {
+  console.log('Setting up document for i18n');
+  document.documentElement.lang = 'en'; // Set to your default language
+  document.documentElement.setAttribute('translate', 'no');
+  const meta = document.createElement('meta');
+  meta.name = 'google';
+  meta.content = 'notranslate';
+  document.head.appendChild(meta);
+}
 import React, { useEffect, useState } from 'react';
 import LanguageSelector from '@/components/LanguageSelector';
 import { Link } from 'expo-router';
