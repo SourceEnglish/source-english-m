@@ -16,7 +16,6 @@ const LessonBacklink: React.FC<LessonBacklinkProps> = ({ lessons }) => {
   // If no lessons prop, don't render
   if (!lessons || lessons.length === 0) return null;
 
-
   // Filter out hidden and vocabulary lessons with __lesson, as in index
   const visibleLessons = lessonsData
     .map((entry: any) => Object.values(entry)[0])
@@ -33,20 +32,36 @@ const LessonBacklink: React.FC<LessonBacklinkProps> = ({ lessons }) => {
       const lesson = entry[key];
       return { key, lesson };
     })
-    .filter(({ lesson }) =>
-      visibleLessons.includes(lesson) &&
-      Array.isArray(lesson.__tags) &&
-      lesson.__tags.some((lessonTag: string) => lessonTag && lessonTag.toLowerCase && lessonTag.toLowerCase() && lessonTagSet.has(lessonTag.toLowerCase()))
+    .filter(
+      ({ lesson }) =>
+        visibleLessons.includes(lesson) &&
+        Array.isArray(lesson.__tags) &&
+        lesson.__tags.some(
+          (lessonTag: string) =>
+            lessonTag &&
+            lessonTag.toLowerCase &&
+            lessonTag.toLowerCase() &&
+            lessonTagSet.has(lessonTag.toLowerCase())
+        )
     );
 
   if (matchingLessons.length === 0) return null;
 
   return (
     <VocabularySection headerText="Lessons" hasDivider={true}>
-      <View style={{ width: '100%', marginTop: 10, gap: 12, display: 'flex', flexDirection: 'column' }}>
+      <View
+        style={{
+          width: '100%',
+          marginTop: 10,
+          gap: 12,
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
         {matchingLessons.map(({ key, lesson }) => {
           // Determine lesson number as in index
-          const lessonIndex = visibleLessons.findIndex((l: any) => l.name === key) + 1;
+          const lessonIndex =
+            visibleLessons.findIndex((l: any) => l.name === key) + 1;
           // Use cards icon for vocabulary lessons, lesson icon otherwise
           let icon = null;
           if (lesson.__type === 'vocabulary') {
