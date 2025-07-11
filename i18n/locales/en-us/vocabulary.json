@@ -3500,6 +3500,39 @@
       "examples": ["My dad is very funny.", "She loves her dad."]
     }
   },
+  {
+    "mother": {
+      "__pos": "noun",
+      "__tags": ["nouns", "family"],
+      "__objectKey": "mother",
+      "__synonyms": ["mom", "parent"],
+
+      "synonym_notes": {
+        "mom": "Informal term for mother.",
+        "parent": "General term for a mother or father."
+      },
+      "word": "mother",
+      "plural": "mothers",
+      "translation_note": "",
+      "examples": ["My mother is very caring.", "She is a good mother."]
+    }
+  },
+  {
+    "mom": {
+      "__pos": "noun",
+      "__tags": ["nouns", "family"],
+      "__objectKey": "mom",
+      "__synonyms": ["mother", "parent"],
+      "synonym_notes": {
+        "mother": "Formal term for mom.",
+        "parent": "General term for a mother or father."
+      },
+      "word": "mom",
+      "plural": "moms",
+      "translation_note": "",
+      "examples": ["My mom is cooking dinner.", "She is a great mom."]
+    }
+  },
 
   {
     "parent": {
@@ -4614,7 +4647,7 @@
         {
           "__ipa": "ɔ",
           "__forced_pronunciation": "ɔ.wav",
-          "examples": ["autumn", "caught", "sauce"],
+          "examples": ["autumn", "aunt", "daughter"],
           "header": "/ɔ/",
           "__header_pronunciation": "ɔ.wav"
         }
@@ -5111,39 +5144,6 @@
     }
   },
 
-  {
-    "mother": {
-      "__pos": "noun",
-      "__tags": ["nouns", "family"],
-      "__objectKey": "mother",
-      "__synonyms": ["mom", "parent"],
-
-      "synonym_notes": {
-        "mom": "Informal term for mother.",
-        "parent": "General term for a mother or father."
-      },
-      "word": "mother",
-      "plural": "mothers",
-      "translation_note": "",
-      "examples": ["My mother is very caring.", "She is a good mother."]
-    }
-  },
-  {
-    "mom": {
-      "__pos": "noun",
-      "__tags": ["nouns", "family"],
-      "__objectKey": "mom",
-      "__synonyms": ["mother", "parent"],
-      "synonym_notes": {
-        "mother": "Formal term for mom.",
-        "parent": "General term for a mother or father."
-      },
-      "word": "mom",
-      "plural": "moms",
-      "translation_note": "",
-      "examples": ["My mom is cooking dinner.", "She is a great mom."]
-    }
-  },
   {
     "tooth": {
       "__pos": "noun",
@@ -6689,6 +6689,34 @@
       "examples": [
         "The English alphabet has 26 letters.",
         "We are learning the alphabet in class."
+      ]
+    }
+  },
+  {
+    "aunt": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "aunt",
+      "plural": "aunts",
+      "translation_note": "",
+      "examples": [
+        "My aunt is visiting us this weekend.",
+        "She has an aunt who lives in New York.",
+        "My aunt is my father's sister."
+      ]
+    }
+  },
+  {
+    "uncle": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "word": "uncle",
+      "plural": "uncles",
+      "translation_note": "",
+      "examples": [
+        "His uncle is a doctor.",
+        "We went fishing with our uncle.",
+        "My uncle is my mother's brother."
       ]
     }
   }

@@ -306,6 +306,8 @@ import WrongIcon from '@/assets/icons/licensed/wrong.svg';
 import ClockIcon from '@/assets/icons/licensed/clock.svg'; // Example for a custom icon
 import PhotoIcon from '@/assets/icons/licensed/photo.svg'; // Example for a custom icon
 import PhoneIcon from '@/assets/icons/licensed/phone.svg'; // Example for a custom icon
+import AuntIcon from '@/assets/icons/licensed/aunt.svg'; // Example for a custom icon
+import UncleIcon from '@/assets/icons/licensed/uncle.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -728,6 +730,8 @@ export const iconMap: Record<string, React.FC<any>> = {
   telephone: PhoneIcon, // Example for a custom icon
   'cell phone': PhoneIcon, // Example for a custom icon
   'mobile phone': PhoneIcon, // Example for a custom icon
+  aunt: AuntIcon, // Example for a custom icon
+  uncle: UncleIcon, // Example for a custom icon
   // ...etc
 };
 
