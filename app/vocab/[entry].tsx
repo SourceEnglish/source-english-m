@@ -526,11 +526,12 @@ export default function VocabEntryPage() {
       {/* Lesson backlink as last section: always show, pass tags if __lessons not present */}
       <LessonBacklink
         lessons={
-          Array.isArray((vocabEntry as any)['__lessons']) && (vocabEntry as any)['__lessons'].length > 0
+          Array.isArray((vocabEntry as any)['__lessons']) &&
+          (vocabEntry as any)['__lessons'].length > 0
             ? (vocabEntry as any)['__lessons']
             : Array.isArray((vocabEntry as any)['__tags'])
-              ? (vocabEntry as any)['__tags']
-              : []
+            ? (vocabEntry as any)['__tags']
+            : []
         }
       />
     </ScrollView>
