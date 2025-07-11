@@ -171,7 +171,11 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
           />
         )}
         {/* Play pronunciation button inside the card */}
-        {__pos !== 'multigraph' && (
+        {// For multigraph: only show if exactly one pronunciation (one __exampleEntries)
+        (__pos === 'multigraph'
+          ? Array.isArray(entry.__exampleEntries) &&
+            entry.__exampleEntries.length === 1
+          : true) && (
           <View style={{ alignItems: 'center', marginTop: 8 }}>
             <PlayPronunciationButton
               word={word}
