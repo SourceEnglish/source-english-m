@@ -855,7 +855,7 @@
     "__lessons": ["weather"],
     "__order": 69,
     "__type": "vocabularyCarousel",
-    "__tags": ["weather"]
+    "__tags": ["weather conditions"]
   },
   {
     "_id": "writing_weather_question_subheader",

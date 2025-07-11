@@ -762,7 +762,7 @@
     "weather": {
       "__pos": "noun",
       "__count": "uncountable",
-      "__tags": ["weather"],
+      "__tags": ["weather", "weather conditions"],
       "word": "weather",
       "translation_note": "",
       "examples": ["The weather is nice today.", "What is the weather like?"]
@@ -772,7 +772,7 @@
   {
     "sunny": {
       "__pos": "adjective",
-      "__tags": ["weather"],
+      "__tags": ["weather", "weather conditions"],
       "word": "sunny",
       "translation_note": "",
       "examples": ["It is sunny outside.", "We like sunny days."]
@@ -781,7 +781,7 @@
   {
     "cloudy": {
       "__pos": "adjective",
-      "__tags": ["weather"],
+      "__tags": ["weather", "weather conditions"],
       "word": "cloudy",
       "translation_note": "",
       "examples": ["The sky is cloudy.", "It is cloudy today."]
@@ -790,7 +790,7 @@
   {
     "rainy": {
       "__pos": "adjective",
-      "__tags": ["weather"],
+      "__tags": ["weather", "weather conditions"],
       "word": "rainy",
       "translation_note": "",
       "examples": [
@@ -802,7 +802,7 @@
   {
     "foggy": {
       "__pos": "adjective",
-      "__tags": ["weather"],
+      "__tags": ["weather", "weather conditions"],
       "word": "foggy",
       "translation_note": "",
       "examples": ["It is foggy outside.", "Driving is hard when it is foggy."]
@@ -811,7 +811,7 @@
   {
     "snowy": {
       "__pos": "adjective",
-      "__tags": ["weather"],
+      "__tags": ["weather", "weather conditions"],
       "word": "snowy",
       "translation_note": "",
       "examples": [
@@ -823,7 +823,7 @@
   {
     "stormy": {
       "__pos": "adjective",
-      "__tags": ["weather"],
+      "__tags": ["weather", "weather conditions"],
       "word": "stormy",
       "translation_note": "",
       "examples": ["The weather is stormy.", "We stay inside on stormy days."]
@@ -832,7 +832,7 @@
   {
     "windy": {
       "__pos": "adjective",
-      "__tags": ["weather"],
+      "__tags": ["weather", "weather conditions"],
       "word": "windy",
       "translation_note": "",
       "examples": ["It is windy today.", "The trees move when it is windy."]
@@ -841,7 +841,7 @@
   {
     "partly cloudy": {
       "__pos": "adjective",
-      "__tags": ["weather"],
+      "__tags": ["weather", "weather conditions"],
       "word": "partly cloudy",
       "translation_note": "",
       "examples": [
@@ -6496,6 +6496,43 @@
         "What is your phone number?",
         "Write the number on the paper."
       ]
+    }
+  },
+  {
+    "knee": {
+      "__pos": "noun",
+      "__tags": ["body parts"],
+      "word": "knee",
+      "plural": "knees",
+      "translation_note": "",
+      "examples": ["She hurt her knee while running.", "Bend your knee."]
+    }
+  },
+  {
+    "knife": {
+      "__pos": "noun",
+      "__tags": ["kitchen", "objects"],
+      "word": "knife",
+      "plural": "knives",
+      "translation_note": "",
+      "examples": [
+        "Use a knife to cut the bread.",
+        "Be careful with the knife."
+      ]
+    }
+  },
+  {
+    "know": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "know",
+      "conjugation": {
+        "present": "know",
+        "present_participle": "knowing",
+        "past": "knew"
+      },
+      "translation_note": "",
+      "examples": ["I know the answer.", "She knows how to swim."]
     }
   }
 ]

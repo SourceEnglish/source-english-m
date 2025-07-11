@@ -298,6 +298,9 @@ import SentenceIcon from '@/assets/icons/open_source/sentence.svg';
 import CommaIcon from '@/assets/icons/licensed/comma.svg';
 import HomeIcon from '@/assets/icons/licensed/home.svg';
 import SitIcon from '@/assets/icons/licensed/sit.svg';
+import KneeIcon from '@/assets/icons/licensed/knee.svg';
+import KnifeIcon from '@/assets/icons/licensed/knife.svg';
+import KnowIcon from '@/assets/icons/licensed/know.svg';
 
 export const TextIcon: React.FC<{
   text: string;
@@ -708,6 +711,9 @@ export const iconMap: Record<string, React.FC<any>> = {
   house: HomeIcon,
   kid: ChildIcon,
   sit: SitIcon,
+  knee: KneeIcon,
+  knife: KnifeIcon,
+  know: KnowIcon,
 
   // ...etc
 };
