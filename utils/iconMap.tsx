@@ -123,6 +123,7 @@ import WakeUpIcon from '@/assets/icons/licensed/wake_up.svg';
 import WalkIcon from '@/assets/icons/licensed/walk.svg';
 import WatchIcon from '@/assets/icons/licensed/watch.svg';
 import WriteIcon from '@/assets/icons/licensed/write.svg';
+import AskIcon from '@/assets/icons/licensed/ask.svg';
 import CryIcon from '@/assets/icons/licensed/cry.svg';
 import BrushIcon from '@/assets/icons/licensed/brush.svg';
 import DrinkIcon from '@/assets/icons/licensed/drink.svg';
@@ -522,6 +523,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   watch: WatchIcon,
   'watch_(time)': WatchTimeIcon, // Example for a custom icon
   write: WriteIcon,
+  ask: AskIcon,
   cry: CryIcon,
   brush: BrushIcon,
   drink: DrinkIcon,

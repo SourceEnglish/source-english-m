@@ -5339,6 +5339,20 @@
     }
   },
   {
+    "ask": {
+      "__pos": "verb",
+      "__tags": ["verbs", "class"],
+      "word": "ask",
+      "conjugation": {
+        "present": "ask",
+        "present_participle": "asking",
+        "past": "asked"
+      },
+      "examples": ["I ask questions in class."],
+      "translation_note": ""
+    }
+  },
+  {
     "vehicle": {
       "__pos": "noun",
       "__tags": ["vehicle"],
