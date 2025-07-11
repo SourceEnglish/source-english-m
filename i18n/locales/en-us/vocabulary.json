@@ -2832,6 +2832,7 @@
       ],
       "__icon_text": "you",
       "__show_word": true,
+      "__lessons": ["subject pronouns"],
       "word": "you",
       "translation_note": "",
       "examples": ["You are my friend.", "You have a nice smile."]
@@ -2897,6 +2898,7 @@
       "__pos": "noun",
       "__tags": ["personal information", "personal information name"],
       "__display_priority": 1,
+      "__lessons": ["personal information"],
       "word": "name",
       "plural": "names",
       "translation_note": "",

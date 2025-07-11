@@ -8,6 +8,7 @@ import InlineCardPreview from '@/components/InlineCardPreview';
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import CardsIcon from '@/assets/icons/licensed/cards.svg';
+import LessonIcon from '@/assets/icons/licensed/lesson.svg';
 interface PageLinkProps {
   pagePath: string;
   pageText: string;
@@ -166,6 +167,21 @@ const PageLink: React.FC<PageLinkProps> = ({
                 flexWrap: 'nowrap',
               }}
             >
+              {/* Show icon before the lesson number */}
+              {/* {lessonData?.__type === 'vocabulary' && (
+                <CardsIcon
+                  width={28}
+                  height={28}
+                  style={{ marginRight: 6, marginLeft: 0 }}
+                />
+              )}
+              {lessonData?.__type === 'lesson' && (
+                <LessonIcon
+                  width={28}
+                  height={28}
+                  style={{ marginRight: 6, marginLeft: 0 }}
+                />
+              )} */}
               {typeof index === 'number' && (
                 <ReadableText
                   text={String(index).padStart(2, '0')}

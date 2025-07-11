@@ -25,8 +25,9 @@ import LetterFormation from '@/components/LetterFormation';
 import VocabularySection from '@/components/VocabularySection';
 import LetterVariations from '@/components/LetterVariants';
 import AbbreviationsDisplay from '@/components/AbbreviationsDisplay';
-import SynonymDisplay from '@/components/SynonymDisplay';
 
+import LessonBacklink from '@/components/LessonBacklink';
+import SynonymDisplay from '@/components/SynonymDisplay';
 export function generateStaticParams() {
   return vocabularyData.map((entry: any) => {
     const name = Object.keys(entry)[0];
@@ -276,6 +277,7 @@ export default function VocabEntryPage() {
     >
       <View style={styles.outerContainer}>
         <Notes noteKey={`vocab_${entryName}`} />
+        {/* Lesson backlink moved to bottom as last section */}
         <View
           style={{
             flexDirection: 'row',
@@ -329,7 +331,31 @@ export default function VocabEntryPage() {
             }}
           >
             <View style={{ flex: 1 }}>
-              <VocabEntryDisplay entry={vocabEntry} />
+              <VocabEntryDisplay
+                entry={{
+                  ...vocabEntry,
+                  // Patch __synonym_pronunciations and __abbreviation_pronunciations to be objects if they are arrays
+                  __synonym_pronunciations: Array.isArray(
+                    (vocabEntry as any).__synonym_pronunciations
+                  )
+                    ? Object.fromEntries(
+                        (
+                          (vocabEntry as any).__synonym_pronunciations || []
+                        ).map((v: string, i: number) => [String(i), v])
+                      )
+                    : (vocabEntry as any).__synonym_pronunciations,
+                  __abbreviation_pronunciations: Array.isArray(
+                    (vocabEntry as any).__abbreviation_pronunciations
+                  )
+                    ? Object.fromEntries(
+                        (
+                          (vocabEntry as any).__abbreviation_pronunciations ||
+                          []
+                        ).map((v: string, i: number) => [String(i), v])
+                      )
+                    : (vocabEntry as any).__abbreviation_pronunciations,
+                }}
+              />
             </View>
           </View>
           <View
@@ -497,6 +523,11 @@ export default function VocabEntryPage() {
             )}
         </View>
       </View>
+      {/* Lesson backlink as last section */}
+      {Array.isArray((vocabEntry as any)['__lessons']) &&
+        (vocabEntry as any)['__lessons'].length > 0 && (
+          <LessonBacklink lessons={(vocabEntry as any)['__lessons']} />
+        )}
     </ScrollView>
   );
 }
