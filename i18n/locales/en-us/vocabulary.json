@@ -4791,7 +4791,7 @@
         {
           "__ipa": "r",
           "__forced_pronunciation": "r.wav",
-          "examples": ["write", "wrong", "wrist"],
+          "examples": ["write", "wrong", "writer"],
           "header": "/r/",
           "__header_pronunciation": "r.wav"
         }
@@ -4999,12 +4999,118 @@
     "photo": {
       "__pos": "noun",
       "__tags": ["nouns", "photography"],
+      "__synonyms": ["photograph"],
+      "synonym_notes": {
+        "photograph": "A more formal term for a photo, often used in professional contexts."
+      },
       "word": "photo",
       "plural": "photos",
       "translation_note": "",
       "examples": ["She took a photo of the sunset.", "I love old photos."]
     }
   },
+  {
+    "photograph": {
+      "__pos": "noun",
+      "__tags": ["nouns", "photography"],
+      "__synonyms": ["photo"],
+      "synonym_notes": {
+        "photo": "A shorter form of photograph, often used informally."
+      },
+      "word": "photograph",
+      "plural": "photographs",
+      "translation_note": "",
+      "examples": [
+        "She took a beautiful photograph of the mountains.",
+        "I have many old photographs at home."
+      ]
+    }
+  },
+  {
+    "phone": {
+      "__pos": "noun",
+      "__tags": ["nouns", "communication"],
+      "__synonyms": ["telephone", "cell phone", "mobile phone"],
+      "synonym_notes": {
+        "telephone": "A traditional term for a phone, often used in formal contexts.",
+        "cell phone": "A mobile phone that uses cellular networks.",
+        "mobile phone": "A general term for phones that can be used on the go."
+      },
+      "word": "phone",
+      "plural": "phones",
+      "translation_note": "",
+      "examples": ["I called her on the phone.", "He has a new phone."]
+    }
+  },
+  {
+    "telephone": {
+      "__pos": "noun",
+      "__tags": ["nouns", "communication"],
+      "__synonyms": ["phone", "cell phone", "mobile phone"],
+      "synonym_notes": {
+        "phone": "A more informal term for a telephone.",
+        "cell phone": "A mobile phone that uses cellular networks.",
+        "mobile phone": "A general term for phones that can be used on the go."
+      },
+      "word": "telephone",
+      "plural": "telephones",
+      "translation_note": "",
+      "examples": [
+        "Please answer the telephone.",
+        "I need to make a telephone call."
+      ]
+    }
+  },
+  {
+    "cell phone": {
+      "__pos": "noun",
+      "__tags": ["nouns", "communication"],
+      "__synonyms": ["phone", "mobile phone", "telephone"],
+      "synonym_notes": {
+        "phone": "A common term for a cell phone.",
+        "mobile phone": "Used interchangeably with cell phone, especially outside the US.",
+        "telephone": "A more formal or traditional term."
+      },
+      "word": "cell phone",
+      "plural": "cell phones",
+      "translation_note": "",
+      "examples": [
+        "She called me on her cell phone.",
+        "Most people have a cell phone."
+      ]
+    }
+  },
+  {
+    "mobile phone": {
+      "__pos": "noun",
+      "__tags": ["nouns", "communication"],
+      "__synonyms": ["phone", "cell phone", "telephone"],
+      "synonym_notes": {
+        "phone": "A common term for a mobile phone.",
+        "cell phone": "Used interchangeably with mobile phone, especially in the US.",
+        "telephone": "A more formal or traditional term."
+      },
+      "word": "mobile phone",
+      "plural": "mobile phones",
+      "translation_note": "",
+      "examples": [
+        "She forgot her mobile phone at home.",
+        "A mobile phone can access the internet."
+      ]
+    }
+  },
+
+  {
+    "weather": {
+      "__pos": "noun",
+      "__tags": ["nouns", "nature"],
+      "word": "weather",
+      "plural": "weathers",
+      "translation_note": "",
+      "examples": ["The weather is nice today.", "I love sunny weather."]
+    }
+  },
+
   {
     "mother": {
       "__pos": "noun",
@@ -6533,6 +6639,57 @@
       },
       "translation_note": "",
       "examples": ["I know the answer.", "She knows how to swim."]
+    }
+  },
+  {
+    "writer": {
+      "__pos": "noun",
+      "__tags": ["jobs"],
+      "word": "writer",
+      "plural": "writers",
+      "translation_note": "",
+      "examples": [
+        "She is a famous writer.",
+        "The writer finished his new book."
+      ]
+    }
+  },
+  {
+    "wrong": {
+      "__pos": "adjective",
+      "__tags": ["adjectives"],
+      "word": "wrong",
+      "translation_note": "",
+      "examples": ["That answer is wrong.", "It is wrong to lie."]
+    }
+  },
+  {
+    "clock": {
+      "__pos": "noun",
+      "__tags": ["objects", "class", "time"],
+      "word": "clock",
+      "plural": "clocks",
+      "translation_note": "",
+      "examples": [
+        "The clock is on the wall.",
+        "What time does the clock show?",
+        "We have a clock in our classroom."
+      ]
+    }
+  },
+  {
+    "alphabet": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "__icon_text": "A-Z",
+      "__forced_pronunciation": "alphabet",
+      "word": "alphabet",
+      "plural": "alphabets",
+      "translation_note": "",
+      "examples": [
+        "The English alphabet has 26 letters.",
+        "We are learning the alphabet in class."
+      ]
     }
   }
 ]

@@ -301,6 +301,11 @@ import SitIcon from '@/assets/icons/licensed/sit.svg';
 import KneeIcon from '@/assets/icons/licensed/knee.svg';
 import KnifeIcon from '@/assets/icons/licensed/knife.svg';
 import KnowIcon from '@/assets/icons/licensed/know.svg';
+import WriterIcon from '@/assets/icons/licensed/writer.svg';
+import WrongIcon from '@/assets/icons/licensed/wrong.svg';
+import ClockIcon from '@/assets/icons/licensed/clock.svg'; // Example for a custom icon
+import PhotoIcon from '@/assets/icons/licensed/photo.svg'; // Example for a custom icon
+import PhoneIcon from '@/assets/icons/licensed/phone.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -714,7 +719,15 @@ export const iconMap: Record<string, React.FC<any>> = {
   knee: KneeIcon,
   knife: KnifeIcon,
   know: KnowIcon,
-
+  writer: WriterIcon,
+  wrong: WrongIcon,
+  clock: ClockIcon, // Example for a custom icon
+  photo: PhotoIcon,
+  photograph: PhotoIcon, // Example for a custom icon
+  phone: PhoneIcon, // Example for a custom icon
+  telephone: PhoneIcon, // Example for a custom icon
+  'cell phone': PhoneIcon, // Example for a custom icon
+  'mobile phone': PhoneIcon, // Example for a custom icon
   // ...etc
 };
 
