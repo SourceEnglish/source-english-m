@@ -13,49 +13,60 @@ interface LessonBacklinkProps {
 const LessonBacklink: React.FC<LessonBacklinkProps> = ({ lessons }) => {
   const router = useRouter();
 
+  // If no lessons prop, don't render
   if (!lessons || lessons.length === 0) return null;
 
-  // Only link to the first lesson for now
-  const lessonKey = lessons[0];
-  const lessonEntry = lessonsData.find(
-    (entry: any) => Object.keys(entry)[0] === lessonKey
-  );
-  // Use type assertion to avoid TS index error
-  const lessonData = lessonEntry
-    ? (lessonEntry as Record<string, any>)[lessonKey]
-    : null;
 
-  // Determine lesson number as in index.tsx
-  // Filter out hidden and vocabulary lessons with __lesson
+  // Filter out hidden and vocabulary lessons with __lesson, as in index
   const visibleLessons = lessonsData
     .map((entry: any) => Object.values(entry)[0])
     .filter(
       (lesson: any) =>
         !lesson.__hidden && !(lesson.__type === 'vocabulary' && lesson.__lesson)
     );
-  const lessonIndex =
-    visibleLessons.findIndex((l: any) => l.name === lessonKey) + 1;
 
-  // Use cards icon for vocabulary lessons, lesson icon otherwise
-  let icon = null;
-  if (lessonData?.__type === 'vocabulary') {
-    const CardsIcon = iconMap['cards'];
-    icon = CardsIcon ? <CardsIcon width={60} height={60} /> : null;
-  } else if (lessonData?.__type === 'lesson') {
-    const LessonIcon = iconMap['cards'];
-    icon = LessonIcon ? <LessonIcon width={60} height={60} /> : null;
-  }
+  // Only match visible lessons
+  const lessonTagSet = new Set((lessons || []).map((t) => t.toLowerCase()));
+  const matchingLessons = lessonsData
+    .map((entry: any) => {
+      const key = Object.keys(entry)[0];
+      const lesson = entry[key];
+      return { key, lesson };
+    })
+    .filter(({ lesson }) =>
+      visibleLessons.includes(lesson) &&
+      Array.isArray(lesson.__tags) &&
+      lesson.__tags.some((lessonTag: string) => lessonTag && lessonTag.toLowerCase && lessonTag.toLowerCase() && lessonTagSet.has(lessonTag.toLowerCase()))
+    );
+
+  if (matchingLessons.length === 0) return null;
 
   return (
     <VocabularySection headerText="Lessons" hasDivider={true}>
-      <View style={{ width: '100%', marginTop: 10 }}>
-        <PageLink
-          icon={icon}
-          pagePath={`/${lessonKey}`}
-          pageText={lessonData?.name || lessonKey.replace(/_/g, ' ')}
-          pageTextTranslated={lessonData?.name || lessonKey.replace(/_/g, ' ')}
-          index={lessonIndex > 0 ? lessonIndex : undefined}
-        />
+      <View style={{ width: '100%', marginTop: 10, gap: 12, display: 'flex', flexDirection: 'column' }}>
+        {matchingLessons.map(({ key, lesson }) => {
+          // Determine lesson number as in index
+          const lessonIndex = visibleLessons.findIndex((l: any) => l.name === key) + 1;
+          // Use cards icon for vocabulary lessons, lesson icon otherwise
+          let icon = null;
+          if (lesson.__type === 'vocabulary') {
+            const CardsIcon = iconMap['cards'];
+            icon = CardsIcon ? <CardsIcon width={60} height={60} /> : null;
+          } else if (lesson.__type === 'lesson') {
+            const LessonIcon = iconMap['lesson'];
+            icon = LessonIcon ? <LessonIcon width={60} height={60} /> : null;
+          }
+          return (
+            <PageLink
+              key={key}
+              icon={icon}
+              pagePath={`/${key}`}
+              pageText={lesson.name || key.replace(/_/g, ' ')}
+              pageTextTranslated={lesson.name || key.replace(/_/g, ' ')}
+              index={lessonIndex > 0 ? lessonIndex : undefined}
+            />
+          );
+        })}
       </View>
     </VocabularySection>
   );
