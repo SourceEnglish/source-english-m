@@ -43,6 +43,7 @@ import WinterIcon from '@/assets/icons/licensed/winter.svg';
 import NumbersIcon from '@/assets/icons/open_source/numbers.svg';
 import AddressIcon from '@/assets/icons/licensed/address.svg';
 import CityIcon from '@/assets/icons/licensed/city.svg';
+import TownIcon from '@/assets/icons/licensed/town.svg';
 import StateIcon from '@/assets/icons/licensed/state.svg';
 import ToBeIcon from '@/assets/icons/open_source/to_be.svg';
 import PhoneNumber from '@/assets/icons/licensed/phone_number.svg'; // Example for a custom icon
@@ -153,6 +154,7 @@ import GloveIcon from '@/assets/icons/licensed/glove.svg';
 import GlassesIcon from '@/assets/icons/licensed/glasses.svg';
 import DressIcon from '@/assets/icons/licensed/dress.svg';
 import CoatIcon from '@/assets/icons/licensed/coat.svg';
+import JacketIcon from '@/assets/icons/licensed/jacket.svg'; // Example for a custom icon
 import BeltIcon from '@/assets/icons/licensed/belt.svg';
 import RingIcon from '@/assets/icons/licensed/ring.svg';
 import ShortsIcon from '@/assets/icons/licensed/shorts.svg';
@@ -421,6 +423,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   today: TodayIcon,
   address: AddressIcon,
   city: CityIcon,
+  town: TownIcon,
   state: StateIcon,
   'house number': HouseNumber, // Example for a custom icon
   street: StreetIcon, // Example for a custom icon
@@ -470,7 +473,9 @@ export const iconMap: Record<string, React.FC<any>> = {
   brother: BrotherIcon,
   sister: SisterIcon,
   father: FatherIcon, // Example for a custom icon
+  dad: FatherIcon, // Example for a custom icon
   mother: MotherIcon,
+  mom: MotherIcon, // Example for a custom icon
   parent: ParentIcon, // Example for a custom icon
   child: ChildIcon, // Example for a custom icon
   son: SonIcon,
@@ -554,6 +559,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   glasses: GlassesIcon,
   dress: DressIcon,
   coat: CoatIcon,
+  jacket: JacketIcon, // Example for a custom icon
   belt: BeltIcon,
   ring: RingIcon,
   shorts: ShortsIcon,
@@ -617,6 +623,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   whiteboard: WhiteboardIcon,
 
   airplane: AirplaneIcon,
+  plane: AirplaneIcon, // Example for a custom icon
   bus_stop: BusStopIcon,
   airport: AirportIcon,
   bicycle: BicycleIcon,

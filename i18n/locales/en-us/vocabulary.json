@@ -2908,12 +2908,32 @@
       "__pos": "noun",
       "__tags": ["personal information", "personal information name"],
       "__icon_text": "First",
+      "__synonyms": ["given name"],
+      "synonym_notes": {
+        "given name": "Often used interchangeably with first name."
+      },
       "word": "first name",
       "plural": "first names",
       "translation_note": "",
       "examples": ["My first name is Sarah.", "Write your first name here."]
     }
   },
+  {
+    "given name": {
+      "__pos": "noun",
+
+      "__synonyms": ["first name"],
+      "__icon_text": "First",
+      "synonym_notes": {
+        "first name": "Often used interchangeably with given name."
+      },
+      "word": "given name",
+      "plural": "given names",
+      "translation_note": "",
+      "examples": ["Her given name is Emily.", "What is your given name?"]
+    }
+  },
+
   {
     "middle name": {
       "__pos": "noun",
@@ -2930,10 +2950,29 @@
       "__pos": "noun",
       "__tags": ["personal information", "personal information name"],
       "__icon_text": "Last",
+      "__synonyms": ["surname"],
+      "synonym_notes": {
+        "surname": "Often used interchangeably with last name."
+      },
       "word": "last name",
       "plural": "last names",
       "translation_note": "",
       "examples": ["My last name is Smith.", "Please spell your last name."]
+    }
+  },
+  {
+    "surname": {
+      "__pos": "noun",
+
+      "__synonyms": ["last name"],
+      "synonym_notes": {
+        "last name": "Often used interchangeably with surname."
+      },
+      "__icon_text": "Last",
+      "word": "surname",
+      "plural": "surnames",
+      "translation_note": "",
+      "examples": ["Her surname is Johnson.", "What is your surname?"]
     }
   },
 
@@ -2976,6 +3015,10 @@
       "__pos": "noun",
       "__tags": ["personal information", "personal information address"],
       "__forced_pronunciation": "apartment number",
+      "__synonyms": ["unit number"],
+      "synonym_notes": {
+        "unit number": "Often used interchangeably with apartment number, especially in multi-unit buildings."
+      },
       "word": "apartment number",
       "plural": "apartment numbers",
       "translation_note": "",
@@ -2989,6 +3032,10 @@
     "unit number": {
       "__pos": "noun",
       "__tags": ["personal information", "personal information address"],
+      "__synonyms": ["apartment number"],
+      "synonym_notes": {
+        "apartment number": "Often used interchangeably with unit number, especially in multi-unit buildings."
+      },
       "word": "unit number",
       "plural": "unit numbers",
       "translation_note": "",
@@ -3002,10 +3049,28 @@
     "city": {
       "__pos": "noun",
       "__tags": ["personal information", "personal information address"],
+      "__synonyms": ["town"],
+      "synonym_notes": {
+        "town": "A smaller urban area, often used interchangeably with city."
+      },
       "word": "city",
       "plural": "cities",
       "translation_note": "",
       "examples": ["I live in the city of Seattle.", "What city are you from?"]
+    }
+  },
+  {
+    "town": {
+      "__pos": "noun",
+      "__tags": ["personal information", "personal information address"],
+      "__synonyms": ["city"],
+      "synonym_notes": {
+        "city": "A larger urban area, often used interchangeably with town."
+      },
+      "word": "town",
+      "plural": "towns",
+      "translation_note": "",
+      "examples": ["She lives in a small town.", "What town do you live in?"]
     }
   },
   {
@@ -3051,6 +3116,10 @@
       "__pos": "noun",
       "__tags": ["personal information", "personal information other"],
       "__display_priority": 3,
+      "__synonyms": ["telephone number"],
+      "synonym_notes": {
+        "telephone number": "More formal term, often used in official documents."
+      },
       "word": "phone number",
       "plural": "phone numbers",
       "translation_note": "",
@@ -3064,6 +3133,10 @@
     "telephone number": {
       "__pos": "noun",
       "__tags": ["personal information", "personal information other"],
+      "__synonyms": ["phone number"],
+      "synonym_notes": {
+        "phone number": "More common term, often used in everyday conversation."
+      },
       "word": "telephone number",
       "plural": "telephone numbers",
       "translation_note": "",
@@ -3396,6 +3469,11 @@
     "father": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__synonyms": ["dad", "parent"],
+      "synonym_notes": {
+        "dad": "More informal term for father.",
+        "parent": "More general term that includes both mothers and fathers."
+      },
       "word": "father",
       "plural": "fathers",
       "translation_note": "",
@@ -3405,11 +3483,33 @@
       ]
     }
   },
+  {
+    "dad": {
+      "__pos": "noun",
+      "__tags": ["family"],
+      "__synonyms": ["father", "parent"],
+      "synonym_notes": {
+        "father": "More formal term for dad.",
+        "parent": "More general term that includes both mothers and fathers."
+      },
+      "word": "dad",
+      "plural": "dads",
+      "translation_note": "",
+      "examples": ["My dad is very funny.", "She loves her dad."]
+    }
+  },
 
   {
     "parent": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__synonyms": ["mother", "mom", "father", "dad"],
+      "synonym_notes": {
+        "mother": "More formal term for a female parent.",
+        "mom": "More informal term for mother.",
+        "father": "More formal term for a male parent.",
+        "dad": "More informal term for father."
+      },
       "word": "parent",
       "plural": "parents",
       "translation_note": "",
@@ -3447,6 +3547,10 @@
     "brother": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__synonyms": ["sibling"],
+      "synonym_notes": {
+        "sibling": "A general term for a brother or sister."
+      },
       "word": "brother",
       "plural": "brothers",
       "translation_note": "",
@@ -3457,6 +3561,10 @@
     "sister": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__synonyms": ["sibling"],
+      "synonym_notes": {
+        "sibling": "A general term for a brother or sister."
+      },
       "word": "sister",
       "plural": "sisters",
       "translation_note": "",
@@ -3467,6 +3575,11 @@
     "sibling": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__synonyms": ["brother", "sister"],
+      "synonym_notes": {
+        "brother": "Male sibling.",
+        "sister": "Female sibling."
+      },
       "word": "sibling",
       "plural": "siblings",
       "translation_note": "",
@@ -3477,6 +3590,11 @@
     "husband": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__synonyms": ["spouse"],
+      "synonym_notes": {
+        "spouse": "General term for a husband or wife."
+      },
+
       "word": "husband",
       "translation_note": "",
       "examples": [
@@ -3489,6 +3607,10 @@
     "wife": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__synonyms": ["spouse"],
+      "synonym_notes": {
+        "spouse": "General term for a husband or wife."
+      },
       "word": "wife",
       "translation_note": "",
       "examples": [
@@ -3501,6 +3623,11 @@
     "spouse": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__synonyms": ["husband", "wife"],
+      "synonym_notes": {
+        "husband": "Male spouse.",
+        "wife": "Female spouse."
+      },
       "word": "spouse",
       "translation_note": "",
       "examples": [
@@ -4039,11 +4166,30 @@
     "coat": {
       "__pos": "noun",
       "__tags": ["clothing"],
+      "__synonyms": ["jacket"],
+      "synonym_notes": {
+        "jacket": "A coat is typically heavier and longer than a jacket."
+      },
 
       "word": "coat",
       "plural": "coats",
       "translation_note": "",
       "examples": ["He puts on his coat when it's cold."]
+    }
+  },
+  {
+    "jacket": {
+      "__pos": "noun",
+      "__tags": ["clothing"],
+      "__synonyms": ["coat"],
+      "synonym_notes": {
+        "coat": "A jacket is often lighter and shorter than a coat."
+      },
+
+      "word": "jacket",
+      "plural": "jackets",
+      "translation_note": "",
+      "examples": ["She wears a jacket when it rains."]
     }
   },
 
@@ -4862,10 +5008,32 @@
       "__pos": "noun",
       "__tags": ["nouns", "family"],
       "__objectKey": "mother",
+      "__synonyms": ["mom", "parent"],
+
+      "synonym_notes": {
+        "mom": "Informal term for mother.",
+        "parent": "General term for a mother or father."
+      },
       "word": "mother",
       "plural": "mothers",
       "translation_note": "",
       "examples": ["My mother is very caring.", "She is a good mother."]
+    }
+  },
+  {
+    "mom": {
+      "__pos": "noun",
+      "__tags": ["nouns", "family"],
+      "__objectKey": "mom",
+      "__synonyms": ["mother", "parent"],
+      "synonym_notes": {
+        "mother": "Formal term for mom.",
+        "parent": "General term for a mother or father."
+      },
+      "word": "mom",
+      "plural": "moms",
+      "translation_note": "",
+      "examples": ["My mom is cooking dinner.", "She is a great mom."]
     }
   },
   {
@@ -5158,10 +5326,31 @@
     "class": {
       "__pos": "noun",
       "__tags": ["class"],
+      "__synonyms": ["classroom"],
+      "synonym_notes": {
+        "classroom": "A class can refer to a group of students or the physical space where learning occurs."
+      },
       "word": "class",
       "plural": "classes",
       "translation_note": "",
       "examples": ["Our class starts at 9 a.m."]
+    }
+  },
+  {
+    "classroom": {
+      "__pos": "noun",
+      "__tags": ["class", "places", "education"],
+      "__synonyms": ["class"],
+      "synonym_notes": {
+        "class": "A classroom specifically refers to the room where learning occurs."
+      },
+      "word": "classroom",
+      "plural": "classrooms",
+      "translation_note": "",
+      "examples": [
+        "The students are in the classroom.",
+        "Our classroom is big and bright."
+      ]
     }
   },
   {
