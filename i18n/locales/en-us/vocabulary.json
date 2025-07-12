@@ -7170,5 +7170,47 @@
         "She lives close to the park."
       ]
     }
+  },
+  {
+    "in_(preposition_of_time)": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of time"],
+      "__objectKey": "in_(preposition_of_time)",
+      "__icon_text": "in",
+      "word": "in",
+      "examples": [
+        "I was born in 2000.",
+        "We go on vacation in July.",
+        "It is cold in winter."
+      ]
+    }
+  },
+  {
+    "at_(preposition_of_time)": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of time"],
+      "__objectKey": "at_(preposition_of_time)",
+      "__icon_text": "at",
+      "word": "at",
+      "examples": [
+        "The class starts at 9 a.m.",
+        "I go to bed at night.",
+        "We eat lunch at noon."
+      ]
+    }
+  },
+  {
+    "on_(preposition_of_time)": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of time"],
+      "__objectKey": "on_(preposition_of_time)",
+      "__icon_text": "on",
+      "word": "on",
+      "examples": [
+        "My birthday is on Monday.",
+        "We have a meeting on July 5th.",
+        "She goes to the park on weekends."
+      ]
+    }
   }
 ]

@@ -2136,5 +2136,54 @@
     "__order": 100,
     "__type": "video",
     "__src": "https://www.youtube.com/watch?v=kq65VGkVwC8"
+  },
+  {
+    "_id": "prepositions_time_header",
+    "__lessons": ["prepositions of time"],
+    "__order": 1,
+    "__type": "header",
+    "text": "Prepositions of Time"
+  },
+  {
+    "_id": "prepositions_time_intro",
+    "__lessons": ["prepositions of time"],
+    "__order": 2,
+    "__type": "paragraph",
+    "text": "Prepositions of time are used to describe when something happens. The most common are 'in', 'at', and 'on'."
+  },
+  {
+    "_id": "prepositions_time_in_at_on_diff",
+    "__lessons": ["prepositions of time"],
+    "__order": 2.5,
+    "__type": "paragraph",
+    "text": "Use 'in' for months, years, centuries, and long periods (e.g., in July, in 2025, in the morning). Use 'on' for days and dates (e.g., on Monday, on July 12th). Use 'at' for precise times (e.g., at 3:00, at noon, at night)."
+  },
+  {
+    "_id": "prepositions_time_vocab_carousel",
+    "__lessons": ["prepositions of time"],
+    "__order": 3,
+    "__type": "vocabularyCarousel",
+    "__tags": ["prepositions of time"]
+  },
+  {
+    "_id": "prepositions_time_examples_subheader",
+    "__lessons": ["prepositions of time"],
+    "__order": 4,
+    "__type": "subheader",
+    "text": "Examples"
+  },
+  {
+    "_id": "prepositions_time_video_subheader",
+    "__lessons": ["prepositions of time"],
+    "__order": 99,
+    "__type": "subheader",
+    "text": "Prepositions of Time Video"
+  },
+  {
+    "_id": "prepositions_time_video",
+    "__lessons": ["prepositions of time"],
+    "__order": 100,
+    "__type": "video",
+    "__src": "https://youtu.be/fRrVkXG0-v4?si=6uItLr_p5vo5vj2I"
   }
 ]

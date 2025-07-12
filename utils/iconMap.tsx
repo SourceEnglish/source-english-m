@@ -346,6 +346,10 @@ import UnderIcon from '@/assets/icons/licensed/under.svg';
 import InIcon from '@/assets/icons/licensed/in.svg';
 import OnPrepositionIcon from '@/assets/icons/licensed/on_(preposition_of_place).svg';
 
+import InPrepositionOfTimeIcon from '@/assets/icons/licensed/in_(preposition_of_time).svg';
+import OnPrepositionOfTimeIcon from '@/assets/icons/licensed/on_(preposition_of_time).svg';
+import AtPrepositionOfTimeIcon from '@/assets/icons/licensed/at_(preposition_of_time).svg';
+
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -807,6 +811,9 @@ export const iconMap: Record<string, React.FC<any>> = {
   under: UnderIcon,
   'close to': NearIcon,
   'on_(preposition_of_place)': OnPrepositionIcon,
+  'in_(preposition_of_time)': InPrepositionOfTimeIcon,
+  'at_(preposition_of_time)': AtPrepositionOfTimeIcon,
+  'on_(preposition_of_time)': OnPrepositionOfTimeIcon,
   // ...etc
 };
 

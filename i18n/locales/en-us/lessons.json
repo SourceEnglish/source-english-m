@@ -391,5 +391,24 @@
       "__lesson": "prepositions of place",
       "__hidden": false
     }
+  },
+  {
+    "prepositions of time": {
+      "name": "prepositions of time",
+      "__tags": ["prepositions of time"],
+      "__type": "lesson",
+      "__order": 33,
+      "__vocab_lesson": "prepositions of time vocab"
+    }
+  },
+  {
+    "prepositions of time vocab": {
+      "name": "prepositions of time vocab",
+      "__tags": ["prepositions of time"],
+      "__type": "vocabulary",
+      "__order": 34,
+      "__lesson": "prepositions of time",
+      "__hidden": false
+    }
   }
 ]
