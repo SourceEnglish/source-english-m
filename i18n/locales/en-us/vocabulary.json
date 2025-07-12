@@ -6994,5 +6994,181 @@
         "I learned a new word today."
       ]
     }
+  },
+  {
+    "on_(preposition_of_place)": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "prepositions of place one subject"],
+      "__objectKey": "on_(preposition_of_place)",
+      "word": "on",
+      "examples": [
+        "The ball is on the cube.",
+        "The book is on the table.",
+        "She put her hat on the chair."
+      ]
+    }
+  },
+  {
+    "above": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "prepositions of place one subject"],
+      "word": "above",
+
+      "examples": [
+        "The ball is above the cube.",
+        "The lamp is above the table.",
+        "There is a picture above the sofa."
+      ]
+    }
+  },
+  {
+    "under": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "prepositions of place one subject"],
+      "word": "under",
+      "__synonyms": ["below"],
+      "synonym_notes": {
+        "below": "'Below' is more common for position. 'Under' is more common for direct contact."
+      },
+      "examples": [
+        "The ball is under the cube.",
+        "The dog is under the table.",
+        "The shoes are under the bed."
+      ]
+    }
+  },
+
+  {
+    "below": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "prepositions of place one subject"],
+      "word": "below",
+      "__synonyms": ["under"],
+      "synonym_notes": {
+        "under": "'Under' is more common for direct contact. 'Below' is more common for position."
+      },
+      "examples": [
+        "The ball is below the cube.",
+        "The shoes are below the bed.",
+        "Temperatures below zero are common in winter."
+      ]
+    }
+  },
+
+  {
+    "in": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "prepositions of place one subject"],
+      "word": "in",
+      "examples": [
+        "The ball is in the cube.",
+        "The keys are in the bag.",
+        "It is warm in the house."
+      ]
+    }
+  },
+  {
+    "in front of": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "prepositions of place one subject"],
+      "word": "in front of",
+      "examples": [
+        "The ball is in front of the cube.",
+        "The car is in front of the house.",
+        "She stood in front of the mirror."
+      ]
+    }
+  },
+  {
+    "behind": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "prepositions of place one subject"],
+      "word": "behind",
+      "examples": [
+        "The ball is behind the cube.",
+        "The cat is behind the curtain.",
+        "He stood behind the door."
+      ]
+    }
+  },
+  {
+    "beside": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "prepositions of place one subject"],
+      "word": "beside",
+      "__synonyms": ["next to"],
+      "synonym_notes": "'Next to' is more common in spoken English.",
+      "examples": [
+        "The ball is beside the cube.",
+        "She sat beside her friend.",
+        "The lamp is beside the bed."
+      ]
+    }
+  },
+  {
+    "next to": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "prepositions of place one subject"],
+      "word": "next to",
+      "__synonyms": ["beside"],
+      "synonym_notes": "'Beside' is more formal, 'next to' is more common in conversation.",
+      "examples": [
+        "The ball is next to the cube.",
+        "The school is next to the library.",
+        "He sat next to me."
+      ]
+    }
+  },
+  {
+    "between": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "between"],
+      "word": "between",
+      "examples": [
+        "The ball is between the cubes.",
+        "The ball is between the boxes.",
+        "He sat between his parents."
+      ]
+    }
+  },
+
+  {
+    "across from": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "prepositions of place one subject"],
+      "word": "across from",
+
+      "examples": [
+        "The ball is across from the cube.",
+        "The bank is across from the post office.",
+        "She sat across from me."
+      ]
+    }
+  },
+  {
+    "around": {
+      "__pos": "preposition",
+      "__tags": ["prepositions of place", "prepositions of place one subject"],
+      "word": "around",
+      "examples": [
+        "The ball is around the cube.",
+        "There are trees around the house.",
+        "We walked around the park."
+      ]
+    }
+  },
+
+  {
+    "close to": {
+      "__pos": "preposition",
+      "word": "close to",
+      "__synonyms": ["near"],
+      "synonym_notes": "'Near' is more general, 'close to' is more specific about proximity.",
+      "examples": [
+        "The ball is close to the cube.",
+        "The school is close to my house.",
+        "She lives close to the park."
+      ]
+    }
   }
 ]

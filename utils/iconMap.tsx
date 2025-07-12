@@ -332,6 +332,20 @@ import WordIcon from '@/assets/icons/licensed/word.svg';
 import NearIcon from '@/assets/icons/licensed/near.svg';
 import EarIcon from '@/assets/icons/licensed/ear.svg';
 
+import AboveIcon from '@/assets/icons/licensed/above.svg';
+import AcrossFromIcon from '@/assets/icons/licensed/across_from.svg';
+import AroundIcon from '@/assets/icons/licensed/around.svg';
+import BehindIcon from '@/assets/icons/licensed/behind.svg';
+import BelowIcon from '@/assets/icons/licensed/below.svg';
+import BesideIcon from '@/assets/icons/licensed/beside.svg';
+import BetweenIcon from '@/assets/icons/licensed/between.svg';
+import InFrontOfIcon from '@/assets/icons/licensed/in_front_of.svg';
+import InsideIcon from '@/assets/icons/licensed/inside.svg';
+import NextToIcon from '@/assets/icons/licensed/next_to.svg';
+import UnderIcon from '@/assets/icons/licensed/under.svg';
+import InIcon from '@/assets/icons/licensed/in.svg';
+import OnPrepositionIcon from '@/assets/icons/licensed/on_(preposition_of_place).svg';
+
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -776,6 +790,23 @@ export const iconMap: Record<string, React.FC<any>> = {
   word: WordIcon,
   near: NearIcon,
   ear: EarIcon,
+
+  // Prepositions of place
+  above: AboveIcon,
+  'across from': AcrossFromIcon,
+  around: AroundIcon,
+  behind: BehindIcon,
+  below: BelowIcon,
+  beside: BesideIcon,
+  between: BetweenIcon,
+  'in front of': InFrontOfIcon,
+  inside: InIcon,
+  in: InIcon,
+  'inside of': InIcon,
+  'next to': BesideIcon,
+  under: UnderIcon,
+  'close to': NearIcon,
+  'on_(preposition_of_place)': OnPrepositionIcon,
   // ...etc
 };
 

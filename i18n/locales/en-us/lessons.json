@@ -372,5 +372,24 @@
       "__order": 14.6,
       "__hidden": false
     }
+  },
+  {
+    "prepositions of place": {
+      "name": "prepositions of place",
+      "__tags": ["prepositions of place"],
+      "__type": "lesson",
+      "__order": 31,
+      "__vocab_lesson": "prepositions of place vocab"
+    }
+  },
+  {
+    "prepositions of place vocab": {
+      "name": "prepositions of place vocab",
+      "__tags": ["prepositions of place"],
+      "__type": "vocabulary",
+      "__order": 32,
+      "__lesson": "prepositions of place",
+      "__hidden": false
+    }
   }
 ]
