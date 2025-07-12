@@ -692,6 +692,71 @@
       ]
     }
   },
+  {
+    "or": {
+      "__pos": "conjunction",
+      "__tags": ["conjunctions"],
+      "__icon_text": "or",
+      "word": "or",
+      "translation_note": "",
+      "examples": [
+        "Would you like tea or coffee?",
+        "You can choose red or blue."
+      ]
+    }
+  },
+
+  {
+    "air": {
+      "__pos": "noun",
+      "__tags": ["nature"],
+      "__objectKey": "air",
+      "word": "air",
+      "translation_note": "",
+      "examples": ["We breathe air to live.", "The air is fresh today."]
+    }
+  },
+  {
+    "ear": {
+      "__pos": "noun",
+      "__tags": ["body parts"],
+      "word": "ear",
+      "plural": "ears",
+      "translation_note": "",
+      "examples": [
+        "She has small ears.",
+        "Cover your ears if the sound is loud.",
+        "He wears an earring in his ear."
+      ]
+    }
+  },
+  {
+    "or_(multigraph)": {
+      "word": "or",
+      "__forced_pronunciation": "ɔr.wav",
+      "__pos": "multigraph",
+      "__tags": ["multigraphs", "rhotic vowels"],
+      "__objectKey": "or_(multigraph)",
+      "__icon_text": "or",
+      "__show_word": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "ɔr",
+          "__forced_pronunciation": "ɔr.wav",
+          "examples": ["or", "neighbor", "born"],
+          "header": "/ɔr/",
+          "__header_pronunciation": "ɔr.wav"
+        },
+        {
+          "__ipa": "ɚ",
+          "__forced_pronunciation": "ɚ.wav",
+          "examples": ["word", "color", "work"],
+          "header": "/ɚ/",
+          "__header_pronunciation": "ɚ.wav"
+        }
+      ]
+    }
+  },
 
   {
     "yes": {
@@ -4900,7 +4965,7 @@
         {
           "__ipa": "ɝ",
           "__forced_pronunciation": "ɝ.wav",
-          "examples": ["fur", "turn", "nurse"],
+          "examples": ["nurse", "Thursday", "hour"],
           "header": "/ɝ/",
           "__header_pronunciation": "ɝ.wav"
         }
@@ -4908,7 +4973,7 @@
     }
   },
   {
-    "ear": {
+    "ear_(multigraph)": {
       "word": "ear",
       "__forced_pronunciation": "ɪr.wav",
       "__pos": "multigraph",
@@ -4919,7 +4984,7 @@
         {
           "__ipa": "ɪr",
           "__forced_pronunciation": "ɪr.wav",
-          "examples": ["ear", "dear", "fear"],
+          "examples": ["ear", "year", "near"],
           "header": "/ɪr/",
           "__header_pronunciation": "ɪr.wav"
         }
@@ -4938,7 +5003,7 @@
         {
           "__ipa": "ɪr",
           "__forced_pronunciation": "ɪr.wav",
-          "examples": ["deer", "career", "peer"],
+          "examples": ["beer", "career", "engineer"],
           "header": "/ɪr/",
           "__header_pronunciation": "ɪr.wav"
         }
@@ -4946,9 +5011,10 @@
     }
   },
   {
-    "air": {
+    "air_(multigraph)": {
       "word": "air",
       "__forced_pronunciation": "ɛr.wav",
+      "__objectKey": "air_(multigraph)",
       "__pos": "multigraph",
       "__tags": ["multigraphs", "rhotic vowels"],
       "__icon_text": "air",
@@ -4957,7 +5023,7 @@
         {
           "__ipa": "ɛr",
           "__forced_pronunciation": "ɛr.wav",
-          "examples": ["air", "hair", "fair"],
+          "examples": ["air", "hair", "pair"],
           "header": "/ɛr/",
           "__header_pronunciation": "ɛr.wav"
         }
@@ -4976,39 +5042,14 @@
         {
           "__ipa": "ɑr",
           "__forced_pronunciation": "ɑr.wav",
-          "examples": ["car", "star", "are"],
+          "examples": ["star", "car", "start"],
           "header": "/ɑr/",
           "__header_pronunciation": "ɑr.wav"
         }
       ]
     }
   },
-  {
-    "or": {
-      "word": "or",
-      "__forced_pronunciation": "ɔr.wav",
-      "__pos": "multigraph",
-      "__tags": ["multigraphs", "rhotic vowels"],
-      "__icon_text": "or",
-      "__show_word": true,
-      "__exampleEntries": [
-        {
-          "__ipa": "ɔr",
-          "__forced_pronunciation": "ɔr.wav",
-          "examples": ["or", "for", "corn"],
-          "header": "/ɔr/",
-          "__header_pronunciation": "ɔr.wav"
-        },
-        {
-          "__ipa": "ɚ",
-          "__forced_pronunciation": "ɚ.wav",
-          "examples": ["word", "color", "work"],
-          "header": "/ɚ/",
-          "__header_pronunciation": "ɚ.wav"
-        }
-      ]
-    }
-  },
+
   {
     "ire": {
       "word": "ire",
@@ -5021,7 +5062,7 @@
         {
           "__ipa": "aɪr",
           "__forced_pronunciation": "aɪr.wav",
-          "examples": ["fire", "tire", "wire"],
+          "examples": ["fire", "tired", "hire"],
           "header": "/aɪr/",
           "__header_pronunciation": "aɪr.wav"
         }
@@ -6717,6 +6758,240 @@
         "His uncle is a doctor.",
         "We went fishing with our uncle.",
         "My uncle is my mother's brother."
+      ]
+    }
+  },
+
+  {
+    "beer": {
+      "__pos": "noun",
+      "__tags": ["drinks"],
+      "word": "beer",
+      "plural": "beers",
+      "translation_note": "",
+      "examples": ["He ordered a beer at the bar.", "Beer is made from barley."]
+    }
+  },
+  {
+    "born": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "born",
+      "translation_note": "",
+      "examples": ["She was born in 2000.", "A baby is born every minute."]
+    }
+  },
+  {
+    "career": {
+      "__pos": "noun",
+      "__tags": ["jobs"],
+      "word": "career",
+      "plural": "careers",
+      "translation_note": "",
+      "examples": [
+        "He chose a career in medicine.",
+        "She wants a successful career."
+      ]
+    }
+  },
+  {
+    "engineer": {
+      "__pos": "noun",
+      "__tags": ["jobs"],
+      "word": "engineer",
+      "plural": "engineers",
+      "translation_note": "",
+      "examples": ["My brother is an engineer.", "Engineers design bridges."]
+    }
+  },
+  {
+    "fire": {
+      "__pos": "noun",
+      "__tags": ["nature"],
+      "word": "fire",
+      "plural": "fires",
+      "translation_note": "",
+      "examples": ["The fire kept us warm.", "Call 911 if you see a fire."]
+    }
+  },
+  {
+    "hair": {
+      "__pos": "noun",
+      "__tags": ["body parts"],
+      "word": "hair",
+      "translation_note": "",
+      "examples": ["She has long hair.", "Brush your hair every day."]
+    }
+  },
+  {
+    "hire": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "hire",
+      "translation_note": "",
+      "examples": [
+        "The company will hire new workers.",
+        "They want to hire a manager."
+      ]
+    }
+  },
+  {
+    "hour": {
+      "__pos": "noun",
+      "__tags": ["time"],
+      "word": "hour",
+      "plural": "hours",
+      "translation_note": "",
+      "examples": ["There are 24 hours in a day.", "The class lasts one hour."]
+    }
+  },
+  {
+    "minute": {
+      "__pos": "noun",
+      "__tags": ["time"],
+      "word": "minute",
+      "plural": "minutes",
+      "translation_note": "",
+      "examples": ["Wait a minute, please.", "There are 60 minutes in an hour."]
+    }
+  },
+  {
+    "neighbor": {
+      "__pos": "noun",
+      "__tags": ["people"],
+      "word": "neighbor",
+      "plural": "neighbors",
+      "translation_note": "",
+      "examples": [
+        "Our neighbor is very friendly.",
+        "We invited our neighbors to dinner."
+      ]
+    }
+  },
+  {
+    "nurse": {
+      "__pos": "noun",
+      "__tags": ["jobs"],
+      "word": "nurse",
+      "plural": "nurses",
+      "translation_note": "",
+      "examples": [
+        "The nurse took my temperature.",
+        "Nurses help patients in the hospital."
+      ]
+    }
+  },
+  {
+    "pair": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "word": "pair",
+      "plural": "pairs",
+      "translation_note": "",
+      "examples": [
+        "I bought a new pair of shoes.",
+        "A pair means two things together."
+      ]
+    }
+  },
+  {
+    "second": {
+      "__pos": "noun",
+      "__tags": ["time"],
+      "word": "second",
+      "plural": "seconds",
+      "translation_note": "(time)",
+      "examples": [
+        "There are 60 seconds in a minute.",
+        "Wait a second, please."
+      ]
+    }
+  },
+  {
+    "start": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "start",
+      "translation_note": "",
+      "examples": ["Let's start the lesson.", "The race will start soon."]
+    }
+  },
+  {
+    "work": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "work",
+      "translation_note": "",
+      "examples": ["I work at a hospital.", "She works very hard."]
+    }
+  },
+  {
+    "star": {
+      "__pos": "noun",
+      "__tags": ["space"],
+      "word": "star",
+      "plural": "stars",
+      "translation_note": "",
+      "examples": [
+        "The star shone brightly in the sky.",
+        "There are millions of stars in the universe."
+      ]
+    }
+  },
+  {
+    "apartment": {
+      "__pos": "noun",
+      "__tags": [
+        "personal information",
+        "personal information address",
+        "housing"
+      ],
+      "word": "apartment",
+      "plural": "apartments",
+      "translation_note": "",
+      "examples": [
+        "She lives in an apartment.",
+        "The apartment is on the third floor.",
+        "They rented a new apartment downtown."
+      ]
+    }
+  },
+  {
+    "year": {
+      "__pos": "noun",
+      "__tags": ["time"],
+      "word": "year",
+      "plural": "years",
+      "translation_note": "",
+      "examples": [
+        "There are twelve months in a year.",
+        "She will graduate next year."
+      ]
+    }
+  },
+  {
+    "near": {
+      "__pos": "preposition",
+      "__tags": ["prepositions"],
+      "word": "near",
+      "translation_note": "",
+      "examples": [
+        "The school is near my house.",
+        "There is a park near the station."
+      ]
+    }
+  },
+  {
+    "word": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "word": "word",
+      "plural": "words",
+      "translation_note": "",
+      "examples": [
+        "Words are made of letters.",
+        "Please write a word on the board.",
+        "I learned a new word today."
       ]
     }
   }

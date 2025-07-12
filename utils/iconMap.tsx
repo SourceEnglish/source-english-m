@@ -309,6 +309,29 @@ import PhoneIcon from '@/assets/icons/licensed/phone.svg'; // Example for a cust
 import AuntIcon from '@/assets/icons/licensed/aunt.svg'; // Example for a custom icon
 import UncleIcon from '@/assets/icons/licensed/uncle.svg'; // Example for a custom icon
 
+// Added for new vocabulary words
+import AirIcon from '@/assets/icons/licensed/air.svg';
+import BeerIcon from '@/assets/icons/licensed/beer.svg';
+import BornIcon from '@/assets/icons/licensed/born.svg';
+import CareerIcon from '@/assets/icons/licensed/career.svg';
+import EngineerIcon from '@/assets/icons/licensed/engineer.svg';
+import FireIcon from '@/assets/icons/licensed/fire.svg';
+import HairIcon from '@/assets/icons/licensed/hair.svg';
+import HireIcon from '@/assets/icons/licensed/hire.svg';
+import HourIcon from '@/assets/icons/licensed/hour.svg';
+import MinuteIcon from '@/assets/icons/licensed/minute.svg';
+import NeighborIcon from '@/assets/icons/licensed/neighbor.svg';
+import NurseIcon from '@/assets/icons/licensed/nurse.svg';
+import PairIcon from '@/assets/icons/licensed/pair.svg';
+import SecondIcon from '@/assets/icons/licensed/second.svg';
+import StartIcon from '@/assets/icons/licensed/start.svg';
+import WorkIcon from '@/assets/icons/licensed/work.svg';
+import StarIcon from '@/assets/icons/licensed/star.svg';
+import YearIcon from '@/assets/icons/licensed/year.svg';
+import WordIcon from '@/assets/icons/licensed/word.svg';
+import NearIcon from '@/assets/icons/licensed/near.svg';
+import EarIcon from '@/assets/icons/licensed/ear.svg';
+
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -732,6 +755,27 @@ export const iconMap: Record<string, React.FC<any>> = {
   'mobile phone': PhoneIcon, // Example for a custom icon
   aunt: AuntIcon, // Example for a custom icon
   uncle: UncleIcon, // Example for a custom icon
+  air: AirIcon,
+  beer: BeerIcon,
+  born: BornIcon,
+  career: CareerIcon,
+  engineer: EngineerIcon,
+  fire: FireIcon,
+  hair: HairIcon,
+  hire: HireIcon,
+  hour: HourIcon,
+  minute: MinuteIcon,
+  neighbor: NeighborIcon,
+  nurse: NurseIcon,
+  pair: PairIcon,
+  second: SecondIcon,
+  start: StartIcon,
+  work: WorkIcon,
+  star: StarIcon,
+  year: YearIcon,
+  word: WordIcon,
+  near: NearIcon,
+  ear: EarIcon,
   // ...etc
 };
 
