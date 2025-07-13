@@ -399,6 +399,20 @@ import SeaIcon from '@/assets/icons/licensed/sea.svg'; // Example for a custom i
 import ShopIcon from '@/assets/icons/licensed/shop.svg'; // Example for a custom icon
 import TieIcon from '@/assets/icons/licensed/tie.svg'; // Example for a custom icon
 import StoreIcon from '@/assets/icons/licensed/store.svg'; // Example for a custom icon
+import BathroomIcon from '@/assets/icons/licensed/bathroom.svg'; // Example for a custom icon
+import RestroomIcon from '@/assets/icons/licensed/restroom.svg'; // Example for a custom icon
+import KitchenIcon from '@/assets/icons/licensed/kitchen.svg'; // Example for a custom icon
+import LivingRoomIcon from '@/assets/icons/licensed/living_room.svg'; // Example for a custom icon
+import DiningRoomIcon from '@/assets/icons/licensed/dining_room.svg'; // Example for a custom icon
+
+import OfficeIcon from '@/assets/icons/licensed/office.svg'; // Example for a custom icon
+import CeilingIcon from '@/assets/icons/licensed/ceiling.svg'; // Example for a custom icon
+import FloorIcon from '@/assets/icons/licensed/floor.svg'; // Example for a custom icon
+import WallIcon from '@/assets/icons/licensed/wall.svg'; // Example for a custom icon
+import StairsIcon from '@/assets/icons/licensed/stairs.svg'; // Example for a custom icon
+import DownstairsIcon from '@/assets/icons/licensed/downstairs.svg'; // Example for a custom icon
+import UpstairsIcon from '@/assets/icons/licensed/upstairs.svg'; // Example for a custom icon
+import RoofIcon from '@/assets/icons/licensed/roof.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -921,6 +935,19 @@ export const iconMap: Record<string, React.FC<any>> = {
   'post office': PostOfficeIcon, // Example for a custom icon
   restaurant: RestaurantIcon, // Example for a custom icon
   store: StoreIcon, // Example for a custom icon
+  bathroom: BathroomIcon, // Example for a custom icon
+  restroom: RestroomIcon, // Example for a custom icon
+  kitchen: KitchenIcon, // Example for a custom icon
+  'living room': LivingRoomIcon, // Example for a custom icon
+  'dining room': DiningRoomIcon, // Example for a custom icon
+  office: OfficeIcon, // Example for a custom icon
+  ceiling: CeilingIcon, // Example for a custom icon
+  floor: FloorIcon, // Example for a custom icon
+  wall: WallIcon, // Example for a custom icon
+  stairs: StairsIcon, // Example for a custom icon
+  downstairs: DownstairsIcon,
+  upstairs: UpstairsIcon,
+  roof: RoofIcon, // Example for a custom icon
 
   // ...etc
 };

@@ -5760,7 +5760,7 @@
   {
     "class": {
       "__pos": "noun",
-      "__tags": ["class"],
+      "__tags": ["class", "rooms"],
       "__synonyms": ["classroom"],
       "synonym_notes": {
         "classroom": "A class can refer to a group of students or the physical space where learning occurs."
@@ -5774,7 +5774,7 @@
   {
     "classroom": {
       "__pos": "noun",
-      "__tags": ["class", "education"],
+      "__tags": ["class", "education", "rooms"],
       "__synonyms": ["class"],
       "synonym_notes": {
         "class": "A classroom specifically refers to the room where learning occurs."
@@ -6378,7 +6378,7 @@
   {
     "door": {
       "__pos": "noun",
-      "__tags": ["house", "objects"],
+      "__tags": ["house", "objects", "room terms"],
       "word": "door",
       "plural": "doors",
       "translation_note": "",
@@ -6856,7 +6856,7 @@
   {
     "window": {
       "__pos": "noun",
-      "__tags": ["house", "objects"],
+      "__tags": ["house", "objects", "room terms"],
       "word": "window",
       "plural": "windows",
       "translation_note": "",
@@ -8001,6 +8001,159 @@
         "We had dinner at a restaurant.",
         "The restaurant serves Italian food."
       ]
+    }
+  },
+  {
+    "bathroom": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms"],
+      "__synonyms": ["restroom"],
+      "synonym_notes": {
+        "restroom": "'Restroom' is often used in public places, while 'bathroom' is more common in homes."
+      },
+      "word": "bathroom",
+      "plural": "bathrooms",
+      "examples": [
+        "The bathroom is down the hall.",
+        "I need to use the bathroom."
+      ]
+    }
+  },
+  {
+    "restroom": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms"],
+      "__synonyms": ["bathroom"],
+      "synonym_notes": {
+        "bathroom": "'Restroom' is often used in public places, while 'bathroom' is more common in homes."
+      },
+      "word": "restroom",
+      "plural": "restrooms",
+      "examples": ["Where is the restroom?", "The restroom is clean."]
+    }
+  },
+  {
+    "kitchen": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms"],
+      "word": "kitchen",
+      "plural": "kitchens",
+      "examples": [
+        "The kitchen is where we cook.",
+        "She cleaned the kitchen after dinner."
+      ]
+    }
+  },
+  {
+    "living room": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms"],
+      "word": "living room",
+      "plural": "living rooms",
+      "examples": [
+        "The living room is comfortable.",
+        "We watch TV in the living room."
+      ]
+    }
+  },
+  {
+    "dining room": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms"],
+      "word": "dining room",
+      "plural": "dining rooms",
+      "examples": [
+        "The dining room is where we eat.",
+        "She set the table in the dining room."
+      ]
+    }
+  },
+  {
+    "office": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms"],
+      "word": "office",
+      "plural": "offices",
+      "examples": [
+        "My house has a small office.",
+        "The office is on the second floor."
+      ]
+    }
+  },
+  {
+    "floor": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms", "room terms"],
+      "word": "floor",
+      "plural": "floors",
+      "examples": [
+        "The office is on the third floor.",
+        "She cleaned the floor with a mop."
+      ]
+    }
+  },
+  {
+    "ceiling": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms", "room terms"],
+      "word": "ceiling",
+      "plural": "ceilings",
+      "examples": [
+        "The ceiling is very high.",
+        "There is a fan on the ceiling."
+      ]
+    }
+  },
+  {
+    "wall": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms", "room terms"],
+      "word": "wall",
+      "plural": "walls",
+      "examples": [
+        "The wall is painted blue.",
+        "There is a picture on the wall."
+      ]
+    }
+  },
+  {
+    "stairs": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms", "room terms"],
+      "word": "stairs",
+      "plural": "stairs",
+      "examples": [
+        "The stairs lead to the second floor.",
+        "She walked up the stairs quickly."
+      ]
+    }
+  },
+  {
+    "downstairs": {
+      "__pos": "adverb",
+      "__tags": ["buildings", "rooms", "room terms"],
+      "word": "downstairs",
+      "examples": [
+        "The kitchen is downstairs.",
+        "He went downstairs to get a drink."
+      ]
+    }
+  },
+  {
+    "upstairs": {
+      "__pos": "adverb",
+      "__tags": ["buildings", "rooms", "room terms"],
+      "word": "upstairs",
+      "examples": ["The bedroom is upstairs.", "She went upstairs to study."]
+    }
+  },
+  {
+    "roof": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms", "room terms"],
+      "word": "roof",
+      "plural": "roofs",
+      "examples": ["The roof is red.", "There is a bird on the roof."]
     }
   }
 ]
