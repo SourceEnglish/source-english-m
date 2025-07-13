@@ -220,7 +220,10 @@ const PageLink: React.FC<PageLinkProps> = ({
                 }}
               >
                 {vocabEntries.slice(0, maxCards).map((entry: any) => (
-                  <InlineCardPreview key={entry.word} card={entry} />
+                  <InlineCardPreview
+                    key={entry.__objectKey || entry.word}
+                    card={entry}
+                  />
                 ))}
               </View>
             )}

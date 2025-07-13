@@ -25,6 +25,7 @@ function flattenVocabulary(vocabArr: any[]): {
   pos?: string;
   redirect?: string;
   __icon_text?: string;
+  __objectKey?: string;
 }[] {
   // Prevent duplicate display of the same word+clarifier+key combo, but allow both "I" (letter) and "I (pronoun)"
   const seen = new Set<string>();
@@ -36,6 +37,7 @@ function flattenVocabulary(vocabArr: any[]): {
     pos?: string;
     redirect?: string;
     __icon_text?: string;
+    __objectKey?: string;
   }[] = [];
   vocabArr.forEach((entry) => {
     const key = Object.keys(entry)[0];
@@ -209,6 +211,7 @@ function flattenVocabulary(vocabArr: any[]): {
           pos: value.__pos,
           redirect: value.__redirect,
           __icon_text: value.__icon_text,
+          __objectKey: value.__objectKey,
         });
         seen.add(sig);
       }
@@ -301,16 +304,17 @@ export default function SearchBar() {
   const lessons = getLessons() as Array<{ name: string; __hidden?: boolean }>;
 
   // Prepare all suggestions (lessons and vocab, no prioritization by default)
-  type Suggestion = {
-    type: string;
-    name: string;
-    clarifier?: string;
-    key?: string;
-    altWords?: string[];
-    pos?: string;
-    __icon_text?: string;
-    lessonIndex?: number;
-  };
+type Suggestion = {
+  type: string;
+  name: string;
+  clarifier?: string;
+  key?: string;
+  altWords?: string[];
+  pos?: string;
+  __icon_text?: string;
+  lessonIndex?: number;
+  __objectKey?: string;
+};
 
   // Add lessonIndex to lessons for rendering index as TextIcon
   // Use the same logic as PageLink to skip certain lessons in the index
@@ -339,6 +343,7 @@ export default function SearchBar() {
       altWords: v.altWords,
       pos: v.pos,
       __icon_text: v.__icon_text,
+      __objectKey: v.__objectKey,
     })),
   ].filter((item) => {
     const q = query.trim().toLowerCase();
@@ -380,16 +385,17 @@ export default function SearchBar() {
   }
 
   // If the query is a single letter, prioritize single letter vocab entries
-  let suggestions: {
-    type: string;
-    name: string;
-    clarifier?: string;
-    key?: string;
-    pos?: string;
-    emoji?: string;
-    __icon_text?: string;
-    altWords?: string[]; // <-- Always include altWords for consistency
-  }[] = [];
+let suggestions: {
+  type: string;
+  name: string;
+  clarifier?: string;
+  key?: string;
+  pos?: string;
+  emoji?: string;
+  __icon_text?: string;
+  altWords?: string[];
+  __objectKey?: string;
+}[] = [];
 
   if (query.length === 1 && /^[a-zA-Z]$/.test(query)) {
     const letter = query.toUpperCase();
@@ -468,6 +474,7 @@ export default function SearchBar() {
                       word?: string;
                       plural?: string;
                       conjugation?: Record<string, string>;
+                      __objectKey?: string;
                       pos?: string;
                       [key: string]: any;
                     })
@@ -507,6 +514,23 @@ export default function SearchBar() {
 
               // Determine display text and part of speech for suggestion
               let displayText = t(item.name);
+              // If vocab entry has __objectKey, display it in parenthesis after the word
+              if (
+                item.type === 'vocab' &&
+                (item.__objectKey || (vocabEntry && typeof vocabEntry.__objectKey === 'string' && vocabEntry.__objectKey.trim() !== ''))
+              ) {
+                // Prefer item.__objectKey, fallback to vocabEntry.__objectKey
+                const objectKey = item.__objectKey || (vocabEntry ? vocabEntry.__objectKey : undefined);
+                if (objectKey) {
+                  // If __objectKey contains parenthesis, show only the text inside
+                  const match = objectKey.match(/\(([^)]+)\)/);
+                  if (match && match[1]) {
+                    displayText = `${t(item.name)} (${match[1]})`;
+                  } else {
+                    displayText = `${t(item.name)} (${objectKey})`;
+                  }
+                }
+              }
               let partOfSpeech =
                 item.type === 'lesson' ? 'lesson' : item.pos || '';
 

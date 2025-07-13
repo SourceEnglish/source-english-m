@@ -62,7 +62,7 @@ const SynonymDisplay: React.FC<SynonymDisplayProps> = ({
                   <View style={styles.synonymContent}>
                     <View style={styles.synonymLine}>
                       <ReadableText
-                        text={synonym}
+                        text={synonym.split('_')[0]}
                         pronunciation={synonymPronunciations?.[synonym]}
                         style={[
                           styles.synonymText,
