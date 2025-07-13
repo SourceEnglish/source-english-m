@@ -787,7 +787,227 @@
       "examples": ["I do not like broccoli.", "She is not coming to the party."]
     }
   },
+  {
+    "food": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "word": "food",
+      "plural": "foods",
+      "translation_note": "",
+      "examples": [
+        "I like Italian food.",
+        "Food is important for life.",
+        "We bought a lot of food."
+      ]
+    }
+  },
+  {
+    "foot": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body"],
+      "word": "foot",
+      "plural": "feet",
+      "translation_note": "",
+      "examples": [
+        "My foot hurts.",
+        "He has big feet.",
+        "She stood on one foot."
+      ]
+    }
+  },
+  {
+    "lie": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "lie",
+      "translation_note": "",
+      "conjugation": {
+        "present": "lie",
+        "present_participle": "lying",
+        "past": "lay"
+      },
+      "examples": [
+        "I want to lie down.",
+        "He lies on the bed.",
+        "The cat likes to lie in the sun."
+      ]
+    }
+  },
+  {
+    "meat": {
+      "__pos": "noun",
+      "__tags": ["nouns", "food"],
+      "word": "meat",
+      "plural": "meats",
+      "translation_note": "",
+      "examples": [
+        "Do you eat meat?",
+        "Chicken is a kind of meat.",
+        "He doesn't like red meat."
+      ]
+    }
+  },
+  {
+    "moon": {
+      "__pos": "noun",
+      "__tags": ["nouns", "nature"],
+      "word": "moon",
+      "plural": "moons",
+      "translation_note": "",
+      "examples": [
+        "The moon is bright tonight.",
+        "We can see the full moon.",
+        "The moon goes around the Earth."
+      ]
+    }
+  },
+  {
+    "movie": {
+      "__pos": "noun",
+      "__tags": ["nouns", "entertainment"],
+      "word": "movie",
+      "plural": "movies",
+      "translation_note": "",
+      "examples": [
+        "Let's watch a movie.",
+        "This movie is funny.",
+        "I saw a movie last night."
+      ]
+    }
+  },
+  {
+    "piece": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "word": "piece",
+      "plural": "pieces",
+      "translation_note": "",
+      "examples": [
+        "Can I have a piece of cake?",
+        "There is a piece of paper on the floor.",
+        "She gave me a piece of advice."
+      ]
+    }
+  },
+  {
+    "road": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "__synonyms": ["street"],
+      "synonym_notes": {
+        "street": "A road in a city or town, often with buildings on both sides."
+      },
+      "word": "road",
+      "plural": "roads",
+      "translation_note": "",
+      "examples": [
+        "The road is long.",
+        "Be careful when you cross the road.",
+        "This road goes to the city."
+      ]
+    }
+  },
+  {
+    "say": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "__synonyms": ["speak"],
+      "conjugation": {
+        "present": "say",
+        "present_participle": "saying",
+        "past": "said"
+      },
+      "synonym_notes": {
+        "speak": "\"speak\" generally refers to the act of talking or using words in general, while \"say\" focuses on the specific words used."
+      },
 
+      "word": "say",
+      "translation_note": "",
+      "examples": [
+        "What did you say?",
+        "Please say your name.",
+        "He didn't say anything."
+      ]
+    }
+  },
+  {
+    "science": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "word": "science",
+      "plural": "sciences",
+      "translation_note": "",
+      "examples": [
+        "Science is my favorite subject.",
+        "We did a science experiment.",
+        "She studies science at school."
+      ]
+    }
+  },
+  {
+    "sea": {
+      "__pos": "noun",
+      "__tags": ["nouns", "nature"],
+      "word": "sea",
+      "plural": "seas",
+      "translation_note": "",
+      "examples": [
+        "The sea is blue.",
+        "We swam in the sea.",
+        "Fish live in the sea."
+      ]
+    }
+  },
+  {
+    "shop": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "shop",
+      "conjugation": {
+        "present": "shop",
+        "present_participle": "shopping",
+        "past": "shopped"
+      },
+      "translation_note": "",
+      "examples": [
+        "I like to shop for clothes.",
+        "She is shopping at the mall.",
+        "They shopped for groceries."
+      ]
+    }
+  },
+  {
+    "tie": {
+      "__pos": "noun",
+      "__tags": ["nouns", "clothing"],
+      "word": "tie",
+      "plural": "ties",
+      "translation_note": "",
+      "examples": [
+        "He wears a tie to work.",
+        "I bought a new tie.",
+        "Can you help me with my tie?"
+      ]
+    }
+  },
+  {
+    "eat": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "eat",
+      "conjugation": {
+        "present": "eat",
+        "present_participle": "eating",
+        "past": "ate"
+      },
+      "translation_note": "",
+      "examples": [
+        "I like to eat pizza.",
+        "She eats breakfast at 8 AM.",
+        "They are eating lunch now."
+      ]
+    }
+  },
   {
     "apple": {
       "__pos": "noun",
@@ -3071,7 +3291,12 @@
     "street": {
       "__pos": "noun",
       "__tags": ["personal information", "personal information address"],
+      "__synonyms": ["road"],
+      "synonym_notes": {
+        "road": "A common synonym for street, often used interchangeably."
+      },
       "word": "street",
+
       "plural": "streets",
       "translation_note": "",
       "examples": ["I live on Main Street.", "What is the name of your street?"]
@@ -4579,9 +4804,16 @@
         {
           "__ipa": "aɪ",
           "__forced_pronunciation": "aɪ.wav",
-          "examples": ["pie", "tie", "lie"],
+          "examples": ["die", "lie", "tie"],
           "header": "/aɪ/",
           "__header_pronunciation": "aɪ.wav"
+        },
+        {
+          "__ipa": "i",
+          "__forced_pronunciation": "i.wav",
+          "examples": ["movie", "piece", "married"],
+          "header": "/i/",
+          "__header_pronunciation": "i.wav"
         }
       ]
     }
@@ -4598,7 +4830,7 @@
         {
           "__ipa": "oʊ",
           "__forced_pronunciation": "oʊ.wav",
-          "examples": ["boat", "goat", "coat"],
+          "examples": ["boat", "road", "coat"],
           "header": "/oʊ/",
           "__header_pronunciation": "oʊ.wav"
         }
@@ -4618,7 +4850,7 @@
         {
           "__ipa": "aʊ",
           "__forced_pronunciation": "aʊ.wav",
-          "examples": ["cloud", "house", "mouse"],
+          "examples": ["house", "around", "about"],
           "header": "/aʊ/",
           "__header_pronunciation": "aʊ.wav"
         }
@@ -4701,6 +4933,26 @@
   },
 
   {
+    "ch": {
+      "word": "ch",
+      "__forced_pronunciation": "tʃ.wav",
+      "__pos": "multigraph",
+      "__tags": ["multigraphs"],
+      "__icon_text": "ch",
+      "__show_word": true,
+      "__exampleEntries": [
+        {
+          "__ipa": "tʃ",
+          "__forced_pronunciation": "tʃ.wav",
+          "examples": ["chair", "chicken", "cheese"],
+          "header": "/tʃ/",
+          "__header_pronunciation": "tʃ.wav"
+        }
+      ]
+    }
+  },
+
+  {
     "au": {
       "word": "au",
       "__forced_pronunciation": "ɔ.wav",
@@ -4736,6 +4988,19 @@
           "header": "/ʃ/",
           "__header_pronunciation": "ʃ.wav"
         }
+      ]
+    }
+  },
+  {
+    "about": {
+      "__pos": "preposition",
+      "__tags": ["prepositions"],
+      "word": "about",
+      "translation_note": "",
+      "examples": [
+        "We talked about the movie.",
+        "This book is about animals.",
+        "What are you thinking about?"
       ]
     }
   },
@@ -5067,6 +5332,38 @@
           "header": "/aɪr/",
           "__header_pronunciation": "aɪr.wav"
         }
+      ]
+    }
+  },
+  {
+    "die": {
+      "__pos": "verb",
+      "__tags": ["verbs"],
+      "word": "die",
+      "conjugation": {
+        "present": "die",
+        "present_participle": "dying",
+        "past": "died"
+      },
+      "translation_note": "",
+      "examples": [
+        "Flowers die without water.",
+        "People die of old age.",
+        "The battery will die soon."
+      ]
+    }
+  },
+  {
+    "diet": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "word": "diet",
+      "plural": "diets",
+      "translation_note": "",
+      "examples": [
+        "She eats a healthy diet.",
+        "My diet is mostly vegetables.",
+        "He is on a special diet."
       ]
     }
   },
@@ -5612,6 +5909,10 @@
       "__pos": "verb",
       "__tags": ["verbs", "class"],
       "word": "speak",
+      "__synonyms": ["say"],
+      "synonym_notes": {
+        "say": "\"speak\" generally refers to the act of talking or using words in general, while \"say\" focuses on the specific words used."
+      },
       "conjugation": {
         "present": "speak",
         "present_participle": "speaking",
@@ -6621,6 +6922,10 @@
       "__tags": ["places", "house"],
       "word": "home",
       "plural": "homes",
+      "__synonyms": ["house"],
+      "synonym_notes": {
+        "house": "'Home' refers to the place where you live and feel comfortable, while 'house' refers to the physical building."
+      },
       "translation_note": "",
       "examples": [
         "I am at home.",
@@ -6633,6 +6938,10 @@
     "house": {
       "__pos": "noun",
       "__tags": ["places", "house"],
+      "__synonyms": ["home"],
+      "synonym_notes": {
+        "home": "'Home' refers to the place where you live and feel comfortable, while 'house' refers to the physical building."
+      },
       "word": "house",
       "plural": "houses",
       "translation_note": "",

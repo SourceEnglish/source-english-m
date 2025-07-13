@@ -381,6 +381,23 @@ import periodIcon from '@/assets/icons/open_source/period.svg'; // Example for a
 import colonIcon from '@/assets/icons/open_source/colon.svg'; // Example for a custom icon
 import quotationMarkIcon from '@/assets/icons/licensed/quotation_mark.svg'; // Example for a custom icon
 import WorkPlaceIcon from '@/assets/icons/licensed/work_(place).svg'; // Example for a custom icon
+import AboutIcon from '@/assets/icons/licensed/about.svg'; // Example for a custom icon
+import DeadIcon from '@/assets/icons/licensed/dead.svg'; // Example for a custom icon
+import DieIcon from '@/assets/icons/licensed/die.svg'; // Example for a custom icon
+import DietIcon from '@/assets/icons/licensed/diet.svg'; // Example for a custom icon
+import FoodIcon from '@/assets/icons/licensed/food.svg'; // Example for a custom icon
+import FootIcon from '@/assets/icons/licensed/foot.svg'; // Example for a custom icon
+import LieIcon from '@/assets/icons/licensed/lie.svg'; // Example for a custom icon
+import MeatIcon from '@/assets/icons/licensed/meat.svg'; // Example for a custom icon
+import MoonIcon from '@/assets/icons/licensed/moon.svg'; // Example for a custom icon
+import MovieIcon from '@/assets/icons/licensed/movie.svg'; // Example for a custom icon
+import PieceIcon from '@/assets/icons/licensed/piece.svg'; // Example for a custom icon
+import RoadIcon from '@/assets/icons/licensed/road.svg'; // Example for a custom icon
+import SayIcon from '@/assets/icons/licensed/say.svg'; // Example for a custom icon
+import ScienceIcon from '@/assets/icons/licensed/science.svg'; // Example for a custom icon
+import SeaIcon from '@/assets/icons/licensed/sea.svg'; // Example for a custom icon
+import ShopIcon from '@/assets/icons/licensed/shop.svg'; // Example for a custom icon
+import TieIcon from '@/assets/icons/licensed/tie.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -464,10 +481,28 @@ export const GenericTextIcon: React.FC<{ word: string; size?: number }> = ({
 );
 
 export const iconMap: Record<string, React.FC<any>> = {
+  about: AboutIcon,
+  dead: DeadIcon,
+  die: DieIcon,
+  diet: DietIcon,
+  food: FoodIcon,
+  foot: FootIcon,
+  lie: LieIcon,
+  meat: MeatIcon,
+  moon: MoonIcon,
+  movie: MovieIcon,
+  piece: PieceIcon,
+  road: RoadIcon,
+  say: SayIcon,
+  science: ScienceIcon,
+  sea: SeaIcon,
+  shop: ShopIcon,
+  tie: TieIcon,
+
   cards: CardsIcon,
   lesson: LessonIcon,
   letters: AaIcon,
-  food: RiceIcon,
+
   'weather vocab': WeatherVocabIcon,
   'months vocab': MonthsIcon,
   apple: AppleIcon,
@@ -884,6 +919,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   library: LibraryIcon, // Example for a custom icon
   'post office': PostOfficeIcon, // Example for a custom icon
   restaurant: RestaurantIcon, // Example for a custom icon
+
   // ...etc
 };
 
