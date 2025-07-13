@@ -6534,16 +6534,7 @@
       "examples": ["Write a sentence.", "This sentence is long."]
     }
   },
-  {
-    "comma": {
-      "__pos": "noun",
-      "__tags": ["grammar", "punctuation"],
-      "word": "comma",
-      "plural": "commas",
-      "translation_note": "",
-      "examples": ["Use a comma in the sentence.", "A comma separates words."]
-    }
-  },
+
   {
     "very": {
       "__pos": "adverb",
@@ -7210,6 +7201,92 @@
         "My birthday is on Monday.",
         "We have a meeting on July 5th.",
         "She goes to the park on weekends."
+      ]
+    }
+  },
+  {
+    "period": {
+      "__pos": "punctuation",
+      "__tags": ["punctuation"],
+      "__icon_text": ".",
+      "__forced_pronunciation": "period",
+      "word": "period",
+      "examples": [
+        "This is a sentence.",
+        "Sentences usually end with a period."
+      ]
+    }
+  },
+  {
+    "apostrophe": {
+      "__pos": "punctuation",
+      "__tags": ["punctuation"],
+      "__forced_pronunciation": "apostrophe",
+
+      "word": "apostrophe",
+      "examples": ["It's a sunny day.", "John's book is new."]
+    }
+  },
+  {
+    "comma": {
+      "__pos": "punctuation",
+      "__tags": ["grammar", "punctuation"],
+      "__forced_pronunciation": "comma",
+      "word": "comma",
+      "plural": "commas",
+      "translation_note": "",
+      "examples": [
+        "I bought apples, oranges, and bananas.",
+        "My friend, who is a teacher, lives nearby.",
+        "After dinner, we went for a walk.",
+        "Yes, I can help you.",
+        "She is smart, kind, and funny."
+      ]
+    }
+  },
+  {
+    "question mark": {
+      "__pos": "punctuation",
+      "__tags": ["punctuation"],
+      "__icon_text": "?",
+      "__forced_pronunciation": "question mark",
+      "word": "question mark",
+      "examples": ["What is your name?", "How are you?"]
+    }
+  },
+
+  {
+    "quotation_mark": {
+      "__pos": "punctuation",
+      "__tags": ["punctuation"],
+      "__icon_text": "\"",
+      "__forced_pronunciation": "quotation mark",
+      "word": "quotation mark",
+      "examples": ["She said, \"Hello!\"", "The sign read, \"No Parking.\""]
+    }
+  },
+  {
+    "exclamation_point": {
+      "__pos": "punctuation",
+      "__tags": ["punctuation"],
+      "__icon_text": "!",
+      "__forced_pronunciation": "exclamation point",
+      "word": "exclamation point",
+      "examples": ["Help!", "Watch out!", "Congratulations!"]
+    }
+  },
+  {
+    "hyphen": {
+      "__pos": "punctuation",
+      "__tags": ["punctuation"],
+      "__icon_text": "-",
+      "word": "hyphen",
+      "__forced_pronunciation": "hyphen",
+      "examples": [
+        "I am twenty-one years old.",
+        "Please send me an e-mail.",
+        "Class is from 6:00-9:00 PM.",
+        "The toys are for ages 3–5."
       ]
     }
   }

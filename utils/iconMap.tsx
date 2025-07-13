@@ -350,6 +350,14 @@ import InPrepositionOfTimeIcon from '@/assets/icons/licensed/in_(preposition_of_
 import OnPrepositionOfTimeIcon from '@/assets/icons/licensed/on_(preposition_of_time).svg';
 import AtPrepositionOfTimeIcon from '@/assets/icons/licensed/at_(preposition_of_time).svg';
 
+import apostropheIcon from '@/assets/icons/licensed/apostrophe.svg'; // Example for a custom icon
+import questionMarkIcon from '@/assets/icons/licensed/question_mark.svg'; // Example for a custom icon
+import exclamationPointIcon from '@/assets/icons/open_source/exclamation_point.svg'; // Example for a custom icon
+import hyphenIcon from '@/assets/icons/open_source/hyphen.svg'; // Example for a custom icon
+import periodIcon from '@/assets/icons/open_source/period.svg'; // Example for a custom icon
+import colonIcon from '@/assets/icons/open_source/colon.svg'; // Example for a custom icon
+import quotationMarkIcon from '@/assets/icons/licensed/quotation_mark.svg'; // Example for a custom icon
+
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -814,6 +822,14 @@ export const iconMap: Record<string, React.FC<any>> = {
   'in_(preposition_of_time)': InPrepositionOfTimeIcon,
   'at_(preposition_of_time)': AtPrepositionOfTimeIcon,
   'on_(preposition_of_time)': OnPrepositionOfTimeIcon,
+
+  apostrophe: apostropheIcon, // Example for a custom icon
+  'question mark': questionMarkIcon, // Example for a custom icon
+  quotation_mark: quotationMarkIcon,
+  'exclamation point': exclamationPointIcon, // Example for a custom icon
+  // hyphen: hyphenIcon, // Example for a custom icon
+  period: periodIcon, // Example for a custom icon
+  colon: colonIcon, // Example for a custom icon
   // ...etc
 };
 
