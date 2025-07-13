@@ -48,7 +48,21 @@ import TownIcon from '@/assets/icons/licensed/town.svg';
 import StateIcon from '@/assets/icons/licensed/state.svg';
 import ToBeIcon from '@/assets/icons/open_source/to_be.svg';
 import PhoneNumber from '@/assets/icons/licensed/phone_number.svg'; // Example for a custom icon
-import EmailAddress from '@/assets/icons/licensed/email.svg'; // Example for a custom icon
+import EmailAddressIcon from '@/assets/icons/licensed/email_address.svg'; // Example for a custom icon
+import CallIcon from '@/assets/icons/licensed/call.svg';
+import ComputerIcon from '@/assets/icons/licensed/computer.svg';
+import InternetIcon from '@/assets/icons/licensed/internet.svg';
+import KeyboardIcon from '@/assets/icons/licensed/keyboard.svg';
+import MouseIcon from '@/assets/icons/licensed/mouse.svg';
+import LaptopIcon from '@/assets/icons/licensed/laptop.svg';
+import OnlineIcon from '@/assets/icons/licensed/online.svg';
+import TextMessageIcon from '@/assets/icons/licensed/text_message.svg';
+import WebsiteIcon from '@/assets/icons/licensed/website.svg';
+import WifiIcon from '@/assets/icons/licensed/wifi.svg';
+import EmailIcon from '@/assets/icons/licensed/email.svg';
+import SendIcon from '@/assets/icons/licensed/send.svg'; // Example for a custom icon
+import MessageIcon from '@/assets/icons/licensed/message.svg'; // Example for a custom icon
+import TelevisionIcon from '@/assets/icons/licensed/television.svg'; // Example for a custom icon
 import MyIcon from '@/assets/icons/open_source/my.svg'; // Example for a custom icon
 import IIcon from '@/assets/icons/open_source/I.svg'; // Example for a custom icon
 import ApartmentNumber from '@/assets/icons/licensed/apartment_number.svg'; // Example for a custom icon
@@ -566,7 +580,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   'apartment number': ApartmentNumber, // Example for a custom icon
   'unit number': ApartmentNumber, // Example for a custom icon
   tomorrow: TomorrowIcon,
-  'email address': EmailAddress,
+  'email address': EmailAddressIcon,
   'day vocab': DayVocabIcon,
   'temperature vocab': TemperatureIcon,
   numbers: NumbersIcon,
@@ -948,6 +962,25 @@ export const iconMap: Record<string, React.FC<any>> = {
   downstairs: DownstairsIcon,
   upstairs: UpstairsIcon,
   roof: RoofIcon, // Example for a custom icon
+  call: CallIcon, // Example for a custom icon
+  computer: ComputerIcon, // Example for a custom icon
+  email: EmailIcon, // Example for a custom icon
+  'email_(verb)': EmailIcon,
+  internet: InternetIcon, // Example for a custom icon
+  keyboard: KeyboardIcon, // Example for a custom icon
+  mouse: MouseIcon, // Example for a custom icon
+  website: WebsiteIcon, // Example for a custom icon
+  'text message': TextMessageIcon, // Example for a custom icon
+  text: TextMessageIcon,
+  laptop: LaptopIcon, // Example for a custom icon
+  online: OnlineIcon, // Example for a custom icon
+  'Wi-Fi': WifiIcon, // Example for a custom icon
+  wifi: WifiIcon, // Lowercase for compatibility
+  'wi-fi': WifiIcon, // Lowercase with dash for compatibility
+  send: SendIcon, // Example for a custom icon
+  message: MessageIcon, // Example for a custom icon
+  'message_(verb)': MessageIcon, // Example for a custom icon
+  television: TelevisionIcon, // Example for a custom icon
 
   // ...etc
 };

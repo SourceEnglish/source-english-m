@@ -456,5 +456,14 @@
       "__hidden": false,
       "__vocab_lesson": "rooms terms vocab"
     }
+  },
+  {
+    "technology vocab": {
+      "name": "technology vocab",
+      "__tags": ["technology"],
+      "__type": "vocabulary",
+      "__order": 40,
+      "__hidden": false
+    }
   }
 ]

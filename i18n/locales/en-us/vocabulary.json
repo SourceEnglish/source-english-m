@@ -3393,7 +3393,11 @@
   {
     "email address": {
       "__pos": "noun",
-      "__tags": ["personal information", "personal information other"],
+      "__tags": [
+        "personal information",
+        "personal information other",
+        "technology"
+      ],
       "word": "email address",
       "plural": "email addresses",
       "translation_note": "",
@@ -3406,7 +3410,11 @@
   {
     "phone number": {
       "__pos": "noun",
-      "__tags": ["personal information", "personal information other"],
+      "__tags": [
+        "personal information",
+        "personal information other",
+        "technology"
+      ],
       "__display_priority": 3,
       "__synonyms": ["telephone number"],
       "synonym_notes": {
@@ -5401,7 +5409,7 @@
   {
     "phone": {
       "__pos": "noun",
-      "__tags": ["nouns", "communication"],
+      "__tags": ["nouns", "communication", "technology"],
       "__synonyms": ["telephone", "cell phone", "mobile phone"],
       "synonym_notes": {
         "telephone": "A traditional term for a phone, often used in formal contexts.",
@@ -8154,6 +8162,217 @@
       "word": "roof",
       "plural": "roofs",
       "examples": ["The roof is red.", "There is a bird on the roof."]
+    }
+  },
+  {
+    "send": {
+      "__pos": "verb",
+      "__tags": ["verbs", "communication", "technology"],
+      "word": "send",
+      "conjugation": {
+        "present": "send",
+        "present_participle": "sending",
+        "past": "sent"
+      },
+      "examples": [
+        "I will send you an email.",
+        "She is sending a message.",
+        "He sent the package yesterday."
+      ]
+    }
+  },
+  {
+    "call": {
+      "__pos": "verb",
+      "__tags": ["verbs", "communication", "technology"],
+      "word": "call",
+      "conjugation": {
+        "present": "call",
+        "present_participle": "calling",
+        "past": "called"
+      },
+      "examples": [
+        "I will call you later.",
+        "She is calling her friend.",
+        "He called me yesterday."
+      ]
+    }
+  },
+  {
+    "text": {
+      "__pos": "verb",
+      "__tags": ["verbs", "communication", "technology"],
+      "word": "text",
+      "conjugation": {
+        "present": "text",
+        "present_participle": "texting",
+        "past": "texted"
+      },
+      "examples": [
+        "I will text you the details.",
+        "She is texting her friend.",
+        "He texted me this morning."
+      ]
+    }
+  },
+  {
+    "email_(verb)": {
+      "__pos": "verb",
+      "__tags": ["communication", "technology"],
+      "word": "email",
+      "conjugation": {
+        "present": "email",
+        "present_participle": "emailing",
+        "past": "emailed"
+      },
+      "examples": [
+        "I will email you the report.",
+        "She is emailing her professor."
+      ]
+    }
+  },
+  {
+    "computer": {
+      "__pos": "noun",
+      "__tags": ["technology"],
+      "word": "computer",
+      "plural": "computers",
+      "examples": ["I use a computer for work.", "The computer is on the desk."]
+    }
+  },
+  {
+    "email": {
+      "__pos": "noun",
+      "__tags": ["communication", "technology"],
+      "word": "email",
+      "plural": "emails",
+      "examples": [
+        "I sent you an email.",
+        "She checks her email every morning."
+      ]
+    }
+  },
+
+  {
+    "internet": {
+      "__pos": "noun",
+      "__tags": ["technology"],
+      "word": "internet",
+      "examples": [
+        "The internet is very fast here.",
+        "I found the information on the internet."
+      ]
+    }
+  },
+  {
+    "keyboard": {
+      "__pos": "noun",
+      "__tags": ["technology", "computer"],
+      "word": "keyboard",
+      "plural": "keyboards",
+      "examples": ["The keyboard is wireless.", "I type on the keyboard."]
+    }
+  },
+  {
+    "mouse": {
+      "__pos": "noun",
+      "__tags": ["technology", "computer"],
+      "word": "mouse",
+      "plural": "mice",
+      "examples": [
+        "I use a mouse to click on icons.",
+        "The mouse is next to the keyboard."
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "__pos": "noun",
+      "__tags": ["technology", "computer"],
+      "word": "laptop",
+      "plural": "laptops",
+      "examples": ["She bought a new laptop.", "I take my laptop to school."]
+    }
+  },
+  {
+    "online": {
+      "__pos": "adjective",
+      "__tags": ["technology", "internet"],
+      "word": "online",
+      "examples": ["I like online shopping.", "He takes online classes."]
+    }
+  },
+  {
+    "text message": {
+      "__pos": "noun",
+      "__tags": ["communication", "technology"],
+      "word": "text message",
+      "plural": "text messages",
+      "examples": [
+        "She sent me a text message.",
+        "I received a text message from my friend."
+      ]
+    }
+  },
+  {
+    "website": {
+      "__pos": "noun",
+      "__tags": ["technology", "internet"],
+      "word": "website",
+      "plural": "websites",
+      "examples": [
+        "My favorite websites are Google, YouTube, and Wikipedia.",
+        "The company has a new website."
+      ]
+    }
+  },
+  {
+    "Wi-Fi": {
+      "__pos": "noun",
+      "__tags": ["technology", "internet"],
+      "word": "Wi-Fi",
+      "examples": [
+        "The Wi-Fi is not working.",
+        "Do you have the Wi-Fi password?"
+      ]
+    }
+  },
+  {
+    "message": {
+      "__pos": "noun",
+      "__tags": ["communication", "technology"],
+      "word": "message",
+      "plural": "messages",
+      "examples": [
+        "I received a message from my friend.",
+        "She sent a message to the group chat."
+      ]
+    }
+  },
+  {
+    "message_(verb)": {
+      "__pos": "verb",
+      "__tags": ["communication", "technology"],
+      "word": "message",
+      "conjugation": {
+        "present": "message",
+        "present_participle": "messaging",
+        "past": "messaged"
+      },
+      "examples": ["I will message you later.", "She is messaging her friend."]
+    }
+  },
+  {
+    "television": {
+      "__pos": "noun",
+      "__tags": ["technology", "entertainment"],
+      "__abbreviations": ["TV"],
+      "word": "television",
+      "plural": "televisions",
+      "examples": [
+        "We watch TV in the living room.",
+        "The television is on the wall."
+      ]
     }
   }
 ]
