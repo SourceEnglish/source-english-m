@@ -141,6 +141,7 @@ import FiremanIcon from '@/assets/icons/licensed/fireman.svg'; // Add this impor
 import FirewomanIcon from '@/assets/icons/licensed/firewoman.svg'; // Add this import
 import ParamedicIcon from '@/assets/icons/licensed/paramedic.svg';
 import PoliceOfficerIcon from '@/assets/icons/licensed/police_officer.svg';
+import FarmerIcon from '@/assets/icons/licensed/farmer.svg'; // Add this import
 import PoliceWomanIcon from '@/assets/icons/licensed/policewoman.svg'; // Add this import
 import PoliceManIcon from '@/assets/icons/licensed/policeman.svg'; // Add this import
 import MailCarrierIcon from '@/assets/icons/licensed/mail_carrier.svg';
@@ -800,6 +801,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   engineer: EngineerIcon,
   fire: FireIcon,
   cook: CookIcon, // Example for a custom icon
+  farmer: FarmerIcon, // Example for a custom icon
   'cook_(job)': ChefIcon,
   chef: ChefIcon,
   doctor: DoctorIcon,
