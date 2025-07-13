@@ -6486,16 +6486,7 @@
       "examples": ["Children like candy.", "He ate a piece of candy."]
     }
   },
-  {
-    "cent": {
-      "__pos": "noun",
-      "__tags": ["money"],
-      "word": "cent",
-      "plural": "cents",
-      "translation_note": "",
-      "examples": ["A penny is one cent.", "This costs fifty cents."]
-    }
-  },
+
   {
     "cup": {
       "__pos": "noun",
@@ -8495,6 +8486,234 @@
       "examples": [
         "We watch TV in the living room.",
         "The television is on the wall."
+      ]
+    }
+  },
+  {
+    "buy": {
+      "__pos": "verb",
+      "__tags": ["verbs", "shopping", "money"],
+      "word": "buy",
+      "conjugation": {
+        "present": "buy",
+        "present_participle": "buying",
+        "past": "bought"
+      },
+      "translation_note": "",
+      "examples": [
+        "I want to buy a new phone.",
+        "She buys groceries every week.",
+        "They bought a car last year."
+      ]
+    }
+  },
+  {
+    "cent": {
+      "__pos": "noun",
+      "__tags": ["money"],
+      "word": "cent",
+      "plural": "cents",
+      "translation_note": "",
+      "examples": [
+        "A penny is one cent.",
+        "This costs fifty cents.",
+        "There are one hundred cents in a dollar."
+      ]
+    }
+  },
+  {
+    "cheap": {
+      "__pos": "adjective",
+      "__tags": ["money", "shopping"],
+      "word": "cheap",
+      "translation_note": "",
+      "examples": [
+        "This shirt is very cheap.",
+        "The food here is cheap.",
+        "He likes to buy cheap things."
+      ]
+    }
+  },
+  {
+    "credit card": {
+      "__pos": "noun",
+      "__tags": ["money", "shopping", "technology"],
+      "word": "credit card",
+      "plural": "credit cards",
+      "translation_note": "",
+      "examples": [
+        "I paid with my credit card.",
+        "Do you accept credit cards?",
+        "She lost her credit card."
+      ]
+    }
+  },
+  {
+    "dollar": {
+      "__pos": "noun",
+      "__tags": ["money"],
+      "word": "dollar",
+      "plural": "dollars",
+      "translation_note": "",
+      "examples": [
+        "This book costs ten dollars.",
+        "He gave me a dollar.",
+        "The price is in US dollars."
+      ]
+    }
+  },
+  {
+    "expensive": {
+      "__pos": "adjective",
+      "__tags": ["money", "shopping"],
+      "word": "expensive",
+      "translation_note": "",
+      "examples": [
+        "That car is very expensive.",
+        "The hotel is too expensive for me.",
+        "This restaurant is expensive."
+      ]
+    }
+  },
+  {
+    "free": {
+      "__pos": "adjective",
+      "__tags": ["money", "shopping"],
+      "word": "free",
+      "translation_note": "",
+      "examples": [
+        "The water is free.",
+        "Children under five eat free.",
+        "Is this service free?"
+      ]
+    }
+  },
+  {
+    "pay": {
+      "__pos": "verb",
+      "__tags": ["verbs", "money", "shopping"],
+      "word": "pay",
+      "conjugation": {
+        "present": "pay",
+        "present_participle": "paying",
+        "past": "paid"
+      },
+      "translation_note": "",
+      "examples": [
+        "I pay for my lunch.",
+        "She paid with cash.",
+        "Did you pay the bill?"
+      ]
+    }
+  },
+  {
+    "poor": {
+      "__pos": "adjective",
+      "__tags": ["money", "people"],
+      "word": "poor",
+      "translation_note": "",
+      "examples": [
+        "He is a poor man.",
+        "They grew up in a poor family.",
+        "Some people are rich, others are poor."
+      ]
+    }
+  },
+  {
+    "rich": {
+      "__pos": "adjective",
+      "__tags": ["money"],
+      "word": "rich",
+      "translation_note": "",
+      "examples": [
+        "She is very rich.",
+        "He wants to be rich.",
+        "Rich people can buy many things."
+      ]
+    }
+  },
+  {
+    "sell": {
+      "__pos": "verb",
+      "__tags": ["verbs", "money", "shopping"],
+      "word": "sell",
+      "conjugation": {
+        "present": "sell",
+        "present_participle": "selling",
+        "past": "sold"
+      },
+      "translation_note": "",
+      "examples": [
+        "They sell fruit at the market.",
+        "She is selling her car.",
+        "He sold his house last year."
+      ]
+    }
+  },
+  {
+    "dollar sign": {
+      "__pos": "symbol",
+      "__tags": ["money"],
+      "__icon_text": "$",
+      "__forced_pronunciation": "dollar sign",
+      "word": "dollar sign",
+      "examples": ["The price is $20.", "The total cost was $15.50"]
+    }
+  },
+  {
+    "cent sign": {
+      "__pos": "symbol",
+      "__tags": ["money"],
+      "__icon_text": "¢",
+      "__forced_pronunciation": "cent sign",
+      "__synonyms": ["cent symbol"],
+      "word": "cent sign",
+      "examples": ["The price is 50¢.", "The bus costs 75¢ to ride."]
+    }
+  },
+  {
+    "decimal point": {
+      "__pos": "symbol",
+      "__tags": ["numbers", "math", "punctuation", "money"],
+      "__synonyms": ["decimal "],
+      "__forced_pronunciation": "decimal point",
+      "word": "decimal point",
+      "examples": ["The price is $1.50.", "The number is 3.14."]
+    }
+  },
+  {
+    "price": {
+      "__pos": "noun",
+      "__tags": ["money", "shopping"],
+      "__synonyms": ["cost"],
+      "synonym_notes": {
+        "cost": "'Cost' often refers to the amount paid, while 'price' can refer to the listed amount."
+      },
+      "word": "price",
+      "plural": "prices",
+      "translation_note": "",
+      "examples": [
+        "The price of the book is $10.",
+        "Prices are rising everywhere.",
+        "What is the price of this shirt?"
+      ]
+    }
+  },
+  {
+    "cost": {
+      "__pos": "noun",
+      "__tags": ["money", "shopping"],
+      "__synonyms": ["price"],
+      "synonym_notes": {
+        "price": "'Cost' often refers to the amount paid, while 'price' can refer to the listed amount."
+      },
+      "word": "cost",
+      "plural": "costs",
+      "translation_note": "",
+      "examples": [
+        "The cost of living is high.",
+        "What is the cost of this item?",
+        "The total cost was $50."
       ]
     }
   }

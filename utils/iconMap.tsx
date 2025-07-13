@@ -438,6 +438,18 @@ import StairsIcon from '@/assets/icons/licensed/stairs.svg'; // Example for a cu
 import DownstairsIcon from '@/assets/icons/licensed/downstairs.svg'; // Example for a custom icon
 import UpstairsIcon from '@/assets/icons/licensed/upstairs.svg'; // Example for a custom icon
 import RoofIcon from '@/assets/icons/licensed/roof.svg'; // Example for a custom icon
+import BuyIcon from '@/assets/icons/licensed/buy.svg'; // Example for a custom icon
+import SellIcon from '@/assets/icons/licensed/sell.svg'; // Example for a custom icon
+import CheapIcon from '@/assets/icons/licensed/cheap.svg'; // Example for a custom icon
+import ExpensiveIcon from '@/assets/icons/licensed/expensive.svg'; // Example for a custom icon
+import FreeIcon from '@/assets/icons/licensed/free.svg'; // Example for a custom icon
+import PayIcon from '@/assets/icons/licensed/pay.svg'; // Example for a custom icon
+import PoorIcon from '@/assets/icons/licensed/poor.svg'; // Example for a custom icon
+import RichIcon from '@/assets/icons/licensed/rich.svg'; // Example for a custom icon
+import DollarIcon from '@/assets/icons/licensed/dollar.svg'; // Example for a custom icon
+import CreditCardIcon from '@/assets/icons/licensed/credit_card.svg'; // Example for a custom icon
+import DecimalPointIcon from '@/assets/icons/licensed/decimal_point.svg'; // Example for a custom icon
+import PriceIcon from '@/assets/icons/licensed/price.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -904,6 +916,21 @@ export const iconMap: Record<string, React.FC<any>> = {
   police: PoliceOfficerIcon,
   'mail carrier': MailCarrierIcon,
   mailman: MailManIcon,
+
+  // Money-related vocabulary
+  buy: BuyIcon, // Use shop icon for buy
+  cheap: CheapIcon, // Fallback: use SaleIcon if available, else TagIcon or best match
+  'credit card': CreditCardIcon, // Fallback: use CardIcon if available, else GenericTextIcon
+  price: PriceIcon, // Fallback: use MoneyIcon if available, else DollarIcon or best match
+  cost: PriceIcon,
+  dollar: DollarIcon, // Fallback: use MoneyIcon if available, else BankIcon
+  expensive: ExpensiveIcon, // Fallback: use DiamondIcon if available, else StarIcon or best match
+  free: FreeIcon, // Fallback: use GiftIcon if available, else PresentIcon or best match
+  pay: PayIcon, // Fallback: use CashIcon if available, else MoneyIcon or best match
+  poor: PoorIcon, // Fallback: use SadIcon if available, else DownIcon or best match
+  rich: RichIcon, // Use bank icon for rich
+  sell: SellIcon, // Use store icon for sell
+
   mailwoman: MailWomanIcon,
   'work_(place)': WorkPlaceIcon,
   'work_(job)': JobIcon, // Example for a custom icon
@@ -1001,6 +1028,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   head: HeadIcon,
   leg: LegIcon,
   mouth: MouthIcon,
+  'decimal point': DecimalPointIcon, // Example for a custom icon
 
   // ...etc
 };

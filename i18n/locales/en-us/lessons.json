@@ -356,6 +356,15 @@
     }
   },
   {
+    "money vocab": {
+      "name": "money vocab",
+      "__tags": ["money"],
+      "__type": "vocabulary",
+      "__order": 30.5,
+      "__hidden": false
+    }
+  },
+  {
     "vehicle vocab": {
       "name": "vehicle vocab",
       "__tags": ["vehicle"],
