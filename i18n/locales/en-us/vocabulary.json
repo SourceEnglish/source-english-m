@@ -5418,19 +5418,7 @@
       ]
     }
   },
-  {
-    "deer": {
-      "__pos": "noun",
-      "__tags": ["nouns", "animals", "wild animals"],
-      "word": "deer",
-      "plural": "deer",
-      "translation_note": "",
-      "examples": [
-        "A deer ran across the road.",
-        "There are many deer in the forest."
-      ]
-    }
-  },
+
   {
     "fish": {
       "__pos": "noun",
@@ -6152,11 +6140,46 @@
   {
     "job": {
       "__pos": "noun",
-      "__tags": ["work"],
+      "__tags": ["work", "jobs"],
+      "__synonyms": ["work_(job)"],
+      "synonym_notes": {
+        "work_(job)": "'Job' refers to a specific position or employment, while 'work' is a general term for tasks or activities done to earn money."
+      },
       "word": "job",
       "plural": "jobs",
       "translation_note": "",
       "examples": ["He has a new job.", "What is your job?"]
+    }
+  },
+  {
+    "work_(job)": {
+      "__pos": "noun",
+      "__tags": ["jobs"],
+      "__objectKey": "work_(job)",
+      "__synonyms": ["job"],
+      "synonym_notes": {
+        "job": "'Job' refers to a specific position or employment, while 'work' is a general term for tasks or activities done to earn money."
+      },
+      "word": "work",
+      "plural": "works",
+      "translation_note": "",
+      "examples": [
+        "She has a lot of work to do.",
+        "His work is very interesting."
+      ]
+    }
+  },
+  {
+    "career": {
+      "__pos": "noun",
+      "__tags": ["jobs"],
+      "word": "career",
+      "plural": "careers",
+      "translation_note": "",
+      "examples": [
+        "He chose a career in medicine.",
+        "She wants a successful career."
+      ]
     }
   },
   {
@@ -6772,19 +6795,7 @@
       "examples": ["She was born in 2000.", "A baby is born every minute."]
     }
   },
-  {
-    "career": {
-      "__pos": "noun",
-      "__tags": ["jobs"],
-      "word": "career",
-      "plural": "careers",
-      "translation_note": "",
-      "examples": [
-        "He chose a career in medicine.",
-        "She wants a successful career."
-      ]
-    }
-  },
+
   {
     "engineer": {
       "__pos": "noun",
@@ -6817,7 +6828,7 @@
   {
     "hire": {
       "__pos": "verb",
-      "__tags": ["verbs"],
+      "__tags": ["verbs", "jobs"],
       "word": "hire",
       "translation_note": "",
       "examples": [
@@ -6910,7 +6921,8 @@
   {
     "work": {
       "__pos": "verb",
-      "__tags": ["verbs"],
+      "__tags": ["verbs", "jobs"],
+      "__objectKey": "work",
       "word": "work",
       "translation_note": "",
       "examples": ["I work at a hospital.", "She works very hard."]
@@ -7288,6 +7300,253 @@
         "Class is from 6:00-9:00 PM.",
         "The toys are for ages 3–5."
       ]
+    }
+  },
+  {
+    "cook": {
+      "__pos": "verb",
+      "__tags": ["verbs", "food"],
+      "word": "cook",
+      "conjugation": {
+        "present": "cook",
+        "present_participle": "cooking",
+        "past": "cooked"
+      },
+      "examples": [
+        "I cook dinner every night.",
+        "She is cooking rice.",
+        "They cooked a big meal."
+      ],
+      "translation_note": ""
+    }
+  },
+
+  {
+    "cook_(job)": {
+      "__pos": "noun",
+      "__tags": ["jobs", "people"],
+      "__objectKey": "cook_(job)",
+      "plural": "cooks",
+      "word": "cook",
+      "__synonyms": ["chef"],
+      "synonym_notes": {
+        "chef": "A chef generally has formal training. A cook may not have formal training but can still prepare food."
+      },
+      "examples": [
+        "The cook made a good meal.",
+        "He works as a cook in a restaurant."
+      ]
+    }
+  },
+  {
+    "chef": {
+      "__pos": "noun",
+      "__tags": ["jobs", "people"],
+      "__synonyms": ["cook_(job)"],
+      "synonym_notes": {
+        "cook_(job)": "A chef generally has formal training. A cook may not have formal training but can still prepare food."
+      },
+      "word": "chef",
+      "plural": "chefs",
+      "translation_note": "",
+      "examples": [
+        "The chef prepared a great meal.",
+        "She works as a chef in a restaurant."
+      ]
+    }
+  },
+  {
+    "doctor": {
+      "__pos": "noun",
+      "__tags": ["jobs", "people"],
+      "word": "doctor",
+      "examples": [
+        "The doctor examined the patient.",
+        "He wants to become a doctor."
+      ]
+    }
+  },
+  {
+    "driver": {
+      "__pos": "noun",
+      "__tags": ["jobs", "people"],
+      "word": "driver",
+      "examples": [
+        "The driver stopped at the red light.",
+        "She is a bus driver."
+      ]
+    }
+  },
+  {
+    "firefighter": {
+      "__pos": "noun",
+      "__tags": ["jobs", "people"],
+      "word": "firefighter",
+      "plural": "firefighters",
+      "__synonyms": ["fireman", "firewoman"],
+      "synonym_notes": {
+        "fireman": "'Firefighter' is now preferred as a gender-neutral term.",
+        "firewoman": "'Firefighter' is preferred for all genders."
+      },
+      "examples": [
+        "The firefighter rescued the cat.",
+        "Firefighters wear special uniforms."
+      ]
+    }
+  },
+  {
+    "fireman": {
+      "__pos": "noun",
+
+      "__synonyms": ["firefighter"],
+      "synonym_notes": {
+        "firefighter": "'Fireman' is a traditional term, but 'firefighter' is now preferred as a gender-neutral term."
+      },
+      "word": "fireman",
+      "plural": "firemen",
+      "translation_note": "",
+      "examples": [
+        "The fireman climbed the ladder.",
+        "Firemen help put out fires."
+      ]
+    }
+  },
+  {
+    "firewoman": {
+      "__pos": "noun",
+
+      "__synonyms": ["firefighter"],
+      "synonym_notes": {
+        "firefighter": "'Firewoman' is a gender-specific term; 'firefighter' is preferred for all genders."
+      },
+      "word": "firewoman",
+      "plural": "firewomen",
+      "translation_note": "",
+      "examples": [
+        "The firewoman drove the fire truck.",
+        "Firewomen work alongside firemen and firefighters."
+      ]
+    }
+  },
+  {
+    "paramedic": {
+      "__pos": "noun",
+      "__tags": ["jobs", "people"],
+      "word": "paramedic",
+      "examples": [
+        "The paramedic arrived quickly.",
+        "Paramedics help people in emergencies."
+      ]
+    }
+  },
+  {
+    "police officer": {
+      "__pos": "noun",
+      "__tags": ["jobs", "people"],
+      "__synonyms": ["policeman", "policewoman"],
+      "synonym_notes": {
+        "policeman": "'Policeman' is a gender-specific term for men; 'police officer' is preferred for all genders.",
+        "policewoman": "'Policewoman' is a gender-specific term for women; 'police officer' is preferred for all genders."
+      },
+      "word": "police officer",
+      "examples": [
+        "The police officer gave directions.",
+        "Police officers protect the community."
+      ]
+    }
+  },
+  {
+    "policeman": {
+      "__pos": "noun",
+      "__synonyms": ["police officer"],
+      "synonym_notes": {
+        "police officer": "'Police officer' is a gender-neutral term; 'policeman' is gender-specific for men."
+      },
+      "word": "policeman",
+      "plural": "policemen",
+      "translation_note": "",
+      "examples": [
+        "The policeman helped the child cross the street.",
+        "Policemen wear uniforms."
+      ]
+    }
+  },
+  {
+    "policewoman": {
+      "__pos": "noun",
+      "__synonyms": ["police officer"],
+      "synonym_notes": {
+        "police officer": "'Police officer' is a gender-neutral term; 'policewoman' is gender-specific for women."
+      },
+      "word": "policewoman",
+      "plural": "policewomen",
+      "translation_note": "",
+      "examples": [
+        "The policewoman spoke to the class.",
+        "Policewomen work alongside policemen and police officers."
+      ]
+    }
+  },
+
+  {
+    "mailman": {
+      "__pos": "noun",
+
+      "__synonyms": ["mail carrier"],
+      "synonym_notes": {
+        "mail carrier": "'Mailman' is a gender-specific term for men; 'mail carrier' is preferred for all genders."
+      },
+      "word": "mailman",
+      "plural": "mailmen",
+      "translation_note": "",
+      "examples": [
+        "The mailman delivered the letters.",
+        "Our mailman is very friendly."
+      ]
+    }
+  },
+  {
+    "mailwoman": {
+      "__pos": "noun",
+
+      "__synonyms": ["mail carrier"],
+      "synonym_notes": {
+        "mail carrier": "'Mailwoman' is a gender-specific term for women; 'mail carrier' is preferred for all genders."
+      },
+      "word": "mailwoman",
+      "plural": "mailwomen",
+      "translation_note": "",
+      "examples": [
+        "The mailwoman brought the package.",
+        "Mailwomen work alongside mailmen and mail carriers."
+      ]
+    }
+  },
+  {
+    "mail carrier": {
+      "__pos": "noun",
+      "__tags": ["jobs", "people"],
+      "__synonyms": ["mailman", "mailwoman"],
+      "synonym_notes": {
+        "mailman": "'Mailman' is a gender-specific term for men; 'mail carrier' is preferred for all genders.",
+        "mailwoman": "'Mailwoman' is a gender-specific term for women; 'mail carrier' is preferred for all genders."
+      },
+      "word": "mail carrier",
+      "examples": [
+        "The mail carrier delivered the package.",
+        "Our mail carrier is very friendly."
+      ]
+    }
+  },
+  {
+    "work_(place)": {
+      "__pos": "noun",
+      "__tags": ["jobs"],
+      "__objectKey": "work_(place)",
+      "word": "work",
+      "plural": "works",
+      "translation_note": "",
+      "examples": ["I go to work every day.", "I have to go to work tomorrow."]
     }
   }
 ]

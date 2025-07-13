@@ -133,6 +133,19 @@ import DriveIcon from '@/assets/icons/licensed/drive.svg';
 import EatIcon from '@/assets/icons/licensed/eat.svg';
 import MakeIcon from '@/assets/icons/licensed/make.svg';
 import CookIcon from '@/assets/icons/licensed/cook.svg';
+import ChefIcon from '@/assets/icons/licensed/cook_(chef).svg';
+import DoctorIcon from '@/assets/icons/licensed/doctor.svg';
+import DriverIcon from '@/assets/icons/licensed/driver.svg';
+import FirefighterIcon from '@/assets/icons/licensed/firefighter.svg';
+import FiremanIcon from '@/assets/icons/licensed/fireman.svg'; // Add this import
+import FirewomanIcon from '@/assets/icons/licensed/firewoman.svg'; // Add this import
+import ParamedicIcon from '@/assets/icons/licensed/paramedic.svg';
+import PoliceOfficerIcon from '@/assets/icons/licensed/police_officer.svg';
+import PoliceWomanIcon from '@/assets/icons/licensed/policewoman.svg'; // Add this import
+import PoliceManIcon from '@/assets/icons/licensed/policeman.svg'; // Add this import
+import MailCarrierIcon from '@/assets/icons/licensed/mail_carrier.svg';
+import MailManIcon from '@/assets/icons/licensed/mailman.svg'; // Add this import
+import MailWomanIcon from '@/assets/icons/licensed/mailwoman.svg'; // Add this import
 import GetUpIcon from '@/assets/icons/licensed/get_up.svg';
 import PresentSimpleIcon from '@/assets/icons/open_source/present_simple.svg';
 import ArriveIcon from '@/assets/icons/licensed/arrive.svg';
@@ -168,7 +181,6 @@ import DogIcon from '@/assets/icons/licensed/dog.svg';
 import CowIcon from '@/assets/icons/licensed/cow.svg';
 import BirdIcon from '@/assets/icons/licensed/bird.svg';
 import PigIcon from '@/assets/icons/licensed/pig.svg';
-import DeerIcon from '@/assets/icons/licensed/deer.svg';
 import FishIcon from '@/assets/icons/licensed/fish.svg';
 import PetIcon from '@/assets/icons/licensed/pet.svg';
 import AnimalIcon from '@/assets/icons/licensed/animal.svg';
@@ -357,6 +369,7 @@ import hyphenIcon from '@/assets/icons/open_source/hyphen.svg'; // Example for a
 import periodIcon from '@/assets/icons/open_source/period.svg'; // Example for a custom icon
 import colonIcon from '@/assets/icons/open_source/colon.svg'; // Example for a custom icon
 import quotationMarkIcon from '@/assets/icons/licensed/quotation_mark.svg'; // Example for a custom icon
+import WorkPlaceIcon from '@/assets/icons/licensed/work_(place).svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -599,7 +612,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   'get up': GetUpIcon,
   'simple present tense': PresentSimpleIcon,
   make: MakeIcon,
-  cook: CookIcon,
+  // cook: CookIcon, (moved below with other job icons)
   'adverbs of frequency': FrequencyIcon, // Example for a custom icon
   'adverbs of frequency vocab': FrequencyIcon, // Example for a custom icon
   arrive: ArriveIcon,
@@ -635,7 +648,6 @@ export const iconMap: Record<string, React.FC<any>> = {
   cow: CowIcon,
   bird: BirdIcon,
   pig: PigIcon,
-  deer: DeerIcon,
   fish: FishIcon,
   pet: PetIcon,
   animal: AnimalIcon,
@@ -787,6 +799,25 @@ export const iconMap: Record<string, React.FC<any>> = {
   career: CareerIcon,
   engineer: EngineerIcon,
   fire: FireIcon,
+  cook: CookIcon, // Example for a custom icon
+  'cook_(job)': ChefIcon,
+  chef: ChefIcon,
+  doctor: DoctorIcon,
+  driver: DriverIcon,
+  firefighter: FirefighterIcon,
+  fireman: FiremanIcon,
+  firewoman: FirewomanIcon,
+  paramedic: ParamedicIcon,
+  'police officer': PoliceOfficerIcon,
+  policewoman: PoliceWomanIcon,
+  policeman: PoliceManIcon,
+  police: PoliceOfficerIcon,
+  'mail carrier': MailCarrierIcon,
+  mailman: MailManIcon,
+  mailwoman: MailWomanIcon,
+  'work_(place)': WorkPlaceIcon,
+  'work_(job)': JobIcon, // Example for a custom icon
+
   hair: HairIcon,
   hire: HireIcon,
   hour: HourIcon,

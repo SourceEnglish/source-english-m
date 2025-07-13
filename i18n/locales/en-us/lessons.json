@@ -419,5 +419,14 @@
       "__order": 35,
       "__hidden": false
     }
+  },
+  {
+    "jobs vocab": {
+      "name": "jobs vocab",
+      "__tags": ["jobs"],
+      "__type": "vocabulary",
+      "__order": 36,
+      "__hidden": false
+    }
   }
 ]
