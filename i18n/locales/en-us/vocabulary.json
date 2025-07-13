@@ -4725,7 +4725,7 @@
       "word": "sh",
       "__forced_pronunciation": "ʃ.wav",
       "__pos": "multigraph",
-      "__tags": ["multigraphs"],
+      "__tags": ["multigraphs", "consonant multigraphs"],
       "__icon_text": "sh",
       "__show_word": true,
       "__exampleEntries": [
@@ -4781,6 +4781,7 @@
       ]
     }
   },
+
   {
     "ph": {
       "word": "ph",
