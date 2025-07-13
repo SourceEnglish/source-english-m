@@ -485,11 +485,30 @@
     }
   },
   {
+    "emergencies": {
+      "name": "emergencies",
+      "__tags": ["emergencies"],
+      "__type": "lesson",
+      "__order": 42.5,
+      "__vocab_lesson": "emergencies vocab"
+    }
+  },
+  {
+    "emergencies vocab": {
+      "name": "emergencies vocab",
+      "__tags": ["emergencies"],
+      "__type": "vocabulary",
+      "__order": 43,
+      "__hidden": false,
+      "__lesson": "emergencies"
+    }
+  },
+  {
     "irregular plurals vocab": {
       "name": "irregular plurals vocab",
       "__tags": ["irregular plurals"],
       "__type": "vocabulary",
-      "__order": 42,
+      "__order": 44,
       "__hidden": false
     }
   }

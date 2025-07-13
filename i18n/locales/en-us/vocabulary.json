@@ -7853,7 +7853,7 @@
   {
     "firefighter": {
       "__pos": "noun",
-      "__tags": ["jobs", "people"],
+      "__tags": ["jobs", "people", "emergencies"],
       "word": "firefighter",
       "plural": "firefighters",
       "__synonyms": ["fireman", "firewoman"],
@@ -7904,7 +7904,7 @@
   {
     "paramedic": {
       "__pos": "noun",
-      "__tags": ["jobs", "people"],
+      "__tags": ["jobs", "people", "emergencies"],
       "word": "paramedic",
       "examples": [
         "The paramedic arrived quickly.",
@@ -7916,7 +7916,7 @@
   {
     "police officer": {
       "__pos": "noun",
-      "__tags": ["jobs", "people"],
+      "__tags": ["jobs", "people", "emergencies"],
       "__synonyms": ["policeman", "policewoman"],
       "synonym_notes": {
         "policeman": "'Policeman' is a gender-specific term for men; 'police officer' is preferred for all genders.",
@@ -8298,7 +8298,7 @@
   {
     "call": {
       "__pos": "verb",
-      "__tags": ["verbs", "communication", "technology"],
+      "__tags": ["verbs", "communication", "technology", "emergencies"],
       "word": "call",
       "conjugation": {
         "present": "call",
@@ -8816,6 +8816,99 @@
         "The square has four equal sides.",
         "She drew a square on the paper.",
         "They made a square with tiles."
+      ]
+    }
+  },
+  {
+    "ambulance": {
+      "__pos": "noun",
+      "__tags": ["vehicles", "emergency", "emergencies"],
+      "word": "ambulance",
+      "plural": "ambulances",
+      "examples": [
+        "The ambulance arrived quickly after the accident.",
+        "Call an ambulance if someone is hurt."
+      ]
+    }
+  },
+  {
+    "emergency": {
+      "__pos": "noun",
+      "__tags": ["situations", "emergency", "emergencies"],
+      "word": "emergency",
+      "plural": "emergencies",
+      "examples": [
+        "Call this number in case of an emergency.",
+        "The school had an emergency drill."
+      ]
+    }
+  },
+  {
+    "fire truck": {
+      "__pos": "noun",
+      "__tags": ["vehicles", "emergency", "emergencies"],
+      "word": "fire truck",
+      "plural": "fire trucks",
+      "examples": [
+        "The fire truck sped down the street with its siren on.",
+        "Children waved at the fire truck."
+      ]
+    }
+  },
+  {
+    "help": {
+      "__pos": "exclamation",
+      "__tags": ["emergency", "emergencies"],
+      "word": "help",
+      "examples": ["Help! I need assistance!", "Help! There's a fire!"]
+    }
+  },
+  {
+    "police car": {
+      "__pos": "noun",
+      "__tags": ["vehicles", "emergency", "emergencies"],
+      "word": "police car",
+      "plural": "police cars",
+      "examples": [
+        "A police car was parked outside the building.",
+        "The police car turned on its lights."
+      ]
+    }
+  },
+  {
+    "9-1-1": {
+      "__pos": "noun",
+      "__tags": ["emergency", "numbers", "emergencies"],
+      "__icon_text": "9-1-1",
+      "__forced_pronunciation": "nine one one",
+      "word": "9-1-1",
+      "examples": [
+        "Call 9-1-1 if you have an emergency.",
+        "The 9-1-1 operator asked for details."
+      ]
+    }
+  },
+  {
+    "interpreter": {
+      "__pos": "noun",
+      "__tags": ["jobs", "people", "communication", "emergencies"],
+      "word": "interpreter",
+      "plural": "interpreters",
+      "examples": [
+        "The interpreter translated the speech.",
+        "She works as an interpreter for the government."
+      ]
+    }
+  },
+  {
+    "911 operator": {
+      "__pos": "noun",
+      "__tags": ["jobs", "people", "communication", "emergencies"],
+      "word": "911 operator",
+      "plural": "911 operators",
+      "examples": [
+        "The 911 operator answered the call.",
+        "She is a 911 operator in our city."
       ]
     }
   }

@@ -458,7 +458,13 @@ import TriangleIcon from '@/assets/icons/licensed/triangle.svg'; // Example for 
 import LineIcon from '@/assets/icons/open_source/line.svg'; // Example for a custom icon
 import RectangleIcon from '@/assets/icons/open_source/rectangle.svg'; // Example for a custom icon
 import SquareIcon from '@/assets/icons/open_source/square.svg'; // Example for a custom icon
-
+import AmbulanceIcon from '@/assets/icons/licensed/ambulance.svg'; // Example for a custom icon
+import EmergencyIcon from '@/assets/icons/licensed/emergency.svg'; // Example for a custom icon
+import FireTruckIcon from '@/assets/icons/licensed/fire_truck.svg'; // Example for a custom icon
+import PoliceCarIcon from '@/assets/icons/licensed/police_car.svg'; // Example for a custom icon
+import HelpIcon from '@/assets/icons/licensed/help.svg'; // Example for a custom icon
+import InterpreterIcon from '@/assets/icons/licensed/interpreter.svg'; // Example for a custom icon
+import NineOneOneOperatorIcon from '@/assets/icons/licensed/911_operator.svg'; // Example for a custom icon
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -1045,6 +1051,13 @@ export const iconMap: Record<string, React.FC<any>> = {
   line: LineIcon, // Example for a custom icon
   rectangle: RectangleIcon, // Example for a custom icon
   square: SquareIcon, // Example for a custom icon
+  ambulance: AmbulanceIcon, // Example for a custom icon
+  emergency: EmergencyIcon, // Example for a custom icon
+  'fire truck': FireTruckIcon, // Example for a custom icon
+  'police car': PoliceCarIcon, // Example for a custom icon
+  help: HelpIcon, // Example for a custom icon
+  interpreter: InterpreterIcon, // Example for a custom
+  '911 operator': NineOneOneOperatorIcon,
 
   // ...etc
 };
