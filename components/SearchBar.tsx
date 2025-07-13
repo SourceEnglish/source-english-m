@@ -304,17 +304,17 @@ export default function SearchBar() {
   const lessons = getLessons() as Array<{ name: string; __hidden?: boolean }>;
 
   // Prepare all suggestions (lessons and vocab, no prioritization by default)
-type Suggestion = {
-  type: string;
-  name: string;
-  clarifier?: string;
-  key?: string;
-  altWords?: string[];
-  pos?: string;
-  __icon_text?: string;
-  lessonIndex?: number;
-  __objectKey?: string;
-};
+  type Suggestion = {
+    type: string;
+    name: string;
+    clarifier?: string;
+    key?: string;
+    altWords?: string[];
+    pos?: string;
+    __icon_text?: string;
+    lessonIndex?: number;
+    __objectKey?: string;
+  };
 
   // Add lessonIndex to lessons for rendering index as TextIcon
   // Use the same logic as PageLink to skip certain lessons in the index
@@ -385,17 +385,17 @@ type Suggestion = {
   }
 
   // If the query is a single letter, prioritize single letter vocab entries
-let suggestions: {
-  type: string;
-  name: string;
-  clarifier?: string;
-  key?: string;
-  pos?: string;
-  emoji?: string;
-  __icon_text?: string;
-  altWords?: string[];
-  __objectKey?: string;
-}[] = [];
+  let suggestions: {
+    type: string;
+    name: string;
+    clarifier?: string;
+    key?: string;
+    pos?: string;
+    emoji?: string;
+    __icon_text?: string;
+    altWords?: string[];
+    __objectKey?: string;
+  }[] = [];
 
   if (query.length === 1 && /^[a-zA-Z]$/.test(query)) {
     const letter = query.toUpperCase();
@@ -517,10 +517,15 @@ let suggestions: {
               // If vocab entry has __objectKey, display it in parenthesis after the word
               if (
                 item.type === 'vocab' &&
-                (item.__objectKey || (vocabEntry && typeof vocabEntry.__objectKey === 'string' && vocabEntry.__objectKey.trim() !== ''))
+                (item.__objectKey ||
+                  (vocabEntry &&
+                    typeof vocabEntry.__objectKey === 'string' &&
+                    vocabEntry.__objectKey.trim() !== ''))
               ) {
                 // Prefer item.__objectKey, fallback to vocabEntry.__objectKey
-                const objectKey = item.__objectKey || (vocabEntry ? vocabEntry.__objectKey : undefined);
+                const objectKey =
+                  item.__objectKey ||
+                  (vocabEntry ? vocabEntry.__objectKey : undefined);
                 if (objectKey) {
                   // If __objectKey contains parenthesis, show only the text inside
                   const match = objectKey.match(/\(([^)]+)\)/);
