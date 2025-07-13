@@ -431,7 +431,9 @@ import LivingRoomIcon from '@/assets/icons/licensed/living_room.svg'; // Example
 import DiningRoomIcon from '@/assets/icons/licensed/dining_room.svg'; // Example for a custom icon
 
 import OfficeIcon from '@/assets/icons/licensed/office.svg'; // Example for a custom icon
+import BuildingIcon from '@/assets/icons/licensed/building.svg'; // Example for a custom icon
 import CeilingIcon from '@/assets/icons/licensed/ceiling.svg'; // Example for a custom icon
+import RoomIcon from '@/assets/icons/licensed/room.svg'; // Example for a custom icon
 import FloorIcon from '@/assets/icons/licensed/floor.svg'; // Example for a custom icon
 import WallIcon from '@/assets/icons/licensed/wall.svg'; // Example for a custom icon
 import StairsIcon from '@/assets/icons/licensed/stairs.svg'; // Example for a custom icon
@@ -993,6 +995,8 @@ export const iconMap: Record<string, React.FC<any>> = {
   'living room': LivingRoomIcon, // Example for a custom icon
   'dining room': DiningRoomIcon, // Example for a custom icon
   office: OfficeIcon, // Example for a custom icon
+  room: RoomIcon,
+  building: BuildingIcon, // Example for a custom icon
   ceiling: CeilingIcon, // Example for a custom icon
   floor: FloorIcon, // Example for a custom icon
   wall: WallIcon, // Example for a custom icon

@@ -8716,5 +8716,31 @@
         "The total cost was $50."
       ]
     }
+  },
+  {
+    "room": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms", "room terms"],
+      "word": "room",
+      "plural": "rooms",
+      "examples": [
+        "The room is very big.",
+        "She cleaned her room.",
+        "There are three rooms in the house."
+      ]
+    }
+  },
+  {
+    "building": {
+      "__pos": "noun",
+      "__tags": ["places", "buildings", "room terms"],
+      "word": "building",
+      "plural": "buildings",
+      "examples": [
+        "The building is very tall.",
+        "She works in that building.",
+        "There are many buildings in the city."
+      ]
+    }
   }
 ]
