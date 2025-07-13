@@ -465,5 +465,23 @@
       "__order": 40,
       "__hidden": false
     }
+  },
+  {
+    "body parts vocab": {
+      "name": "body parts vocab",
+      "__tags": ["body parts"],
+      "__type": "vocabulary",
+      "__order": 41,
+      "__hidden": false
+    }
+  },
+  {
+    "irregular plurals vocab": {
+      "name": "irregular plurals vocab",
+      "__tags": ["irregular plurals"],
+      "__type": "vocabulary",
+      "__order": 42,
+      "__hidden": false
+    }
   }
 ]

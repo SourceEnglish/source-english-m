@@ -804,7 +804,7 @@
   {
     "foot": {
       "__pos": "noun",
-      "__tags": ["nouns", "body"],
+      "__tags": ["nouns", "body", "irregular plurals", "body parts"],
       "word": "foot",
       "plural": "feet",
       "translation_note": "",
@@ -812,6 +812,129 @@
         "My foot hurts.",
         "He has big feet.",
         "She stood on one foot."
+      ]
+    }
+  },
+
+  {
+    "arm": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body", "body parts"],
+      "word": "arm",
+      "plural": "arms",
+      "translation_note": "",
+      "examples": [
+        "She broke her arm.",
+        "Raise your arms.",
+        "He has strong arms."
+      ]
+    }
+  },
+  {
+    "back": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body", "body parts"],
+      "word": "back",
+      "plural": "backs",
+      "translation_note": "",
+      "examples": [
+        "My back hurts.",
+        "He lay on his back.",
+        "She has a strong back."
+      ]
+    }
+  },
+  {
+    "body": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body", "body parts"],
+      "word": "body",
+      "plural": "bodies",
+      "translation_note": "",
+      "examples": [
+        "The human body is amazing.",
+        "Take care of your body.",
+        "He has a healthy body."
+      ]
+    }
+  },
+  {
+    "eye": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body", "body parts"],
+      "word": "eye",
+      "plural": "eyes",
+      "translation_note": "",
+      "examples": ["She has blue eyes.", "Close your eyes.", "He hurt his eye."]
+    }
+  },
+  {
+    "face": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body", "body parts"],
+      "word": "face",
+      "plural": "faces",
+      "translation_note": "",
+      "examples": [
+        "Wash your face.",
+        "She has a happy face.",
+        "He turned his face away."
+      ]
+    }
+  },
+  {
+    "hand": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body", "body parts"],
+      "word": "hand",
+      "plural": "hands",
+      "translation_note": "",
+      "examples": [
+        "Hold my hand.",
+        "She washed her hands.",
+        "He raised his hand."
+      ]
+    }
+  },
+  {
+    "head": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body", "body parts"],
+      "word": "head",
+      "plural": "heads",
+      "translation_note": "",
+      "examples": [
+        "He shook his head.",
+        "She has a big head.",
+        "I have a headache."
+      ]
+    }
+  },
+  {
+    "leg": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body", "body parts"],
+      "word": "leg",
+      "plural": "legs",
+      "translation_note": "",
+      "examples": [
+        "My leg hurts.",
+        "She crossed her legs.",
+        "He broke his leg."
+      ]
+    }
+  },
+  {
+    "mouth": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body", "body parts"],
+      "word": "mouth",
+      "plural": "mouths",
+      "translation_note": "",
+      "examples": [
+        "Open your mouth.",
+        "She covered her mouth.",
+        "He has a big mouth."
       ]
     }
   },
@@ -5494,7 +5617,7 @@
   {
     "tooth": {
       "__pos": "noun",
-      "__tags": ["nouns", "body parts"],
+      "__tags": ["nouns", "body parts", "irregular plurals"],
       "word": "tooth",
       "plural": "teeth",
       "translation_note": "",
@@ -5519,7 +5642,7 @@
   {
     "man": {
       "__pos": "noun",
-      "__tags": ["people", "person group"],
+      "__tags": ["people", "person group", "irregular plurals"],
       "word": "man",
       "plural": "men",
       "translation_note": "",
@@ -5529,7 +5652,7 @@
   {
     "woman": {
       "__pos": "noun",
-      "__tags": ["people", "person group"],
+      "__tags": ["people", "person group", "irregular plurals"],
       "word": "woman",
       "plural": "women",
       "translation_note": "",
@@ -5539,7 +5662,7 @@
   {
     "person": {
       "__pos": "noun",
-      "__tags": ["people", "person group"],
+      "__tags": ["people", "person group", "irregular plurals"],
       "word": "person",
       "plural": "people",
       "translation_note": "",
@@ -5573,7 +5696,7 @@
   {
     "child": {
       "__pos": "noun",
-      "__tags": ["people", "person group"],
+      "__tags": ["people", "person group", "irregular plurals"],
       "__synonyms": ["kid"],
       "synonym_notes": {
         "kid": "Informal term for a child."
@@ -5728,7 +5851,7 @@
   {
     "fish": {
       "__pos": "noun",
-      "__tags": ["nouns", "animals"],
+      "__tags": ["nouns", "animals", "irregular plurals"],
       "word": "fish",
       "plural": "fish",
       "translation_note": "",

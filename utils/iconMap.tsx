@@ -412,6 +412,17 @@ import ScienceIcon from '@/assets/icons/licensed/science.svg'; // Example for a 
 import SeaIcon from '@/assets/icons/licensed/sea.svg'; // Example for a custom icon
 import ShopIcon from '@/assets/icons/licensed/shop.svg'; // Example for a custom icon
 import TieIcon from '@/assets/icons/licensed/tie.svg'; // Example for a custom icon
+
+// Body part icons
+import ArmIcon from '@/assets/icons/licensed/arm.svg';
+import BackIcon from '@/assets/icons/licensed/back.svg';
+import BodyIcon from '@/assets/icons/licensed/body.svg';
+import EyeIcon from '@/assets/icons/licensed/eye.svg';
+import FaceIcon from '@/assets/icons/licensed/face.svg';
+import HandIcon from '@/assets/icons/licensed/hand.svg';
+import HeadIcon from '@/assets/icons/licensed/head.svg';
+import LegIcon from '@/assets/icons/licensed/leg.svg';
+import MouthIcon from '@/assets/icons/licensed/mouth.svg';
 import StoreIcon from '@/assets/icons/licensed/store.svg'; // Example for a custom icon
 import BathroomIcon from '@/assets/icons/licensed/bathroom.svg'; // Example for a custom icon
 import RestroomIcon from '@/assets/icons/licensed/restroom.svg'; // Example for a custom icon
@@ -981,6 +992,15 @@ export const iconMap: Record<string, React.FC<any>> = {
   message: MessageIcon, // Example for a custom icon
   'message_(verb)': MessageIcon, // Example for a custom icon
   television: TelevisionIcon, // Example for a custom icon
+  arm: ArmIcon, // Body part icons
+  back: BackIcon,
+  body: BodyIcon,
+  eye: EyeIcon,
+  face: FaceIcon,
+  hand: HandIcon,
+  head: HeadIcon,
+  leg: LegIcon,
+  mouth: MouthIcon,
 
   // ...etc
 };
