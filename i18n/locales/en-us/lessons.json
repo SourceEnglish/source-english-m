@@ -428,5 +428,14 @@
       "__order": 36,
       "__hidden": false
     }
+  },
+  {
+    "places vocab": {
+      "name": "places vocab",
+      "__tags": ["places"],
+      "__type": "vocabulary",
+      "__order": 37,
+      "__hidden": false
+    }
   }
 ]

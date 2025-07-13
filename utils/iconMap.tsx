@@ -52,9 +52,19 @@ import EmailAddress from '@/assets/icons/licensed/email.svg'; // Example for a c
 import MyIcon from '@/assets/icons/open_source/my.svg'; // Example for a custom icon
 import IIcon from '@/assets/icons/open_source/I.svg'; // Example for a custom icon
 import ApartmentNumber from '@/assets/icons/licensed/apartment_number.svg'; // Example for a custom icon
+import ApartmentIcon from '@/assets/icons/licensed/apartment.svg'; // Example for a custom icon
 import StreetIcon from '@/assets/icons/licensed/street.svg'; // Example for a custom icon
 import YouIcon from '@/assets/icons/open_source/you.svg'; // Example for a custom icon
 import NameIcon from '@/assets/icons/licensed/name.svg'; // Example for a custom icon
+// Place icons
+import BankIcon from '@/assets/icons/licensed/bank.svg';
+import FireStationIcon from '@/assets/icons/licensed/fire_station.svg';
+import HospitalIcon from '@/assets/icons/licensed/hospital.svg';
+import HotelIcon from '@/assets/icons/licensed/hotel.svg';
+import LibraryIcon from '@/assets/icons/licensed/library.svg';
+import PoliceStationIcon from '@/assets/icons/licensed/police_station.svg';
+import PostOfficeIcon from '@/assets/icons/licensed/post_office.svg';
+import RestaurantIcon from '@/assets/icons/licensed/restaurant.svg';
 import HouseNumber from '@/assets/icons/licensed/house_number.svg'; // Example for a custom icon
 import SpeakerIcon from '@/assets/icons/licensed/speaker.svg'; // Example for a custom icon
 import Red from '@/assets/icons/licensed/red.svg'; // Example for a custom icon
@@ -502,6 +512,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   state: StateIcon,
   'house number': HouseNumber, // Example for a custom icon
   street: StreetIcon, // Example for a custom icon
+  apartment: ApartmentIcon, // Example for a custom icon
   'apartment number': ApartmentNumber, // Example for a custom icon
   'unit number': ApartmentNumber, // Example for a custom icon
   tomorrow: TomorrowIcon,
@@ -768,6 +779,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   time: TimeIcon,
   uniform: UniformIcon,
   university: UniversityIcon,
+  college: UniversityIcon, // Example for a custom icon
   up: UpIcon,
   video: VideoIcon,
   water: WaterIcon,
@@ -778,6 +790,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   comma: CommaIcon,
   home: HomeIcon, // Example for a custom icon
   house: HomeIcon,
+
   kid: ChildIcon,
   sit: SitIcon,
   knee: KneeIcon,
@@ -863,6 +876,14 @@ export const iconMap: Record<string, React.FC<any>> = {
   // hyphen: hyphenIcon, // Example for a custom icon
   period: periodIcon, // Example for a custom icon
   colon: colonIcon, // Example for a custom icon
+  bank: BankIcon, // Example for a custom icon
+  'fire station': FireStationIcon, // Example for a custom icon
+  'police station': PoliceStationIcon, // Example for a custom
+  hospital: HospitalIcon, // Example for a custom icon
+  hotel: HotelIcon, // Example for a custom icon
+  library: LibraryIcon, // Example for a custom icon
+  'post office': PostOfficeIcon, // Example for a custom icon
+  restaurant: RestaurantIcon, // Example for a custom icon
   // ...etc
 };
 

@@ -5477,7 +5477,7 @@
   {
     "classroom": {
       "__pos": "noun",
-      "__tags": ["class", "places", "education"],
+      "__tags": ["class", "education"],
       "__synonyms": ["class"],
       "synonym_notes": {
         "class": "A classroom specifically refers to the room where learning occurs."
@@ -5956,7 +5956,7 @@
   {
     "America": {
       "__pos": "proper noun",
-      "__tags": ["places", "countries"],
+      "__tags": ["countries"],
       "__synonyms": ["United States of America", "United States"],
       "__abbreviations": ["US", "USA"],
 
@@ -5972,7 +5972,7 @@
   {
     "United States": {
       "__pos": "proper noun",
-      "__tags": ["places", "countries"],
+      "__tags": ["countries"],
       "__synonyms": ["America", "United States of America"],
       "__abbreviations": ["US", "USA"],
       "synonym_notes": {
@@ -5990,7 +5990,7 @@
   {
     "United States of America": {
       "__pos": "proper noun",
-      "__tags": ["places", "countries"],
+      "__tags": ["countries"],
       "__synonyms": ["America", "United States"],
       "__abbreviations": ["US", "USA"],
       "synonym_notes": {
@@ -6491,13 +6491,37 @@
     }
   },
   {
+    "college": {
+      "__pos": "noun",
+      "__tags": ["places", "education"],
+      "__synonyms": ["university"],
+      "synonym_notes": {
+        "university": "Colleges tend to offer undergraduate degrees, while universities may offer both undergraduate and graduate degrees."
+      },
+      "word": "college",
+      "plural": "colleges",
+      "translation_note": "",
+      "examples": [
+        "She goes to college in another city.",
+        "College students study many subjects."
+      ]
+    }
+  },
+  {
     "university": {
       "__pos": "noun",
       "__tags": ["places", "education"],
+      "__synonyms": ["college"],
+      "synonym_notes": {
+        "college": "Colleges tend to offer undergraduate degrees, while universities may offer both undergraduate and graduate degrees."
+      },
       "word": "university",
       "plural": "universities",
       "translation_note": "",
-      "examples": ["He goes to university.", "The university is large."]
+      "examples": [
+        "My son went to a university after high school.",
+        "I study medicine at a university."
+      ]
     }
   },
   {
@@ -6938,7 +6962,8 @@
       "__tags": [
         "personal information",
         "personal information address",
-        "housing"
+        "housing",
+        "places"
       ],
       "word": "apartment",
       "plural": "apartments",
@@ -7565,6 +7590,96 @@
       "plural": "works",
       "translation_note": "",
       "examples": ["I go to work every day.", "I have to go to work tomorrow."]
+    }
+  },
+  {
+    "bank": {
+      "__pos": "noun",
+      "__tags": ["places", "buildings"],
+      "word": "bank",
+      "plural": "banks",
+      "examples": ["I need to go to the bank.", "The bank closes at 5 PM."]
+    }
+  },
+  {
+    "fire station": {
+      "__pos": "noun",
+      "__tags": ["places", "buildings"],
+      "word": "fire station",
+      "plural": "fire stations",
+      "examples": [
+        "The fire station is near my house.",
+        "Firefighters work at the fire station."
+      ]
+    }
+  },
+  {
+    "hospital": {
+      "__pos": "noun",
+      "__tags": ["places", "buildings"],
+      "word": "hospital",
+      "plural": "hospitals",
+      "examples": ["She went to the hospital.", "The hospital is very big."]
+    }
+  },
+  {
+    "hotel": {
+      "__pos": "noun",
+      "__tags": ["places", "buildings"],
+      "word": "hotel",
+      "plural": "hotels",
+      "examples": [
+        "We stayed at a nice hotel.",
+        "The hotel has a swimming pool."
+      ]
+    }
+  },
+  {
+    "library": {
+      "__pos": "noun",
+      "__tags": ["places", "buildings"],
+      "word": "library",
+      "plural": "libraries",
+      "examples": [
+        "I borrowed a book from the library.",
+        "The library is quiet."
+      ]
+    }
+  },
+  {
+    "police station": {
+      "__pos": "noun",
+      "__tags": ["places", "buildings"],
+      "word": "police station",
+      "plural": "police stations",
+      "examples": [
+        "The police station is downtown.",
+        "She works at the police station."
+      ]
+    }
+  },
+  {
+    "post office": {
+      "__pos": "noun",
+      "__tags": ["places", "buildings"],
+      "word": "post office",
+      "plural": "post offices",
+      "examples": [
+        "I went to the post office to mail a letter.",
+        "The post office is closed on Sundays."
+      ]
+    }
+  },
+  {
+    "restaurant": {
+      "__pos": "noun",
+      "__tags": ["places", "buildings"],
+      "word": "restaurant",
+      "plural": "restaurants",
+      "examples": [
+        "We had dinner at a restaurant.",
+        "The restaurant serves Italian food."
+      ]
     }
   }
 ]
