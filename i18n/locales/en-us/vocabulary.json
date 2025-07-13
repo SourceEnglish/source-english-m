@@ -5581,19 +5581,7 @@
       "examples": ["We sit around the table."]
     }
   },
-  {
-    "teacher": {
-      "__pos": "noun",
-      "__tags": ["class", "jobs"],
-      "word": "teacher",
-      "plural": "teachers",
-      "translation_note": "",
-      "examples": [
-        "The teacher helps the students.",
-        "She is an English teacher."
-      ]
-    }
-  },
+
   {
     "whiteboard": {
       "__pos": "noun",
@@ -6180,6 +6168,28 @@
       "examples": [
         "He chose a career in medicine.",
         "She wants a successful career."
+      ]
+    }
+  },
+  {
+    "work": {
+      "__pos": "verb",
+      "__tags": ["verbs", "jobs"],
+      "__objectKey": "work",
+      "word": "work",
+      "translation_note": "",
+      "examples": ["I work at a hospital.", "She works very hard."]
+    }
+  },
+  {
+    "hire": {
+      "__pos": "verb",
+      "__tags": ["verbs", "jobs"],
+      "word": "hire",
+      "translation_note": "",
+      "examples": [
+        "The company will hire new workers.",
+        "They want to hire a manager."
       ]
     }
   },
@@ -6826,18 +6836,7 @@
       "examples": ["She has long hair.", "Brush your hair every day."]
     }
   },
-  {
-    "hire": {
-      "__pos": "verb",
-      "__tags": ["verbs", "jobs"],
-      "word": "hire",
-      "translation_note": "",
-      "examples": [
-        "The company will hire new workers.",
-        "They want to hire a manager."
-      ]
-    }
-  },
+
   {
     "hour": {
       "__pos": "noun",
@@ -6919,16 +6918,7 @@
       "examples": ["Let's start the lesson.", "The race will start soon."]
     }
   },
-  {
-    "work": {
-      "__pos": "verb",
-      "__tags": ["verbs", "jobs"],
-      "__objectKey": "work",
-      "word": "work",
-      "translation_note": "",
-      "examples": ["I work at a hospital.", "She works very hard."]
-    }
-  },
+
   {
     "star": {
       "__pos": "noun",
@@ -7321,6 +7311,19 @@
       "translation_note": ""
     }
   },
+  {
+    "teacher": {
+      "__pos": "noun",
+      "__tags": ["class", "jobs"],
+      "word": "teacher",
+      "plural": "teachers",
+      "translation_note": "",
+      "examples": [
+        "The teacher helps the students.",
+        "She is an English teacher."
+      ]
+    }
+  },
 
   {
     "cook_(job)": {
@@ -7375,6 +7378,19 @@
       "examples": [
         "The driver stopped at the red light.",
         "She is a bus driver."
+      ]
+    }
+  },
+  {
+    "farmer": {
+      "__pos": "noun",
+      "__tags": ["jobs"],
+      "word": "farmer",
+      "plural": "farmers",
+      "translation_note": "",
+      "examples": [
+        "The farmer grows vegetables.",
+        "Farmers work hard in the fields."
       ]
     }
   },
@@ -7440,6 +7456,7 @@
       ]
     }
   },
+
   {
     "police officer": {
       "__pos": "noun",
