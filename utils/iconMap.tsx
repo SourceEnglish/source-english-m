@@ -452,6 +452,12 @@ import DollarIcon from '@/assets/icons/licensed/dollar.svg'; // Example for a cu
 import CreditCardIcon from '@/assets/icons/licensed/credit_card.svg'; // Example for a custom icon
 import DecimalPointIcon from '@/assets/icons/licensed/decimal_point.svg'; // Example for a custom icon
 import PriceIcon from '@/assets/icons/licensed/price.svg'; // Example for a custom icon
+import BallIcon from '@/assets/icons/licensed/ball.svg'; // Example for a custom icon
+import CubeIcon from '@/assets/icons/licensed/cube.svg'; // Example for a custom icon
+import TriangleIcon from '@/assets/icons/licensed/triangle.svg'; // Example for a custom icon
+import LineIcon from '@/assets/icons/open_source/line.svg'; // Example for a custom icon
+import RectangleIcon from '@/assets/icons/open_source/rectangle.svg'; // Example for a custom icon
+import SquareIcon from '@/assets/icons/open_source/square.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -1032,7 +1038,13 @@ export const iconMap: Record<string, React.FC<any>> = {
   head: HeadIcon,
   leg: LegIcon,
   mouth: MouthIcon,
-  'decimal point': DecimalPointIcon, // Example for a custom icon
+  'decimal point': DecimalPointIcon,
+  ball: BallIcon, // Example for a custom icon
+  cube: CubeIcon, // Example for a custom icon
+  triangle: TriangleIcon, // Example for a custom icon
+  line: LineIcon, // Example for a custom icon
+  rectangle: RectangleIcon, // Example for a custom icon
+  square: SquareIcon, // Example for a custom icon
 
   // ...etc
 };

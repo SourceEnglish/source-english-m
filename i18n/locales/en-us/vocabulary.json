@@ -8742,5 +8742,81 @@
         "There are many buildings in the city."
       ]
     }
+  },
+  {
+    "ball": {
+      "__pos": "noun",
+      "__tags": ["objects", "shapes"],
+      "word": "ball",
+      "plural": "balls",
+      "examples": [
+        "The ball is round.",
+        "She kicked the ball.",
+        "They played with a ball."
+      ]
+    }
+  },
+  {
+    "cube": {
+      "__pos": "noun",
+      "__tags": ["objects", "shapes"],
+      "word": "cube",
+      "plural": "cubes",
+      "examples": [
+        "The cube is a three-dimensional shape.",
+        "She built a tower with cubes.",
+        "They played with a cube."
+      ]
+    }
+  },
+  {
+    "triangle": {
+      "__pos": "noun",
+      "__tags": ["objects", "shapes"],
+      "word": "triangle",
+      "plural": "triangles",
+      "examples": [
+        "The triangle has three sides.",
+        "She drew a triangle on the paper.",
+        "They made a triangle with sticks."
+      ]
+    }
+  },
+  {
+    "line": {
+      "word": "line",
+      "plural": "lines",
+      "examples": [
+        "The line is straight.",
+        "She drew a line on the paper.",
+        "They measured the line with a ruler."
+      ]
+    }
+  },
+  {
+    "rectangle": {
+      "__pos": "noun",
+      "__tags": ["objects", "shapes"],
+      "word": "rectangle",
+      "plural": "rectangles",
+      "examples": [
+        "The rectangle has four sides.",
+        "She drew a rectangle on the paper.",
+        "They made a rectangle with blocks."
+      ]
+    }
+  },
+  {
+    "square": {
+      "__pos": "noun",
+      "__tags": ["objects", "shapes"],
+      "word": "square",
+      "plural": "squares",
+      "examples": [
+        "The square has four equal sides.",
+        "She drew a square on the paper.",
+        "They made a square with tiles."
+      ]
+    }
   }
 ]
