@@ -398,6 +398,7 @@ import ScienceIcon from '@/assets/icons/licensed/science.svg'; // Example for a 
 import SeaIcon from '@/assets/icons/licensed/sea.svg'; // Example for a custom icon
 import ShopIcon from '@/assets/icons/licensed/shop.svg'; // Example for a custom icon
 import TieIcon from '@/assets/icons/licensed/tie.svg'; // Example for a custom icon
+import StoreIcon from '@/assets/icons/licensed/store.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -919,6 +920,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   library: LibraryIcon, // Example for a custom icon
   'post office': PostOfficeIcon, // Example for a custom icon
   restaurant: RestaurantIcon, // Example for a custom icon
+  store: StoreIcon, // Example for a custom icon
 
   // ...etc
 };

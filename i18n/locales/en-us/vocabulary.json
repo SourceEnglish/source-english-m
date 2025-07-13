@@ -7736,8 +7736,8 @@
       "plural": "firefighters",
       "__synonyms": ["fireman", "firewoman"],
       "synonym_notes": {
-        "fireman": "'Firefighter' is now preferred as a gender-neutral term.",
-        "firewoman": "'Firefighter' is preferred for all genders."
+        "fireman": "'Fireman' is a gender-specific term, 'firefighter' is now preferred as a gender-neutral term.",
+        "firewoman": "'Firewoman' is a gender-specific term; 'firefighter' is now preferred as a gender-neutral term."
       },
       "examples": [
         "The firefighter rescued the cat.",
@@ -7751,7 +7751,7 @@
 
       "__synonyms": ["firefighter"],
       "synonym_notes": {
-        "firefighter": "'Fireman' is a traditional term, but 'firefighter' is now preferred as a gender-neutral term."
+        "firefighter": "'Fireman' is a gender-specific term, 'firefighter' is now preferred as a gender-neutral term."
       },
       "word": "fireman",
       "plural": "firemen",
@@ -7768,7 +7768,7 @@
 
       "__synonyms": ["firefighter"],
       "synonym_notes": {
-        "firefighter": "'Firewoman' is a gender-specific term; 'firefighter' is preferred for all genders."
+        "firefighter": "'Firewoman' is a gender-specific term; 'firefighter' is now preferred as a gender-neutral term."
       },
       "word": "firewoman",
       "plural": "firewomen",
@@ -7976,6 +7976,18 @@
       "examples": [
         "I went to the post office to mail a letter.",
         "The post office is closed on Sundays."
+      ]
+    }
+  },
+  {
+    "store": {
+      "__pos": "noun",
+      "__tags": ["places", "buildings"],
+      "word": "store",
+      "plural": "stores",
+      "examples": [
+        "I bought groceries at the store.",
+        "The store sells clothes and shoes."
       ]
     }
   },
