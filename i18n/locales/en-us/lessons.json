@@ -401,15 +401,7 @@
       "__hidden": false
     }
   },
-  {
-    "prepositions of time": {
-      "name": "prepositions of time",
-      "__tags": ["prepositions of time"],
-      "__type": "lesson",
-      "__order": 33,
-      "__vocab_lesson": "prepositions of time vocab"
-    }
-  },
+
   {
     "prepositions of time vocab": {
       "name": "prepositions of time vocab",
@@ -485,15 +477,7 @@
       "__hidden": false
     }
   },
-  {
-    "emergencies": {
-      "name": "emergencies",
-      "__tags": ["emergencies"],
-      "__type": "lesson",
-      "__order": 42.5,
-      "__vocab_lesson": "emergencies vocab"
-    }
-  },
+
   {
     "emergencies vocab": {
       "name": "emergencies vocab",
@@ -513,61 +497,34 @@
       "__hidden": false
     }
   },
-  {
-    "yes": {
-      "name": "yes",
-      "__tags": ["yes", "agreement"],
-      "__type": "lesson",
-      "__order": 45,
-      "__vocab_lesson": "yes vocab"
-    }
-  },
+
   {
     "yes vocab": {
       "name": "yes vocab",
       "__tags": ["yes", "agreement"],
       "__type": "vocabulary",
       "__order": 46,
-      "__hidden": false,
-      "__lesson": "yes"
+      "__hidden": false
     }
   },
-  {
-    "greetings and farewells": {
-      "name": "greetings and farewells",
-      "__tags": ["greetings", "farewells"],
-      "__type": "lesson",
-      "__order": 47,
-      "__vocab_lesson": "greetings and farewells vocab"
-    }
-  },
+
   {
     "greetings and farewells vocab": {
       "name": "greetings and farewells vocab",
       "__tags": ["greetings", "farewells"],
       "__type": "vocabulary",
       "__order": 48,
-      "__hidden": false,
-      "__lesson": "greetings and farewells"
+      "__hidden": false
     }
   },
-  {
-    "manners": {
-      "name": "manners",
-      "__tags": ["manners", "politeness"],
-      "__type": "lesson",
-      "__order": 49,
-      "__vocab_lesson": "manners vocab"
-    }
-  },
+
   {
     "manners vocab": {
       "name": "manners vocab",
       "__tags": ["manners", "politeness"],
       "__type": "vocabulary",
       "__order": 50,
-      "__hidden": false,
-      "__lesson": "manners"
+      "__hidden": false
     }
   }
 ]
