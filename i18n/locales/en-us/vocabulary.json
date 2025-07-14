@@ -7335,7 +7335,6 @@
   {
     "neighbor": {
       "__pos": "noun",
-      "__tags": ["people"],
       "word": "neighbor",
       "plural": "neighbors",
       "translation_note": "",
@@ -7804,7 +7803,7 @@
   {
     "cook_(job)": {
       "__pos": "noun",
-      "__tags": ["jobs", "people"],
+      "__tags": ["jobs"],
       "__objectKey": "cook_(job)",
       "plural": "cooks",
       "word": "cook",
@@ -7821,7 +7820,7 @@
   {
     "chef": {
       "__pos": "noun",
-      "__tags": ["jobs", "people"],
+      "__tags": ["jobs"],
       "__synonyms": ["cook_(job)"],
       "synonym_notes": {
         "cook_(job)": "A chef generally has formal training. A cook may not have formal training but can still prepare food."
@@ -7838,7 +7837,7 @@
   {
     "doctor": {
       "__pos": "noun",
-      "__tags": ["jobs", "people"],
+      "__tags": ["jobs"],
       "word": "doctor",
       "examples": [
         "The doctor examined the patient.",
@@ -7849,7 +7848,7 @@
   {
     "driver": {
       "__pos": "noun",
-      "__tags": ["jobs", "people"],
+      "__tags": ["jobs"],
       "word": "driver",
       "examples": [
         "The driver stopped at the red light.",
@@ -7873,7 +7872,7 @@
   {
     "firefighter": {
       "__pos": "noun",
-      "__tags": ["jobs", "people", "emergencies"],
+      "__tags": ["jobs", "emergencies"],
       "word": "firefighter",
       "plural": "firefighters",
       "__synonyms": ["fireman", "firewoman"],
@@ -7924,7 +7923,7 @@
   {
     "paramedic": {
       "__pos": "noun",
-      "__tags": ["jobs", "people", "emergencies"],
+      "__tags": ["jobs", "emergencies"],
       "word": "paramedic",
       "examples": [
         "The paramedic arrived quickly.",
@@ -7936,7 +7935,7 @@
   {
     "police officer": {
       "__pos": "noun",
-      "__tags": ["jobs", "people", "emergencies"],
+      "__tags": ["jobs", "emergencies"],
       "__synonyms": ["policeman", "policewoman"],
       "synonym_notes": {
         "policeman": "'Policeman' is a gender-specific term for men; 'police officer' is preferred for all genders.",
@@ -8019,7 +8018,7 @@
   {
     "mail carrier": {
       "__pos": "noun",
-      "__tags": ["jobs", "people"],
+      "__tags": ["jobs"],
       "__synonyms": ["mailman", "mailwoman"],
       "synonym_notes": {
         "mailman": "'Mailman' is a gender-specific term for men; 'mail carrier' is preferred for all genders.",
@@ -8644,7 +8643,7 @@
   {
     "poor": {
       "__pos": "adjective",
-      "__tags": ["money", "people"],
+      "__tags": ["money"],
       "word": "poor",
       "translation_note": "",
       "examples": [
@@ -8926,7 +8925,7 @@
   {
     "interpreter": {
       "__pos": "noun",
-      "__tags": ["jobs", "people", "communication", "emergencies"],
+      "__tags": ["jobs", "communication", "emergencies"],
       "word": "interpreter",
       "plural": "interpreters",
       "examples": [
@@ -8938,7 +8937,7 @@
   {
     "911 operator": {
       "__pos": "noun",
-      "__tags": ["jobs", "people", "communication", "emergencies"],
+      "__tags": ["jobs", "communication", "emergencies"],
       "word": "911 operator",
       "plural": "911 operators",
       "examples": [
@@ -9287,7 +9286,7 @@
   {
     "divorced": {
       "__pos": "adjective",
-      "__tags": ["people", "relationships"],
+      "__tags": ["relationships"],
       "word": "divorced",
       "translation_note": "",
       "examples": [
@@ -9299,7 +9298,7 @@
   {
     "widowed": {
       "__pos": "adjective",
-      "__tags": ["people", "relationships"],
+      "__tags": ["relationships"],
       "word": "widowed",
       "translation_note": "",
       "examples": [
@@ -9311,7 +9310,7 @@
   {
     "single": {
       "__pos": "adjective",
-      "__tags": ["people", "relationships"],
+      "__tags": ["relationships"],
       "word": "single",
       "translation_note": "",
       "examples": [
@@ -9323,7 +9322,7 @@
   {
     "marital status": {
       "__pos": "noun",
-      "__tags": ["people", "relationships"],
+      "__tags": ["relationships"],
       "word": "marital status",
       "translation_note": "",
       "examples": [
