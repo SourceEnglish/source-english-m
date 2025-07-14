@@ -486,6 +486,10 @@ import EveningIcon from '@/assets/icons/licensed/evening.svg'; // Example for a 
 import NightIcon from '@/assets/icons/licensed/night.svg'; // Example for a custom icon
 import MidnightIcon from '@/assets/icons/licensed/midnight.svg'; // Example for a custom icon
 import NoonIcon from '@/assets/icons/licensed/noon.svg'; // Example for a custom icon
+import PleaseIcon from '@/assets/icons/licensed/please.svg'; // Example for a custom icon
+import ThanksIcon from '@/assets/icons/licensed/thanks.svg'; // Example for a custom icon
+import YouAreWelcomeIcon from '@/assets/icons/licensed/you_are_welcome.svg'; // Example for a custom icon
+
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -888,6 +892,11 @@ export const iconMap: Record<string, React.FC<any>> = {
   welcome: WelcomeIcon, // Example for a custom icon
   'take care': TakeCareIcon,
   'see you': SeeYouIcon, // Example for a custom icon
+  please: PleaseIcon, // Example for a custom icon
+  thanks: ThanksIcon, // Example for a custom icon
+  'thank you': ThanksIcon, // Example for a custom icon
+  'you are welcome': YouAreWelcomeIcon,
+  "you're welcome": YouAreWelcomeIcon, // Example for a custom icon
   job: JobIcon,
   juice: JuiceIcon,
   key: KeyIcon,

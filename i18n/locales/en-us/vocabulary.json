@@ -9026,6 +9026,84 @@
     }
   },
   {
+    "please": {
+      "__pos": "exclamation",
+      "__tags": ["politeness"],
+      "word": "please",
+      "translation_note": "",
+      "examples": ["Please help me.", "Can I have some water, please?"]
+    }
+  },
+  {
+    "sorry": {
+      "__pos": "exclamation",
+      "__tags": ["apologies"],
+      "word": "sorry",
+      "translation_note": "",
+      "examples": ["Sorry, I'm late.", "I'm sorry for the mistake."]
+    }
+  },
+  {
+    "thanks": {
+      "__pos": "exclamation",
+      "__tags": ["gratitude", "politeness"],
+      "__synonyms": ["thank you"],
+
+      "synonym_notes": {
+        "thanks": "'Thank you' is more formal than 'thanks'."
+      },
+      "word": "thanks",
+      "translation_note": "",
+      "examples": ["Thanks for your help.", "Thanks a lot!"]
+    }
+  },
+  {
+    "thank you": {
+      "__pos": "exclamation",
+      "__tags": ["gratitude", "politeness"],
+      "__synonyms": ["thanks"],
+
+      "synonym_notes": {
+        "thanks": "'Thank you' is more formal than 'thanks'."
+      },
+      "word": "thank you",
+      "translation_note": "",
+      "examples": ["Thank you for your kindness.", "Thank you for the gift!"]
+    }
+  },
+  {
+    "you're welcome": {
+      "__pos": "exclamation",
+      "__tags": ["responses", "gratitude", "politeness"],
+      "__synonyms": ["you are welcome"],
+      "synonym_notes": {
+        "you are welcome": "'You're welcome' is more informal than 'you are welcome'."
+      },
+      "word": "you're welcome",
+      "translation_note": "",
+      "examples": [
+        "You're welcome! I'm happy to help.",
+        "You're welcome, anytime."
+      ]
+    }
+  },
+  {
+    "you are welcome": {
+      "__pos": "exclamation",
+      "__tags": ["responses", "gratitude", "politeness"],
+      "__synonyms": ["you're welcome"],
+      "synonym_notes": {
+        "you're welcome": "'You are welcome' is more formal than 'you're welcome'."
+      },
+      "word": "you are welcome",
+      "translation_note": "",
+      "examples": [
+        "You are welcome! I'm glad to assist.",
+        "You are welcome, feel free to ask."
+      ]
+    }
+  },
+  {
     "welcome": {
       "__pos": "exclamation",
       "__tags": ["greetings", "responses"],

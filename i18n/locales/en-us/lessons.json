@@ -530,5 +530,23 @@
       "__lesson": "greetings and farewells"
     }
   },
+  {
+    "manners": {
+      "name": "manners",
+      "__tags": ["manners", "politeness"],
+      "__type": "lesson",
+      "__order": 49,
+      "__vocab_lesson": "manners vocab"
+    }
+  },
+  {
+    "manners vocab": {
+      "name": "manners vocab",
+      "__tags": ["manners", "politeness"],
+      "__type": "vocabulary",
+      "__order": 50,
+      "__hidden": false,
+      "__lesson": "manners"
+    }
   }
 ]
