@@ -9040,6 +9040,15 @@
     }
   },
   {
+    "oh": {
+      "__pos": "exclamation",
+      "__tags": ["exclamations"],
+      "word": "oh",
+      "translation_note": "",
+      "examples": ["Oh! I didn't know that.", "Oh, that's interesting."]
+    }
+  },
+  {
     "please": {
       "__pos": "exclamation",
       "__tags": ["politeness"],
