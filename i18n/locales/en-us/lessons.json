@@ -448,24 +448,25 @@
     }
   },
   {
-    "rooms vocab": {
-      "name": "rooms vocab",
-      "__tags": ["rooms"],
-      "__type": "vocabulary",
-      "__order": 38,
-      "__hidden": false
-    }
-  },
-  {
-    "room terms vocab": {
-      "name": "room terms vocab",
+    "room and building vocab": {
+      "name": "room and building vocab",
       "__tags": ["room terms"],
       "__type": "vocabulary",
-      "__order": 39,
+      "__order": 38,
       "__hidden": false,
       "__vocab_lesson": "rooms terms vocab"
     }
   },
+  {
+    "rooms vocab": {
+      "name": "rooms vocab",
+      "__tags": ["rooms"],
+      "__type": "vocabulary",
+      "__order": 39,
+      "__hidden": false
+    }
+  },
+
   {
     "technology vocab": {
       "name": "technology vocab",

@@ -3535,6 +3535,7 @@
         "personal information other",
         "technology"
       ],
+      "__synonyms": ["e-mail address"],
       "word": "email address",
       "plural": "email addresses",
       "translation_note": "",
@@ -6556,8 +6557,13 @@
   },
   {
     "hello": {
-      "__pos": "interjection",
+      "__pos": "exclamation",
       "__tags": ["greetings"],
+      "__synonyms": ["hey", "hi"],
+      "synonym_notes": {
+        "hey": "'Hey' is a more casual greeting, while 'hello' is more formal.",
+        "hi": "'Hi' is an informal greeting, similar to 'hello'."
+      },
       "word": "hello",
       "translation_note": "",
       "examples": ["Hello! How are you?", "She said hello to her friend."]
@@ -8231,7 +8237,7 @@
   {
     "floor": {
       "__pos": "noun",
-      "__tags": ["buildings", "rooms", "room terms"],
+      "__tags": ["buildings", "room terms"],
       "word": "floor",
       "plural": "floors",
       "examples": [
@@ -8243,7 +8249,7 @@
   {
     "ceiling": {
       "__pos": "noun",
-      "__tags": ["buildings", "rooms", "room terms"],
+      "__tags": ["buildings", "room terms"],
       "word": "ceiling",
       "plural": "ceilings",
       "examples": [
@@ -8255,7 +8261,7 @@
   {
     "wall": {
       "__pos": "noun",
-      "__tags": ["buildings", "rooms", "room terms"],
+      "__tags": ["buildings", "room terms"],
       "word": "wall",
       "plural": "walls",
       "examples": [
@@ -8267,7 +8273,7 @@
   {
     "stairs": {
       "__pos": "noun",
-      "__tags": ["buildings", "rooms", "room terms"],
+      "__tags": ["buildings", "room terms"],
       "word": "stairs",
       "plural": "stairs",
       "examples": [
@@ -8279,7 +8285,7 @@
   {
     "downstairs": {
       "__pos": "adverb",
-      "__tags": ["buildings", "rooms", "room terms"],
+      "__tags": ["buildings", "room terms"],
       "word": "downstairs",
       "examples": [
         "The kitchen is downstairs.",
@@ -8290,7 +8296,7 @@
   {
     "upstairs": {
       "__pos": "adverb",
-      "__tags": ["buildings", "rooms", "room terms"],
+      "__tags": ["buildings", "room terms"],
       "word": "upstairs",
       "examples": ["The bedroom is upstairs.", "She went upstairs to study."]
     }
@@ -8298,7 +8304,7 @@
   {
     "roof": {
       "__pos": "noun",
-      "__tags": ["buildings", "rooms", "room terms"],
+      "__tags": ["buildings", "room terms"],
       "word": "roof",
       "plural": "roofs",
       "examples": ["The roof is red.", "There is a bird on the roof."]
@@ -8359,6 +8365,8 @@
     "email_(verb)": {
       "__pos": "verb",
       "__tags": ["communication", "technology"],
+      "__objectKey": "email_(verb)",
+      "__synonyms": ["e-mail"],
       "word": "email",
       "conjugation": {
         "present": "email",
@@ -8384,6 +8392,7 @@
     "email": {
       "__pos": "noun",
       "__tags": ["communication", "technology"],
+      "__synonyms": ["e-mail"],
       "word": "email",
       "plural": "emails",
       "examples": [
@@ -9055,6 +9064,7 @@
     "oh": {
       "__pos": "exclamation",
       "__tags": ["exclamations"],
+      "__icon_text": "oh",
       "word": "oh",
       "translation_note": "",
       "examples": ["Oh! I didn't know that.", "Oh, that's interesting."]

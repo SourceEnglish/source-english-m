@@ -699,7 +699,6 @@ export const iconMap: Record<string, React.FC<any>> = {
   son: SonIcon,
   daughter: DaughterIcon,
   adjectives: AdjectivesIcon, // Example for a custom icon
-  YesIcon: YesIcon, // Example for a custom icon
   'yes no questions': YesIcon, // Example for a custom icon
   'family vocab': FamilyIcon, // Example for a custom icon
   who: WhoIcon,
