@@ -511,6 +511,26 @@
       "__order": 44,
       "__hidden": false
     }
+  },
+  {
+    "yes": {
+      "name": "yes",
+      "__tags": ["yes", "agreement"],
+      "__type": "lesson",
+      "__order": 45,
+      "__vocab_lesson": "yes vocab"
+    }
+  },
+  {
+    "yes vocab": {
+      "name": "yes vocab",
+      "__tags": ["yes", "agreement"],
+      "__type": "vocabulary",
+      "__order": 46,
+      "__hidden": false,
+      "__lesson": "yes"
+    }
+  },
   {
     "greetings and farewells": {
       "name": "greetings and farewells",

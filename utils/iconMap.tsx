@@ -796,6 +796,10 @@ export const iconMap: Record<string, React.FC<any>> = {
   animal: AnimalIcon,
   'animals vocab': AnimalIcon, // Example for a custom icon
   yes: YesIcon, // Example for a custom icon
+  OK: YesIcon,
+  ok: YesIcon,
+  yeah: YesIcon,
+  alright: YesIcon,
   no: NoIcon, // Example for a custom icon
   a_variant_0: LowercaseAVariant, // Example for a custom icon
   g_variant_0: LowercaseGVariant, // Example for a custom icon

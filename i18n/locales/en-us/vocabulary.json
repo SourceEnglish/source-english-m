@@ -760,8 +760,8 @@
 
   {
     "yes": {
-      "__pos": "interjection",
-      "__tags": ["affirmation", "yes or no questions"],
+      "__pos": "exclamation",
+      "__tags": ["affirmation", "yes or no questions", "yes"],
       "word": "yes",
       "translation_note": "",
 
@@ -770,7 +770,7 @@
   },
   {
     "no": {
-      "__pos": "interjection",
+      "__pos": "exclamation",
       "__tags": ["negation", "yes or no questions"],
       "word": "no",
       "translation_note": "",
@@ -9147,6 +9147,53 @@
         "See you soon!",
         "See you next week!"
       ]
+    }
+  },
+  {
+    "OK": {
+      "__pos": "exclamation",
+      "__tags": ["exclamations", "agreement"],
+      "__synonyms": ["okay", "yes", "yeah", "alright"],
+      "synonym_notes": {
+        "okay": "Different spelling of OK.",
+        "yes": "'OK' is less formal than 'yes', which is more definitive.",
+        "yeah": "'OK' is more neutral, while 'yeah' is very informal.",
+        "alright": "'OK' is more neutral, while 'alright' is very informal."
+      },
+
+      "word": "OK",
+      "translation_note": "",
+      "examples": ["OK, let's go.", "OK! I understand."]
+    }
+  },
+  {
+    "yeah": {
+      "__pos": "exclamation",
+      "__tags": ["agreement", "informal"],
+      "__synonyms": ["yes", "OK", "alright"],
+      "synonym_notes": {
+        "yes": "'Yeah' is more informal than 'yes'.",
+        "OK": "'Yeah' is more informal than 'OK'.",
+        "alright": "'Yeah' is more informal than 'alright'."
+      },
+      "word": "yeah",
+      "translation_note": "",
+      "examples": ["Yeah, I agree.", "Yeah, that's right."]
+    }
+  },
+  {
+    "alright": {
+      "__pos": "exclamation",
+      "__tags": ["agreement", "informal"],
+      "__synonyms": ["OK", "yeah", "yes"],
+      "synonym_notes": {
+        "OK": "'Alright' is more informal than 'OK'.",
+        "yeah": "'Alright' is more informal than 'yeah'.",
+        "yes": "'Alright' is more informal than 'yes'."
+      },
+      "word": "alright",
+      "translation_note": "",
+      "examples": ["Alright, let's do it.", "Alright, I understand."]
     }
   },
   {
