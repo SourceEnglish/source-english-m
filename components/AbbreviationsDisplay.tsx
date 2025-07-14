@@ -36,20 +36,20 @@ const AbbreviationsDisplay: React.FC<AbbreviationsProps> = ({
                 pronunciation={abbreviationPronunciations?.[abbreviation]}
                 style={[
                   styles.abbreviationText,
-                  { fontSize: isMobile ? 15 : 19 },
+                  { fontSize: isMobile ? 16 : 19 },
                 ]}
               />
               {word && (
                 <>
                   <Text
-                    style={[styles.arrow, { fontSize: isMobile ? 15 : 19 }]}
+                    style={[styles.arrow, { fontSize: isMobile ? 16 : 19 }]}
                   >
                     {' '}
                     →{' '}
                   </Text>
                   <ReadableText
                     text={word}
-                    style={[styles.fullForm, { fontSize: isMobile ? 15 : 19 }]}
+                    style={[styles.fullForm, { fontSize: isMobile ? 16 : 19 }]}
                   />
                 </>
               )}
@@ -59,7 +59,7 @@ const AbbreviationsDisplay: React.FC<AbbreviationsProps> = ({
                 text={abbreviationNotes[abbreviation]}
                 style={[
                   styles.abbreviationNote,
-                  { fontSize: isMobile ? 13 : 16 },
+                  { fontSize: isMobile ? 14 : 16 },
                 ]}
               />
             )}

@@ -171,22 +171,24 @@ const VocabEntryDisplay: React.FC<VocabEntryDisplayProps> = ({ entry }) => {
           />
         )}
         {/* Play pronunciation button inside the card */}
-        {// For multigraph: only show if exactly one pronunciation (one __exampleEntries)
-        (__pos === 'multigraph'
-          ? Array.isArray(entry.__exampleEntries) &&
-            entry.__exampleEntries.length === 1
-          : true) && (
-          <View style={{ alignItems: 'center', marginTop: 8 }}>
-            <PlayPronunciationButton
-              word={word}
-              pronunciation={
-                entry.__forced_pronunciation
-                  ? entry.__forced_pronunciation
-                  : entry.word
-              }
-            />
-          </View>
-        )}
+        {
+          // For multigraph: only show if exactly one pronunciation (one __exampleEntries)
+          (__pos === 'multigraph'
+            ? Array.isArray(entry.__exampleEntries) &&
+              entry.__exampleEntries.length === 1
+            : true) && (
+            <View style={{ alignItems: 'center', marginTop: 8 }}>
+              <PlayPronunciationButton
+                word={word}
+                pronunciation={
+                  entry.__forced_pronunciation
+                    ? entry.__forced_pronunciation
+                    : entry.word
+                }
+              />
+            </View>
+          )
+        }
         {/* Multigraph examples */}
       </View>
     </>

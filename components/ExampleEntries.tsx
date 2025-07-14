@@ -28,16 +28,18 @@ const ExampleEntries: React.FC<ExampleEntriesProps> = ({
   // Helper to render a word with the highlight substring underlined
   function renderHighlightedWord(word: string, highlight?: string) {
     if (!highlight) {
-      return <ReadableText text={word} />;
+      return <ReadableText text={word} style={{ fontSize: '20px' }} />;
     }
     const displayWord = word.replace(/[_ ]+/g, ' ').trim();
     const highlightNorm = highlight.toLowerCase().split(/[_ ]+/)[0];
     const displayWordLower = displayWord.toLowerCase();
     const idx = displayWordLower.indexOf(highlightNorm);
-    if (idx === -1) return <ReadableText text={displayWord} />;
+    if (idx === -1)
+      return <ReadableText text={displayWord} style={{ fontSize: '20px' }} />;
     return (
       <ReadableText
         text={displayWord}
+        style={{ fontSize: '20px' }}
         underlineRanges={[[idx, idx + highlightNorm.length]]}
       />
     );
