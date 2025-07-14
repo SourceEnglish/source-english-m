@@ -511,5 +511,24 @@
       "__order": 44,
       "__hidden": false
     }
+  {
+    "greetings and farewells": {
+      "name": "greetings and farewells",
+      "__tags": ["greetings", "farewells"],
+      "__type": "lesson",
+      "__order": 47,
+      "__vocab_lesson": "greetings and farewells vocab"
+    }
+  },
+  {
+    "greetings and farewells vocab": {
+      "name": "greetings and farewells vocab",
+      "__tags": ["greetings", "farewells"],
+      "__type": "vocabulary",
+      "__order": 48,
+      "__hidden": false,
+      "__lesson": "greetings and farewells"
+    }
+  },
   }
 ]

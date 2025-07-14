@@ -8911,6 +8911,143 @@
         "She is a 911 operator in our city."
       ]
     }
+  },
+  {
+    "good morning": {
+      "__pos": "exclamation",
+      "__tags": ["greetings"],
+      "word": "good morning",
+      "translation_note": "",
+      "examples": [
+        "Good morning! How did you sleep?",
+        "She said good morning to everyone."
+      ]
+    }
+  },
+  {
+    "good afternoon": {
+      "__pos": "exclamation",
+      "__tags": ["greetings"],
+      "word": "good afternoon",
+      "translation_note": "",
+      "examples": [
+        "Good afternoon! How is your day going?",
+        "He greeted her with a good afternoon."
+      ]
+    }
+  },
+
+  {
+    "good evening": {
+      "__pos": "exclamation",
+      "__tags": ["greetings"],
+      "word": "good evening",
+      "translation_note": "",
+      "examples": [
+        "Good evening! It's nice to see you.",
+        "She said good evening to her guests."
+      ]
+    }
+  },
+  {
+    "good night": {
+      "__pos": "exclamation",
+      "__tags": ["farewells"],
+      "word": "good night",
+      "translation_note": "",
+      "examples": [
+        "Good night! Sleep well.",
+        "He said good night before going to bed."
+      ]
+    }
+  },
+
+  {
+    "take care": {
+      "__pos": "exclamation",
+      "__tags": ["farewells"],
+      "word": "take care",
+      "translation_note": "",
+      "examples": [
+        "Take care! See you soon.",
+        "He said take care before leaving."
+      ]
+    }
+  },
+
+  {
+    "bye": {
+      "__pos": "exclamation",
+      "__tags": ["greetings", "farewells"],
+      "word": "bye",
+      "translation_note": "",
+      "examples": ["Bye! See you later.", "She waved and said bye."]
+    }
+  },
+  {
+    "goodbye": {
+      "__pos": "exclamation",
+      "__tags": ["greetings", "farewells"],
+      "word": "goodbye",
+      "translation_note": "",
+      "examples": [
+        "Goodbye! Have a nice day.",
+        "He said goodbye to his friends."
+      ]
+    }
+  },
+
+  {
+    "hey": {
+      "__pos": "exclamation",
+      "__tags": ["greetings"],
+      "__synonyms": ["hello", "hi"],
+      "synonym_notes": {
+        "hello": "'Hey' is a more casual greeting, while 'hello' is more formal.",
+        "hi": "'Hi' is an informal greeting, similar to 'hello'."
+      },
+      "word": "hey",
+      "translation_note": "",
+      "examples": ["Hey! What's up?", "Hey, can you help me?"]
+    }
+  },
+  {
+    "hi": {
+      "__pos": "exclamation",
+      "__tags": ["greetings"],
+      "__synonyms": ["hello", "hey"],
+      "synonym_notes": {
+        "hey": "'Hey' and 'hi' are both informal greetings.",
+        "hello": "'Hi' is more informal than 'hello'."
+      },
+      "word": "hi",
+      "translation_note": "",
+      "examples": ["Hi! Nice to meet you.", "He said hi to everyone."]
+    }
+  },
+  {
+    "welcome": {
+      "__pos": "exclamation",
+      "__tags": ["greetings", "responses"],
+      "word": "welcome",
+      "translation_note": "",
+      "examples": ["Welcome!", "Welcome to our home!"]
+    }
+  },
+  {
+    "see you": {
+      "__pos": "exclamation",
+      "__tags": ["farewells", "greetings"],
+      "word": "see you",
+      "translation_note": "",
+      "examples": [
+        "See you later!",
+        "See you tomorrow!",
+        "See you soon!",
+        "See you next week!"
+      ]
+    }
+  },
   {
     "morning": {
       "__pos": "noun",

@@ -465,6 +465,17 @@ import PoliceCarIcon from '@/assets/icons/licensed/police_car.svg'; // Example f
 import HelpIcon from '@/assets/icons/licensed/help.svg'; // Example for a custom icon
 import InterpreterIcon from '@/assets/icons/licensed/interpreter.svg'; // Example for a custom icon
 import NineOneOneOperatorIcon from '@/assets/icons/licensed/911_operator.svg'; // Example for a custom icon
+import GoodbyeIcon from '@/assets/icons/licensed/goodbye.svg'; // Example for a custom icon
+import TakeCareIcon from '@/assets/icons/licensed/take_care.svg'; // Example
+import GoodNightIcon from '@/assets/icons/licensed/good_night.svg';
+import GoodMorningIcon from '@/assets/icons/licensed/good_morning.svg'; // Example for a custom icon
+import GoodAfternoonIcon from '@/assets/icons/licensed/good_afternoon.svg'; // Example for a custom icon
+import GoodEveningIcon from '@/assets/icons/licensed/good_evening.svg'; // Example for a custom icon
+import SeeYouLaterIcon from '@/assets/icons/licensed/see_you_later.svg'; // Example for a custom icon
+import SeeYouSoonIcon from '@/assets/icons/licensed/see_you_soon.svg'; // Example for a custom icon
+import SeeYouIcon from '@/assets/icons/licensed/see_you.svg'; // Example for a custom icon
+import SeeYouTomorrowIcon from '@/assets/icons/licensed/see_you_tomorrow.svg'; // Example for a custom icon
+import WelcomeIcon from '@/assets/icons/licensed/welcome.svg'; // Example for a custom icon
 import MorningIcon from '@/assets/icons/licensed/morning.svg'; // Example for a custom icon
 import AfternoonIcon from '@/assets/icons/licensed/afternoon.svg'; // Example for a custom icon
 import EveningIcon from '@/assets/icons/licensed/evening.svg'; // Example for a custom icon
@@ -855,6 +866,20 @@ export const iconMap: Record<string, React.FC<any>> = {
   fruit: FruitIcon,
   happy: HappyIcon,
   hello: HelloIcon,
+  hey: HelloIcon, // Example for a custom icon
+  hi: HelloIcon,
+  goodbye: GoodbyeIcon, // Example for a custom icon
+  bye: GoodbyeIcon, // Example for a custom icon
+  'good night': GoodNightIcon, // Example for a custom icon
+  'good morning': GoodMorningIcon, // Example for a custom icon
+  'good afternoon': GoodAfternoonIcon, // Example for a custom icon
+  'good evening': GoodEveningIcon, // Example for a custom icon
+  'see you later': SeeYouLaterIcon, // Example for a custom icon
+  'see you soon': SeeYouSoonIcon, // Example for a custom icon
+  'see you tomorrow': SeeYouTomorrowIcon, // Example for a custom icon
+  welcome: WelcomeIcon, // Example for a custom icon
+  'take care': TakeCareIcon,
+  'see you': SeeYouIcon, // Example for a custom icon
   job: JobIcon,
   juice: JuiceIcon,
   key: KeyIcon,
