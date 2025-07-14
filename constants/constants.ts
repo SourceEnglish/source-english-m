@@ -116,7 +116,7 @@ const posColors: Record<string, string> = {
   conjunction: '#FF6347',
   pronoun: '#4682B4',
   'auxiliary verb': '#FF4500',
-  exclamation: '#387742',
+  exclamation: '#be0b98',
   'modal verb': '#D2691E',
   number: '#8A2BE2',
   'ordinal number': '#5F9EA0',
