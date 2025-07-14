@@ -8193,6 +8193,18 @@
     }
   },
   {
+    "bedroom": {
+      "__pos": "noun",
+      "__tags": ["buildings", "rooms"],
+      "word": "bedroom",
+      "plural": "bedrooms",
+      "examples": [
+        "My bedroom is upstairs.",
+        "She decorated her bedroom with flowers."
+      ]
+    }
+  },
+  {
     "dining room": {
       "__pos": "noun",
       "__tags": ["buildings", "rooms"],

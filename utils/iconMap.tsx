@@ -430,6 +430,7 @@ import MouthIcon from '@/assets/icons/licensed/mouth.svg';
 import NoseIcon from '@/assets/icons/licensed/nose.svg';
 import StoreIcon from '@/assets/icons/licensed/store.svg'; // Example for a custom icon
 import BathroomIcon from '@/assets/icons/licensed/bathroom.svg'; // Example for a custom icon
+import BedroomIcon from '@/assets/icons/licensed/bedroom.svg'; // Example for a custom icon
 import RestroomIcon from '@/assets/icons/licensed/restroom.svg'; // Example for a custom icon
 import KitchenIcon from '@/assets/icons/licensed/kitchen.svg'; // Example for a custom icon
 import LivingRoomIcon from '@/assets/icons/licensed/living_room.svg'; // Example for a custom icon
@@ -1055,6 +1056,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   restaurant: RestaurantIcon, // Example for a custom icon
   store: StoreIcon, // Example for a custom icon
   bathroom: BathroomIcon, // Example for a custom icon
+  bedroom: BedroomIcon, // Example for a custom icon
   restroom: RestroomIcon, // Example for a custom icon
   kitchen: KitchenIcon, // Example for a custom icon
   'living room': LivingRoomIcon, // Example for a custom icon
