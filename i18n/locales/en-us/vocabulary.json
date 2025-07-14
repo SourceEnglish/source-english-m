@@ -9150,6 +9150,15 @@
     }
   },
   {
+    "wow": {
+      "__pos": "exclamation",
+      "__tags": ["exclamations", "surprise"],
+      "word": "wow",
+      "translation_note": "",
+      "examples": ["Wow! That's amazing.", "Wow, look at that!"]
+    }
+  },
+  {
     "OK": {
       "__pos": "exclamation",
       "__tags": ["exclamations", "agreement"],
