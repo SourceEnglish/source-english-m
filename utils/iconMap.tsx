@@ -465,6 +465,12 @@ import PoliceCarIcon from '@/assets/icons/licensed/police_car.svg'; // Example f
 import HelpIcon from '@/assets/icons/licensed/help.svg'; // Example for a custom icon
 import InterpreterIcon from '@/assets/icons/licensed/interpreter.svg'; // Example for a custom icon
 import NineOneOneOperatorIcon from '@/assets/icons/licensed/911_operator.svg'; // Example for a custom icon
+import MorningIcon from '@/assets/icons/licensed/morning.svg'; // Example for a custom icon
+import AfternoonIcon from '@/assets/icons/licensed/afternoon.svg'; // Example for a custom icon
+import EveningIcon from '@/assets/icons/licensed/evening.svg'; // Example for a custom icon
+import NightIcon from '@/assets/icons/licensed/night.svg'; // Example for a custom icon
+import MidnightIcon from '@/assets/icons/licensed/midnight.svg'; // Example for a custom icon
+import NoonIcon from '@/assets/icons/licensed/noon.svg'; // Example for a custom icon
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -1058,6 +1064,12 @@ export const iconMap: Record<string, React.FC<any>> = {
   help: HelpIcon, // Example for a custom icon
   interpreter: InterpreterIcon, // Example for a custom
   '911 operator': NineOneOneOperatorIcon,
+  noon: NoonIcon, // Example for a custom icon
+  morning: MorningIcon, // Example for a custom icon
+  afternoon: AfternoonIcon, // Example for a custom icon
+  evening: EveningIcon, // Example for a custom icon
+  night: NightIcon, // Example for a custom icon
+  midnight: MidnightIcon, // Example for a custom icon
 
   // ...etc
 };

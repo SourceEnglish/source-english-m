@@ -8911,5 +8911,62 @@
         "She is a 911 operator in our city."
       ]
     }
+  {
+    "morning": {
+      "__pos": "noun",
+      "__tags": ["time"],
+      "word": "morning",
+      "translation_note": "",
+      "examples": ["Good morning!", "I love the mornings."]
+    }
+  },
+  {
+    "afternoon": {
+      "__pos": "noun",
+      "__tags": ["time"],
+      "word": "afternoon",
+      "translation_note": "",
+      "examples": ["Good afternoon!", "I have a meeting this afternoon."]
+    }
+  },
+  {
+    "evening": {
+      "__pos": "noun",
+      "__tags": ["time"],
+      "word": "evening",
+      "translation_note": "",
+      "examples": ["Good evening!", "We will meet in the evening."]
+    }
+  },
+  {
+    "night": {
+      "__pos": "noun",
+      "__tags": ["time"],
+      "word": "night",
+      "translation_note": "",
+      "examples": ["Good night!", "I like to watch movies at night."]
+    }
+  },
+  {
+    "noon": {
+      "__pos": "noun",
+      "__tags": ["time"],
+      "word": "noon",
+      "translation_note": "",
+      "examples": ["We will meet at noon.", "The sun is highest at noon."]
+    }
+  },
+  {
+    "midnight": {
+      "__pos": "noun",
+      "__tags": ["time"],
+      "word": "midnight",
+      "translation_note": "",
+      "examples": [
+        "I usually go to bed at midnight.",
+        "The party will last until midnight."
+      ]
+    }
+  },
   }
 ]
