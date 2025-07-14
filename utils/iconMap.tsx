@@ -68,7 +68,7 @@ import IIcon from '@/assets/icons/open_source/I.svg'; // Example for a custom ic
 import ApartmentNumber from '@/assets/icons/licensed/apartment_number.svg'; // Example for a custom icon
 import ApartmentIcon from '@/assets/icons/licensed/apartment.svg'; // Example for a custom icon
 import StreetIcon from '@/assets/icons/licensed/street.svg'; // Example for a custom icon
-import YouIcon from '@/assets/icons/open_source/you.svg'; // Example for a custom icon
+import YouIcon from '@/assets/icons/licensed/you.svg'; // Example for a custom icon
 import NameIcon from '@/assets/icons/licensed/name.svg'; // Example for a custom icon
 // Place icons
 import BankIcon from '@/assets/icons/licensed/bank.svg';
@@ -491,6 +491,13 @@ import NoonIcon from '@/assets/icons/licensed/noon.svg'; // Example for a custom
 import PleaseIcon from '@/assets/icons/licensed/please.svg'; // Example for a custom icon
 import ThanksIcon from '@/assets/icons/licensed/thanks.svg'; // Example for a custom icon
 import YouAreWelcomeIcon from '@/assets/icons/licensed/you_are_welcome.svg'; // Example for a custom icon
+
+import IPronounIcon from '@/assets/icons/licensed/I.svg'; // Example for a custom icon
+import HeIcon from '@/assets/icons/licensed/he.svg'; // Example for a custom icon
+import SheIcon from '@/assets/icons/licensed/she.svg'; // Example for a custom icon
+import TheyIcon from '@/assets/icons/licensed/they.svg'; // Example for a custom icon
+import WeIcon from '@/assets/icons/licensed/we.svg'; // Example for a custom icon
+import ItIcon from '@/assets/icons/licensed/it.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -1119,6 +1126,15 @@ export const iconMap: Record<string, React.FC<any>> = {
   evening: EveningIcon, // Example for a custom icon
   night: NightIcon, // Example for a custom icon
   midnight: MidnightIcon, // Example for a custom icon
+  you: YouIcon, // Example for a custom icon
+  I: IPronounIcon, // Example for a custom icon
+  'I_(pronoun)': IPronounIcon,
+  'i_(pronoun)': IPronounIcon, // Example for a custom icon
+  he: HeIcon, // Example for a custom icon
+  she: SheIcon, // Example for a custom icon
+  they: TheyIcon, // Example for a custom icon
+  we: WeIcon, // Example for a custom icon
+  it: ItIcon,
 
   // ...etc
 };
