@@ -39,7 +39,64 @@
       "__order": 3.5
     }
   },
-
+  {
+    "basics": {
+      "name": "basics",
+      "__tags": ["basics"],
+      "__type": "lesson",
+      "__order": 4,
+      "__hidden": false,
+      "__vocab_lesson": "basics vocab"
+    }
+  },
+  {
+    "basics vocab": {
+      "name": "basics vocab",
+      "__tags": ["basics"],
+      "__type": "vocabulary",
+      "__order": 5,
+      "__hidden": false,
+      "__lesson": "basics vocab"
+    }
+  },
+  {
+    "subject pronouns": {
+      "name": "subject pronouns",
+      "__tags": ["subject pronouns"],
+      "__type": "lesson",
+      "__order": 6,
+      "__vocab_lesson": "subject pronouns vocab"
+    }
+  },
+  {
+    "subject pronouns vocab": {
+      "name": "subject pronouns vocab",
+      "__tags": ["subject pronouns"],
+      "__type": "vocabulary",
+      "__order": 7,
+      "__lesson": "subject pronouns",
+      "__hidden": true
+    }
+  },
+  {
+    "to be": {
+      "name": "to be",
+      "__tags": ["to be"],
+      "__type": "lesson",
+      "__order": 8,
+      "__vocab_lesson": "to be vocab"
+    }
+  },
+  {
+    "to be vocab": {
+      "name": "to be vocab",
+      "__tags": ["to be"],
+      "__type": "vocabulary",
+      "__hidden": true,
+      "__order": 9,
+      "__lesson": "to be"
+    }
+  },
   {
     "days and weeks vocab": {
       "name": "days and weeks vocab",
@@ -128,44 +185,6 @@
       "__order": 10,
       "__lesson": "personal information",
       "__hidden": true
-    }
-  },
-  {
-    "subject pronouns": {
-      "name": "subject pronouns",
-      "__tags": ["subject pronouns"],
-      "__type": "lesson",
-      "__order": 11,
-      "__vocab_lesson": "subject pronouns vocab"
-    }
-  },
-  {
-    "subject pronouns vocab": {
-      "name": "subject pronouns vocab",
-      "__tags": ["subject pronouns"],
-      "__type": "vocabulary",
-      "__order": 12,
-      "__lesson": "subject pronouns",
-      "__hidden": true
-    }
-  },
-  {
-    "to be": {
-      "name": "to be",
-      "__tags": ["to be"],
-      "__type": "lesson",
-      "__order": 13,
-      "__vocab_lesson": "to be vocab"
-    }
-  },
-  {
-    "to be vocab": {
-      "name": "to be vocab",
-      "__tags": ["to be"],
-      "__type": "vocabulary",
-      "__hidden": true,
-      "__order": 14,
-      "__lesson": "to be"
     }
   },
 

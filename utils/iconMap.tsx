@@ -499,6 +499,7 @@ import SheIcon from '@/assets/icons/licensed/she.svg'; // Example for a custom i
 import TheyIcon from '@/assets/icons/licensed/they.svg'; // Example for a custom icon
 import WeIcon from '@/assets/icons/licensed/we.svg'; // Example for a custom icon
 import ItIcon from '@/assets/icons/licensed/it.svg'; // Example for a custom icon
+import PronunciationIcon from '@/assets/icons/licensed/pronunciation.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -1108,6 +1109,8 @@ export const iconMap: Record<string, React.FC<any>> = {
   mouth: MouthIcon,
   tongue: TongueIcon,
   'decimal point': DecimalPointIcon,
+  pronunciation: PronunciationIcon, // Example for a custom icon
+  pronounce: PronunciationIcon, // Example for a custom icon
   ball: BallIcon, // Example for a custom icon
   cube: CubeIcon, // Example for a custom icon
   triangle: TriangleIcon, // Example for a custom icon

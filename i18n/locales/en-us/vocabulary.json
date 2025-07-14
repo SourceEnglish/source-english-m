@@ -1,8 +1,116 @@
 [
   {
+    "singular": {
+      "__pos": "adjective",
+      "__tags": ["grammar", "singular", "basics"],
+      "__icon_text": "1",
+      "__forced_pronunciation": "singular",
+      "word": "singular",
+      "translation_note": "",
+      "examples": [
+        "In grammar, singular means one.",
+        "The singular form of 'cats' is 'cat'."
+      ]
+    }
+  },
+
+  {
+    "plural": {
+      "__pos": "adjective",
+      "__tags": ["grammar", "plural", "basics"],
+      "__icon_text": "2+",
+      "__forced_pronunciation": "plural",
+      "word": "plural",
+      "translation_note": "",
+      "examples": [
+        "In grammar, plural means more than one.",
+        "The plural form of 'cat' is 'cats'."
+      ]
+    }
+  },
+  {
+    "alphabet": {
+      "__pos": "noun",
+      "__tags": ["nouns", "basics_letters", "basics"],
+      "__icon_text": "A-Z",
+      "__forced_pronunciation": "alphabet",
+      "word": "alphabet",
+      "plural": "alphabets",
+      "translation_note": "",
+      "examples": [
+        "The English alphabet has 26 letters.",
+        "We are learning the alphabet in class."
+      ]
+    }
+  },
+  {
+    "letter": {
+      "__pos": "noun",
+      "__tags": ["phonetics", "basics"],
+      "__icon_text": "Aa",
+      "__forced_pronunciation": "letter",
+      "word": "letter",
+      "plural": "letters",
+      "translation_note": "",
+      "examples": [
+        "A letter is a symbol in the alphabet.",
+        "The English letters are A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z."
+      ]
+    }
+  },
+
+  {
+    "am": {
+      "__pos": "verb",
+      "__redirect": "be",
+      "__tags": ["to be singular", "to be yes"],
+      "__icon_text": "am",
+      "__show_word": false,
+      "word": "am",
+      "translation_note": ""
+    }
+  },
+  {
+    "are": {
+      "__pos": "verb",
+      "__redirect": "be",
+      "__tags": ["to be singular", "to be plural", "to be yes"],
+      "__icon_text": "are",
+      "__show_word": false,
+      "word": "are",
+      "translation_note": ""
+    }
+  },
+  {
+    "is": {
+      "__pos": "verb",
+      "__redirect": "be",
+      "__tags": ["to be singular", "to be yes"],
+      "__icon_text": "is",
+      "__show_word": false,
+      "word": "is",
+      "translation_note": ""
+    }
+  },
+
+  {
+    "word": {
+      "__pos": "noun",
+      "__tags": ["nouns", "word", "basics"],
+      "word": "word",
+      "plural": "words",
+      "translation_note": "",
+      "examples": [
+        "Words are made of letters.",
+        "Please write a word on the board.",
+        "I learned a new word today."
+      ]
+    }
+  },
+  {
     "A": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Aa",
       "__forced_pronunciation": "a",
       "__show_word": true,
@@ -47,7 +155,7 @@
   {
     "B": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Bb",
       "__forced_pronunciation": "b",
       "__show_word": true,
@@ -69,7 +177,7 @@
   {
     "C": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Cc",
       "__forced_pronunciation": "c",
       "__show_word": true,
@@ -98,7 +206,7 @@
   {
     "D": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Dd",
       "__forced_pronunciation": "d",
       "__show_word": true,
@@ -120,7 +228,7 @@
   {
     "E": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Ee",
       "__forced_pronunciation": "e",
       "__show_word": true,
@@ -156,7 +264,7 @@
   {
     "F": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Ff",
       "__forced_pronunciation": "f",
       "__show_word": true,
@@ -178,7 +286,7 @@
   {
     "G": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Gg",
       "__forced_pronunciation": "g",
       "__show_word": true,
@@ -201,7 +309,7 @@
   {
     "H": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Hh",
       "__forced_pronunciation": "h",
       "__show_word": true,
@@ -223,7 +331,7 @@
   {
     "I": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Ii",
       "__forced_pronunciation": "i",
       "__show_word": true,
@@ -260,7 +368,7 @@
   {
     "J": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Jj",
       "__forced_pronunciation": "j",
       "__uppercase_variants": ["J_variant_0"],
@@ -283,7 +391,7 @@
   {
     "K": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Kk",
       "__forced_pronunciation": "k",
       "__show_word": true,
@@ -305,7 +413,7 @@
   {
     "L": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Ll",
       "__forced_pronunciation": "l",
       "__show_word": true,
@@ -327,7 +435,7 @@
   {
     "M": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Mm",
       "__forced_pronunciation": "m",
       "__show_word": true,
@@ -349,7 +457,7 @@
   {
     "N": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Nn",
       "__forced_pronunciation": "n",
       "__show_word": true,
@@ -371,7 +479,7 @@
   {
     "O": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Oo",
       "__forced_pronunciation": "o",
       "__show_word": true,
@@ -416,7 +524,7 @@
   {
     "P": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Pp",
       "__forced_pronunciation": "p",
       "__show_word": true,
@@ -438,7 +546,7 @@
   {
     "Q": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Qq",
       "__forced_pronunciation": "q",
       "__show_word": true,
@@ -462,7 +570,7 @@
   {
     "R": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Rr",
       "__forced_pronunciation": "r",
       "__show_word": true,
@@ -484,7 +592,7 @@
   {
     "S": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Ss",
       "__forced_pronunciation": "s",
       "__show_word": true,
@@ -506,7 +614,7 @@
   {
     "T": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Tt",
       "__forced_pronunciation": "t",
       "__show_word": true,
@@ -528,7 +636,7 @@
   {
     "U": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Uu",
       "__forced_pronunciation": "u",
       "__show_word": true,
@@ -571,7 +679,7 @@
   {
     "V": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Vv",
       "__forced_pronunciation": "v",
       "__show_word": true,
@@ -593,7 +701,7 @@
   {
     "W": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Ww",
       "__forced_pronunciation": "w",
       "__show_word": true,
@@ -615,7 +723,7 @@
   {
     "X": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Xx",
       "__forced_pronunciation": "x",
       "__show_word": true,
@@ -637,7 +745,7 @@
   {
     "Y": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Yy",
       "__forced_pronunciation": "y",
       "__show_word": true,
@@ -673,7 +781,7 @@
   {
     "Z": {
       "__pos": "letter",
-      "__tags": ["letters"],
+      "__tags": ["letters", "basics_letters"],
       "__icon_text": "Zz",
       "__forced_pronunciation": "z",
       "__show_word": true,
@@ -689,6 +797,32 @@
           "header": "/z/",
           "__header_pronunciation": "z.wav"
         }
+      ]
+    }
+  },
+  {
+    "cat": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals", "pets", "word"],
+      "word": "cat",
+      "plural": "cats",
+      "translation_note": "",
+      "examples": [
+        "The cat is sleeping on the sofa.",
+        "She has two cats at home."
+      ]
+    }
+  },
+  {
+    "dog": {
+      "__pos": "noun",
+      "__tags": ["nouns", "animals", "pets", "word"],
+      "word": "dog",
+      "plural": "dogs",
+      "translation_note": "",
+      "examples": [
+        "The dog is barking.",
+        "He takes his dog for a walk every day."
       ]
     }
   },
@@ -3602,7 +3736,7 @@
   {
     "run": {
       "__pos": "verb",
-      "__tags": ["verbs"],
+      "__tags": ["verbs", "word"],
       "word": "run",
       "conjugation": {
         "present": "run",
@@ -3636,39 +3770,6 @@
       "__icon_text": "to be",
       "__show_word": false,
       "word": "to be",
-      "translation_note": ""
-    }
-  },
-  {
-    "am": {
-      "__pos": "verb",
-      "__redirect": "be",
-      "__tags": ["to be singular", "to be yes"],
-      "__icon_text": "am",
-      "__show_word": false,
-      "word": "am",
-      "translation_note": ""
-    }
-  },
-  {
-    "are": {
-      "__pos": "verb",
-      "__redirect": "be",
-      "__tags": ["to be singular", "to be plural", "to be yes"],
-      "__icon_text": "are",
-      "__show_word": false,
-      "word": "are",
-      "translation_note": ""
-    }
-  },
-  {
-    "is": {
-      "__pos": "verb",
-      "__redirect": "be",
-      "__tags": ["to be singular", "to be yes"],
-      "__icon_text": "is",
-      "__show_word": false,
-      "word": "is",
       "translation_note": ""
     }
   },
@@ -5775,32 +5876,7 @@
       "examples": ["A dog is an animal.", "There are many animals at the zoo."]
     }
   },
-  {
-    "cat": {
-      "__pos": "noun",
-      "__tags": ["nouns", "animals", "pets"],
-      "word": "cat",
-      "plural": "cats",
-      "translation_note": "",
-      "examples": [
-        "The cat is sleeping on the sofa.",
-        "She has two cats at home."
-      ]
-    }
-  },
-  {
-    "dog": {
-      "__pos": "noun",
-      "__tags": ["nouns", "animals", "pets"],
-      "word": "dog",
-      "plural": "dogs",
-      "translation_note": "",
-      "examples": [
-        "The dog is barking.",
-        "He takes his dog for a walk every day."
-      ]
-    }
-  },
+
   {
     "chicken": {
       "__pos": "noun",
@@ -6548,7 +6624,7 @@
   {
     "happy": {
       "__pos": "adjective",
-      "__tags": ["feelings"],
+      "__tags": ["feelings", "word"],
       "word": "happy",
       "translation_note": "",
       "examples": ["I am happy today.", "She looks happy."]
@@ -7027,11 +7103,24 @@
   {
     "sentence": {
       "__pos": "noun",
-      "__tags": ["grammar"],
+      "__tags": ["grammar", "sentence", "basics"],
       "word": "sentence",
       "plural": "sentences",
       "translation_note": "",
       "examples": ["Write a sentence.", "This sentence is long."]
+    }
+  },
+  {
+    "pronunciation": {
+      "__pos": "noun",
+      "__tags": ["phonetics", "pronunciation", "basics"],
+      "word": "pronunciation",
+      "plural": "pronunciations",
+      "translation_note": "",
+      "examples": [
+        "The pronunciation of 'cat' is /kæt/.",
+        "She has good pronunciation in English."
+      ]
     }
   },
 
@@ -7217,21 +7306,7 @@
       ]
     }
   },
-  {
-    "alphabet": {
-      "__pos": "noun",
-      "__tags": ["nouns"],
-      "__icon_text": "A-Z",
-      "__forced_pronunciation": "alphabet",
-      "word": "alphabet",
-      "plural": "alphabets",
-      "translation_note": "",
-      "examples": [
-        "The English alphabet has 26 letters.",
-        "We are learning the alphabet in class."
-      ]
-    }
-  },
+
   {
     "aunt": {
       "__pos": "noun",
@@ -7449,20 +7524,7 @@
       ]
     }
   },
-  {
-    "word": {
-      "__pos": "noun",
-      "__tags": ["nouns"],
-      "word": "word",
-      "plural": "words",
-      "translation_note": "",
-      "examples": [
-        "Words are made of letters.",
-        "Please write a word on the board.",
-        "I learned a new word today."
-      ]
-    }
-  },
+
   {
     "on_(preposition_of_place)": {
       "__pos": "preposition",
@@ -9345,19 +9407,7 @@
       ]
     }
   },
-  {
-    "letter": {
-      "__pos": "noun",
-      "__tags": ["phonetics"],
-      "word": "letter",
-      "plural": "letters",
-      "translation_note": "",
-      "examples": [
-        "A letter is a symbol in the alphabet.",
-        "The English letters are A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z."
-      ]
-    }
-  },
+
   {
     "vowel": {
       "__pos": "noun",
@@ -9385,61 +9435,56 @@
   },
 
   {
-    "upper case": {
+    "uppercase": {
       "__pos": "adjective",
-      "__tags": ["phonetics"],
-      "__synonyms": ["capital"],
-      "word": "upper case",
+      "__tags": ["phonetics", "uppercase letters"],
+      "__synonyms": ["upper case", "capital"],
+      "__icon_text": "A",
+      "__forced_pronunciation": "uppercase",
+      "word": "uppercase",
       "translation_note": "",
       "examples": [
-        "The upper case letters of the alphabet are A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, and Z.",
-        "Upper case letters are capital letters.",
-        "The first letter of a sentence is usually upper case.",
-        "The word 'USA' is written in upper case."
+        "The uppercase letters of the alphabet are A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, and Z.",
+        "Uppercase letters are capital letters.",
+        "The first letter of a sentence is usually uppercase.",
+        "The word 'USA' is written in uppercase."
       ]
     }
   },
 
   {
-    "lower case": {
+    "lowercase": {
       "__pos": "adjective",
-      "__tags": ["phonetics"],
-      "__synonyms": ["small"],
-      "word": "lower case",
+      "__tags": ["phonetics", "lowercase letters"],
+      "__synonyms": ["lower case", "small"],
+
+      "word": "lowercase",
+      "__icon_text": "a",
+      "__forced_pronunciation": "lowercase",
       "translation_note": "",
       "examples": [
-        "The lower case letters of the alphabet are a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, and z.",
-        "Lower case letters are small letters.",
-        "The word 'cat' is written in lower case."
-      ]
-    }
-  },
-  {
-    "singular": {
-      "__pos": "adjective",
-      "__tags": ["grammar"],
-      "__icon_text": "1",
-      "__forced_pronunciation": "singular",
-      "word": "singular",
-      "translation_note": "",
-      "examples": [
-        "In grammar, singular means one.",
-        "The singular form of 'cats' is 'cat'."
+        "The lowercase letters of the alphabet are a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, and z.",
+        "Lowercase letters are small letters.",
+        "The word 'cat' is written in lowercase."
       ]
     }
   },
 
   {
-    "plural": {
-      "__pos": "adjective",
-      "__tags": ["grammar"],
-      "__icon_text": "2+",
-      "__forced_pronunciation": "plural",
-      "word": "plural",
+    "pronounce": {
+      "__pos": "verb",
+      "__tags": ["phonetics"],
+      "word": "pronounce",
+      "conjugation": {
+        "present": "pronounce",
+        "present_participle": "pronouncing",
+        "past": "pronounced"
+      },
       "translation_note": "",
       "examples": [
-        "In grammar, plural means more than one.",
-        "The plural form of 'cat' is 'cats'."
+        "How do you pronounce this word?",
+        "She pronounced it correctly.",
+        "He is learning to pronounce English words."
       ]
     }
   }
