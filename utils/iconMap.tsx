@@ -427,6 +427,7 @@ import HandIcon from '@/assets/icons/licensed/hand.svg';
 import HeadIcon from '@/assets/icons/licensed/head.svg';
 import LegIcon from '@/assets/icons/licensed/leg.svg';
 import MouthIcon from '@/assets/icons/licensed/mouth.svg';
+import TongueIcon from '@/assets/icons/licensed/tongue.svg';
 import NoseIcon from '@/assets/icons/licensed/nose.svg';
 import StoreIcon from '@/assets/icons/licensed/store.svg'; // Example for a custom icon
 import BathroomIcon from '@/assets/icons/licensed/bathroom.svg'; // Example for a custom icon
@@ -1105,6 +1106,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   head: HeadIcon,
   leg: LegIcon,
   mouth: MouthIcon,
+  tongue: TongueIcon,
   'decimal point': DecimalPointIcon,
   ball: BallIcon, // Example for a custom icon
   cube: CubeIcon, // Example for a custom icon
