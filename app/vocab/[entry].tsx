@@ -54,9 +54,46 @@ export default function VocabEntryPage() {
   const { deckEntries, deckIndex, setDeckIndex } = useDeck();
   const { speakText } = useSpeech();
 
+  // Refs for stable access in event handlers
+  const deckEntriesRef = React.useRef(deckEntries);
+  const deckIndexRef = React.useRef(deckIndex);
+  React.useEffect(() => {
+    deckEntriesRef.current = deckEntries;
+    deckIndexRef.current = deckIndex;
+  }, [deckEntries, deckIndex]);
+
   React.useEffect(() => {
     // No logging or side effects needed
   }, [deckEntries, deckIndex]);
+
+  // Deck navigation logic (always use DeckContext state)
+  // (Removed duplicate declarations of prevEntry, nextEntry, prevIdx, nextIdx)
+
+  // Keyboard navigation: left/right arrow for prev/next card (always use DeckContext state)
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const entries = deckEntriesRef.current;
+      const idx = deckIndexRef.current;
+      if (!entries || idx === null) return;
+      if (e.key === 'ArrowLeft' && idx > 0) {
+        setDeckIndex(idx - 1);
+        router.replace({
+          pathname: '/vocab/[entry]',
+          params: { entry: entries[idx - 1] },
+        });
+      } else if (e.key === 'ArrowRight' && idx < entries.length - 1) {
+        setDeckIndex(idx + 1);
+        router.replace({
+          pathname: '/vocab/[entry]',
+          params: { entry: entries[idx + 1] },
+        });
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [setDeckIndex, router]);
 
   // Find the vocab entry
   const vocabEntryObj = vocabularyData.find(
@@ -354,6 +391,10 @@ export default function VocabEntryPage() {
                         ).map((v: string, i: number) => [String(i), v])
                       )
                     : (vocabEntry as any).__abbreviation_pronunciations,
+                  synonym_notes:
+                    typeof (vocabEntry as any).synonym_notes === 'string'
+                      ? { default: (vocabEntry as any).synonym_notes }
+                      : (vocabEntry as any).synonym_notes,
                 }}
               />
             </View>
