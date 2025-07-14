@@ -28,6 +28,13 @@ import AbbreviationsDisplay from '@/components/AbbreviationsDisplay';
 
 import LessonBacklink from '@/components/LessonBacklink';
 import SynonymDisplay from '@/components/SynonymDisplay';
+
+// Extend the Window interface to include __globalVocabScrollY
+declare global {
+  interface Window {
+    __globalVocabScrollY?: number;
+  }
+}
 export function generateStaticParams() {
   return vocabularyData.map((entry: any) => {
     const name = Object.keys(entry)[0];
@@ -57,6 +64,19 @@ export default function VocabEntryPage() {
   // Refs for stable access in event handlers
   const deckEntriesRef = React.useRef(deckEntries);
   const deckIndexRef = React.useRef(deckIndex);
+  const scrollViewRef = React.useRef<ScrollView>(null);
+  // Store scroll position between navigations (persist across remounts)
+  // Use a global variable so it survives navigation
+  // eslint-disable-next-line no-var
+  var __globalVocabScrollY =
+    typeof window !== 'undefined' &&
+    window.hasOwnProperty('__globalVocabScrollY')
+      ? window.__globalVocabScrollY
+      : undefined;
+  const scrollPosRef = React.useRef(
+    typeof __globalVocabScrollY === 'number' ? __globalVocabScrollY : 0
+  );
+
   React.useEffect(() => {
     deckEntriesRef.current = deckEntries;
     deckIndexRef.current = deckIndex;
@@ -66,8 +86,22 @@ export default function VocabEntryPage() {
     // No logging or side effects needed
   }, [deckEntries, deckIndex]);
 
-  // Deck navigation logic (always use DeckContext state)
-  // (Removed duplicate declarations of prevEntry, nextEntry, prevIdx, nextIdx)
+  // Restore scroll position if set
+  React.useEffect(() => {
+    // Always restore scroll position if set (even if 0)
+    if (typeof scrollPosRef.current === 'number' && scrollViewRef.current) {
+      setTimeout(() => {
+        scrollViewRef.current?.scrollTo({
+          y: scrollPosRef.current,
+          animated: false,
+        });
+        // Clear global after restoring
+        if (typeof window !== 'undefined') {
+          window.__globalVocabScrollY = undefined;
+        }
+      }, 0);
+    }
+  }, [entryName]);
 
   // Keyboard navigation: left/right arrow for prev/next card (always use DeckContext state)
   React.useEffect(() => {
@@ -75,6 +109,15 @@ export default function VocabEntryPage() {
       const entries = deckEntriesRef.current;
       const idx = deckIndexRef.current;
       if (!entries || idx === null) return;
+      const retainScroll = e.shiftKey;
+      if (
+        (e.key === 'ArrowLeft' && idx > 0) ||
+        (e.key === 'ArrowRight' && idx < entries.length - 1)
+      ) {
+        if (typeof window !== 'undefined') {
+          window.__globalVocabScrollY = retainScroll ? scrollPosRef.current : 0;
+        }
+      }
       if (e.key === 'ArrowLeft' && idx > 0) {
         setDeckIndex(idx - 1);
         router.replace({
@@ -308,9 +351,16 @@ export default function VocabEntryPage() {
   // Always render the navigation row, but only show chevrons if prev/next exist
   return (
     <ScrollView
+      ref={scrollViewRef}
       contentContainerStyle={{
         alignItems: 'center',
       }}
+      onScroll={(e) => {
+        // Keep scroll position up to date for fallback
+        scrollPosRef.current = e.nativeEvent.contentOffset.y;
+        // Do NOT update global here; only update when shift is held during navigation
+      }}
+      scrollEventThrottle={16}
     >
       <View style={styles.outerContainer}>
         <Notes noteKey={`vocab_${entryName}`} />
@@ -334,7 +384,14 @@ export default function VocabEntryPage() {
           >
             {prevEntry ? (
               <TouchableOpacity
-                onPress={() => {
+                onPress={(e) => {
+                  // Detect shift key
+                  const retainScroll = e && (e as any).shiftKey;
+                  if (typeof window !== 'undefined') {
+                    window.__globalVocabScrollY = retainScroll
+                      ? scrollPosRef.current
+                      : 0;
+                  }
                   setDeckIndex(prevIdx);
                   router.replace({
                     pathname: '/vocab/[entry]',
@@ -410,7 +467,14 @@ export default function VocabEntryPage() {
           >
             {nextEntry ? (
               <TouchableOpacity
-                onPress={() => {
+                onPress={(e) => {
+                  // Detect shift key
+                  const retainScroll = e && (e as any).shiftKey;
+                  if (typeof window !== 'undefined') {
+                    window.__globalVocabScrollY = retainScroll
+                      ? scrollPosRef.current
+                      : 0;
+                  }
                   setDeckIndex(nextIdx);
                   router.replace({
                     pathname: '/vocab/[entry]',
