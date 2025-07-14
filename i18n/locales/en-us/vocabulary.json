@@ -939,6 +939,20 @@
     }
   },
   {
+    "nose": {
+      "__pos": "noun",
+      "__tags": ["nouns", "body", "body parts"],
+      "word": "nose",
+      "plural": "noses",
+      "translation_note": "",
+      "examples": [
+        "He has a big nose.",
+        "She touched her nose.",
+        "I have a cold and my nose is stuffy."
+      ]
+    }
+  },
+  {
     "lie": {
       "__pos": "verb",
       "__tags": ["verbs"],

@@ -427,6 +427,7 @@ import HandIcon from '@/assets/icons/licensed/hand.svg';
 import HeadIcon from '@/assets/icons/licensed/head.svg';
 import LegIcon from '@/assets/icons/licensed/leg.svg';
 import MouthIcon from '@/assets/icons/licensed/mouth.svg';
+import NoseIcon from '@/assets/icons/licensed/nose.svg';
 import StoreIcon from '@/assets/icons/licensed/store.svg'; // Example for a custom icon
 import BathroomIcon from '@/assets/icons/licensed/bathroom.svg'; // Example for a custom icon
 import RestroomIcon from '@/assets/icons/licensed/restroom.svg'; // Example for a custom icon
@@ -1106,6 +1107,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   help: HelpIcon, // Example for a custom icon
   interpreter: InterpreterIcon, // Example for a custom
   '911 operator': NineOneOneOperatorIcon,
+  nose: NoseIcon, // Example for a custom icon
   noon: NoonIcon, // Example for a custom icon
   morning: MorningIcon, // Example for a custom icon
   afternoon: AfternoonIcon, // Example for a custom icon
