@@ -8912,7 +8912,7 @@
   {
     "9-1-1": {
       "__pos": "noun",
-      "__tags": ["emergency", "numbers", "emergencies"],
+      "__tags": ["emergency", "emergencies"],
       "__icon_text": "9-1-1",
       "__forced_pronunciation": "nine one one",
       "word": "9-1-1",
