@@ -9105,5 +9105,55 @@
       ]
     }
   },
+  {
+    "divorced": {
+      "__pos": "adjective",
+      "__tags": ["people", "relationships"],
+      "word": "divorced",
+      "translation_note": "",
+      "examples": [
+        "She is divorced and lives alone.",
+        "They got divorced last year."
+      ]
+    }
+  },
+  {
+    "widowed": {
+      "__pos": "adjective",
+      "__tags": ["people", "relationships"],
+      "word": "widowed",
+      "translation_note": "",
+      "examples": [
+        "She is widowed and lives alone.",
+        "He became widowed after his spouse passed away."
+      ]
+    }
+  },
+  {
+    "single": {
+      "__pos": "adjective",
+      "__tags": ["people", "relationships"],
+      "word": "single",
+      "translation_note": "",
+      "examples": [
+        "She is single and enjoys her independence.",
+        "He has been single for a while."
+      ]
+    }
+  },
+  {
+    "marital status": {
+      "__pos": "noun",
+      "__tags": ["people", "relationships"],
+      "word": "marital status",
+      "translation_note": "",
+      "examples": [
+        "What is your marital status?",
+        "Her marital status is single.",
+        "His marital status is divorced.",
+        "Their marital status is married.",
+        "My marital status is widowed."
+      ]
+    }
   }
 ]

@@ -96,7 +96,11 @@ import ColorIcon from '@/assets/icons/licensed/color.svg'; // Example for a cust
 import ColorWheelIcon from '@/assets/icons/licensed/color_wheel.svg'; // Example for a custom icon
 import HusbandIcon from '@/assets/icons/licensed/husband.svg'; // Add this import
 import WifeIcon from '@/assets/icons/licensed/wife.svg'; // Add this import
-import MarriedIcon from '@/assets/icons/licensed/married.svg'; // Add this import
+import MarriedIcon from '@/assets/icons/licensed/married.svg'; // Add this
+import WidowedIcon from '@/assets/icons/licensed/widowed.svg'; // Add this import
+import SingleIcon from '@/assets/icons/licensed/single.svg'; // Add this import
+import DivorcedIcon from '@/assets/icons/licensed/divorced.svg';
+import MaritalStatusIcon from '@/assets/icons/licensed/marital_status.svg'; // Example for a custom icon
 import SpouseIcon from '@/assets/icons/licensed/spouse.svg'; // Add this import
 import FamilyIcon from '@/assets/icons/licensed/family.svg'; // Add this import
 import BrotherIcon from '@/assets/icons/licensed/brother.svg';
@@ -672,6 +676,10 @@ export const iconMap: Record<string, React.FC<any>> = {
   wife: WifeIcon,
   spouse: SpouseIcon,
   married: MarriedIcon,
+  single: SingleIcon,
+  divorced: DivorcedIcon,
+  widowed: WidowedIcon,
+  'marital status': MaritalStatusIcon,
   family: FamilyIcon,
   sibling: SiblingIcon,
   brother: BrotherIcon,
