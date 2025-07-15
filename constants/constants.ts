@@ -126,6 +126,7 @@ const posColors: Record<string, string> = {
   multigraph: '#64045c', // Add this line for multigraph color
   article: '#6E6E6E',
   letter: '#000000',
+  contraction: '#000000',
 };
 
 // Centralized max width for centered layouts

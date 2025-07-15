@@ -9555,5 +9555,83 @@
         "He felt tired after the long day."
       ]
     }
+  },
+  {
+    "I'm": {
+      "__pos": "contraction",
+      "__tags": ["contractions"],
+      "__synonyms": ["I am"],
+      "__icon_text": "I'm",
+      "word": "I'm",
+      "translation_note": "",
+      "examples": ["I'm happy.", "I'm a student."]
+    }
+  },
+  {
+    "you're": {
+      "__pos": "contraction",
+      "__tags": ["contractions"],
+      "__synonyms": ["you are"],
+      "__icon_text": "you're",
+
+      "word": "you're",
+      "translation_note": "",
+      "examples": ["You're my friend.", "You're welcome!"]
+    }
+  },
+  {
+    "he's": {
+      "__pos": "contraction",
+      "__tags": ["contractions"],
+      "__synonyms": ["he is"],
+      "__icon_text": "he's",
+      "word": "he's",
+      "translation_note": "",
+      "examples": ["He's a teacher.", "He's gone home."]
+    }
+  },
+  {
+    "she's": {
+      "__pos": "contraction",
+      "__tags": ["contractions"],
+      "__synonyms": ["she is"],
+      "__icon_text": "she's",
+      "word": "she's",
+      "translation_note": "",
+      "examples": ["She's my sister.", "She's finished her homework."]
+    }
+  },
+  {
+    "it's": {
+      "__pos": "contraction",
+      "__tags": ["contractions"],
+      "__synonyms": ["it is"],
+      "__icon_text": "it's",
+      "word": "it's",
+      "translation_note": "",
+      "examples": ["It's raining.", "It's been a long day."]
+    }
+  },
+  {
+    "we're": {
+      "__pos": "contraction",
+      "__tags": ["contractions"],
+      "__synonyms": ["we are"],
+      "__icon_text": "we're",
+      "word": "we're",
+      "translation_note": "",
+      "examples": ["We're classmates.", "We're going to the park."]
+    }
+  },
+  {
+    "they're": {
+      "__pos": "contraction",
+      "__tags": ["contractions"],
+      "__synonyms": ["they are"],
+      "__icon_text": "they're",
+      "word": "they're",
+      "translation_note": "",
+      "examples": ["They're my friends.", "They're playing outside."]
+    }
   }
 ]

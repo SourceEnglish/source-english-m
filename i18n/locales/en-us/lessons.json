@@ -310,6 +310,61 @@
       }
     }
   },
+
+  {
+    "contractions vocab": {
+      "name": "contractions vocab",
+      "__tags": ["contractions"],
+      "__type": "vocabulary",
+      "__order": 11,
+      "__hidden": false,
+
+      "__vocab": {
+        "contractions": [
+          "I'm",
+          "you're",
+          "he's",
+          "she's",
+          "it's",
+          "we're",
+          "they're",
+          "I've",
+          "you've",
+          "we've",
+          "they've",
+          "I'd",
+          "you'd",
+          "he'd",
+          "she'd",
+          "we'd",
+          "they'd",
+          "I'll",
+          "you'll",
+          "he'll",
+          "she'll",
+          "we'll",
+          "they'll",
+          "can't",
+          "won't",
+          "don't",
+          "doesn't",
+          "isn't",
+          "aren't",
+          "wasn't",
+          "weren't",
+          "didn't",
+          "hasn't",
+          "haven't",
+          "hadn't",
+          "wouldn't",
+          "shouldn't",
+          "couldn't",
+          "mustn't",
+          "let's"
+        ]
+      }
+    }
+  },
   {
     "days and weeks vocab": {
       "name": "days and weeks vocab",
