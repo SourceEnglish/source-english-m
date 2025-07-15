@@ -9487,5 +9487,23 @@
         "He is learning to pronounce English words."
       ]
     }
+  },
+  {
+    "swim": {
+      "__pos": "verb",
+      "__tags": ["actions"],
+      "word": "swim",
+      "conjugation": {
+        "present": "swim",
+        "present_participle": "swimming",
+        "past": "swam"
+      },
+      "translation_note": "",
+      "examples": [
+        "I love to swim in the ocean.",
+        "She is swimming in the pool.",
+        "He swam across the lake."
+      ]
+    }
   }
 ]

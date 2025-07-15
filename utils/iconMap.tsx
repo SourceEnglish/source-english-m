@@ -500,6 +500,7 @@ import TheyIcon from '@/assets/icons/licensed/they.svg'; // Example for a custom
 import WeIcon from '@/assets/icons/licensed/we.svg'; // Example for a custom icon
 import ItIcon from '@/assets/icons/licensed/it.svg'; // Example for a custom icon
 import PronunciationIcon from '@/assets/icons/licensed/pronunciation.svg'; // Example for a custom icon
+import SwimIcon from '@/assets/icons/licensed/swim.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -1111,6 +1112,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   'decimal point': DecimalPointIcon,
   pronunciation: PronunciationIcon, // Example for a custom icon
   pronounce: PronunciationIcon, // Example for a custom icon
+  swim: SwimIcon,
   ball: BallIcon, // Example for a custom icon
   cube: CubeIcon, // Example for a custom icon
   triangle: TriangleIcon, // Example for a custom icon
