@@ -258,5 +258,20 @@
     "__order": 27,
     "__type": "quote",
     "text": "Tom and Kim are teachers."
+  },
+  {
+    "_id": "to_be_video_header",
+    "__lessons": ["to be"],
+    "__order": 28,
+    "__type": "header",
+    "text": "Video: The Verb 'To Be'",
+    "__forced_pronunciation": "Video: The Verb two bee"
+  },
+  {
+    "_id": "to_be_video",
+    "__lessons": ["to be"],
+    "__order": 29,
+    "__type": "video",
+    "__src": "https://www.youtube.com/watch?v=wQM_JvYyyRc"
   }
 ]
