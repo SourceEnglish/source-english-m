@@ -505,6 +505,7 @@ import GoodIcon from '@/assets/icons/licensed/good.svg'; // Example for a custom
 import FeelIcon from '@/assets/icons/licensed/feel.svg'; // Example for a custom icon
 import VowelIcon from '@/assets/icons/open_source/vowel.svg'; // Example for a custom icon
 import ConsonantIcon from '@/assets/icons/open_source/consonant.svg'; // Example for a custom icon
+import SoundIcon from '@/assets/icons/licensed/sound.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -1150,6 +1151,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   good: GoodIcon, // Example for a custom icon
   vowel: VowelIcon, // Example for a custom icon
   consonant: ConsonantIcon, // Example for a custom icon
+  sound: SoundIcon,
 
   // ...etc
 };

@@ -6934,6 +6934,16 @@
     }
   },
   {
+    "sound": {
+      "__pos": "noun",
+      "__tags": ["nouns"],
+      "word": "sound",
+      "plural": "sounds",
+      "translation_note": "",
+      "examples": ["I hear a sound.", "The sound is loud."]
+    }
+  },
+  {
     "school": {
       "__pos": "noun",
       "__tags": ["places", "education"],
