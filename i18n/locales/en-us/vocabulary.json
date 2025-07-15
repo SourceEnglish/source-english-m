@@ -6937,6 +6937,10 @@
     "sound": {
       "__pos": "noun",
       "__tags": ["nouns"],
+      "__synonyms": ["pronunciation"],
+      "synonym_notes": {
+        "pronunciation": "'Sound' refers to any noise or auditory sensation, while 'pronunciation' specifically refers to the way words are spoken."
+      },
       "word": "sound",
       "plural": "sounds",
       "translation_note": "",
@@ -7125,6 +7129,10 @@
     "pronunciation": {
       "__pos": "noun",
       "__tags": ["phonetics", "pronunciation", "basics"],
+      "__syonyms": ["sound"],
+      "synonym_notes": {
+        "sound": "'Sound' refers to any noise or auditory sensation, while 'pronunciation' specifically refers to the way words are spoken."
+      },
       "word": "pronunciation",
       "plural": "pronunciations",
       "translation_note": "",
