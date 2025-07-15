@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import { GetAnimatedLetter } from '@/constants/StrokeData';
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
-import VocabEntryDisplay from '@/components/VocabEntryDisplay';
 import Notes from '@/components/Notes';
 import ExampleSentences from '@/components/ExampleSentences';
 import ExampleEntries from '@/components/ExampleEntries';
@@ -28,6 +27,7 @@ import AbbreviationsDisplay from '@/components/AbbreviationsDisplay';
 
 import LessonBacklink from '@/components/LessonBacklink';
 import SynonymDisplay from '@/components/SynonymDisplay';
+import VocabCard from '@/components/VocabCard';
 
 // Extend the Window interface to include __globalVocabScrollY
 declare global {
@@ -425,10 +425,9 @@ export default function VocabEntryPage() {
             }}
           >
             <View style={{ flex: 1 }}>
-              <VocabEntryDisplay
-                entry={{
+              <VocabCard
+                card={{
                   ...vocabEntry,
-                  // Patch __synonym_pronunciations and __abbreviation_pronunciations to be objects if they are arrays
                   __synonym_pronunciations: Array.isArray(
                     (vocabEntry as any).__synonym_pronunciations
                   )
@@ -453,6 +452,7 @@ export default function VocabEntryPage() {
                       ? { default: (vocabEntry as any).synonym_notes }
                       : (vocabEntry as any).synonym_notes,
                 }}
+                size="large"
               />
             </View>
           </View>

@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useSpeech } from '@/contexts/SpeechContext';
 import ReadableText from '@/components/ReadableText';
-import InlineCardPreview from '@/components/InlineCardPreview';
+import VocabCard from '@/components/VocabCard';
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import CardsIcon from '@/assets/icons/licensed/cards.svg';
@@ -220,9 +220,10 @@ const PageLink: React.FC<PageLinkProps> = ({
                 }}
               >
                 {vocabEntries.slice(0, maxCards).map((entry: any) => (
-                  <InlineCardPreview
+                  <VocabCard
                     key={entry.__objectKey || entry.word}
                     card={entry}
+                    size="small"
                   />
                 ))}
               </View>

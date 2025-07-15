@@ -4,9 +4,7 @@ import VocabularySection from './VocabularySection';
 import PlayPronunciationButton from './PlayPronunciationButton';
 import vocabulary from '@/i18n/locales/en-us/vocabulary.json';
 import ReadableText from './ReadableText';
-import InlineCardPreview, {
-  VocabularyCarouselContext,
-} from './InlineCardPreview';
+import VocabCard, { VocabularyCarouselContext } from './VocabCard';
 
 interface ExampleEntry {
   ipa?: string;
@@ -98,7 +96,7 @@ const ExampleEntries: React.FC<ExampleEntriesProps> = ({
                 <View key={idx} style={styles.wordRow}>
                   {vocabEntry && (
                     <View style={{ marginRight: 10 }}>
-                      <InlineCardPreview card={vocabEntry} />
+                      <VocabCard card={vocabEntry} size="small" />
                     </View>
                   )}
                   <PlayPronunciationButton

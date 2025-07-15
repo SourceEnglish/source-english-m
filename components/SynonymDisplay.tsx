@@ -2,9 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, useWindowDimensions } from 'react-native';
 import VocabularySection from './VocabularySection';
 import ReadableText from './ReadableText';
-import InlineCardPreview, {
-  VocabularyCarouselContext,
-} from './InlineCardPreview';
+import InlineCardPreview from './VocabCard';
+import VocabCard, { VocabularyCarouselContext } from './VocabCard';
 import vocabulary from '@/i18n/locales/en-us/vocabulary.json';
 
 interface SynonymDisplayProps {
@@ -56,7 +55,7 @@ const SynonymDisplay: React.FC<SynonymDisplayProps> = ({
                 <View style={styles.synonymMain}>
                   {vocabEntry && (
                     <View style={{ marginRight: 10 }}>
-                      <InlineCardPreview card={vocabEntry} />
+                      <VocabCard card={vocabEntry} size="small" />
                     </View>
                   )}
                   <View style={styles.synonymContent}>

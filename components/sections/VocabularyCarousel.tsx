@@ -1,8 +1,7 @@
 import React, { useMemo } from 'react';
 import { ScrollView, View, StyleSheet } from 'react-native';
-import InlineCardPreview, {
-  VocabularyCarouselContext,
-} from '../InlineCardPreview';
+import InlineCardPreview from '../VocabCard';
+import VocabCard, { VocabularyCarouselContext } from '../VocabCard';
 import vocabulary from '@/i18n/locales/en-us/vocabulary.json';
 import { useDeck } from '@/contexts/DeckContext';
 import { useRouter } from 'expo-router';
@@ -79,10 +78,11 @@ const VocabularyCarousel: React.FC<VocabularyCarouselProps> = ({ tags }) => {
           contentContainerStyle={styles.scrollContent}
         >
           {vocabEntries.map((entry, idx) => (
-            <InlineCardPreview
+            <VocabCard
               card={entry}
               key={entry.__objectKey || idx}
               onPress={() => handleCardPress(entry, idx)}
+              size="small"
             />
           ))}
         </ScrollView>

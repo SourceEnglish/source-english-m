@@ -4,7 +4,7 @@ import { ScrollView, View, Text, StyleSheet, Platform } from 'react-native';
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
 import sectionsData from '@/i18n/locales/en-us/sections.json';
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
-import CardPreview from '@/components/CardPreview';
+import VocabCard from '@/components/VocabCard';
 import SectionRenderer from '@/components/SectionRenderer';
 import Notes from '@/components/Notes';
 import { useDeck } from '@/contexts/DeckContext';
@@ -87,11 +87,12 @@ export default function LessonPage() {
             }}
           >
             {vocabEntries.map((entry: any, idx: number) => (
-              <CardPreview
+              <VocabCard
                 key={entry.vocabKey}
                 card={entry}
                 vocabKey={entry.vocabKey}
                 cardIndex={idx}
+                size="medium"
               />
             ))}
           </View>
