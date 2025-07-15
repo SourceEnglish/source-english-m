@@ -7814,7 +7814,7 @@
   },
 
   {
-    "quotation_mark": {
+    "quotation mark": {
       "__pos": "punctuation",
       "__tags": ["punctuation"],
       "__icon_text": "\"",
@@ -7824,7 +7824,7 @@
     }
   },
   {
-    "exclamation_point": {
+    "exclamation point": {
       "__pos": "punctuation",
       "__tags": ["punctuation"],
       "__icon_text": "!",

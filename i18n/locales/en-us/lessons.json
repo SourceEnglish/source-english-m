@@ -4,7 +4,45 @@
       "name": "letters",
       "__tags": ["letters"],
       "__type": "vocabulary",
-      "__order": 1
+      "__order": 1,
+      "__vocab": {
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "misc": [
+          "alphabet",
+          "letter",
+          "uppercase",
+          "lowercase",
+          "vowel",
+          "consonant"
+        ]
+      }
     }
   },
   {
@@ -12,7 +50,113 @@
       "name": "numbers",
       "__tags": ["numbers"],
       "__type": "vocabulary",
-      "__order": 2
+      "__order": 2,
+      "__vocab": {
+        "numbers": [
+          "zero",
+          "one",
+          "two",
+          "three",
+          "four",
+          "five",
+          "six",
+          "seven",
+          "eight",
+          "nine",
+          "ten",
+          "eleven",
+          "twelve",
+          "thirteen",
+          "fourteen",
+          "fifteen",
+          "sixteen",
+          "seventeen",
+          "eighteen",
+          "nineteen",
+          "twenty",
+          "twenty-one",
+          "twenty-two",
+          "twenty-three",
+          "twenty-four",
+          "twenty-five",
+          "twenty-six",
+          "twenty-seven",
+          "twenty-eight",
+          "twenty-nine",
+          "thirty",
+          "thirty-one",
+          "thirty-two",
+          "thirty-three",
+          "thirty-four",
+          "thirty-five",
+          "thirty-six",
+          "thirty-seven",
+          "thirty-eight",
+          "thirty-nine",
+          "forty",
+          "forty-one",
+          "forty-two",
+          "forty-three",
+          "forty-four",
+          "forty-five",
+          "forty-six",
+          "forty-seven",
+          "forty-eight",
+          "forty-nine",
+          "fifty",
+          "fifty-one",
+          "fifty-two",
+          "fifty-three",
+          "fifty-four",
+          "fifty-five",
+          "fifty-six",
+          "fifty-seven",
+          "fifty-eight",
+          "fifty-nine",
+          "sixty",
+          "sixty-one",
+          "sixty-two",
+          "sixty-three",
+          "sixty-four",
+          "sixty-five",
+          "sixty-six",
+          "sixty-seven",
+          "sixty-eight",
+          "sixty-nine",
+          "seventy",
+          "seventy-one",
+          "seventy-two",
+          "seventy-three",
+          "seventy-four",
+          "seventy-five",
+          "seventy-six",
+          "seventy-seven",
+          "seventy-eight",
+          "seventy-nine",
+          "eighty",
+          "eighty-one",
+          "eighty-two",
+          "eighty-three",
+          "eighty-four",
+          "eighty-five",
+          "eighty-six",
+          "eighty-seven",
+          "eighty-eight",
+          "eighty-nine",
+          "ninety",
+          "ninety-one",
+          "ninety-two",
+          "ninety-three",
+          "ninety-four",
+          "ninety-five",
+          "ninety-six",
+          "ninety-seven",
+          "ninety-eight",
+          "ninety-nine",
+          "one hundred"
+        ],
+        "misc": ["number", "decimal point"]
+      }
     }
   },
   {
@@ -20,7 +164,21 @@
       "name": "consonant digraphs",
       "__tags": ["consonant multigraphs"],
       "__type": "vocabulary",
-      "__order": 3
+      "__order": 3,
+      "__vocab": {
+        "consonant digraphs": [
+          "ch",
+          "sh",
+          "th",
+          "wh",
+          "ph",
+          "ck",
+          "ng",
+          "qu",
+          "wr",
+          "kn"
+        ]
+      }
     }
   },
   {
@@ -28,7 +186,22 @@
       "name": "vowel digraphs",
       "__tags": ["vowel multigraphs"],
       "__type": "vocabulary",
-      "__order": 3
+      "__order": 3,
+      "__vocab": {
+        "vowel digraphs": [
+          "ai",
+          "au",
+          "ay",
+          "ea",
+          "ee",
+          "ie",
+          "oa",
+          "oe",
+          "oo",
+          "ou",
+          "ow"
+        ]
+      }
     }
   },
   {
@@ -36,7 +209,20 @@
       "name": "rhotic vowels",
       "__tags": ["rhotic vowels"],
       "__type": "vocabulary",
-      "__order": 3.5
+      "__order": 3.5,
+      "__vocab": {
+        "rhotic vowels": [
+          "ar",
+          "air_(multigraph)",
+          "ear_(multigraph)",
+          "eer",
+          "er",
+          "ir",
+          "ire",
+          "or_(multigraph)",
+          "ur"
+        ]
+      }
     }
   },
   {
@@ -56,7 +242,18 @@
       "__type": "vocabulary",
       "__order": 5,
       "__hidden": false,
-      "__lesson": "basics vocab"
+      "__lesson": "basics vocab",
+      "__vocab": {
+        "alphabet and letters": [
+          "alphabet",
+          "letter",
+          "uppercase",
+          "lowercase"
+        ],
+        "words and sentences": ["word", "sentence", "period"],
+        "singular and plural": ["singular", "plural"],
+        "pronunciation": ["pronunciation", "sound"]
+      }
     }
   },
   {
@@ -75,7 +272,18 @@
       "__type": "vocabulary",
       "__order": 7,
       "__lesson": "subject pronouns",
-      "__hidden": true
+      "__hidden": true,
+      "__vocab": {
+        "singular subject pronouns": [
+          "singular",
+          "I_(pronoun)",
+          "you",
+          "he",
+          "she",
+          "it"
+        ],
+        "plural subject pronouns": ["plural", "we", "you", "they"]
+      }
     }
   },
   {
@@ -94,7 +302,12 @@
       "__type": "vocabulary",
       "__hidden": true,
       "__order": 9,
-      "__lesson": "to be"
+      "__lesson": "to be",
+      "__vocab": {
+        "be": ["be"],
+        "singular forms of to be": ["singular", "am", "are", "is"],
+        "plural form of to be": ["are"]
+      }
     }
   },
   {
@@ -102,7 +315,21 @@
       "name": "days and weeks vocab",
       "__tags": ["days"],
       "__type": "vocabulary",
-      "__order": 3
+      "__order": 3,
+      "__vocab": {
+        "days": [
+          "day",
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "week": ["week", "weekend"],
+        "yesterday, today, tomorrow": ["yesterday", "today", "tomorrow"]
+      }
     }
   },
   {
@@ -110,7 +337,24 @@
       "name": "months vocab",
       "__tags": ["months"],
       "__type": "vocabulary",
-      "__order": 4
+      "__order": 4,
+      "__vocab": {
+        "months": [
+          "month",
+          "january",
+          "february",
+          "march",
+          "april",
+          "may",
+          "june",
+          "july",
+          "august",
+          "september",
+          "october",
+          "november",
+          "december"
+        ]
+      }
     }
   },
   {
@@ -118,7 +362,10 @@
       "name": "seasons vocab",
       "__tags": ["seasons"],
       "__type": "vocabulary",
-      "__order": 5
+      "__order": 5,
+      "__vocab": {
+        "seasons": ["season", "winter", "spring", "summer", "autumn", "fall"]
+      }
     }
   },
   {
@@ -127,7 +374,23 @@
       "__tags": ["colors"],
       "__type": "vocabulary",
       "__order": 5.5,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "colors": [
+          "color",
+          "red",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+          "purple",
+          "pink",
+          "brown",
+          "black",
+          "white",
+          "gray"
+        ]
+      }
     }
   },
 
@@ -137,7 +400,28 @@
       "__tags": ["family"],
       "__type": "vocabulary",
       "__order": 14.5,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "family": [
+          "family",
+          "mother",
+          "mom",
+          "father",
+          "dad",
+          "parent",
+          "daughter",
+          "son",
+          "child",
+          "sister",
+          "brother",
+          "sibling",
+          "wife",
+          "husband",
+          "spouse",
+          "married"
+        ],
+        "extended family": ["aunt", "uncle"]
+      }
     }
   },
 
@@ -157,7 +441,20 @@
       "__type": "vocabulary",
       "__order": 7,
       "__lesson": "weather",
-      "__hidden": true
+      "__hidden": true,
+      "__vocab": {
+        "weather": [
+          "weather",
+          "sunny",
+          "rainy",
+          "cloudy",
+          "snowy",
+          "windy",
+          "stormy",
+          "foggy"
+        ],
+        "temperature": ["temperature", "hot", "cold", "warm", "cool"]
+      }
     }
   },
   {
@@ -165,7 +462,10 @@
       "name": "temperature vocab",
       "__tags": ["temperature"],
       "__type": "vocabulary",
-      "__order": 8
+      "__order": 8,
+      "__vocab": {
+        "temperature": ["temperature", "hot", "cold", "warm", "cool"]
+      }
     }
   },
   {
@@ -174,7 +474,8 @@
       "__tags": ["personal information"],
       "__type": "lesson",
       "__order": 9,
-      "__vocab_lesson": "personal information vocab"
+      "__vocab_lesson": "personal information vocab",
+      "__vocab": { "name": ["name", "first name", "last name", "full name"] }
     }
   },
   {
@@ -184,7 +485,27 @@
       "__type": "vocabulary",
       "__order": 10,
       "__lesson": "personal information",
-      "__hidden": true
+      "__hidden": true,
+      "__vocab": {
+        "names": [
+          "name",
+          "first name",
+          "middle name",
+          "last name",
+          "full name"
+        ],
+        "address": [
+          "address",
+          "house number",
+          "street",
+          "apartment number",
+          "unit number",
+          "city",
+          "state",
+          "zip code"
+        ],
+        "misc": ["email address", "phone number", "date of birth"]
+      }
     }
   },
 
@@ -215,7 +536,18 @@
       "__type": "vocabulary",
       "__order": 16,
       "__hidden": true,
-      "__lesson": "possessive adjectives"
+      "__lesson": "possessive adjectives",
+      "__vocab": {
+        "singular possessive adjectives": [
+          "singular",
+          "my",
+          "your",
+          "his",
+          "her",
+          "its"
+        ],
+        "plural possessive adjectives": ["plural", "our", "your", "their"]
+      }
     }
   },
 
@@ -237,7 +569,12 @@
       "__type": "vocabulary",
       "__order": 17,
       "__hidden": false,
-      "__lesson": "yes or no questions"
+      "__lesson": "yes or no questions",
+      "__vocab": {
+        "affirmative": ["yes"],
+        "negative": ["no", "not"],
+        "common verbs": ["be", "do"]
+      }
     }
   },
   {
@@ -257,7 +594,22 @@
       "__type": "vocabulary",
       "__order": 19,
       "__hidden": true,
-      "__lesson": "illnesses"
+      "__lesson": "illnesses",
+      "__vocab": {
+        "feel / be": ["feel", "be", "sick", "tired", "nauseous", "depressed"],
+        "have": [
+          "have",
+          "headache",
+          "fever",
+          "flu",
+          "cold",
+          "backache",
+          "toothache",
+          "diarrhea",
+          "allergy",
+          "broken"
+        ]
+      }
     }
   },
   {
@@ -277,7 +629,19 @@
       "__type": "vocabulary",
       "__order": 21,
       "__hidden": true,
-      "__lesson": "wh questions"
+      "__lesson": "wh questions",
+      "__vocab": {
+        "wh question words": [
+          "question",
+          "who",
+          "what",
+          "where",
+          "when",
+          "why",
+          "how",
+          "which"
+        ]
+      }
     }
   },
   {
@@ -304,7 +668,62 @@
       "__tags": ["verbs"],
       "__type": "vocabulary",
       "__order": 14.7,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "verbs": [
+          "lie",
+          "say",
+          "shop",
+          "eat",
+          "run",
+          "be",
+          "do",
+          "go",
+          "have",
+          "jump",
+          "like",
+          "love",
+          "relax",
+          "shower",
+          "sing",
+          "sleep",
+          "stop",
+          "study",
+          "wake up",
+          "get up",
+          "watch",
+          "walk",
+          "arrive",
+          "wait",
+          "die",
+          "think",
+          "read",
+          "speak",
+          "write",
+          "listen",
+          "ask",
+          "fit",
+          "work",
+          "hire",
+          "open",
+          "play",
+          "pull",
+          "push",
+          "put",
+          "use",
+          "sit",
+          "know",
+          "born",
+          "start",
+          "cook",
+          "send",
+          "call",
+          "text",
+          "buy",
+          "pay",
+          "sell"
+        ]
+      }
     }
   },
   {
@@ -324,7 +743,17 @@
       "__type": "vocabulary",
       "__order": 25,
       "__hidden": false,
-      "__lesson": "adverbs of frequency"
+      "__lesson": "adverbs of frequency",
+      "__vocab": {
+        "adverbs of frequency": [
+          "always",
+          "usually",
+          "often",
+          "sometimes",
+          "rarely",
+          "never"
+        ]
+      }
     }
   },
   {
@@ -333,7 +762,28 @@
       "__tags": ["clothing"],
       "__type": "vocabulary",
       "__order": 26,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "clothing": [
+          "tie",
+          "shirt",
+          "pants",
+          "sunglasses",
+          "skirt",
+          "shorts",
+          "shoe",
+          "hat",
+          "glove",
+          "glasses",
+          "dress",
+          "coat",
+          "jacket",
+          "belt",
+          "ring",
+          "watch",
+          "uniform"
+        ]
+      }
     }
   },
   {
@@ -353,7 +803,11 @@
       "__type": "vocabulary",
       "__order": 28,
       "__hidden": false,
-      "__lesson": "articles"
+      "__lesson": "articles",
+      "__vocab": {
+        "indefinite articles": ["a_(article)", "an"],
+        "definite articles": ["the"]
+      }
     }
   },
   {
@@ -362,7 +816,21 @@
       "__tags": ["animals"],
       "__type": "vocabulary",
       "__order": 29,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "animals": [
+          "animal",
+          "cat",
+          "dog",
+          "chicken",
+          "cow",
+          "bird",
+          "pig",
+          "sheep",
+          "fish"
+        ],
+        "pet": ["pet"]
+      }
     }
   },
   {
@@ -371,7 +839,22 @@
       "__tags": ["class"],
       "__type": "vocabulary",
       "__order": 30,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "classroom objects": ["chair", "desk", "table", "whiteboard", "clock"],
+        "school supplies": [
+          "backpack",
+          "pen",
+          "pencil",
+          "eraser",
+          "marker",
+          "notebook",
+          "paper",
+          "book"
+        ],
+        "classroom people": ["teacher", "student"],
+        "classroom verbs": ["read", "speak", "write", "listen", "ask"]
+      }
     }
   },
   {
@@ -380,7 +863,14 @@
       "__tags": ["money"],
       "__type": "vocabulary",
       "__order": 30.5,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "verbs": ["pay", "buy", "sell"],
+        "forms of payment": ["dollar", "cent", "credit card"],
+        "price": ["price", "cost", "cheap", "expensive"],
+        "people descriptions": ["rich", "poor"],
+        "symbols": ["dollar sign", "cent sign", "decimal point"]
+      }
     }
   },
   {
@@ -389,7 +879,32 @@
       "__tags": ["vehicle"],
       "__type": "vocabulary",
       "__order": 15,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "vehicles": [
+          "vehicle",
+          "car",
+          "bus",
+          "truck",
+          "van",
+          "bicycle",
+          "bike",
+          "motorcycle",
+          "light rail",
+          "boat",
+          "airplane",
+          "plane",
+          "helicopter"
+        ],
+        "verbs": ["drive", "ride", "fly"],
+        "places": [
+          "bus stop",
+          "train station",
+          "airport",
+          "gas station",
+          "parking lot"
+        ]
+      }
     }
   },
   {
@@ -398,7 +913,19 @@
       "__tags": ["people", "person group"],
       "__type": "vocabulary",
       "__order": 14.6,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "people": [
+          "man",
+          "woman",
+          "person",
+          "boy",
+          "girl",
+          "child",
+          "kid",
+          "baby"
+        ]
+      }
     }
   },
   {
@@ -417,7 +944,22 @@
       "__type": "vocabulary",
       "__order": 32,
       "__lesson": "prepositions of place",
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "prepositions of place": [
+          "above",
+          "under",
+          "below",
+          "in",
+          "in front of",
+          "behind",
+          "beside",
+          "next to",
+          "between",
+          "across from",
+          "around"
+        ]
+      }
     }
   },
 
@@ -437,7 +979,17 @@
       "__tags": ["punctuation"],
       "__type": "vocabulary",
       "__order": 35,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "ending punctuation": ["period", "question mark", "exclamation point"],
+        "misc": [
+          "apostrophe",
+          "comma",
+          "quotation mark",
+          "hyphen",
+          "decimal point"
+        ]
+      }
     }
   },
   {
@@ -446,7 +998,28 @@
       "__tags": ["jobs"],
       "__type": "vocabulary",
       "__order": 36,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "nouns": ["work_(place)", "work_(job)", "job", "career"],
+        "verbs": ["work", "hire"],
+        "jobs": [
+          "writer",
+          "engineer",
+          "nurse",
+          "teacher",
+          "cook_(job)",
+          "chef",
+          "doctor",
+          "driver",
+          "farmer",
+          "firefighter",
+          "paramedic",
+          "police officer",
+          "mail carrier",
+          "interpreter",
+          "911 operator"
+        ]
+      }
     }
   },
   {
@@ -455,7 +1028,15 @@
       "__tags": ["places"],
       "__type": "vocabulary",
       "__order": 37,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "home": ["house", "apartment", "home"],
+
+        "emergency": ["hospital", "fire station", "police station"],
+        "businesses": ["bank", "restaurant", "store", "zoo", "hotel"],
+        "education": ["school", "college", "university"],
+        "misc": ["library", "post office", "building", "park"]
+      }
     }
   },
   {
@@ -465,7 +1046,20 @@
       "__type": "vocabulary",
       "__order": 38,
       "__hidden": false,
-      "__vocab_lesson": "rooms terms vocab"
+      "__vocab_lesson": "rooms terms vocab",
+      "__vocab": {
+        "room and building": ["room", "building"],
+        "parts of a room": [
+          "door",
+          "window",
+          "floor",
+          "ceiling",
+          "wall",
+          "stairs",
+          "roof"
+        ],
+        "adverbs": ["downstairs", "upstairs"]
+      }
     }
   },
   {
@@ -474,7 +1068,18 @@
       "__tags": ["rooms"],
       "__type": "vocabulary",
       "__order": 39,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "public rooms": ["classroom", "class", "restroom", "office"],
+        "house rooms": [
+          "kitchen",
+          "living room",
+          "bathroom",
+          "bedroom",
+          "dining room",
+          "office"
+        ]
+      }
     }
   },
 
@@ -484,7 +1089,22 @@
       "__tags": ["technology"],
       "__type": "vocabulary",
       "__order": 40,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "devices": [
+          "phone",
+          "computer",
+          "laptop",
+          "keyboard",
+          "mouse",
+          "television"
+        ],
+        "verbs": ["text", "email_(verb)", "call", "send"],
+        "messages": ["text message", "email", "message"],
+        "communication information": ["email address", "phone number"],
+
+        "internet": ["internet", "online", "website", "Wi-Fi"]
+      }
     }
   },
   {
@@ -493,7 +1113,21 @@
       "__tags": ["body parts"],
       "__type": "vocabulary",
       "__order": 41,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "head": [
+          "head",
+          "face",
+          "hair",
+          "eye",
+          "ear",
+          "nose",
+          "mouth",
+          "tooth",
+          "tongue"
+        ],
+        "other": ["body", "arm", "hand", "leg", "foot", "knee", "back"]
+      }
     }
   },
 
@@ -513,7 +1147,18 @@
       "__tags": ["irregular plurals"],
       "__type": "vocabulary",
       "__order": 44,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "irregular plurals": [
+          "man",
+          "foot",
+          "tooth",
+          "woman",
+          "person",
+          "child",
+          "fish"
+        ]
+      }
     }
   },
 
@@ -523,7 +1168,10 @@
       "__tags": ["yes", "agreement"],
       "__type": "vocabulary",
       "__order": 46,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "affirmative": ["yes", "exclamation", "OK", "yeah", "alright"]
+      }
     }
   },
 
@@ -533,7 +1181,20 @@
       "__tags": ["greetings", "farewells"],
       "__type": "vocabulary",
       "__order": 48,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "greetings": [
+          "hello",
+          "good morning",
+          "good afternoon",
+          "good evening",
+          "hey",
+          "hi",
+          "welcome",
+          "exclamation"
+        ],
+        "farewells": ["good night", "take care", "bye", "goodbye", "see you"]
+      }
     }
   },
 
@@ -543,7 +1204,12 @@
       "__tags": ["manners", "politeness"],
       "__type": "vocabulary",
       "__order": 50,
-      "__hidden": false
+      "__hidden": false,
+      "__vocab": {
+        "please": ["please"],
+        "thanks": ["thank you", "thanks"],
+        "you're welcome": ["you're welcome", "you are welcome"]
+      }
     }
   }
 ]

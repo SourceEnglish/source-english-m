@@ -33,6 +33,7 @@ const sectionsData = [
 ];
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import VocabCard from '@/components/VocabCard';
+import Subheader from '@/components/sections/Subheader';
 import SectionRenderer from '@/components/SectionRenderer';
 import Notes from '@/components/Notes';
 import { useDeck } from '@/contexts/DeckContext';
@@ -65,27 +66,28 @@ export default function LessonPage() {
   const displayName = lessonData.name || lessonName;
 
   if (lessonData.__type === 'vocabulary') {
-    const vocabEntries = Array.isArray(vocabularyData)
-      ? vocabularyData
-          .map((entry: any) => {
+    // If __vocab is present, use it to group vocab entries by heading
+    const vocabGroups =
+      lessonData.__vocab && typeof lessonData.__vocab === 'object'
+        ? lessonData.__vocab
+        : null;
+    // Build a lookup for all vocab entries by key
+    const vocabLookup = Array.isArray(vocabularyData)
+      ? Object.fromEntries(
+          vocabularyData.map((entry: any) => {
             const key = Object.keys(entry)[0];
-            const cardData = entry[key];
-            return {
-              ...cardData,
-              vocabKey: key,
-              __forced_pronunciation: cardData.__forced_pronunciation,
-            };
+            return [key, entry[key]];
           })
-          .filter((entry: any) =>
-            lessonData.__tags?.some((tag: string) =>
-              entry.__tags?.includes(tag)
-            )
-          )
+        )
+      : {};
+
+    // For deck navigation, flatten all vocab keys in order
+    const allVocabKeys: string[] = vocabGroups
+      ? Object.values(vocabGroups).flat().map(String)
       : [];
 
     React.useEffect(() => {
-      const deckKeys = vocabEntries.map((entry: any) => entry.vocabKey);
-      setDeckEntries(deckKeys);
+      setDeckEntries(allVocabKeys);
       setDeckIndex(null);
       return () => {
         setDeckEntries(null);
@@ -104,26 +106,45 @@ export default function LessonPage() {
           {lessonData.intro && (
             <Text style={{ margin: 16, fontSize: 16 }}>{lessonData.intro}</Text>
           )}
-          <View
-            style={{
-              flexDirection: 'row',
-              flexWrap: 'wrap',
-              rowGap: 3,
-              columnGap: 3,
-              justifyContent:
-                Platform.OS !== 'web' ? 'space-between' : undefined,
-            }}
-          >
-            {vocabEntries.map((entry: any, idx: number) => (
-              <VocabCard
-                key={entry.vocabKey}
-                card={entry}
-                vocabKey={entry.vocabKey}
-                cardIndex={idx}
-                size="medium"
-              />
-            ))}
-          </View>
+          {vocabGroups
+            ? Object.entries(vocabGroups).map(([groupName, vocabKeys]) => (
+                <View
+                  key={groupName}
+                  style={{ marginBottom: 18, width: '100%' }}
+                >
+                  <Subheader
+                    text={
+                      groupName.charAt(0).toUpperCase() + groupName.slice(1)
+                    }
+                  />
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      flexWrap: 'wrap',
+                      rowGap: 3,
+                      columnGap: 3,
+                      justifyContent:
+                        Platform.OS !== 'web' ? 'space-between' : undefined,
+                    }}
+                  >
+                    {Array.isArray(vocabKeys) &&
+                      vocabKeys.map((vocabKey: string, idx: number) => {
+                        const card = vocabLookup[vocabKey];
+                        if (!card) return null;
+                        return (
+                          <VocabCard
+                            key={vocabKey}
+                            card={card}
+                            vocabKey={vocabKey}
+                            cardIndex={idx}
+                            size="medium"
+                          />
+                        );
+                      })}
+                  </View>
+                </View>
+              ))
+            : null}
         </View>
       </ScrollView>
     );

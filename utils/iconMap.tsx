@@ -1056,7 +1056,7 @@ export const iconMap: Record<string, React.FC<any>> = {
 
   apostrophe: apostropheIcon, // Example for a custom icon
   'question mark': questionMarkIcon, // Example for a custom icon
-  quotation_mark: quotationMarkIcon,
+  'quotation mark': quotationMarkIcon,
   'exclamation point': exclamationPointIcon, // Example for a custom icon
   // hyphen: hyphenIcon, // Example for a custom icon
   period: periodIcon, // Example for a custom icon
