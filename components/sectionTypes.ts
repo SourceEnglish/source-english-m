@@ -33,4 +33,5 @@ export interface Section {
   caption?: string;
   __type: SectionType;
   __tags?: string[]; // For vocabularyCarousel
+  __words?: string[]; // For vocabularyCarousel, list of words to display
 }

@@ -1,0 +1,367 @@
+[
+  {
+    "_id": "basics_letters",
+    "__lessons": ["basics"],
+    "__order": 1,
+    "__type": "header",
+    "text": "Letters"
+  },
+  {
+    "_id": "basics_letter_carousel",
+    "__lessons": ["basics"],
+    "__order": 1.5,
+    "__type": "vocabularyCarousel",
+    "__words": [
+      "letter",
+      "alphabet",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ]
+  },
+  {
+    "_id": "basics_letters_intro",
+    "__lessons": ["basics"],
+    "__order": 2,
+    "__type": "paragraph",
+    "text": "Letters are the building blocks of words. The English alphabet has 26 letters: A, B, C, ..., Z."
+  },
+  {
+    "_id": "basics_letters_uppercase_subheader",
+    "__lessons": ["basics"],
+    "__order": 2.1,
+    "__type": "subheader",
+    "text": "Uppercase Letters"
+  },
+  {
+    "_id": "basics_letters_uppercase_carousel",
+    "__lessons": ["basics"],
+    "__order": 2.14,
+    "__type": "vocabularyCarousel",
+    "__words": ["uppercase"]
+  },
+  {
+    "_id": "basics_letters_uppercase_paragraph",
+    "__lessons": ["basics"],
+    "__order": 2.15,
+    "__type": "paragraph",
+    "text": "Uppercase letters are the capital forms of the alphabet. They are used at the beginning of sentences and for names and other proper nouns. The uppercase letters are:"
+  },
+  {
+    "_id": "basics_letters_uppercase_paragraph_2",
+    "__lessons": ["basics"],
+    "__order": 2.2,
+    "__type": "paragraph",
+    "text": "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, and Z."
+  },
+  {
+    "_id": "basics_letters_uppercase_usage_paragraph",
+    "__lessons": ["basics"],
+    "__order": 2.21,
+    "__type": "paragraph",
+    "text": "Uppercase letters are used at the beginning of sentences. Every new sentence should start with a capital letter. This helps readers know when a new idea or statement begins."
+  },
+  {
+    "_id": "basics_letters_uppercase_example_1",
+    "__lessons": ["basics"],
+    "__order": 2.22,
+    "__type": "quote",
+    "text": "The dog is big."
+  },
+  {
+    "_id": "basics_letters_uppercase_example_2",
+    "__lessons": ["basics"],
+    "__order": 2.23,
+    "__type": "quote",
+    "text": "She is happy."
+  },
+  {
+    "_id": "basics_letters_uppercase_example_3",
+    "__lessons": ["basics"],
+    "__order": 2.24,
+    "__type": "quote",
+    "text": "It is sunny."
+  },
+  {
+    "_id": "basics_letters_uppercase_example_4",
+    "__lessons": ["basics"],
+    "__order": 2.25,
+    "__type": "quote",
+    "text": "I am a student."
+  },
+  {
+    "_id": "basics_letters_uppercase_proper_nouns_paragraph",
+    "__lessons": ["basics"],
+    "__order": 2.26,
+    "__type": "paragraph",
+    "text": "Uppercase letters are also used for names and other proper nouns. Proper nouns are special names for people, places, or things. For example:"
+  },
+  {
+    "_id": "basics_letters_uppercase_proper_nouns_example_1",
+    "__lessons": ["basics"],
+    "__order": 2.27,
+    "__type": "quote",
+    "text": "Tom"
+  },
+  {
+    "_id": "basics_letters_uppercase_proper_nouns_example_2",
+    "__lessons": ["basics"],
+    "__order": 2.28,
+    "__type": "quote",
+    "text": "Seattle"
+  },
+  {
+    "_id": "basics_letters_uppercase_proper_nouns_example_3",
+    "__lessons": ["basics"],
+    "__order": 2.29,
+    "__type": "quote",
+    "text": "America"
+  },
+  {
+    "_id": "basics_letters_lowercase_subheader",
+    "__lessons": ["basics"],
+    "__order": 2.3,
+    "__type": "subheader",
+    "text": "Lowercase Letters"
+  },
+  {
+    "_id": "basics_letters_lowercase_carousel",
+    "__lessons": ["basics"],
+    "__order": 2.31,
+    "__type": "vocabularyCarousel",
+    "__words": ["lowercase"]
+  },
+  {
+    "_id": "basics_letters_lowercase_paragraph",
+    "__lessons": ["basics"],
+    "__order": 2.35,
+    "__type": "paragraph",
+    "text": "Lowercase letters are the small forms of the alphabet. They are used in most writing and are often easier to read. The lowercase letters are:"
+  },
+  {
+    "_id": "basics_letters_lowercase_paragraph_2",
+    "__lessons": ["basics"],
+    "__order": 2.4,
+    "__type": "paragraph",
+    "text": "a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, and z."
+  },
+  {
+    "_id": "basics_words",
+    "__lessons": ["basics"],
+    "__order": 3,
+    "__type": "header",
+    "text": "Words"
+  },
+  {
+    "_id": "basics_words_carousel",
+    "__lessons": ["basics"],
+    "__order": 3.5,
+    "__type": "vocabularyCarousel",
+    "__words": ["word", "cat", "run", "happy", "good"]
+  },
+  {
+    "_id": "basics_words_intro",
+    "__lessons": ["basics"],
+    "__order": 4,
+    "__type": "paragraph",
+    "text": "Words are made by putting letters together. Each word has a meaning. For example:"
+  },
+  {
+    "_id": "basics_words_quote_cat",
+    "__lessons": ["basics"],
+    "__order": 4.1,
+    "__type": "quote",
+    "text": "cat"
+  },
+  {
+    "_id": "basics_words_quote_run",
+    "__lessons": ["basics"],
+    "__order": 4.3,
+    "__type": "quote",
+    "text": "run"
+  },
+  {
+    "_id": "basics_words_quote_happy",
+    "__lessons": ["basics"],
+    "__order": 4.4,
+    "__type": "quote",
+    "text": "happy"
+  },
+  {
+    "_id": "basics_sentences",
+    "__lessons": ["basics"],
+    "__order": 5,
+    "__type": "header",
+    "text": "Sentences"
+  },
+  {
+    "_id": "basics_sentences_carousel",
+    "__lessons": ["basics"],
+    "__order": 5.5,
+    "__type": "vocabularyCarousel",
+    "__words": ["sentence"]
+  },
+  {
+    "_id": "basics_sentences_intro",
+    "__lessons": ["basics"],
+    "__order": 6,
+    "__type": "paragraph",
+    "text": "A sentence is a group of words that expresses a complete idea. For example:"
+  },
+  {
+    "_id": "basics_sentences_example_1",
+    "__lessons": ["basics"],
+    "__order": 6.1,
+    "__type": "quote",
+    "text": "The cat runs."
+  },
+  {
+    "_id": "basics_sentences_example_2",
+    "__lessons": ["basics"],
+    "__order": 6.2,
+    "__type": "quote",
+    "text": "She is happy."
+  },
+  {
+    "_id": "basics_sentences_example_3",
+    "__lessons": ["basics"],
+    "__order": 6.3,
+    "__type": "quote",
+    "text": "I am good."
+  },
+  {
+    "_id": "basics_pronunciation",
+    "__lessons": ["basics"],
+    "__order": 7,
+    "__type": "header",
+    "text": "Pronunciation"
+  },
+  {
+    "_id": "basics_pronunciation_carousel",
+    "__lessons": ["basics"],
+    "__order": 7.1,
+    "__type": "vocabularyCarousel",
+    "__words": ["pronunciation"]
+  },
+  {
+    "_id": "basics_pronunciation_intro",
+    "__lessons": ["basics"],
+    "__order": 8,
+    "__type": "paragraph",
+    "text": "Pronunciation is how we say words. Good pronunciation helps others understand you."
+  },
+  {
+    "_id": "basics_singular_header",
+    "__lessons": ["basics"],
+    "__order": 8.1,
+    "__type": "header",
+    "text": "Singular"
+  },
+  {
+    "_id": "basics_singular_carousel",
+    "__lessons": ["basics"],
+    "__order": 8.15,
+    "__type": "vocabularyCarousel",
+    "__words": ["singular"]
+  },
+  {
+    "_id": "basics_singular_paragraph",
+    "__lessons": ["basics"],
+    "__order": 8.2,
+    "__type": "paragraph",
+    "text": "Singular means one person, animal, place, or thing. For example:"
+  },
+  {
+    "_id": "basics_singular_example_quote_a_cat",
+    "__lessons": ["basics"],
+    "__order": 8.21,
+    "__type": "quote",
+    "text": "cat"
+  },
+  {
+    "_id": "basics_singular_example_quote_a_book",
+    "__lessons": ["basics"],
+    "__order": 8.22,
+    "__type": "quote",
+    "text": "book"
+  },
+  {
+    "_id": "basics_singular_example_quote_one_student",
+    "__lessons": ["basics"],
+    "__order": 8.23,
+    "__type": "quote",
+    "text": "one student"
+  },
+  {
+    "_id": "basics_plural_header",
+    "__lessons": ["basics"],
+    "__order": 8.4,
+    "__type": "header",
+    "text": "Plural"
+  },
+  {
+    "_id": "basics_plural_carousel",
+    "__lessons": ["basics"],
+    "__order": 8.41,
+    "__type": "vocabularyCarousel",
+    "__words": ["plural"]
+  },
+  {
+    "_id": "basics_plural_paragraph",
+    "__lessons": ["basics"],
+    "__order": 8.5,
+    "__type": "paragraph",
+    "text": "Plural means more than one person, animal, place, or thing. For example:"
+  },
+  {
+    "_id": "basics_plural_example_quote_cats",
+    "__lessons": ["basics"],
+    "__order": 8.51,
+    "__type": "quote",
+    "text": "cats"
+  },
+  {
+    "_id": "basics_plural_example_quote_books",
+    "__lessons": ["basics"],
+    "__order": 8.52,
+    "__type": "quote",
+    "text": "books"
+  },
+  {
+    "_id": "basics_plural_example_quote_students",
+    "__lessons": ["basics"],
+    "__order": 8.53,
+    "__type": "quote",
+    "text": "two students"
+  },
+  {
+    "_id": "basics_plural_examples_list",
+    "__lessons": ["basics"],
+    "__order": 8.6,
+    "__type": "list",
+    "items": ["cats", "two books", "the students"]
+  }
+]

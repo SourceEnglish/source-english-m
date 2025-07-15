@@ -1,0 +1,373 @@
+[
+  {
+    "_id": "wh_questions_header",
+    "__lessons": ["wh questions"],
+    "__order": 1,
+    "__type": "header",
+    "text": "Wh- Questions"
+  },
+  {
+    "_id": "wh_questions_intro",
+    "__lessons": ["wh questions"],
+    "__order": 2,
+    "__type": "paragraph",
+    "text": "Wh- questions are questions that begin with words like who, what, where, when, why, or how. We use them to ask for information, not just yes or no."
+  },
+  {
+    "_id": "wh_questions_vocab_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 3,
+    "__type": "vocabularyCarousel",
+    "__words": ["question", "who", "what", "where", "why", "when", "how"]
+  },
+  {
+    "_id": "wh_questions_words_table",
+    "__lessons": ["wh questions"],
+    "__order": 4,
+    "__type": "table",
+    "__headers": [
+      { "text": "Wh- Word", "__type": "text" },
+      { "text": "Used for", "__type": "text" },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "who" },
+      { "__type": "text", "text": "person" },
+      { "__type": "text", "text": "Who is your teacher?" },
+      { "__type": "text", "text": "what" },
+      { "__type": "text", "text": "thing or information" },
+      { "__type": "text", "text": "What is your name?" },
+      { "__type": "text", "text": "where" },
+      { "__type": "text", "text": "place" },
+      { "__type": "text", "text": "Where do you live?" },
+      { "__type": "text", "text": "when" },
+      { "__type": "text", "text": "time" },
+      { "__type": "text", "text": "When is your birthday?" },
+      { "__type": "text", "text": "why" },
+      { "__type": "text", "text": "reason" },
+      { "__type": "text", "text": "Why are you late?" },
+      { "__type": "text", "text": "how" },
+      { "__type": "text", "text": "manner or way" },
+      { "__type": "text", "text": "How are you?" }
+    ]
+  },
+  {
+    "_id": "wh_questions_patterns_header",
+    "__lessons": ["wh questions"],
+    "__order": 5,
+    "__type": "subheader",
+    "text": "Common Patterns for Wh- Questions"
+  },
+  {
+    "_id": "wh_questions_pattern_do",
+    "__lessons": ["wh questions"],
+    "__order": 6,
+    "__type": "paragraph",
+    "text": "Pattern 1: Wh- word + do/does + subject + verb"
+  },
+  {
+    "_id": "wh_questions_pattern_do_example_1",
+    "__lessons": ["wh questions"],
+    "__order": 6.11,
+    "__type": "quote",
+    "text": "Where do you live?"
+  },
+  {
+    "_id": "wh_questions_pattern_do_example_2",
+    "__lessons": ["wh questions"],
+    "__order": 6.12,
+    "__type": "quote",
+    "text": "What does she eat?"
+  },
+  {
+    "_id": "wh_questions_pattern_be",
+    "__lessons": ["wh questions"],
+    "__order": 7,
+    "__type": "paragraph",
+    "text": "Pattern 2: Wh- word + be (am/is/are) + subject"
+  },
+  {
+    "_id": "wh_questions_pattern_be_example_1",
+    "__lessons": ["wh questions"],
+    "__order": 7.11,
+    "__type": "quote",
+    "text": "How are you?"
+  },
+  {
+    "_id": "wh_questions_pattern_be_example_2",
+    "__lessons": ["wh questions"],
+    "__order": 7.12,
+    "__type": "quote",
+    "text": "Where is your book?"
+  },
+  {
+    "_id": "wh_questions_examples_list",
+    "__lessons": ["wh questions"],
+    "__order": 9,
+    "__type": "list",
+    "items": [
+      "Who is your teacher?",
+      "What is your name?",
+      "Where do you live?",
+      "When is your birthday?",
+      "Why are you late?",
+      "How are you?",
+      "What do you like?",
+      "Where is the school?"
+    ]
+  },
+  {
+    "_id": "wh_questions_who_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 12,
+    "__type": "subheader",
+    "text": "Who"
+  },
+  {
+    "_id": "wh_questions_who_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 12.1,
+    "__type": "vocabularyCarousel",
+    "__words": ["who"]
+  },
+  {
+    "_id": "wh_questions_who_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 13,
+    "__type": "paragraph",
+    "text": "Use 'who' to ask about a person."
+  },
+  {
+    "_id": "wh_questions_who_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 14,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "Who is your teacher?" },
+      { "__type": "text", "text": "My teacher is Ms. Lee." },
+      { "__type": "text", "text": "Who are they?" },
+      { "__type": "text", "text": "They are my friends." },
+      { "__type": "text", "text": "Who lives here?" },
+      { "__type": "text", "text": "My brother lives here." }
+    ]
+  },
+  {
+    "_id": "wh_questions_what_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 15,
+    "__type": "subheader",
+    "text": "What"
+  },
+  {
+    "_id": "wh_questions_what_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 15.1,
+    "__type": "vocabularyCarousel",
+    "__words": ["what"]
+  },
+  {
+    "_id": "wh_questions_what_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 16,
+    "__type": "paragraph",
+    "text": "Use 'what' to ask about a thing or information."
+  },
+  {
+    "_id": "wh_questions_what_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 17,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "What is your name?" },
+      { "__type": "text", "text": "My name is Anna." },
+      { "__type": "text", "text": "What is your favorite color?" },
+      { "__type": "text", "text": "My favorite color is blue." },
+      { "__type": "text", "text": "What is this?" },
+      { "__type": "text", "text": "This is a book." },
+      { "__type": "text", "text": "What time is it?" },
+      { "__type": "text", "text": "It is three o'clock." },
+      { "__type": "text", "text": "What day is it?" },
+      { "__type": "text", "text": "It is Wednesday." },
+      { "__type": "text", "text": "What month is it?" },
+      { "__type": "text", "text": "It is June." }
+    ]
+  },
+  {
+    "_id": "wh_questions_where_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 18,
+    "__type": "subheader",
+    "text": "Where"
+  },
+  {
+    "_id": "wh_questions_where_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 18.1,
+    "__type": "vocabularyCarousel",
+    "__words": ["where"]
+  },
+  {
+    "_id": "wh_questions_where_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 19,
+    "__type": "paragraph",
+    "text": "Use 'where' to ask about a place."
+  },
+  {
+    "_id": "wh_questions_where_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 20,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "Where do you live?" },
+      { "__type": "text", "text": "I live in Seattle." },
+      { "__type": "text", "text": "Where is your book?" },
+      { "__type": "text", "text": "My book is on the table." },
+      { "__type": "text", "text": "Where are you from?" },
+      { "__type": "text", "text": "I am from Mexico." }
+    ]
+  },
+  {
+    "_id": "wh_questions_when_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 21,
+    "__type": "subheader",
+    "text": "When"
+  },
+  {
+    "_id": "wh_questions_when_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 21.1,
+    "__type": "vocabularyCarousel",
+    "__words": ["when"]
+  },
+  {
+    "_id": "wh_questions_when_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 22,
+    "__type": "paragraph",
+    "text": "Use 'when' to ask about time."
+  },
+  {
+    "_id": "wh_questions_when_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 23,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "When is your birthday?" },
+      { "__type": "text", "text": "My birthday is on July fourth." },
+      { "__type": "text", "text": "When do you wake up?" },
+      { "__type": "text", "text": "I wake up at 7:00 a.m." },
+      { "__type": "text", "text": "When does class start?" },
+      { "__type": "text", "text": "Class starts at 6:00 p.m." }
+    ]
+  },
+  {
+    "_id": "wh_questions_why_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 24,
+    "__type": "subheader",
+    "text": "Why"
+  },
+  {
+    "_id": "wh_questions_why_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 24.1,
+    "__type": "vocabularyCarousel",
+    "__words": ["why"]
+  },
+  {
+    "_id": "wh_questions_why_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 25,
+    "__type": "paragraph",
+    "text": "Use 'why' to ask about a reason."
+  },
+  {
+    "_id": "wh_questions_why_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 26,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "Why are you late?" },
+      { "__type": "text", "text": "I missed the bus." },
+      { "__type": "text", "text": "Why do you like Summer?" },
+      { "__type": "text", "text": "Because it is sunny and hot." }
+    ]
+  },
+  {
+    "_id": "wh_questions_how_subheader",
+    "__lessons": ["wh questions"],
+    "__order": 27,
+    "__type": "subheader",
+    "text": "How"
+  },
+  {
+    "_id": "wh_questions_how_carousel",
+    "__lessons": ["wh questions"],
+    "__order": 27.1,
+    "__type": "vocabularyCarousel",
+    "__words": ["how"]
+  },
+  {
+    "_id": "wh_questions_how_paragraph",
+    "__lessons": ["wh questions"],
+    "__order": 28,
+    "__type": "paragraph",
+    "text": "Use 'how' to ask about manner, condition, quantity, or way."
+  },
+  {
+    "_id": "wh_questions_how_examples_table",
+    "__lessons": ["wh questions"],
+    "__order": 29,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Possible Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "How are you?" },
+      { "__type": "text", "text": "I am good." },
+      { "__type": "text", "text": "How do you spell your name?" },
+      { "__type": "text", "text": "A-N-N-A" },
+      { "__type": "text", "text": "How many children do you have?" },
+      { "__type": "text", "text": "I have three children." },
+      { "__type": "text", "text": "How old are you?" },
+      { "__type": "text", "text": "I am 30 years old." }
+    ]
+  },
+  {
+    "_id": "wh_questions_video_header",
+    "__lessons": ["wh questions"],
+    "__order": 30,
+    "__type": "header",
+    "text": "Wh- Questions Video"
+  },
+  {
+    "_id": "wh_questions_video",
+    "__lessons": ["wh questions"],
+    "__order": 31,
+    "__type": "video",
+    "__src": "https://www.youtube.com/watch?v=x_4AjSwTXdc"
+  }
+]

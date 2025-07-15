@@ -1,0 +1,262 @@
+[
+  {
+    "_id": "to_be_header",
+    "__lessons": ["to be"],
+    "__order": 3,
+    "__type": "header",
+    "text": "\"To Be\"",
+    "__forced_pronunciation": "two bee"
+  },
+  {
+    "_id": "to_be_be_tag_carousel",
+    "__lessons": ["to be"],
+    "__order": 3.1,
+    "__type": "vocabularyCarousel",
+    "__words": ["be"]
+  },
+  {
+    "_id": "to_be_usage_intro",
+    "__lessons": ["to be"],
+    "__order": 4,
+    "__type": "paragraph",
+    "text": "The verb 'to be' is very important in English. We use 'am', 'is', and 'are' to talk about who someone is, how someone is, or what something is. For example:",
+    "__forced_pronunciation": "The verb 'two bee' is very important in English. We use 'am', 'is', and 'are' to talk about who someone is, how someone is, or what something is. For example:"
+  },
+  {
+    "_id": "to_be_example_1",
+    "__lessons": ["to be"],
+    "__order": 6,
+    "__type": "quote",
+    "text": "I am a student."
+  },
+  {
+    "_id": "to_be_example_2",
+    "__lessons": ["to be"],
+    "__order": 7,
+    "__type": "quote",
+    "text": "She is happy."
+  },
+  {
+    "_id": "to_be_example_3",
+    "__lessons": ["to be"],
+    "__order": 8,
+    "__type": "quote",
+    "text": "They are friends."
+  },
+  {
+    "_id": "to_be_singular_header",
+    "__lessons": ["to be"],
+    "__order": 9,
+    "__type": "header",
+    "text": "Singular Forms of \"To Be\" (1)",
+    "__forced_pronunciation": "Singular Forms of to be"
+  },
+  {
+    "_id": "to_be_singular_subject_pronouns_carousel",
+    "__lessons": ["to be"],
+    "__order": 13.5,
+    "__type": "vocabularyCarousel",
+    "__words": [
+      "singular",
+      "I_(pronoun)",
+      "am",
+      "you",
+      "are",
+      "he",
+      "she",
+      "it",
+      "is"
+    ]
+  },
+  {
+    "_id": "to_be_singular_paragraph",
+    "__lessons": ["to be"],
+    "__order": 13.6,
+    "__type": "paragraph",
+    "text": "Use 'am' with I. Use 'is' with he, she, it, or one person or thing.",
+    "__forced_pronunciation": "Use 'am' with I. Use 'is' with he, she, it, or one person or thing."
+  },
+  {
+    "_id": "to_be_singular_table",
+    "__lessons": ["to be"],
+    "__order": 13.7,
+    "__type": "table",
+    "__headers": [
+      {
+        "text": "Singular Subject (1)",
+        "__type": "text",
+        "__forced_pronunciation": "Singular Subject"
+      },
+      {
+        "text": "'To Be'",
+        "__type": "text",
+        "__forced_pronunciation": "two bee"
+      },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "I", "__forced_pronunciation": "eye" },
+      { "__type": "text", "text": "am" },
+      { "__type": "text", "text": "I am a student." },
+      {
+        "__type": "text",
+        "text": "you (singular)",
+        "__forced_pronunciation": "you"
+      },
+      { "__type": "text", "text": "are" },
+      { "__type": "text", "text": "You are my friend." },
+      { "__type": "text", "text": "he" },
+      { "__type": "text", "text": "is" },
+      { "__type": "text", "text": "He is happy." },
+      { "__type": "text", "text": "she" },
+      { "__type": "text", "text": "is" },
+      { "__type": "text", "text": "She is happy." },
+      { "__type": "text", "text": "it" },
+      { "__type": "text", "text": "is" },
+      { "__type": "text", "text": "It is a cat." },
+      { "__type": "text", "text": "Tom" },
+      { "__type": "text", "text": "is" },
+      { "__type": "text", "text": "Tom is a student." },
+      { "__type": "text", "text": "Kim" },
+      { "__type": "text", "text": "is" },
+      { "__type": "text", "text": "Kim is a teacher." }
+    ]
+  },
+  {
+    "_id": "to_be_singular_quotes_I",
+    "__lessons": ["to be"],
+    "__order": 14,
+    "__type": "quote",
+    "text": "I am a student."
+  },
+  {
+    "_id": "to_be_singular_quotes_you",
+    "__lessons": ["to be"],
+    "__order": 15,
+    "__type": "quote",
+    "text": "You are my friend."
+  },
+  {
+    "_id": "to_be_singular_examples_he",
+    "__lessons": ["to be"],
+    "__order": 16,
+    "__type": "quote",
+    "text": "He is happy."
+  },
+  {
+    "_id": "to_be_singular_examples_she",
+    "__lessons": ["to be"],
+    "__order": 17,
+    "__type": "quote",
+    "text": "She is happy."
+  },
+  {
+    "_id": "to_be_singular_examples_it",
+    "__lessons": ["to be"],
+    "__order": 18,
+    "__type": "quote",
+    "text": "It is a cat."
+  },
+  {
+    "_id": "to_be_singular_examples_tom",
+    "__lessons": ["to be"],
+    "__order": 19,
+    "__type": "quote",
+    "text": "Tom is a student."
+  },
+  {
+    "_id": "to_be_singular_examples_kim",
+    "__lessons": ["to be"],
+    "__order": 20,
+    "__type": "quote",
+    "text": "Kim is a teacher."
+  },
+  {
+    "_id": "to_be_plural_header",
+    "__lessons": ["to be"],
+    "__order": 21,
+    "__type": "header",
+    "text": "Plural Forms of \"To Be\" (2+)",
+    "__forced_pronunciation": "Plural Forms of two bee"
+  },
+  {
+    "_id": "to_be_vocab_carousel_plural",
+    "__lessons": ["to be"],
+    "__order": 21.5,
+    "__type": "vocabularyCarousel",
+    "__words": ["plural", "we", "you", "they", "are"]
+  },
+  {
+    "_id": "to_be_plural_paragraph",
+    "__lessons": ["to be"],
+    "__order": 22,
+    "__type": "paragraph",
+    "text": "Use 'are' with you (plural), we, they, or more than one person or thing.",
+    "__forced_pronunciation": "Use 'are' with you, we, they, or more than one person or thing."
+  },
+  {
+    "_id": "to_be_plural_table",
+    "__lessons": ["to be"],
+    "__order": 23,
+    "__type": "table",
+    "__headers": [
+      {
+        "text": "Plural Subject (2+)",
+        "__type": "text",
+        "__forced_pronunciation": "Plural Subject"
+      },
+      {
+        "text": "'To Be'",
+        "__type": "text",
+        "__forced_pronunciation": "two bee"
+      },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "we" },
+      { "__type": "text", "text": "are" },
+      { "__type": "text", "text": "We are friends." },
+      {
+        "__type": "text",
+        "text": "you (plural)",
+        "__forced_pronunciation": "you"
+      },
+      { "__type": "text", "text": "are" },
+      { "__type": "text", "text": "You are my friends." },
+      { "__type": "text", "text": "they" },
+      { "__type": "text", "text": "are" },
+      { "__type": "text", "text": "They are students." },
+      { "__type": "text", "text": "Tom and Kim" },
+      { "__type": "text", "text": "are" },
+      { "__type": "text", "text": "Tom and Kim are teachers." }
+    ]
+  },
+  {
+    "_id": "to_be_plural_examples_we",
+    "__lessons": ["to be"],
+    "__order": 24,
+    "__type": "quote",
+    "text": "We are friends."
+  },
+  {
+    "_id": "to_be_plural_examples_you",
+    "__lessons": ["to be"],
+    "__order": 25,
+    "__type": "quote",
+    "text": "You are my friends."
+  },
+  {
+    "_id": "to_be_plural_examples_they",
+    "__lessons": ["to be"],
+    "__order": 26,
+    "__type": "quote",
+    "text": "They are students."
+  },
+  {
+    "_id": "to_be_plural_examples_tom_and_kim",
+    "__lessons": ["to be"],
+    "__order": 27,
+    "__type": "quote",
+    "text": "Tom and Kim are teachers."
+  }
+]

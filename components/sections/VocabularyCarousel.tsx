@@ -8,28 +8,40 @@ import { useRouter } from 'expo-router';
 import { useSpeech } from '@/contexts/SpeechContext';
 
 interface VocabularyCarouselProps {
-  tags: string[]; // Array of tags to filter vocabulary
+  words: string[]; // Array of words to display in the carousel
 }
 
-const VocabularyCarousel: React.FC<VocabularyCarouselProps> = ({ tags }) => {
+const VocabularyCarousel: React.FC<VocabularyCarouselProps> = ({ words }) => {
   const { setDeckEntries, setDeckIndex } = useDeck();
   const router = useRouter();
   const { readAloudMode } = useSpeech();
 
   // Flatten vocabulary (array of objects) to array of entries
   const vocabEntries = useMemo(() => {
-    return vocabulary
-      .flatMap((entryObj: any) =>
-        Object.entries(entryObj).map(([key, entry]) => ({
-          ...(entry as any),
-          __objectKey: key,
-        }))
-      )
-      .filter(
-        (entry: any) =>
-          entry.__tags && entry.__tags.some((tag: string) => tags.includes(tag))
-      );
-  }, [tags]);
+    // Flatten vocabulary to array of entries with __objectKey
+    const allEntries = vocabulary.flatMap((entryObj: any) =>
+      Object.entries(entryObj).map(([key, entry]) => ({
+        ...(entry as any),
+        __objectKey: key,
+      }))
+    );
+
+    // Filter by words: match __objectKey first, then word property
+    return words
+      .map((word) => {
+        // Try to find by __objectKey
+        let found = allEntries.find((entry) => entry.__objectKey === word);
+        if (!found) {
+          // Try to find by word property (case-insensitive)
+          found = allEntries.find(
+            (entry) =>
+              entry.word && entry.word.toLowerCase() === word.toLowerCase()
+          );
+        }
+        return found;
+      })
+      .filter(Boolean); // Remove undefineds
+  }, [words]);
 
   // Create array of entry keys for the deck
   const deckEntryKeys = useMemo(() => {
@@ -64,7 +76,7 @@ const VocabularyCarousel: React.FC<VocabularyCarouselProps> = ({ tags }) => {
         target = entry.__objectKey.toLowerCase();
       }
     } else {
-      target = entry.__objectKey;
+      target = entry.__objectKey || entry.word;
     }
     router.push(`/vocab/${encodeURIComponent(target)}`);
   };
@@ -80,7 +92,7 @@ const VocabularyCarousel: React.FC<VocabularyCarouselProps> = ({ tags }) => {
           {vocabEntries.map((entry, idx) => (
             <VocabCard
               card={entry}
-              key={entry.__objectKey || idx}
+              key={entry.__objectKey || entry.word || idx}
               onPress={() => handleCardPress(entry, idx)}
               size="small"
             />

@@ -89,7 +89,7 @@ const SectionRenderer = ({ section }: { section: Section }) => {
         />
       );
     case 'vocabularyCarousel':
-      return <VocabularyCarousel tags={section.__tags || []} />;
+      return <VocabularyCarousel words={section.__words || []} />;
     // Table and other types can be added here
     default:
       return null;

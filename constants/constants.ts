@@ -123,7 +123,7 @@ const posColors: Record<string, string> = {
   'proper noun': '#FF69B4',
   vowel: '#0C71B9',
   consonant: '#F44C40',
-  multigraph: '#8e44ad', // Add this line for multigraph color
+  multigraph: '#64045c', // Add this line for multigraph color
   article: '#6E6E6E',
   letter: '#000000',
 };

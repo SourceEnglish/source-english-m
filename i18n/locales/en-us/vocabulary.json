@@ -6786,6 +6786,7 @@
       "examples": ["Who is next?", "The next bus arrives soon."]
     }
   },
+
   {
     "off": {
       "__pos": "preposition",
@@ -9503,6 +9504,37 @@
         "I love to swim in the ocean.",
         "She is swimming in the pool.",
         "He swam across the lake."
+      ]
+    }
+  },
+  {
+    "good": {
+      "__pos": "adjective",
+      "word": "good",
+      "translation_note": "",
+      "examples": [
+        "I am good.",
+        "This is a good book.",
+        "She is a good student.",
+        "He did a good job."
+      ]
+    }
+  },
+  {
+    "feel": {
+      "__pos": "verb",
+      "__tags": ["verbs", "emotions"],
+      "word": "feel",
+      "conjugation": {
+        "present": "feel",
+        "present_participle": "feeling",
+        "past": "felt"
+      },
+      "translation_note": "",
+      "examples": [
+        "I feel happy today.",
+        "She is feeling sad.",
+        "He felt tired after the long day."
       ]
     }
   }

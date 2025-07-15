@@ -1,0 +1,166 @@
+[
+  {
+    "_id": "personal_info_header",
+    "__lessons": ["personal information"],
+    "__order": 53,
+    "__type": "header",
+    "text": "Personal Information"
+  },
+  {
+    "_id": "personal_info_intro",
+    "__lessons": ["personal information"],
+    "__order": 54,
+    "__type": "paragraph",
+    "text": "Personal information is basic information about you. You often write or say this information on forms or when meeting new people."
+  },
+  {
+    "_id": "personal_info_name_header",
+    "__lessons": ["personal information"],
+    "__order": 55,
+    "__type": "subheader",
+    "text": "Name"
+  },
+  {
+    "_id": "personal_info_name_paragraph",
+    "__lessons": ["personal information"],
+    "__order": 56,
+    "__type": "paragraph",
+    "text": "Your name is how people identify you. It usually includes your first name, middle name, and last name."
+  },
+  {
+    "_id": "personal_info_name_carousel",
+    "__lessons": ["personal information"],
+    "__order": 57,
+    "__type": "vocabularyCarousel",
+    "__words": ["name", "first name", "last name", "middle name"]
+  },
+  {
+    "_id": "personal_info_name_table",
+    "__lessons": ["personal information"],
+    "__order": 58,
+    "__type": "table",
+    "__headers": [
+      { "text": "Term", "__type": "text" },
+      { "text": "Example", "__type": "text" },
+      { "text": "Meaning", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "name/\nfull name" },
+      { "__type": "text", "text": "Anna Marie Smith " },
+      {
+        "__type": "text",
+        "text": "your first name, last name, and middle name"
+      },
+      { "__type": "text", "text": "first name" },
+      { "__type": "text", "text": "Anna" },
+      { "__type": "text", "text": "your given name" },
+      { "__type": "text", "text": "middle name" },
+      { "__type": "text", "text": "Marie" },
+      { "__type": "text", "text": "the name between your first and last name" },
+      { "__type": "text", "text": "last name" },
+      { "__type": "text", "text": "Smith" },
+      { "__type": "text", "text": "your family name or surname" }
+    ]
+  },
+  {
+    "_id": "personal_info_address_subheader",
+    "__lessons": ["personal information"],
+    "__order": 59,
+    "__type": "subheader",
+    "text": "Address"
+  },
+  {
+    "_id": "personal_info_address_paragraph",
+    "__lessons": ["personal information"],
+    "__order": 60,
+    "__type": "paragraph",
+    "text": "Your address tells where you live. It usually includes your house number, street, apartment / unit number, city, state, and ZIP code."
+  },
+  {
+    "_id": "personal_info_address_carousel",
+    "__lessons": ["personal information"],
+    "__order": 61,
+    "__type": "vocabularyCarousel",
+    "__words": [
+      "address",
+      "house number",
+      "street",
+      "apartment number",
+      "city",
+      "state",
+      "ZIP code"
+    ]
+  },
+  {
+    "_id": "personal_info_address_table",
+    "__lessons": ["personal information"],
+    "__order": 62,
+    "__type": "table",
+    "__headers": [
+      { "text": "Term", "__type": "text" },
+      { "text": "Example", "__type": "text" },
+      { "text": "Meaning", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "address" },
+      {
+        "__type": "text",
+        "text": "123 Main St. APT A13\nSeattle, WA 98101",
+        "__forced_pronunciation": "123 Main street apartment A13 Seattle, Washington 98101"
+      },
+      { "__type": "text", "text": "where you live" },
+      { "__type": "text", "text": "house number" },
+      { "__type": "text", "text": "123" },
+      { "__type": "text", "text": "the number of your house or building" },
+      { "__type": "text", "text": "street name" },
+      { "__type": "text", "text": "Main Street\nMain St.\nMain St" },
+      { "__type": "text", "text": "the name of your street" },
+      { "__type": "text", "text": "apartment number/\nunit number" },
+      {
+        "__type": "text",
+        "text": "APT A13\nApt A13\nApartment A13\nApt. A13\n#A13",
+        "__forced_pronunciation": "Apartment A thirteen"
+      },
+      { "__type": "text", "text": "the number of your apartment or unit" },
+      { "__type": "text", "text": "city" },
+      { "__type": "text", "text": "Seattle" },
+      { "__type": "text", "text": "the city where you live" },
+      { "__type": "text", "text": "state" },
+      {
+        "__type": "text",
+        "text": "Washington\nWA",
+        "__forced_pronunciation": "Washington"
+      },
+      { "__type": "text", "text": "the state where you live" },
+      { "__type": "text", "text": "ZIP code" },
+      { "__type": "text", "text": "98101" },
+      { "__type": "text", "text": "the ZIP code for your area" }
+    ]
+  },
+  {
+    "_id": "personal_info_other_subheader",
+    "__lessons": ["personal information"],
+    "__order": 63,
+    "__type": "subheader",
+    "text": "Other"
+  },
+  {
+    "_id": "personal_info_other_paragraph",
+    "__lessons": ["personal information"],
+    "__order": 64,
+    "__type": "paragraph",
+    "text": "Other personal information includes your email address, phone number, and date of birth."
+  },
+  {
+    "_id": "personal_info_other_carousel",
+    "__lessons": ["personal information"],
+    "__order": 65,
+    "__type": "vocabularyCarousel",
+    "__words": [
+      "email address",
+      "phone number",
+      "telephone number",
+      "date of birth"
+    ]
+  }
+]

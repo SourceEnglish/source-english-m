@@ -2,7 +2,35 @@ import React from 'react';
 import { useLocalSearchParams } from 'expo-router';
 import { ScrollView, View, Text, StyleSheet, Platform } from 'react-native';
 import lessonsData from '@/i18n/locales/en-us/lessons.json';
-import sectionsData from '@/i18n/locales/en-us/sections.json';
+import basicsSections from '@/i18n/locales/en-us/sections/basics.json';
+import foodSections from '@/i18n/locales/en-us/sections/food.json';
+import personalInfoSections from '@/i18n/locales/en-us/sections/personal information.json';
+import possessiveAdjSections from '@/i18n/locales/en-us/sections/possessive adjectives.json';
+import subjectPronounsSections from '@/i18n/locales/en-us/sections/subject pronouns.json';
+import toBeSections from '@/i18n/locales/en-us/sections/to be.json';
+import weatherSections from '@/i18n/locales/en-us/sections/weather.json';
+import yesOrNoQuestionsSections from '@/i18n/locales/en-us/sections/yes or no questions.json';
+import whQuestionsSections from '@/i18n/locales/en-us/sections/wh questions.json';
+import prepositionsOfPlaceSections from '@/i18n/locales/en-us/sections/prepositions of place.json';
+import articlesSections from '@/i18n/locales/en-us/sections/articles.json';
+import adverbsOfFrequencySections from '@/i18n/locales/en-us/sections/adverbs of frequency.json';
+import illnessesSections from '@/i18n/locales/en-us/sections/illnesses.json';
+
+const sectionsData = [
+  ...yesOrNoQuestionsSections,
+  ...weatherSections,
+  ...basicsSections,
+  ...foodSections,
+  ...personalInfoSections,
+  ...possessiveAdjSections,
+  ...subjectPronounsSections,
+  ...toBeSections,
+  ...whQuestionsSections,
+  ...prepositionsOfPlaceSections,
+  ...articlesSections,
+  ...adverbsOfFrequencySections,
+  ...illnessesSections,
+];
 import vocabularyData from '@/i18n/locales/en-us/vocabulary.json';
 import VocabCard from '@/components/VocabCard';
 import SectionRenderer from '@/components/SectionRenderer';

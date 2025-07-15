@@ -1,0 +1,130 @@
+[
+  {
+    "_id": "weather",
+    "__lessons": ["weather"],
+    "__order": 67,
+    "__type": "header",
+    "text": "Weather"
+  },
+  {
+    "_id": "weather_intro",
+    "__lessons": ["weather"],
+    "__order": 68,
+    "__type": "paragraph",
+    "text": "You can ask and answer about the weather using simple sentences. Here are some common ways to ask and answer about the weather."
+  },
+  {
+    "_id": "weather_carousel",
+    "__lessons": ["weather"],
+    "__order": 69,
+    "__type": "vocabularyCarousel",
+    "__words": [
+      "weather",
+      "sunny",
+      "rainy",
+      "cloudy",
+      "partly cloudy",
+      "snowy",
+      "windy",
+      "foggy"
+    ]
+  },
+  {
+    "_id": "writing_weather_question_subheader",
+    "__lessons": ["weather"],
+    "__order": 70,
+    "__type": "subheader",
+    "text": "Questions"
+  },
+  {
+    "_id": "writing_weather_question_examples_1",
+    "__lessons": ["weather"],
+    "__order": 71,
+    "__type": "quote",
+    "text": "How is the weather?"
+  },
+  {
+    "_id": "writing_weather_question_examples_2",
+    "__lessons": ["weather"],
+    "__order": 72,
+    "__type": "quote",
+    "text": "How is the weather today?"
+  },
+  {
+    "_id": "writing_weather_question_examples_3",
+    "__lessons": ["weather"],
+    "__order": 73,
+    "__type": "quote",
+    "text": "What is the weather like?"
+  },
+  {
+    "_id": "writing_weather_answer_subheader",
+    "__lessons": ["weather"],
+    "__order": 74,
+    "__type": "subheader",
+    "text": "Answers"
+  },
+  {
+    "_id": "writing_weather_examples",
+    "__lessons": ["weather"],
+    "__order": 75,
+    "__type": "quote",
+    "text": "It is rainy."
+  },
+  {
+    "_id": "writing_weather_examples_3",
+    "__lessons": ["weather"],
+    "__order": 76,
+    "__type": "quote",
+    "text": "It's cloudy."
+  },
+  {
+    "_id": "writing_weather_examples_2",
+    "__lessons": ["weather"],
+    "__order": 77,
+    "__type": "quote",
+    "text": "The weather is sunny."
+  },
+  {
+    "_id": "temperature_header",
+    "__lessons": ["weather"],
+    "__order": 80,
+    "__type": "header",
+    "text": "Temperature"
+  },
+  {
+    "_id": "temperature_vocab_carousel",
+    "__lessons": ["weather"],
+    "__order": 81,
+    "__type": "vocabularyCarousel",
+    "__words": ["temperature", "hot", "warm", "cool", "cold"]
+  },
+  {
+    "_id": "weather_temperature_paragraph",
+    "__lessons": ["weather"],
+    "__order": 82,
+    "__type": "paragraph",
+    "text": "You can use temperature words with weather words to describe the weather more clearly. For example:"
+  },
+  {
+    "_id": "weather_temperature_example_1",
+    "__lessons": ["weather"],
+    "__order": 83,
+    "__type": "quote",
+    "text": "It is hot and sunny."
+  },
+  {
+    "_id": "weather_temperature_example_2",
+    "__lessons": ["weather"],
+    "__order": 84,
+    "__type": "quote",
+    "text": "It is cold and snowy."
+  },
+  {
+    "_id": "weather_temperature_example_3",
+    "__lessons": ["weather"],
+    "__order": 85,
+    "__type": "quote",
+    "text": "It is cool and cloudy."
+  }
+]

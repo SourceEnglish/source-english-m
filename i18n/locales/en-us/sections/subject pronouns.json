@@ -1,0 +1,180 @@
+[
+  {
+    "_id": "subject_pronouns_header",
+    "__lessons": ["subject pronouns"],
+    "__order": 33,
+    "__type": "header",
+    "text": "Subject Pronouns"
+  },
+  {
+    "_id": "subject_pronouns_intro",
+    "__lessons": ["subject pronouns"],
+    "__order": 34,
+    "__type": "paragraph",
+    "text": "Subject pronouns are words we use instead of names to talk about people or things. In English, they are: I, you, he, she, it, we, and they."
+  },
+  {
+    "_id": "subject_pronouns_table_singular_subheader",
+    "__lessons": ["subject pronouns"],
+    "__order": 35,
+    "__type": "subheader",
+    "text": "Singular Subject Pronouns (1)",
+    "__forced_pronunciation": "singular subject pronouns"
+  },
+  {
+    "_id": "subject_pronouns_table_singular_carousel",
+    "__lessons": ["subject pronouns"],
+    "__order": 36,
+    "__type": "vocabularyCarousel",
+    "__words": ["singular", "I_(pronoun)", "you", "he", "she", "it"]
+  },
+  {
+    "_id": "subject_pronouns_table_singular_paragraph",
+    "__lessons": ["subject pronouns"],
+    "__order": 37,
+    "__type": "paragraph",
+    "text": "Singular subject pronouns refer to one person, animal, or thing: I, you, he, she, and it."
+  },
+  {
+    "_id": "subject_pronouns_examples_singular_I",
+    "__lessons": ["subject pronouns"],
+    "__order": 38,
+    "__type": "quote",
+    "text": "I am a student."
+  },
+  {
+    "_id": "subject_pronouns_examples_singular_you",
+    "__lessons": ["subject pronouns"],
+    "__order": 39,
+    "__type": "quote",
+    "text": "You are my friend."
+  },
+  {
+    "_id": "subject_pronouns_examples_singular_he",
+    "__lessons": ["subject pronouns"],
+    "__order": 40,
+    "__type": "quote",
+    "text": "He is Tom."
+  },
+  {
+    "_id": "subject_pronouns_examples_singular_she",
+    "__lessons": ["subject pronouns"],
+    "__order": 41,
+    "__type": "quote",
+    "text": "She is Kim."
+  },
+  {
+    "_id": "subject_pronouns_examples_singular_it",
+    "__lessons": ["subject pronouns"],
+    "__order": 42,
+    "__type": "quote",
+    "text": "It is a cat."
+  },
+  {
+    "_id": "subject_pronouns_table_singular",
+    "__lessons": ["subject pronouns"],
+    "__order": 43,
+    "__type": "table",
+    "__headers": [
+      { "text": "Subject Pronoun (Singular)", "__type": "text" },
+      { "text": "Used for", "__type": "text" },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "I", "__forced_pronunciation": "eye" },
+      { "__type": "text", "text": "the speaker (one person)" },
+      { "__type": "text", "text": "I am a student." },
+      { "__type": "text", "text": "you" },
+      { "__type": "text", "text": "the listener (one person)" },
+      { "__type": "text", "text": "You are my friend." },
+      { "__type": "text", "text": "he" },
+      { "__type": "text", "text": "a man or boy" },
+      { "__type": "text", "text": "He is Tom." },
+      { "__type": "text", "text": "she" },
+      { "__type": "text", "text": "a woman or girl" },
+      { "__type": "text", "text": "She is Kim." },
+      { "__type": "text", "text": "it" },
+      { "__type": "text", "text": "a thing, animal, or idea" },
+      { "__type": "text", "text": "It is a cat." }
+    ]
+  },
+  {
+    "_id": "subject_pronouns_table_plural_subheader",
+    "__lessons": ["subject pronouns"],
+    "__order": 44,
+    "__type": "subheader",
+    "text": "Plural Subject Pronouns (2+)",
+    "__forced_pronunciation": "plural subject pronouns"
+  },
+  {
+    "_id": "subject_pronouns_table_plural_carousel",
+    "__lessons": ["subject pronouns"],
+    "__order": 45,
+    "__type": "vocabularyCarousel",
+    "__words": ["plural", "we", "you", "they"]
+  },
+  {
+    "_id": "subject_pronouns_table_plural_paragraph",
+    "__lessons": ["subject pronouns"],
+    "__order": 46,
+    "__type": "paragraph",
+    "text": "Plural subject pronouns refer to more than one person, animal, or thing: we, you, and they."
+  },
+  {
+    "_id": "subject_pronouns_examples_plural_we",
+    "__lessons": ["subject pronouns"],
+    "__order": 47,
+    "__type": "quote",
+    "text": "We are friends."
+  },
+  {
+    "_id": "subject_pronouns_examples_plural_you",
+    "__lessons": ["subject pronouns"],
+    "__order": 48,
+    "__type": "quote",
+    "text": "You are my friends."
+  },
+  {
+    "_id": "subject_pronouns_examples_plural_they",
+    "__lessons": ["subject pronouns"],
+    "__order": 49,
+    "__type": "quote",
+    "text": "They are students."
+  },
+  {
+    "_id": "subject_pronouns_table_plural",
+    "__lessons": ["subject pronouns"],
+    "__order": 50,
+    "__type": "table",
+    "__headers": [
+      { "text": "Subject Pronoun (Plural)", "__type": "text" },
+      { "text": "Used for", "__type": "text" },
+      { "text": "Example", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "we" },
+      { "__type": "text", "text": "the speaker and others" },
+      { "__type": "text", "text": "We are friends." },
+      { "__type": "text", "text": "you" },
+      { "__type": "text", "text": "the listener (more than one person)" },
+      { "__type": "text", "text": "You are my friends." },
+      { "__type": "text", "text": "they" },
+      { "__type": "text", "text": "other people, animals, or things" },
+      { "__type": "text", "text": "They are students." }
+    ]
+  },
+  {
+    "_id": "subject_pronouns_video_header",
+    "__lessons": ["subject pronouns"],
+    "__order": 51,
+    "__type": "header",
+    "text": "Subject Pronouns Video"
+  },
+  {
+    "_id": "subject_pronouns_video",
+    "__lessons": ["subject pronouns"],
+    "__order": 52,
+    "__type": "video",
+    "__src": "https://www.youtube.com/watch?v=Dr8GIp94GgA"
+  }
+]

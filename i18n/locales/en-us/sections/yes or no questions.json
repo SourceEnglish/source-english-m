@@ -1,0 +1,241 @@
+[
+  {
+    "_id": "yes_no_questions_header",
+    "__lessons": ["yes or no questions"],
+    "__order": 1,
+    "__type": "header",
+    "text": "Yes/No Questions"
+  },
+  {
+    "_id": "yes_no_questions_intro",
+    "__lessons": ["yes or no questions"],
+    "__order": 2,
+    "__type": "paragraph",
+    "text": "Yes/No questions are questions you answer with \"Yes\" or \"No.\" Two common ways to make these quesions are with the verb \"to be\" (am / is / are) and the verb do (do / does).",
+    "__forced_pronunciation": "Yes or No questions are questions you answer with \"yes\" or \"no\". Two common ways to make these quesions are with the verb \"to be\" (am / is / are) and the verb do (do / does)."
+  },
+  {
+    "_id": "yes_no_questions_be_header",
+    "__lessons": ["yes or no questions"],
+    "__order": 3,
+    "__type": "subheader",
+    "text": "Questions with \"To Be\" "
+  },
+  {
+    "_id": "yes_no_questions_be_carousel",
+    "__lessons": ["yes or no questions"],
+    "__order": 3.5,
+    "__type": "vocabularyCarousel",
+    "__words": ["be", "am", "are", "is"]
+  },
+  {
+    "_id": "yes_no_questions_be_pattern",
+    "__lessons": ["yes or no questions"],
+    "__order": 4,
+    "__type": "paragraph",
+    "text": "If the question uses \"to be\" (am, is, are), put \"to be\" first, then the subject (person or pronoun)."
+  },
+  {
+    "_id": "yes_no_questions_be_examples",
+    "__lessons": ["yes or no questions"],
+    "__order": 5,
+    "__type": "table",
+    "__headers": [
+      { "text": "Pattern", "__type": "text" },
+      { "text": "Question", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Are you a student?" },
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Is she at home?" },
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Are they ready?" },
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Is the weather cold?" },
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Are we late?" },
+      { "__type": "text", "text": "\"to be\" + subject" },
+      { "__type": "text", "text": "Is he your friend?" }
+    ]
+  },
+  {
+    "_id": "yes_no_questions_be_short_answers_header",
+    "__lessons": ["yes or no questions"],
+    "__order": 6,
+    "__type": "subheader",
+    "text": "Positive Short Answers with \"To Be\""
+  },
+  {
+    "_id": "yes_no_questions_yes_carousel",
+    "__lessons": ["yes or no questions"],
+    "__order": 6.5,
+    "__type": "vocabularyCarousel",
+    "__words": ["yes"]
+  },
+  {
+    "_id": "yes_no_questions_be_short_answers_positive",
+    "__lessons": ["yes or no questions"],
+    "__order": 7,
+    "__type": "paragraph",
+    "text": "Say \"Yes, I am\" or \"Yes, she is.\" Do not use contractions in the positive answer."
+  },
+  {
+    "_id": "yes_no_questions_be_short_answers_positive_table",
+    "__lessons": ["yes or no questions"],
+    "__order": 8,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Correct Short Answer", "__type": "text" },
+      { "text": "❌Incorrect", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "Are you a student?" },
+      { "__type": "text", "text": "Yes, I am.\nYes, I am a student." },
+      { "__type": "text", "text": "❌Yes, I'm." },
+      { "__type": "text", "text": "Is she at home?" },
+      { "__type": "text", "text": "Yes, she is.\nYes, she is at home." },
+      { "__type": "text", "text": "❌Yes, she's." },
+      { "__type": "text", "text": "Are they ready?" },
+      { "__type": "text", "text": "Yes, they are.\nYes, they are ready." },
+      { "__type": "text", "text": "❌Yes, they're." },
+      { "__type": "text", "text": "Is the weather cold?" },
+      { "__type": "text", "text": "Yes, it is.\nYes, it is cold." },
+      { "__type": "text", "text": "❌Yes, it's." },
+      { "__type": "text", "text": "Are we late?" },
+      { "__type": "text", "text": "Yes, we are.\nYes, we are late." },
+      { "__type": "text", "text": "❌Yes, we're." },
+      { "__type": "text", "text": "Is he your friend?" },
+      { "__type": "text", "text": "Yes, he is.\nYes, he is my friend." },
+      { "__type": "text", "text": "❌Yes, he's." }
+    ]
+  },
+  {
+    "_id": "yes_no_questions_be_short_answers_negative_header",
+    "__lessons": ["yes or no questions"],
+    "__order": 9,
+    "__type": "subheader",
+    "text": "Negative Short Answers with \"To Be\""
+  },
+  {
+    "_id": "yes_no_questions_no_carousel",
+    "__lessons": ["yes or no questions"],
+    "__order": 9.2,
+    "__type": "vocabularyCarousel",
+    "__words": ["no", "not"]
+  },
+  {
+    "_id": "yes_no_questions_be_short_answers_negative_paragraph",
+    "__lessons": ["yes or no questions"],
+    "__order": 9.5,
+    "__type": "paragraph",
+    "text": "For negative short answers, you can say \"No, I'm not\" or \"No, she isn't.\" You can use \"is not\" or \"isn't\". Both are correct."
+  },
+
+  {
+    "_id": "yes_no_questions_be_short_answers_negative_examples",
+    "__lessons": ["yes or no questions"],
+    "__order": 9.6,
+    "__type": "table",
+    "__headers": [
+      { "text": "Question", "__type": "text" },
+      { "text": "Negative Short Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "Are you tired?" },
+      { "__type": "text", "text": "No, I'm not.\nNo, I am not." },
+      { "__type": "text", "text": "Is he at home?" },
+      { "__type": "text", "text": "No, he isn't.\nNo, he is not." },
+      { "__type": "text", "text": "Are they students?" },
+      { "__type": "text", "text": "No, they aren't.\nNo, they are not." },
+      { "__type": "text", "text": "Is it cold?" },
+      { "__type": "text", "text": "No, it isn't.\nNo, it is not." },
+      { "__type": "text", "text": "Are we late?" },
+      { "__type": "text", "text": "No, we aren't.\nNo, we are not." },
+      { "__type": "text", "text": "Am I wrong?" },
+      { "__type": "text", "text": "No, you aren't.\nNo, you are not." }
+    ]
+  },
+  {
+    "_id": "yes_no_questions_do_carousel",
+    "__lessons": ["yes or no questions"],
+    "__order": 12.5,
+    "__type": "vocabularyCarousel",
+    "__words": ["do", "does"]
+  },
+  {
+    "_id": "yes_no_questions_other_verbs_header",
+    "__lessons": ["yes or no questions"],
+    "__order": 11,
+    "__type": "subheader",
+    "text": "Yes/No Questions with Other Verbs"
+  },
+  {
+    "_id": "yes_no_questions_other_verbs_pattern",
+    "__lessons": ["yes or no questions"],
+    "__order": 12,
+    "__type": "paragraph",
+    "text": "If the question does not use \"to be,\" start with \"do\" or \"does.\" Use \"do\" for I, you, we, they. Use \"does\" for he, she, it."
+  },
+  {
+    "_id": "yes_no_questions_other_verbs_examples_table",
+    "__lessons": ["yes or no questions"],
+    "__order": 13,
+    "__type": "table",
+    "__headers": [
+      { "text": "Pattern", "__type": "text" },
+      { "text": "Question", "__type": "text" },
+      { "text": "Positive Answer", "__type": "text" },
+      { "text": "Negative Answer", "__type": "text" }
+    ],
+    "__entries": [
+      { "__type": "text", "text": "Do/Does + subject + verb" },
+      { "__type": "text", "text": "Do you like pizza?" },
+      { "__type": "text", "text": "Yes, I do.\nYes, I like pizza." },
+      { "__type": "text", "text": "No, I don't.\nNo, I don't like pizza." },
+      { "__type": "text", "text": "Do/Does + subject + verb " },
+      { "__type": "text", "text": "Does she play tennis?" },
+      { "__type": "text", "text": "Yes, she does.\nYes, she plays tennis." },
+      {
+        "__type": "text",
+        "text": "No, she doesn't.\nNo, she doesn't play tennis."
+      },
+      { "__type": "text", "text": "Do/Does + subject + verb" },
+      { "__type": "text", "text": "Do they speak English?" },
+      { "__type": "text", "text": "Yes, they do.\nYes, they speak English." },
+      {
+        "__type": "text",
+        "text": "No, they don't.\nNo, they don't speak English."
+      },
+      { "__type": "text", "text": "Do/Does + subject + verb" },
+      { "__type": "text", "text": "Does he work here?" },
+      { "__type": "text", "text": "Yes, he does.\nYes, he works here." },
+      {
+        "__type": "text",
+        "text": "No, he doesn't.\nNo, he doesn't work here."
+      },
+      { "__type": "text", "text": "Do/Does + subject + verb" },
+      { "__type": "text", "text": "Do we have class today?" },
+      { "__type": "text", "text": "Yes, we do.\nYes, we have class today." },
+      {
+        "__type": "text",
+        "text": "No, we don't.\nNo, we don't have class today."
+      }
+    ]
+  },
+  {
+    "_id": "yes_no_questions_extra_video_header",
+    "__lessons": ["yes or no questions"],
+    "__order": 14,
+    "__type": "header",
+    "text": "Yes/No Questions Video"
+  },
+  {
+    "_id": "yes_no_questions_extra_video",
+    "__lessons": ["yes or no questions"],
+    "__order": 15,
+    "__type": "video",
+    "__src": "https://youtu.be/YIkewDhlSwQ?si=TTnLf5ep92vhDgJ3"
+  }
+]
