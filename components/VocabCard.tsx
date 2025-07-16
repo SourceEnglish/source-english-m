@@ -399,8 +399,8 @@ const VocabCard: React.FC<VocabCardProps> = ({
                 {React.createElement(
                   require('@/utils/iconMap').iconMap['male'],
                   {
-                    width: 16,
-                    height: 16,
+                    width: 20,
+                    height: 20,
                   }
                 )}
               </View>
@@ -410,8 +410,8 @@ const VocabCard: React.FC<VocabCardProps> = ({
                 {React.createElement(
                   require('@/utils/iconMap').iconMap['female'],
                   {
-                    width: 16,
-                    height: 16,
+                    width: 20,
+                    height: 20,
                   }
                 )}
               </View>
@@ -510,8 +510,8 @@ const VocabCard: React.FC<VocabCardProps> = ({
           {__gender === 'masculine' && (
             <View style={{ marginLeft: 6 }}>
               {React.createElement(require('@/utils/iconMap').iconMap['male'], {
-                width: 20,
-                height: 20,
+                width: 28,
+                height: 28,
               })}
             </View>
           )}
@@ -520,8 +520,8 @@ const VocabCard: React.FC<VocabCardProps> = ({
               {React.createElement(
                 require('@/utils/iconMap').iconMap['female'],
                 {
-                  width: 20,
-                  height: 20,
+                  width: 28,
+                  height: 28,
                 }
               )}
             </View>
