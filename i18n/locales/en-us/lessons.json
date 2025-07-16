@@ -274,6 +274,7 @@
       "__lesson": "subject pronouns",
       "__hidden": true,
       "__vocab": {
+        "display": ["I_(pronoun)", "you", "he", "she", "it", "we", "they"],
         "singular subject pronouns": [
           "singular",
           "I_(pronoun)",
@@ -304,6 +305,7 @@
       "__order": 9,
       "__lesson": "to be",
       "__vocab": {
+        "display": ["be", "am", "are", "is"],
         "be": ["be"],
         "singular forms of to be": ["singular", "am", "are", "is"],
         "plural form of to be": ["are"]
@@ -457,6 +459,24 @@
       "__order": 14.5,
       "__hidden": false,
       "__vocab": {
+        "display": [
+          "family",
+          "parent",
+          "mother",
+          "father",
+          "mom",
+          "dad",
+          "daughter",
+          "son",
+          "child",
+          "sister",
+          "brother",
+          "sibling",
+          "wife",
+          "husband",
+          "spouse",
+          "married"
+        ],
         "family": [
           "family",
           "mother",
@@ -593,6 +613,7 @@
       "__hidden": true,
       "__lesson": "possessive adjectives",
       "__vocab": {
+        "display": ["my", "your", "his", "her", "its", "our", "their"],
         "singular possessive adjectives": [
           "singular",
           "my",
@@ -651,6 +672,23 @@
       "__hidden": true,
       "__lesson": "illnesses",
       "__vocab": {
+        "display": [
+          "sick",
+          "headache",
+          "fever",
+          "flu",
+          "cold",
+          "tired",
+          "nauseous",
+          "depressed",
+          "allergy",
+          "broken",
+          "diarrhea",
+          "toothache",
+          "backache",
+          "feel",
+          "have"
+        ],
         "feel / be": ["feel", "be", "sick", "tired", "nauseous", "depressed"],
         "have": [
           "have",
@@ -819,24 +857,29 @@
       "__order": 26,
       "__hidden": false,
       "__vocab": {
-        "clothing": [
-          "tie",
+        "tops": [
           "shirt",
-          "pants",
-          "sunglasses",
-          "skirt",
-          "shorts",
-          "shoe",
-          "hat",
-          "glove",
-          "glasses",
-          "dress",
           "coat",
           "jacket",
-          "belt",
+          "uniform",
+          "sweater",
+          "blouse",
+          "t-shirt"
+        ],
+        "bottoms": ["pants", "skirt", "shorts", "jeans", "leggings"],
+        "outfits": ["dress", "uniform"],
+        "accessories": [
+          "hat",
+          "glasses",
+          "sunglasses",
+          "earring",
+          "tie",
+          "scarf",
+          "necklace",
           "ring",
-          "watch",
-          "uniform"
+          "glove",
+          "belt",
+          "shoe"
         ]
       }
     }
@@ -1125,6 +1168,17 @@
       "__order": 39,
       "__hidden": false,
       "__vocab": {
+        "display": [
+          "bedroom",
+          "bathroom",
+          "kitchen",
+          "living room",
+          "dining room",
+          "restroom",
+          "office",
+          "classroom",
+          "class"
+        ],
         "public rooms": ["classroom", "class", "restroom", "office"],
         "house rooms": [
           "kitchen",

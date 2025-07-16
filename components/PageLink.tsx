@@ -35,58 +35,55 @@ const PageLink: React.FC<PageLinkProps> = ({
     (entry: any) => Object.keys(entry)[0] === lessonKey
   );
   if (lessonEntry) {
-    // Use type assertion to access the property
     lessonData = (lessonEntry as Record<string, any>)[lessonKey];
   }
-  if (
-    (lessonData && lessonData.__type === 'vocabulary') ||
-    (lessonData?.__type === 'lesson' && lessonData.__vocab_lesson)
-  ) {
-    vocabEntries = Array.isArray(vocabularyData)
-      ? vocabularyData
-          .map((entry: any) => {
-            const word = Object.keys(entry)[0];
-            return { word, ...entry[word] };
-          })
-          .filter((entry: any) => {
-            if (lessonData?.__type === 'lesson') {
-              // If lessonData is a lesson, get entries from its __vocab_lesson instead
-              if (lessonData.__vocab_lesson) {
-                // Find the vocab lesson entry
-                const vocabLessonEntry = lessonsData.find(
-                  (entry: any) =>
-                    Object.keys(entry)[0] === lessonData.__vocab_lesson
-                );
-                const vocabLessonData = vocabLessonEntry
-                  ? (vocabLessonEntry as Record<string, any>)[
-                      lessonData.__vocab_lesson
-                    ]
-                  : null;
-                return vocabLessonData?.__tags?.some((tag: string) =>
-                  entry.__tags?.includes(tag)
-                );
-              }
-              return false;
-            } else if (lessonData?.__type === 'vocabulary') {
-              // For vocabulary lessons, filter by tags
-              return lessonData.__tags?.some((tag: string) =>
-                entry.__tags?.includes(tag)
-              );
-            }
-            return false;
-          })
-          // Sort by __display_priority if present
-          .sort((a: any, b: any) => {
-            const aHasPriority = typeof a.__display_priority === 'number';
-            const bHasPriority = typeof b.__display_priority === 'number';
-            if (aHasPriority && bHasPriority) {
-              return a.__display_priority - b.__display_priority;
-            }
-            if (aHasPriority) return -1;
-            if (bHasPriority) return 1;
-            return 0;
-          })
-      : [];
+
+  // Helper to get vocab display array from a lessonData
+  function getVocabDisplayArray(ld: any): string[] {
+    if (ld && ld.__vocab) {
+      if (Array.isArray(ld.__vocab.display)) {
+        return ld.__vocab.display;
+      } else {
+        // If no display array, collect all unique vocab keys from all arrays in __vocab
+        // Exclude non-array properties (e.g., intro, etc.)
+        const allKeys: string[] = Object.entries(ld.__vocab)
+          .filter(([key, value]) => Array.isArray(value))
+          .flatMap(([key, value]) => value as string[]);
+        // Remove duplicates
+        return Array.from(new Set(allKeys));
+      }
+    }
+    return [];
+  }
+
+  let displayWords: string[] = [];
+  if (lessonData?.__type === 'vocabulary') {
+    displayWords = getVocabDisplayArray(lessonData);
+  } else if (lessonData?.__type === 'lesson' && lessonData.__vocab_lesson) {
+    const vocabLessonEntry = lessonsData.find(
+      (entry: any) => Object.keys(entry)[0] === lessonData.__vocab_lesson
+    );
+    const vocabLessonData = vocabLessonEntry
+      ? (vocabLessonEntry as Record<string, any>)[lessonData.__vocab_lesson]
+      : null;
+    displayWords = getVocabDisplayArray(vocabLessonData);
+  }
+
+  // For each word in displayWords, find the matching entry in vocabularyData
+  if (displayWords.length > 0 && Array.isArray(vocabularyData)) {
+    vocabEntries = displayWords
+      .map((word) => {
+        const entryObj = vocabularyData.find(
+          (entry: any) => Object.keys(entry)[0] === word
+        );
+        if (entryObj) {
+          // Use type assertion to access the property
+          const entryData = (entryObj as Record<string, any>)[word];
+          return { word, ...entryData };
+        }
+        return null;
+      })
+      .filter(Boolean);
   }
 
   // Calculate how many InlineCardPreviews can fit in the available width

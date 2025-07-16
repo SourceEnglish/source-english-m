@@ -66,10 +66,14 @@ export default function LessonPage() {
   const displayName = lessonData.name || lessonName;
 
   if (lessonData.__type === 'vocabulary') {
-    // If __vocab is present, use it to group vocab entries by heading
+    // If __vocab is present, use it to group vocab entries by heading, but exclude 'display'
     const vocabGroups =
       lessonData.__vocab && typeof lessonData.__vocab === 'object'
-        ? lessonData.__vocab
+        ? Object.fromEntries(
+            Object.entries(lessonData.__vocab).filter(
+              ([groupName]) => groupName !== 'display'
+            )
+          )
         : null;
     // Build a lookup for all vocab entries by key
     const vocabLookup = Array.isArray(vocabularyData)
@@ -112,11 +116,7 @@ export default function LessonPage() {
                   key={groupName}
                   style={{ marginBottom: 18, width: '100%' }}
                 >
-                  <Subheader
-                    text={
-                      groupName.charAt(0).toUpperCase() + groupName.slice(1)
-                    }
-                  />
+                  <Subheader text={groupName} />
                   <View
                     style={{
                       flexDirection: 'row',
