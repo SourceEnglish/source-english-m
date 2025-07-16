@@ -512,6 +512,8 @@ import MaleIcon from '@/assets/icons/licensed/male.svg'; // Example for a custom
 import FemaleIcon from '@/assets/icons/licensed/female.svg';
 import AndIcon from '@/assets/icons/licensed/and.svg'; // Example for a custom icon
 import OrIcon from '@/assets/icons/licensed/or.svg'; // Example for a custom icon
+import SadIcon from '@/assets/icons/licensed/sad.svg'; // Example for a custom icon
+import HungryIcon from '@/assets/icons/licensed/hungry.svg'; // Example for a custom icon
 import BananaIcon from '@/assets/icons/licensed/banana.svg'; // Example for a custom icon
 export const TextIcon: React.FC<{
   text: string;
@@ -1167,7 +1169,9 @@ export const iconMap: Record<string, React.FC<any>> = {
   feminine: FemaleIcon,
   and: AndIcon,
   'or_(conjunction)': OrIcon,
-  Banana: BananaIcon, // Example for a custom icon
+  banana: BananaIcon, // Example for a custom icon
+  sad: SadIcon, // Example for a custom icon
+  hungry: HungryIcon, // Example for a custom icon
 
   // ...etc
 };

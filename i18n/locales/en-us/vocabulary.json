@@ -9710,5 +9710,23 @@
         "She bought some bananas at the store."
       ]
     }
+  },
+  {
+    "sad": {
+      "__pos": "adjective",
+      "__tags": ["feelings", "word"],
+      "word": "sad",
+      "translation_note": "",
+      "examples": ["I feel sad today.", "She looks sad."]
+    }
+  },
+  {
+    "hungry": {
+      "__pos": "adjective",
+      "__tags": ["feelings", "word"],
+      "word": "hungry",
+      "translation_note": "",
+      "examples": ["I am hungry.", "He is hungry after school."]
+    }
   }
 ]
