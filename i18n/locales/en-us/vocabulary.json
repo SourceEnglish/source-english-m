@@ -9633,5 +9633,36 @@
       "translation_note": "",
       "examples": ["They're my friends.", "They're playing outside."]
     }
+  },
+  {
+    "friend": {
+      "__pos": "noun",
+      "__tags": ["people"],
+      "word": "friend",
+      "plural": "friends",
+      "examples": [
+        "He is my friend.",
+        "She is my best friend.",
+        "Friends are important."
+      ]
+    }
+  },
+  {
+    "see": {
+      "__pos": "verb",
+      "__tags": ["verbs", "actions"],
+      "word": "see",
+      "conjugation": {
+        "present": "see",
+        "present_participle": "seeing",
+        "past": "saw"
+      },
+      "translation_note": "",
+      "examples": [
+        "I see a bird in the tree.",
+        "She is seeing her family this weekend.",
+        "He saw a movie last night."
+      ]
+    }
   }
 ]

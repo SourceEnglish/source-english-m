@@ -382,7 +382,7 @@
           "Friday",
           "Saturday"
         ],
-        "week": ["week", "weekend"],
+        "week and weekend": ["week", "weekend"],
         "yesterday, today, tomorrow": ["yesterday", "today", "tomorrow"]
       }
     }
