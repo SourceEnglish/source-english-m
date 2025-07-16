@@ -13,6 +13,20 @@
       ]
     }
   },
+  {
+    "or_(conjunction)": {
+      "__pos": "conjunction",
+      "__tags": ["conjunctions"],
+      "__icon_text": "or",
+      "__objectKey": "or_(conjunction)",
+      "word": "or",
+      "translation_note": "",
+      "examples": [
+        "Would you like tea or coffee?",
+        "You can choose red or blue."
+      ]
+    }
+  },
 
   {
     "plural": {
@@ -823,19 +837,6 @@
       "examples": [
         "The dog is barking.",
         "He takes his dog for a walk every day."
-      ]
-    }
-  },
-  {
-    "or": {
-      "__pos": "conjunction",
-      "__tags": ["conjunctions"],
-      "__icon_text": "or",
-      "word": "or",
-      "translation_note": "",
-      "examples": [
-        "Would you like tea or coffee?",
-        "You can choose red or blue."
       ]
     }
   },
@@ -3397,6 +3398,7 @@
     "he": {
       "__pos": "pronoun",
       "__tags": ["subject pronouns", "singular subject pronouns"],
+      "__gender": "masculine",
 
       "__show_word": true,
       "word": "he",
@@ -3408,6 +3410,7 @@
     "she": {
       "__pos": "pronoun",
       "__tags": ["subject pronouns", "singular subject pronouns"],
+      "__gender": "feminine",
 
       "__show_word": true,
       "word": "she",
@@ -4008,6 +4011,7 @@
       "__pos": "noun",
       "__tags": ["family"],
       "__synonyms": ["dad", "parent"],
+      "__gender": "masculine",
       "synonym_notes": {
         "dad": "More informal term for father.",
         "parent": "More general term that includes both mothers and fathers."
@@ -4026,6 +4030,7 @@
       "__pos": "noun",
       "__tags": ["family"],
       "__synonyms": ["father", "parent"],
+      "__gender": "masculine",
       "synonym_notes": {
         "father": "More formal term for dad.",
         "parent": "More general term that includes both mothers and fathers."
@@ -4042,6 +4047,7 @@
       "__tags": ["nouns", "family"],
       "__objectKey": "mother",
       "__synonyms": ["mom", "parent"],
+      "__gender": "feminine",
 
       "synonym_notes": {
         "mom": "Informal term for mother.",
@@ -4059,6 +4065,7 @@
       "__tags": ["nouns", "family"],
       "__objectKey": "mom",
       "__synonyms": ["mother", "parent"],
+      "__gender": "feminine",
       "synonym_notes": {
         "mother": "Formal term for mom.",
         "parent": "General term for a mother or father."
@@ -4094,6 +4101,7 @@
     "son": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__gender": "masculine",
       "word": "son",
       "plural": "sons",
       "translation_note": "",
@@ -4107,6 +4115,7 @@
     "daughter": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__gender": "feminine",
       "word": "daughter",
       "plural": "daughters",
       "translation_note": "",
@@ -4119,6 +4128,7 @@
       "__pos": "noun",
       "__tags": ["family"],
       "__synonyms": ["sibling"],
+      "__gender": "masculine",
       "synonym_notes": {
         "sibling": "A general term for a brother or sister."
       },
@@ -4133,6 +4143,7 @@
       "__pos": "noun",
       "__tags": ["family"],
       "__synonyms": ["sibling"],
+      "__gender": "feminine",
       "synonym_notes": {
         "sibling": "A general term for a brother or sister."
       },
@@ -4162,6 +4173,7 @@
       "__pos": "noun",
       "__tags": ["family"],
       "__synonyms": ["spouse"],
+      "__gender": "masculine",
       "synonym_notes": {
         "spouse": "General term for a husband or wife."
       },
@@ -4179,6 +4191,7 @@
       "__pos": "noun",
       "__tags": ["family"],
       "__synonyms": ["spouse"],
+      "__gender": "feminine",
       "synonym_notes": {
         "spouse": "General term for a husband or wife."
       },
@@ -5758,6 +5771,7 @@
     "man": {
       "__pos": "noun",
       "__tags": ["people", "person group", "irregular plurals"],
+      "__gender": "masculine",
       "word": "man",
       "plural": "men",
       "translation_note": "",
@@ -5768,6 +5782,7 @@
     "woman": {
       "__pos": "noun",
       "__tags": ["people", "person group", "irregular plurals"],
+      "__gender": "feminine",
       "word": "woman",
       "plural": "women",
       "translation_note": "",
@@ -5792,6 +5807,7 @@
     "boy": {
       "__pos": "noun",
       "__tags": ["people", "person group"],
+      "__gender": "masculine",
       "word": "boy",
       "plural": "boys",
       "translation_note": "",
@@ -5802,6 +5818,7 @@
     "girl": {
       "__pos": "noun",
       "__tags": ["people", "person group"],
+      "__gender": "feminine",
       "word": "girl",
       "plural": "girls",
       "translation_note": "",
@@ -7330,6 +7347,7 @@
     "aunt": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__gender": "feminine",
       "word": "aunt",
       "plural": "aunts",
       "translation_note": "",
@@ -7344,6 +7362,7 @@
     "uncle": {
       "__pos": "noun",
       "__tags": ["family"],
+      "__gender": "masculine",
       "word": "uncle",
       "plural": "uncles",
       "translation_note": "",
@@ -9585,6 +9604,7 @@
       "__tags": ["contractions"],
       "__synonyms": ["he is"],
       "__icon_text": "he's",
+      "__gender": "masculine",
       "word": "he's",
       "translation_note": "",
       "examples": ["He's a teacher.", "He's gone home."]
@@ -9596,6 +9616,7 @@
       "__tags": ["contractions"],
       "__synonyms": ["she is"],
       "__icon_text": "she's",
+      "__gender": "feminine",
       "word": "she's",
       "translation_note": "",
       "examples": ["She's my sister.", "She's finished her homework."]
@@ -9662,6 +9683,19 @@
         "I see a bird in the tree.",
         "She is seeing her family this weekend.",
         "He saw a movie last night."
+      ]
+    }
+  },
+  {
+    "and": {
+      "__pos": "conjunction",
+      "__tags": ["grammar"],
+      "word": "and",
+      "translation_note": "",
+      "examples": [
+        "I like apples and oranges.",
+        "She is smart and kind.",
+        "He plays soccer and basketball."
       ]
     }
   }

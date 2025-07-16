@@ -8,7 +8,11 @@ import {
   Pressable,
   TouchableOpacity,
 } from 'react-native';
-import posColors, { getLexendFontSizeToFit } from '@/constants/constants';
+import posColors, {
+  posColorsLight,
+  getLexendFontSizeToFit,
+  getTopPlaceholderText,
+} from '@/constants/constants';
 import ReadableText from '@/components/ReadableText';
 import PlayPronunciationButton from './PlayPronunciationButton';
 import { getIconForEntry } from '@/utils/iconMap';
@@ -49,6 +53,7 @@ const VocabCard: React.FC<VocabCardProps> = ({
     __icon_text,
     examples,
     __tags,
+    __gender,
   } = card as any;
 
   let borderColor = posColors[__pos] || '#000';
@@ -140,12 +145,68 @@ const VocabCard: React.FC<VocabCardProps> = ({
         style={[
           styles.inlineCard,
           { borderColor, borderLeftColor, borderTopColor, borderRadius },
-          (__vowel || __consonant || __pos === 'number') && {
-            borderTopWidth: borderRadius,
-          },
+          (__vowel || __consonant || __pos === 'number') && {},
           isMobile ? styles.mobile : styles.desktop,
         ]}
       >
+        {/* Top placeholder text */}
+        <View
+          style={[
+            {
+              backgroundColor:
+                __pos === 'letter'
+                  ? __vowel
+                    ? posColorsLight['vowel']
+                    : posColorsLight['consonant']
+                  : posColorsLight[__pos],
+            },
+            styles.topTextContainer,
+          ]}
+        >
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <ReadableText
+              text={getTopPlaceholderText(
+                __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+              )}
+              style={{
+                fontSize: isMobile ? 12 : 13,
+                textAlign: 'center',
+                color: '#000000',
+                backgroundColor: '#111111', // Add background color for top placeholder
+              }}
+              numberOfLines={1}
+            />
+            {/* Gender icon inline */}
+            {__gender === 'masculine' && (
+              <View style={{ marginLeft: 0 }}>
+                {React.createElement(
+                  require('@/utils/iconMap').iconMap['male'],
+                  {
+                    width: 16,
+                    height: 16,
+                  }
+                )}
+              </View>
+            )}
+            {__gender === 'feminine' && (
+              <View style={{ marginLeft: 0 }}>
+                {React.createElement(
+                  require('@/utils/iconMap').iconMap['female'],
+                  {
+                    width: 16,
+                    height: 16,
+                  }
+                )}
+              </View>
+            )}
+          </View>
+        </View>
         {Icon && (
           <Icon
             textsize={isMobile ? 24 : 22}
@@ -163,6 +224,9 @@ const VocabCard: React.FC<VocabCardProps> = ({
               fontSize: isMobile ? 13 : 14,
               marginBottom: 0,
               textAlign: 'center',
+
+              // Only apply negative margin if Icon is a TextIcon
+              marginTop: __icon_text ? -10 : 0,
             }}
             numberOfLines={1}
             ellipsizeMode="tail"
@@ -197,6 +261,49 @@ const VocabCard: React.FC<VocabCardProps> = ({
           isHovered && styles.hoveredCard,
         ]}
       >
+        {/* <View style={styles.topTextContainerMedium}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <ReadableText
+              text={getTopPlaceholderText(__pos)}
+              style={{
+                fontSize: isMobile ? 13 : 16,
+
+                textAlign: 'center',
+                color: '#333',
+              }}
+              numberOfLines={1}
+            />
+      
+            {__gender === 'masculine' && (
+              <View style={{ marginLeft: 4 }}>
+                {React.createElement(
+                  require('@/utils/iconMap').iconMap['male'],
+                  {
+                    width: 16,
+                    height: 16,
+                  }
+                )}
+              </View>
+            )}
+            {__gender === 'feminine' && (
+              <View style={{ marginLeft: 4 }}>
+                {React.createElement(
+                  require('@/utils/iconMap').iconMap['female'],
+                  {
+                    width: 16,
+                    height: 16,
+                  }
+                )}
+              </View>
+            )}
+          </View>
+        </View> */}
         {Icon && (
           <View>
             <Icon
@@ -271,15 +378,45 @@ const VocabCard: React.FC<VocabCardProps> = ({
             </View>
           )}
         {__pos !== 'letter' && __pos !== 'multigraph' && (
-          <ReadableText
-            text={__pos}
+          <View
             style={{
-              fontStyle: 'italic',
-              color: posColors[__pos],
-              fontSize: isMobile ? 14 : 20,
-              textAlign: 'center',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
-          />
+          >
+            <ReadableText
+              text={__pos}
+              style={{
+                fontStyle: 'italic',
+                color: posColors[__pos],
+                fontSize: isMobile ? 14 : 20,
+                textAlign: 'center',
+              }}
+            />
+            {__gender === 'masculine' && (
+              <View style={{ marginLeft: 2 }}>
+                {React.createElement(
+                  require('@/utils/iconMap').iconMap['male'],
+                  {
+                    width: 16,
+                    height: 16,
+                  }
+                )}
+              </View>
+            )}
+            {__gender === 'feminine' && (
+              <View style={{ marginLeft: 2 }}>
+                {React.createElement(
+                  require('@/utils/iconMap').iconMap['female'],
+                  {
+                    width: 16,
+                    height: 16,
+                  }
+                )}
+              </View>
+            )}
+          </View>
         )}
         {__pos === 'letter' && __consonant && (
           <ReadableText
@@ -350,13 +487,46 @@ const VocabCard: React.FC<VocabCardProps> = ({
           />
         )}
       {__pos !== 'letter' && __pos !== 'multigraph' && (
-        <ReadableText
-          text={__pos}
-          style={[
-            styles.pos,
-            { color, fontSize: isMobile ? 18 : 24, textAlign: 'center' },
-          ]}
-        />
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginBottom: 8,
+          }}
+        >
+          <ReadableText
+            text={__pos}
+            style={[
+              styles.pos,
+              {
+                color,
+                fontSize: isMobile ? 18 : 24,
+                textAlign: 'center',
+                marginBottom: 0,
+              },
+            ]}
+          />
+          {__gender === 'masculine' && (
+            <View style={{ marginLeft: 6 }}>
+              {React.createElement(require('@/utils/iconMap').iconMap['male'], {
+                width: 20,
+                height: 20,
+              })}
+            </View>
+          )}
+          {__gender === 'feminine' && (
+            <View style={{ marginLeft: 6 }}>
+              {React.createElement(
+                require('@/utils/iconMap').iconMap['female'],
+                {
+                  width: 20,
+                  height: 20,
+                }
+              )}
+            </View>
+          )}
+        </View>
       )}
       {__pos === 'letter' && __consonant && (
         <ReadableText
@@ -490,19 +660,41 @@ const styles = StyleSheet.create({
     padding: 4,
     backgroundColor: 'white',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start', // changed to flex-start
     marginHorizontal: 4,
     height: 72,
     flexShrink: 0,
+    overflow: 'hidden',
+  },
+  topTextContainer: {
+    width: '120%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 18,
+    marginBottom: 6,
+    marginTop: -4, // expand into border-radius
+    zIndex: 2,
+
+    overflow: 'hidden', // ensures background doesn't bleed outside
+  },
+  topTextContainerMedium: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 22,
+    marginBottom: 4,
+    marginTop: -8, // expand into border-radius
+    zIndex: 2,
+    backgroundColor: '#ffccc0', // Add background color for top placeholder
   },
   mobile: {
     width: 54,
-    height: 56,
+    height: 66,
     padding: 2,
   },
   desktop: {
     width: 63,
-    height: 70,
+    height: 80,
     padding: 4,
   },
 });

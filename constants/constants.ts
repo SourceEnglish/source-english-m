@@ -104,29 +104,77 @@ export const soundsMap: Map<string, any> = new Map([
   ['ks.wav', ks],
   ['ju.wav', ju],
 ]);
-
 const posColors: Record<string, string> = {
-  adverb: '#E00078',
-  preposition: '#389BBC',
-  noun: '#D32F2F', // Prominent red
-  verb: '#438943',
+  adverb: '#004D40', // Teal (dark, readable) - swapped with preposition
+  preposition: '#1A237E', // Indigo (dark, readable) - swapped with adverb
+  noun: '#B71C1C', // Dark Red
+  verb: '#2E7D32', // Dark Green
+  adjective: '#01579B', // Dark Cyan Blue (swapped with number)
+  determiner: '#37474F', // Blue Gray
+  conjunction: '#0D47A1', // Dark Blue
+  pronoun: '#263238', // Charcoal
+  'auxiliary verb': '#616161', // Medium Gray
+  exclamation: '#FF6F00',
+  'modal verb': '#3E2723', // Dark Brown
+  number: '#4A148C', // Deep Purple (swapped with adjective)
+  'ordinal number': '#827717', // Olive
+  'proper noun': '#880E4F', // Dark Magenta
+  multigraph: '#311B92', // Violet
+  article: '#212121', // Near Black
+  letter: '#263238', // Charcoal
+  contraction: '#263238', // Charcoal
+  punctuation: '#263238', // Charcoal
+  vowel: '#006064', // Deep Cyan
+  consonant: '#c66728', // Crimson
+};
 
-  adjective: '#1976D2', // Prominent blue
-  determiner: '#9370DB',
-  conjunction: '#FF6347',
-  pronoun: '#4682B4',
-  'auxiliary verb': '#FF4500',
-  exclamation: '#be0b98',
-  'modal verb': '#D2691E',
-  number: '#8A2BE2',
-  'ordinal number': '#5F9EA0',
-  'proper noun': '#FF69B4',
-  vowel: '#0C71B9',
-  consonant: '#F44C40',
-  multigraph: '#64045c', // Add this line for multigraph color
-  article: '#6E6E6E',
-  letter: '#000000',
-  contraction: '#000000',
+// Lighter shades for text on colored backgrounds
+export const posColorsLight: Record<string, string> = {
+  adverb: '#80cbc4', // Light Teal +20% - swapped with preposition
+  preposition: '#9fa8da', // Light Indigo +20% - swapped with adverb
+  noun: '#ef9a9a', // Light Red +20%
+  verb: '#a5d6a7', // Light Green +20%
+  adjective: '#81d4fa', // Light Cyan Blue +20% (swapped with number)
+  determiner: '#b0bec5', // Light Blue Gray +20%
+  conjunction: '#90caf9', // Light Blue +20%
+  pronoun: '#cfd8dc', // Light Charcoal +20%
+  'auxiliary verb': '#e0e0e0', // Light Gray +20%
+  exclamation: '#ffe082', // Light Magenta +20%
+  'modal verb': '#bcaaa4', // Light Brown +20%
+  number: '#ce93d8', // Light Purple +20% (swapped with adjective)
+  'ordinal number': '#e6ee9c', // Light Olive +20%
+  'proper noun': '#f48fb1', // Light Amber +20%
+  multigraph: '#b39ddb', // Light Violet +20%
+  article: '#bdbdbd', // Light Near Black +20%
+  letter: '#cfd8dc', // Light Charcoal +20%
+  contraction: '#cfd8dc', // Light Charcoal +20%
+  punctuation: '#cfd8dc', // Light Charcoal +20%
+  vowel: '#80deea', // Light Cyan +20%
+  consonant: '#fab18f', // Light Crimson +20%
+};
+
+export const posKeys: Record<string, string> = {
+  adverb: 'adv.',
+  preposition: 'prep.',
+  noun: 'noun',
+  verb: 'verb',
+  adjective: 'adj.',
+  determiner: 'det.',
+  conjunction: 'conj.',
+  punctuation: 'punct.',
+  pronoun: 'pron.',
+  'auxiliary verb': 'aux.',
+  exclamation: 'excl.',
+  'modal verb': 'mod.',
+  number: 'num.',
+  'ordinal number': 'ord.',
+  'proper noun': 'p. noun',
+  vowel: 'vowel',
+  consonant: 'cons.',
+  multigraph: 'mult.',
+  article: 'article',
+  letter: 'let.',
+  contraction: 'contr.',
 };
 
 // Centralized max width for centered layouts
@@ -266,6 +314,10 @@ export function getLexendFontSizeToFit(
   }
   if (fontSize < minFontSize) fontSize = minFontSize;
   return fontSize;
+}
+
+export function getTopPlaceholderText(pos: string): string {
+  return posKeys[pos] ?? '';
 }
 
 export default posColors;

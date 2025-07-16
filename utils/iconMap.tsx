@@ -508,6 +508,10 @@ import ConsonantIcon from '@/assets/icons/open_source/consonant.svg'; // Example
 import SoundIcon from '@/assets/icons/licensed/sound.svg'; // Example for a custom icon
 import FriendIcon from '@/assets/icons/licensed/friend.svg'; // Example for a custom icon
 import SeeIcon from '@/assets/icons/licensed/see.svg'; // Example for a custom icon
+import MaleIcon from '@/assets/icons/licensed/male.svg'; // Example for a custom icon
+import FemaleIcon from '@/assets/icons/licensed/female.svg';
+import AndIcon from '@/assets/icons/licensed/and.svg'; // Example for a custom icon
+import OrIcon from '@/assets/icons/licensed/or.svg'; // Example for a custom icon
 
 export const TextIcon: React.FC<{
   text: string;
@@ -520,13 +524,12 @@ export const TextIcon: React.FC<{
   <View
     style={[
       {
-        width: size,
-        height: size,
+        width: style?.width ?? size,
+        height: style?.height ?? size,
         borderRadius: 6,
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        // Remove margin/padding here
       },
       style,
     ]}
@@ -550,7 +553,9 @@ export const TextIcon: React.FC<{
         fontFamily: 'Lexend_400Regular',
         marginBottom: 0,
         padding: 0,
-        // Remove margin/padding here as well
+        width: '100%',
+        height: '100%',
+        textAlignVertical: 'center',
       }}
       numberOfLines={1}
       ellipsizeMode="tail"
@@ -1156,12 +1161,34 @@ export const iconMap: Record<string, React.FC<any>> = {
   sound: SoundIcon,
   friend: FriendIcon,
   see: SeeIcon, // Example for a custom icon
+  male: MaleIcon, // Example for a custom icon
+  female: FemaleIcon, // Example for a custom icon
+  masculine: MaleIcon,
+  feminine: FemaleIcon,
+  and: AndIcon,
+  'or_(conjunction)': OrIcon,
 
   // ...etc
 };
 
 // Helper to get icon for a word, optionally using iconText
 export function getIconForEntry(entry: any): React.FC<any> {
+  // Use the object key (entry name) if available for icon mapping
+  let key = '';
+  if (entry && entry.__objectKey) {
+    key = entry.__objectKey.toLowerCase();
+  } else if (entry && entry.word) {
+    key = entry.word.toLowerCase();
+  } else if (typeof entry === 'string') {
+    key = entry.toLowerCase();
+  }
+  // Always use SVG icon for 'or_(conjunction)', 'or (conjunction)', or 'or'
+  if (
+    ['or_(conjunction)', 'or (conjunction)', 'or'].includes(key) &&
+    iconMap[key]
+  ) {
+    return iconMap[key];
+  }
   if (entry && typeof entry === 'object' && entry.__icon_text) {
     const iconText = entry.__icon_text;
     const pronunciation = entry.__forced_pronunciation;
@@ -1174,15 +1201,6 @@ export function getIconForEntry(entry: any): React.FC<any> {
         pronunciation={pronunciation}
       />
     );
-  }
-  // Use the object key (entry name) if available for icon mapping
-  let key = '';
-  if (entry && entry.__objectKey) {
-    key = entry.__objectKey.toLowerCase();
-  } else if (entry && entry.word) {
-    key = entry.word.toLowerCase();
-  } else if (typeof entry === 'string') {
-    key = entry.toLowerCase();
   }
   if (iconMap[key]) return iconMap[key];
   return (props: any) => (
