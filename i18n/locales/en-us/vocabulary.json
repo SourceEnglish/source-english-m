@@ -9698,5 +9698,17 @@
         "He plays soccer and basketball."
       ]
     }
+  },
+  {
+    "banana": {
+      "__pos": "noun",
+      "__tags": ["food", "fruits"],
+      "word": "banana",
+      "plural": "bananas",
+      "examples": [
+        "I like to eat a banana for breakfast.",
+        "She bought some bananas at the store."
+      ]
+    }
   }
 ]
