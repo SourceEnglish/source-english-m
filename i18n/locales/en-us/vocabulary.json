@@ -61,7 +61,7 @@
     "letter": {
       "__pos": "noun",
       "__tags": ["phonetics", "basics"],
-      "__icon_text": "Aa",
+
       "__forced_pronunciation": "letter",
       "word": "letter",
       "plural": "letters",
@@ -6715,7 +6715,12 @@
       "__objectKey": "work",
       "word": "work",
       "translation_note": "",
-      "examples": ["I work at a hospital.", "She works very hard."]
+      "examples": ["I work at a hospital.", "She works very hard."],
+      "conjugation": {
+        "present": "work",
+        "present_participle": "working",
+        "past": "worked"
+      }
     }
   },
   {
@@ -6727,7 +6732,12 @@
       "examples": [
         "The company will hire new workers.",
         "They want to hire a manager."
-      ]
+      ],
+      "conjugation": {
+        "present": "hire",
+        "present_participle": "hiring",
+        "past": "hired"
+      }
     }
   },
   {
@@ -6808,8 +6818,7 @@
 
   {
     "off": {
-      "__pos": "preposition",
-      "__tags": ["prepositions"],
+      "__pos": "adverb",
       "word": "off",
       "translation_note": "",
       "examples": ["Turn off the light.", "The cat jumped off the table."]
@@ -6817,8 +6826,27 @@
   },
   {
     "on": {
+      "__pos": "adverb",
+      "word": "on",
+      "translation_note": "",
+      "examples": ["The light is on.", "She put the book on the shelf."]
+    }
+  },
+  {
+    "open_(adjective)": {
+      "__pos": "adjective",
+      "__tags": ["adjectives"],
+      "__objectKey": "open (adjective)",
+      "word": "open",
+      "translation_note": "",
+      "examples": ["The door is open.", "He has an open mind."]
+    }
+  },
+  {
+    "on_(preposition_of_place)": {
       "__pos": "preposition",
       "__tags": ["prepositions"],
+      "__objectKey": "on (preposition of place)",
       "word": "on",
       "translation_note": "",
       "examples": ["The book is on the table.", "Turn on the TV."]
@@ -7503,6 +7531,11 @@
       "__tags": ["verbs"],
       "word": "start",
       "translation_note": "",
+      "conjugation": {
+        "present": "start",
+        "present_participle": "starting",
+        "past": "started"
+      },
       "examples": ["Let's start the lesson.", "The race will start soon."]
     }
   },
@@ -7773,8 +7806,8 @@
     "on_(preposition_of_time)": {
       "__pos": "preposition",
       "__tags": ["prepositions of time"],
-      "__objectKey": "on_(preposition_of_time)",
-      "__icon_text": "on",
+      "__objectKey": "on (preposition of time)",
+
       "word": "on",
       "examples": [
         "My birthday is on Monday.",
@@ -9490,6 +9523,7 @@
       "__tags": ["phonetics", "uppercase letters"],
       "__synonyms": ["upper case", "capital"],
       "__alternates": ["upper case", "capital"],
+
       "__forced_pronunciation": "uppercase",
       "word": "uppercase",
       "translation_note": "",
@@ -9509,7 +9543,7 @@
       "__synonyms": ["lower case", "small"],
 
       "word": "lowercase",
-      "__icon_text": "a",
+
       "__forced_pronunciation": "lowercase",
       "translation_note": "",
       "examples": [
@@ -9817,6 +9851,68 @@
       "examples": [
         "I like to eat cheese on my sandwich.",
         "She bought some cheeses for the party."
+      ]
+    }
+  },
+  {
+    "a.m.": {
+      "__pos": "adjective",
+      "__tags": ["time", "morning"],
+
+      "__forced_pronunciation": "a m",
+      "__alternates": ["am", "AM"],
+      "__abbreviations": ["am", "AM"],
+      "__abbreviation_pronunciations": {
+        "am": "a.m.",
+        "AM": "a.m."
+      },
+      "word": "a.m.",
+      "translation_note": "",
+      "examples": ["I wake up at 7 a.m.", "The meeting is at 10 a.m."]
+    }
+  },
+  {
+    "p.m.": {
+      "__pos": "adjective",
+      "__tags": ["time", "evening"],
+
+      "__forced_pronunciation": "p m",
+      "__alternates": ["pm", "PM"],
+      "__synonyms": ["pm", "PM"],
+      "word": "p.m.",
+      "translation_note": "",
+      "examples": ["I go to bed at 11 p.m.", "The party starts at 6:00 p.m."]
+    }
+  },
+  {
+    "o'clock": {
+      "__pos": "adverb",
+      "__tags": ["time"],
+      "__forced_pronunciation": "o clock",
+      "__alternates": ["o'clock", "O'clock"],
+      "word": "o'clock",
+      "translation_note": "",
+      "examples": [
+        "The meeting is at 3 o'clock.",
+        "She wakes up at 7 o'clock every day."
+      ]
+    }
+  },
+  {
+    "hurt": {
+      "__pos": "verb",
+      "__tags": ["feelings", "body"],
+      "word": "hurt",
+      "translation_note": "",
+      "conjugation": {
+        "present": "hurt",
+        "present_participle": "hurting",
+        "past": "hurt"
+      },
+      "examples": [
+        "I hurt my leg.",
+        "My arm hurts.",
+        "She felt hurt by his words."
       ]
     }
   }

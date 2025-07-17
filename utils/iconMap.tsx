@@ -11,6 +11,7 @@ import SnowIcon from '@/assets/icons/licensed/snow.svg';
 import StormIcon from '@/assets/icons/licensed/storm.svg';
 import WindIcon from '@/assets/icons/licensed/wind.svg';
 import PartlyCloudyIcon from '@/assets/icons/licensed/partly_cloudy.svg';
+import HurtIcon from '@/assets/icons/licensed/hurt.svg';
 import WarmIcon from '@/assets/icons/licensed/warm.svg';
 import ColdIcon from '@/assets/icons/licensed/cold.svg';
 import HotIcon from '@/assets/icons/licensed/hot.svg';
@@ -519,6 +520,11 @@ import IrregularIcon from '@/assets/icons/licensed/irregular.svg'; // Example fo
 import FormalIcon from '@/assets/icons/licensed/formal.svg'; // Example for a custom icon
 import InformalIcon from '@/assets/icons/licensed/informal.svg'; // Example for a custom icon
 import CheeseIcon from '@/assets/icons/licensed/cheese.svg'; // Example for a custom icon
+import AMIcon from '@/assets/icons/licensed/a.m..svg'; // Example for a custom icon
+import PMIcon from '@/assets/icons/licensed/p.m..svg'; // Example for a custom icon
+import UppercaseIcon from '@/assets/icons/licensed/uppercase.svg'; // Example for a custom icon
+import LowercaseIcon from '@/assets/icons/licensed/lowercase.svg'; // Example for a custom icon
+import LetterIcon from '@/assets/icons/open_source/letter.svg'; // Example for a custom icon
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -1052,6 +1058,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   'across from': AcrossFromIcon,
   around: AroundIcon,
   behind: BehindIcon,
+  'on_(preposition_of_place)': OnPrepositionIcon,
   below: BelowIcon,
   beside: BesideIcon,
   between: BetweenIcon,
@@ -1062,10 +1069,10 @@ export const iconMap: Record<string, React.FC<any>> = {
   'next to': BesideIcon,
   under: UnderIcon,
   'close to': NearIcon,
-  'on_(preposition_of_place)': OnPrepositionIcon,
   'in_(preposition_of_time)': InPrepositionOfTimeIcon,
   'at_(preposition_of_time)': AtPrepositionOfTimeIcon,
   'on_(preposition_of_time)': OnPrepositionOfTimeIcon,
+  hurt: HurtIcon,
 
   apostrophe: apostropheIcon, // Example for a custom icon
   'question mark': questionMarkIcon, // Example for a custom icon
@@ -1181,6 +1188,11 @@ export const iconMap: Record<string, React.FC<any>> = {
   formal: FormalIcon, // Example for a custom icon
   informal: InformalIcon, // Example for a custom icon
   cheese: CheeseIcon, // Example for a custom icon
+  'a.m.': AMIcon, // Example for a custom icon
+  'p.m.': PMIcon, // Example for a custom icon
+  uppercase: UppercaseIcon, // Example for a custom icon
+  lowercase: LowercaseIcon, // Example for a custom icon
+  letter: LetterIcon, // Example for a custom icon
 
   // ...etc
 };
