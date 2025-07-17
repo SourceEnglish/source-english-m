@@ -235,6 +235,7 @@
       "__vocab_lesson": "basics vocab"
     }
   },
+
   {
     "basics vocab": {
       "name": "basics vocab",
@@ -253,6 +254,54 @@
         "words and sentences": ["word", "sentence", "period"],
         "singular and plural": ["singular", "plural"],
         "pronunciation": ["pronunciation", "sound"]
+      }
+    }
+  },
+  {
+    "greetings and farewells vocab": {
+      "name": "greetings and farewells vocab",
+      "__tags": ["greetings", "farewells"],
+      "__type": "vocabulary",
+      "__order": 5.5,
+      "__hidden": false,
+      "__vocab": {
+        "greetings": [
+          "hello",
+          "good morning",
+          "good afternoon",
+          "good evening",
+          "hey",
+          "hi",
+          "welcome",
+          "exclamation"
+        ],
+        "farewells": ["good night", "take care", "bye", "goodbye", "see you"]
+      }
+    }
+  },
+  {
+    "manners vocab": {
+      "name": "manners vocab",
+      "__tags": ["manners", "politeness"],
+      "__type": "vocabulary",
+      "__order": 5.6,
+      "__hidden": false,
+      "__vocab": {
+        "please": ["please"],
+        "thanks": ["thank you", "thanks"],
+        "you're welcome": ["you are welcome", "you're welcome"]
+      }
+    }
+  },
+  {
+    "people vocab": {
+      "name": "people vocab",
+      "__tags": ["people", "person group"],
+      "__type": "vocabulary",
+      "__order": 14.6,
+      "__hidden": false,
+      "__vocab": {
+        "people": ["man", "woman", "person", "boy", "girl", "child", "kid"]
       }
     }
   },
@@ -287,6 +336,7 @@
       }
     }
   },
+
   {
     "to be": {
       "name": "to be",
@@ -391,6 +441,7 @@
       }
     }
   },
+
   {
     "seasons vocab": {
       "name": "seasons vocab",
@@ -402,6 +453,77 @@
       }
     }
   },
+  {
+    "articles": {
+      "name": "articles",
+      "__tags": ["articles"],
+      "__type": "lesson",
+      "__order": 27,
+      "__hidden": false,
+      "__vocab_lesson": "articles vocab"
+    }
+  },
+  {
+    "articles vocab": {
+      "name": "articles vocab",
+      "__tags": ["articles"],
+      "__type": "vocabulary",
+      "__order": 28,
+      "__hidden": false,
+      "__lesson": "articles",
+      "__vocab": {
+        "indefinite articles": ["a_(article)", "an"],
+        "definite articles": ["the"]
+      }
+    }
+  },
+  {
+    "irregular plural nouns vocab": {
+      "name": "irregular plural nouns vocab",
+      "__tags": ["irregular plurals"],
+      "__type": "vocabulary",
+      "__order": 44,
+      "__hidden": false,
+      "__vocab": {
+        "irregular and plural": ["irregular", "plural"],
+        "display": ["man", "foot", "tooth", "woman", "person", "child", "fish"],
+        "nouns with irregular plurals": [
+          "man",
+          "foot",
+          "tooth",
+          "woman",
+          "person",
+          "child",
+          "fish"
+        ]
+      }
+    }
+  },
+  {
+    "classroom vocab": {
+      "name": "classroom vocab",
+      "__tags": ["class"],
+      "__type": "vocabulary",
+      "__order": 30,
+      "__hidden": false,
+      "__vocab": {
+        "classroom objects": ["chair", "desk", "table", "whiteboard", "clock"],
+        "school supplies": [
+          "backpack",
+          "pen",
+          "pencil",
+          "eraser",
+          "marker",
+          "notebook",
+          "paper",
+          "book"
+        ],
+        "classroom people": ["teacher", "student"],
+        "classroom verbs": ["read", "speak", "write", "listen", "ask"]
+      }
+    }
+  },
+
   {
     "colors vocab": {
       "name": "colors vocab",
@@ -424,55 +546,6 @@
           "white",
           "gray"
         ]
-      }
-    }
-  },
-
-  {
-    "family vocab": {
-      "name": "family vocab",
-      "__tags": ["family"],
-      "__type": "vocabulary",
-      "__order": 14.5,
-      "__hidden": false,
-      "__vocab": {
-        "display": [
-          "family",
-          "parent",
-          "mother",
-          "father",
-          "mom",
-          "dad",
-          "daughter",
-          "son",
-          "child",
-          "sister",
-          "brother",
-          "sibling",
-          "wife",
-          "husband",
-          "spouse",
-          "married"
-        ],
-        "family": [
-          "family",
-          "mother",
-          "mom",
-          "father",
-          "dad",
-          "parent",
-          "daughter",
-          "son",
-          "child",
-          "sister",
-          "brother",
-          "sibling",
-          "wife",
-          "husband",
-          "spouse",
-          "married"
-        ],
-        "extended family": ["aunt", "uncle"]
       }
     }
   },
@@ -521,57 +594,6 @@
     }
   },
   {
-    "personal information": {
-      "name": "personal information",
-      "__tags": ["personal information"],
-      "__type": "lesson",
-      "__order": 9,
-      "__vocab_lesson": "personal information vocab",
-      "__vocab": { "name": ["name", "first name", "last name", "full name"] }
-    }
-  },
-  {
-    "personal information vocab": {
-      "name": "personal information vocab",
-      "__tags": ["personal information"],
-      "__type": "vocabulary",
-      "__order": 10,
-      "__lesson": "personal information",
-      "__hidden": true,
-      "__vocab": {
-        "names": [
-          "name",
-          "first name",
-          "middle name",
-          "last name",
-          "full name"
-        ],
-        "address": [
-          "address",
-          "house number",
-          "street",
-          "apartment number",
-          "unit number",
-          "city",
-          "state",
-          "zip code"
-        ],
-        "misc": ["email address", "phone number", "date of birth"]
-      }
-    }
-  },
-
-  {
-    "adjectives": {
-      "name": "adjectives",
-      "__tags": ["adjectives"],
-      "__type": "lesson",
-      "__order": 14.75,
-      "__hidden": false
-    }
-  },
-
-  {
     "possessive adjectives": {
       "name": "possessive adjectives",
       "__tags": ["possessive adjectives"],
@@ -603,124 +625,52 @@
       }
     }
   },
-
   {
-    "yes or no questions": {
-      "name": "yes or no questions",
-      "__tags": ["yes or no questions"],
-      "__type": "lesson",
-      "__order": 17,
-      "__hidden": false,
-      "__vocab_lesson": "yes or no questions vocab"
-    }
-  },
-
-  {
-    "yes or no questions vocab": {
-      "name": "yes or no questions vocab",
-      "__tags": ["yes or no questions"],
+    "family vocab": {
+      "name": "family vocab",
+      "__tags": ["family"],
       "__type": "vocabulary",
-      "__order": 17,
+      "__order": 14.5,
       "__hidden": false,
-      "__lesson": "yes or no questions",
-      "__vocab": {
-        "affirmative": ["yes"],
-        "negative": ["no", "not"],
-        "common verbs": ["be", "do"]
-      }
-    }
-  },
-  {
-    "illnesses": {
-      "name": "illnesses",
-      "__tags": ["illnesses"],
-      "__type": "lesson",
-      "__order": 18,
-      "__hidden": false,
-      "__vocab_lesson": "illnesses vocab"
-    }
-  },
-  {
-    "illnesses vocab": {
-      "name": "illnesses vocab",
-      "__tags": ["illnesses"],
-      "__type": "vocabulary",
-      "__order": 19,
-      "__hidden": true,
-      "__lesson": "illnesses",
       "__vocab": {
         "display": [
-          "sick",
-          "headache",
-          "fever",
-          "flu",
-          "cold",
-          "tired",
-          "nauseous",
-          "depressed",
-          "allergy",
-          "broken",
-          "diarrhea",
-          "toothache",
-          "backache",
-          "feel",
-          "have"
+          "family",
+          "parent",
+          "mother",
+          "father",
+          "mom",
+          "dad",
+          "daughter",
+          "son",
+          "child",
+          "sister",
+          "brother",
+          "sibling",
+          "wife",
+          "husband",
+          "spouse",
+          "married"
         ],
-        "feel / be": ["feel", "be", "sick", "tired", "nauseous", "depressed"],
-        "have": [
-          "have",
-          "headache",
-          "fever",
-          "flu",
-          "cold",
-          "backache",
-          "toothache",
-          "diarrhea",
-          "allergy",
-          "broken"
-        ]
+        "family": [
+          "family",
+          "mother",
+          "mom",
+          "father",
+          "dad",
+          "parent",
+          "daughter",
+          "son",
+          "child",
+          "sister",
+          "brother",
+          "sibling",
+          "wife",
+          "husband",
+          "spouse",
+          "married"
+        ],
+        "extended family": ["aunt", "uncle"]
       }
-    }
-  },
-  {
-    "wh questions": {
-      "name": "wh questions",
-      "__tags": ["wh questions"],
-      "__type": "lesson",
-      "__order": 20,
-      "__hidden": false,
-      "__vocab_lesson": "wh questions vocab"
-    }
-  },
-  {
-    "wh questions vocab": {
-      "name": "wh questions vocab",
-      "__tags": ["wh questions"],
-      "__type": "vocabulary",
-      "__order": 21,
-      "__hidden": true,
-      "__lesson": "wh questions",
-      "__vocab": {
-        "wh question words": [
-          "question",
-          "who",
-          "what",
-          "where",
-          "when",
-          "why",
-          "how",
-          "which"
-        ]
-      }
-    }
-  },
-  {
-    "simple present tense": {
-      "name": "simple present tense",
-      "__tags": ["simple present tense"],
-      "__type": "lesson",
-      "__order": 22,
-      "__hidden": false
     }
   },
   {
@@ -796,6 +746,34 @@
       }
     }
   },
+
+  {
+    "yes or no questions": {
+      "name": "yes or no questions",
+      "__tags": ["yes or no questions"],
+      "__type": "lesson",
+      "__order": 17,
+      "__hidden": false,
+      "__vocab_lesson": "yes or no questions vocab"
+    }
+  },
+
+  {
+    "yes or no questions vocab": {
+      "name": "yes or no questions vocab",
+      "__tags": ["yes or no questions"],
+      "__type": "vocabulary",
+      "__order": 17,
+      "__hidden": false,
+      "__lesson": "yes or no questions",
+      "__vocab": {
+        "affirmative": ["yes"],
+        "negative": ["no", "not"],
+        "common verbs": ["be", "do"]
+      }
+    }
+  },
+
   {
     "adverbs of frequency": {
       "name": "adverbs of frequency",
@@ -806,6 +784,7 @@
       "__vocab_lesson": "adverbs of frequency vocab"
     }
   },
+
   {
     "adverbs of frequency vocab": {
       "name": "adverbs of frequency vocab",
@@ -823,6 +802,419 @@
           "rarely",
           "never"
         ]
+      }
+    }
+  },
+
+  {
+    "personal information": {
+      "name": "personal information",
+      "__tags": ["personal information"],
+      "__type": "lesson",
+      "__order": 9,
+      "__vocab_lesson": "personal information vocab",
+      "__vocab": { "name": ["name", "first name", "last name", "full name"] }
+    }
+  },
+  {
+    "personal information vocab": {
+      "name": "personal information vocab",
+      "__tags": ["personal information"],
+      "__type": "vocabulary",
+      "__order": 10,
+      "__lesson": "personal information",
+      "__hidden": true,
+      "__vocab": {
+        "names": [
+          "name",
+          "first name",
+          "middle name",
+          "last name",
+          "full name"
+        ],
+        "address": [
+          "address",
+          "house number",
+          "street",
+          "apartment number",
+          "unit number",
+          "city",
+          "state",
+          "zip code"
+        ],
+        "misc": ["email address", "phone number", "date of birth"]
+      }
+    }
+  },
+
+  {
+    "wh questions": {
+      "name": "wh questions",
+      "__tags": ["wh questions"],
+      "__type": "lesson",
+      "__order": 20,
+      "__hidden": false,
+      "__vocab_lesson": "wh questions vocab"
+    }
+  },
+  {
+    "wh questions vocab": {
+      "name": "wh questions vocab",
+      "__tags": ["wh questions"],
+      "__type": "vocabulary",
+      "__order": 21,
+      "__hidden": true,
+      "__lesson": "wh questions",
+      "__vocab": {
+        "wh question words": [
+          "question",
+          "who",
+          "what",
+          "where",
+          "when",
+          "why",
+          "how",
+          "which"
+        ]
+      }
+    }
+  },
+  {
+    "furniture vocab": {
+      "name": "furniture vocab",
+      "__tags": ["furniture", "appliances"],
+      "__type": "vocabulary",
+      "__order": 38.5,
+      "__hidden": false,
+      "__vocab": {
+        "furniture": ["table", "chair", "couch", "sofa", "bed", "desk"],
+        "decorations": ["plant", "picture"],
+        "fixtures": ["sink", "toilet", "shower_(noun)"],
+        "electronics": ["television", "computer"]
+      }
+    }
+  },
+  {
+    "prepositions of place": {
+      "name": "prepositions of place",
+      "__tags": ["prepositions of place"],
+      "__type": "lesson",
+      "__order": 31,
+      "__vocab_lesson": "prepositions of place vocab"
+    }
+  },
+  {
+    "prepositions of place vocab": {
+      "name": "prepositions of place vocab",
+      "__tags": ["prepositions of place"],
+      "__type": "vocabulary",
+      "__order": 32,
+      "__lesson": "prepositions of place",
+      "__hidden": false,
+      "__vocab": {
+        "prepositions of place": [
+          "above",
+          "under",
+          "below",
+          "in",
+          "in front of",
+          "behind",
+          "beside",
+          "next to",
+          "between",
+          "across from",
+          "around"
+        ]
+      }
+    }
+  },
+  {
+    "room and building vocab": {
+      "name": "room and building vocab",
+      "__tags": ["room terms"],
+      "__type": "vocabulary",
+      "__order": 38,
+      "__hidden": false,
+      "__vocab_lesson": "rooms terms vocab",
+      "__vocab": {
+        "room and building": ["room", "building"],
+        "parts of a room": [
+          "door",
+          "window",
+          "floor",
+          "ceiling",
+          "wall",
+          "stairs",
+          "roof",
+          "light"
+        ],
+        "adverbs": ["downstairs", "upstairs"]
+      }
+    }
+  },
+
+  {
+    "rooms vocab": {
+      "name": "rooms vocab",
+      "__tags": ["rooms"],
+      "__type": "vocabulary",
+      "__order": 39,
+      "__hidden": false,
+      "__vocab": {
+        "display": [
+          "bedroom",
+          "bathroom",
+          "kitchen",
+          "living room",
+          "dining room",
+          "restroom",
+          "office",
+          "classroom",
+          "class"
+        ],
+        "public rooms": ["classroom", "class", "restroom", "office"],
+        "house rooms": [
+          "kitchen",
+          "living room",
+          "bathroom",
+          "bedroom",
+          "dining room",
+          "office"
+        ]
+      }
+    }
+  },
+  {
+    "places vocab": {
+      "name": "places vocab",
+      "__tags": ["places"],
+      "__type": "vocabulary",
+      "__order": 37,
+      "__hidden": false,
+      "__vocab": {
+        "home": ["house", "apartment", "home"],
+
+        "emergency": ["hospital", "fire station", "police station"],
+        "businesses": ["bank", "restaurant", "store", "zoo", "hotel"],
+        "education": ["school", "college", "university"],
+        "misc": ["library", "post office", "building", "park"]
+      }
+    }
+  },
+
+  {
+    "prepositions of time vocab": {
+      "name": "prepositions of time vocab",
+      "__tags": ["prepositions of time"],
+      "__type": "vocabulary",
+      "__order": 34,
+      "__lesson": "prepositions of time",
+      "__hidden": false
+    }
+  },
+
+  {
+    "money vocab": {
+      "name": "money vocab",
+      "__tags": ["money"],
+      "__type": "vocabulary",
+      "__order": 30.5,
+      "__hidden": false,
+      "__vocab": {
+        "verbs": ["pay", "buy", "sell"],
+        "forms of payment": ["dollar", "cent", "credit card"],
+        "price": ["price", "cost", "cheap", "expensive"],
+        "people descriptions": ["rich", "poor"],
+        "symbols": ["dollar sign", "cent sign", "decimal point"]
+      }
+    }
+  },
+  {
+    "jobs vocab": {
+      "name": "jobs vocab",
+      "__tags": ["jobs"],
+      "__type": "vocabulary",
+      "__order": 36,
+      "__hidden": false,
+      "__vocab": {
+        "nouns": ["work_(place)", "work_(job)", "job", "career"],
+        "verbs": ["work", "hire"],
+        "jobs": [
+          "writer",
+          "engineer",
+          "nurse",
+          "teacher",
+          "cook_(job)",
+          "chef",
+          "doctor",
+          "driver",
+          "farmer",
+          "firefighter",
+          "paramedic",
+          "police officer",
+          "mail carrier",
+          "interpreter",
+          "911 operator"
+        ]
+      }
+    }
+  },
+  {
+    "yes vocab": {
+      "name": "yes vocab",
+      "__tags": ["yes", "agreement"],
+      "__type": "vocabulary",
+      "__order": 46,
+      "__hidden": false,
+      "__vocab": {
+        "affirmative": ["yes", "exclamation", "OK", "yeah", "alright"]
+      }
+    }
+  },
+
+  {
+    "body parts vocab": {
+      "name": "body parts vocab",
+      "__tags": ["body parts"],
+      "__type": "vocabulary",
+      "__order": 41,
+      "__hidden": false,
+      "__vocab": {
+        "head": [
+          "head",
+          "face",
+          "hair",
+          "eye",
+          "ear",
+          "nose",
+          "mouth",
+          "tooth",
+          "tongue"
+        ],
+        "other": ["body", "arm", "hand", "leg", "foot", "knee", "back"]
+      }
+    }
+  },
+
+  {
+    "illnesses": {
+      "name": "illnesses",
+      "__tags": ["illnesses"],
+      "__type": "lesson",
+      "__order": 18,
+      "__hidden": false,
+      "__vocab_lesson": "illnesses vocab"
+    }
+  },
+  {
+    "illnesses vocab": {
+      "name": "illnesses vocab",
+      "__tags": ["illnesses"],
+      "__type": "vocabulary",
+      "__order": 19,
+      "__hidden": true,
+      "__lesson": "illnesses",
+      "__vocab": {
+        "display": [
+          "sick",
+          "headache",
+          "fever",
+          "flu",
+          "cold",
+          "tired",
+          "nauseous",
+          "depressed",
+          "allergy",
+          "broken",
+          "diarrhea",
+          "toothache",
+          "backache",
+          "feel",
+          "have"
+        ],
+        "feel / be": ["feel", "be", "sick", "tired", "nauseous", "depressed"],
+        "have": [
+          "have",
+          "headache",
+          "fever",
+          "flu",
+          "cold",
+          "backache",
+          "toothache",
+          "diarrhea",
+          "allergy",
+          "broken"
+        ]
+      }
+    }
+  },
+
+  {
+    "emergencies vocab": {
+      "name": "emergencies vocab",
+      "__tags": ["emergencies"],
+      "__type": "vocabulary",
+      "__order": 43,
+      "__hidden": false,
+      "__lesson": "emergencies"
+    }
+  },
+
+  {
+    "vehicle vocab": {
+      "name": "vehicle vocab",
+      "__tags": ["vehicle"],
+      "__type": "vocabulary",
+      "__order": 15,
+      "__hidden": false,
+      "__vocab": {
+        "vehicles": [
+          "vehicle",
+          "car",
+          "bus",
+          "truck",
+          "van",
+          "bicycle",
+          "bike",
+          "motorcycle",
+          "light rail",
+          "boat",
+          "airplane",
+          "plane",
+          "helicopter"
+        ],
+        "verbs": ["drive", "ride", "fly"],
+        "places": [
+          "bus stop",
+          "train station",
+          "airport",
+          "gas station",
+          "parking lot"
+        ]
+      }
+    }
+  },
+
+  {
+    "animals vocab": {
+      "name": "animals vocab",
+      "__tags": ["animals"],
+      "__type": "vocabulary",
+      "__order": 29,
+      "__hidden": false,
+      "__vocab": {
+        "animals": [
+          "animal",
+          "cat",
+          "dog",
+          "chicken",
+          "cow",
+          "bird",
+          "pig",
+          "sheep",
+          "fish"
+        ],
+        "pet": ["pet"]
       }
     }
   },
@@ -861,321 +1253,6 @@
       }
     }
   },
-  {
-    "articles": {
-      "name": "articles",
-      "__tags": ["articles"],
-      "__type": "lesson",
-      "__order": 27,
-      "__hidden": false,
-      "__vocab_lesson": "articles vocab"
-    }
-  },
-  {
-    "articles vocab": {
-      "name": "articles vocab",
-      "__tags": ["articles"],
-      "__type": "vocabulary",
-      "__order": 28,
-      "__hidden": false,
-      "__lesson": "articles",
-      "__vocab": {
-        "indefinite articles": ["a_(article)", "an"],
-        "definite articles": ["the"]
-      }
-    }
-  },
-  {
-    "animals vocab": {
-      "name": "animals vocab",
-      "__tags": ["animals"],
-      "__type": "vocabulary",
-      "__order": 29,
-      "__hidden": false,
-      "__vocab": {
-        "animals": [
-          "animal",
-          "cat",
-          "dog",
-          "chicken",
-          "cow",
-          "bird",
-          "pig",
-          "sheep",
-          "fish"
-        ],
-        "pet": ["pet"]
-      }
-    }
-  },
-  {
-    "classroom vocab": {
-      "name": "classroom vocab",
-      "__tags": ["class"],
-      "__type": "vocabulary",
-      "__order": 30,
-      "__hidden": false,
-      "__vocab": {
-        "classroom objects": ["chair", "desk", "table", "whiteboard", "clock"],
-        "school supplies": [
-          "backpack",
-          "pen",
-          "pencil",
-          "eraser",
-          "marker",
-          "notebook",
-          "paper",
-          "book"
-        ],
-        "classroom people": ["teacher", "student"],
-        "classroom verbs": ["read", "speak", "write", "listen", "ask"]
-      }
-    }
-  },
-  {
-    "money vocab": {
-      "name": "money vocab",
-      "__tags": ["money"],
-      "__type": "vocabulary",
-      "__order": 30.5,
-      "__hidden": false,
-      "__vocab": {
-        "verbs": ["pay", "buy", "sell"],
-        "forms of payment": ["dollar", "cent", "credit card"],
-        "price": ["price", "cost", "cheap", "expensive"],
-        "people descriptions": ["rich", "poor"],
-        "symbols": ["dollar sign", "cent sign", "decimal point"]
-      }
-    }
-  },
-  {
-    "vehicle vocab": {
-      "name": "vehicle vocab",
-      "__tags": ["vehicle"],
-      "__type": "vocabulary",
-      "__order": 15,
-      "__hidden": false,
-      "__vocab": {
-        "vehicles": [
-          "vehicle",
-          "car",
-          "bus",
-          "truck",
-          "van",
-          "bicycle",
-          "bike",
-          "motorcycle",
-          "light rail",
-          "boat",
-          "airplane",
-          "plane",
-          "helicopter"
-        ],
-        "verbs": ["drive", "ride", "fly"],
-        "places": [
-          "bus stop",
-          "train station",
-          "airport",
-          "gas station",
-          "parking lot"
-        ]
-      }
-    }
-  },
-  {
-    "people vocab": {
-      "name": "people vocab",
-      "__tags": ["people", "person group"],
-      "__type": "vocabulary",
-      "__order": 14.6,
-      "__hidden": false,
-      "__vocab": {
-        "people": ["man", "woman", "person", "boy", "girl", "child", "kid"]
-      }
-    }
-  },
-  {
-    "prepositions of place": {
-      "name": "prepositions of place",
-      "__tags": ["prepositions of place"],
-      "__type": "lesson",
-      "__order": 31,
-      "__vocab_lesson": "prepositions of place vocab"
-    }
-  },
-  {
-    "prepositions of place vocab": {
-      "name": "prepositions of place vocab",
-      "__tags": ["prepositions of place"],
-      "__type": "vocabulary",
-      "__order": 32,
-      "__lesson": "prepositions of place",
-      "__hidden": false,
-      "__vocab": {
-        "prepositions of place": [
-          "above",
-          "under",
-          "below",
-          "in",
-          "in front of",
-          "behind",
-          "beside",
-          "next to",
-          "between",
-          "across from",
-          "around"
-        ]
-      }
-    }
-  },
-
-  {
-    "prepositions of time vocab": {
-      "name": "prepositions of time vocab",
-      "__tags": ["prepositions of time"],
-      "__type": "vocabulary",
-      "__order": 34,
-      "__lesson": "prepositions of time",
-      "__hidden": false
-    }
-  },
-  {
-    "punctuation vocab": {
-      "name": "punctuation vocab",
-      "__tags": ["punctuation"],
-      "__type": "vocabulary",
-      "__order": 35,
-      "__hidden": false,
-      "__vocab": {
-        "ending punctuation": ["period", "question mark", "exclamation point"],
-        "misc": [
-          "apostrophe",
-          "comma",
-          "quotation mark",
-          "hyphen",
-          "decimal point"
-        ]
-      }
-    }
-  },
-  {
-    "jobs vocab": {
-      "name": "jobs vocab",
-      "__tags": ["jobs"],
-      "__type": "vocabulary",
-      "__order": 36,
-      "__hidden": false,
-      "__vocab": {
-        "nouns": ["work_(place)", "work_(job)", "job", "career"],
-        "verbs": ["work", "hire"],
-        "jobs": [
-          "writer",
-          "engineer",
-          "nurse",
-          "teacher",
-          "cook_(job)",
-          "chef",
-          "doctor",
-          "driver",
-          "farmer",
-          "firefighter",
-          "paramedic",
-          "police officer",
-          "mail carrier",
-          "interpreter",
-          "911 operator"
-        ]
-      }
-    }
-  },
-  {
-    "places vocab": {
-      "name": "places vocab",
-      "__tags": ["places"],
-      "__type": "vocabulary",
-      "__order": 37,
-      "__hidden": false,
-      "__vocab": {
-        "home": ["house", "apartment", "home"],
-
-        "emergency": ["hospital", "fire station", "police station"],
-        "businesses": ["bank", "restaurant", "store", "zoo", "hotel"],
-        "education": ["school", "college", "university"],
-        "misc": ["library", "post office", "building", "park"]
-      }
-    }
-  },
-  {
-    "room and building vocab": {
-      "name": "room and building vocab",
-      "__tags": ["room terms"],
-      "__type": "vocabulary",
-      "__order": 38,
-      "__hidden": false,
-      "__vocab_lesson": "rooms terms vocab",
-      "__vocab": {
-        "room and building": ["room", "building"],
-        "parts of a room": [
-          "door",
-          "window",
-          "floor",
-          "ceiling",
-          "wall",
-          "stairs",
-          "roof",
-          "light"
-        ],
-        "adverbs": ["downstairs", "upstairs"]
-      }
-    }
-  },
-  {
-    "furniture vocab": {
-      "name": "furniture vocab",
-      "__tags": ["furniture", "appliances"],
-      "__type": "vocabulary",
-      "__order": 38.5,
-      "__hidden": false,
-      "__vocab": {
-        "furniture": ["table", "chair", "couch", "sofa", "bed", "desk"],
-        "decorations": ["plant", "picture"],
-        "fixtures": ["sink", "toilet", "shower_(noun)"],
-        "electronics": ["television", "computer"]
-      }
-    }
-  },
-
-  {
-    "rooms vocab": {
-      "name": "rooms vocab",
-      "__tags": ["rooms"],
-      "__type": "vocabulary",
-      "__order": 39,
-      "__hidden": false,
-      "__vocab": {
-        "display": [
-          "bedroom",
-          "bathroom",
-          "kitchen",
-          "living room",
-          "dining room",
-          "restroom",
-          "office",
-          "classroom",
-          "class"
-        ],
-        "public rooms": ["classroom", "class", "restroom", "office"],
-        "house rooms": [
-          "kitchen",
-          "living room",
-          "bathroom",
-          "bedroom",
-          "dining room",
-          "office"
-        ]
-      }
-    }
-  },
 
   {
     "technology vocab": {
@@ -1202,109 +1279,21 @@
     }
   },
   {
-    "body parts vocab": {
-      "name": "body parts vocab",
-      "__tags": ["body parts"],
+    "punctuation vocab": {
+      "name": "punctuation vocab",
+      "__tags": ["punctuation"],
       "__type": "vocabulary",
-      "__order": 41,
+      "__order": 35,
       "__hidden": false,
       "__vocab": {
-        "head": [
-          "head",
-          "face",
-          "hair",
-          "eye",
-          "ear",
-          "nose",
-          "mouth",
-          "tooth",
-          "tongue"
-        ],
-        "other": ["body", "arm", "hand", "leg", "foot", "knee", "back"]
-      }
-    }
-  },
-
-  {
-    "emergencies vocab": {
-      "name": "emergencies vocab",
-      "__tags": ["emergencies"],
-      "__type": "vocabulary",
-      "__order": 43,
-      "__hidden": false,
-      "__lesson": "emergencies"
-    }
-  },
-  {
-    "irregular plural nouns vocab": {
-      "name": "irregular plural nouns vocab",
-      "__tags": ["irregular plurals"],
-      "__type": "vocabulary",
-      "__order": 44,
-      "__hidden": false,
-      "__vocab": {
-        "irregular and plural": ["irregular", "plural"],
-        "display": ["man", "foot", "tooth", "woman", "person", "child", "fish"],
-        "nouns with irregular plurals": [
-          "man",
-          "foot",
-          "tooth",
-          "woman",
-          "person",
-          "child",
-          "fish"
+        "ending punctuation": ["period", "question mark", "exclamation point"],
+        "misc": [
+          "apostrophe",
+          "comma",
+          "quotation mark",
+          "hyphen",
+          "decimal point"
         ]
-      }
-    }
-  },
-
-  {
-    "yes vocab": {
-      "name": "yes vocab",
-      "__tags": ["yes", "agreement"],
-      "__type": "vocabulary",
-      "__order": 46,
-      "__hidden": false,
-      "__vocab": {
-        "affirmative": ["yes", "exclamation", "OK", "yeah", "alright"]
-      }
-    }
-  },
-
-  {
-    "greetings and farewells vocab": {
-      "name": "greetings and farewells vocab",
-      "__tags": ["greetings", "farewells"],
-      "__type": "vocabulary",
-      "__order": 48,
-      "__hidden": false,
-      "__vocab": {
-        "greetings": [
-          "hello",
-          "good morning",
-          "good afternoon",
-          "good evening",
-          "hey",
-          "hi",
-          "welcome",
-          "exclamation"
-        ],
-        "farewells": ["good night", "take care", "bye", "goodbye", "see you"]
-      }
-    }
-  },
-
-  {
-    "manners vocab": {
-      "name": "manners vocab",
-      "__tags": ["manners", "politeness"],
-      "__type": "vocabulary",
-      "__order": 50,
-      "__hidden": false,
-      "__vocab": {
-        "please": ["please"],
-        "thanks": ["thank you", "thanks"],
-        "you're welcome": ["you're welcome", "you are welcome"]
       }
     }
   }
