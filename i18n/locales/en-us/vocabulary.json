@@ -6336,6 +6336,44 @@
     }
   },
   {
+    "plant": {
+      "__pos": "noun",
+      "word": "plant",
+      "plural": "plants",
+      "translation_note": "",
+      "examples": ["I have a plant in my room.", "The plant needs water."]
+    }
+  },
+  {
+    "picture": {
+      "__pos": "noun",
+      "__tags": ["nouns", "photography"],
+      "__synonyms": ["photo", "photograph", "painting", "drawing"],
+      "synonym_notes": {
+        "photo": "A shorter form of picture, often used informally.",
+        "photograph": "A more formal term for a picture.",
+        "painting": "A picture created with paint.",
+        "drawing": "A picture created with pencils or pens."
+      },
+      "word": "picture",
+      "plural": "pictures",
+      "translation_note": "",
+      "examples": ["She took a picture of the sunset.", "I love old pictures."]
+    }
+  },
+  {
+    "decoration": {
+      "__pos": "noun",
+      "word": "decoration",
+      "plural": "decorations",
+      "translation_note": "",
+      "examples": [
+        "The decoration is beautiful.",
+        "We need more decorations for the party."
+      ]
+    }
+  },
+  {
     "airplane": {
       "__pos": "noun",
       "__tags": ["vehicle", "other vehicle"],
@@ -7058,6 +7096,58 @@
       "plural": "couches",
       "translation_note": "",
       "examples": ["She sits on the couch.", "The couch is comfortable."]
+    }
+  },
+  {
+    "toilet": {
+      "__pos": "noun",
+      "__tags": ["bathroom", "objects"],
+      "word": "toilet",
+      "plural": "toilets",
+      "translation_note": "",
+      "examples": ["The toilet is clean.", "I need to use the toilet."]
+    }
+  },
+  {
+    "sink": {
+      "__pos": "noun",
+      "__tags": ["kitchen", "bathroom", "objects"],
+      "word": "sink",
+      "plural": "sinks",
+      "translation_note": "",
+      "examples": ["Wash your hands in the sink.", "The sink is full of water."]
+    }
+  },
+  {
+    "shower_(noun)": {
+      "__pos": "noun",
+      "__tags": ["bathroom", "objects"],
+      "__objectKey": "shower_(noun)",
+      "word": "shower",
+      "plural": "showers",
+      "translation_note": "",
+      "examples": ["Where is your shower?", "The shower is hot."]
+    }
+  },
+  {
+    "furniture": {
+      "__pos": "noun",
+      "__tags": ["furniture"],
+      "word": "furniture",
+      "plural": "furnitures",
+      "translation_note": "",
+      "examples": [
+        "The furniture is new.",
+        "She bought some furniture for her room."
+      ]
+    }
+  },
+  {
+    "light": {
+      "__pos": "noun",
+      "word": "light",
+      "translation_note": "",
+      "examples": ["The light is bright.", "She turned on the light."]
     }
   },
   {

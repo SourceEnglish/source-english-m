@@ -1122,12 +1122,29 @@
           "ceiling",
           "wall",
           "stairs",
-          "roof"
+          "roof",
+          "light"
         ],
         "adverbs": ["downstairs", "upstairs"]
       }
     }
   },
+  {
+    "furniture vocab": {
+      "name": "furniture vocab",
+      "__tags": ["furniture", "appliances"],
+      "__type": "vocabulary",
+      "__order": 38.5,
+      "__hidden": false,
+      "__vocab": {
+        "furniture": ["table", "chair", "couch", "sofa", "bed", "desk"],
+        "decorations": ["plant", "picture"],
+        "fixtures": ["sink", "toilet", "shower_(noun)"],
+        "electronics": ["television", "computer"]
+      }
+    }
+  },
+
   {
     "rooms vocab": {
       "name": "rooms vocab",

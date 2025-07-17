@@ -526,6 +526,12 @@ import UppercaseIcon from '@/assets/icons/licensed/uppercase.svg'; // Example fo
 import LowercaseIcon from '@/assets/icons/licensed/lowercase.svg'; // Example for a custom icon
 import LetterIcon from '@/assets/icons/open_source/letter.svg'; // Example for a custom icon
 import SameIcon from '@/assets/icons/licensed/same.svg'; // Example for a custom icon
+import SinkIcon from '@/assets/icons/licensed/sink.svg'; // Example for a custom icon
+import ToiletIcon from '@/assets/icons/licensed/toilet.svg'; // Example for a custom icon
+import ShowerNounIcon from '@/assets/icons/licensed/shower_(noun).svg'; // Example for a custom icon
+import FurnitureIcon from '@/assets/icons/licensed/furniture.svg'; // Example for a custom icon
+import PlantIcon from '@/assets/icons/licensed/plant.svg'; // Example for a custom icon
+import PictureIcon from '@/assets/icons/licensed/picture.svg'; // Example for a custom icon
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -982,6 +988,8 @@ export const iconMap: Record<string, React.FC<any>> = {
   comma: CommaIcon,
   home: HomeIcon, // Example for a custom icon
   house: HomeIcon,
+  sink: SinkIcon,
+  toilet: ToiletIcon, // Example for a custom icon
 
   kid: ChildIcon,
   sit: SitIcon,
@@ -1196,6 +1204,11 @@ export const iconMap: Record<string, React.FC<any>> = {
   uppercase: UppercaseIcon, // Example for a custom icon
   lowercase: LowercaseIcon, // Example for a custom icon
   letter: LetterIcon, // Example for a custom icon
+  'shower_(noun)': ShowerNounIcon, // Example for a custom icon
+  'shower (noun)': ShowerNounIcon, // Example for a custom icon
+  furniture: FurnitureIcon, // Example for a custom icon
+  plant: PlantIcon, // Example for a custom icon
+  picture: PictureIcon, // Example for a custom icon
 
   // ...etc
 };
