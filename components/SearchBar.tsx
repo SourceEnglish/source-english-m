@@ -26,6 +26,7 @@ function flattenVocabulary(vocabArr: any[]): {
   redirect?: string;
   __icon_text?: string;
   __objectKey?: string;
+  __alternates?: string[];
 }[] {
   // Prevent duplicate display of the same word+clarifier+key combo, but allow both "I" (letter) and "I (pronoun)"
   const seen = new Set<string>();
@@ -38,6 +39,7 @@ function flattenVocabulary(vocabArr: any[]): {
     redirect?: string;
     __icon_text?: string;
     __objectKey?: string;
+    __alternates?: string[];
   }[] = [];
   vocabArr.forEach((entry) => {
     const key = Object.keys(entry)[0];
@@ -63,6 +65,7 @@ function flattenVocabulary(vocabArr: any[]): {
           pos: value.__pos,
           redirect: value.__redirect,
           __icon_text: value.__icon_text,
+          __alternates: value.__alternates,
         });
         seen.add(sig);
       }
@@ -86,6 +89,7 @@ function flattenVocabulary(vocabArr: any[]): {
           pos: value.__pos,
           redirect: value.__redirect,
           __icon_text: value.__icon_text,
+          __alternates: value.__alternates,
         });
         seen.add(sig);
       }
@@ -104,104 +108,11 @@ function flattenVocabulary(vocabArr: any[]): {
           value.conjugation &&
           typeof value.conjugation === 'object'
         ) {
-          // Compute present simple 3rd person singular, including for phrasal verbs
-          const base = value.word;
-          let thirdPerson: string | undefined = undefined;
-          if (base) {
-            // Handle phrasal verbs (e.g., "get up" -> "gets up")
-            const phrasalMatch = base.match(/^([a-zA-Z]+)( .+)$/);
-            if (phrasalMatch) {
-              const verb = phrasalMatch[1];
-              const rest = phrasalMatch[2];
-              let third = '';
-              if (verb.endsWith('y') && !/[aeiou]y$/.test(verb)) {
-                third = verb.slice(0, -1) + 'ies';
-              } else if (
-                verb.endsWith('s') ||
-                verb.endsWith('sh') ||
-                verb.endsWith('ch') ||
-                verb.endsWith('x') ||
-                verb.endsWith('z') ||
-                verb.endsWith('o')
-              ) {
-                third = verb + 'es';
-              } else {
-                third = verb + 's';
-              }
-              thirdPerson = third + rest;
-            } else {
-              // Not a phrasal verb
-              if (base.endsWith('y') && !/[aeiou]y$/.test(base)) {
-                thirdPerson = base.slice(0, -1) + 'ies';
-              } else if (
-                base.endsWith('s') ||
-                base.endsWith('sh') ||
-                base.endsWith('ch') ||
-                base.endsWith('x') ||
-                base.endsWith('z') ||
-                base.endsWith('o')
-              ) {
-                thirdPerson = base + 'es';
-              } else {
-                thirdPerson = base + 's';
-              }
-            }
-          }
-          altWords = [
-            value.word,
-            ...Object.values(value.conjugation).filter(
-              (v) => typeof v === 'string'
-            ),
-          ];
-          // Add present simple 3rd person singular if not already present
-          if (thirdPerson && !altWords.includes(thirdPerson)) {
-            altWords.push(thirdPerson);
-          }
-          // Add alternates for "be"
-          if (value.word === 'be') {
-            ['am', 'are', 'is', 'were'].forEach((form) => {
-              if (!altWords!.includes(form)) altWords!.push(form);
-            });
-          }
-          // Remove duplicates and falsy
-          altWords = altWords.filter(
-            (v, i, arr) => !!v && arr.indexOf(v) === i
-          );
+          // ...existing code...
         }
         // Add plural forms for nouns
         if (value.__pos === 'noun' && value.word) {
-          let plural: string | undefined = undefined;
-          // Use explicit plural property if present, otherwise fall back to rules
-          if (typeof value.plural === 'string' && value.plural.length > 0) {
-            plural = value.plural;
-          } else {
-            const base = value.word;
-            // Basic English pluralization rules
-            if (base.endsWith('y') && !/[aeiou]y$/.test(base)) {
-              plural = base.slice(0, -1) + 'ies';
-            } else if (
-              base.endsWith('s') ||
-              base.endsWith('sh') ||
-              base.endsWith('ch') ||
-              base.endsWith('x') ||
-              base.endsWith('z')
-            ) {
-              plural = base + 'es';
-            } else {
-              plural = base + 's';
-            }
-          }
-          // Add plural to altWords if not already present
-          if (plural && plural !== value.word) {
-            if (!altWords) altWords = [value.word];
-            if (!altWords.includes(plural)) {
-              altWords.push(plural);
-            }
-            // Remove duplicates and falsy
-            altWords = altWords.filter(
-              (v, i, arr) => !!v && arr.indexOf(v) === i
-            );
-          }
+          // ...existing code...
         }
         result.push({
           word: value.word,
@@ -212,6 +123,7 @@ function flattenVocabulary(vocabArr: any[]): {
           redirect: value.__redirect,
           __icon_text: value.__icon_text,
           __objectKey: value.__objectKey,
+          __alternates: value.__alternates,
         });
         seen.add(sig);
       }
@@ -290,11 +202,16 @@ export default function SearchBar() {
     } else {
       // If vocab entry has a redirect, resolve it
       // Find the vocab entry by key to get its redirect property
-      const vocabEntry = vocabEntries.find((v) => v.key === item.key);
+      const vocabEntry =
+        item.type === 'vocab' && 'key' in item && typeof item.key === 'string'
+          ? vocabEntries.find((v) => v.key === item.key)
+          : undefined;
       const targetKey =
         vocabEntry && vocabEntry.redirect
           ? resolveRedirect(vocabEntry)
-          : item.key || item.name;
+          : 'key' in item
+          ? item.key
+          : item.name;
       if (targetKey) {
         router.push(`/vocab/${encodeURIComponent(targetKey)}`);
       }
@@ -314,6 +231,7 @@ export default function SearchBar() {
     __icon_text?: string;
     lessonIndex?: number;
     __objectKey?: string;
+    __alternates?: string[];
   };
 
   // Add lessonIndex to lessons for rendering index as TextIcon
@@ -378,6 +296,7 @@ export default function SearchBar() {
       pos: v.pos,
       __icon_text: v.__icon_text,
       __objectKey: v.__objectKey,
+      __alternates: v.__alternates,
     })),
   ].filter((item) => {
     const q = query.trim().toLowerCase();
@@ -389,11 +308,35 @@ export default function SearchBar() {
         item.altWords.some((alt) => alt.toLowerCase() === punctuationMap[q])
       )
         return true;
+      // Check __alternates for punctuation
+      const vocabEntry =
+        item.type === 'vocab' && 'key' in item && item.key
+          ? vocabEntries.find((v) => v.key === item.key)
+          : undefined;
+      if (
+        vocabEntry &&
+        Array.isArray(vocabEntry.__alternates) &&
+        vocabEntry.__alternates.some(
+          (alt) => alt.toLowerCase() === punctuationMap[q]
+        )
+      )
+        return true;
     }
     if (item.name.toLowerCase().includes(q)) return true;
     if (
       item.altWords &&
       item.altWords.some((alt) => alt.toLowerCase().includes(q))
+    )
+      return true;
+    // Check __alternates for direct match
+    const vocabEntry =
+      item.type === 'vocab' && 'key' in item && item.key
+        ? vocabEntries.find((v) => v.key === item.key)
+        : undefined;
+    if (
+      vocabEntry &&
+      Array.isArray(vocabEntry.__alternates) &&
+      vocabEntry.__alternates.some((alt) => alt.toLowerCase().includes(q))
     )
       return true;
     return false;
@@ -404,6 +347,17 @@ export default function SearchBar() {
     allSuggestions = allSuggestions
       .map((item) => {
         const q = query.toLowerCase();
+        // Prioritize complete alternates
+        let alternatePriority = 2;
+        if (
+          item.type === 'vocab' &&
+          item.__alternates &&
+          Array.isArray(item.__alternates)
+        ) {
+          if (item.__alternates.some((alt) => alt.toLowerCase() === q)) {
+            alternatePriority = 0;
+          }
+        }
         // Use the closest altWord for distance if available
         let minLev = levenshtein(q, item.name.toLowerCase());
         let starts = item.name.toLowerCase().startsWith(q) ? 0 : 1;
@@ -418,9 +372,12 @@ export default function SearchBar() {
           ...item,
           _lev: minLev,
           _starts: starts,
+          _alternatePriority: alternatePriority,
         };
       })
       .sort((a, b) => {
+        if (a._alternatePriority !== b._alternatePriority)
+          return a._alternatePriority - b._alternatePriority;
         if (a._starts !== b._starts) return a._starts - b._starts;
         if (a._lev !== b._lev) return a._lev - b._lev;
         return a.name.localeCompare(b.name);
@@ -550,7 +507,7 @@ export default function SearchBar() {
               // Define vocabEntry for use in all branches
               // Add type assertion to help TypeScript
               const vocabEntry =
-                item.type === 'vocab'
+                item.type === 'vocab' && typeof item.key === 'string'
                   ? ((vocabEntries.find((v) => v.key === item.key) || item) as {
                       key?: string;
                       word?: string;
@@ -558,6 +515,7 @@ export default function SearchBar() {
                       conjugation?: Record<string, string>;
                       __objectKey?: string;
                       pos?: string;
+                      __alternates?: string[];
                       [key: string]: any;
                     })
                   : undefined;
@@ -596,6 +554,9 @@ export default function SearchBar() {
 
               // Determine display text and part of speech for suggestion
               let displayText = t(item.name);
+              let partOfSpeech =
+                item.type === 'lesson' ? 'lesson' : item.pos || '';
+
               // If vocab entry has __objectKey, display it in parenthesis after the word
               if (
                 item.type === 'vocab' &&
@@ -618,11 +579,29 @@ export default function SearchBar() {
                   }
                 }
               }
-              let partOfSpeech =
-                item.type === 'lesson' ? 'lesson' : item.pos || '';
+
+              // If vocab entry has __alternates, and query matches one, display it after the main word in parenthesis
+              let alternateMatched = false;
+              if (
+                item.type === 'vocab' &&
+                vocabEntry &&
+                Array.isArray(vocabEntry.__alternates) &&
+                typeof query === 'string' &&
+                query.length > 0
+              ) {
+                const q = query.trim().toLowerCase();
+                const matchedAlt = vocabEntry.__alternates.find(
+                  (alt) => alt.toLowerCase() === q && alt !== item.name
+                );
+                if (matchedAlt) {
+                  displayText = `${t(item.name)} (${matchedAlt})`;
+                  alternateMatched = true;
+                }
+              }
 
               // If the query matches an altWord (not the base), show "altWord (base)" and adjust part of speech
               if (
+                !alternateMatched &&
                 item.altWords &&
                 item.altWords.length > 0 &&
                 typeof query === 'string' &&
@@ -635,7 +614,7 @@ export default function SearchBar() {
                 );
                 if (matchedAlt) {
                   displayText = `${matchedAlt} (${item.name})`;
-                  // Adjust part of speech for plural nouns
+                  // Adjust partOfSpeech for plural nouns
                   if (
                     item.pos === 'noun' &&
                     vocabEntry &&
@@ -645,7 +624,7 @@ export default function SearchBar() {
                   ) {
                     partOfSpeech = 'Noun (plural)';
                   }
-                  // Adjust part of speech for conjugated verbs
+                  // Adjust partOfSpeech for conjugated verbs
                   if (
                     item.pos === 'verb' &&
                     vocabEntry &&
