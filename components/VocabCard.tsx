@@ -180,6 +180,9 @@ const VocabCard: React.FC<VocabCardProps> = ({
                 color: '#000000',
                 backgroundColor: '#111111', // Add background color for top placeholder
               }}
+              pronunciation={
+                __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+              }
               numberOfLines={1}
             />
             {/* Gender icon inline */}
