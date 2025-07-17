@@ -305,10 +305,10 @@
       "__order": 9,
       "__lesson": "to be",
       "__vocab": {
-        "display": ["be", "am", "are", "is"],
+        "display": ["be", "am_(be)", "are", "is"],
         "be": ["be"],
-        "singular forms of to be": ["singular", "am", "are", "is"],
-        "plural form of to be": ["are"]
+        "singular forms of to be": ["singular", "am_(be)", "are", "is"],
+        "plural form of to be": ["plural", "are"]
       }
     }
   },

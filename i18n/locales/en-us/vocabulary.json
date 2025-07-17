@@ -74,9 +74,10 @@
   },
 
   {
-    "am": {
+    "am_(be)": {
       "__pos": "verb",
       "__redirect": "be",
+      "__objectKey": "am_(be)",
       "__tags": ["to be singular", "to be yes"],
       "__icon_text": "am",
       "__show_word": false,
