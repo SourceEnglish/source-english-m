@@ -9778,5 +9778,21 @@
         "He used informal language with his friends."
       ]
     }
+  },
+  {
+    "at sign": {
+      "__pos": "symbol",
+      "__tags": ["email", "social media"],
+      "__synonyms": ["at symbol"],
+      "synonym_notes": {
+        "at symbol": "'At sign' is often used in email addresses, while 'at symbol' is more general."
+      },
+      "__icon_text": "@",
+
+      "word": "at sign",
+      "__forced_pronunciation": "at sign",
+
+      "examples": ["My email is john.doe@example.com"]
+    }
   }
 ]

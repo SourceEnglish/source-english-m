@@ -321,12 +321,46 @@ export default function SearchBar() {
   // (e.g., skip lessons with __hidden or any other custom logic)
   // We'll assign lessonIndex based on the filtered, visible lessons only.
   const visibleLessons = lessons.filter((l) => !l.__hidden);
+  // Punctuation mapping: symbol to word
+  const punctuationMap: Record<string, string> = {
+    '.': 'period',
+    ',': 'comma',
+    '!': 'exclamation point',
+    '?': 'question mark',
+    ':': 'colon',
+    ';': 'semicolon',
+    "'": 'apostrophe',
+    '"': 'quotation mark',
+    '-': 'hyphen',
+
+    _: 'underscore',
+    '(': 'parenthesis',
+    ')': 'parenthesis',
+    '[': 'bracket',
+    ']': 'bracket',
+    '{': 'brace',
+    '}': 'brace',
+    '/': 'slash',
+    '\\': 'backslash',
+    '|': 'pipe',
+    '@': 'at sign',
+    '#': 'hash',
+    $: 'dollar sign',
+    '¢': 'cent sign',
+    '%': 'percent sign',
+    '^': 'caret',
+    '*': 'asterisk',
+    '+': 'plus',
+    '=': 'equals',
+    '<': 'less than',
+    '>': 'greater than',
+  };
+
   let allSuggestions: Suggestion[] = [
     ...visibleLessons.map((l, idx) => {
       // Determine emoji for lessons
       let emoji = '📘';
       if (l.name && l.name.endsWith('vocab')) emoji = '📗';
-      // Use the index in the visible list for lessonIndex
       return {
         type: 'lesson',
         name: l.name,
@@ -347,6 +381,15 @@ export default function SearchBar() {
     })),
   ].filter((item) => {
     const q = query.trim().toLowerCase();
+    // Special: if query is a punctuation, match its word name
+    if (punctuationMap[q]) {
+      if (item.name.toLowerCase() === punctuationMap[q]) return true;
+      if (
+        item.altWords &&
+        item.altWords.some((alt) => alt.toLowerCase() === punctuationMap[q])
+      )
+        return true;
+    }
     if (item.name.toLowerCase().includes(q)) return true;
     if (
       item.altWords &&
@@ -397,38 +440,77 @@ export default function SearchBar() {
     __objectKey?: string;
   }[] = [];
 
-  if (query.length === 1 && /^[a-zA-Z]$/.test(query)) {
-    const letter = query.toUpperCase();
-
-    const singleLetterVocab = vocabEntries
-      .filter((v) => v.word.length === 1 && v.word.toUpperCase() === letter)
-      .map((v) => ({
-        type: 'vocab',
-        name: v.word,
-        clarifier: v.clarifier,
-        key: v.key,
-        pos: v.pos,
-        __icon_text: v.__icon_text,
-        altWords: v.altWords, // <-- Add altWords here
-      }));
-
-    const rest = allSuggestions.filter(
-      (item) =>
-        !(
-          item.type === 'vocab' &&
-          item.name.length === 1 &&
-          item.name.toUpperCase() === letter
-        ) &&
-        !(
-          item.type === 'vocab' &&
-          item.key &&
-          item.key.length === 1 &&
-          item.key.toUpperCase() === letter &&
-          item.key === item.name
-        )
-    );
-
-    suggestions = [...singleLetterVocab, ...rest].slice(0, MAX_SUGGESTIONS);
+  if (query.length === 1) {
+    const q = query;
+    // If query is a punctuation, prioritize its word name
+    if (punctuationMap[q]) {
+      // Find vocab entry for the punctuation word
+      const punctWord = punctuationMap[q];
+      const punctVocab = vocabEntries.find(
+        (v) => v.word.toLowerCase() === punctWord
+      );
+      let punctSuggestion: Array<{
+        type: string;
+        name: string;
+        clarifier?: string;
+        key?: string;
+        pos?: string;
+        __icon_text?: string;
+        altWords?: string[];
+        __objectKey?: string;
+      }> = [];
+      if (punctVocab) {
+        punctSuggestion = [
+          {
+            type: 'vocab',
+            name: punctVocab.word,
+            clarifier: punctVocab.clarifier,
+            key: punctVocab.key,
+            pos: punctVocab.pos,
+            __icon_text: punctVocab.__icon_text,
+            altWords: punctVocab.altWords,
+            __objectKey: punctVocab.__objectKey,
+          },
+        ];
+      }
+      // Remove duplicate if already in allSuggestions
+      const rest = allSuggestions.filter(
+        (item) => !(item.name.toLowerCase() === punctWord)
+      );
+      suggestions = [...punctSuggestion, ...rest].slice(0, MAX_SUGGESTIONS);
+    } else if (/^[a-zA-Z]$/.test(q)) {
+      const letter = q.toUpperCase();
+      const singleLetterVocab = vocabEntries
+        .filter((v) => v.word.length === 1 && v.word.toUpperCase() === letter)
+        .map((v) => ({
+          type: 'vocab',
+          name: v.word,
+          clarifier: v.clarifier,
+          key: v.key,
+          pos: v.pos,
+          __icon_text: v.__icon_text,
+          altWords: v.altWords,
+          __objectKey: v.__objectKey,
+        }));
+      const rest = allSuggestions.filter(
+        (item) =>
+          !(
+            item.type === 'vocab' &&
+            item.name.length === 1 &&
+            item.name.toUpperCase() === letter
+          ) &&
+          !(
+            item.type === 'vocab' &&
+            item.key &&
+            item.key.length === 1 &&
+            item.key.toUpperCase() === letter &&
+            item.key === item.name
+          )
+      );
+      suggestions = [...singleLetterVocab, ...rest].slice(0, MAX_SUGGESTIONS);
+    } else {
+      suggestions = allSuggestions.slice(0, MAX_SUGGESTIONS);
+    }
   } else {
     suggestions = allSuggestions.slice(0, MAX_SUGGESTIONS);
   }
