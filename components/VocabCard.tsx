@@ -585,9 +585,15 @@ const VocabCard: React.FC<VocabCardProps> = ({
             alignItems: 'center',
           }}
         >
-          <ReadableText text="Plural:" style={styles.plural} />
+          <ReadableText
+            text="Plural:"
+            style={[styles.plural, { fontSize: isMobile ? 18 : 28 }]}
+          />
           <Text> </Text>
-          <ReadableText text={`${plural}`} style={styles.plural} />
+          <ReadableText
+            text={`${plural}`}
+            style={[styles.plural, { fontSize: isMobile ? 18 : 28 }]}
+          />
         </View>
       )}
       {__pos === 'noun' && __count && (
@@ -647,6 +653,7 @@ const styles = StyleSheet.create({
   plural: {
     marginBottom: 4,
     textAlign: 'center',
+    fontSize: 22, // Increased font size for plural
   },
   countable: {
     marginBottom: 4,
