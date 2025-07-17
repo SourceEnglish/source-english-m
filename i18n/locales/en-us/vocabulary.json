@@ -9754,5 +9754,29 @@
         "Some words have exceptions in spelling."
       ]
     }
+  },
+  {
+    "formal": {
+      "__pos": "adjective",
+      "__tags": ["grammar", "language"],
+      "word": "formal",
+      "translation_note": "",
+      "examples": [
+        "This is a formal letter.",
+        "She used formal language in her speech."
+      ]
+    }
+  },
+  {
+    "informal": {
+      "__pos": "adjective",
+      "__tags": ["grammar", "language"],
+      "word": "informal",
+      "translation_note": "",
+      "examples": [
+        "This is an informal email.",
+        "He used informal language with his friends."
+      ]
+    }
   }
 ]
