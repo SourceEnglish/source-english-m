@@ -124,6 +124,7 @@ const posColors: Record<string, string> = {
   letter: '#263238', // Charcoal
   contraction: '#263238', // Charcoal
   punctuation: '#263238', // Charcoal
+  symbol: '#263238', // Charcoal
   vowel: '#006064', // Deep Cyan
   consonant: '#c66728', // Crimson
 };
@@ -148,6 +149,7 @@ export const posColorsLight: Record<string, string> = {
   article: '#bdbdbd', // Light Near Black +20%
   letter: '#cfd8dc', // Light Charcoal +20%
   contraction: '#cfd8dc', // Light Charcoal +20%
+  symbol: '#cfd8dc', // Light Charcoal +20%
   punctuation: '#cfd8dc', // Light Charcoal +20%
   vowel: '#80deea', // Light Cyan +20%
   consonant: '#fab18f', // Light Crimson +20%
@@ -175,6 +177,7 @@ export const posKeys: Record<string, string> = {
   article: 'article',
   letter: 'let.',
   contraction: 'contr.',
+  symbol: 'sym.',
 };
 
 // Centralized max width for centered layouts
