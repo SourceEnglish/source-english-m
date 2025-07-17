@@ -518,6 +518,7 @@ import BananaIcon from '@/assets/icons/licensed/banana.svg'; // Example for a cu
 import IrregularIcon from '@/assets/icons/licensed/irregular.svg'; // Example for a custom icon
 import FormalIcon from '@/assets/icons/licensed/formal.svg'; // Example for a custom icon
 import InformalIcon from '@/assets/icons/licensed/informal.svg'; // Example for a custom icon
+import CheeseIcon from '@/assets/icons/licensed/cheese.svg'; // Example for a custom icon
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -1179,6 +1180,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   exception: IrregularIcon, // Example for a custom icon
   formal: FormalIcon, // Example for a custom icon
   informal: InformalIcon, // Example for a custom icon
+  cheese: CheeseIcon, // Example for a custom icon
 
   // ...etc
 };

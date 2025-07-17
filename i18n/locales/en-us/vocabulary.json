@@ -9794,5 +9794,17 @@
 
       "examples": ["My email is john.doe@example.com"]
     }
+  },
+  {
+    "cheese": {
+      "__pos": "noun",
+      "__tags": ["food", "dairy"],
+      "word": "cheese",
+      "plural": "cheeses",
+      "examples": [
+        "I like to eat cheese on my sandwich.",
+        "She bought some cheeses for the party."
+      ]
+    }
   }
 ]
