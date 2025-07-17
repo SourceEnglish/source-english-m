@@ -250,7 +250,7 @@ const VocabCard: React.FC<VocabCardProps> = ({
   }
 
   if (size === 'medium') {
-    // CardPreview
+    // CardPreview with redesigned top part of speech bar
     const previewBoxSize = isMobile ? 90 : 120;
     const minFontSize = isMobile ? 12 : 16;
     const words = word.split(/\s+/);
@@ -266,7 +266,33 @@ const VocabCard: React.FC<VocabCardProps> = ({
           isHovered && styles.hoveredCard,
         ]}
       >
-        {/* <View style={styles.topTextContainerMedium}>
+        {/* Top part of speech bar anchored to top, overlapping border radius */}
+        <View
+          style={[
+            styles.topTextContainerMedium,
+            {
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              zIndex: 2,
+              backgroundColor:
+                __pos === 'letter'
+                  ? __vowel
+                    ? posColorsLight['vowel']
+                    : posColorsLight['consonant']
+                  : posColorsLight[__pos],
+              borderTopLeftRadius: 6,
+              borderTopRightRadius: 6,
+              alignItems: 'center',
+              justifyContent: 'center',
+              overflow: 'visible', // allow content to expand, prevents vertical clipping
+              minHeight: 28, // ensure enough height for content
+              paddingTop: 4,
+              marginTop: 0,
+            },
+          ]}
+        >
           <View
             style={{
               flexDirection: 'row',
@@ -275,16 +301,20 @@ const VocabCard: React.FC<VocabCardProps> = ({
             }}
           >
             <ReadableText
-              text={getTopPlaceholderText(__pos)}
+              text={
+                __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+              }
               style={{
-                fontSize: isMobile ? 13 : 16,
-
+                fontSize: isMobile ? 18 : 22,
                 textAlign: 'center',
-                color: '#333',
+                color: '#000000',
+                backgroundColor: '#111111',
               }}
+              pronunciation={
+                __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+              }
               numberOfLines={1}
             />
-      
             {__gender === 'masculine' && (
               <View style={{ marginLeft: 4 }}>
                 {React.createElement(
@@ -308,7 +338,9 @@ const VocabCard: React.FC<VocabCardProps> = ({
               </View>
             )}
           </View>
-        </View> */}
+        </View>
+        {/* Spacer for top bar */}
+        <View style={{ height: 22 }} />
         {Icon && (
           <View>
             <Icon
@@ -382,47 +414,6 @@ const VocabCard: React.FC<VocabCardProps> = ({
               })}
             </View>
           )}
-        {__pos !== 'letter' && __pos !== 'multigraph' && (
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <ReadableText
-              text={__pos}
-              style={{
-                fontStyle: 'italic',
-                color: posColors[__pos],
-                fontSize: isMobile ? 14 : 20,
-                textAlign: 'center',
-              }}
-            />
-            {__gender === 'masculine' && (
-              <View style={{ marginLeft: 2 }}>
-                {React.createElement(
-                  require('@/utils/iconMap').iconMap['male'],
-                  {
-                    width: 20,
-                    height: 20,
-                  }
-                )}
-              </View>
-            )}
-            {__gender === 'feminine' && (
-              <View style={{ marginLeft: 2 }}>
-                {React.createElement(
-                  require('@/utils/iconMap').iconMap['female'],
-                  {
-                    width: 20,
-                    height: 20,
-                  }
-                )}
-              </View>
-            )}
-          </View>
-        )}
         {__pos === 'letter' && __consonant && (
           <ReadableText
             text={__vowel ? 'consonant,' : 'consonant'}
@@ -450,6 +441,7 @@ const VocabCard: React.FC<VocabCardProps> = ({
   }
 
   // Large: VocabEntryDisplay
+  // Large: VocabEntryDisplay with redesigned top part of speech bar
   return (
     <View
       style={[
@@ -457,6 +449,78 @@ const VocabCard: React.FC<VocabCardProps> = ({
         { borderColor, borderLeftColor, borderTopColor },
       ]}
     >
+      {/* Top part of speech bar anchored to top, overlapping border radius */}
+      <View
+        style={[
+          {
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            zIndex: 2,
+            backgroundColor:
+              __pos === 'letter'
+                ? __vowel
+                  ? posColorsLight['vowel']
+                  : posColorsLight['consonant']
+                : posColorsLight[__pos],
+            minHeight: 22,
+            paddingTop: 4,
+            marginTop: 0, // remove negative margin to prevent clipping
+            borderTopLeftRadius: 10,
+            borderTopRightRadius: 10,
+            alignItems: 'center',
+            justifyContent: 'center',
+            overflow: 'visible',
+          },
+        ]}
+      >
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <ReadableText
+            text={
+              __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+            }
+            style={{
+              fontSize: isMobile ? 24 : 32,
+              textAlign: 'center',
+              color: '#000000',
+              backgroundColor: '#111111',
+              // fontStyle: 'italic',
+            }}
+            pronunciation={
+              __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+            }
+            numberOfLines={1}
+          />
+          {__gender === 'masculine' && (
+            <View style={{ marginLeft: 6 }}>
+              {React.createElement(require('@/utils/iconMap').iconMap['male'], {
+                width: 28,
+                height: 28,
+              })}
+            </View>
+          )}
+          {__gender === 'feminine' && (
+            <View style={{ marginLeft: 6 }}>
+              {React.createElement(
+                require('@/utils/iconMap').iconMap['female'],
+                {
+                  width: 28,
+                  height: 28,
+                }
+              )}
+            </View>
+          )}
+        </View>
+      </View>
+      {/* Spacer for top bar */}
+      <View style={{ height: 22 }} />
       {Icon && (
         <View style={styles.iconContainer}>
           <Icon
@@ -491,48 +555,6 @@ const VocabCard: React.FC<VocabCardProps> = ({
             style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
           />
         )}
-      {__pos !== 'letter' && __pos !== 'multigraph' && (
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginBottom: 8,
-          }}
-        >
-          <ReadableText
-            text={__pos}
-            style={[
-              styles.pos,
-              {
-                color,
-                fontSize: isMobile ? 18 : 24,
-                textAlign: 'center',
-                marginBottom: 0,
-              },
-            ]}
-          />
-          {__gender === 'masculine' && (
-            <View style={{ marginLeft: 6 }}>
-              {React.createElement(require('@/utils/iconMap').iconMap['male'], {
-                width: 28,
-                height: 28,
-              })}
-            </View>
-          )}
-          {__gender === 'feminine' && (
-            <View style={{ marginLeft: 6 }}>
-              {React.createElement(
-                require('@/utils/iconMap').iconMap['female'],
-                {
-                  width: 28,
-                  height: 28,
-                }
-              )}
-            </View>
-          )}
-        </View>
-      )}
       {__pos === 'letter' && __consonant && (
         <ReadableText
           text={__vowel ? 'consonant,' : 'consonant'}
