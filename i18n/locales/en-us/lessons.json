@@ -990,16 +990,7 @@
       "__order": 14.6,
       "__hidden": false,
       "__vocab": {
-        "people": [
-          "man",
-          "woman",
-          "person",
-          "boy",
-          "girl",
-          "child",
-          "kid",
-          "baby"
-        ]
+        "people": ["man", "woman", "person", "boy", "girl", "child", "kid"]
       }
     }
   },
