@@ -515,6 +515,7 @@ import OrIcon from '@/assets/icons/licensed/or.svg'; // Example for a custom ico
 import SadIcon from '@/assets/icons/licensed/sad.svg'; // Example for a custom icon
 import HungryIcon from '@/assets/icons/licensed/hungry.svg'; // Example for a custom icon
 import BananaIcon from '@/assets/icons/licensed/banana.svg'; // Example for a custom icon
+import IrregularIcon from '@/assets/icons/licensed/irregular.svg'; // Example for a custom icon
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -1172,6 +1173,8 @@ export const iconMap: Record<string, React.FC<any>> = {
   banana: BananaIcon, // Example for a custom icon
   sad: SadIcon, // Example for a custom icon
   hungry: HungryIcon, // Example for a custom icon
+  irregular: IrregularIcon, // Example for a custom icon
+  exception: IrregularIcon, // Example for a custom icon
 
   // ...etc
 };

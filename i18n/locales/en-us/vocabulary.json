@@ -9728,5 +9728,31 @@
       "translation_note": "",
       "examples": ["I am hungry.", "He is hungry after school."]
     }
+  },
+
+  {
+    "irregular": {
+      "__pos": "adjective",
+      "__tags": ["grammar", "verbs"],
+      "word": "irregular",
+      "translation_note": "",
+      "examples": [
+        "English has many irregular verbs.",
+        "An irregular verb does not follow the usual rules."
+      ]
+    }
+  },
+  {
+    "exception": {
+      "__pos": "noun",
+      "__tags": ["grammar", "rules"],
+      "word": "exception",
+      "plural": "exceptions",
+      "translation_note": "",
+      "examples": [
+        "There is an exception to this rule.",
+        "Some words have exceptions in spelling."
+      ]
+    }
   }
 ]

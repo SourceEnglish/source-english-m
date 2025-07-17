@@ -1251,14 +1251,16 @@
     }
   },
   {
-    "irregular plurals vocab": {
-      "name": "irregular plurals vocab",
+    "irregular plural nouns vocab": {
+      "name": "irregular plural nouns vocab",
       "__tags": ["irregular plurals"],
       "__type": "vocabulary",
       "__order": 44,
       "__hidden": false,
       "__vocab": {
-        "irregular plurals": [
+        "irregular and plural": ["irregular", "plural"],
+        "display": ["man", "foot", "tooth", "woman", "person", "child", "fish"],
+        "nouns with irregular plurals": [
           "man",
           "foot",
           "tooth",
