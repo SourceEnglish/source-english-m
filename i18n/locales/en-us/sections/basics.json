@@ -211,6 +211,13 @@
     "text": "happy"
   },
   {
+    "_id": "basics_words_quote_good",
+    "__lessons": ["basics"],
+    "__order": 4.5,
+    "__type": "quote",
+    "text": "good"
+  },
+  {
     "_id": "basics_sentences",
     "__lessons": ["basics"],
     "__order": 5,
