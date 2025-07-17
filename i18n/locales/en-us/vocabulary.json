@@ -7035,10 +7035,38 @@
     "sofa": {
       "__pos": "noun",
       "__tags": ["furniture"],
+      "__synonyms": ["couch"],
+      "synonym_notes": {
+        "couch": "A sofa is a type of couch, often used interchangeably."
+      },
+
       "word": "sofa",
       "plural": "sofas",
       "translation_note": "",
       "examples": ["I sit on the sofa.", "The sofa is soft."]
+    }
+  },
+  {
+    "couch": {
+      "__pos": "noun",
+      "__tags": ["furniture"],
+      "__synonyms": ["sofa"],
+      "synonym_notes": {
+        "sofa": "A couch is a type of sofa, often used interchangeably."
+      },
+      "word": "couch",
+      "plural": "couches",
+      "translation_note": "",
+      "examples": ["She sits on the couch.", "The couch is comfortable."]
+    }
+  },
+  {
+    "same": {
+      "__pos": "adjective",
+      "__tags": ["similarity"],
+      "word": "same",
+      "translation_note": "",
+      "examples": ["We have the same book.", "They are in the same class."]
     }
   },
   {

@@ -525,6 +525,7 @@ import PMIcon from '@/assets/icons/licensed/p.m..svg'; // Example for a custom i
 import UppercaseIcon from '@/assets/icons/licensed/uppercase.svg'; // Example for a custom icon
 import LowercaseIcon from '@/assets/icons/licensed/lowercase.svg'; // Example for a custom icon
 import LetterIcon from '@/assets/icons/open_source/letter.svg'; // Example for a custom icon
+import SameIcon from '@/assets/icons/licensed/same.svg'; // Example for a custom icon
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -964,6 +965,8 @@ export const iconMap: Record<string, React.FC<any>> = {
   sky: SkyIcon,
   small: SmallIcon,
   sofa: SofaIcon,
+  couch: SofaIcon,
+  same: SameIcon,
   tall: TallIcon,
   time: TimeIcon,
   uniform: UniformIcon,
