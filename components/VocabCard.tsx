@@ -207,14 +207,16 @@ const VocabCard: React.FC<VocabCardProps> = ({
             )}
           </View>
         </View>
-        {Icon && (
-          <Icon
-            textsize={isMobile ? 24 : 22}
-            textwidth={isMobile ? 42 : 42}
-            width={isMobile ? 42 : 42}
-            height={isMobile ? 28 : 32}
-          />
-        )}
+        <View style={{ marginTop: __icon_text ? -7 : 0 }}>
+          {Icon && (
+            <Icon
+              textsize={isMobile ? 24 : 22}
+              textwidth={isMobile ? 42 : 42}
+              width={isMobile ? 42 : 42}
+              height={isMobile ? 28 : 32}
+            />
+          )}
+        </View>
         {__show_word && (
           <ReadableText
             text={word}
@@ -226,7 +228,7 @@ const VocabCard: React.FC<VocabCardProps> = ({
               textAlign: 'center',
 
               // Only apply negative margin if Icon is a TextIcon
-              marginTop: __icon_text ? -10 : 0,
+              marginTop: __icon_text ? -3 : 0,
             }}
             numberOfLines={1}
             ellipsizeMode="tail"
