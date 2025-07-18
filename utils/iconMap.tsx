@@ -534,6 +534,8 @@ import PlantIcon from '@/assets/icons/licensed/plant.svg'; // Example for a cust
 import PictureIcon from '@/assets/icons/licensed/picture.svg'; // Example for a custom icon
 import LightIcon from '@/assets/icons/licensed/light.svg'; // Example for a custom icon
 import FineIcon from '@/assets/icons/licensed/fine.svg'; // Example for a custom icon
+import LazyIcon from '@/assets/icons/licensed/lazy.svg'; // Example for a custom icon
+
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -617,6 +619,7 @@ export const GenericTextIcon: React.FC<{ word: string; size?: number }> = ({
 );
 
 export const iconMap: Record<string, React.FC<any>> = {
+  lazy: LazyIcon,
   light: LightIcon,
   about: AboutIcon,
   dead: DeadIcon,

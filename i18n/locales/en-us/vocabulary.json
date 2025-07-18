@@ -808,7 +808,7 @@
         {
           "__ipa": "z",
           "__forced_pronunciation": "z.wav",
-          "examples": ["zero", "zoo", "pizza"],
+          "examples": ["zero", "zoo", "lazy"],
           "header": "/z/",
           "__header_pronunciation": "z.wav"
         }
@@ -10091,6 +10091,19 @@
         "I'm fine.",
         "It's fine to take a break.",
         "She said it was fine to ask questions."
+      ]
+    }
+  },
+  {
+    "lazy": {
+      "__pos": "adjective",
+      "__tags": ["feelings", "body"],
+      "word": "lazy",
+      "translation_note": "",
+      "examples": [
+        "I feel lazy today.",
+        "She is too lazy to exercise.",
+        "He had a lazy afternoon."
       ]
     }
   }
