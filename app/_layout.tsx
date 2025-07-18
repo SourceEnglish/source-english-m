@@ -130,9 +130,14 @@ export default function RootLayout() {
                           word = vocabEntryObj[entryKey].word;
                         }
                       }
+                      // Replace underscores with spaces in the word
+                      const displayWord = word.replace(/_/g, ' ');
                       return {
                         header: () => (
-                          <CustomNav headerHeight={headerHeight} title={word} />
+                          <CustomNav
+                            headerHeight={headerHeight}
+                            title={displayWord}
+                          />
                         ),
                         gestureEnabled: true,
                       };
