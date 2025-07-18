@@ -87,7 +87,9 @@ export default function LessonPage() {
 
     // For deck navigation, flatten all vocab keys in order
     const allVocabKeys: string[] = vocabGroups
-      ? Object.values(vocabGroups).flat().map(String)
+      ? Object.values(vocabGroups)
+          .flatMap((arr) => Array.isArray(arr) ? arr : [])
+          .map(String)
       : [];
 
     React.useEffect(() => {
@@ -128,15 +130,17 @@ export default function LessonPage() {
                     }}
                   >
                     {Array.isArray(vocabKeys) &&
-                      vocabKeys.map((vocabKey: string, idx: number) => {
+                      vocabKeys.map((vocabKey: string) => {
                         const card = vocabLookup[vocabKey];
                         if (!card) return null;
+                        // Find the global index for correct deck navigation
+                        const globalIdx = allVocabKeys.indexOf(vocabKey);
                         return (
                           <VocabCard
                             key={vocabKey}
                             card={card}
                             vocabKey={vocabKey}
-                            cardIndex={idx}
+                            cardIndex={globalIdx}
                             size="medium"
                           />
                         );
