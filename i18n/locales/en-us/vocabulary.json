@@ -10033,5 +10033,57 @@
         "She felt hurt by his words."
       ]
     }
+  },
+
+  {
+    "all right_(adjective)": {
+      "__pos": "adjective",
+      "__tags": ["formal", "agreement"],
+      "__synonyms": ["alright", "fine", "okay"],
+      "__objectKey": "all right_(adjective)",
+      "synonym_notes": {
+        "alright": "'All right' is a formal variant of 'alright'.",
+        "fine": "'All right' is more formal than 'fine'.",
+        "okay": "'All right' is more formal than 'okay'."
+      },
+      "__alternates": ["alright"],
+      "word": "all right",
+      "translation_note": "Formal variant of 'alright'",
+      "examples": [
+        "I'm all right.",
+        "It is all right to express your feelings.",
+        "She confirmed that it was all right to proceed."
+      ]
+    }
+  },
+  {
+    "okay_(adjective)": {
+      "__pos": "adjective",
+      "__tags": ["informal", "agreement"],
+      "__synonyms": ["all right_(adjective)", "fine_(adjective)"],
+      "__alternates": ["OK"],
+      "__objectKey": "okay_(adjective)",
+      "word": "okay",
+      "translation_note": "Informal variant of 'all right'",
+      "examples": [
+        "I'm okay.",
+        "It's okay to take a break.",
+        "She said it was okay to ask questions."
+      ]
+    }
+  },
+  {
+    "fine_(adjective)": {
+      "__pos": "adjective",
+      "__tags": ["informal", "agreement"],
+      "__synonyms": ["all right_(adjective)", "okay_(adjective)"],
+      "__objectKey": "fine_(adjective)",
+      "word": "fine",
+      "examples": [
+        "I'm fine.",
+        "It's fine to take a break.",
+        "She said it was fine to ask questions."
+      ]
+    }
   }
 ]

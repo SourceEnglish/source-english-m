@@ -533,6 +533,7 @@ import FurnitureIcon from '@/assets/icons/licensed/furniture.svg'; // Example fo
 import PlantIcon from '@/assets/icons/licensed/plant.svg'; // Example for a custom icon
 import PictureIcon from '@/assets/icons/licensed/picture.svg'; // Example for a custom icon
 import LightIcon from '@/assets/icons/licensed/light.svg'; // Example for a custom icon
+import FineIcon from '@/assets/icons/licensed/fine.svg'; // Example for a custom icon
 export const TextIcon: React.FC<{
   text: string;
   size?: number;
@@ -840,10 +841,9 @@ export const iconMap: Record<string, React.FC<any>> = {
   animal: AnimalIcon,
   'animals vocab': AnimalIcon, // Example for a custom icon
   yes: YesIcon, // Example for a custom icon
-  OK: YesIcon,
-  ok: YesIcon,
+  okay: YesIcon,
   yeah: YesIcon,
-  alright: YesIcon,
+  'all right': YesIcon,
   no: NoIcon, // Example for a custom icon
   a_variant_0: LowercaseAVariant, // Example for a custom icon
   g_variant_0: LowercaseGVariant, // Example for a custom icon
@@ -1211,6 +1211,13 @@ export const iconMap: Record<string, React.FC<any>> = {
   furniture: FurnitureIcon, // Example for a custom icon
   plant: PlantIcon, // Example for a custom icon
   picture: PictureIcon, // Example for a custom icon
+  'fine (adjective)': FineIcon, // Example for a custom icon
+  'fine_(adjective)': FineIcon, // Example for a custom icon
+  'okay_(adjective)': FineIcon, // Example for a custom icon
+  'okay (adjective)': FineIcon, // Example for a custom icon
+
+  'all right_(adjective)': FineIcon, // Example for a custom icon
+  'all right (adjective)': FineIcon, // Example for a custom icon
 
   // ...etc
 };
