@@ -46,8 +46,8 @@ const VocabCard: React.FC<VocabCardProps> = ({
     plural,
     __count,
     __forced_pronunciation,
-    __vowel,
     __consonant,
+    __vowel,
     __show_word = true,
     __exampleEntries = [],
     __icon_text,
@@ -72,18 +72,18 @@ const VocabCard: React.FC<VocabCardProps> = ({
   const { deckEntries, setDeckIndex, setDeckEntries } = useDeck?.() || {};
   const [isHovered, setIsHovered] = useState(false);
 
-  // Special border color for letters: vowel/consonant
+  // Special border color for letters: consonant/vowel
   if (__pos === 'letter') {
-    if (__vowel) {
-      borderColor = posColors['vowel'] || borderColor;
+    if (__consonant) {
+      borderColor = posColors['consonant'] || borderColor;
       borderLeftColor = borderColor;
       borderTopColor = borderColor;
-      if (__consonant) {
-        borderLeftColor = posColors['consonant'] || borderLeftColor;
-        borderTopColor = posColors['consonant'] || borderTopColor;
+      if (__vowel) {
+        borderLeftColor = posColors['vowel'] || borderLeftColor;
+        borderTopColor = posColors['vowel'] || borderTopColor;
       }
     } else {
-      borderColor = posColors['consonant'] || borderColor;
+      borderColor = posColors['vowel'] || borderColor;
       borderLeftColor = borderColor;
       borderTopColor = borderColor;
     }
@@ -145,7 +145,7 @@ const VocabCard: React.FC<VocabCardProps> = ({
         style={[
           styles.inlineCard,
           { borderColor, borderLeftColor, borderTopColor, borderRadius },
-          (__vowel || __consonant || __pos === 'number') && {},
+          (__consonant || __vowel || __pos === 'number') && {},
           isMobile ? styles.mobile : styles.desktop,
         ]}
       >
@@ -155,9 +155,9 @@ const VocabCard: React.FC<VocabCardProps> = ({
             {
               backgroundColor:
                 __pos === 'letter'
-                  ? __vowel
-                    ? posColorsLight['vowel']
-                    : posColorsLight['consonant']
+                  ? __consonant
+                    ? posColorsLight['consonant']
+                    : posColorsLight['vowel']
                   : posColorsLight[__pos],
             },
             styles.topTextContainer,
@@ -172,7 +172,11 @@ const VocabCard: React.FC<VocabCardProps> = ({
           >
             <ReadableText
               text={getTopPlaceholderText(
-                __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+                __pos === 'letter'
+                  ? __consonant
+                    ? 'consonant'
+                    : 'vowel'
+                  : __pos
               )}
               style={{
                 fontSize: isMobile ? 12 : 13,
@@ -181,7 +185,11 @@ const VocabCard: React.FC<VocabCardProps> = ({
                 backgroundColor: '#111111', // Add background color for top placeholder
               }}
               pronunciation={
-                __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+                __pos === 'letter'
+                  ? __consonant
+                    ? 'consonant'
+                    : 'vowel'
+                  : __pos
               }
               numberOfLines={1}
             />
@@ -278,9 +286,9 @@ const VocabCard: React.FC<VocabCardProps> = ({
               zIndex: 2,
               backgroundColor:
                 __pos === 'letter'
-                  ? __vowel
-                    ? posColorsLight['vowel']
-                    : posColorsLight['consonant']
+                  ? __consonant
+                    ? posColorsLight['consonant']
+                    : posColorsLight['vowel']
                   : posColorsLight[__pos],
               borderTopLeftRadius: 6,
               borderTopRightRadius: 6,
@@ -302,7 +310,11 @@ const VocabCard: React.FC<VocabCardProps> = ({
           >
             <ReadableText
               text={
-                __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+                __pos === 'letter'
+                  ? __consonant
+                    ? 'consonant'
+                    : 'vowel'
+                  : __pos
               }
               style={{
                 fontSize:
@@ -320,7 +332,11 @@ const VocabCard: React.FC<VocabCardProps> = ({
                 backgroundColor: '#111111',
               }}
               pronunciation={
-                __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+                __pos === 'letter'
+                  ? __consonant
+                    ? 'consonant'
+                    : 'vowel'
+                  : __pos
               }
               numberOfLines={1}
             />
@@ -423,23 +439,23 @@ const VocabCard: React.FC<VocabCardProps> = ({
               })}
             </View>
           )}
-        {__pos === 'letter' && __consonant && (
+        {__pos === 'letter' && __vowel && (
           <ReadableText
-            text={__vowel ? 'consonant,' : 'consonant'}
+            text={__consonant ? 'vowel,' : 'vowel'}
             style={{
               fontStyle: 'italic',
-              color: posColors['consonant'],
+              color: posColors['vowel'],
               fontSize: isMobile ? 14 : 20,
               textAlign: 'center',
             }}
           />
         )}
-        {__pos === 'letter' && __vowel && (
+        {__pos === 'letter' && __consonant && (
           <ReadableText
-            text={'vowel'}
+            text={'consonant'}
             style={{
               fontStyle: 'italic',
-              color: posColors['vowel'],
+              color: posColors['consonant'],
               fontSize: isMobile ? 14 : 20,
               textAlign: 'center',
             }}
@@ -469,9 +485,9 @@ const VocabCard: React.FC<VocabCardProps> = ({
             zIndex: 2,
             backgroundColor:
               __pos === 'letter'
-                ? __vowel
-                  ? posColorsLight['vowel']
-                  : posColorsLight['consonant']
+                ? __consonant
+                  ? posColorsLight['consonant']
+                  : posColorsLight['vowel']
                 : posColorsLight[__pos],
             minHeight: 22,
             paddingTop: 4,
@@ -493,7 +509,7 @@ const VocabCard: React.FC<VocabCardProps> = ({
         >
           <ReadableText
             text={
-              __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+              __pos === 'letter' ? (__consonant ? 'consonant' : 'vowel') : __pos
             }
             style={{
               fontSize: isMobile ? 24 : 32,
@@ -503,7 +519,7 @@ const VocabCard: React.FC<VocabCardProps> = ({
               // fontStyle: 'italic',
             }}
             pronunciation={
-              __pos === 'letter' ? (__vowel ? 'vowel' : 'consonant') : __pos
+              __pos === 'letter' ? (__consonant ? 'consonant' : 'vowel') : __pos
             }
             numberOfLines={1}
           />
@@ -564,23 +580,23 @@ const VocabCard: React.FC<VocabCardProps> = ({
             style={[styles.word, { fontSize: isMobile ? 28 : 40 }]}
           />
         )}
-      {__pos === 'letter' && __consonant && (
+      {__pos === 'letter' && __vowel && (
         <ReadableText
-          text={__vowel ? 'consonant,' : 'consonant'}
+          text={__consonant ? 'vowel,' : 'vowel'}
           style={{
             fontStyle: 'italic',
-            color: posColors['consonant'],
+            color: posColors['vowel'],
             fontSize: isMobile ? 14 : 20,
             textAlign: 'center',
           }}
         />
       )}
-      {__pos === 'letter' && __vowel && (
+      {__pos === 'letter' && __consonant && (
         <ReadableText
-          text={'vowel'}
+          text={'consonant'}
           style={{
             fontStyle: 'italic',
-            color: posColors['vowel'],
+            color: posColors['consonant'],
             fontSize: isMobile ? 14 : 20,
             textAlign: 'center',
           }}

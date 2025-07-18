@@ -766,8 +766,9 @@
       "__show_word": true,
       "word": "Yy",
       "translation_note": "",
-      "__vowel": true,
       "__consonant": true,
+      "__vowel": true,
+
       "__exampleEntries": [
         {
           "__ipa": "j",
