@@ -900,6 +900,12 @@
       "__tags": ["affirmation", "yes or no questions", "yes"],
       "word": "yes",
       "translation_note": "",
+      "__synonyms": ["yeah", "all right", "okay"],
+      "synonym_notes": {
+        "yeah": "Informal, often used in casual conversation.",
+        "all right": "Can imply agreement or acceptance.",
+        "okay": "Commonly used to express agreement or understanding."
+      },
 
       "examples": ["Yes, I agree.", "Do you want to go? Yes!"]
     }
@@ -7896,7 +7902,7 @@
     "in_(preposition_of_time)": {
       "__pos": "preposition",
       "__tags": ["prepositions of time"],
-      "__objectKey": "in_(preposition_of_time)",
+      "__objectKey": "in_(preposition of time)",
       "__icon_text": "in",
       "word": "in",
       "examples": [
@@ -7910,7 +7916,7 @@
     "at_(preposition_of_time)": {
       "__pos": "preposition",
       "__tags": ["prepositions of time"],
-      "__objectKey": "at_(preposition_of_time)",
+      "__objectKey": "at_(preposition of time)",
       "__icon_text": "at",
       "word": "at",
       "examples": [
@@ -9442,18 +9448,18 @@
     }
   },
   {
-    "OK": {
+    "okay": {
       "__pos": "exclamation",
       "__tags": ["exclamations", "agreement"],
-      "__synonyms": ["okay", "yes", "yeah", "alright"],
+      "__synonyms": ["OK", "yes", "yeah", "all right"],
       "synonym_notes": {
-        "okay": "Different spelling of OK.",
+        "OK": "Different spelling of OK.",
         "yes": "'OK' is less formal than 'yes', which is more definitive.",
         "yeah": "'OK' is more neutral, while 'yeah' is very informal.",
-        "alright": "'OK' is more neutral, while 'alright' is very informal."
+        "all right": "'OK' is more neutral, while 'alright' is very informal."
       },
 
-      "word": "OK",
+      "word": "okay",
       "translation_note": "",
       "examples": ["OK, let's go.", "OK! I understand."]
     }
@@ -9462,11 +9468,11 @@
     "yeah": {
       "__pos": "exclamation",
       "__tags": ["agreement", "informal"],
-      "__synonyms": ["yes", "OK", "alright"],
+      "__synonyms": ["yes", "okay", "all right"],
       "synonym_notes": {
         "yes": "'Yeah' is more informal than 'yes'.",
-        "OK": "'Yeah' is more informal than 'OK'.",
-        "alright": "'Yeah' is more informal than 'alright'."
+        "okay": "'Yeah' is more informal than 'OK'.",
+        "all right": "'Yeah' is more informal than 'all right'."
       },
       "word": "yeah",
       "translation_note": "",
@@ -9474,18 +9480,20 @@
     }
   },
   {
-    "alright": {
+    "all right": {
       "__pos": "exclamation",
       "__tags": ["agreement", "informal"],
-      "__synonyms": ["OK", "yeah", "yes"],
+      "__synonyms": ["alright", "okay", "yeah", "yes"],
+      "__alternates": ["alright"],
       "synonym_notes": {
-        "OK": "'Alright' is more informal than 'OK'.",
-        "yeah": "'Alright' is more informal than 'yeah'.",
-        "yes": "'Alright' is more informal than 'yes'."
+        "alright": "'All right' is another spelling of 'alright'.",
+        "okay": "'All right' is more informal than 'OK'.",
+        "yeah": "'All right' is more informal than 'yeah'.",
+        "yes": "'All right' is more informal than 'yes'."
       },
-      "word": "alright",
+      "word": "all right",
       "translation_note": "",
-      "examples": ["Alright, let's do it.", "Alright, I understand."]
+      "examples": ["All right, let's do it.", "All right, I understand."]
     }
   },
   {

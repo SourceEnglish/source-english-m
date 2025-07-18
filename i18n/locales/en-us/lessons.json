@@ -1067,7 +1067,7 @@
       "__order": 46,
       "__hidden": false,
       "__vocab": {
-        "affirmative": ["yes", "exclamation", "OK", "yeah", "alright"]
+        "affirmative": ["exclamation", "yes", "okay", "yeah", "all right"]
       }
     }
   },
