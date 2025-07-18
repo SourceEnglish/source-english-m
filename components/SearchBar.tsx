@@ -163,6 +163,7 @@ function levenshtein(a: string, b: string): number {
 export default function SearchBar() {
   const [query, setQuery] = useState('');
   const [focused, setFocused] = useState(false);
+  const [highlightedIndex, setHighlightedIndex] = useState(0); // NEW: track highlighted suggestion
   const inputRef = useRef<TextInput>(null);
   const router = useRouter();
 
@@ -472,6 +473,46 @@ export default function SearchBar() {
     suggestions = allSuggestions.slice(0, MAX_SUGGESTIONS);
   }
 
+  // Reset highlighted index when query or suggestions change
+  React.useEffect(() => {
+    setHighlightedIndex(0);
+  }, [query, focused]);
+
+  // Add a ref for FlatList to control scrolling
+  const flatListRef = useRef<FlatList>(null);
+
+  // Scroll to highlighted index when it changes
+  React.useEffect(() => {
+    if (focused && suggestions.length > 0 && flatListRef.current) {
+      flatListRef.current.scrollToIndex({
+        index: highlightedIndex,
+        viewPosition: 0.5, // center the item if possible
+        animated: true,
+      });
+    }
+  }, [highlightedIndex, focused, suggestions.length]);
+
+  // Keyboard navigation handler
+  const handleKeyDown = (e: any) => {
+    if (!focused || suggestions.length === 0) return;
+    if (e.nativeEvent?.key === 'ArrowDown') {
+      e.preventDefault?.();
+      setHighlightedIndex((prev) =>
+        prev < suggestions.length - 1 ? prev + 1 : 0
+      );
+    } else if (e.nativeEvent?.key === 'ArrowUp') {
+      e.preventDefault?.();
+      setHighlightedIndex((prev) =>
+        prev > 0 ? prev - 1 : suggestions.length - 1
+      );
+    } else if (e.nativeEvent?.key === 'Enter') {
+      e.preventDefault?.();
+      if (suggestions[highlightedIndex]) {
+        handleSelect(suggestions[highlightedIndex]);
+      }
+    }
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.inputRow}>
@@ -486,11 +527,10 @@ export default function SearchBar() {
           onBlur={() => setTimeout(() => setFocused(false), 150)}
           autoCorrect={false}
           autoCapitalize="none"
+          onKeyPress={handleKeyDown}
           onSubmitEditing={() => {
             if (suggestions.length > 0) {
-              handleSelect(suggestions[0]);
-              // Optionally blur or keep focus as desired
-              // inputRef.current?.blur();
+              handleSelect(suggestions[highlightedIndex] || suggestions[0]);
             }
           }}
         />
@@ -498,10 +538,11 @@ export default function SearchBar() {
       {focused && query.length > 0 && suggestions.length > 0 && (
         <View style={styles.dropdown}>
           <FlatList
+            ref={flatListRef}
             keyboardShouldPersistTaps="handled"
             data={suggestions}
             keyExtractor={(item) => `${item.type}:${item.key || item.name}`}
-            renderItem={({ item }) => {
+            renderItem={({ item, index }) => {
               // Use icon instead of emoji
               let iconComponent: React.FC<any>;
               // Define vocabEntry for use in all branches
@@ -609,8 +650,8 @@ export default function SearchBar() {
               ) {
                 const q = query.trim().toLowerCase();
                 // Find the best altWord match
-                const matchedAlt = item.altWords.find(
-                  (alt) => alt.toLowerCase() === q && alt !== item.name
+                const matchedAlt: string | undefined = item.altWords.find(
+                  (alt: string) => alt.toLowerCase() === q && alt !== item.name
                 );
                 if (matchedAlt) {
                   displayText = `${matchedAlt} (${item.name})`;
@@ -675,7 +716,12 @@ export default function SearchBar() {
               };
               return (
                 <TouchableOpacity
-                  style={styles.suggestion}
+                  style={[
+                    styles.suggestion,
+                    index === highlightedIndex && {
+                      backgroundColor: '#e6f0ff',
+                    }, // highlight
+                  ]}
                   onPress={handlePress}
                   onLongPress={handlePress}
                   delayLongPress={100}
@@ -740,6 +786,13 @@ export default function SearchBar() {
                 </TouchableOpacity>
               );
             }}
+            extraData={highlightedIndex}
+            getItemLayout={(_, index) => ({
+              length: 48, // Approximate row height (adjust if needed)
+              offset: 48 * index,
+              index,
+            })}
+            initialScrollIndex={0}
           />
         </View>
       )}
