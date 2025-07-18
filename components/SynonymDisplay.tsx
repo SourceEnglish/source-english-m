@@ -33,11 +33,29 @@ const SynonymDisplay: React.FC<SynonymDisplayProps> = ({
       >
         <View style={styles.container}>
           {synonyms.map((synonym, index) => {
-            // Find vocab entry for preview
+            // First, try to match on __object_key
             let vocabEntryObj = vocabulary.find((entryObj: any) => {
-              const entryVal = Object.values(entryObj)[0] as { word: string };
-              return entryVal.word.toLowerCase() === synonym.toLowerCase();
+              const entryVal = Object.values(entryObj)[0] as {
+                __objectKey?: string;
+              };
+              return (
+                entryVal.__objectKey &&
+                entryVal.__objectKey.toLowerCase() === synonym.toLowerCase()
+              );
             });
+            // If not found, try to match on word
+            if (!vocabEntryObj) {
+              vocabEntryObj = vocabulary.find((entryObj: any) => {
+                const entryVal = Object.values(entryObj)[0] as {
+                  word?: string;
+                };
+                return (
+                  entryVal.word &&
+                  entryVal.word.toLowerCase() === synonym.toLowerCase()
+                );
+              });
+            }
+            // If still not found, fall back to old key logic
             if (!vocabEntryObj) {
               vocabEntryObj = vocabulary.find((entryObj: any) => {
                 const key = Object.keys(entryObj)[0];
