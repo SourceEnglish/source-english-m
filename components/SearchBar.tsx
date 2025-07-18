@@ -659,6 +659,13 @@ export default function SearchBar() {
                 }
               }
 
+              // Prevent clarifier from being shown twice
+              let clarifierToShow =
+                item.clarifier &&
+                displayText.indexOf(`(${item.clarifier})`) === -1
+                  ? ` (${item.clarifier})`
+                  : '';
+
               // Prevent focus from shifting away on press/longPress
               const handlePress = (e: any) => {
                 e.preventDefault?.();
@@ -695,7 +702,7 @@ export default function SearchBar() {
                     />
                     <Text style={styles.suggestionText}>
                       {displayText}
-                      {item.clarifier ? ` (${item.clarifier})` : ''}
+                      {clarifierToShow}
                     </Text>
                     {/* Divider and POS/lesson type */}
                     <View
