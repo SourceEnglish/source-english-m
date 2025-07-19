@@ -10113,5 +10113,18 @@
         "He is going to the store."
       ]
     }
+  },
+  {
+    "which": {
+      "__pos": "pronoun",
+      "__tags": ["grammar", "questions"],
+      "word": "which",
+      "translation_note": "",
+      "examples": [
+        "Which book do you like?",
+        "She asked which movie we wanted to see.",
+        "He didn't know which shirt to wear."
+      ]
+    }
   }
 ]
