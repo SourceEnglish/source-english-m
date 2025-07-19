@@ -266,15 +266,14 @@
       "__vocab": {
         "greetings": [
           "hello",
+          "hi",
+          "hey",
           "good morning",
           "good afternoon",
           "good evening",
-          "hey",
-          "hi",
-          "welcome",
-          "exclamation"
+          "welcome"
         ],
-        "farewells": ["good night", "take care", "bye", "goodbye", "see you"]
+        "farewells": ["good night", "take care", "goodbye", "bye", "see you"]
       }
     }
   },
@@ -812,7 +811,7 @@
       "__type": "lesson",
       "__order": 9,
       "__vocab_lesson": "personal information vocab",
-      "__vocab": { "name": ["name", "first name", "last name", "full name"] }
+      "__vocab": { "name": ["name", "first name", "last name"] }
     }
   },
   {
@@ -872,8 +871,7 @@
           "where",
           "when",
           "why",
-          "how",
-          "which"
+          "how"
         ]
       }
     }
@@ -1225,25 +1223,14 @@
       "__order": 26,
       "__hidden": false,
       "__vocab": {
-        "tops": [
-          "shirt",
-          "coat",
-          "jacket",
-          "uniform",
-          "sweater",
-          "blouse",
-          "t-shirt"
-        ],
-        "bottoms": ["pants", "skirt", "shorts", "jeans", "leggings"],
+        "tops": ["shirt", "coat", "jacket", "uniform", "blouse", "t-shirt"],
+        "bottoms": ["pants", "skirt", "shorts", "leggings"],
         "outfits": ["dress", "uniform"],
         "accessories": [
           "hat",
           "glasses",
           "sunglasses",
-          "earring",
           "tie",
-          "scarf",
-          "necklace",
           "ring",
           "glove",
           "belt",
