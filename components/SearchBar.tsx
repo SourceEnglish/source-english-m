@@ -160,7 +160,11 @@ function levenshtein(a: string, b: string): number {
   return matrix[an][bn];
 }
 
-export default function SearchBar() {
+interface SearchBarProps {
+  onPress?: (item: any) => void;
+}
+
+export default function SearchBar({ onPress }: SearchBarProps = {}) {
   const [query, setQuery] = useState('');
   const [focused, setFocused] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState(0); // NEW: track highlighted suggestion
@@ -195,9 +199,12 @@ export default function SearchBar() {
     key?: string;
     redirect?: string;
   }) => {
+    if (onPress) {
+      onPress(item);
+      return;
+    }
     // Do not blur the searchbar when selecting from the dropdown
     setQuery('');
-    // setFocused(false); // <-- Remove this line to keep focus on the searchbar
     if (item.type === 'lesson') {
       router.push(`/${item.name}`);
     } else {
