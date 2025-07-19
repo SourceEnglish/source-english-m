@@ -125,14 +125,32 @@ const VocabCard: React.FC<VocabCardProps> = ({
       }
       router.push(`/vocab/${encodeURIComponent(target)}`);
     } else if (size === 'medium') {
-      const key = objectKey || word;
+      const redirect = (card as any).__redirect;
+      const isProperNoun =
+        card.__pos === 'month' ||
+        card.__pos === 'proper_noun' ||
+        card.__pos === 'proper noun';
+      let target;
+      if (redirect) {
+        target = redirect;
+      } else if (isProperNoun) {
+        if ((card as any).__objectKey) {
+          target = (card as any).__objectKey.toLowerCase();
+        } else if (card.word) {
+          target = card.word.toLowerCase();
+        } else {
+          target = objectKey.toLowerCase();
+        }
+      } else {
+        target = objectKey || word;
+      }
       if (typeof cardIndex === 'number' && setDeckIndex) {
         setDeckIndex(cardIndex);
       } else if (setDeckEntries && setDeckIndex) {
         setDeckEntries(null);
         setDeckIndex(null);
       }
-      router.push({ pathname: '/vocab/[entry]', params: { entry: key } });
+      router.push({ pathname: '/vocab/[entry]', params: { entry: target } });
     }
   };
 
