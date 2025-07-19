@@ -88,7 +88,7 @@ export default function LessonPage() {
     // For deck navigation, flatten all vocab keys in order
     const allVocabKeys: string[] = vocabGroups
       ? Object.values(vocabGroups)
-          .flatMap((arr) => Array.isArray(arr) ? arr : [])
+          .flatMap((arr) => (Array.isArray(arr) ? arr : []))
           .map(String)
       : [];
 
@@ -187,7 +187,7 @@ export default function LessonPage() {
   return <Text>Unknown lesson type</Text>;
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   outerContainer: {
     width: '100%',
     maxWidth: CENTERED_MAX_WIDTH,
