@@ -121,6 +121,7 @@ import WhereIcon from '@/assets/icons/licensed/where.svg'; // Add this import
 import WhyIcon from '@/assets/icons/licensed/why.svg'; // Add this import
 import WhenIcon from '@/assets/icons/licensed/when.svg'; // Add this import
 import HowIcon from '@/assets/icons/licensed/how.svg'; // Add this import
+import WhichIcon from '@/assets/icons/licensed/which.svg'; // Add this import
 import WhIcon from '@/assets/icons/open_source/wh_questions.svg'; // Add this import
 import AllergyIcon from '@/assets/icons/licensed/allergy.svg';
 import BackacheIcon from '@/assets/icons/licensed/backache.svg';
@@ -759,6 +760,7 @@ export const iconMap: Record<string, React.FC<any>> = {
   why: WhyIcon,
   when: WhenIcon,
   how: HowIcon,
+  which: WhichIcon,
   'wh questions': WhIcon, // Example for a custom icon
   'wh questions vocab': WhIcon, // Example for a custom icon
   allergy: AllergyIcon,
