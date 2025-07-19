@@ -1223,8 +1223,8 @@
       "__order": 26,
       "__hidden": false,
       "__vocab": {
-        "tops": ["shirt", "coat", "jacket", "uniform", "blouse", "t-shirt"],
-        "bottoms": ["pants", "skirt", "shorts", "leggings"],
+        "tops": ["shirt", "coat", "jacket", "uniform", "t-shirt"],
+        "bottoms": ["pants", "skirt", "shorts"],
         "outfits": ["dress", "uniform"],
         "accessories": [
           "hat",
