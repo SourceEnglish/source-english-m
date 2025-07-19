@@ -7327,17 +7327,6 @@
     }
   },
   {
-    "to": {
-      "__pos": "preposition",
-      "__tags": ["prepositions"],
-      "__icon_text": "to",
-      "__show_word": true,
-      "word": "to",
-      "translation_note": "",
-      "examples": ["I go to school.", "Give the book to her."]
-    }
-  },
-  {
     "home": {
       "__pos": "noun",
       "__tags": ["places", "house"],
@@ -10105,6 +10094,32 @@
         "I feel lazy today.",
         "She is too lazy to exercise.",
         "He had a lazy afternoon."
+      ]
+    }
+  },
+  {
+    "from": {
+      "__pos": "preposition",
+      "__tags": ["grammar", "location"],
+      "word": "from",
+      "translation_note": "",
+      "examples": [
+        "I am from the United States.",
+        "She is coming from the store.",
+        "He is from Canada."
+      ]
+    }
+  },
+  {
+    "to": {
+      "__pos": "preposition",
+      "__tags": ["grammar", "location"],
+      "word": "to",
+      "translation_note": "",
+      "examples": [
+        "I am going to the park.",
+        "She is going to school.",
+        "He is going to the store."
       ]
     }
   }

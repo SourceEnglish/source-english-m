@@ -350,6 +350,8 @@ import PhotoIcon from '@/assets/icons/licensed/photo.svg'; // Example for a cust
 import PhoneIcon from '@/assets/icons/licensed/phone.svg'; // Example for a custom icon
 import AuntIcon from '@/assets/icons/licensed/aunt.svg'; // Example for a custom icon
 import UncleIcon from '@/assets/icons/licensed/uncle.svg'; // Example for a custom icon
+import FromIcon from '@/assets/icons/licensed/from.svg'; // Example for a custom icon
+import ToIcon from '@/assets/icons/licensed/to.svg'; // Example for a custom icon
 
 // Added for new vocabulary words
 import AirIcon from '@/assets/icons/licensed/air.svg';
@@ -619,6 +621,8 @@ export const GenericTextIcon: React.FC<{ word: string; size?: number }> = ({
 );
 
 export const iconMap: Record<string, React.FC<any>> = {
+  from: FromIcon,
+  to: ToIcon,
   lazy: LazyIcon,
   light: LightIcon,
   about: AboutIcon,
