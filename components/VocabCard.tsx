@@ -320,7 +320,8 @@ const VocabCard: React.FC<VocabCardProps> = ({
                 fontSize:
                   __pos === 'contraction' ||
                   __pos === 'punctuation' ||
-                  __pos === 'exclamation'
+                  __pos === 'exclamation' ||
+                  __pos === 'proper noun'
                     ? isMobile
                       ? 16
                       : 22
@@ -341,7 +342,7 @@ const VocabCard: React.FC<VocabCardProps> = ({
               numberOfLines={1}
             />
             {__gender === 'masculine' && (
-              <View style={{ marginLeft: __pos === 'contraction' ? -1 : 4 }}>
+              <View style={{ marginLeft: __pos === 'contraction' ? -2 : 4 }}>
                 {React.createElement(
                   require('@/utils/iconMap').iconMap['male'],
                   {
@@ -352,7 +353,7 @@ const VocabCard: React.FC<VocabCardProps> = ({
               </View>
             )}
             {__gender === 'feminine' && (
-              <View style={{ marginLeft: __pos === 'contraction' ? -1 : 4 }}>
+              <View style={{ marginLeft: __pos === 'contraction' ? -2 : 4 }}>
                 {React.createElement(
                   require('@/utils/iconMap').iconMap['female'],
                   {
