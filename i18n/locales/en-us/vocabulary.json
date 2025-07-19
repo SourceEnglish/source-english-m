@@ -6877,16 +6877,7 @@
       "examples": ["The light is on.", "She put the book on the shelf."]
     }
   },
-  {
-    "open_(adjective)": {
-      "__pos": "adjective",
-      "__tags": ["adjectives"],
-      "__objectKey": "open (adjective)",
-      "word": "open",
-      "translation_note": "",
-      "examples": ["The door is open.", "He has an open mind."]
-    }
-  },
+
   {
     "on_(preposition_of_place)": {
       "__pos": "preposition",
